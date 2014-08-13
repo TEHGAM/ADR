@@ -13,7 +13,7 @@ Code:
 
    Parameter(s):
    1. Area size
-   2. Marker name
+   2. Vehicle name
    
    Example;
    _cratercleaner = [7, "my_BobCat"] execVM "groundWorks.sqf"
