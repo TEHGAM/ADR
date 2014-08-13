@@ -43,7 +43,8 @@ class Mission
 		"a3_characters_f",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Modules_F",
-		"A3_Data_F"
+		"A3_Data_F",
+		"A3_Structures_F_Items_Electronics"
 	};
 	addOnsAuto[]=
 	{
@@ -75,6 +76,7 @@ class Mission
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Armor_F_AMV",
+		"A3_Structures_F_Items_Electronics",
 		"a3_map_altis"
 	};
 	randomSeed=12935265;
@@ -2460,7 +2462,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=85;
+		items=92;
 		class Item0
 		{
 			position[]={14596.355,17.814484,16894.135};
@@ -3370,10 +3372,90 @@ class Mission
 			skill=0.60000002;
 			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
+		class Item85
+		{
+			position[]={14861.702,17.91,16780.684};
+			azimut=-134.81364;
+			special="NONE";
+			id=146;
+			side="EMPTY";
+			vehicle="Land_HelipadCircle_F";
+			leader=1;
+			skill=0.60000002;
+			description="[XStar] - командир группы";
+		};
+		class Item86
+		{
+			position[]={14870.02,17.91,16782.195};
+			azimut=177.89343;
+			special="NONE";
+			id=147;
+			side="EMPTY";
+			vehicle="Land_FloodLight_F";
+			leader=1;
+			skill=0.60000002;
+			description="[XStar] - командир группы";
+		};
+		class Item87
+		{
+			position[]={14852.983,17.91,16779.336};
+			azimut=355.94171;
+			special="NONE";
+			id=148;
+			side="EMPTY";
+			vehicle="Land_FloodLight_F";
+			leader=1;
+			skill=0.60000002;
+			description="[XStar] - командир группы";
+		};
+		class Item88
+		{
+			position[]={14853.961,17.91,16780.523};
+			azimut=-135.175;
+			id=149;
+			side="EMPTY";
+			vehicle="RoadCone_F";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item89
+		{
+			position[]={14861.516,17.91,16787.902};
+			azimut=-135.175;
+			id=150;
+			side="EMPTY";
+			vehicle="RoadCone_F";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item90
+		{
+			position[]={14868.821,17.91,16780.244};
+			azimut=-135.175;
+			id=151;
+			side="EMPTY";
+			vehicle="RoadCone_F";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item91
+		{
+			position[]={14861.198,17.91,16772.857};
+			azimut=-135.175;
+			id=152;
+			side="EMPTY";
+			vehicle="RoadCone_F";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
 	};
 	class Markers
 	{
-		items=121;
+		items=122;
 		class Item0
 		{
 			position[]={-17281.484,0,-2069.5022};
@@ -4265,10 +4347,19 @@ class Mission
 			text="БПА";
 			type="b_uav";
 		};
+		class Item121
+		{
+			position[]={14861.612,17.91,16780.727};
+			name="ammocargo";
+			text="Комплекты: Бобкет";
+			type="o_support";
+			colorName="ColorWEST";
+			angle=359.22;
+		};
 	};
 	class Sensors
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			position[]={15972.207,3.5464966,16012.277};
@@ -4394,6 +4485,23 @@ class Mission
 			age="UNKNOWN";
 			expCond="this and ((getPos (thisList select 0)) select 2 < 1)";
 			expActiv="_handle = [(thisList select 0)] execVM ""scripts\misc\rearmVehicle.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item8
+		{
+			position[]={14861.62,17.91,16780.525};
+			a=4;
+			b=4;
+			angle=404.22015;
+			rectangular=1;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="amb1";
+			expActiv="nothing = [amb1] execVM ""boxZone.sqf"";";
 			class Effects
 			{
 			};
