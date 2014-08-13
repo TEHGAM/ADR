@@ -1,3 +1,4 @@
+//добавляет действие бобкету вошедшему в зону действия триггера (на входе название триггера) [triggername] execVM boxZone.sqf
 _zone = _this select 0; //zone is first agrument in this script. Try [triggername] execVM "boxZone.sqf"
 _bobcat1 = list _zone select 0; // selecting vehicle moved in this trigger area
 if (vehicle _bobcat1 isKindof "B_APC_Tracked_01_CRV_F") then 
