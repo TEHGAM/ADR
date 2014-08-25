@@ -2621,7 +2621,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="HEMTT_5";
-			init="_m = [this,1200,300] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1200,300] execVM ""scripts\vehicle\monitor.sqf"";  this addaction [""<t color='#7F5D5D'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }];";
 		};
 		class Item13
 		{
