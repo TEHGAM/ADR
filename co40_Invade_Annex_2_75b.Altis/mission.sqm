@@ -3136,7 +3136,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			init="this addAction[""<t color='#FFBF00'>Виртуальный ящик</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+			init="this addAction[""<t color='#FFBF00'>Виртуальный ящик</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#7F5D5D'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }];";
 		};
 		class Item63
 		{
@@ -3146,7 +3146,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			init="this addAction[""<t color='#FFBF00'>Виртуальный ящик</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+			init="this addAction[""<t color='#FFBF00'>Виртуальный ящик</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#7F5D5D'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }];";
 		};
 		class Item64
 		{
