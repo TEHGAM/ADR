@@ -698,7 +698,7 @@ class Mission
 				{
 					position[]={15104.985,17.91,17212.246};
 					azimut=134;
-					offsetY=0.5;
+					offsetY=0.8;
 					special="NONE";
 					id=37;
 					side="WEST";
@@ -1308,7 +1308,7 @@ class Mission
 				{
 					position[]={15127.187,17.91,17235.783};
 					azimut=134;
-					offsetY=0.5;
+					offsetY=0.8;
 					special="NONE";
 					id=46;
 					side="WEST";
