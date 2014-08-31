@@ -219,6 +219,40 @@ _pos = getMarkerPos (_this select 0);
 		
 		_enemiesArray = _enemiesArray + [_airGroup];
 	};
+
+	if((random 10 <= PARAMS_AirPatrol)) then {
+		_airGroup = createGroup east;
+		_randomPos = [[[getMarkerPos currentAO, PARAMS_AOSize],[]],["water","out"]] call BIS_fnc_randomPos;
+		_airType = ["O_Heli_Attack_02_F","I_Heli_light_03_F"] call BIS_fnc_selectRandom;
+		_air = _airType createVehicle [_randomPos select 0,_randomPos select 1,1000];
+		waitUntil{!isNull _air};
+		_air engineOn true;
+		_air lock 3;
+		_air setPos [_randomPos select 0,_randomPos select 1,300];
+
+		_air spawn
+		{
+			private["_x"];
+			for [{_x=0},{_x<=200},{_x=_x+1}] do
+			{
+				_this setVelocity [0,0,0];
+				sleep 0.1;
+			};
+		};
+
+		"O_helipilot_F" createUnit [_randomPos,_airGroup];
+		((units _airGroup) select 0) assignAsDriver _air;
+		((units _airGroup) select 0) moveInDriver _air;
+		"O_helipilot_F" createUnit [_randomPos,_airGroup];
+		((units _airGroup) select 1) assignAsGunner _air;
+		((units _airGroup) select 1) moveInGunner _air;
+
+		[_airGroup, getMarkerPos currentAO, 800] call BIS_fnc_taskPatrol;
+		_air flyInHeight 300;
+		[(units _airGroup)] call QS_fnc_setSkill4;
+		
+		_enemiesArray = _enemiesArray + [_airGroup];
+	};
 	
 	{
 		_newGrp = [_x] call QS_fnc_garrisonBuildings;

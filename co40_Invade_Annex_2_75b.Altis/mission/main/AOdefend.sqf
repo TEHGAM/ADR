@@ -58,11 +58,11 @@ sleep 5;
 	hqSideChat = _playersOnline; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 	GlobalHint = _playersOnlineHint; publicVariable "GlobalHint"; hint parseText GlobalHint;
 
-	sleep 10; // time before they spawn
+	sleep 30; // time before they spawn
 
 	hqSideChat = _defendMessages call BIS_fnc_selectRandom; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
-	null = [["aoCircle_2"],[6,5],[3,1],[1],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+	null = [["aoCircle_2"],[6,5],[3,1],[2],[2,0],[0,0,EAST],[10,1,120,FALSE,true]] call Bastion_Spawn;
 	
 	hint "Thermal images show enemy are at the perimeter of the AO!";
 

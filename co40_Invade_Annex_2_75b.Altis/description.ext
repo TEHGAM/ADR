@@ -135,7 +135,7 @@ class Params
 				title = "Chance for minefield to spawn around Radio Tower?";
 				values[] = {0,1,2,3,4,5,6,7,8,9,11};
 				texts[] = {"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-				default = 5;
+				default = 8;
 			};
 
 		class ArtilleryTargetTickTimeMin
@@ -185,7 +185,7 @@ class Params
 				title = "Squads Patrolling AO";
 				values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
 				texts[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
-				default = 2; // default 4... remember, more AI = less FPS
+				default = 4; // default 4... remember, more AI = less FPS
 			};
 
 		class SquadsDefend
@@ -201,7 +201,7 @@ class Params
 				title = "Teams Patrolling AO";
 				values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
 				texts[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
-				default = 2; // default 3
+				default = 3; // default 3
 			};
 	
 		class SniperTeamsPatrol
@@ -209,7 +209,7 @@ class Params
 				title = "Sniper Teams Patrolling AO";
 				values[] = {0,1,2,3};
 				texts[] = {1,2,3,4};
-				default = 0; // default 2
+				default = 2; // default 2
 			};
 
 		class ReconTeamsPatrol
@@ -217,7 +217,7 @@ class Params
 				title = "Recon Teams Patrolling AO";
 				values[] = {0,1,2,3};
 				texts[] = {1,2,3,4};
-				default = 0; // default 2
+				default = 2; // default 2
 			};
 
 		class AirDefenseTeams
@@ -225,7 +225,7 @@ class Params
 				title = "Air-Defense Teams Patrolling AO";
 				values[] = {0,1,2,3};
 				texts[] = {1,2,3,4};
-				default = 1; // default 3
+				default = 3; // default 3
 			};
 
 		class StaticMG
@@ -233,7 +233,7 @@ class Params
 				title = "Static Weapons in the AO";
 				values[] = {0,1,2,3};
 				texts[] = {1,2,3,4};
-				default = 0; // default 2
+				default = 2; // default 2
 			};
 
 		class Overwatch
@@ -241,7 +241,7 @@ class Params
 				title = "Overwatch teams in the AO";
 				values[] = {0,1,2,3,4,5,6,7};
 				texts[] = {1,2,3,4,5,6,7,8};
-				default = 2; // default 6
+				default = 6; // default 6
 			};		
 
 		class CarsPatrol
@@ -249,7 +249,7 @@ class Params
 				title = "MRAPs Patrolling AO";
 				values[] = {0,1,2,3};
 				texts[] = {1,2,3,4};
-				default = 1; // default 2
+				default = 2; // default 2
 			};
 
 		class APCPatrol
@@ -257,7 +257,7 @@ class Params
 				title = "APCs Patrolling AO";
 				values[] = {0,1,2,3};
 				texts[] = {1,2,3,4};
-				default = 1; // default 2
+				default = 2; // default 2
 			};
 
 		class ArmourPatrol
@@ -265,7 +265,7 @@ class Params
 				title = "Main Battle Tanks Patrolling AO";
 				values[] = {0,1,2,3,4};
 				texts[] = {1,2,3,4,5};
-				default = 2; // default 3
+				default = 3; // default 3
 			};
 
 		class AAPatrol
@@ -273,7 +273,7 @@ class Params
 				title = "AA Vehicles Patrolling AO";
 				values[] = {0,1,2,3,4};
 				texts[] = {1,2,3,4,5};
-				default = 1; // default 2
+				default = 2; // default 2
 			};
 
 		class AirPatrol
