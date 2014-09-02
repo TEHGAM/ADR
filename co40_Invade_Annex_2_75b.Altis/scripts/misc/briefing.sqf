@@ -28,7 +28,7 @@ if (!hasInterface) exitWith {};
 
 waitUntil {!isNull player};
 
-//player createDiarySubject ["rules", "allFPS I&A Rules"];		// edit to your liking, commented out with /* */ as our server rules may be different.
+player createDiarySubject ["rules", "Правила серверов Russian War"];		// edit to your liking, commented out with /* */ as our server rules may be different.
 player createDiarySubject ["mods", "Mods"];						// edit to your liking
 player createDiarySubject ["teamspeak", "Teamspeak"];			// edit to your liking
 player createDiarySubject ["faq", "FAQ"];						// edit to your liking
@@ -37,98 +37,63 @@ player createDiarySubject ["credits", "Credits"];				// do not edit
 
 //-------------------------------------------------- Rules
 
-/*
+
 
 player createDiaryRecord ["rules",
 [
-"Enforcement",
+"Правила",
 "
-<br />The purpose of the above rules are to ensure a fun and relaxing environment for public players.
+<br />Целью правил является обеспечение непринужденной атмосферы для всех игроков.
 <br />
-<br />Server rules are in place merely as a means to that end.
+<br />Правила сервера служат исключительно достижению этой цели.
 <br />
-<br />Guideline for enforcement:
+<br />Права и обязанности игрока
 <br />
-<br />-	Innocent rule violation and disruptive behavior: 
+<br />1. Запрещено уничтожение своей техники на базе.
+<br />2. Мат возможен, но в ограниченных масштабах.
+<br />3. Оскорбление администрации или других игроков запрещены!
+<br />4. Запрещено наносить какой-либо вред члену своей команды.
+<br />5. Запрещено играть "без ника".
+<br />6. Сервер, это не тренировочная база. Для этого есть редактор.
+<br />7. Запрещена реклама других серверов и ресурсов.
 <br />
-<br />		= Verbal / Written request to cease, or warning.
-<br /> 
-<br />-	Minor or first-time rule violation:
+<br />Права и обязанности администратора
 <br />
-<br />		= Kick, or 0 - 3 day ban.
+<br />Главное: Администратор сервера должен быть честным, справедливым, вежливым, внимательным и отзывчивым. Не поддаваться на любые заумные провокации, пресекать их достойно и спокойно(да, бывает и такое). При наказании, игрок должен чётко понимать за что он был наказан. Если администратор наказал кого-либо по ошибке, стоит принести извинения. 
 <br />
-<br />-	Serious or repetitive rule violation: 
+<br />Часть 1. Администратор сервера(форума) НЕ имеет право наказать перманентным(бессрочный блок) баном: 
+<br />[u] п.1. За любое неумышленное и даже неоднократное нарушение.(тимкил, уничтожение техники или любое другое нарушение, которое было по неосторожности, администратор сам должен это выявить).
+<br />п.2. Администратор не имеет права принижать достоинство игроков или третьих лиц, также и на форуме или любом стороннем интернет ресурсе, оскорбления на основе личной неприязни тем более недопустимы.
+<br />п.3. Администратор не имеет права превышать данные ему полномочия для преимуществ в игре над игроками, т.е. администратор - это точно такой же обычный игрок, но наделённый полномочиями только для поддержания порядка или для поддержки игроков на сервере/форуме. Исключения составляют только технические или другие тесты на карте и т.п., при этом администратор должен вежливо предупредить об этом игрока(ов).
+<br />п.4. За нарушение п.1,2 и 3 ч.1, администратор сам может быть снят с админ.должности и даже может быть заблокирован на все серверы Russian War.
+<br />п.5. Любой администратор серверов может быть снят с админ.должности в любое время без его уведомления, например, по причине "в связи с утратой доверия" или по причине его долговременного отсутствия на сервере или форуме.
 <br />
-<br />		= 3 - 7 day ban.
+<br />Часть 2. Администратор сервера(форума) имеет право наказать киком/баном до полной блокировки на серверы:
+<br />п.1. За оскорбление, за любое грубое высказывание в адрес любого игрока, тем более администрации. За любую умышленную провокацию, разжигающуюю любой конфликт.
+<br />п.2. За любое умышленное нарушение, мешающее людям играть, например:
+умышленное вредительство(уничтожение техники или оборудования дружественных войск без согласования с ними), намеренное убийство своих(teamkill) без их согласия, захват техники игрока, который её уже занял, тем более с помощью убийства.
+<br />п.3. За игнорирование игроком запросы для поддержки, предусмотренных его специальностью(медик, инженер). Администратор имеет право удалить такого игрока с сервера только после вразумительного предупреждения и только КИК-ом. А также имеет право удалить(КИК) игрока с сервера, который никак не реагирует на вызов по радиосвязи или по ЧАТ-у игры.
+<br />п.4. За нечестную игру в любой форме, например, реверсный перезаход за разные команды на играх ПВП(синие, красные и т.д.) для получения тактической информации о команде противника. А также, играя за одну команду, передавая информацию другой с помощью сторонних средств связи(Скайп, Тимспик и т.д.) Подобные нарушения пресекаются временным или перм.баном.(на усмотрение администратора, который должен точно выявить, пользовался игрок перезаходом за другую команду для получения информации или нет, при серьёзных сомнениях наказывать перм.БАН-ом запрещено(может быть, что игрок теперь захотел поиграть за другую команду и перезашёл 1 раз) а при обращении наказанного игрока за нарушение правил п.4 части 2 стоит разобраться в этом детально, а при отсутствии каких-либо доказательств в этом нарушении - разбанить). Примечание: администратор имеет право пресекать "прыжки" за разные команды КИК-ом или временным БАН-ом, но только после предупреждения, рецидивисты могут наказываться более строго.
+<br />п.5. За агитацию или рекламу других серверов, которые не имеют отношения к серверам Russian War, за плагиат.
+<br />п.6. За флуд в радиоэфире(разговоры не по делу, мешающие игрокам, а значит и процессу игры) игроки могут наказываться КИК-ом или кратковременным БАН-ом только после предупреждения. Примечание: игроки, умышленно вносящие дестабилизицию в процесс игры с помощью флуда, могут наказываться временным или даже перманентным БАН-ом.
+<br />п.7. За использование любых сторонних хак.программ, дающих неоспоримое преимущество над другими игроками, а именно: чит-коды, модульные чит-моды и т.д. Такие игроки наказываются полной блокировкой(перм.БАН) на все серверы Russian War, без права обжалования.
 <br />
-<br />-	Administrative ban (hack/exploit/verbal abuse/serious offense):
+<br />Ban Perm - бан перманентный - это самая серьёзная мера наказания, т.е. блокировка на сервер/форум на неопределённый срок. Такой бан администрация может снять только на своё усмотрение.
 <br />
-<br />		= permanent or 30 day.
-<br />
-<br />
-<br />The above is subject to discretion.
-"
-]];
-
-player createDiaryRecord ["rules",
-[
-"Aviation",
-"
-<br /> Pilots are deemed to be mission-critical roles, and as such have extra responsibility to ensure smooth, fun and realistic gameplay for others.
-<br />
-<br />1. You MUST be on our Teamspeak server--in the correct channel--and communicable. Exception if TS is down or full.
-<br />
-<br />2. CAS assets (all fixed wing and forward-armed rotary-wing) are under the command of ground Squad/Team Leaders, JTAC, moderators, and admins.
-<br />
-<br />-		a. CAS must receive permission from ground to engage targets, with two exceptions: Air threats and ZSU-39 Tigris.
-<br />-		b. If you engage targets without permission, you may be asked to leave the Pilot role, or expelled from the server.
-<br />
-<br />3. If you are an inexperienced pilot, please consider the time and enjoyment of others.
-<br /> 
-<br />4. This is a public server. Helicopters are not private/reserved transport. A Pilots primary role is to provide timely general transport to and from objectives.
-<br /> 
-<br />-		a. A group can have a dedicated pilot, but a pilot may not be dedicated to one group.
-<br />-		* General transport in this context is defined as: Indiscriminate and timely transport for each and all players on the server.
-<br />
-<br />5. MH-9s are only to be used by non-Pilots if there are less than 20 players (approx) in-game.
-<br />
-<br />-		a. Use of the MH-9s by non-Pilots is subject to the orders of any in-game Pilots, moderators, and Administrators.
-<br />
-<br />The above rules are subject to discretion of moderators and administrators.
-<br />
-<br />If you see a player in violation of the above, contact a moderator or admin (teamspeak).
 "
 ]];
 
-player createDiaryRecord ["rules",
-[
-"General",
-"
-<br />1. Hacking and mission exploitation will not be tolerated.
-<br />2. Intentional team-killing will not be tolerated.
-<br />3. Excessive, unintentional team-killing may result in a Kick/Temp ban.
-<br />4. Unnecessary destruction of BLUFOR vehicles will not be tolerated.
-<br />5. Verbal abuse and bullying will not be tolerated. 
-<br />6. Firing a weapon on base--unless at an enemy--may result in a Kick/Temp ban.
-<br />7. Griefing and obstructive play will not be tolerated.
-<br />8. Excessive mic spamming, especially of Side and Global channels, will not be tolerated.
-<br />9. A server moderator or admin's word is final.
-<br />
-<br />If you see a player in violation of the above, contact a moderator or admin (teamspeak).
-"
-]];
 
-*/
 
 //-------------------------------------------------- Mods
 
 player createDiaryRecord ["mods",
 [
-"Serverside",
+"Моды",
 "
 <br /> Mods currently running on server (subject to change without notice):<br /><br />
 
-<br />- None at this time. 
+<br />
 "
 ]];
 
