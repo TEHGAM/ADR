@@ -346,7 +346,7 @@ class TAW_VD
 			x = 0.70; y = 0.36;
 			w = 0.275; h = 0.04;
 		};
-		
+		/*
 		class VD_terr_none : TAWVD_activeText
 		{
 			idc = -1;
@@ -368,6 +368,7 @@ class TAW_VD
 			x = 0.47; y = 0.50;
 			w = 0.275; h = 0.04;
 		};
+		*/
 		
 		class VD_terr_normal : TAWVD_activeText
 		{
