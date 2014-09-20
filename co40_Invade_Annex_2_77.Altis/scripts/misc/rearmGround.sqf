@@ -23,19 +23,19 @@ private ["_damage","_percentage","_veh","_vehType","_fuelLevel"];
 _veh = _this select 0;
 _vehType = getText(configFile>>"CfgVehicles">>typeOf _veh>>"DisplayName");
 
-//if (_veh isKindOf "LandVehicle") exitWith { _veh vehicleChat "This pad is for vehicle service only, soldier!"; };
+//if (_veh isKindOf "LandVehicle") exitWith { _veh vehicleChat "Эта площадка только для наземного транспорта, солдат"; };
 
 _fuelLevel = fuel _veh;
 _damage = getDammage _veh;
 _veh setFuel 0;
 
-_veh vehicleChat format ["Repairing and refuelling %1. Stand by...", _vehType];
+_veh vehicleChat format ["Ремонт и заправка %1. Ожидайте...", _vehType];
 
 while {_damage > 0} do
 {
 	sleep 0.5;
 	_percentage = 100 - (_damage * 100);
-	_veh vehicleChat format ["Repairing (%1%)...", floor _percentage];
+	_veh vehicleChat format ["Ремонт (%1%)...", floor _percentage];
 	if ((_damage - 0.01) <= 0) then
 	{
 		_veh setDamage 0;
@@ -46,13 +46,13 @@ while {_damage > 0} do
 	};
 };
 
-_veh vehicleChat "Repaired (100%).";
+_veh vehicleChat "Отремонтировано (100%).";
 
 while {_fuelLevel < 1} do
 {
 	sleep 0.5;
 	_percentage = (_fuelLevel * 100);
-	_veh vehicleChat format["Refuelling (%1%)...", floor _percentage];
+	_veh vehicleChat format["Дозаправка (%1%)...", floor _percentage];
 	if ((_fuelLevel + 0.01) >= 1) then
 	{
 		_veh setFuel 1;
@@ -62,7 +62,7 @@ while {_fuelLevel < 1} do
 	};
 };
 
-_veh vehicleChat "Refuelled (100%).";
+_veh vehicleChat "Заправлено (100%).";
 
 sleep 2;
 
@@ -77,7 +77,7 @@ if (count _magazines > 0) then {
 		};
 	} forEach _magazines;
 	{
-		_veh vehicleChat format ["Reloading %1", _x];
+		_veh vehicleChat format ["Перезарядка %1", _x];
 		sleep 0.05;
 		_veh addMagazine _x;
 	} forEach _magazines;
@@ -98,7 +98,7 @@ if (_count > 0) then {
 			};
 		} forEach _magazines;
 		{
-			_veh vehicleChat format ["Reloading %1", _x];
+			_veh vehicleChat format ["Перезарядка  %1", _x];
 			sleep 0.05;
 			_veh addMagazine _x;
 			sleep 0.05;
@@ -116,7 +116,7 @@ if (_count > 0) then {
 					};
 				} forEach _magazines;
 				{
-					_veh vehicleChat format ["Reloading %1", _x]; 
+					_veh vehicleChat format ["Перезарядка %1", _x]; 
 					sleep 0.05;
 					_veh addMagazine _x;
 					sleep 0.05;
@@ -127,4 +127,4 @@ if (_count > 0) then {
 };
 _veh setVehicleAmmo 1;	// Reload turrets / drivers magazine
 
-_veh vehicleChat format ["%1 successfully repaired and refuelled.", _vehType];
+_veh vehicleChat format ["%1 успешно отремонтировано и заправлено.", _vehType];
