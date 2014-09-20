@@ -24,11 +24,11 @@ sleep 5;
 if(1 >= 0.5) then {
 	
 	_defendMessages = [
-		"OPFOR Forces incoming! Seek cover immediately and defend the objective area!",
-		"The enemy managed to call in reinforcements! Form a perimeter around the objective area!"
+		"Вражеские силы наступают. Займите оборонительные укрытия для защиты места дислокации!",
+		"Противник вызвал подкрепление. Распределите оборону по периметру основной цели!"
 	];
 	_targetStartText = format [
-		"<t align='center' size='2.2'>Defend Target</t><br/><t size='1.5' align='center' color='#0d4e8f'>%1</t><br/>____________________<br/>We have a problem. The enemy managed to call in land reinforcements. They are on the way to take back the last target. You need to defend it at all cost!",
+		"<t align='center' size='2.2'>ЗАЩИТА ТОЧКИ</t><br/><t size='1.5' align='center' color='#0d4e8f'>%1</t><br/>____________________<br/>Ситуация осложнилась! Противнику удалось вызвать наземное подкрепление. Враг намерен отбить территорию ранее освобожденную нашими силами. Ваш приказ - оборонять позицию любой ценой!",
 		currentAO
 	];
 
@@ -45,7 +45,7 @@ if(1 >= 0.5) then {
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 
 	_playersOnlineHint = format [
-		"<t size='1.5' align='left' color='#C92626'>Enemy attacking %1!</t><br/><br/>____________________<br/>Get ready boys they are almost here!", currentAO
+		"<t size='1.5' align='left' color='#C92626'>Враг атакует  %1!</t><br/><br/>____________________<br/>Держитесь, ребята! Противник начинает штурм.", currentAO
 	];
 
 	_defendTimer1 = 900;
@@ -59,15 +59,15 @@ if(1 >= 0.5) then {
 
 	null = [["aoCircle_2"],[6,5],[3,2],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
 	
-	hint "Thermal images show enemy are at the perimeter of the AO!";
+	hint "Разведывательные снимки подтвердили наличие врага в периметре главной цели!";
 			
 	sleep 5;
 			
-	hqSideChat = "Assault will end in approximately 10 minutes."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Разведка докладывает что противник понес значительные потери при осаде наших укреплений и начинает перегрупировку сил в течении последующих 10 минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			
 	sleep _defendTimer1;
 		
-	hqSideChat = "The attack is almost over!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Штурм почти полностью подавлен, враг уходит в отступление."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 	sleep _defendTimer2;
 
