@@ -100,16 +100,16 @@ private ["_flatPos","_accepted","_position","_randomDir","_x","_briefing","_enem
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Side Mission: Secure Smuggled Explosives";
+	"sideMarker" setMarkerText "Дополнительное задание: Обезвредить поставку взрывчатых веществ.";
 	publicVariable "sideMarker";
 	publicVariable "sideObj";
 			
-	_c4Message = ["The charge has been set! 15 seconds until detonation.","The c4 has been set! 15 seconds until detonation.","The charge is set! 15 seconds until detonation."] call BIS_fnc_selectRandom;
+	_c4Message = ["Заряд установлен! 15 секунд до взрыва.","C-4 активирован! 15 секунд до детонации.","Взрывчатка на месте! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
 
-	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Secure Smuggled Explosives</t><br/>____________________<br/>The OPFOR have been smuggling explosives onto the island and hiding them in a Mobile HQ on the coastline.<br/><br/>We've marked the building on your map; head over there and secure the current shipment. Keep well back when you blow it; there's a lot of stuff in that building.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое дополнительное задание</t><br/><t size='1.5' color='#00B2EE'>Обезвредить поставку взрывчатых веществ</t><br/>____________________<br/>В преддверии нового наступления, силы противника переправляли и складировали значительное количество взрывчатых веществ. По последним разведданным их точное местоположение на острове было определено в прибрежном мобильном штабе врага.<br/><br/>Координаты цели отмечены у вас на карте; ваша задача выдвинутся на вышеуказанную точку и обезвредить текущую партию взрывчатки. Будьте бдительны и соблюдайте дистанцию при непосредственной ликвидации груза.</t>";
 	GlobalHint = _briefing; publicVariable "GlobalHint"; hint parseText GlobalHint;
-	showNotification = ["NewSideMission", "Secure Smuggled Explosives"]; publicVariable "showNotification";
-	sideMarkerText = "Secure Smuggled Explosives"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Обезвредить поставку взрывчатых веществ"]; publicVariable "showNotification";
+	sideMarkerText = "Обезвредить поставку взрывчатых веществ"; publicVariable "sideMarkerText";
 	
 //-------------------- [ CORE LOOPS ]----------------------- [CORE LOOPS]
 
@@ -127,7 +127,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 		
 		sideMissionUp = false; publicVariable "sideMissionUp";
-		hqSideChat = "Objective destroyed! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена при неконтролируемых условиях! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"];
 		publicVariable "sideMarker";
