@@ -89,7 +89,7 @@ class BTC_r_button_menu : BTC_r_shortcutButton
 	color[] = {1, 1, 1, 1};
 	color2[] = {1, 1, 1, 1};
 	colorText[] = {1, 1, 1, 1};
-	colorDisabled[] = {1, 1, 1, 0.25};
+		colorDisabled[] = {1, 1, 1, 0.25};colorFocused[] = {1, 1, 1, 1.0};colorBackgroundFocused[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1};
 	period = 1.2;
 	periodFocus = 1.2;
 	periodOver = 1.2;
@@ -130,7 +130,7 @@ class BTC_r_combo
 	colorText[] = {0.95,0.95,0.95,1};
 	colorBackground[] = {0,0,0,1};
 	colorSelectBackground[] = {1,1,1,0.7};
-	colorScrollbar[] = {1,0,0,1};
+	colorScrollBar[] = {1,0,0,1};
 	arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa";
 	arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
 	wholeHeight = 0.45;
@@ -169,7 +169,7 @@ class BTC_respawn_button_dialog
 		{
 			idc = 9;
 			text = "Respawn"; 
-			action = "BTC_respawn_cond = true;closeDialog 0;if (BTC_r_new_system == 0) then {_respawn = [] spawn BTC_player_respawn;} else {player setDamage 1;};";
+			onMouseButtonClick = "BTC_respawn_cond = true;closeDialog 0;_respawn = [] spawn BTC_player_respawn;";
 			x = 0.7;
 			y = 0.6;
 			default = true;
@@ -192,7 +192,7 @@ class BTC_move_to_mobile_dialog
 		{
 			idc = -1;
 			text = "Apply"; 
-			action = "_spawn = [] spawn BTC_r_apply";
+			onMouseButtonClick = "_spawn = [] spawn BTC_r_apply";
 			x = 0.54;
 			y = 0.25;
 			default = true;
@@ -201,7 +201,7 @@ class BTC_move_to_mobile_dialog
 		{
 			idc = -1;
 			text = "Close"; 
-			action = "_spawn = [] spawn BTC_r_close";
+			onMouseButtonClick = "_spawn = [] spawn BTC_r_close";
 			x = 0.34;
 			y = 0.25;
 			default = true;
@@ -251,13 +251,14 @@ class BTC_spectating_dialog
 		{
 			idc = 122;
 			text = "Respawn"; 
-			action = "BTC_respawn_cond = true;closeDialog 0;if (BTC_r_new_system == 0) then {_respawn = [] spawn BTC_player_respawn;} else {player setDamage 1;};";
+			onMouseButtonClick = "BTC_respawn_cond = true;closeDialog 0;_respawn = [] spawn BTC_player_respawn;";
 			x = 0.7;
 			y = -0.2;
 			default = true;
 		};
 	};
 };
+/*
 class BTC_state_dialog
 {
 	idd = -1;
@@ -325,4 +326,4 @@ class BTC_state_dialog
 			default = true;
 		};
 	};
-};
+};*/
