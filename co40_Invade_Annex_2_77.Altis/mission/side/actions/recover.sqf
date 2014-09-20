@@ -32,11 +32,11 @@ _actID = _this select 2;  		// ID of the Action
 
 //-------------------- Send hint to player that he's done something...
 
-hint "Receiving data...";
+hint "Передача данных...";
 
 sleep 1;
 
-hint "Verifying...";
+hint "Подтверждение...";
 
 sleep 1;
 
