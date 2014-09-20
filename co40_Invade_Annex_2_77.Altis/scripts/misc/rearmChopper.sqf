@@ -84,7 +84,7 @@ if (_count > 0) then {
 					};
 				} forEach _magazines;
 				{
-					_veh vehicleChat format ["Reloading %1", _x]; 
+					_veh vehicleChat format ["Перезарядка %1", _x]; 
 					sleep 0.05;
 					_veh addMagazine _x;
 					sleep 0.05;
@@ -113,13 +113,13 @@ while {_damage > 0} do
 	};
 };
 
-_veh vehicleChat "Repaired (100%).";
+_veh vehicleChat "Отремонтировано (100%).";
 
 while {_fuelLevel < 1} do
 {
 	sleep 0.5;
 	_percentage = (_fuelLevel * 100);
-	_veh vehicleChat format["Refuelling (%1%)...", floor _percentage];
+	_veh vehicleChat format["Дозаправка (%1%)...", floor _percentage];
 	if ((_fuelLevel + 0.01) >= 1) then
 	{
 		_veh setFuel 1;
@@ -129,8 +129,8 @@ while {_fuelLevel < 1} do
 	};
 };
 
-_veh vehicleChat "Refuelled (100%).";
+_veh vehicleChat "Заправлено (100%).";
 
 sleep 2;
 
-_veh vehicleChat format ["%1 successfully repaired and refuelled.", _vehType];
+_veh vehicleChat format ["%1 успешно заправлено и отремонтировано.", _vehType];
