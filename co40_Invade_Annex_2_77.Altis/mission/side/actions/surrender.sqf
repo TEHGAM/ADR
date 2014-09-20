@@ -24,7 +24,7 @@ _______________________________________________________*/
 
 //-------------------- Send hint to player that he's done something...
 
-hint "You ordered him to surrender";
+hint "Вы отдали приказ сдаться";
 
 sleep 1;
 
