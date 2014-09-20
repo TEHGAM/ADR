@@ -24,11 +24,11 @@ sleep 5;
 if(random 1 >= 0) then {
 	
 	_defendMessages = [
-		"OPFOR Forces incoming! Seek cover immediately and defend the objective area!",
-		"The enemy managed to call in reinforcements! Form a perimeter around the objective area!"
+		"Вражеские силы на подходе! Ищите укрытие и защищайте зону задания!",
+		"Врагу удалось вызвать подкрепление! Сформируйте защитный преиметр вокруг цели!"
 	];
 	_targetStartText = format [
-		"<t align='center' size='2.2'>Defend Target</t><br/><t size='1.5' align='center' color='#0d4e8f'>%1</t><br/>____________________<br/>We have a problem. The enemy managed to call in land reinforcements. They are on the way to take back the last target. You need to defend it at all cost!",
+		"<t align='center' size='2.2'>Защитить цель.</t><br/><t size='1.5' align='center' color='#0d4e8f'>%1</t><br/>____________________<br/>У нас проблемы. Врагу удалось вызвать подкрепление. Они возвращаются к последней цели.Вы должны защитить ее любой ценой!",
 		currentAO
 	];
 
@@ -45,7 +45,7 @@ if(random 1 >= 0) then {
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 
 	_playersOnlineHint = format [
-		"<t size='1.5' align='left' color='#C92626'>Enemy attacking %1!</t><br/><br/>____________________<br/>Get ready boys they are almost here!", currentAO
+		"<t size='1.5' align='left' color='#C92626'>Враг атакует! %1!</t><br/><br/>____________________<br/>Приготовьтесь, они совсем рядом!", currentAO
 	];
 
 	_defendTimer1 = 480;
@@ -59,15 +59,15 @@ if(random 1 >= 0) then {
 
 	null = [["aoCircle_2"],[6,5],[3,2],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
 	
-	hint "Thermal images show enemy are at the perimeter of the AO!";
+	hint "Термальные сканеры показывают присутствие противника в зоне боевых действий!";
 			
 	sleep 5;
 			
-	hqSideChat = "Assault will end in approximately 10 minutes."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Атака продолжится еще примерно 10 минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			
 	sleep _defendTimer1;
 		
-	hqSideChat = "The attack is almost over!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Атака почти завершена!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 	sleep _defendTimer2;
 
