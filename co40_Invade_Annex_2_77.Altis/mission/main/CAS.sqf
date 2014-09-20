@@ -54,9 +54,9 @@ while {true} do {
 
 
 
-		showNotification = ["EnemyJet", "Enemy jet approaching the AO!"]; publicVariable "showNotification";
+		showNotification = ["EnemyJet", "Вражеский истребитель приближается к основной точке захвата!"]; publicVariable "showNotification";
 		_priorityMessageJet =
-		"<t align='center' size='2.2'>Priority Target</t><br/><t size='1.5' color='#b60000'>Enemy Jet Inbound</t><br/>____________________<br/>OPFOR are inbound with CAS to support their infantry forces!<br/><br/>This is a priority target!";
+		"<t align='center' size='2.2'>Главная цель</t><br/><t size='1.5' color='#b60000'>Вражеский истребитель на подходе</t><br/>____________________<br/>Противник запросил потдержку с воздуха в подногу своим наземным силам!<br/><br/>Уничтожение воздуха является вашей главной задачей!";
 		GlobalHint = _priorityMessageJet; publicVariable "GlobalHint"; hint parseText _priorityMessageJet;
 
 		waitUntil {
