@@ -11,12 +11,12 @@ Description:
 _______________________________________________________*/
 	
 if (SM_SWITCH) exitWith {
-	hint "No side objective available, please wait."
+	hint "Второстепенные цели отсутствуют; ждите дальнейших указаний!"
 };
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Side objective available, briefing requested ...";
+hint "Дополнительное задание выявлено; запрашиваю дальнейшие указания ...";
 
 sleep 1;
 
