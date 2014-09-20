@@ -1,7 +1,7 @@
 private ["_failedText"];
 
-_failedText = "<t align='center'><t size='2.2'>Side Mission</t><br/><t size='1.5' color='#b60000'>FAILED</t><br/>____________________<br/>
-	You'll have to do better than that next time!<br/><br/><br/>Focus on the main objective for now; we'll relay the bad news to HQ, with some luck we'll have another objective lined up. 
-	We'll get back to you in 15 - 30 minutes.</t>";
+_failedText = "<t align='center'><t size='2.2'>Дополнительное задание</t><br/><t size='1.5' color='#b60000'>ПРОВАЛЕНО</t><br/>____________________<br/>
+	Вы должны работать лучше в следующий раз<br/><br/><br/>Теперь сосредоточьтесь на основной цели; мы отправим плохие новости в штаб, с небольшой долей везения мы получим следующее задание. 
+	Мы вернемся через 10-15 минут</t>";
 
 GlobalHint = _failedText; publicVariable "GlobalHint"; hint parseText _failedText;
