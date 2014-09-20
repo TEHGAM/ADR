@@ -29,7 +29,7 @@ _vehName = _veh select 0;
 _vehVarname = _veh select 1;
 
 _completeText = format[
-"<t align='center'><t size='2.2'>Side Mission</t><br/><t size='1.5' color='#08b000'>COMPLETE</t><br/>____________________<br/>Fantastic job, lads! The OPFOR stationed on the island won't last long if you keep that up!<br/><br/>We've given you %1 to help with the fight. You'll find it at base.<br/><br/>Focus on the main objective for now; we'll relay this success to the intel team and see if there's anything else you can do for us. We'll get back to you in 10-15 minutes.</t>",_vehName];
+"<t align='center'><t size='2.2'>Дополнительное задание</t><br/><t size='1.5' color='#08b000'>ВЫПОЛНЕНО</t><br/>____________________<br/>Отличная работа, парни! Вражеские силы не смогут устоять если вы продолжите!<br/><br/>Мы высылаем вам %1 для помощи в битве. Награду вы можете найти на базе.<br/><br/Теперь сосредоточьтесь на основной цели; Мы сообщили о ваших успехах в разведцентр, посмотрим что мы еще сможем сделать для вас. Мы вернемся через 10-15 минут.</t>",_vehName];
 
 _reward = createVehicle [_vehVarname, getMarkerPos "smReward1",smMarkerList,0,"NONE"];
 waitUntil {!isNull _reward};
