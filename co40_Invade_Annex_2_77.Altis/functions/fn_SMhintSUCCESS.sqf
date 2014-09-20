@@ -42,4 +42,4 @@ _reward setDir 284;
 
 GlobalHint = _completeText; publicVariable "GlobalHint"; hint parseText _completeText;
 showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "showNotification";
-showNotification = ["Reward", format["Your team received %1!", _vehName]]; publicVariable "showNotification";
+showNotification = ["Reward", format["Ваша команда получила %1!", _vehName]]; publicVariable "showNotification";
