@@ -4,7 +4,7 @@
 diag_log text "";
 
 _ArrayCounter = 0;
-diag_log text "Average FPS";
+diag_log text "Средний фреймрейт";
 
 _lineOutput = "====";
 for "_loopcounter" from 1 to (count pvpfw_monitor_fpsArray) do{
@@ -50,7 +50,7 @@ diag_log pvpfw_monitor_fpsArray;
 diag_log text "";
 
 _ArrayCounter = 0;
-diag_log text "Average Minimum FPS";
+diag_log text "Средний минимальный фреймрейт";
 
 _lineOutput = "====";
 for "_loopcounter" from 1 to (count pvpfw_monitor_fpsMinArray) do{
