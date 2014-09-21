@@ -555,7 +555,7 @@ BTC_player_killed =
 				};
 				_healer = call BTC_check_healer;
 				_lifes = "";
-				if (BTC_active_lifes == 1) then {_lifes = format ["Lifes remaining: %1",BTC_lifes];};
+				if (BTC_active_lifes == 1) then {_lifes = format ["Количество жизней в запасе: %1",BTC_lifes];};
 				if (BTC_black_screen == 1 && BTC_camera_unc == 0) then {titleText [format ["%1\n%2\n%3", round (_timeout - time),_healer,_lifes], "BLACK FADED"]} else {hintSilent format ["%1\n%2\n%3", round (_timeout - time),_healer,_lifes];};
 				if (BTC_camera_unc == 1) then 
 				{
