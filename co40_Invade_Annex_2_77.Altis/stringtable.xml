@@ -261,9 +261,9 @@
 		</Key>
 		<Key ID="STR_VAS_restricted">
 			<Original>is a restricted item and will not be added to your inventory.</Original>
-			<Italian>è un oggetto bloccato e non sarà aggiunto al tuo inventario</Italian>
+			<Italian>è un oggetto bloccato e non sarà aggiunto al tuo inventario.</Italian>
+			<Russian>относиться к запрещенным предметам и не будет добавлен в ваш инвентарь</Russian>
 		</Key>
-
 
 
 
@@ -331,6 +331,7 @@
 		</Key>
 		<Key ID="STR_VAS_Load_TransferBtn">
 			<Original>Transfer</Original>
+			<Russian>Перенести/Russian>
 		</Key>
 		<Key ID="STR_VAS_Load_btnLoad">
 			<Original>Load</Original>
@@ -363,7 +364,7 @@
 			<Portuguese>Caixa de Munições Virtual - Gravar</Portuguese>
 			<Italian>Virtual Ammobox System - Salva equipaggiamento</Italian>
 			<Czech>Virtual Ammobox System - Ulozit Vybaveni</Czech>
-			<Russian>Виртуальный ящик - Сохранение снаряжения</Russian>
+			<Russian>Виртуальный ящик - Сохранить снаряжения</Russian>
 			<Spanish>Virtual Ammobox System - Guardar Equipamiento</Spanish>
 		</Key>
 		<Key ID="STR_VAS_Save_btnSave">
@@ -391,18 +392,23 @@
 	<Package name="VASTransferMenu">
 		<Key ID="STR_VAS_Transfer_MainMenu">
 			<Original>Virtual Ammobox System - Transfer Menu</Original>
+			<Russian>Виртуальный ящик - Меню переноса</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_SaveMenu">
 			<Original>Virtual Ammobox System - Save Transfer</Original>
+			<Russian>Виртуальный ящик - Сохранить перенос</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_Request">
 			<Original>wants to transfer you their saved loadout.</Original>
+			<Russian>хочет перенести вам свой сохраненный набор</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_Request2">
 			<Original>Would you like to receive this request and save it?</Original>
+			<Russian>Вы хотите принять этот запрос и сохранить его?</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_NoSlotSelection">
 			<Original>You either did not select a slot that you wanted to transfer to another user or the slot had no information.</Original>
+			<Russian>Либо слот который вы хотели перенести другому игроку не был выбран, или же выбранный слот не содержал информации.</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_BadUnit">
 			<Original>The selected user either doesn't exist.</Original>
@@ -411,61 +417,75 @@
 	<Package name="VASPrompts">
 		<Key ID="STR_VAS_Prompt_selectSlotFail">
 			<Original>You didn't select a slot to delete!</Original>
-			<Italian>Non hai selezionato uno slot da cancellare</Italian>
+			<Italian>Non hai selezionato uno slot da cancellare!</Italian>
+			<Russian>Вы не выбрали слот для удаления!</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteSlotNoInfo">
 			<Original>You can't delete that slot, it has no information!</Original>
-			<Italian>Non puoi cancellare questo slot, è già vuoto</Italian>
+			<Italian>Non puoi cancellare questo slot, è già vuoto!</Italian>
+			<Russian>Вы не можете удалить этот слот за отсутствием в нём информации!</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteSlotWarning">
 			<Original>You are about to delete slot</Original>
 			<Italian>Stai per cancellare lo slot</Italian>
+			<Russian>Вы собираетесь удалить слот</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteCanelled">
 			<Original>You cancelled deleting slot</Original>
 			<Italian>Hai cancellato lo slot cancellandolo</Italian>
+			<Russian>Вы отменили удаление слота</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteSuccess">
 			<Original>You deleted slot</Original>
 			<Italian>Hai cancellato lo slot</Italian>
+			<Russian>Вы удалили слот</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteYes">
 			<Original>Yes</Original>
 			<Italian>Sì</Italian>
 			<Spanish>Sì</Spanish>
+			<Russian>Да</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteNo">
 			<Original>No</Original>
 			<Italian>No</Italian>
 			<Spanish>No</Spanish>
+			<Russian>Нет</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_slotNoInfo">
 			<Original>You didn't select a slot!</Original>
 			<Italian>Non hai selezionato uno slot!</Italian>
+			<Russian>Вы не выбрали слот!</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_onRespawnFail">
 			<Original>No slot was selected to be loaded upon respawn!</Original>
 			<Italian>Non hai selezionato nessuno slot da caricare al respawn!</Italian>
+			<Russian>Слот для загрузки при респауне не выбран!</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_slotSelFail">
 			<Original>You didn't select a slot!</Original>
 			<Italian>Non hai selezionato uno slot</Italian>
+			<Russian>Вы не выбрали слот!</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_addToWeapon">
 			<Original>Weapon</Original>
 			<Italian>Armi</Italian>
+			<Russian>Оружие</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_addToInv">
 			<Original>Inventory</Original>
 			<Italian>Inventario</Italian>
+			<Russian>Инвентарь</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_acc1">
 			<Original>What do you want to do with that attachment?</Original>
 			<Italian>Cosa vuoi fare con questo accessorio?</Italian>
+			<Russian>Что вы хотите сделать с этим приспособлением?</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_acc2">
 			<Original>Please know that if you choose to add it to your weapon your current existing attachment in that slot will be lost.</Original>
 			<Italian>Attenzione, se attacchi l'accessorio alla tua arma, l'accessorio attaccato attualmente sarà sostituito.</Italian>
+			<Russian>Имейте в виду, добавляя данное приспособление к вашему оружию вы замените уже существующий аксесуар на месте его крепления.</Russian>
 		</Key>
 	</Package>
 </Project>
