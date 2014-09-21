@@ -62,7 +62,7 @@ if (currentVisionMode player == 2) then
 
             if (_disable) then
             {
-cutText ["Тепловизер отключен, нажми N","BLACK",-1];
+cutText ["Тепловизор отключен; нажмите клавишу «N»","BLACK",-1];
 waituntil {currentVisionMode player != 2};
 0 cutFadeOut 0;
             };
