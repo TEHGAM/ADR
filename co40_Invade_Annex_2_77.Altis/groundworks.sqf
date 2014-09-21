@@ -37,12 +37,12 @@ while {true} do
    
    if (count _craters > 0) then
    {
-   SystemChat (format ["Craters = %1",count _craters]);
+   SystemChat (format ["Рытвина = %1",count _craters]);
       for "_i" from 0 to ((count _craters) - 1) do
       {
          private ["_crater"];
          _crater = _craters select _i;
-		 _basemarker VehicleChat "I`ve prepared the backhoe dipper. Move...";
+		 _basemarker VehicleChat "Экскаваторный ковш на месте. Двигайтесь!";
 		 sleep 2;
          if ( speed (_basemarker) >= 7) then 
 		   {
