@@ -156,11 +156,11 @@ private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup"
 
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];			
-	"sideMarker" setMarkerText "Side Mission: Secure Intel"; publicVariable "sideMarker"; 	
-	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Secure Intel</t><br/>____________________<br/>We have reports from locals that sensitive, strategic information is changing hands. This is a target of opportunity!<br/><br/>We've marked the position on your map; head over there and secure the intel. It should be stored on one of the vehicles or on their persons.</t>";
+	"sideMarker" setMarkerText "Дополнительное задание: Захват разведданных"; publicVariable "sideMarker"; 	
+	_briefing = "<t align='center'><t size='2.2'>Новое дополнительное задание</t><br/><t size='1.5' color='#00B2EE'>Захват разведданных</t><br/>____________________<br/>Военная разведка докладывает о предстоящем обмене стратегически важной, конфиденциальной информацией между высокопоставленными агентами противника. Данная цель представляет удобный случай для контрразведки!<br/><br/>Местоположение проведения операции отмечено на вашей карте. Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата разведданных, находящиеся в одной из машин сопровождения или-же лично у одного из агентов.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Secure Intel"]; publicVariable "showNotification";
-	sideMarkerText = "Secure Intel"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Захват разведданных"]; publicVariable "showNotification";
+	sideMarkerText = "Захват разведданных"; publicVariable "sideMarkerText";
 	
 	sleep 0.3;
 	
@@ -188,7 +188,7 @@ while { sideMissionUp } do {
 		
 		//---------- DE-BRIEF
 		
-		hqSideChat = "Objective destroyed! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена до захвата! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		sideMissionUp = false; publicVariable "sideMissionUp";
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
@@ -217,7 +217,7 @@ while { sideMissionUp } do {
 		
 			sleep 0.3;
 		
-			hqSideChat = "Target has spotted you and is trying to escape with the intel!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+			hqSideChat = "Вас обнаружили, противник предпринимает попытку уйти с разведданными!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		
 			//---------- WHERE TO / HOW WILL THE OBJECTIVES ESCAPE?
 			
@@ -283,7 +283,7 @@ while { sideMissionUp } do {
 			
 			//---------- DE-BRIEF
 			
-			hqSideChat = "Objective escaped! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+			hqSideChat = "Цель ушла от погони! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			sideMissionUp = false; publicVariable "sideMissionUp";
 			[] spawn QS_fnc_SMhintFAIL;
 			{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
@@ -303,7 +303,7 @@ while { sideMissionUp } do {
 		
 		//---------- DE-BRIEF
 		
-		hqSideChat = "Intel received. Mission accomplished! We're sending the data up to HQ for analysis."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Разведданные захвачены. МИССИЯ ВЫПОЛНЕНА! Данные отправлены в штаб для анализа."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		sideMissionUp = false; publicVariable "sideMissionUp";
 		[] spawn QS_fnc_SMhintSUCCESS;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
