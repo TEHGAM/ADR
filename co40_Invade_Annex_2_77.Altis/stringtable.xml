@@ -412,6 +412,7 @@
 		</Key>
 		<Key ID="STR_VAS_Transfer_BadUnit">
 			<Original>The selected user either doesn't exist.</Original>
+			<Russian>Выбранный пользователь не существует</Russian>
 		</Key>
 	</Package>
 	<Package name="VASPrompts">
