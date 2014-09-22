@@ -228,7 +228,7 @@ class CfgNotifications
 	class NewMain
 	{
 		title = "НОВАЯ ОСНОВНАЯ ЗАДАЧА";
-		description = "Take %1";
+		description = "Захватить %1";
 		iconPicture = "media\images\notificons\main_objective.paa";
 		color[] = {1, 0.81, 0.06, 1};
 		priority = 9;
@@ -237,7 +237,7 @@ class CfgNotifications
 	class CompletedMain
 	{
 		title = "ОСНОВНАЯ ЗАДАЧА ЗАВЕРШЕНА";
-		description = "Taken %1";
+		description = "Точка %1 захвачена";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
 		priority = 9;
@@ -246,7 +246,7 @@ class CfgNotifications
 	class NewMainDefend
 	{
 		title = "ЗАЩИТА ОСНОВНОЙ ТОЧКИ";
-		description = "Defend %1";
+		description = "Защитить %1";
 		iconPicture = "media\images\notificons\defendtarget.paa";
 		color[] = {1, 0.81, 0.06, 1};
 		priority = 9;
@@ -255,7 +255,7 @@ class CfgNotifications
 	class CompletedMainDefended
 	{
 		title = "ОСНОВНАЯ ТОЧКА ЗАЩИЩЕНА";
-		description = "Defended %1";
+		description = "Точка %1 защищена";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
 		priority = 9;
