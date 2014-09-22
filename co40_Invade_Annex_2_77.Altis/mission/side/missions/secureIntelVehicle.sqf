@@ -141,8 +141,8 @@ private ["_x","_targetTrigger","_aGroup","_bGroup","_cGroup","_objUnit1","_objUn
 
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];		
-	"sideMarker" setMarkerText "Дополнительное задание: Захват разведданных"; publicVariable "sideMarker"; 
-	_briefing = "<t align='center'><t size='2.2'>Новое дополнительное задание</t><br/><t size='1.5' color='#00B2EE'>Захват разведданных</t><br/>____________________<br/>Военная разведка докладывает о предстоящем обмене стратегически важной, конфиденциальной информацией между высокопоставленными агентами противника. Данная цель представляет удобный случай для контрразведки!<br/><br/>Местоположение проведения операции отмечено на вашей карте. Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата разведданных, находящиеся в одной из машин сопровождения или-же лично у одного из агентов.</t>";
+	"sideMarker" setMarkerText "Допзадание: Захват разведданных"; publicVariable "sideMarker"; 
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Захват разведданных</t><br/>____________________<br/>Военная разведка докладывает о предстоящем обмене стратегически важной, конфиденциальной информацией между высокопоставленными агентами противника. Данная цель представляет удобный случай для контрразведки!<br/><br/>Местоположение проведения операции отмечено на вашей карте. Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата разведданных, находящиеся в одной из машин сопровождения или-же лично у одного из агентов.</t>";
 	GlobalHint = _briefing; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewSideMission", "Захват разведданных"]; publicVariable "showNotification";
 	sideMarkerText = "Захват разведданных"; publicVariable "sideMarkerText";
@@ -171,7 +171,7 @@ while { sideMissionUp } do {
 	
 		sleep 0.3;
 		
-		hqSideChat = "Цель уничтожена до захвата! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена преждевременно! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		sideMissionUp = false; publicVariable "sideMissionUp";
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker","sideCircle"]; publicVariable "sideMarker";
@@ -262,7 +262,7 @@ while { sideMissionUp } do {
 	
 		sleep 0.3;
 		
-		hqSideChat = "Разведданные захвачены. МИССИЯ ВЫПОЛНЕНА! Данные отправлены в штаб для анализа."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Разведданные захвачены. МИССИЯ ВЫПОЛНЕНА! Данные отправлены на исследование."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		sideMissionUp = false; publicVariable "sideMissionUp";
 		[] spawn QS_fnc_SMhintSUCCESS;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker","sideCircle"]; publicVariable "sideMarker";
