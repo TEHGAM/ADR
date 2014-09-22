@@ -68,7 +68,7 @@ _c4Message = ["Перехват оружия завершён. Заряд уст
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
 	"sideMarker" setMarkerText "Допзадание: Захват пусковых установок"; publicVariable "sideMarker";
 	publicVariable "sideObj";
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Захват пусковых установок</t><br/>____________________<br/>Вражеский элемент из фракции AAF поставляет вражеским силам...  with advanced weapons and anti-air launchers.<br/><br/>We've located the transfer location. Get over there quick before they get away, and secure those launchers.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Захват пусковых установок</t><br/>____________________<br/>После исследования захваченых разведданых нами выявлен предатель в рядах союзных войск, передаюший вражеским силам новейшие пусковые установки для систем ПВО.<br/><br/>Предпологаймое местополежение очередной передачи отмечено на вашей карте. Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата пусковых установок, а также ликвидировать групировки врага препятствующие проведению операции.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Захват пусковых установок"]; publicVariable "showNotification";
 	sideMarkerText = "Захват пусковых установок"; publicVariable "sideMarkerText";
