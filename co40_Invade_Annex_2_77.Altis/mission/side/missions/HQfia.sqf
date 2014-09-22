@@ -17,7 +17,7 @@ ____________________________________*/
 
 private ["_flatPos","_accepted","_position","_enemiesArray","_fuzzyPos","_x","_briefing","_unitsArray","_object","_SMveh","_SMaa","_tower1","_tower2","_tower3","_c4Message"];
 
-_c4Message = ["Supply crate secured. The charge has been set! 15 seconds until detonation.","Weapons secured. The explosives have been set! 15 seconds until detonation.","Insurgents supply secured. The charge is planted! 15 seconds until detonation."] call BIS_fnc_selectRandom;
+_c4Message = ["Ящик с боеприпасами захвачен. Заряд установлен! 15 секунд до детонации.","Оружие боевиков перехвачено. Взрывчатка установлена! 15 секунд до взрыва.","Боезапас повстанцев захвачен. Заряд установлен! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
 
 //-------------------- FIND POSITION FOR OBJECTIVE
 
@@ -71,13 +71,13 @@ _c4Message = ["Supply crate secured. The charge has been set! 15 seconds until d
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Side Mission: Secure Insurgency Supply"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Допзадание: Перехват боеприпасов"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 	
-	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Secure Insurgency Supply</t><br/>____________________<br/>OPFOR are training an insurgency on Altis.<br/><br/>We've marked the position on your map; head over there, sanitize the area and secure their supply.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Перехват боеприпасов</t><br/>____________________<br/>Вражеские силы проводят подготовку повстанцев на острове Алтис.<br/><br/>Координаты тренировочного лагерья врага отмечены у вас на карте. Ваша задача - выдвинутся на вышеуказанную точку, зачистить близлежащую территорию и захватить боеприпасы противника.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Secure Insurgency Supply"]; publicVariable "showNotification";
-	sideMarkerText = "Secure Insurgency Supply"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Перехват боеприпасов"]; publicVariable "showNotification";
+	sideMarkerText = "Перехват боеприпасов"; publicVariable "sideMarkerText";
 	
 //-------------------- [ CORE LOOPS ] ------------------------ [ CORE LOOPS ]
 
@@ -93,7 +93,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 		
 		sideMissionUp = false; publicVariable "sideMissionUp";
-		hqSideChat = "Objective destroyed! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена преждевременно! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		
