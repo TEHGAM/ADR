@@ -14,7 +14,7 @@ ____________________________________*/
 
 #define CHOPPER_TYPE "O_Heli_Attack_02_black_F","O_Heli_Light_02_unarmed_F","B_Heli_Attack_01_F"
 private ["_objPos","_flatPos","_accepted","_position","_randomDir","_hangar","_x","_enemiesArray","_briefing","_fuzzyPos","_unitsArray","_dummy","_object"];
-_c4Message = ["Chopper data secured. The charge has been set! 15 seconds until detonation.","Heli data secured. The explosives have been set! 15 seconds until detonation.","Chopper intel secured. The charge is planted! 15 seconds until detonation."] call BIS_fnc_selectRandom;
+_c4Message = ["Данные о вертолёте захвачены. Заряд установлен! 15 секунд до детонации.","Чертежи вертолёта у нас. Взрывчатка установлена! 15 секунд до взрыва.","Данные прототипа захвачены. Заряд установлен! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
 
 
 //-------------------- FIND SAFE POSITION FOR OBJECTIVE
@@ -72,13 +72,13 @@ _c4Message = ["Chopper data secured. The charge has been set! 15 seconds until d
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Side Mission: Secure Enemy Chopper"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Допзадание: Прототип вертолёта"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 
-	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Secure Enemy Chopper</t><br/>____________________<br/>OPFOR forces have been provided with a new prototype attack chopper and they're keeping it in a hangar somewhere on the island.<br/><br/>We've marked the suspected location on your map; head to the hangar, get the data and destroy the helicopter.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Прототип вертолёта</t><br/>____________________<br/>Вражеские силы приняли на испытание новый прототип боевого вертолёта, который они прячут в одном из своих ангаров.<br/><br/>Предпологаймое местоположение вертолёта отмечено у вас на карте. Ваша задача - обнаружить ангар противника, захватить данные о вертолёте и уничтожить прототип.</t>";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Secure Enemy Chopper"]; publicVariable "showNotification";
-	sideMarkerText = "Secure Enemy Chopper"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Прототип вертолёта"]; publicVariable "showNotification";
+	sideMarkerText = "Прототип вертолёта"; publicVariable "sideMarkerText";
 	
 	sideMissionUp = true; publicVariable "sideMissionUp";
 	SM_SUCCESS = false; publicVariable "SM_SUCCESS";
@@ -90,7 +90,7 @@ while { sideMissionUp } do {
 		
 		//-------------------- DE-BRIEFING
 		
-		hqSideChat = "Prototype intel lost! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Данные о прототипе утеряны! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		sideMissionUp = false; publicVariable "sideMissionUp";
