@@ -133,20 +133,20 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["priorityMarker", "priorityCircle"];
 	
-	"priorityMarker" setMarkerText "Priority Target: Artillery"; publicVariable "priorityMarker";
-	priorityTargetText = "Artillery"; publicVariable "priorityTargetText";
+	"priorityMarker" setMarkerText "Важная цель: Артиллерия"; publicVariable "priorityMarker";
+	priorityTargetText = "Артиллерия"; publicVariable "priorityTargetText";
 
-	_briefing = "<t align='center' size='2.2'>Priority Target</t><br/><t size='1.5' color='#b60000'>Artillery</t><br/>____________________<br/>OPFOR forces are setting up an artillery battery to hit you guys damned hard! We've picked up their positions with thermal imaging scans and have marked it on your map.<br/><br/>This is a priority target, boys! They're just setting up now; they'll be firing in about five minutes!";
+	_briefing = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#b60000'>Артиллерия</t><br/>____________________<br/>Вражеские силы выдвинули артиллерийскую батарею с целью подавления нашых наземных манёвров на точке дислокации. Снимки переданные нашим самолёт-разведчиком определили точное местонахождение вражеской батареи.<br/><br/>Противник заканчивает приготовления и будет готов к первому залпу через 5 минут.";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
-	showNotification = ["NewPriorityTarget", "Destroy Artillery"]; publicVariable "showNotification";
+	showNotification = ["NewPriorityTarget", "Уничтожить артиллерию"]; publicVariable "showNotification";
 
 	_firingMessages = [
-		"Thermal scans are picking up those enemy Artillery firing! Heads down!",
-		"Enemy Artillery rounds incoming! Advise you seek cover immediately.",
-		"OPFOR Artillery rounds incoming! Seek cover immediately!",
-		"The Artillery team's firing, boys! Down on the ground!",
-		"Get that damned Artillery team down; they're firing right now! Seek cover!",
-		"They're zeroing in! Incoming Artillery fire; heads down!"
+		"Тепловое сканирование определило работу вражеской артиллерии! Пригнитесь!",
+		"Артиллерийские снаряды врага на подходе. Ищите укрытие!",
+		"Артиллерийские снаряды противника выпущены. Ложись!",
+		"По нам ведут стрельбу с артиллерийских орудий врага. Укройтесь!",
+		"Артиллерийский отряд врага обстреливает наши позиции! В укрытие!",
+		"Враг начал прицельный артиллерийский огонь. Ниже голову!"
 	];
 	
 //-------------------- FIRING SEQUENCE LOOP
@@ -207,9 +207,9 @@ while { canMove priorityObj1 || canMove priorityObj2 } do {
 
 //-------------------- DE-BRIEF
 
-_completeText = "<t align='center' size='2.2'>Priority Target</t><br/><t size='1.5' color='#08b000'>NEUTRALISED</t><br/>____________________<br/>Incredible job, boys! Make sure you jump on those priority targets quickly; they can really cause havoc if they're left to their own devices.<br/><br/>Keep on with the main objective; we'll tell you if anything comes up.";
+_completeText = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#08b000'>НЕЙТРАЛИЗОВАНА</t><br/>____________________<br/>Отличная работа! Учтите, важные цели требуют первостепенного внимания иначе они могут действительно вызвать хаос для наших войск в районе дислокации.<br/><br/>Возвращайтесь к основному заданию, командование оповестит вас о новых развитиях по ходу текущей разведки.";
 GlobalHint = _completeText; hint parseText _completeText; publicVariable "GlobalHint";
-showNotification = ["CompletedPriorityTarget", "Enemy Artillery Neutralised"]; publicVariable "showNotification";
+showNotification = ["CompletedPriorityTarget", "Артиллерия нейтрализована"]; publicVariable "showNotification";
 { _x setMarkerPos [-10000,-10000,-10000] } forEach ["priorityMarker","priorityCircle"]; publicVariable "priorityMarker";
 
 //-------------------- DELETE
