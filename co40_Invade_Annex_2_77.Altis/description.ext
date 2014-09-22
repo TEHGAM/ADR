@@ -227,7 +227,7 @@ class CfgNotifications
 
 	class NewMain
 	{
-		title = "NEW MAIN OBJECTIVE";
+		title = "НОВАЯ ОСНОВНАЯ ЗАДАЧА";
 		description = "Take %1";
 		iconPicture = "media\images\notificons\main_objective.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -236,7 +236,7 @@ class CfgNotifications
 
 	class CompletedMain
 	{
-		title = "MAIN OBJECTIVE COMPLETE";
+		title = "ОСНОВНАЯ ЗАДАЧА ЗАВЕРШЕНА";
 		description = "Taken %1";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -245,7 +245,7 @@ class CfgNotifications
 
 	class NewMainDefend
 	{
-		title = "DEFEND MAIN OBJECTIVE";
+		title = "ЗАЩИТА ОСНОВНОЙ ТОЧКИ";
 		description = "Defend %1";
 		iconPicture = "media\images\notificons\defendtarget.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -254,7 +254,7 @@ class CfgNotifications
 
 	class CompletedMainDefended
 	{
-		title = "MAIN OBJECTIVE DEFENDED";
+		title = "ОСНОВНАЯ ТОЧКА ЗАЩИЩЕНА";
 		description = "Defended %1";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -263,7 +263,7 @@ class CfgNotifications
 
 	class NewSub
 	{
-		title = "NEW SUB-OBJECTIVE";
+		title = "НОВОЕ ДОПЗАДАНИЕ";
 		description = "%1";
 		iconPicture = "media\images\notificons\sub_objective.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -272,7 +272,7 @@ class CfgNotifications
 
 	class CompletedSub
 	{
-		title = "SUB-OBJECTIVE COMPLETE";
+		title = "ДОПЗАДАНИЕ ЗАВЕРШЕНО";
 		description = "%1";
 		iconPicture = "media\images\notificons\sub_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -281,7 +281,7 @@ class CfgNotifications
 
 	class NewSideMission
 	{
-		title = "NEW SIDE MISSION";
+		title = "НОВОЕ ДОПЗАДАНИЕ";
 		iconPicture = "media\images\notificons\side_mission.paa";
 		description = "%1";
 		color[] = {0, 0.7, 0.93, 1};
@@ -290,7 +290,7 @@ class CfgNotifications
 
 	class NewSideMissionFileData
 	{
-		title = "NEW SIDE MISSION";
+		title = "НОВОЕ ДОПЗАДАНИЕ";
 		iconPicture = "media\images\notificons\laptop.paa";
 		description = "%1";
 		color[] = {0, 0.7, 0.93, 1};
@@ -299,7 +299,7 @@ class CfgNotifications
 
 	class NewSideMissionFileDataComplete
 	{
-		title = "FILE DATA SAVED";
+		title = "ДАННЫЕ СОХРАНЕНЫ";
 		description = "%1";
 		iconPicture = "media\images\notificons\laptop.paa";
 		color[] = {0.38, 0.81, 0.16, 1};
@@ -308,7 +308,7 @@ class CfgNotifications
 
 	class NewSideMissionRadar
 	{
-		title = "NEW SIDE MISSION";
+		title = "НОВОЕ ДОПЗАДАНИЕ";
 		iconPicture = "media\images\notificons\smdestroyradar.paa";
 		description = "%1";
 		color[] = {0, 0.7, 0.93, 1};
@@ -317,7 +317,7 @@ class CfgNotifications
 
 	class CompletedSideMission
 	{
-		title = "SIDE MISSION COMPLETE";
+		title = "ДОПЗАДАНИЕ ЗАВЕРШЕНО";
 		iconPicture = "media\images\notificons\side_mission_completed.paa";
 		description = "%1";
 		color[] = {0, 0.7, 0.93, 1};
@@ -326,7 +326,7 @@ class CfgNotifications
 
 	class NewPriorityTarget
 	{
-		title = "NEW PRIORITY TARGET";
+		title = "НОВАЯ ПРИОРИТЕТНАЯ ЦЕЛЬ";
 		iconPicture = "media\images\notificons\priority_target.paa";
 		description = "%1";
 		color[] = {0.8, 0.13, 0.14, 1};
@@ -335,7 +335,7 @@ class CfgNotifications
 
 	class CompletedPriorityTarget
 	{
-		title = "PRIORITY TARGET DOWN";
+		title = "ПРИОРИТЕТНАЯ ЦЕЛЬ УНИЧТОЖЕНА";
 		iconPicture = "media\images\notificons\priority_target_neutralised.paa";
 		description = "%1";
 		color[] = {0.8, 0.13, 0.14, 1};
@@ -344,7 +344,7 @@ class CfgNotifications
 
 	class EnemyJetDown
 	{
-		title = "ENEMY CAS NEUTRALIZED";
+		title = "ВРАЖЕСКИЙ CAS УНИЧТОЖЕН";
 		iconPicture = "media\images\notificons\down.paa";
 		description = "%1";
 		color[] = {1, 0.81, 0.06, 1};
@@ -353,7 +353,7 @@ class CfgNotifications
 
 	class EnemyJet
 	{
-		title = "ENEMY CAS INBOUND";
+		title = "ОБНАРУЖЕН ВРАЖЕСКИЙ CAS";
 		iconPicture = "media\images\notificons\enemyJetinbound.paa";
 		description = "%1";
 		color[] = {0.8, 0.13, 0.14, 1};
@@ -362,7 +362,7 @@ class CfgNotifications
 
 	class NewSideMissionJet
 	{
-		title = "NEW SIDE MISSION";
+		title = "НОВОЕ ДОПЗАДАНИЕ";
 		iconPicture = "media\images\notificons\enemyJetinbound.paa";
 		description = "%1";
 		color[] = {0.8, 0.13, 0.14, 1};
@@ -371,7 +371,7 @@ class CfgNotifications
 
 	class Reward
 	{
-		title = "TEAM REWARD";
+		title = "НАГРАДА";
 		description = "%1";
 		iconPicture = "media\images\notificons\reward.paa";
 		color[] = {0.38, 0.81, 0.16, 1};
@@ -380,7 +380,7 @@ class CfgNotifications
 
 	class ScoreBonus
 	{
-		title = "SCORE BONUS";
+		title = "БОНУС";
 		description = "%1";
 		iconPicture = "media\images\notificons\score_bonus.paa";
 		iconText = "+%2";
