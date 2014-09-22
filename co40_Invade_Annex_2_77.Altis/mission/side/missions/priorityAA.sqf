@@ -208,7 +208,7 @@ private ["_dir","_PTdir","_pos","_barrier","_unitsArray","_flatPos","_accepted",
 	"priorityMarker" setMarkerText "Важная цель: Зенитная батарея"; publicVariable "priorityMarker";
 	_briefing = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#b60000'>Зенитная батарея</t><br/>____________________<br/>Вражеские силы выдвинули батарею зенитных орудий с целью приостановки десантирования поддержки на точку дислокации и подавления нашей штурмовой авиации. Снимки переданные нашим самолёт-разведчиком определили точное местонахождение вражеской батареи.";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
-	showNotification = ["NewPriorityTarget", "Уничтожить зенитки"]; publicVariable "showNotification";
+	showNotification = ["NewPriorityTarget", "Уничтожить батарею"]; publicVariable "showNotification";
 	
 //-------------------- 8. CORE LOOP
 
