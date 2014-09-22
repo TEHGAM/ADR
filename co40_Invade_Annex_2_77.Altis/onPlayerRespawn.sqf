@@ -28,7 +28,7 @@ if (!isDedicated) then {
 
 ////////////////////////////скрипт теплака////////////////////////////
 _allowedVehicles = []; //сюда пишешь машинки, где работает теплак
-_allowedWeapons = [ "GMG_UGV_40mm", "Laserdesignator_mounted", "Laserdesignator" ]; 
+_allowedWeapons = [ "GMG_UGV_40mm", "Laserdesignator_mounted", "Laserdesignator", "launch_B_Titan_F", "launch_O_Titan_F", "launch_I_Titan_F", "launch_B_Titan_short_F", "launch_O_Titan_short_F", "launch_I_Titan_short_F" ]; 
 
 
 waitUntil {!isNull player};

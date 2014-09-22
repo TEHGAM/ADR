@@ -78,10 +78,10 @@ _________________________________________________*/
 		//------------------------------------- Opfor turret backpacks
 
 		_backpackRestricted = [
-			"B_Mortar_01_support_F",
+		//	"B_Mortar_01_support_F",
 			"O_Mortar_01_support_F",
 			"I_Mortar_01_support_F",
-			"B_Mortar_01_weapon_F",
+		//	"B_Mortar_01_weapon_F",
 			"O_Mortar_01_weapon_F",
 			"I_Mortar_01_weapon_F",
 			"O_UAV_01_backpack_F",
