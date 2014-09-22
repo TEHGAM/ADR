@@ -91,9 +91,9 @@ while { count _targetArray > 0 } do {
 	
 		_unitsArray = [_flatPos] call QS_fnc_AOminefield;
 	
-		"radioMarker" setMarkerText "Radiotower (Minefield)";
+		"radioMarker" setMarkerText "Радиовышка (Минное поле)";
 	} else {
-		"radioMarker" setMarkerText "Radiotower";
+		"radioMarker" setMarkerText "Радиовышка";
 	};
 	publicVariable "radioTower";
 
@@ -105,7 +105,7 @@ while { count _targetArray > 0 } do {
 	
 	_targetStartText = format
 	[
-		"<t align='center' size='2.2'>Новая задача</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Мы проделали неплохую работу с последний заданием, камрады. В следующий раз я хочу видеть такие же результаты. ТАщите свои задницы в %1 и всех уничтожте!<br/><br/>Помните, что уничтожив радиовышку, вы не дадите противнику вызвать подкрепление.",
+		"<t align='center' size='2.2'>Новая задача</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Мы проделали неплохую работу с последний заданием, камрады. В следующий раз я хочу видеть такие же результаты. Тащите свои задницы в %1 и всех уничтожте!<br/><br/>Помните, что уничтожив радиовышку, вы не дадите противнику вызвать подкрепление.",
 		currentAO
 	];
 
