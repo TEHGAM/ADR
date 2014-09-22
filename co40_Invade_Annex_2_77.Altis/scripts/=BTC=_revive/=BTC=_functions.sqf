@@ -565,7 +565,7 @@ BTC_player_killed =
 					BTC_r_u_camera camCommit 0;
 					if (BTC_r_camera_nvg) then {camusenvg true;} else {camusenvg false;};				
 				};
-				//sleep 0.5;
+				sleep 1;
 			};
 			if (BTC_camera_unc == 0) then
 			{
