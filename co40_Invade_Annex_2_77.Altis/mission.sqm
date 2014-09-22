@@ -4463,7 +4463,7 @@ class Mission
 		{
 			position[]={14861.612,17.91,16780.727};
 			name="ammocargo";
-			text="Комплекты: Бобкет";
+			text="Комплекты: Бобкэт";
 			type="o_support";
 			colorName="ColorWEST";
 			angle=359.22;
