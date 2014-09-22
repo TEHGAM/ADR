@@ -83,10 +83,10 @@ _c4Message = ["Радиолокационные данные захвачены.
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Дополнительное задание: Захват радара"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Допзадание: Захват радара"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 
-	_briefing = "<t align='center'><t size='2.2'>Новое дополнительное задание</t><br/><t size='1.5' color='#00B2EE'>Захват радара</t><br/>____________________<br/>В целях поддержки своей авиации вражеские силы захватили небольшую радиостанцию.<br/><br/>Приблизительное местонахождении радара отмечено у вас на карте. Ваша задача - выдвинутся на вышеуказанную точку, обезвредить противника на близлежащей территории и захватить радиолокационные данные, с последующим уничтожениеми и самого объекта.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Захват радара</t><br/>____________________<br/>В целях поддержки своей авиации вражеские силы захватили небольшую радиостанцию.<br/><br/>Приблизительное местонахождении радара отмечено у вас на карте. Ваша задача - выдвинутся на вышеуказанную точку, обезвредить противника на близлежащей территории и захватить радиолокационные данные, с последующим уничтожениеми и самого объекта.</t>";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Захват радара"]; publicVariable "showNotification";
 	sideMarkerText = "Захват радара"; publicVariable "sideMarkerText";
