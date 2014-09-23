@@ -45,7 +45,7 @@ if(1 >= 0.5) then {
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 
 	_playersOnlineHint = format [
-		"<t size='1.5' align='left' color='#C92626'>Враг атакует  %1!</t><br/><br/>____________________<br/>Держитесь, ребята! Противник начинает штурм.", currentAO
+		"<t size='1.5' align='left' color='#C92626'>Враг атакует %1!</t><br/><br/>____________________<br/>Держитесь, противник начинает штурм.", currentAO
 	];
 
 	_defendTimer1 = 900;
