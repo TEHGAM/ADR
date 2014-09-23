@@ -605,7 +605,7 @@ BTC_check_healer =
 {
 	_pos = getpos player;
 	_men = [];_veh = [];_dist = 501;_healer = objNull;_healers = [];
-	_msg = "Поблизости нет врачей.";
+	_msg = "Поблизости нет ваших медиков!";
 	_men = nearestObjects [_pos, BTC_who_can_revive, 500];
 	_veh = nearestObjects [_pos, ["LandVehicle", "Air", "Ship"], 500];
 	{
@@ -619,7 +619,7 @@ BTC_check_healer =
 			{
 				if (_x distance _pos < _dist) then {_healer = _x;_dist = _x distance _pos;};
 			} foreach _healers;
-			if !(isNull _healer) then {_msg = format ["%1 находится на расстоянии %2 м и может вас оживить!", name _healer,round(_healer distance _pos)];};
+			if !(isNull _healer) then {_msg = format ["%1 находится на расстоянии %2 м и может вас поднять!", name _healer,round(_healer distance _pos)];};
 		};
 	};
 	_msg
