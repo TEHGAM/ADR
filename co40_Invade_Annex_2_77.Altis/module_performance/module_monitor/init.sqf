@@ -57,7 +57,7 @@ while{true}do{
 	_currentPlayers = playersNumber west + playersNumber east + playersNumber resistance + playersNumber civilian;
 	
 	if (pvpfw_monitor_infoOnMap) then{
-		_infoMarker setMarkerText format["Сервер: фреймрейт %1 | игроков %2 | предметов %3",([_currentfps,1] call BIS_fnc_cutDecimals),_currentPlayers,_currentObjectCount];
+		_infoMarker setMarkerText format["Сервер: FPS %1 | игроков %2 | предметов %3",([_currentfps,1] call BIS_fnc_cutDecimals),_currentPlayers,_currentObjectCount];
 	};
 	
 	_fps = _fps + _currentfps;
