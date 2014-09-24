@@ -4,7 +4,7 @@
 diag_log text "";
 
 _ArrayCounter = 0;
-diag_log text "Средний фреймрейт";
+diag_log text "Средний FPS";
 
 _lineOutput = "====";
 for "_loopcounter" from 1 to (count pvpfw_monitor_fpsArray) do{
