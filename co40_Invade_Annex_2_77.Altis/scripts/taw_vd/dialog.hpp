@@ -230,7 +230,7 @@ class TAW_VD
 		class VDonFoot : TAWVD_RscText
 		{
 			idc = -1;
-			text = "On Foot:";
+			text = "Пешком:";
 			
 			x = 0.32; y = 0.258;
 			w = 0.275; h = 0.04;
@@ -239,7 +239,7 @@ class TAW_VD
 		class VDinCar : TAWVD_RscText
 		{
 			idc = -1;
-			text = "In Car:";
+			text = "В машине:";
 			
 			x = 0.32; y = 0.305;
 			w = 0.275; h = 0.04;
@@ -248,7 +248,7 @@ class TAW_VD
 		class VDinAir : TAWVD_RscText
 		{
 			idc = -1;
-			text = "In Air:";
+			text = "В воздухе:";
 			
 			x = 0.32; y = 0.355;
 			w = 0.275; h = 0.04;
@@ -257,7 +257,7 @@ class TAW_VD
 		class VDTerrSet : TAWVD_RscText
 		{
 			idc = -1;
-			text = "Grass Settings";
+			text = "Настройки травы";
 			shadow = 0;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 
@@ -286,7 +286,7 @@ class TAW_VD
 			idc = 2901;
 			text = "";
 			onSliderPosChanged = "[0,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "View distance while on foot";
+			tooltip = "Дистанция видимости на ногах";
 			x = 0.42;
 			y = 0.30 - (1 / 25);
 			
@@ -308,7 +308,7 @@ class TAW_VD
 			idc = 2911;
 			text = "";
 			onSliderPosChanged = "[1,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "View distance while in a land vehicle";
+			tooltip = "Дальность видимости в наземном транспорте";
 			x = 0.42;
 			y = 0.35 - (1 / 25);
 			
@@ -330,7 +330,7 @@ class TAW_VD
 			idc = 2921;
 			text = "";
 			onSliderPosChanged = "[2,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "View distance while in a air vehicle";
+			tooltip = "Дальность видимости внутри воздушного транспорта";
 			x = 0.42;
 			y = 0.40 - (1 / 25);
 			
@@ -350,7 +350,7 @@ class TAW_VD
 		class VD_terr_none : TAWVD_activeText
 		{
 			idc = -1;
-			text = "None";
+			text = "Нет";
 			action = "['none'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -361,7 +361,7 @@ class TAW_VD
 		class VD_terr_low : TAWVD_activeText
 		{
 			idc = -1;
-			text = "Low";
+			text = "Низко";
 			action = "['low'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -372,7 +372,7 @@ class TAW_VD
 		class VD_terr_normal : TAWVD_activeText
 		{
 			idc = -1;
-			text = "Normal";
+			text = "Средне";
 			action = "['norm'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -383,7 +383,7 @@ class TAW_VD
 		class VD_terr_high : TAWVD_activeText
 		{
 			idc = -1;
-			text = "High";
+			text = "Высоко";
 			action = "['high'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -394,7 +394,7 @@ class TAW_VD
 		class ButtonClose : TAWVD_RscButtonMenu {
 			idc = -1;
 			//shortcuts[] = {0x00050000 + 2};
-			text = "Close";
+			text = "Закрыть";
 			onButtonClick = "closeDialog 0;";
 			x = 0.48;
 			y = 0.6 - (1 / 25);
