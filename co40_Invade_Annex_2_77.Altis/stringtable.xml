@@ -181,7 +181,7 @@
 			<Original>Virtual Ammobox</Original>
 			<German>Interaktive Waffenkiste</German>
 			<Portuguese>Caixa de Munições Virtual</Portuguese>
-			<Russian>Виртуальный ящик</Russian>
+			<Russian>Снаряжение и экипировка</Russian>
 		</Key>
 		<Key ID="STR_VAS_Main_YCG">
 			<Original>Your Current Gear</Original>
@@ -277,7 +277,7 @@
 </Key>
 <Key ID="STRD_locked">
 	<Original>Locked</Original>
-	<Russian>Заблокировано</Russian>
+	<Russian>Заблокирована</Russian>
 </Key>
 <Key ID="STRD_Quit">
 	<Original>Quit</Original>
@@ -301,7 +301,7 @@
 </Key>
 <Key ID="STRD_Join">
 	<Original>Join</Original>
-	<Russian>Присоединиться</Russian>
+	<Russian>Вступить</Russian>
 </Key>
 
 
@@ -315,7 +315,7 @@
 			<Portuguese>Caixa de Munições Virtual - Carregar</Portuguese>
 			<Italian>Virtual Ammobox System - Carica equipaggiamento</Italian>
 			<Czech>Virtual Ammobox System - Nahrat Vybaveni</Czech>
-			<Russian>Виртуальный ящик - Загрузка снаряжения</Russian>
+			<Russian>Снаряжение и экипировка - Загрузка</Russian>
 			<Spanish>Virtual Ammobox System - Cargar Equipamiento</Spanish>
 		</Key>
 		<Key ID="STR_VAS_Load_LOR">
@@ -326,7 +326,7 @@
 			<Portuguese>Carregar em Respawn</Portuguese>
 			<Italian>Carica al respawn</Italian>
 			<Czech>Vybava-respawn</Czech>
-			<Russian>Загрузить при появлении</Russian>
+			<Russian>Автозагрузка</Russian>
 			<Spanish>Equipar En Respawn</Spanish>
 		</Key>
 		<Key ID="STR_VAS_Load_TransferBtn">
@@ -364,7 +364,7 @@
 			<Portuguese>Caixa de Munições Virtual - Gravar</Portuguese>
 			<Italian>Virtual Ammobox System - Salva equipaggiamento</Italian>
 			<Czech>Virtual Ammobox System - Ulozit Vybaveni</Czech>
-			<Russian>Виртуальный ящик - Сохранить снаряжения</Russian>
+			<Russian>Снаряжение и экипировка - Сохранение</Russian>
 			<Spanish>Virtual Ammobox System - Guardar Equipamiento</Spanish>
 		</Key>
 		<Key ID="STR_VAS_Save_btnSave">
@@ -392,11 +392,11 @@
 	<Package name="VASTransferMenu">
 		<Key ID="STR_VAS_Transfer_MainMenu">
 			<Original>Virtual Ammobox System - Transfer Menu</Original>
-			<Russian>Виртуальный ящик - Меню переноса</Russian>
+			<Russian>Снаряжение и экипировка - Меню переноса</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_SaveMenu">
 			<Original>Virtual Ammobox System - Save Transfer</Original>
-			<Russian>Виртуальный ящик - Сохранить перенос</Russian>
+			<Russian>Снаряжение и экипировка - Сохранить перенос</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_Request">
 			<Original>wants to transfer you their saved loadout.</Original>
@@ -408,7 +408,7 @@
 		</Key>
 		<Key ID="STR_VAS_Transfer_NoSlotSelection">
 			<Original>You either did not select a slot that you wanted to transfer to another user or the slot had no information.</Original>
-			<Russian>Либо слот который вы хотели перенести другому игроку не был выбран, или же выбранный слот не содержал информации.</Russian>
+			<Russian>Слот который вы хотели перенести другому игроку либо не был выбран, или не содержал информации.</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_BadUnit">
 			<Original>The selected user either doesn't exist.</Original>
@@ -461,7 +461,7 @@
 		<Key ID="STR_VAS_Prompt_onRespawnFail">
 			<Original>No slot was selected to be loaded upon respawn!</Original>
 			<Italian>Non hai selezionato nessuno slot da caricare al respawn!</Italian>
-			<Russian>Слот для загрузки при респауне не выбран!</Russian>
+			<Russian>Слот для автозагрузки не выбран!</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_slotSelFail">
 			<Original>You didn't select a slot!</Original>
