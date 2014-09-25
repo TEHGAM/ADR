@@ -245,7 +245,7 @@
 			<Portuguese>Lança-Misseis</Portuguese>
 			<Italian>Lanciamissili</Italian>
 			<Czech>Odpalovace</Czech>
-			<Russian>Гранатометы</Russian>
+			<Russian>Гранатомёты</Russian>
 			<Spanish>Lanzamisiles</Spanish>	
 		</Key>
 		<Key ID="STR_Vas_Main_Pistols">
@@ -262,7 +262,7 @@
 		<Key ID="STR_VAS_restricted">
 			<Original>is a restricted item and will not be added to your inventory.</Original>
 			<Italian>è un oggetto bloccato e non sarà aggiunto al tuo inventario.</Italian>
-			<Russian>относиться к запрещенным предметам и не будет добавлен в ваш инвентарь</Russian>
+			<Russian>относиться к запрещенным предметам и не будет добавлен в ваш инвентарь.</Russian>
 		</Key>
 
 
@@ -277,7 +277,7 @@
 </Key>
 <Key ID="STRD_locked">
 	<Original>Locked</Original>
-	<Russian>Блокировано</Russian>
+	<Russian>Заблокировано</Russian>
 </Key>
 <Key ID="STRD_Quit">
 	<Original>Quit</Original>
@@ -331,7 +331,7 @@
 		</Key>
 		<Key ID="STR_VAS_Load_TransferBtn">
 			<Original>Transfer</Original>
-			<Russian>Перенести/Russian>
+			<Russian>Перенести</Russian>
 		</Key>
 		<Key ID="STR_VAS_Load_btnLoad">
 			<Original>Load</Original>
