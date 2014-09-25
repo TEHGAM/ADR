@@ -169,7 +169,7 @@ class BTC_respawn_button_dialog
 		{
 			idc = 9;
 			text = "Respawn"; 
-			onMouseButtonClick = "BTC_respawn_cond = true;closeDialog 0;_respawn = [] spawn BTC_player_respawn;";
+			action = "BTC_respawn_cond = true;closeDialog 0;_respawn = [] spawn BTC_player_respawn;";
 			x = 0.7;
 			y = 0.6;
 			default = true;
@@ -251,7 +251,7 @@ class BTC_spectating_dialog
 		{
 			idc = 122;
 			text = "Respawn"; 
-			onMouseButtonClick = "BTC_respawn_cond = true;closeDialog 0;_respawn = [] spawn BTC_player_respawn;";
+			action = "BTC_respawn_cond = true;closeDialog 0;_respawn = [] spawn BTC_player_respawn;";
 			x = 0.7;
 			y = -0.2;
 			default = true;
