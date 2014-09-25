@@ -12,7 +12,7 @@
 |	You may use and edit the code.
 |	You may not remove any entries from Credits without first removing the relevant author's contributions, 
 |	or asking permission from the mission authors/contributors.
-|	You may not remove the Credits tab, without consent of Ahoy World or allFPS.
+|	You may not remove the Credits tab, without consent of Ahoy World or ALLFPS.
 | 	Feel free to re-format or make it look better.
 |_____
 |
@@ -30,7 +30,7 @@
 |	
 |	Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
 |	
-|	Please be respectful and do not remove credit.
+|	Please be respectful and do not remove credits.
 |______________________________________________________________*/
 
 if (!hasInterface) exitWith {};
@@ -39,7 +39,7 @@ waitUntil {!isNull player};
 
 player createDiarySubject ["rules", "Правила"];
 player createDiarySubject ["mods", "Моды"];
-player createDiarySubject ["teamspeak", "Teamspeak"];
+player createDiarySubject ["teamspeak", "TeamSpeak"];
 player createDiarySubject ["changelog", "История"];
 player createDiarySubject ["credits", "Создатели"];
 
@@ -97,10 +97,10 @@ player createDiaryRecord ["mods",
 "
 <br /> Разрешенные моды на сервере:<br /><br />
 
-<br />- Community Base addons.
+<br />- Community Base Аddons (CBA).
 		http://tehgam.com/viewtopic.php?f=5&amp;t=21 <br /><br />
 
-<br />- JSRS. (Community Base addons нужен обязательно)
+<br />- JSRS (CBA нужен обязательно).
 		http://tehgam.com/viewtopic.php?f=5&amp;t=19&amp;p=19 <br /><br />
 
 <br />- VTS Simple weapon resting (Сошки).
@@ -110,20 +110,20 @@ player createDiaryRecord ["mods",
 "
 ]];
 
-//-------------------------------------------------- Teamspeak
+//-------------------------------------------------- TeamSpeak
 
 player createDiaryRecord ["teamspeak",
 [
 "TS3",
 "
-<br /> Teamspeak:<br /><br />
+<br /> TeamSpeak:<br /><br />
 <br /> http://www.teamspeak.com/?page=downloads
 "
 ]];
 
 player createDiaryRecord ["teamspeak",
 [
-"Наш teamspeak",
+"Наш TeamSpeak",
 "
 <br /> Адрес: 213.21.12.135
 "
@@ -134,12 +134,12 @@ player createDiaryRecord ["teamspeak",
 player createDiaryRecord ["changelog",
 [
 "3.4",
-"<br />- [ADDED] Очень много текста переведено на русский (спасибо Tourorist и KaMeG).
-<br />- [CHANGED] При смерти теперь надпись о времени и ближайших медиках должна быть видна.
-<br />- [DELETED] Убрал квадры с карты.
-<br />- [UPDATED] Разрешил теплак на титане.
-<br />- [UPDATED] Разрешил минометы.
-<br />- [UPDATED] Из модов на РВ2 оставил только CBA, JSRS и VTS!
+"<br />- [ДОБАВИЛИ] Очень много текста переведено на русский (спасибо Tourorist и KaMeG).
+<br />- [ПОМЕНЯЛИ] При смерти теперь надпись о времени и ближайших медиках должна быть видна.
+<br />- [УБРАЛИ] Убрал квадры с карты.
+<br />- [ОБНОВИЛИ] Разрешил теплак на титане.
+<br />- [ОБНОВИЛИ] Разрешил минометы.
+<br />- [ОБНОВИЛИ] Из модов на РВ2 оставил только CBA, JSRS и VTS!
 "
 ]];
 
@@ -147,7 +147,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["credits",
 [
-"I & A",
+"Invade & Annex",
 "
 <br />Mission authors:<br /><br />
 
@@ -207,6 +207,6 @@ player createDiaryRecord ["credits",
 		- KaMeG <br />		
 		
 <br />Благодарности:<br /><br />
-		Мы благодарим всех игроков, что оставляют нам свои отзывы о мисси, чем помогают вносить улучшения и совершенствовать игру!<br />	
+		Мы благодарим всех игроков которые уделяют своё время проекту оставляя нам отзывы и коментарии на форуме. Тем самым Вы способствуете в исправлении текущих неполадок и разработке дальнейших улучшений данной миссии. Огромное спасибо!<br />
 "
 ]];
