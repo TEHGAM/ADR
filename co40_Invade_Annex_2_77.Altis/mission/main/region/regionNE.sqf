@@ -114,7 +114,7 @@ while { count _targetArray > 0 } do {
 	
 	GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewMain", currentAO]; publicVariable "showNotification";
-	showNotification = ["NewSub", "Подорвите  радиовышку противника."]; publicVariable "showNotification";		
+	showNotification = ["NewSub", "Подорвите радиовышку противника."]; publicVariable "showNotification";		
 	
 	//-------------------------------------------- CORE LOOP
 	
