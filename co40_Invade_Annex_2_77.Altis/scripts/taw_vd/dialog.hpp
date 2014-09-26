@@ -257,7 +257,7 @@ class TAW_VD
 		class VDTerrSet : TAWVD_RscText
 		{
 			idc = -1;
-			text = "Настройки травы";
+			text = "Настройка количества травы";
 			shadow = 0;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 
@@ -274,7 +274,7 @@ class TAW_VD
 		class Title : TAWVD_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "TAW View Distance Script";
+			text = "Настройка атмосферной видимости";
 			x = 0.3;
 			y = 0.2;
 			w = 0.8;
@@ -286,7 +286,7 @@ class TAW_VD
 			idc = 2901;
 			text = "";
 			onSliderPosChanged = "[0,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "Дистанция видимости на ногах";
+			tooltip = "Дальность видимости на ногах";
 			x = 0.42;
 			y = 0.30 - (1 / 25);
 			
@@ -308,7 +308,7 @@ class TAW_VD
 			idc = 2911;
 			text = "";
 			onSliderPosChanged = "[1,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "Дальность видимости в наземном транспорте";
+			tooltip = "Дальность видимости из кабины водителя";
 			x = 0.42;
 			y = 0.35 - (1 / 25);
 			
@@ -330,7 +330,7 @@ class TAW_VD
 			idc = 2921;
 			text = "";
 			onSliderPosChanged = "[2,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "Дальность видимости внутри воздушного транспорта";
+			tooltip = "Дальность видимости из кабины пилота";
 			x = 0.42;
 			y = 0.40 - (1 / 25);
 			
@@ -361,7 +361,7 @@ class TAW_VD
 		class VD_terr_low : TAWVD_activeText
 		{
 			idc = -1;
-			text = "Низко";
+			text = "Мало";
 			action = "['low'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -383,7 +383,7 @@ class TAW_VD
 		class VD_terr_high : TAWVD_activeText
 		{
 			idc = -1;
-			text = "Высоко";
+			text = "Много";
 			action = "['high'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
