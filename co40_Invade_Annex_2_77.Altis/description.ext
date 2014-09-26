@@ -227,7 +227,7 @@ class CfgNotifications
 
 	class NewMain
 	{
-		title = "НОВАЯ ОСНОВНАЯ ЗАДАЧА";
+		title = "НОВАЯ ОСНОВНАЯ ЦЕЛЬ";
 		description = "Захватить %1";
 		iconPicture = "media\images\notificons\main_objective.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -236,7 +236,7 @@ class CfgNotifications
 
 	class CompletedMain
 	{
-		title = "ОСНОВНАЯ ЗАДАЧА ЗАВЕРШЕНА";
+		title = "ОСНОВНАЯ ЦЕЛЬ ЗАХВАЧЕНА";
 		description = "Точка %1 захвачена";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -245,7 +245,7 @@ class CfgNotifications
 
 	class NewMainDefend
 	{
-		title = "ЗАЩИТА ОСНОВНОЙ ТОЧКИ";
+		title = "ЗАЩИТА ОСНОВНОЙ ЦЕЛИ";
 		description = "Защитить %1";
 		iconPicture = "media\images\notificons\defendtarget.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -254,7 +254,7 @@ class CfgNotifications
 
 	class CompletedMainDefended
 	{
-		title = "ОСНОВНАЯ ТОЧКА ЗАЩИЩЕНА";
+		title = "ОСНОВНАЯ ЦЕЛЬ ЗАЩИЩЕНА";
 		description = "Точка %1 защищена";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -272,7 +272,7 @@ class CfgNotifications
 
 	class CompletedSub
 	{
-		title = "ДОПЗАДАНИЕ ЗАВЕРШЕНО";
+		title = "ДОПЗАДАНИЕ ВЫПОЛНЕНО";
 		description = "%1";
 		iconPicture = "media\images\notificons\sub_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -317,7 +317,7 @@ class CfgNotifications
 
 	class CompletedSideMission
 	{
-		title = "ДОПЗАДАНИЕ ЗАВЕРШЕНО";
+		title = "ДОПЗАДАНИЕ ВЫПОЛНЕНО";
 		iconPicture = "media\images\notificons\side_mission_completed.paa";
 		description = "%1";
 		color[] = {0, 0.7, 0.93, 1};
@@ -326,7 +326,7 @@ class CfgNotifications
 
 	class NewPriorityTarget
 	{
-		title = "НОВАЯ ПРИОРИТЕТНАЯ ЦЕЛЬ";
+		title = "НОВАЯ ВАЖНАЯ ЦЕЛЬ";
 		iconPicture = "media\images\notificons\priority_target.paa";
 		description = "%1";
 		color[] = {0.8, 0.13, 0.14, 1};
@@ -335,7 +335,7 @@ class CfgNotifications
 
 	class CompletedPriorityTarget
 	{
-		title = "ПРИОРИТЕТНАЯ ЦЕЛЬ УНИЧТОЖЕНА";
+		title = "ВАЖНАЯ ЦЕЛЬ УНИЧТОЖЕНА";
 		iconPicture = "media\images\notificons\priority_target_neutralised.paa";
 		description = "%1";
 		color[] = {0.8, 0.13, 0.14, 1};
@@ -344,7 +344,7 @@ class CfgNotifications
 
 	class EnemyJetDown
 	{
-		title = "ВРАЖЕСКИЙ CAS УНИЧТОЖЕН";
+		title = "ВРАЖЕСКИЙ ШТУРМОВИК УНИЧТОЖЕН";
 		iconPicture = "media\images\notificons\down.paa";
 		description = "%1";
 		color[] = {1, 0.81, 0.06, 1};
@@ -353,7 +353,7 @@ class CfgNotifications
 
 	class EnemyJet
 	{
-		title = "ОБНАРУЖЕН ВРАЖЕСКИЙ CAS";
+		title = "ОБНАРУЖЕН ВРАЖЕСКИЙ ШТУРМОВИК";
 		iconPicture = "media\images\notificons\enemyJetinbound.paa";
 		description = "%1";
 		color[] = {0.8, 0.13, 0.14, 1};
