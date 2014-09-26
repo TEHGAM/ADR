@@ -24,7 +24,7 @@ _veh = _this select 0;
 _vehType = getText(configFile>>"CfgVehicles">>typeOf _veh>>"DisplayName");
 
 if (_veh isKindOf "ParachuteBase" || !alive _veh) exitWith {};
-if !((_veh isKindOf "Helicopter" ) or (_veh isKindOf "plane")) exitWith { _veh vehicleChat "Эта площадка только для авиации, солдат.!"; };
+if !((_veh isKindOf "Helicopter" ) or (_veh isKindOf "plane")) exitWith { _veh vehicleChat "Эта площадка предназначена только для обслуживания авиации!"; };
 
 _fuelLevel = fuel _veh;
 _damage = getDammage _veh;
@@ -33,7 +33,7 @@ _ghosthawkAmmo = 0;
 _ghosthawkFlares = 0;
 
 _veh setVehicleAmmo 1;
-_veh vehicleChat format ["Обслуживание %1... Ожидайте...", _vehType];
+_veh vehicleChat format ["Обслуживание %1. Ждите...", _vehType];
 _magazines = getArray(configFile >> "CfgVehicles" >> _vehType >> "magazines");
 
 if (count _magazines > 0) then {
@@ -66,7 +66,7 @@ if (_count > 0) then {
 			};
 		} forEach _magazines;
 		{
-			_veh vehicleChat format ["Перезарядка  %1", _x];
+			_veh vehicleChat format ["Перезарядка %1", _x];
 			sleep 0.05;
 			_veh addMagazine _x;
 			sleep 0.05;
@@ -96,7 +96,7 @@ if (_count > 0) then {
 _veh setVehicleAmmo 1;	// Reload turrets / drivers magazine
 
 
-_veh vehicleChat format ["Ремонт и заправка %1. Ожидайте...", _vehType];
+_veh vehicleChat format ["Ремонт и заправка %1. Ждите...", _vehType];
 
 while {_damage > 0} do
 {
@@ -133,4 +133,4 @@ _veh vehicleChat "Заправлено (100%).";
 
 sleep 2;
 
-_veh vehicleChat format ["%1 успешно заправлено и отремонтировано.", _vehType];
+_veh vehicleChat format ["%1 полностью заправлен и отремонтирован.", _vehType];
