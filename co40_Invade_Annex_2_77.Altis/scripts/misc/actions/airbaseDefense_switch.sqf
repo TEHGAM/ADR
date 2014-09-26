@@ -8,7 +8,7 @@ sleep 1;
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Активируем противовоздушную оборону...";
+hint "Активирование противовоздушную оборону...";
 
 sleep 3;
 
