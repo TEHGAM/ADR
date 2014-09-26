@@ -7,7 +7,7 @@ if (!(_veh isKindOf "plane")) exitWith {
 	_veh vehicleChat "Эта площадка предназначена только для обслуживания самолётов!"; 
 };
 
-_veh vehicleChat "Обслуживание авиации. Ждите...";
+_veh vehicleChat "Обслуживаем авиацию. Ждите...";
 
 _veh setFuel 0;
 
@@ -15,19 +15,19 @@ _veh setFuel 0;
 
 sleep 10;
 
-_veh vehicleChat "Перезарядка...";
+_veh vehicleChat "Перезаряжаем...";
 
 //---------- REPAIRING
 
 sleep 10;
 
-_veh vehicleChat "Ремонт...";
+_veh vehicleChat "Ремонтируем...";
 
 //---------- REFUELING
 
 sleep 10;
 
-_veh vehicleChat "Дозаправка...";
+_veh vehicleChat "Заправляем...";
 
 //---------- FINISHED
 
@@ -40,7 +40,7 @@ _veh setVehicleAmmo 1;
 _veh vehicleChat "Перезаряжен (100%).";
 
 _veh setFuel 1;
-_veh vehicleChat "Дозаправлен (100%).";
+_veh vehicleChat "Заправлен (100%).";
 
 sleep 2;
 
