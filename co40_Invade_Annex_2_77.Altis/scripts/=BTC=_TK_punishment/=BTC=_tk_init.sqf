@@ -6,7 +6,7 @@
 	06/03/2012
 */
 //Def
-BTC_tk_blackscreen_punishment = 2;
+BTC_tk_blackscreen_punishment = 0;
 BTC_tk_last_warning = 10;
 
 BTC_fnc_tk_PVEH =
@@ -68,7 +68,7 @@ BTC_Teamkill =
 			} else {_msg = "ВАС НАКАЗАЛИ ЗА УБИЙСТВО СВОИХ \ YOU HAVE BEEN PUNISHED FOR TEAMKILLING!";};
 			player setPos [0,0,0];
 			_n = 0;
-			while {_n < 60} do
+			while {_n < 120} do
 			{
 				titleText [_msg,"BLACK FADED"];
 				_n = _n + 1;
