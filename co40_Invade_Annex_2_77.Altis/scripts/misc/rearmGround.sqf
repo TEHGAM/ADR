@@ -23,13 +23,13 @@ private ["_damage","_percentage","_veh","_vehType","_fuelLevel"];
 _veh = _this select 0;
 _vehType = getText(configFile>>"CfgVehicles">>typeOf _veh>>"DisplayName");
 
-//if (_veh isKindOf "LandVehicle") exitWith { _veh vehicleChat "Эта площадка только для наземного транспорта, солдат"; };
+//if (_veh isKindOf "LandVehicle") exitWith { _veh vehicleChat "Эта площадка предназначена только для наземного транспорта!"; };
 
 _fuelLevel = fuel _veh;
 _damage = getDammage _veh;
 _veh setFuel 0;
 
-_veh vehicleChat format ["Ремонт и заправка %1. Ожидайте...", _vehType];
+_veh vehicleChat format ["Ремонт и заправка %1. Ждите...", _vehType];
 
 while {_damage > 0} do
 {
@@ -127,4 +127,4 @@ if (_count > 0) then {
 };
 _veh setVehicleAmmo 1;	// Reload turrets / drivers magazine
 
-_veh vehicleChat format ["%1 успешно отремонтировано и заправлено.", _vehType];
+_veh vehicleChat format ["%1 полностью отремонтирован и заправлен.", _vehType];
