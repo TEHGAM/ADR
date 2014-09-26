@@ -230,7 +230,7 @@ class TAW_VD
 		class VDonFoot : TAWVD_RscText
 		{
 			idc = -1;
-			text = "Пешком:";
+			text = "Пешком";
 			
 			x = 0.32; y = 0.258;
 			w = 0.275; h = 0.04;
@@ -239,7 +239,7 @@ class TAW_VD
 		class VDinCar : TAWVD_RscText
 		{
 			idc = -1;
-			text = "В машине:";
+			text = "Машина";
 			
 			x = 0.32; y = 0.305;
 			w = 0.275; h = 0.04;
@@ -248,7 +248,7 @@ class TAW_VD
 		class VDinAir : TAWVD_RscText
 		{
 			idc = -1;
-			text = "В воздухе:";
+			text = "Воздух";
 			
 			x = 0.32; y = 0.355;
 			w = 0.275; h = 0.04;
