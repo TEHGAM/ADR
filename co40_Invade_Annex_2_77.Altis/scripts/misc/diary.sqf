@@ -114,7 +114,7 @@ player createDiaryRecord ["mods",
 
 player createDiaryRecord ["teamspeak",
 [
-"TS3",
+"Скачать TS3",
 "
 <br /> TeamSpeak:<br /><br />
 <br /> http://www.teamspeak.com/?page=downloads
