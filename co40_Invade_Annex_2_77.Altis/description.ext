@@ -2,7 +2,7 @@
 
 author = Rarek [Ahoy World] & Quiksilver [allFPS];
 onLoadName = "Invade & Annex 2.77";
-OnLoadMission = "[Edited: www.TehGam.com v3.4]";
+OnLoadMission = "[Редакция TEHGAM.COM, вер.3.4]";
 loadScreen = "media\images\loading.jpg";			
 overviewPicture = "media\images\loading.jpg";		
 
