@@ -114,7 +114,7 @@ while { count _targetArray > 0 } do {
 	
 	GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewMain", currentAO]; publicVariable "showNotification";
-	showNotification = ["NewSub", "Подорвите  радиовышку противника."]; publicVariable "showNotification";		
+	showNotification = ["NewSub", "Подорвите радиовышку противника."]; publicVariable "showNotification";		
 	
 	//-------------------------------------------- CORE LOOP
 	
@@ -126,7 +126,7 @@ while { count _targetArray > 0 } do {
 	
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["radioMarker","radioCircle"];
-	_radioTowerDownText = "<t align='center' size='2.2'>Радиовышка</t><br/><t size='1.5' color='#08b000' align='center'>УНИЧТОЖЕНА</t><br/>____________________<br/>Радиовышка противника подорвана. Отличная работа!<br/><br/><t size='1.2' color='#08b000' align='center'> Теперь силы врага больше не смогут вызвать поддержку с воздуха.</t><br/>";
+	_radioTowerDownText = "<t align='center' size='2.2'>Радиовышка</t><br/><t size='1.5' color='#08b000' align='center'>УНИЧТОЖЕНА</t><br/>____________________<br/>Радиовышка противника подорвана. Отличная работа!<br/><br/><t size='1.2' color='#08b000' align='center'>Силы врага больше не смогут вызвать поддержку с воздуха.</t><br/>";
 	GlobalHint = _radioTowerDownText; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["CompletedSub", "Радиовышка противника подорвана."]; publicVariable "showNotification";
 	
@@ -162,7 +162,7 @@ while { count _targetArray > 0 } do {
 
 	//----------------------------------------------------- DE-BRIEF
 	
-	_targetCompleteText = format ["<t align='center' size='2.2'>Основная задача закончена</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>%1 захвачен, отлично сработали, парни! Приготовьтесь, скоро появится новая цель!</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Основная задача выполнена</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>%1 захвачен, отличная работа! Перегруперуйтесь перед началом новой миссии.</t>",currentAO];
 	GlobalHint = _targetCompleteText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	
 	//----------------------------------------------------- MAINTENANCE
