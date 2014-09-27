@@ -16,7 +16,7 @@ CONFIGURATION:
 _______________________________________________________________________*/
 
 #define SAFETY_ZONES	[["respawn_west", 150], ["respawn_pilot", 150]] // Syntax: [["marker1", radius1], ["marker2", radius2], ...]
-#define MESSAGE "Будь мужиком, не стреляй на базе блеать !!!"
+#define MESSAGE "Бесцельное использование оружия на базe запрещено!"
 
 waitUntil {!isNull player};
 
