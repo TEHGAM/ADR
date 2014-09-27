@@ -89,7 +89,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-40 AW Invade & Annex 2.77 [Редакция TEHGAM.COM, вер.3.4]";
-		overviewText="Version 2.77";
+		overviewText="Версия 2.77";
 		resistanceWest=0;
 		startWind=0;
 		forecastWind=0;
