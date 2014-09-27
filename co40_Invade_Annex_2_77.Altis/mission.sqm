@@ -88,7 +88,7 @@ class Mission
 	randomSeed=12935265;
 	class Intel
 	{
-		briefingName="Co-40 AW Invade & Annex 2.77 [Edited: www.TehGam.com v3.3]";
+		briefingName="Co-40 AW Invade & Annex 2.77 [Редакция TEHGAM.COM, вер.3.4]";
 		overviewText="Version 2.77";
 		resistanceWest=0;
 		startWind=0;
@@ -4293,7 +4293,7 @@ class Mission
 		{
 			position[]={494.53448,5.7407189e-005,33530.328};
 			name="allfps";
-			text="www.TehGam.com";
+			text="TEHGAM.COM";
 			type="mil_box";
 			colorName="ColorRed";
 		};
