@@ -181,7 +181,7 @@
 			<Original>Virtual Ammobox</Original>
 			<German>Interaktive Waffenkiste</German>
 			<Portuguese>Caixa de Munições Virtual</Portuguese>
-			<Russian>Снаряжение и экипировка</Russian>
+			<Russian>Доступные вещи</Russian>
 		</Key>
 		<Key ID="STR_VAS_Main_YCG">
 			<Original>Your Current Gear</Original>
@@ -191,7 +191,7 @@
 			<Portuguese>Equipamento Actual</Portuguese>
 			<Italian>Equipaggiamento attuale</Italian>
 			<Czech>Vase soucasne vybaveni</Czech>
-			<Russian>Ваше снаряжение</Russian>
+			<Russian>У вас в наличии</Russian>
 			<Spanish>Equipamiento Actual</Spanish>
 		</Key>
 		<Key ID="STR_Vas_Main_CL">
@@ -392,11 +392,11 @@
 	<Package name="VASTransferMenu">
 		<Key ID="STR_VAS_Transfer_MainMenu">
 			<Original>Virtual Ammobox System - Transfer Menu</Original>
-			<Russian>Снаряжение и экипировка - Меню переноса</Russian>
+			<Russian>Снаряжение и экипировка - Перенос</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_SaveMenu">
 			<Original>Virtual Ammobox System - Save Transfer</Original>
-			<Russian>Снаряжение и экипировка - Сохранить перенос</Russian>
+			<Russian>Снаряжение и экипировка - Сохранение</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_Request">
 			<Original>wants to transfer you their saved loadout.</Original>
