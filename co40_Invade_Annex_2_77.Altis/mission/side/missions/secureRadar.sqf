@@ -15,7 +15,7 @@ _________________________________________________________________________*/
 
 private ["_objPos","_flatPos","_accepted","_position","_randomDir","_hangar","_x","_enemiesArray","_briefing","_fuzzyPos","_unitsArray","_dummy","_object","_tower1","_tower2","_tower3"];
 
-_c4Message = ["Радиолокационные данные захвачены. Заряд установлен! 15 секунд до детонации.","Телеметрические данные радара получены. Взрывчатка установлена! 15 секунд до взрыва.","Данные радара считаны. Заряд установлен! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
+_c4Message = ["Радиолокационные данные захвачены. C-4 активирован! 15 секунд до детонации.","Телеметрические данные радара получены. Взрывчатка установлена! 15 секунд до взрыва.","Данные радара считаны. Заряд установлен! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
 
 //-------------------- FIND SAFE POSITION FOR OBJECTIVE
 
@@ -83,13 +83,13 @@ _c4Message = ["Радиолокационные данные захвачены.
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Допзадание: Захват радара"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Допзадание: Радар"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Захват радара</t><br/>____________________<br/>В целях поддержки своей авиации вражеские силы захватили небольшую радиостанцию.<br/><br/>Приблизительное местонахождении радара отмечено у вас на карте. Ваша задача - выдвинутся на вышеуказанную точку, обезвредить противника на близлежащей территории и захватить радиолокационные данные, с последующим уничтожениеми и самого объекта.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Радар</t><br/>____________________<br/>В целях поддержки своей авиации вражеские силы захватили небольшую радиостанцию. Приблизительное местонахождении радара отмечено у вас на карте.<br/><br/>Ваша задача - выдвинутся на вышеуказанную точку, обезвредить противника на близлежащей территории и захватить радиолокационные данные, с последующим уничтожениеми и самого объекта.</t>";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Захват радара"]; publicVariable "showNotification";
-	sideMarkerText = "Захват радара"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Радар"]; publicVariable "showNotification";
+	sideMarkerText = "Радар"; publicVariable "sideMarkerText";
 	
 	sideMissionUp = true; publicVariable "sideMissionUp";
 	SM_SUCCESS = false; publicVariable "SM_SUCCESS";
@@ -101,7 +101,7 @@ while { sideMissionUp } do {
 		
 		//-------------------- DE-BRIEFING
 		
-		hqSideChat = "Данные радара утеряны! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Данные радара утеряны! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		sideMissionUp = false; publicVariable "sideMissionUp";
