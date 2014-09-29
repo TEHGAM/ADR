@@ -33,7 +33,7 @@ while{true}do{
 				}else{
 					if (diag_tickTime > (_abandondedSince + pvpfw_cleanup_abandondTimer)) then{
 						deleteVehicle _x;
-						diag_log format["#PVPFW module_cleanup: cleaned up abandonded vehicle %1",typeOf _x];
+						diag_log format["#PVPFW module_cleanup: брошенная единица техники (%1) убрана ",typeOf _x];
 					};
 				};
 			}else{
