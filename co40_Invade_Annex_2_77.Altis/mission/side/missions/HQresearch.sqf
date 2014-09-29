@@ -17,7 +17,7 @@ ____________________________________*/
 
 private ["_flatPos","_accepted","_position","_enemiesArray","_fuzzyPos","_x","_briefing","_unitsArray","_object","_dummy","_SMveh","_SMaa","_c4Message","_vehPos"];
 
-_c4Message = ["Жёсткий диск захвачен. Заряд установлен! 15 секунд до детонации.","Научные данные захвачены. Взрывчатка установлена! 15 секунд до взрыва.","Исследовательская работа перехвачена. Заряд установлен! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
+_c4Message = ["Жёсткий диск захвачен. C-4 активирован! 15 секунд до детонации.","Научные данные захвачены. Взрывчатка установлена! 15 секунд до взрыва.","Исследовательская работа перехвачена. Заряд установлен! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
 #define VEH_TYPE "O_MRAP_02_F","O_Truck_03_covered_F","O_Truck_03_transport_F","O_Heli_Light_02_unarmed_F","O_Truck_02_transport_F","O_Truck_02_covered_F","C_SUV_01_F","C_Van_01_transport_F"
 
 //-------------------- FIND POSITION FOR OBJECTIVE
@@ -72,13 +72,13 @@ _c4Message = ["Жёсткий диск захвачен. Заряд устано
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Допзадание: Захват НИР"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Допзадание: Шпионаж"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 	
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Захват НИР</t><br/>____________________<br/>Силы противника проводят научно-исследовательскую работу с целью производства новых типов оружия.<br/><br/>Ваша задача - выявить и захватить научные данные, а затем уничтожить исследовательский центр.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Шпионаж</t><br/>____________________<br/>Силы противника проводят научно-исследовательскую работу с целью производства новых типов оружия.<br/><br/>Ваша задача - выявить и захватить научные данные, а затем уничтожить исследовательский центр.</t>";
 	GlobalHint = _briefing; publicVariable "GlobalHint"; hint parseText GlobalHint;
-	showNotification = ["NewSideMission", "Захват НИР"]; publicVariable "showNotification";
-	sideMarkerText = "Захват НИР"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Шпионаж"]; publicVariable "showNotification";
+	sideMarkerText = "Шпионаж"; publicVariable "sideMarkerText";
 
 	sideMissionUp = true; publicVariable "sideMissionUp";
 	SM_SUCCESS = false; publicVariable "SM_SUCCESS";
@@ -91,7 +91,7 @@ while { sideMissionUp } do {
 		
 		//-------------------- DE-BRIEFING
 		
-		hqSideChat = "Цель уничтожена преждевременно! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена преждевременно! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		sideMissionUp = false; publicVariable "sideMissionUp";
