@@ -15,7 +15,7 @@ ____________________________________*/
 
 private ["_flatPos","_accepted","_position","_enemiesArray","_fuzzyPos","_x","_briefing","_unitsArray","_object","_SMveh","_SMaa","_tower1","_tower2","_tower3","_flatPos1","_flatPos2"];
 
-_c4Message = ["Перехват оружия завершён. Заряд установлен! 15 секунд до детонации.","Пусковая установка захвачена. Взрывчатка установлена! 15 секунд до взрыва.","Оружие захвачено Заряд установлен! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
+_c4Message = ["Перехват оружия завершён. Заряд установлен! 15 секунд до взрыва.","Пусковая установка захвачена. Взрывчатка установлена! 15 секунд до взрыва.","Оружие врага захвачено. C-4 активирован! 15 секунд до детонации."] call BIS_fnc_selectRandom;
 
 
 //-------------------- FIND POSITION FOR OBJECTIVE
@@ -66,12 +66,12 @@ _c4Message = ["Перехват оружия завершён. Заряд уст
 
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Допзадание: Захват пусковых установок"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Допзадание: Пусковики"; publicVariable "sideMarker";
 	publicVariable "sideObj";
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Захват пусковых установок</t><br/>____________________<br/>После исследования захваченых разведданых нами выявлен предатель в рядах союзных войск, передаюший вражеским силам новейшие пусковые установки для систем ПВО.<br/><br/>Предпологаймое местополежение очередной передачи отмечено на вашей карте. Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата пусковых установок, а также ликвидировать групировки врага препятствующие проведению операции.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Пусковики</t><br/>____________________<br/>После исследования захваченых разведданых нами выявлен предатель в рядах союзных войск, передаюший вражеским силам новейшие пусковые установки для систем ПВО. Предпологаймое местополежение очередной передачи отмечено на вашей карте.<br/><br/>Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата пусковых установок, а также ликвидировать групировки врага препятствующие проведению операции.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Захват пусковых установок"]; publicVariable "showNotification";
-	sideMarkerText = "Захват пусковых установок"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Пусковики"]; publicVariable "showNotification";
+	sideMarkerText = "Пусковики"; publicVariable "sideMarkerText";
 	
 //-------------------- [ CORE LOOPS ] ------------------------ [ CORE LOOPS ]
 
@@ -87,7 +87,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 		
 		sideMissionUp = false; publicVariable "sideMissionUp";
-		hqSideChat = "Цель уничтожена преждевременно! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена преждевременно! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		
