@@ -25,9 +25,9 @@ if (pselect5 != "exit") then
 	{
 		if(name _x == _name) then
 		{
-			hint format ["Healing %1", _name];
+			hint format ["Перевязывает раны %1", _name];
 			_x setDamage 0;
-			["Healed %1", _name] call BIS_fnc_log;
+			["Перевязал раны %1", _name] call BIS_fnc_log;
 			sleep 0.25;
 		};
 	} forEach entities "CAManBase";
