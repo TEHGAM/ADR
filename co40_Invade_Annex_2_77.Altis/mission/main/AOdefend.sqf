@@ -63,7 +63,7 @@ if(1 >= 0.5) then {
 			
 	sleep 5;
 			
-	hqSideChat = "Разведка докладывает, что вражеские силы не смогут осаждать цель более 15 минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Разведка докладывает, что штурм нашей позиции противником продлится ещё около 15 минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			
 	sleep _defendTimer1;
 		
