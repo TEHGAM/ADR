@@ -1,4 +1,4 @@
 openMap true;
-cutText ["Click somewhere on the map to move there", "PLAIN"];
+cutText ["Для быстрого перемещения, выберите любую точку на карте", "PLAIN"];
 onMapSingleClick "vehicle player setPos _pos; onMapSingleClick '';true;";
-"Teleported himself" call BIS_fnc_log;
+"Переместил себя" call BIS_fnc_log;
