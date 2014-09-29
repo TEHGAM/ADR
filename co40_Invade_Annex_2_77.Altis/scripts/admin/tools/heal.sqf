@@ -1,5 +1,5 @@
-hint format ["Healing..."];
+hint format ["Перевязывает раны..."];
 sleep 2;
 player setDamage 0;
-"Healed himself" call BIS_fnc_log;
-hint format ["Done"];
+"Перевязал свои раны" call BIS_fnc_log;
+hint format ["Готов"];
