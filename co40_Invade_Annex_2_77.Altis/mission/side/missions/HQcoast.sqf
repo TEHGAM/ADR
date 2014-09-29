@@ -100,16 +100,16 @@ private ["_flatPos","_accepted","_position","_randomDir","_x","_briefing","_enem
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Допзадание: Прибрежный тайник.";
+	"sideMarker" setMarkerText "Допзадание: Тайник";
 	publicVariable "sideMarker";
 	publicVariable "sideObj";
 			
 	_c4Message = ["Заряд установлен! 15 секунд до взрыва.","C-4 активирован! 15 секунд до детонации.","Взрывчатка на месте! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
 
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Прибрежный тайник</t><br/>____________________<br/>В преддверии нового наступления, силы противника тайно переправляют и складируют значительное количество взрывчатых веществ. По последним разведданным, точное местоположение тайника на острове было определено в районе прибрежного мобильном штаба врага.<br/><br/>Координаты цели отмечены у вас на карте. Ваша задача - выдвинутся на вышеуказанную точку и обезвредить текущую партию взрывчатки. Будьте бдительны и соблюдайте дистанцию при непосредственной ликвидации склада.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Тайник</t><br/>____________________<br/>В преддверии нового наступления, силы противника тайно переправляют и складируют значительное количество взрывчатых веществ. По последним разведданным, точное местоположение тайника на острове было определено в районе прибрежного мобильном штаба врага.<br/><br/>Ваша задача - выдвинутся на вышеуказанную точку и обезвредить текущую партию взрывчатки. Будьте бдительны и соблюдайте дистанцию при непосредственной ликвидации склада.</t>";
 	GlobalHint = _briefing; publicVariable "GlobalHint"; hint parseText GlobalHint;
-	showNotification = ["NewSideMission", "Прибрежный тайник"]; publicVariable "showNotification";
-	sideMarkerText = "Прибрежный тайник"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Тайник"]; publicVariable "showNotification";
+	sideMarkerText = "Тайник"; publicVariable "sideMarkerText";
 	
 //-------------------- [ CORE LOOPS ]----------------------- [CORE LOOPS]
 
@@ -127,7 +127,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 		
 		sideMissionUp = false; publicVariable "sideMissionUp";
-		hqSideChat = "Цель уничтожена преждевременно! МИССИЯ ПРОВАЛЕНА!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена преждевременно! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"];
 		publicVariable "sideMarker";
