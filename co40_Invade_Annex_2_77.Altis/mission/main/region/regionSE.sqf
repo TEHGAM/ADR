@@ -105,7 +105,7 @@ while { count _targetArray > 0 } do {
 	
 	_targetStartText = format
 	[
-		"<t align='center' size='2.2'>Новая цель</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Командование довольно успехами в проведении предыдущей операции и ждёт от нас таких же результатов в будушем. Приготовтесь к бою и выдвигайтесь на новую точку захвата в %1. Нас ждут, будьте готовы к ожесточенному сопротивлению.<br/><br/>Первым делом, подорвав радиовышку противника, вы сможете устранить вероятность вызова воздушной поддержки силами врага.",
+		"<t align='center' size='2.2'>Основная задача</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Генштаб доволен успехами в проведении предыдущей операции и ждёт от вас таких же результатов в будушем. Приготовтесь к бою и выдвигайтесь на новую точку захвата. Нас будут ждать, готовтесь к ожесточенному сопротивлению!<br/><br/>Пподорвав радиовышку противника вы сможете устранить вероятность вызова воздушной поддержки силами врага.",
 		currentAO
 	];
 
@@ -125,7 +125,7 @@ while { count _targetArray > 0 } do {
 	
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["radioMarker","radioCircle"];
-	_radioTowerDownText = "<t align='center' size='2.2'>Радиовышка</t><br/><t size='1.5' color='#08b000' align='center'>УНИЧТОЖЕНА</t><br/>____________________<br/>Радиовышка противника подорвана. Отличная работа!<br/><br/><t size='1.2' color='#08b000' align='center'>Силы врага больше не смогут вызвать поддержку с воздуха.</t><br/>";
+	_radioTowerDownText = "<t align='center' size='2.2'>Радиовышка</t><br/><t size='1.5' color='#08b000' align='center'>УНИЧТОЖЕНА</t><br/>____________________<br/>Радиовышка противника подорвана. Отличная работа!<br/><br/><t size='1.2' color='#08b000' align='center'>Враг больше не сможет вызвать авиаподдержку.</t><br/>";
 	GlobalHint = _radioTowerDownText; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["CompletedSub", "Радиовышка противника подорвана."]; publicVariable "showNotification";
 	
@@ -140,7 +140,7 @@ while { count _targetArray > 0 } do {
 	//---------------------------------------------- DE-BRIEF 1
 	
 	sleep 3;
-	_targetCompleteText = format ["<t align='center' size='2.2'>Основная задача выполнена</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='left'>%1 захвачен, отличная работа! Перегруперуйтесь перед началом новой миссии.</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='left'>Перегруперуйтесь перед новым заданием!</t>",currentAO];
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["aoCircle","aoMarker","radioCircle"];
 	GlobalHint = _targetCompleteText; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["CompletedMain", currentAO]; publicVariable "showNotification";
@@ -161,7 +161,7 @@ while { count _targetArray > 0 } do {
 
 	//----------------------------------------------------- DE-BRIEF
 	
-	_targetCompleteText = format ["<t align='center' size='2.2'>Основная задача выполнена</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>%1 захвачен, отличная работа! Перегруперуйтесь перед началом новой миссии.</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>Перегруперуйтесь перед новым заданием!</t>",currentAO];
 	GlobalHint = _targetCompleteText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	
 	//----------------------------------------------------- MAINTENANCE
