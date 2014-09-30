@@ -88,7 +88,7 @@ class Mission
 	randomSeed=12935265;
 	class Intel
 	{
-		briefingName="AW I&A [TEHGAM RW2]";
+		briefingName="AW I&A [TEHGAM.COM]";
 		overviewText="Версия 3.4";
 		resistanceWest=0;
 		startWind=0;
