@@ -605,7 +605,7 @@ BTC_check_healer =
 {
 	_pos = getpos player;
 	_men = [];_veh = [];_dist = 501;_healer = objNull;_healers = [];
-	_msg = "Поблизости нет ваших медиков!";
+	_msg = "Поблизости нет наших медиков!";
 	_men = nearestObjects [_pos, BTC_who_can_revive, 500];
 	_veh = nearestObjects [_pos, ["LandVehicle", "Air", "Ship"], 500];
 	{
@@ -1150,8 +1150,8 @@ BTC_r_s_change_view =
 	switch (true) do
 	{
 		case (_view == "First person")    : {BTC_r_s_cam_view = [0,0.3,1.55];};
-		case (_view == "Behind the back") : {BTC_r_s_cam_view = [0,-2,2];};
-		case (_view == "High")            : {BTC_r_s_cam_view = [-15,-15,15];};
+		case (_view == "Вид со спины") : {BTC_r_s_cam_view = [0,-2,2];};
+		case (_view == "С высока")            : {BTC_r_s_cam_view = [-15,-15,15];};
 	};
 };
 BTC_r_s_keydown =
