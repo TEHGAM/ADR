@@ -479,7 +479,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					init="(group this) setGroupId [""EOD""]; this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="[EOD] Командир отряда";
+					description="[ИСО] Командир отряда";
 				};
 				class Item1
 				{
@@ -492,7 +492,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.44999999;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="[EOD] Инженер";
+					description="[ИСО] Инженер";
 				};
 				class Item2
 				{
@@ -504,7 +504,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.40000001;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="[EOD] Сапер";
+					description="[ИСО] Сапер";
 				};
 			};
 		};
