@@ -657,7 +657,7 @@ BTC_player_respawn =
 				//player enableSimulation false;
 				//player setpos [0,0,6000];
 				//player setVelocity [0,0,0];
-				titleText [format ["Респаун через %1",_n], "BLACK FADED"];
+				titleText [format ["Возрождение на базе через %1",_n], "BLACK FADED"];
 				sleep 1;
 			};
 		};
@@ -1020,7 +1020,7 @@ BTC_r_create_dialog_mobile =
 			player setpos [0,0,6000];
 			//player setVelocity [0,0,0];
 			call BTC_r_load;
-			if (count BTC_r_list == 0) then {titleText ["ТОЧКИ РЕСПАУНА ОТСУТСТВУЮТ.", "PLAIN"];};
+			if (count BTC_r_list == 0) then {titleText ["ТОЧКИ ВОЗРОЖДЕНИЯ ОТСУТСТВУЮТ.", "PLAIN"];};
 			sleep 1;
 		};
 		player allowdamage true;
