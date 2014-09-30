@@ -88,8 +88,8 @@ class Mission
 	randomSeed=12935265;
 	class Intel
 	{
-		briefingName="Co-40 AW Invade & Annex 2.77 [Редакция TEHGAM.COM, вер.3.4]";
-		overviewText="Версия 2.77";
+		briefingName="AW Invade & Annex [Редакция TEHGAM.COM]";
+		overviewText="Версия 3.4";
 		resistanceWest=0;
 		startWind=0;
 		forecastWind=0;
@@ -3498,7 +3498,7 @@ class Mission
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
 			text="research1";
-			init="this allowDamage false; this addAction [""<t color='#ffff00'>Take Laptop and Set Explosives</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
+			init="this allowDamage false; this addAction [""<t color='#ffff00'>Взять ноутбук и заложить взрывчатку</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
 		};
 		class Item96
 		{
@@ -3508,7 +3508,7 @@ class Mission
 			vehicle="Land_Laptop_F";
 			skill=0.60000002;
 			text="research2";
-			init="this allowDamage false; this addAction [""<t color='#ffff00'>Take Laptop and Set Explosives</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
+			init="this allowDamage false; this addAction [""<t color='#ffff00'>Взять ноутбук и активировать С-4</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
 		};
 		class Item97
 		{
@@ -3540,7 +3540,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="indCrate1";
-			init="this allowDamage false; this addAction [""<t color='#ffff00'>Secure Launchers and Set Charge</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
+			init="this allowDamage false; this addAction [""<t color='#ffff00'>Захватить ПУ и установить подрывной заряд</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
 		};
 		class Item100
 		{
@@ -3552,7 +3552,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="indCrate2";
-			init="this allowDamage false; this addAction [""<t color='#ffff00'>Secure Supply Crate and Set Charge</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
+			init="this allowDamage false; this addAction [""<t color='#ffff00'>Очистить склад и установить взрывпакет</t>"",""mission\side\actions\sabotage.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
 		};
 		class Item101
 		{
@@ -3572,7 +3572,7 @@ class Mission
 		{
 			position[]={-17281.484,0,-2069.5022};
 			name="sideMarker";
-			text="Side Mission";
+			text="Допзадание";
 			type="mil_dot";
 			colorName="ColorEAST";
 			a=0.5;
@@ -3602,7 +3602,7 @@ class Mission
 		{
 			position[]={-17246.24,0,760.21643};
 			name="priorityMarker";
-			text="Priority Target";
+			text="Важная цель";
 			type="o_art";
 			a=0.5;
 			b=0.5;
@@ -3611,7 +3611,7 @@ class Mission
 		{
 			position[]={-17332.287,0,4940.5796};
 			name="radioMarker";
-			text="Radiotower";
+			text="Радиовышка";
 			type="loc_Transmitter";
 			colorName="ColorEAST";
 			a=0.5;
@@ -4102,7 +4102,7 @@ class Mission
 		{
 			position[]={-17303.867,0,-1171.9858};
 			name="SM_Marker";
-			text="Side Mission: Destroy Cache";
+			text="Допзадание: Кэш";
 			type="hd_destroy";
 			colorName="ColorEAST";
 			fillName="Border";
@@ -4369,7 +4369,7 @@ class Mission
 		{
 			position[]={14790.009,17.91,16647.232};
 			name="Side_1";
-			text="Награда за дополнительное задание";
+			text="Наградная техника";
 			type="b_unknown";
 			colorName="ColorBLUFOR";
 		};
@@ -4384,7 +4384,7 @@ class Mission
 		{
 			position[]={14803.143,17.91,16734.09};
 			name="heliService2";
-			text="Ремонт вертолётов";
+			text="Ремонт техники";
 			type="b_maint";
 		};
 		class Item111
@@ -4398,14 +4398,14 @@ class Mission
 		{
 			position[]={14784.319,17.91,16810.789};
 			name="heliSpawn";
-			text="Вертолеты";
+			text="Транспортные вертолёты";
 			type="b_air";
 		};
 		class Item113
 		{
 			position[]={14242.336,19.352709,16310.469};
 			name="wjets";
-			text="A-143 ""Буззард"" [AA] [респаун 30 минут]";
+			text="A-143 «Буззард» (истребитель)" [респаун 30 мин]";
 			type="b_plane";
 		};
 		class Item114
@@ -4419,7 +4419,7 @@ class Mission
 		{
 			position[]={14164.698,20.542004,16191.611};
 			name="wh5";
-			text="AH-9 ""Пауни"" [респаун 30 минут]";
+			text="AH-9 «Пауни»" [респаун 30 мин]";
 			type="b_air";
 		};
 		class Item116
@@ -4441,7 +4441,7 @@ class Mission
 		{
 			position[]={15350.233,-0.22708295,15793.151};
 			name="B2";
-			text="Штурмовые лодки";
+			text="Штурмовые катера";
 			type="b_naval";
 			angle=358.66101;
 		};
@@ -4449,7 +4449,7 @@ class Mission
 		{
 			position[]={14567.344,17.91,16824.715};
 			name="vehService";
-			text="Ремонт транспорта";
+			text="Ремонт техники";
 			type="b_maint";
 		};
 		class Item120
@@ -4463,7 +4463,7 @@ class Mission
 		{
 			position[]={14861.612,17.91,16780.727};
 			name="ammocargo";
-			text="Комплекты: Бобкэт";
+			text="Ремкомплекты Бобкэт";
 			type="o_support";
 			colorName="ColorWEST";
 			angle=359.22;
