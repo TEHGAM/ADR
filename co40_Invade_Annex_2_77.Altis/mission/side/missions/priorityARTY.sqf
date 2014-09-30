@@ -136,7 +136,7 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 	"priorityMarker" setMarkerText "Важная цель: Артиллерия"; publicVariable "priorityMarker";
 	priorityTargetText = "Артиллерия"; publicVariable "priorityTargetText";
 
-	_briefing = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#b60000'>Артиллерия</t><br/>____________________<br/>Вражеские силы выдвинули артиллерийскую батарею с целью подавления нашых наземных манёвров на точке дислокации. Снимки переданные нашим самолёт-разведчиком определили точное местонахождение вражеской батареи.<br/><br/>Противник будет готов к первому залпу через 5 минут.";
+	_briefing = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#d63333'>Артиллерия</t><br/>____________________<br/>Вражеские силы выдвинули артиллерийскую батарею с целью подавления нашых наземных манёвров на точке дислокации. Снимки переданные нашим самолёт-разведчиком определили точное местонахождение вражеской батареи.<br/><br/>Противник будет готов к первому залпу через 5 минут.";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewPriorityTarget", "Уничтожить артиллерию"]; publicVariable "showNotification";
 
