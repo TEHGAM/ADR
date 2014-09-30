@@ -605,7 +605,7 @@ BTC_check_healer =
 {
 	_pos = getpos player;
 	_men = [];_veh = [];_dist = 501;_healer = objNull;_healers = [];
-	_msg = "Поблизости нет ваших медиков!";
+	_msg = "Поблизости нет наших медиков!";
 	_men = nearestObjects [_pos, BTC_who_can_revive, 500];
 	_veh = nearestObjects [_pos, ["LandVehicle", "Air", "Ship"], 500];
 	{
