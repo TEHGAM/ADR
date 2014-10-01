@@ -181,7 +181,7 @@
 			<Original>Virtual Ammobox</Original>
 			<German>Interaktive Waffenkiste</German>
 			<Portuguese>Caixa de Munições Virtual</Portuguese>
-			<Russian>Доступные вещи</Russian>
+			<Russian>Доступные</Russian>
 		</Key>
 		<Key ID="STR_VAS_Main_YCG">
 			<Original>Your Current Gear</Original>
@@ -191,7 +191,7 @@
 			<Portuguese>Equipamento Actual</Portuguese>
 			<Italian>Equipaggiamento attuale</Italian>
 			<Czech>Vase soucasne vybaveni</Czech>
-			<Russian>У вас в наличии</Russian>
+			<Russian>В наличии</Russian>
 			<Spanish>Equipamiento Actual</Spanish>
 		</Key>
 		<Key ID="STR_Vas_Main_CL">
