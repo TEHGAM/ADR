@@ -47,7 +47,9 @@ class Mission
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Ind_Cargo",
 		"A3_Structures_F_EPC_Items_Electronics",
-		"A3_Weapons_F_Beta_Ammoboxes"
+		"A3_Weapons_F_Beta_Ammoboxes",
+		"A3_Air_F_Heli_Light_02",
+		"A3_Air_F_EPB_Heli_Light_03"
 	};
 	addOnsAuto[]=
 	{
@@ -83,6 +85,7 @@ class Mission
 		"A3_Structures_F_Ind_Cargo",
 		"A3_Structures_F_EPC_Items_Electronics",
 		"A3_Weapons_F_Beta_Ammoboxes",
+		"A3_Air_F_EPB_Heli_Light_03",
 		"a3_map_altis"
 	};
 	randomSeed=12935265;
@@ -2468,7 +2471,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=102;
+		items=108;
 		class Item0
 		{
 			position[]={14596.355,17.814484,16894.135};
@@ -3564,10 +3567,74 @@ class Mission
 			text="explosivesDummy2";
 			init="this allowDamage false;";
 		};
+		class Item102
+		{
+			position[]={14171.046,20.846252,16163.408};
+			azimut=116.167;
+			offsetY=0.2;
+			id=163;
+			side="EMPTY";
+			vehicle="I_Heli_light_03_F";
+			skill=0.60000002;
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item103
+		{
+			position[]={14171.74,20.85111,16162.986};
+			azimut=113.62517;
+			id=164;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item104
+		{
+			position[]={14174.627,20.937777,16155.131};
+			azimut=169.09726;
+			id=165;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+			text="runway_3_1_1_1_2_1_1_1_2_1_1_1_1_1_1_1_5_1_2_2_2_1_3_1";
+			init="setObjectViewDistance 2000;";
+		};
+		class Item105
+		{
+			position[]={14168.756,20.773533,16170.763};
+			azimut=169.09726;
+			id=166;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+			text="runway_1_2_1_1_1_2_1_1_1_2_1_1_1_1_1_1_1_5_1_2_2_2_1_3_1";
+			init="setObjectViewDistance 2000;";
+		};
+		class Item106
+		{
+			position[]={14179.531,20.827982,16165.871};
+			azimut=169.09726;
+			id=167;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+			text="runway_3_1_1_1_2_1_1_1_2_1_1_1_1_1_1_2_5_1_2_2_2_1_3_1";
+			init="setObjectViewDistance 2000;";
+		};
+		class Item107
+		{
+			position[]={14163.829,20.853359,16160.042};
+			azimut=169.09726;
+			id=168;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+			text="runway_1_2_1_1_1_2_1_1_1_2_1_1_1_1_1_1_2_5_1_2_2_2_1_3_1";
+			init="setObjectViewDistance 2000;";
+		};
 	};
 	class Markers
 	{
-		items=122;
+		items=123;
 		class Item0
 		{
 			position[]={-17281.484,0,-2069.5022};
@@ -4467,6 +4534,13 @@ class Mission
 			type="o_support";
 			colorName="ColorWEST";
 			angle=359.22;
+		};
+		class Item122
+		{
+			position[]={14171.881,20.853296,16162.772};
+			name="wh5_1";
+			text="WY-55 ""Хеллкет"" [респаун 30 мин]";
+			type="b_air";
 		};
 	};
 	class Sensors
