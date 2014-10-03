@@ -41,7 +41,7 @@ while { true } do {
 
 	if (SM_SWITCH) then {
 	
-		hqSideChat = "Второстепенная задача выявлена, ждите дальнейших указаний."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Побочная цель выявлена, ждите указаний!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 	
 		sleep 3;
 	
