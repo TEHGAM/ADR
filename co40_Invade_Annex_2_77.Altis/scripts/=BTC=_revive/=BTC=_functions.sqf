@@ -1149,9 +1149,9 @@ BTC_r_s_change_view =
 	_view = lbText [121,lbCurSel 121];
 	switch (true) do
 	{
-		case (_view == "First person")    : {BTC_r_s_cam_view = [0,0.3,1.55];};
+		case (_view == "First person") : {BTC_r_s_cam_view = [0,0.3,1.55];};
 		case (_view == "Вид со спины") : {BTC_r_s_cam_view = [0,-2,2];};
-		case (_view == "С высока")            : {BTC_r_s_cam_view = [-15,-15,15];};
+		case (_view == "Вид свысока")  : {BTC_r_s_cam_view = [-15,-15,15];};
 	};
 };
 BTC_r_s_keydown =
