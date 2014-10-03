@@ -227,7 +227,7 @@ class CfgNotifications
 
 	class NewMain
 	{
-		title = "ОСНОВНАЯ ЗАДАЧА";
+		title = "ОСНОВНОЕ ЗАДАНИЕ";
 		description = "Захватить %1";
 		iconPicture = "media\images\notificons\main_objective.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -236,7 +236,7 @@ class CfgNotifications
 
 	class CompletedMain
 	{
-		title = "ЗАДАЧА ВЫПОЛНЕНА";
+		title = "ЗАДАНЕ ВЫПОЛНЕНО";
 		description = "Точка %1 захвачена";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -245,7 +245,7 @@ class CfgNotifications
 
 	class NewMainDefend
 	{
-		title = "ЗАЩИТА ТОЧКИ";
+		title = "КРУГОВАЯ ОБОРОНА";
 		description = "Защитить %1";
 		iconPicture = "media\images\notificons\defendtarget.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -254,7 +254,7 @@ class CfgNotifications
 
 	class CompletedMainDefended
 	{
-		title = "ЗАДАЧА ВЫПОЛНЕНА";
+		title = "ОБОРОНА ВЫСТОЯЛА";
 		description = "Точка %1 защищена";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -263,7 +263,7 @@ class CfgNotifications
 
 	class NewSub
 	{
-		title = "НОВОЕ ДОПЗАДАНИЕ";
+		title = "НОВАЯ ПЕРВОСТЕПЕННАЯ ЗАДАЧА";
 		description = "%1";
 		iconPicture = "media\images\notificons\sub_objective.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -272,7 +272,7 @@ class CfgNotifications
 
 	class CompletedSub
 	{
-		title = "ДОПЗАДАНИЕ ВЫПОЛНЕНО";
+		title = "ПЕРВОСТЕПЕННАЯ ЗАДАЧА ВЫПОЛНЕНА";
 		description = "%1";
 		iconPicture = "media\images\notificons\sub_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -299,7 +299,7 @@ class CfgNotifications
 
 	class NewSideMissionFileDataComplete
 	{
-		title = "ДАННЫЕ СОХРАНЕНЫ";
+		title = "ДОПЗАДАНИЕ ВЫПОЛНЕНО";
 		description = "%1";
 		iconPicture = "media\images\notificons\laptop.paa";
 		color[] = {0.38, 0.81, 0.16, 1};
@@ -362,7 +362,7 @@ class CfgNotifications
 
 	class NewSideMissionJet
 	{
-		title = "НОВОЕ ДОПЗАДАНИЕ";
+		title = "ОБНАРУЖЕН ВРАЖЕСКИЙ ШТУРМОВИК";
 		iconPicture = "media\images\notificons\enemyJetinbound.paa";
 		description = "%1";
 		color[] = {0.8, 0.13, 0.14, 1};
