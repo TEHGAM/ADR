@@ -14,7 +14,7 @@ ____________________________________*/
 
 #define CHOPPER_TYPE "O_Heli_Attack_02_black_F","O_Heli_Light_02_unarmed_F","B_Heli_Attack_01_F"
 private ["_objPos","_flatPos","_accepted","_position","_randomDir","_hangar","_x","_enemiesArray","_briefing","_fuzzyPos","_unitsArray","_dummy","_object"];
-_c4Message = ["Данные о вертолёте захвачены. Заряд установлен! 15 секунд до взрыва.","Чертежи вертолёта у нас. Взрывчатка установлена! 15 секунд до взрыва.","Данные прототипа захвачены. C-4 активирован! 15 секунд до детонации."] call BIS_fnc_selectRandom;
+_c4Message = ["Данные о вертолёте захвачены. Заряд установлен! 5 секунд до взрыва.","Чертежи вертолёта у нас. Взрывчатка установлена! 5 секунд до взрыва.","Данные прототипа захвачены. C-4 активирован! 5 секунд до детонации."] call BIS_fnc_selectRandom;
 
 
 //-------------------- FIND SAFE POSITION FOR OBJECTIVE
