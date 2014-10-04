@@ -27,7 +27,7 @@ _vehName = _veh select 0;
 _vehVarname = _veh select 1;
 
 _completeText = format[
-"<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#08b000'>ВЫПОЛНЕНО</t><br/>____________________<br/>Так держать! Такими темпами осталось ещё не долго ждать прежде чем враг будет полностью подавлен под натиском наших войск.<br/><br/>В награду, мы отправляем вам на базу %1.<br/><br/Возвращайтесь к основной цели; генштаб даст знать о новых заданиях по ходу текущей разведки. До связи в ближайшее время!</t>",_vehName];
+"<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#08b000'>ВЫПОЛНЕНО</t><br/>____________________<br/>Так держать! Такими темпами осталось ещё не долго ждать прежде чем враг будет полностью подавлен под натиском наших войск.<br/><br/>В награду, мы отправляем вам на базу %1.<br/><br/Возвращайтесь к основному заданию; генштаб оповестит о новых заданиях по ходу текущей разведки. До связи в ближайшее время!</t>",_vehName];
 
 _reward = createVehicle [_vehVarname, getMarkerPos "smReward1",smMarkerList,0,"NONE"];
 waitUntil {!isNull _reward};
@@ -40,4 +40,4 @@ _reward setDir 284;
 
 GlobalHint = _completeText; publicVariable "GlobalHint"; hint parseText _completeText;
 showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "showNotification";
-showNotification = ["Reward", format["Ваша команда получила %1!", _vehName]]; publicVariable "showNotification";
+showNotification = ["Reward", format["Ваша команда получила %1", _vehName]]; publicVariable "showNotification";
