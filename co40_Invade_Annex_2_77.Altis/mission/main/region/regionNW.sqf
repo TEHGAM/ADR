@@ -131,7 +131,7 @@ while { count _targetArray > 0 } do {
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["radioMarker","radioCircle"];
 	_radioTowerDownText = "<t align='center' size='2.2'>Радиовышка</t><br/><t size='1.5' color='#08b000' align='center'>УНИЧТОЖЕНА</t><br/>____________________<br/>Радиовышка противника подорвана. Отличная работа!<br/><br/><t size='1.2' color='#08b000' align='center'>Враг больше не сможет вызвать авиаподдержку.</t><br/>";
 	GlobalHint = _radioTowerDownText; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["CompletedSub", "Радиовышка противника подорвана."]; publicVariable "showNotification";
+	showNotification = ["CompletedSub", "Радиовышка противника подорвана"]; publicVariable "showNotification";
 	
 	//---------------------------------------------- WHEN ENEMIES KILLED
 
