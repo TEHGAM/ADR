@@ -17,7 +17,7 @@ ____________________________________*/
 
 private ["_flatPos","_accepted","_position","_enemiesArray","_fuzzyPos","_x","_briefing","_unitsArray","_object","_dummy","_SMveh","_SMaa","_c4Message","_vehPos"];
 
-_c4Message = ["Жёсткий диск захвачен. C-4 активирован! 15 секунд до детонации.","Научные данные захвачены. Взрывчатка установлена! 15 секунд до взрыва.","Исследовательская работа перехвачена. Заряд установлен! 15 секунд до взрыва."] call BIS_fnc_selectRandom;
+_c4Message = ["Жёсткий диск захвачен. C-4 активирован! 5 секунд до детонации.","Научные данные захвачены. Взрывчатка установлена! 5 секунд до взрыва.","Исследовательская работа перехвачена. Заряд установлен! 5 секунд до взрыва."] call BIS_fnc_selectRandom;
 #define VEH_TYPE "O_MRAP_02_F","O_Truck_03_covered_F","O_Truck_03_transport_F","O_Heli_Light_02_unarmed_F","O_Truck_02_transport_F","O_Truck_02_covered_F","C_SUV_01_F","C_Van_01_transport_F"
 
 //-------------------- FIND POSITION FOR OBJECTIVE
