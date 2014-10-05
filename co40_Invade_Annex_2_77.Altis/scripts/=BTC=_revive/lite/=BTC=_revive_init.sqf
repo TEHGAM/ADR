@@ -56,10 +56,10 @@ BTC_respawn_cond = false;
 	BIS_fnc_healtEffects_init = {};
 	player setVariable ["BTC_need_revive",0,true];
 	player setVariable ["BTC_dragged",0,true];
-	player addAction [("<t color=""#ED2744"">") + ("Тащить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_drag], 8, true, true, "", "[] call BTC_check_action_drag"];
-	player addAction [("<t color=""#ED2744"">") + ("СЛР") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_cpr], 8, true, true, "", "[] call BTC_check_action_drag"];
-	player addAction [("<t color=""#ED2744"">") + ("Нести") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_carry], 8, true, true, "", "[] call BTC_check_action_drag"];
-	player addAction [("<t color=""#ED2744"">") + ("Выгрузить раненого") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_pull_out], 8, true, true, "", "[] call BTC_pull_out_check"];
+	player addAction [("<t color=""#d63333"">") + ("Тащить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_drag], 8, true, true, "", "[] call BTC_check_action_drag"];
+	player addAction [("<t color=""#d63333"">") + ("СЛР") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_cpr], 8, true, true, "", "[] call BTC_check_action_drag"];
+	player addAction [("<t color=""#d63333"">") + ("Нести") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_carry], 8, true, true, "", "[] call BTC_check_action_drag"];
+	player addAction [("<t color=""#d63333"">") + ("Выгрузить раненого") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_pull_out], 8, true, true, "", "[] call BTC_pull_out_check"];
 	BTC_gear = [player] call BTC_get_gear;
 
 	if (({player isKindOf _x} count BTC_3d_can_see) > 0) then {_3d = [] spawn BTC_3d_markers;};
