@@ -3115,7 +3115,7 @@ class Mission
 			vehicle="MapBoard_altis_F";
 			leader=1;
 			skill=0.60000002;
-			init="this allowDamage false; this enablesimulation false; this addaction [""<t color='#54D1F1'>Меню групп </t>"",""scripts\DOM_squad\open_dialog.sqf""];";
+			init="this allowDamage false; this enablesimulation false; this addaction [""<t color='#00B2EE'>Меню групп </t>"",""scripts\DOM_squad\open_dialog.sqf""];";
 		};
 		class Item60
 		{
