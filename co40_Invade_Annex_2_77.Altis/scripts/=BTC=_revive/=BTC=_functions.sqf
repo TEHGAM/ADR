@@ -8,10 +8,10 @@ http://www.blacktemplars.altervista.org/
 //Functions
 BTC_assign_actions =
 {
-	if ([player] call BTC_is_class_can_revive) then {player addAction [("<t color=""#ED2744"">") + ("Первая помощь") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_first_aid"];};
-	player addAction [("<t color=""#ED2744"">") + ("Тащить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_drag], 8, true, true, "", "[] call BTC_check_action_drag"];
-	player addAction [("<t color=""#ED2744"">") + ("Выгрузить раненого") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_pull_out], 8, true, true, "", "[] call BTC_pull_out_check"];
-	player addAction [("<t color=""#ED2744"">") + ("Нести") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_carry], 8, true, true, "", "[] call BTC_check_action_drag"];
+	if ([player] call BTC_is_class_can_revive) then {player addAction [("<t color=""#d63333"">") + ("Первая помощь") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_first_aid"];};
+	player addAction [("<t color=""#d63333"">") + ("Тащить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_drag], 8, true, true, "", "[] call BTC_check_action_drag"];
+	player addAction [("<t color=""#d63333"">") + ("Выгрузить раненого") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_pull_out], 8, true, true, "", "[] call BTC_pull_out_check"];
+	player addAction [("<t color=""#d63333"">") + ("Нести") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_carry], 8, true, true, "", "[] call BTC_check_action_drag"];
 };
 BTC_get_gear =
 {
@@ -361,7 +361,7 @@ BTC_drag =
 	_injured setVariable ["BTC_dragged",1,true];
 	_injured attachTo [player, [0, 1.1, 0.092]];
 	player playMoveNow "AcinPknlMstpSrasWrflDnon";
-	_id = player addAction [("<t color=""#ED2744"">") + ("Положить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_release], 9, true, true, "", "true"];
+	_id = player addAction [("<t color=""#d63333"">") + ("Положить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_release], 9, true, true, "", "true"];
 	//_injured playMoveNow "AinjPpneMstpSnonWrflDb_grab";
 	BTC_drag_pveh = [1,_injured];publicVariable "BTC_drag_pveh";
 	WaitUntil {!Alive player || ((animationstate player == "acinpknlmstpsraswrfldnon") || (animationstate player == "acinpknlmwlksraswrfldb"))};
@@ -377,7 +377,7 @@ BTC_drag =
 		{
 			_veh_selected    = _array_veh select 0;
 			_name_veh        = getText (configFile >> "cfgVehicles" >> typeof _veh_selected >> "displayName");
-			_text_action     = ("<t color=""#ED2744"">" + "Погрузить раненого в" + (_name_veh) + "</t>");
+			_text_action     = ("<t color=""#d63333"">" + "Погрузить раненого в" + (_name_veh) + "</t>");
 			_action_id = player addAction [_text_action,"scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_injured,_veh_selected],BTC_load_in], 7, true, true];
 			_act  = 1;
 		};
@@ -402,7 +402,7 @@ BTC_carry =
 	_injured setVariable ["BTC_dragged",1,true];
 	detach _injured;
 	player playMoveNow "acinpknlmstpsraswrfldnon_acinpercmrunsraswrfldnon";
-	_id = player addAction [("<t color=""#ED2744"">") + ("Положить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_release], 9, true, true, "", "true"];
+	_id = player addAction [("<t color=""#d63333"">") + ("Положить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_release], 9, true, true, "", "true"];
 	BTC_carry_pveh = [5,_injured,_healer];publicVariable "BTC_carry_pveh";
 	WaitUntil {!Alive player || ((animationstate player == "acinpercmstpsraswrfldnon") || (animationstate player == "acinpercmrunsraswrfldf") || (animationstate player == "acinpercmrunsraswrfldr") || (animationstate player == "acinpercmrunsraswrfldl"))};
 	_injured attachto [player,[0.15, 0.15, 0]];_injured setDir 180;
@@ -418,7 +418,7 @@ BTC_carry =
 		{
 			_veh_selected    = _array_veh select 0;
 			_name_veh        = getText (configFile >> "cfgVehicles" >> typeof _veh_selected >> "displayName");
-			_text_action     = ("<t color=""#ED2744"">" + "Погрузить раненого в" + (_name_veh) + "</t>");
+			_text_action     = ("<t color=""#d63333"">" + "Погрузить раненого в" + (_name_veh) + "</t>");
 			_action_id = player addAction [_text_action,"scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_injured,_veh_selected],BTC_load_in], 7, true, true];
 			_act  = 1;
 		};
