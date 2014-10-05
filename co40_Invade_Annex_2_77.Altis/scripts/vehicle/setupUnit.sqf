@@ -36,7 +36,7 @@ if(((_unit isKindOf "Ship") OR (_type in _pushable)) AND !(_type in _notPushable
 
 if(_type in _ghosthawk) then {
 	[_unit] execVM "scripts\vehicle\ghosthawk\heliDoor.sqf";
-	_unit addAction ["<t color='#0000f6'>Cбросить оперативный боезапас</t>", "scripts\vehicle\drop\drop.sqf",[1],0,false,true,"","driver _target == _this"];
+	_unit addAction ["<t color='#00B2EE'>Cбросить оперативный боезапас</t>", "scripts\vehicle\drop\drop.sqf",[1],0,false,true,"","driver _target == _this"];
 };
 
 if(_type in _blackVehicles) then {
@@ -52,8 +52,8 @@ if(_type in _lightHeliTexturable) then {_unit setObjectTexture [0,_lightHeliText
 
 if(_type in _VASable) then 
 { 
-	_unit addAction["<t color='#ff1111'>Оперативный боезапас</t>", "scripts\VAS\open.sqf"]; 
-	_unit addaction ["<t color='#7F5D5D'>Виртуальный арсенал</t>", { ["Open",true] call BIS_fnc_arsenal; }];
+	_unit addAction["<t color='#FFBF00'>Оперативный боезапас</t>", "scripts\VAS\open.sqf"]; 
+	_unit addaction ["<t color='#97BC3F'>Виртуальный арсенал</t>", { ["Open",true] call BIS_fnc_arsenal; }];
 };
 
-_unit addAction ["<t color='#3f3fff'>Очистить инвентарь</t>","scripts\vehicle\clear\clear.sqf",[],-97,false];
+_unit addAction ["<t color='#00B2EE'>Выгрузить снаряжение</t>","scripts\vehicle\clear\clear.sqf",[],-97,false];
