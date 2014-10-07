@@ -77,14 +77,14 @@ _null = [] execVM "scripts\general.sqf";
 {
 	"sideMarker" setMarkerPosLocal (markerPos "sideMarker");
 	"sideCircle" setMarkerPosLocal (markerPos "sideCircle");
-	"sideMarker" setMarkerTextLocal format["Side Mission: %1",sideMarkerText];
+	"sideMarker" setMarkerTextLocal format["Допзадание: %1",sideMarkerText];
 };
 
 "priorityMarker" addPublicVariableEventHandler
 {
 	"priorityMarker" setMarkerPosLocal (markerPos "priorityMarker");
 	"priorityCircle" setMarkerPosLocal (markerPos "priorityCircle");
-	"priorityMarker" setMarkerTextLocal format["Priority Target: %1",priorityTargetText];
+	"priorityMarker" setMarkerTextLocal format["Важная цель: %1",priorityTargetText];
 };
 
 tawvd_disablenone = false;
