@@ -263,7 +263,7 @@ class CfgNotifications
 
 	class NewSub
 	{
-		title = "НОВАЯ ПЕРВОСТЕПЕННАЯ ЗАДАЧА";
+		title = "НОВАЯ ВТОРИЧНАЯ ЦЕЛЬ";
 		description = "%1";
 		iconPicture = "media\images\notificons\sub_objective.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -272,7 +272,7 @@ class CfgNotifications
 
 	class CompletedSub
 	{
-		title = "ПЕРВОСТЕПЕННАЯ ЗАДАЧА ВЫПОЛНЕНА";
+		title = "ВТОРИЧНАЯ ЦЕЛЬ УНИЧТОЖЕНА";
 		description = "%1";
 		iconPicture = "media\images\notificons\sub_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
