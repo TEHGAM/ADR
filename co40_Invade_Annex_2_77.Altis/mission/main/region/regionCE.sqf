@@ -91,9 +91,9 @@ while { count _targetArray > 0 } do {
 	
 		_unitsArray = [_flatPos] call QS_fnc_AOminefield;
 	
-		"radioMarker" setMarkerText "Радиовышка (заминирована)";
+		"radioMarker" setMarkerText "Вышка (МИНЫ!)";
 	} else {
-		"radioMarker" setMarkerText "Радиовышка";
+		"radioMarker" setMarkerText "Вышка";
 	};
 	publicVariable "radioTower";
 
@@ -113,7 +113,7 @@ while { count _targetArray > 0 } do {
 	
 	GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewMain", currentAO]; publicVariable "showNotification";
-	showNotification = ["NewSub", "Подорвите радиовышку противника."]; publicVariable "showNotification";	
+	showNotification = ["NewSub", "Подорвите радиовышку противника"]; publicVariable "showNotification";	
 	
 	//-------------------------------------------- CORE LOOP
 	
@@ -140,7 +140,7 @@ while { count _targetArray > 0 } do {
 	//---------------------------------------------- DE-BRIEF 1
 	
 	sleep 3;
-	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='left'>Перегруперуйтесь перед новым заданием!</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='left'>Приготовьтесь к передислокации!</t>",currentAO];
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["aoCircle","aoMarker","radioCircle"];
 	GlobalHint = _targetCompleteText; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["CompletedMain", currentAO]; publicVariable "showNotification";
@@ -161,7 +161,7 @@ while { count _targetArray > 0 } do {
 
 	//----------------------------------------------------- DE-BRIEF
 	
-	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>Перегруперуйтесь перед новым заданием!</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>Приготовьтесь к передислокации!</t>",currentAO];
 	GlobalHint = _targetCompleteText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	
 	//----------------------------------------------------- MAINTENANCE
