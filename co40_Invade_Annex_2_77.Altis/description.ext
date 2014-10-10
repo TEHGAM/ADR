@@ -227,7 +227,7 @@ class CfgNotifications
 
 	class NewMain
 	{
-		title = "ОСНОВНОЕ ЗАДАНИЕ";
+		title = "ОСНОВНАЯ ЗАДАЧА";
 		description = "Захватить %1";
 		iconPicture = "media\images\notificons\main_objective.paa";
 		color[] = {1, 0.81, 0.06, 1};
@@ -236,7 +236,7 @@ class CfgNotifications
 
 	class CompletedMain
 	{
-		title = "ЗАДАНЕ ВЫПОЛНЕНО";
+		title = "ЗАДАЧА ВЫПОЛНЕНА";
 		description = "Точка %1 захвачена";
 		iconPicture = "media\images\notificons\main_objective_completed.paa";
 		color[] = {1, 0.81, 0.06, 1};
