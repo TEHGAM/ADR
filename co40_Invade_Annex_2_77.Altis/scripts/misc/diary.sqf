@@ -12,7 +12,7 @@
 |	You may use and edit the code.
 |	You may not remove any entries from Credits without first removing the relevant author's contributions, 
 |	or asking permission from the mission authors/contributors.
-|	You may not remove the Credits tab, without consent of Ahoy World or ALLFPS.
+|	You may not remove the Credits tab, without consent of Ahoy World or allFPS.
 | 	Feel free to re-format or make it look better.
 |_____
 |
@@ -136,10 +136,10 @@ player createDiaryRecord ["changelog",
 "Версия 3.4",
 "<br />- [ДОБАВИЛИ] Очень много текста переведено на русский (спасибо Tourorist и KaMeG).
 <br />- [ПОМЕНЯЛИ] При смерти теперь надпись о времени и ближайших медиках должна быть видна.
-<br />- [УБРАЛИ] Убрал квадры с карты.
-<br />- [ОБНОВИЛИ] Разрешил теплак на титане.
+<br />- [УБРАЛИ] Убрал дополнительные квадроцыклы с карты.
+<br />- [ОБНОВИЛИ] Разрешил использование тепловизора на Титанах.
 <br />- [ОБНОВИЛИ] Разрешил минометы.
-<br />- [ОБНОВИЛИ] Из модов на РВ2 оставил только CBA, JSRS и VTS!
+<br />- [ОБНОВИЛИ] Из необязательных модов оставил только CBA, JSRS и VTS.
 "
 ]];
 
