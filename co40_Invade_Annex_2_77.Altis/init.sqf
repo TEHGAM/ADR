@@ -19,3 +19,4 @@ call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf";		// re
 call compile preprocessFile "scripts\=BTC=_TK_punishment\=BTC=_tk_init.sqf";
 //Что?
 [] execVM "scripts\DOM_squad\init.sqf";
+enableEngineArtillery false;
