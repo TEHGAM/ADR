@@ -122,5 +122,3 @@ BTC_respawn_cond = false;
 	BTC_revive_started = true;
 	//hint "REVIVE STARTED";
 };
-
-if (isDedicated) exitWith { "addToScore" addPublicVariableEventHandler { ((_this select 1) select 0) addScore ((_this select 1) select 1); }; };
