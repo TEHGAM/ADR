@@ -17,5 +17,7 @@ ______________________________________________________*/
 
 call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf";		// revive
 call compile preprocessFile "scripts\=BTC=_TK_punishment\=BTC=_tk_init.sqf";
-//управление отрядами
+//ГіГЇГ°Г ГўГ«ГҐГ­ГЁГҐ Г®ГІГ°ГїГ¤Г Г¬ГЁ
 [] execVM "scripts\DOM_squad\init.sqf";
+
+if (isDedicated) exitWith { "addToScore" addPublicVariableEventHandler { ((_this select 1) select 0) addScore ((_this select 1) select 1); }; };
