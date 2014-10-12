@@ -64,6 +64,16 @@ class CfgFunctions
         #include "functions\cfgfunctions.hpp"			// Integrated I&A functions
 		#include "scripts\VAS\cfgfunctions.hpp"			// VAS
 		#include "scripts\taw_vd\CfgFunctions.hpp"				// View distance
+
+
+		class LB {
+			class forVehicles {
+				class initVehicle {recompile = 1;};
+				class enableLaserGuide {recompile = 1;};
+			};
+		};
+
+
 	};
 
 class RscTitles
