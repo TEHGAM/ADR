@@ -36,7 +36,7 @@ if(1 >= 0.5) then {
 	showNotification = ["NewMainDefend", currentAO]; publicVariable "showNotification";
 
 	{_x setMarkerPos (getMarkerPos currentAO);} forEach ["aoCircle_2","aoMarker_2"];
-	"aoMarker_2" setMarkerText format["Defend %1",currentAO];
+	"aoMarker_2" setMarkerText format["Оборона %1",currentAO];
 
 	sleep 10;
 	//publicVariable "refreshMarkers";
@@ -45,7 +45,7 @@ if(1 >= 0.5) then {
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 
 	_playersOnlineHint = format [
-		"<t align='center' size='2.2'>Противник контратакует</t><br/><t size='1.5' align='center' color='#C92626'>%1</t><br/>____________________<br/>Держитесь, враги начинают штурм!", currentAO
+		"<t align='center' size='2.2'>Враг контратакует</t><br/><t size='1.5' align='center' color='#C92626'>%1</t><br/>____________________<br/><t align='center'>Держитесь, противник начинает штурм!</t>", currentAO
 	];
 
 	_defendTimer1 = 900;
@@ -59,15 +59,15 @@ if(1 >= 0.5) then {
 
 	null = [["aoCircle_2"],[6,5],[3,2],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
 	
-	hint "Разведывательные данные подтвердили наличие врага в периметре основного задания.";
+	hint "Разведданные подтвердили наличие врага в районе точки захвата.";
 			
 	sleep 5;
 			
-	hqSideChat = "Разведка докладывает, что предстоящий штурм продлится не более 15 минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Предстоящая контратака врага является всего лишь отвлекающим манёвром в поддержку своего отступления и не продлится более чем 15 минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			
 	sleep _defendTimer1;
 		
-	hqSideChat = "Штурм почти полностью подавлен, враг уходит в отступление."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Штурм почти полностью подавлен, противник уходит в отступление."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 	sleep _defendTimer2;
 
