@@ -206,7 +206,7 @@ private ["_dir","_PTdir","_pos","_barrier","_unitsArray","_flatPos","_accepted",
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["priorityMarker", "priorityCircle"];    								
 	"priorityMarker" setMarkerText "Важная цель: Батарея"; publicVariable "priorityMarker";
-	_briefing = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#d63333'>Батарея</t><br/>____________________<br/>Вражеские силы выдвинули батарею зенитных орудий с целью приостановки десантирования поддержки на точку дислокации и подавления нашей штурмовой авиации. Снимки переданные нашим самолёт-разведчиком определили точное местонахождение цели.";
+	_briefing = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#d63333'>Батарея</t><br/>____________________<br/>Вражеские силы выдвинули батарею зенитных орудий с целью приостановки нашего десантирования на точку дислокации и подавления нашей штурмовой авиации. Снимки переданные нашим самолёт-разведчиком определили точное местонахождение цели.";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewPriorityTarget", "Уничтожить батарею"]; publicVariable "showNotification";
 	
@@ -235,7 +235,7 @@ waitUntil {
 
 //-------------------- 9. DE-BRIEF
 	
-	_completeText = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#08b000'>НЕЙТРАЛИЗОВАНА</t><br/>____________________<br/>Отличная работа! Учтите, важные цели требуют первостепенного внимания иначе они могут действительно вызвать хаос для наших войск в районе дислокации.<br/><br/>Возвращайтесь к основному заданию; командование оповестит вас о новых развитиях по ходу текущей разведки.";
+	_completeText = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#08b000'>НЕЙТРАЛИЗОВАНА</t><br/>____________________<br/>Имейте в виду - важные цели требуют особого внимания, так как само их наличие может послужить причиной серьёзных осложнений в бою для наших сил в районе дислокации.<br/><br/>Возвращайтесь к основному заданию; штаб оповестит вас о новых развитиях по ходу текущей разведки.";
 	GlobalHint = _completeText; hint parseText _completeText; publicVariable "GlobalHint";
 	showNotification = ["CompletedPriorityTarget", "Зенитная батарея нейтрализована"]; publicVariable "showNotification";
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["priorityMarker","priorityCircle"]; publicVariable "priorityMarker";
