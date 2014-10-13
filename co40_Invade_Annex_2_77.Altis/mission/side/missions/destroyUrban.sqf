@@ -43,7 +43,7 @@ private ["_object","_briefing","_smPos","_c4Message"];
 	
 	"sideMarker" setMarkerPos (getMarkerPos currentSM);
 	"sideMarker" setMarkerText "Допзадание: Склад"; publicVariable "sideMarker";
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Склад</t><br/>____________________<br/>Враг поставляет боевикам современное оружие и взрывчатые вещества. Координаты цели отмечены у вас на карте. Похоже что это населённый пункт; экипируйтесь с расчётом на ближний бой!<br/><br/>Ваша задача - выдвинутся на вышеуказанную точкy и уничтожить складируемый боезапас противника.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Склад</t><br/>____________________<br/>Враг поставляет боевикам современное оружие и взрывчатые вещества. Экипируйтесь с расчётом на ближний бой!<br/><br/>Ваша задача - выдвинутся на вышеуказанную точкy и уничтожить складируемый боезапас противника.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Склад"]; publicVariable "showNotification";
 	sideMarkerText = "Склад"; publicVariable "sideMarkerText";
