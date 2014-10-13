@@ -657,7 +657,7 @@ BTC_player_respawn =
 				//player enableSimulation false;
 				//player setpos [0,0,6000];
 				//player setVelocity [0,0,0];
-				titleText [format ["Возрождение на базе через: %1",_n], "BLACK FADED"];
+				titleText [format ["<t align='left'>Возрождение на базе через: %1</t>",_n], "BLACK FADED"];
 				sleep 1;
 			};
 		};
