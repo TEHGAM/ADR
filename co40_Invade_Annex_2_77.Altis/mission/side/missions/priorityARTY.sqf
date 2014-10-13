@@ -207,7 +207,7 @@ while { canMove priorityObj1 || canMove priorityObj2 } do {
 
 //-------------------- DE-BRIEF
 
-_completeText = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#08b000'>НЕЙТРАЛИЗОВАНА</t><br/>____________________<br/>Отличная работа! Учтите, важные цели требуют первостепенного внимания иначе они могут действительно вызвать хаос для наших войск в районе дислокации.<br/><br/>Возвращайтесь к основному заданию, командование оповестит вас о новых развитиях по ходу текущей разведки.";
+_completeText = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#08b000'>НЕЙТРАЛИЗОВАНА</t><br/>____________________<br/>Имейте в виду - важные цели требуют особого внимания, так как само их наличие может послужить причиной серьёзных осложнений в бою для наших сил в районе дислокации.<br/><br/>Возвращайтесь к основному заданию; штаб оповестит вас о новых развитиях по ходу текущей разведки.";
 GlobalHint = _completeText; hint parseText _completeText; publicVariable "GlobalHint";
 showNotification = ["CompletedPriorityTarget", "Артиллерия нейтрализована"]; publicVariable "showNotification";
 { _x setMarkerPos [-10000,-10000,-10000] } forEach ["priorityMarker","priorityCircle"]; publicVariable "priorityMarker";
