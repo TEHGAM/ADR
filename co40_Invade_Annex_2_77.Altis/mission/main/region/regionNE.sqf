@@ -106,7 +106,7 @@ while { count _targetArray > 0 } do {
 	
 	_targetStartText = format
 	[
-		"<t align='center' size='2.2'>Основная задача</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Генштаб доволен успехами в проведении предыдущей операции и ждёт от вас таких же результатов в будушем. Приготовтесь к бою и выдвигайтесь на новую точку захвата. Нас будут ждать, готовтесь к ожесточенному сопротивлению!<br/><br/>Подорвав радиовышку противника вы сможете устранить вероятность вызова воздушной поддержки силами врага.",
+		"<t align='center' size='2.2'>Основная задача</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Командование довольно вашими успехами в прошлой операции и ждёт таких же результатов в будущем. Приготовьтесь к бою и выдвигайтесь на новую точку захвата. Будьте готовы к ожесточённому сопротивлению!<br/><br/>Имейте в виду - подорвав радиовышку противника вы сможете устранить их возможность на вызов авиаподдержки.",
 		currentAO
 	];
 
@@ -141,7 +141,7 @@ while { count _targetArray > 0 } do {
 	//---------------------------------------------- DE-BRIEF 1
 	
 	sleep 3;
-	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='left'>Приготовьтесь к передислокации!</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Точка захвачена</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='center'>Начинайте перегруппировку сил!</t>",currentAO];
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["aoCircle","aoMarker","radioCircle"];
 	GlobalHint = _targetCompleteText; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["CompletedMain", currentAO]; publicVariable "showNotification";
@@ -162,7 +162,7 @@ while { count _targetArray > 0 } do {
 
 	//----------------------------------------------------- DE-BRIEF
 	
-	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>Приготовьтесь к передислокации!</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Задача выполнена</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='center'>Приготовьтесь к передислокации!</t>",currentAO];
 	GlobalHint = _targetCompleteText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	
 	//----------------------------------------------------- MAINTENANCE
