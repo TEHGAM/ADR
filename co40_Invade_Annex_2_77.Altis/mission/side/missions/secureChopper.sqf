@@ -75,7 +75,7 @@ _c4Message = ["Данные о вертолёте захвачены. Заряд
 	"sideMarker" setMarkerText "Допзадание: Прототип"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Прототип</t><br/>____________________<br/>Вражеские силы приняли на испытание новый прототип боевого вертолёта, который они прячут в одном из своих ангаров.<br/><br/>Предпологаймое местоположение вертолёта отмечено у вас на карте. Ваша задача - обнаружить ангар противника, захватить данные о вертолёте и уничтожить прототип.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Прототип</t><br/>____________________<br/>Вражеские силы взяли на испытание новый прототип боевого вертолёта, который они скрывают в одном из своих ангаров.<br/><br/>Ваша задача - обнаружить ангар противника, захватить данные о вертолёте и уничтожить прототип.</t>";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Прототип"]; publicVariable "showNotification";
 	sideMarkerText = "Прототип"; publicVariable "sideMarkerText";
