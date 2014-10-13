@@ -157,7 +157,7 @@ private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup"
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];			
 	"sideMarker" setMarkerText "Допзадание: Разведданные"; publicVariable "sideMarker"; 	
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Разведданные</t><br/>____________________<br/>Военная разведка докладывает о предстоящем обмене стратегически важной, конфиденциальной информацией между высокопоставленными агентами противника. Местоположение проведения операции отмечено на вашей карте. Данная цель представляет собой удобный случай для контрразведки!<br/><br/>Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата разведданных, находящиеся в одной из машин сопровождения или-же лично у одного из агентов.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Разведданные</t><br/>____________________<br/>Военная разведка докладывает о предстоящем обмене стратегически важной и конфиденциальной информации между высокопоставленными агентами врага. Данная цель представляет собой удобный случай для контрразведки!<br/><br/>Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата разведданных, находящихся в одной из машин сопровождения или-же лично у одного из агентов.";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Разведданные"]; publicVariable "showNotification";
 	sideMarkerText = "Разведданные"; publicVariable "sideMarkerText";
