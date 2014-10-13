@@ -86,7 +86,7 @@ _c4Message = ["Радиолокационные данные захвачены.
 	"sideMarker" setMarkerText "Допзадание: Радар"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Радар</t><br/>____________________<br/>В целях поддержки своей авиации вражеские силы захватили небольшую радиостанцию.<br/><br/>Ваша задача - выдвинутся на указанную точку, обезвредить противника на близлежащей территории, захватить радиолокационные данные, а затем уничтожить и сам радар.";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Радар</t><br/>____________________<br/>В целях поддержки своей авиации вражеские силы захватили небольшую радиостанцию.<br/><br/>Ваша задача - выдвинутся на указанную точку, обезвредить противника на близлежащей территории, захватить радиолокационные данные, а затем уничтожить и сам радар.</t>";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Радар"]; publicVariable "showNotification";
 	sideMarkerText = "Радар"; publicVariable "sideMarkerText";
