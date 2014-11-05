@@ -9,7 +9,7 @@ overviewPicture = "media\images\loading.jpg";
 onLoadIntro = "";										// Displays a message while the intro is loading.
 onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
 onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
-
+forceRotorLibSimulation= 1;                             // Force enable RotorLib. Default value: 0 - options based; 1 - force enable; 2 - force disable
 
 class Header 
 	{
