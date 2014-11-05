@@ -96,7 +96,7 @@ class Mission
 	class Intel
 	{
 		briefingName="I & A [TEHGAM.COM]";
-		overviewText="Версия 3.2.1";
+		overviewText="Версия 3.3";
 		resistanceWest=0;
 		startWind=0;
 		forecastWind=0;
