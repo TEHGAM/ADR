@@ -100,10 +100,10 @@ player createDiaryRecord ["mods",
 <br />- Community Base Аddons (CBA).
 		http://tehgam.com/viewtopic.php?f=5&amp;t=21 <br /><br />
 
-<br />- JSRS (CBA нужен обязательно).
+<br />- JSRS (CBA обязателен).
 		http://tehgam.com/viewtopic.php?f=5&amp;t=19&amp;p=19 <br /><br />
 
-<br />- VTS Simple weapon resting (Сошки).
+<br />- VTS Simple weapon resting (сошки).
 		http://tehgam.com/viewtopic.php?f=5&amp;t=49 <br /><br />		
 
 <br />
@@ -133,10 +133,10 @@ player createDiaryRecord ["teamspeak",
 
 player createDiaryRecord ["changelog",
 [
-"Версия 3.2.1",
-"<br />- Проведена работа над упрощением исходных текстов для достижения более кратких, быстро читаемых и направленных игровых сообщений;
-<br />- Переименовали допзадание «Пусковики» на более понятный вариант «Система ПВО» (предложение от Sky);
-<br />- Исправили ошибку форматирования в сообщении о возрождении на базе (заметил Noart)."
+"Версия 3.3",
+"<br />- Добавили три вертолета из нового официального дополнения;
+<br />- Перенесли ящики со снаряжением и экипировкой для игроков в терминал;
+<br />- Добавили библиотеку RotorLib на сервер."
 ]];
 
 //-------------------------------------------------- Credits
