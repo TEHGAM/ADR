@@ -1,5 +1,5 @@
 class QS
-{
+{ 123 
 	tag = "QS";
 	class functions
 	{
