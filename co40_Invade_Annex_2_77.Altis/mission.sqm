@@ -2974,7 +2974,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_armed_F";
 			skill=0.60000002;
-			init="_m = [this,1800,1801,0,FALSE,TRUE,""[this] call LB_fnc_initVehicle;""] execVM ""scripts\vehicle\monitor.sqf""; [this] call LB_fnc_initVehicle;";
+			init="_m = [this,1800,1801,0,FALSE,FALSE,""[this] call LB_fnc_initVehicle;""] execVM ""scripts\vehicle\monitor.sqf""; [this] call LB_fnc_initVehicle;";
 		};
 		class Item46
 		{
