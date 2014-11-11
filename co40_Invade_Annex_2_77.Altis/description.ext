@@ -25,7 +25,7 @@ allowFunctionsLog = 0; 							// Log functions to .rpt. disabled with 0
 
 //------------------------- Misc
 
-disableChannels[]={0}; 									// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
+disableChannels[]={0,2}; 									// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
 disabledAI = 1;											// No AI in playable units
 aiKills = 0; 											// disable scorelist for AI players
 enableItemsDropping = 0; 								// disabled with 0
@@ -159,7 +159,7 @@ class Params
 				title = "Distance from players that vehicles won't respawn";
 				values[] = {10,50,100,200,300,400,500,1000,2000,5000,10000};
 				texts[] = {"10m","50m","100m","200m","300m","400m","500m","1km","2km","5km","10km"};
-				default = 300;
+				default = 10;
 			};
 
 		class GroupPatrol {
