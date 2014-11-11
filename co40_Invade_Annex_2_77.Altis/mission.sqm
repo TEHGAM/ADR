@@ -701,7 +701,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+					init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 					description="UVG Stomper";
 				};
 			};
@@ -725,7 +725,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="UAV_1";
-					init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+					init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 				};
 			};
 		};
@@ -1335,7 +1335,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="UAV_2";
-					init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+					init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 				};
 			};
 		};
@@ -2952,7 +2952,7 @@ class Mission
 			leader=1;
 			lock="UNLOCKED";
 			skill=0.60000002;
-			init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item44
 		{
@@ -2963,7 +2963,7 @@ class Mission
 			side="EMPTY";
 			vehicle="I_Plane_Fighter_03_AA_F";
 			skill=0.60000002;
-			init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item45
 		{
@@ -2974,7 +2974,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_armed_F";
 			skill=0.60000002;
-			init="_m = [this,900,900,0,FALSE,FALSE,""[this] call LB_fnc_initVehicle;""] execVM ""scripts\vehicle\monitor.sqf""; [this] call LB_fnc_initVehicle;";
+			init="_m = [this,1800,1801,0,FALSE,FALSE,""[this] call LB_fnc_initVehicle;""] execVM ""scripts\vehicle\monitor.sqf""; [this] call LB_fnc_initVehicle;";
 		};
 		class Item46
 		{
@@ -3091,7 +3091,7 @@ class Mission
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			leader=1;
 			skill=0.60000002;
-			init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item57
 		{
@@ -3271,7 +3271,7 @@ class Mission
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			leader=1;
 			skill=0.60000002;
-			init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item74
 		{
@@ -3282,7 +3282,7 @@ class Mission
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			leader=1;
 			skill=0.60000002;
-			init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item75
 		{
@@ -3499,7 +3499,7 @@ class Mission
 			side="EMPTY";
 			vehicle="I_Heli_light_03_unarmed_F";
 			skill=0.60000002;
-			init="_m = [this,1800,1800] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item95
 		{
@@ -3518,6 +3518,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_runway_edgelight";
 			skill=0.60000002;
+			text="runway_3_1_1_1_2_1_1_1_2_1_1_1_1_1_1_1_5_1_2_2_2_1_3_1";
 			init="setObjectViewDistance 2000;";
 		};
 		class Item97
@@ -3528,6 +3529,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_runway_edgelight";
 			skill=0.60000002;
+			text="runway_1_2_1_1_1_2_1_1_1_2_1_1_1_1_1_1_1_5_1_2_2_2_1_3_1";
 			init="setObjectViewDistance 2000;";
 		};
 		class Item98
@@ -3538,6 +3540,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_runway_edgelight";
 			skill=0.60000002;
+			text="runway_3_1_1_1_2_1_1_1_2_1_1_1_1_1_1_2_5_1_2_2_2_1_3_1";
 			init="setObjectViewDistance 2000;";
 		};
 		class Item99
@@ -3548,6 +3551,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_runway_edgelight";
 			skill=0.60000002;
+			text="runway_1_2_1_1_1_2_1_1_1_2_1_1_1_1_1_1_2_5_1_2_2_2_1_3_1";
 			init="setObjectViewDistance 2000;";
 		};
 		class Item100
@@ -3567,6 +3571,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Transport_03_F";
 			skill=0.60000002;
+			text="LB_1_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item102
@@ -3586,6 +3591,7 @@ class Mission
 			side="EMPTY";
 			vehicle="O_Heli_Transport_04_F";
 			skill=0.60000002;
+			text="LB_1_1_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item104
@@ -3605,6 +3611,7 @@ class Mission
 			side="EMPTY";
 			vehicle="O_Heli_Transport_04_covered_F";
 			skill=0.60000002;
+			text="LB_1_1_1_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item106
