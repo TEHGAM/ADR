@@ -206,7 +206,7 @@ private ["_dir","_PTdir","_pos","_barrier","_unitsArray","_flatPos","_accepted",
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["priorityMarker", "priorityCircle"];    								
 	"priorityMarker" setMarkerText "Важная цель: Батарея"; publicVariable "priorityMarker";
-	_briefing = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#d63333'>Батарея</t><br/>____________________<br/>Вражеские силы выдвинули батарею зенитных орудий с целью приостановки нашего десантирования на точку дислокации и подавления нашей штурмовой авиации. Снимки переданные нашим самолёт-разведчиком определили точное местонахождение цели.";
+	_briefing = "<t align='center' size='2.2'>Важная цель</t><br/><t size='1.5' color='#d63333'>Батарея</t><br/>____________________<br/>Вражеские силы выдвинули батарею зенитных орудий с целью приостановки нашего десантирования на точку дислокации и подавления нашей штурмовой авиации.";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewPriorityTarget", "Уничтожить батарею"]; publicVariable "showNotification";
 	
