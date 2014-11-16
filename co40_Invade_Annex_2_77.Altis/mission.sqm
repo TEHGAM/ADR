@@ -3070,7 +3070,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }];";
+			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }]; this enableRopeAttach false;";
 		};
 		class Item55
 		{
@@ -3080,7 +3080,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }];";
+			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }]; this enableRopeAttach false;";
 		};
 		class Item56
 		{
@@ -3372,7 +3372,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }];";
+			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }]; this enableRopeAttach false;";
 		};
 		class Item83
 		{
@@ -3622,7 +3622,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }];";
+			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }]; this enableRopeAttach false;";
 		};
 	};
 	class Markers
@@ -4534,12 +4534,6 @@ class Mission
 			name="wh5_1";
 			text="WY-55 ""Хеллкет"" [респаун 30 мин]";
 			type="b_air";
-		};
-		class Item123
-		{
-			position[]={14242.925,19.950718,16246.317};
-			name="respawn_pilot2";
-			type="Empty";
 		};
 	};
 	class Sensors
