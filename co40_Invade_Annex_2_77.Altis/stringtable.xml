@@ -264,48 +264,6 @@
 			<Italian>è un oggetto bloccato e non sarà aggiunto al tuo inventario.</Italian>
 			<Russian>относиться к запрещенным предметам и не будет добавлен в ваш инвентарь.</Russian>
 		</Key>
-
-
-
-<Key ID="STRD_squadm">
-	<Original>Group Management</Original>
-	<Russian>Управление отрядами</Russian>
-</Key>
-<Key ID="STRD_namegroup">
-	<Original>Group Name</Original>
-	<Russian>Название группы</Russian>
-</Key>
-<Key ID="STRD_locked">
-	<Original>Locked</Original>
-	<Russian>Заблокирована</Russian>
-</Key>
-<Key ID="STRD_Quit">
-	<Original>Quit</Original>
-	<Russian>Закрыть</Russian>
-</Key>
-<Key ID="STRD_Lock">
-	<Original>Lock</Original>
-	<Russian>Заблокировать</Russian>
-</Key>
-<Key ID="STRD_Unlock">
-	<Original>Unlock</Original>
-	<Russian>Разблокировать</Russian>
-</Key>
-<Key ID="STRD_Remove">
-	<Original>Remove</Original>
-	<Russian>Удалить</Russian>
-</Key>
-<Key ID="STRD_Leave">
-	<Original>Leave</Original>
-	<Russian>Покинуть</Russian>
-</Key>
-<Key ID="STRD_Join">
-	<Original>Join</Original>
-	<Russian>Вступить</Russian>
-</Key>
-
-
-
 	</Package>
 	<Package name="LoadGear">
 		<Key ID="STR_VAS_Load_Title">
@@ -487,6 +445,44 @@
 			<Original>Please know that if you choose to add it to your weapon your current existing attachment in that slot will be lost.</Original>
 			<Italian>Attenzione, se attacchi l'accessorio alla tua arma, l'accessorio attaccato attualmente sarà sostituito.</Italian>
 			<Russian>Имейте в виду, добавляя данное приспособление к вашему оружию вы замените уже существующий аксесуар на месте его крепления.</Russian>
+		</Key>
+	</Package>
+	<Package name="DOM_Squad">
+		<Key ID="STRD_squadm">
+			<Original>Group Management</Original>
+			<Russian>Управление отрядами</Russian>
+		</Key>
+		<Key ID="STRD_namegroup">
+			<Original>Group Name</Original>
+			<Russian>Название группы</Russian>
+		</Key>
+		<Key ID="STRD_locked">
+			<Original>Locked</Original>
+			<Russian>Заблокирована</Russian>
+		</Key>
+		<Key ID="STRD_Quit">
+			<Original>Quit</Original>
+			<Russian>Закрыть</Russian>
+		</Key>
+		<Key ID="STRD_Lock">
+			<Original>Lock</Original>
+			<Russian>Заблокировать</Russian>
+		</Key>
+		<Key ID="STRD_Unlock">
+			<Original>Unlock</Original>
+			<Russian>Разблокировать</Russian>
+		</Key>
+		<Key ID="STRD_Remove">
+			<Original>Remove</Original>
+			<Russian>Удалить</Russian>
+		</Key>
+		<Key ID="STRD_Leave">
+			<Original>Leave</Original>
+			<Russian>Покинуть</Russian>
+		</Key>
+		<Key ID="STRD_Join">
+			<Original>Join</Original>
+			<Russian>Вступить</Russian>
 		</Key>
 	</Package>
 </Project>

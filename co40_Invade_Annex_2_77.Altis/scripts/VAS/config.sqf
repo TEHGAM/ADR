@@ -87,19 +87,6 @@ vas_glasses = [];
 //Below are variables you can use to restrict certain items from being used.
 //Weapons to remove from VAS
 vas_r_weapons = [
-"arifle_mas_m4_ti",
-"arifle_mas_m4_gl_ti",
-"arifle_mas_m4_m203_ti",
-"arifle_mas_m4_v_ti",
-"arifle_mas_m4_gl_v_ti",
-"arifle_mas_m4_m203_v_ti",
-"arifle_mas_m4_d_ti",
-"arifle_mas_m4_gl_d_ti",
-"arifle_mas_m4_m203_d_ti",
-"arifle_mas_ak_74m_ti",
-"arifle_mas_ak_74m_gl_ti",
-"arifle_mas_ak_74m_c_ti",
-"arifle_mas_ak_74m_gl_c_ti"
 ];
 
 //Backpacks to remove from VAS
