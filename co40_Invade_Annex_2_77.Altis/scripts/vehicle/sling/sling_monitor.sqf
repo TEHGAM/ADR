@@ -9,7 +9,7 @@ while{alive _helo} do
 		_unit = (_helo getVariable "sling_object");
 		
 		_minY = (((boundingBox _unit) select 0) select 2);
-		_height = (((getPos _unit select 2) + minLiftingHeight) + _minY);
+		_height = (((getPos _unit select 2) + 2.4) + _minY);
 
 		//when lifted object is above ground without obstruction
 		if(_height > 1) then
