@@ -7,7 +7,7 @@
 | Description: 
 |	
 |	Created: 26/11/2013.
-|	Last modified: 17/11/2014.
+|	Last modified: 18/11/2014.
 |	Coded for I&A and hosted on allfps.com.au servers.
 |	You may use and edit the code.
 |	You may not remove any entries from Credits without first removing the relevant author's contributions, 
@@ -96,14 +96,13 @@ player createDiaryRecord ["mods",
 "
 <br /> Разрешенные моды на сервере:<br /><br />
 
-<br />- Community Base Addons [вер.1.0.9.140907] - базовый мод требующийся для запуска всех остальных:
-		http://tehgam.com/viewtopic.php?f=5&t=21 <br /><br />
+<br />• Community Base Addons [вер.1.0.9.140907] - базовый мод требующийся для запуска всех остальных;<br />
 
-<br />- JSRS [вер.2.2] - звуковой мод (CBA обязателен):
-		http://tehgam.com/viewtopic.php?f=5&t=19&p=19 <br /><br />
+<br />• JSRS [вер.2.2] - звуковой мод (CBA обязателен);<br />
 
-<br />- VTS Simple weapon resting [вер.05] - даёт возможность использовать сошки:
-		http://tehgam.com/viewtopic.php?f=5&t=49 <br /><br />
+<br />• VTS Simple weapon resting [вер.05] - даёт возможность использовать сошки.<br />
+
+<br />Ссылки на поддерживаемые моды RW2 можно найти в описании сервера на форуме TEHGAM.COM.<br /><br />
 "
 ]];
 
@@ -113,8 +112,8 @@ player createDiaryRecord ["teamspeak",
 [
 "Скачать TeamSpeak 3",
 "
-<br />Официальный клиент/сервер:<br />
-<br />http://www.teamspeak.com/?page=downloads
+<br />Клиент и сервер TS3 можно скачать с его официального сайта по адресу:<br />
+<br />TEAMSPEAK.COM, в разделе Downloads/TeamSpeak 3.
 "
 ]];
 
@@ -148,44 +147,44 @@ player createDiaryRecord ["credits",
 "
 <br />Mission authors:<br /><br />
 
-		- <font size='16'>Quiksilver</font> - All FPS (allfps.com.au)<br /><br />
-		- <font size='16'>Rarek</font> - Ahoy World (ahoyworld.co.uk)<br />
+		• <font size='16'>Quiksilver</font> - All FPS (allfps.com.au)<br /><br />
+		• <font size='16'>Rarek</font> - Ahoy World (ahoyworld.co.uk)<br />
 		
 <br />Contributors:<br /><br />
-		- Jester - Ahoy World (ahoyworld.co.uk)<br />
-		- Razgriz33 - Ahoy World (ahoyworld.co.uk)<br />
-		- Kamaradski - Ahoy World (ahoyworld.co.uk)<br />
-		- chucky - All FPS (allfps.com.au)<br /><br />
+		• Jester - Ahoy World (ahoyworld.co.uk)<br />
+		• Razgriz33 - Ahoy World (ahoyworld.co.uk)<br />
+		• Kamaradski - Ahoy World (ahoyworld.co.uk)<br />
+		• chucky - All FPS (allfps.com.au)<br /><br />
 		
 <br />Other:<br /><br />
 		VAS<br />
-		- Kronzky<br />
-		- Sa-Matra<br />
-		- Dslyecxi<br /><br />
+		• Kronzky<br />
+		• Sa-Matra<br />
+		• Dslyecxi<br /><br />
 		=BTC= Revive<br />
-		- Giallustio<br /><br />
+		• Giallustio<br /><br />
 		EOS<br />
-		- BangaBob<br /><br />
+		• BangaBob<br /><br />
 		Squad Manager<br />
-		- aeroson<br /> <br />
+		• aeroson<br /> <br />
 		TAW View Distance<br />
-		- Tonic<br /> <br />
+		• Tonic<br /> <br />
 		aw_fnc<br />
-		- Alex Wise<br /><br />
+		• Alex Wise<br /><br />
 		Vehicle Respawn<br />
-		- Tophe<br /><br />
+		• Tophe<br /><br />
 		SHK Taskmaster<br />
-		- Shuko<br /><br />
+		• Shuko<br /><br />
 		Fast rope<br />
-		- Zealot<br /><br />
+		• Zealot<br /><br />
 		Map markers<br />
-		- aeroson<br /><br />
+		• aeroson<br /><br />
 		Jump<br />
-		- ProGamer<br /><br />
+		• ProGamer<br /><br />
 		Gear restrictions<br />
-		- wildw1ng<br /><br />
+		• wildw1ng<br /><br />
 		Safe zone<br />
-		- Bake<br />
+		• Bake<br />
 "
 ]];
 
@@ -194,23 +193,23 @@ player createDiaryRecord ["credits",
 "TEHGAM сообщество",
 "
 <br />Соучредители проекта:<br /><br />
-		- mexan<br />
-		- Cleric<br /><br />
+		• mexan<br />
+		• Cleric<br /><br />
 
 <br />Нынешний руководитель:<br /><br />
-		- <font size='16'>tym32167</font><br /><br />
+		• <font size='16'>tym32167</font><br /><br />
 
 <br />Разработчики миссии:<br /><br />
-		- a11archer<br />
-		- longbow<br />
-		- Noart<br />
-		- PR9INICHEK<br />
-		- vosur<br />
-		- ZeRoKoOl<br /><br />
+		• a11archer<br />
+		• longbow<br />
+		• Noart<br />
+		• PR9INICHEK<br />
+		• vosur<br />
+		• ZeRoKoOl<br /><br />
 
 <br />Локализация на русский язык:<br /><br />
-		- Tourorist<br />
-		- KaMeG<br /><br />
+		• Tourorist<br />
+		• KaMeG<br /><br />
 
 <br />Благодарности:<br /><br />
 	Мы благодарим всех игроков, которые уделяют своё время проекту оставляя нам отзывы и комментарии на форуме. Тем самым Вы способствуете в исправлении текущих неполадок и разработке дальнейших улучшений данной миссии. Огромное спасибо!<br />
