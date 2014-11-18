@@ -7,7 +7,7 @@
 | Description: 
 |	
 |	Created: 26/11/2013.
-|	Last modified: 9/04/2014.
+|	Last modified: 17/11/2014.
 |	Coded for I&A and hosted on allfps.com.au servers.
 |	You may use and edit the code.
 |	You may not remove any entries from Credits without first removing the relevant author's contributions, 
@@ -97,16 +97,14 @@ player createDiaryRecord ["mods",
 "
 <br /> Разрешенные моды на сервере:<br /><br />
 
-<br />- Community Base Аddons (CBA).
-		http://tehgam.com/viewtopic.php?f=5&amp;t=21 <br /><br />
+<br />- Community Base Addons [вер.1.0.9.140907] - базовый мод требующийся для запуска всех остальных:
+		http://tehgam.com/viewtopic.php?f=5&t=21<br />
 
-<br />- JSRS (CBA обязателен).
-		http://tehgam.com/viewtopic.php?f=5&amp;t=19&amp;p=19 <br /><br />
+<br />- JSRS [вер.2.2] - звуковой мод (CBA обязателен):
+		http://tehgam.com/viewtopic.php?f=5&t=19&p=19<br />
 
-<br />- VTS Simple weapon resting (сошки).
-		http://tehgam.com/viewtopic.php?f=5&amp;t=49 <br /><br />		
-
-<br />
+<br />- VTS Simple weapon resting [вер.05] - даёт возможность использовать сошки:
+		http://tehgam.com/viewtopic.php?f=5&t=49
 "
 ]];
 
@@ -114,10 +112,10 @@ player createDiaryRecord ["mods",
 
 player createDiaryRecord ["teamspeak",
 [
-"Скачать TS3",
+"Скачать TeamSpeak 3",
 "
-<br /> TeamSpeak:<br /><br />
-<br /> http://www.teamspeak.com/?page=downloads
+<br />Официальный клиент/сервер:<br />
+<br />http://www.teamspeak.com/?page=downloads
 "
 ]];
 
@@ -125,7 +123,8 @@ player createDiaryRecord ["teamspeak",
 [
 "Наш TeamSpeak",
 "
-<br /> Адрес: 213.21.12.135
+<br />Адрес:<br />
+<br /><font size='16'>213.21.12.135</font>
 "
 ]];
 
@@ -133,7 +132,7 @@ player createDiaryRecord ["teamspeak",
 
 player createDiaryRecord ["changelog",
 [
-"Версия 3.4",
+"Версия 3.4 (17 ноября 2014 г)",
 "<br />• Зона запрета на использование оружия на базе расширена до авиаангаров (исправил Noart);
 <br />• Количество членов экипажа и пассажиров теперь отображается полностью (это и все нижеуказанные изменения в данном выпуске подготовил PR9INICHEK);
 <br />• Установили запрет на подвешивание вертолетами ящика со снаряжением и экипировкой;
@@ -193,26 +192,26 @@ player createDiaryRecord ["credits",
 
 player createDiaryRecord ["credits",
 [
-"TEHGAM.COM",
+"TEHGAM сообщество",
 "
 <br />Соучредители проекта:<br /><br />
-		- <font size='16'>mexan</font><br />
-		- <font size='16'>Cleric</font><br /><br />
+		- mexan<br />
+		- Cleric<br /><br />
 
 <br />Нынешний руководитель:<br /><br />
 		- <font size='16'>tym32167</font><br /><br />
 
 <br />Разработчики миссии:<br /><br />
-		- <font size='16'>a11archer</font><br />
-		- <font size='16'>longbow</font><br />
-		- <font size='16'>Noart</font><br />
-		- <font size='16'>PR9INICHEK</font><br />
-		- <font size='16'>vosur</font><br />
-		- <font size='16'>ZeRoKoOl</font><br /><br />
+		- a11archer<br />
+		- longbow<br />
+		- Noart<br />
+		- PR9INICHEK<br />
+		- vosur<br />
+		- ZeRoKoOl<br /><br />
 
 <br />Локализация на русский язык:<br /><br />
-		- Tourorist <br />
-		- KaMeG <br /><br />
+		- Tourorist<br />
+		- KaMeG<br /><br />
 
 <br />Благодарности:<br /><br />
 	Мы благодарим всех игроков, которые уделяют своё время проекту оставляя нам отзывы и комментарии на форуме. Тем самым Вы способствуете в исправлении текущих неполадок и разработке дальнейших улучшений данной миссии. Огромное спасибо!<br />
