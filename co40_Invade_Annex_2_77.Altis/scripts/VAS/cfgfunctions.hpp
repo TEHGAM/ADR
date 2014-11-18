@@ -43,5 +43,6 @@ class VAS
 		class VASP {};
 		class quickAttachment {};
 		class accList {};
+		class test {};
 	};
 };

@@ -66,22 +66,7 @@ FUNC(squadmanagementfill) = {
 	_disp = __uiGetVar(X_SQUADMANAGEMENT_DIALOG);
 	
 	_units = if (isMultiplayer) then {playableUnits} else {switchableUnits};
-	if (isNil QGVAR(SQMGMT_grps)) then {
-		GVAR(SQMGMT_grps) = [];
-	} else {
-		for "_i" from 0 to (count GVAR(SQMGMT_grps) - 1) do {
-			_helper = GVAR(SQMGMT_grps) select _i;
-			if (isNull _helper) then {
-				GVAR(SQMGMT_grps) set [_i, -1];
-			} else {
-				if (count (units _helper) == 0) then {
-					GVAR(SQMGMT_grps) set [_i, -1];
-				};
-			};
-		};
-		GVAR(SQMGMT_grps) = GVAR(SQMGMT_grps) - [-1];
-	};
-	
+		
 	for "_i" from 0 to 49 do {
 		_ctrl = _disp displayCtrl (4000 + _i);
 		_ctrl ctrlShow true;
@@ -99,93 +84,13 @@ FUNC(squadmanagementfill) = {
 		_ctrl ctrlShow false;
 	};
 	
-	_sidegrppl = side (group player);
-	{
-		if (!((group _x) in GVAR(SQMGMT_grps)) && {side (group _x) getFriend _sidegrppl >= 0.6}) then {
-			GVAR(SQMGMT_grps) set [count GVAR(SQMGMT_grps), group _x];
-		};
-	} forEach _units;
 	
 	_grptxtidc = 4000;
 	_grplbidc = 2000;
 	_grpbutidc = 3000;
 	_grplockidc = 6000;
 	_grplockbutidc = 7000;
-	{
-		_ctrl = CTRL(_grptxtidc);
-		if (group player != _x) then {
-			_ctrl ctrlSetText (str(_x));
-		} else {
-			_ctrl ctrlSetText (str(_x) + " *");
-		};
 		
-		_lockedgr = GV(_x,GVAR(locked));
-		if (isNil "_lockedgr") then {_lockedgr = false};
-		if (_lockedgr) then {
-			CTRL(_grplockidc) ctrlShow true;
-		};
-		if (player == leader _x) then {
-			CTRL(_grplockbutidc) ctrlShow true;
-			CTRL(_grplockbutidc) ctrlSetText (if (_lockedgr) then {localize "STRD_Unlock"} else {localize "STRD_Lock"});	
-		};
-		
-		_curgrp = _x;
-		_leader = objNull;
-		_unitsar = [];
-		{
-			if (_x != leader _curgrp) then {
-				_unitsar set [count _unitsar, _x];
-			} else {
-				_leader = _x;
-			};
-		} forEach (units _curgrp);
-		if (!isNull _leader) then {
-			_unitsar = [_leader] + _unitsar;
-		};
-		
-		_ctrl = CTRL(_grplbidc);
-		lbClear _ctrl;
-		_ctrl lbSetCurSel -1;
-		{
-			_name = name _x;
-			if (!isPlayer _x) then {
-				_name = _name + " (" + "A.I" + ")";
-			};
-			_name_data = name _x;
-			_isppp = false;
-			if (_x == player) then {
-				_isppp = true;
-				_ctrl2 = CTRL(_grpbutidc);
-				if (count _unitsar > 1) then {
-					_ctrl2 ctrlSetText localize "STRD_Leave";
-				} else {
-					_ctrl2 ctrlShow false;
-				};
-			};
-			_index = _ctrl lbAdd _name;
-			_ctrl lbSetData [_index, _name_data];
-			if (_isppp) then {
-				_ctrl lbSetColor [_index, [1,1,1,1]];
-			};
-			_ipic = getText (configFile >> "cfgVehicles" >> (typeOf _x) >> "picture");
-			_pic = if (_ipic == "") then {
-				"#(argb,8,8,3)color(1,1,1,0)"
-			} else {
-				getText(configFile>>"CfgVehicleIcons">>_ipic)
-			};
-			_ctrl lbSetPicture [_index, _pic];
-		} forEach _unitsar;
-		if (count (units _x) >= 32) then {
-			_ctrl2 = CTRL(_grpbutidc);
-			_ctrl2 ctrlEnable false;
-		};
-		__INC(_grptxtidc);
-		__INC(_grplbidc);
-		__INC(_grpbutidc);
-		__INC(_grplockidc);
-		__INC(_grplockbutidc);
-	} forEach GVAR(SQMGMT_grps);
-	
 	if (_grptxtidc < 4049) then {
 		_diff = 4049 - _grptxtidc;
 		for "_i" from (49 - _diff) to 49 do {
@@ -229,7 +134,6 @@ FUNC(squadmgmtbuttonclicked) = {
 	private ["_diff", "_grp", "_sidep", "_newgrp", "_count", "_oldgrp", "_disp", "_lbbox", "_lbidx", "_lbname"];
 	if (typeName _this != typeName 1) exitWith {};
 	_diff = _this - 5000;
-	_grp = GVAR(SQMGMT_grps) select _diff;
 	_oldgrp = group player;
 	disableSerialization;
 	// remove unit from group
@@ -403,7 +307,6 @@ FUNC(squadmgmtlbchanged) = {
 	_ctrl = _car select 0;
 	_diff = _idc - 2000;
 
-	_grp = GVAR(SQMGMT_grps) select _diff;
 	disableSerialization;
 	_disp = __uiGetVar(X_SQUADMANAGEMENT_DIALOG);
 	_button = 3000 + _diff;
