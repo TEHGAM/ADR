@@ -6,11 +6,11 @@ Author:
 
 Last modified:
 
-	12/05/2014
+	19/11/2014
 	
 Description:
 
-	Client scripts and event handlers.
+	Client-side scripts and event handlers.
 	
 ______________________________________________________*/
 
