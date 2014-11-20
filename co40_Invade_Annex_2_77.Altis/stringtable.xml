@@ -447,6 +447,8 @@
 			<Russian>Имейте в виду, добавляя данное приспособление к вашему оружию вы замените уже существующий аксесуар на месте его крепления.</Russian>
 		</Key>
 	</Package>
+</Project>
+<Project name="Squad Management">
 	<Package name="DOM_Squad">
 		<Key ID="STRD_squadm">
 			<Original>Group Management</Original>
