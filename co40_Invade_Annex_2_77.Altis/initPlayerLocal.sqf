@@ -6,11 +6,11 @@ Author:
 
 Last modified:
 
-	12/05/2014
+	19/11/2014
 	
 Description:
 
-	Client scripts and event handlers.
+	Client-side scripts and event handlers.
 	
 ______________________________________________________*/
 
@@ -21,19 +21,19 @@ enableSentences false;
 
 //cutRsc ["WELCOME", "PLAIN"];
 
-_null = [] execvm "scripts\vehicle\crew\crew.sqf"; 								// vehicle HUD
-_null = [] execVM 'scripts\group_manager.sqf';									// group manager
-_null = [] execVM "scripts\restrictions.sqf"; 									// gear restrictions
-//_null = [] execVM "scripts\pilotCheck.sqf"; 									// pilots only
-_null = [] execVM "scripts\safezone.sqf"; 										// spawn protection
-_null = [] execVM "scripts\jump.sqf";											// jump action
-_null = [] execVM "scripts\misc\diary.sqf";										// diary tabs
-_null = [] execVM "scripts\vehicle\fastrope\zlt_fastrope.sqf";					// heli rope	
-_null = [] execVM "scripts\playerMarkers.sqf";									// blufor map tracker
-// _null = [] execVM "scripts\VA.sqf";												// Virtual Arsenal
+_null = [] execvm "scripts\vehicle\crew\crew.sqf"; 		// Vehicle HUD
+_null = [] execVM 'scripts\group_manager.sqf';			// Group manager
+_null = [] execVM "scripts\restrictions.sqf"; 			// Gear restrictions
+//_null = [] execVM "scripts\pilotCheck.sqf"; 			// Pilots-only
+_null = [] execVM "scripts\safezone.sqf"; 			// Spawn protection
+_null = [] execVM "scripts\jump.sqf";				// Jump action
+_null = [] execVM "scripts\misc\diary.sqf";			// Diary tabs
+_null = [] execVM "scripts\vehicle\fastrope\zlt_fastrope.sqf";	// Heli rope	
+_null = [] execVM "scripts\playerMarkers.sqf";			// Blufor map tracker
+// _null = [] execVM "scripts\VA.sqf";				// Virtual Arsenal
 _null = [] execVM "scripts\admin_uid.sqf";
 _null = [] execVM "scripts\fpsFix\vehicleManager.sqf";
-_null = [] execVM "scripts\general.sqf";
+_null = [] execVM "scripts\general.sqf";			// Общие
 
 
 //-------------------- PVEHs
@@ -52,7 +52,7 @@ _null = [] execVM "scripts\general.sqf";
 {
 	private ["_GHint"];
 	_GHint = _this select 1;
-	hint parseText format["%1", _GHint];
+	hint parseText format["%1", _GHint];			// Переменная
 };
 
 "hqSideChat" addPublicVariableEventHandler
@@ -77,14 +77,14 @@ _null = [] execVM "scripts\general.sqf";
 {
 	"sideMarker" setMarkerPosLocal (markerPos "sideMarker");
 	"sideCircle" setMarkerPosLocal (markerPos "sideCircle");
-	"sideMarker" setMarkerTextLocal format["Допзадание: %1",sideMarkerText];
+	"sideMarker" setMarkerTextLocal format["Допзадание: %1",sideMarkerText];		// Допка
 };
 
 "priorityMarker" addPublicVariableEventHandler
 {
 	"priorityMarker" setMarkerPosLocal (markerPos "priorityMarker");
 	"priorityCircle" setMarkerPosLocal (markerPos "priorityCircle");
-	"priorityMarker" setMarkerTextLocal format["Важная цель: %1",priorityTargetText];
+	"priorityMarker" setMarkerTextLocal format["Вторичная цель: %1",priorityTargetText];	// Арта и Батарея?
 };
 
 tawvd_disablenone = false;
