@@ -3627,7 +3627,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=123;
+		items=122;
 		class Item0
 		{
 			position[]={-17281.484,0,-2069.5022};
@@ -4417,79 +4417,69 @@ class Mission
 		};
 		class Item107
 		{
-			position[]={13598.637,15.534879,12201.735};
-			name="sm20";
-			markerType="RECTANGLE";
-			type="Empty";
-			a=60;
-			b=150;
-			angle=-152.52901;
-		};
-		class Item108
-		{
 			position[]={14790.009,17.91,16647.232};
 			name="Side_1";
 			text="Наградная техника";
 			type="b_unknown";
 			colorName="ColorBLUFOR";
 		};
-		class Item109
+		class Item108
 		{
 			position[]={14701.036,17.91,16628.848};
 			name="heliService1";
 			text="Ремонт вертолётов";
 			type="b_maint";
 		};
-		class Item110
+		class Item109
 		{
 			position[]={14792.068,17.91,16705.295};
 			name="heliService2";
 			text="Ремонт техники";
 			type="b_maint";
 		};
-		class Item111
+		class Item110
 		{
 			position[]={14540.204,17.761761,16851.932};
 			name="Vehicle depot";
 			text="Транспортное депо";
 			type="b_mech_inf";
 		};
-		class Item112
+		class Item111
 		{
 			position[]={14776.826,17.91,16817.473};
 			name="heliSpawn";
 			text="Транспортные вертолёты";
 			type="b_air";
 		};
-		class Item113
+		class Item112
 		{
 			position[]={14242.336,19.352709,16310.469};
 			name="wjets";
 			text="A-143 ""Буззард"" (истребитель) [респаун 30 мин]";
 			type="b_plane";
 		};
-		class Item114
+		class Item113
 		{
 			position[]={15176.26,17.91,16813.828};
 			name="airService2";
 			text="Ремонт самолётов";
 			type="b_maint";
 		};
-		class Item115
+		class Item114
 		{
 			position[]={14164.698,20.542004,16191.611};
 			name="wh5";
 			text="AH-9 ""Пауни"" [респаун 30 мин]";
 			type="b_air";
 		};
-		class Item116
+		class Item115
 		{
 			position[]={14232.756,17.972013,15851.146};
 			name="airService1";
 			text="Ремонт самолётов";
 			type="b_maint";
 		};
-		class Item117
+		class Item116
 		{
 			position[]={15350.607,-0.17312025,15746.46};
 			name="B1";
@@ -4497,7 +4487,7 @@ class Mission
 			type="b_naval";
 			angle=-0.43946901;
 		};
-		class Item118
+		class Item117
 		{
 			position[]={15350.233,-0.22708295,15793.151};
 			name="B2";
@@ -4505,21 +4495,21 @@ class Mission
 			type="b_naval";
 			angle=358.66101;
 		};
-		class Item119
+		class Item118
 		{
 			position[]={14567.344,17.91,16824.715};
 			name="vehService";
 			text="Ремонт техники";
 			type="b_maint";
 		};
-		class Item120
+		class Item119
 		{
 			position[]={15116.457,17.91,17223.021};
 			name="UAV";
 			text="БПА";
 			type="b_uav";
 		};
-		class Item121
+		class Item120
 		{
 			position[]={14861.612,17.91,16780.727};
 			name="ammocargo";
@@ -4528,7 +4518,7 @@ class Mission
 			colorName="ColorWEST";
 			angle=359.22;
 		};
-		class Item122
+		class Item121
 		{
 			position[]={14171.881,20.853296,16162.772};
 			name="wh5_1";
