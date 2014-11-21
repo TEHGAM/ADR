@@ -282,7 +282,7 @@
 			<Original>Load On Respawn</Original>
 			<German>Beim Respawn Laden</German>
 			<French>Charg. à la réap</French>
-			<Polish>Załaduj przy respawnie</Polish>
+			<Polish>Ekwipuj przy odrodzeniu</Polish>
 			<Portuguese>Carregar em Respawn</Portuguese>
 			<Italian>Carica al respawn</Italian>
 			<Czech>Výbava pro respawn</Czech>
@@ -419,6 +419,7 @@
 			<Spanish>Sì</Spanish>
 			<Russian>Да</Russian>
 			<Czech>Ano</Czech>
+			<French>Oui</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteNo">
 			<Original>No</Original>
@@ -426,6 +427,7 @@
 			<Spanish>No</Spanish>
 			<Russian>Нет</Russian>
 			<Czech>Ne</Czech>
+			<French>Non</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_slotNoInfo">
 			<Original>You didn't select a slot!</Original>
@@ -438,6 +440,7 @@
 			<Italian>Non hai selezionato nessuno slot da caricare al respawn!</Italian>
 			<Russian>Слот для автозагрузки не выбран!</Russian>
 			<Czech>Nebyl vybrán žádný slot pro načtení při respawnu!</Czech>
+			<Polish>Nie wybrano slotu do wczytania przy odrodzeniu!</Polish>
 		</Key>
 		<Key ID="STR_VAS_Prompt_slotSelFail">
 			<Original>You didn't select a slot!</Original>
