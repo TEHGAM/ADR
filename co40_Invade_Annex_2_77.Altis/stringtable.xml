@@ -388,30 +388,35 @@
 			<Italian>Non hai selezionato uno slot da cancellare!</Italian>
 			<Russian>Вы не выбрали слот для удаления!</Russian>
 			<Czech>Nevybral si slot pro smazání!</Czech>
+			<French>Aucun emplacement choisi pour être supprimé!</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteSlotNoInfo">
 			<Original>You can't delete that slot, it has no information!</Original>
 			<Italian>Non puoi cancellare questo slot, è già vuoto!</Italian>
 			<Russian>Вы не можете удалить этот слот за отсутствием в нём информации!</Russian>
 			<Czech>Nemůžeš vymazat tento slot, nemá žádné informace!</Czech>
+			<French>Vous ne pouvez pas supprimer cette emplacement, aucun enregistrement détecté!</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteSlotWarning">
 			<Original>You are about to delete slot</Original>
 			<Italian>Stai per cancellare lo slot</Italian>
 			<Russian>Вы собираетесь удалить слот</Russian>
 			<Czech>Chystáš se smazat slot</Czech>
+			<French>Vous êtes sur le point de supprimer cet emplacement</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteCanelled">
 			<Original>You cancelled deleting slot</Original>
 			<Italian>Hai cancellato lo slot cancellandolo</Italian>
 			<Russian>Вы отменили удаление слота</Russian>
 			<Czech>Zrušil si mazání slotu</Czech>
+			<French>Vous avez annulé la suppression de l'emplacement</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteSuccess">
 			<Original>You deleted slot</Original>
 			<Italian>Hai cancellato lo slot</Italian>
 			<Russian>Вы удалили слот</Russian>
 			<Czech>Vymazal si slot</Czech>
+			<French>Vous avez supprimé cet emplacement</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_deleteYes">
 			<Original>Yes</Original>
@@ -434,6 +439,7 @@
 			<Italian>Non hai selezionato uno slot!</Italian>
 			<Russian>Вы не выбрали слот!</Russian>
 			<Czech>Nevybral si slot!</Czech>
+			<French>Vous n'avez pas choisi d'emplacement!</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_onRespawnFail">
 			<Original>No slot was selected to be loaded upon respawn!</Original>
@@ -441,18 +447,21 @@
 			<Russian>Слот для автозагрузки не выбран!</Russian>
 			<Czech>Nebyl vybrán žádný slot pro načtení při respawnu!</Czech>
 			<Polish>Nie wybrano slotu do wczytania przy odrodzeniu!</Polish>
+			<French>Aucun emplacement n'a été sélectionné pour être chargé lors de la réapparition!</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_slotSelFail">
 			<Original>You didn't select a slot!</Original>
 			<Italian>Non hai selezionato uno slot</Italian>
 			<Russian>Вы не выбрали слот!</Russian>
 			<Czech>Nevybral si slot!</Czech>
+			<French>Vous n'avez pas choisi d'emplacement!</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_addToWeapon">
 			<Original>Weapon</Original>
 			<Italian>Armi</Italian>
 			<Russian>Оружие</Russian>
 			<Czech>Zbraň</Czech>
+			<French>Armes</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_addToInv">
 			<Original>Inventory</Original>
@@ -466,12 +475,14 @@
 			<Italian>Cosa vuoi fare con questo accessorio?</Italian>
 			<Russian>Что вы хотите сделать с этим приспособлением?</Russian>
 			<Czech>Co chcete dělat s tímto doplňkem?</Czech>
+			<French>Que voulez-vous faire avec cet emplacement?</French>
 		</Key>
 		<Key ID="STR_VAS_Prompt_acc2">
 			<Original>Please know that if you choose to add it to your weapon your current existing attachment in that slot will be lost.</Original>
 			<Italian>Attenzione, se attacchi l'accessorio alla tua arma, l'accessorio attaccato attualmente sarà sostituito.</Italian>
 			<Russian>Имейте в виду, добавляя данное приспособление к вашему оружию вы замените уже существующий аксесуар на месте его крепления.</Russian>
 			<Czech>Berte na vědomí, že pokud si přidáte doplněk na zbraň tak přijdete o již existující doplněk co máte na zbrani.</Czech>
+			<French>Si vous choisissez de placer cette objet sur votre arme, sachez que l'objet actuellement placé sur l'arme sera automatiquement supprimé</French>
 		</Key>
 	</Package>
 </Project>
