@@ -2,7 +2,7 @@ Russian War №2
 ==============
 ####[Вики](https://github.com/TEHGAM/RW2/wiki) / [Форум](http://www.tehgam.com/viewforum.php?f=36) / [Задачи](https://github.com/TEHGAM/RW2/issues)&nbsp;&nbsp;&nbsp;&nbsp;[![](http://img.shields.io/badge/Версия-3.4-green.svg?style=flat)](https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F) [![](http://img.shields.io/badge/Скачать-1.33_МБ-blue.svg?style=flat)](http://www.tehgam.com/viewtopic.php?p=11869#p11869) [![](http://img.shields.io/badge/Лицензия-MIT-red.svg?style=flat)](https://github.com/TEHGAM/RW2/blob/master/LICENSE) 
 
-![Russian War №2](https://raw.githubusercontent.com/TEHGAM/RW2/master/Logo/tehgam_rw2.jpg)
+[![Russian War №2](https://raw.githubusercontent.com/TEHGAM/RW2/master/Logo/tehgam_rw2.jpg)](https://github.com/TEHGAM/RW2)
 
 Мы приветствуем, будем рады и благодарны за любой вклад в развитие нашей версии [Invade & Annex](https://bitbucket.org/ahoyworld/aw-i-a-2). Вы можете помочь в этом оставляя свои отзывы на [форуме RW2](http://www.tehgam.com/viewforum.php?f=36), а также определяя и ставя [новые задачи](https://github.com/TEHGAM/RW2/issues) для будущих исправлений и улучшений миссии.
 
