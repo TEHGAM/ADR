@@ -1,0 +1,1 @@
+if(aw_sling_cameraOn) then {aw_sling_cameraOn = false} else {aw_sling_cameraOn = true};
