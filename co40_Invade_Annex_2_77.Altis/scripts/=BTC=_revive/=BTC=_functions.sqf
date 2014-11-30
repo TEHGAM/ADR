@@ -348,6 +348,14 @@ BTC_first_aid =
 	if (Alive player && Alive _injured && format ["%1",player getVariable "BTC_need_revive"] == "0") then
 	{
 		_injured setVariable ["BTC_need_revive",0,true];
+		if (group player == group _injured) then
+		{
+			addToScore = [player, 2]; publicVariable "addToScore";
+			["ScoreBonus", ["Возродил сокомандника", "1"]] call bis_fnc_showNotification;
+		} else {
+			addToScore = [player, 2]; publicVariable "addToScore";
+			["ScoreBonus", ["Возродил соотрядника", "2"]] call bis_fnc_showNotification;
+		};
 		_injured playMoveNow "AinjPpneMstpSnonWrflDnon_rolltoback";
 	};
 };
