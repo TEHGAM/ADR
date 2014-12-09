@@ -9,7 +9,7 @@ We welcome, appreciate and would be grateful for any contributions to the ongoin
 If you have some experience with editing ARMA 3 and are interested in assisting us directly, you can join our [development team](https://github.com/TEHGAM/RW2/graphs/contributors) by creating [pull requests](https://github.com/TEHGAM/RW2/pulls?q=is%3Apr+is%3Aclosed) with your changes, for consideration by the [project lead](https://github.com/tym32167).
 
 ####Special Thanks
-* [Rarek](https://bitbucket.org/Rarek) and members of [Ahoy World](http://www.ahoyworld.co.uk/) for the original mission.
+* [Rarek](https://bitbucket.org/Rarek), [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI) and members of [Ahoy World](http://www.ahoyworld.co.uk/) for the original mission.
 * [AgentRev](https://github.com/AgentRev) for [optimizations](https://github.com/TEHGAM/RW2/blob/master/co40_Invade_Annex_2_77.Altis/scripts/fpsFix/vehicleManager.sqf).
 * [Giallustio](http://www.giallustio.altervista.org/) for the player [revive](http://www.armaholic.com/page.php?id=18955) and [punishment](http://www.armaholic.com/page.php?id=19099) scripts.
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) for [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
