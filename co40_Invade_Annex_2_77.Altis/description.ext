@@ -1,59 +1,59 @@
 //------------------------- On Load
 
-author = Rarek [Ahoy World] & Quiksilver [allFPS];
+author = Rarek & Quiksilver, with aid from Ahoy World & allFPS;
 onLoadName = "Invade & Annex";
 OnLoadMission = "[Редакция TEHGAM.COM, вер.3.4]";
 loadScreen = "media\images\loading.paa";			
 overviewPicture = "media\images\loading.paa";		
 
-onLoadIntro = "";										// Displays a message while the intro is loading.
-onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
-onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
-forceRotorLibSimulation= 1;                             // Force enable RotorLib. Default value: 0 - options based; 1 - force enable; 2 - force disable
+onLoadIntro = "";			// Displays a message while the intro is loading.
+onLoadIntroTime = 0;			// Time and date displayed while the intro loads. 1 visible, 0 hidden.
+onLoadMissionTime = 0;			// Time and date displayed while the mission loads. 1 visible, 0 hidden.
+forceRotorLibSimulation= 1;		// Force enable RotorLib. Default value: 0 - options based; 1 - force enable; 2 - force disable
 
 class Header 
 	{
-		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
-		minPlayers = 1;									// Min # of players the MISSION supports
-		maxPlayers = 35;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
+		gameType = COOP;	// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
+		minPlayers = 1;		// Min # of players the MISSION supports
+		maxPlayers = 35;	// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
 	}; 
 
 //------------------------- Admin
 
-enableDebugConsole = 0;									// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
-allowFunctionsLog = 0; 							// Log functions to .rpt. disabled with 0
+enableDebugConsole = 0;			// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
+allowFunctionsLog = 0; 			// Log functions to .rpt. disabled with 0
 
 //------------------------- Misc
 
-disableChannels[]={0}; 									// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
-disabledAI = 1;											// No AI in playable units
-aiKills = 0; 											// disable scorelist for AI players
-enableItemsDropping = 0; 								// disabled with 0
-joinUnassigned = 1;										// 0 = players forced into role on join
-//showUAVFeed = 0;											// Enables/Disables the UAV Feed. Zeus-related.
+disableChannels[]={0}; 			// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
+disabledAI = 1;				// No AI in playable units
+aiKills = 0; 				// disable scorelist for AI players
+enableItemsDropping = 0; 		// disabled with 0
+joinUnassigned = 1;			// 0 = players forced into role on join
+//showUAVFeed = 0;			// Enables/Disables the UAV Feed. Zeus-related.
 
 //------------------------- Respawn
 
-Respawn = 3;											// 0 = none. 1 = bird. 2 = instant where died. 3 = base or respawn_west marker. 4 = respawn with team, or bird. 5 = into AI or bird.
-RespawnDelay = 4;										// Delay prior to respawn, ensure longer than BTC revive delay.
-RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
+Respawn = 3;				// 0 = none. 1 = bird. 2 = instant where died. 3 = base or respawn_west marker. 4 = respawn with team, or bird. 5 = into AI or bird.
+RespawnDelay = 4;			// Delay prior to respawn, ensure longer than BTC revive delay.
+RespawnDialog = 0;			// default = 1. show respawn timer and scoreboard when killed.
 
 //------------------------- Garbage collector
 							
-wreckLimit = 3;											// Limit before removal is triggered
-wreckRemovalMinTime = 120;								// Min time before removal
-wreckRemovalMaxTime = 360;								// Max time before removal
-corpseLimit = 5;										// Limit before removal is triggered		
-corpseRemovalMinTime = 60;								// Min time before removal
-corpseRemovalMaxTime = 120;								// Max time before removal
+wreckLimit = 3;				// Limit before removal is triggered
+wreckRemovalMinTime = 120;		// Min time before removal
+wreckRemovalMaxTime = 360;		// Max time before removal
+corpseLimit = 5;			// Limit before removal is triggered		
+corpseRemovalMinTime = 60;		// Min time before removal
+corpseRemovalMaxTime = 120;		// Max time before removal
 
 //------------------------- Includes / Functions
 	
-#include "scripts\VAS\menu.hpp" 						// VAS
+#include "scripts\VAS\menu.hpp" 					// VAS
 #include "scripts\taw_vd\dialog.hpp" 					// TAW View Distance
-#include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
-#include "scripts\spectator\spectating.hpp"     		// Kegetys Spectator Script
-#include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system 
+#include "scripts\vehicle\crew\common.hpp"  				// vehicle crew hud
+#include "scripts\spectator\spectating.hpp"     			// Kegetys Spectator Script
+#include "scripts\=BTC=_revive\=BTC=_respawn.h"				// BTC medic revive system 
 #include "scripts\DOM_squad\SquadManagement.hpp"
 
 
@@ -61,9 +61,9 @@ class CfgFunctions
 	{
 		
                 	
-        #include "functions\cfgfunctions.hpp"			// Integrated I&A functions
+        #include "functions\cfgfunctions.hpp"				// Integrated I&A functions
 		#include "scripts\VAS\cfgfunctions.hpp"			// VAS
-		#include "scripts\taw_vd\CfgFunctions.hpp"				// View distance
+		#include "scripts\taw_vd\CfgFunctions.hpp"		// View distance
 
 
 		class LB {
@@ -78,7 +78,7 @@ class CfgFunctions
 
 class RscTitles
 	{
-		#include "scripts\vehicle\crew\namesleft.hpp"	// Occupants HUD for vehicles
+		#include "scripts\vehicle\crew\namesleft.hpp"		// Occupants HUD for vehicles
 	};
 
 //------------------------- Parameters
@@ -229,7 +229,7 @@ class CfgNotifications
 		iconPicture = ""; 		// Small icon displayed in left part. Colored by "color", filled by arguments.
 		iconText = ""; 			// Short text displayed over the icon. Colored by "color", filled by arguments.
 		description = ""; 		// Brief description displayed as structured text. Colored by "color", filled by arguments.
-		color[] = {1,1,1,1}; 	// Icon and text color
+		color[] = {1,1,1,1};		// Icon and text color
 		duration = 5; 			// How many seconds will the notification be displayed
 		priority = 0; 			// Priority; higher number = more important; tasks in queue are selected by priority
 		difficulty[] = {}; 		// Required difficulty settings. All listed difficulties has to be enabled
