@@ -17,4 +17,8 @@ If you have some experience with editing ARMA 3 and are interested in assisting 
 * [Tonic](https://github.com/TAWTonic) for Virtual Ammobox System ([VAS](https://github.com/TAWTonic/VAS)) and the [view distance](http://www.armaholic.com/page.php?id=19751) script.
 * [aeroson](https://github.com/aeroson) for the garbage collection ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) and the [player marking](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf) scripts.
 * [Tophe](http://meadows.se/) for the [vehicle respawn](http://www.armaholic.com/page.php?id=6080) script.
-* And last but not least, a big thank you to all regular players and administrators of the [official server](https://github.com/TEHGAM/RW2/wiki/RW2:-Summary) for supporting the project with new suggestions, taking out their time to report any bugs, making sure that [rules](https://github.com/TEHGAM/RW2/wiki/RW:-The-rules) are being followed and maintaining the [general order](https://community.bistudio.com/wiki/Guide_to_Online_Etiquette) and a friendly game environment.
+* And last but not least, a big thank you to all regular players and administrators of the [official server](https://github.com/TEHGAM/RW2/wiki/RW2:-Summary) for:
+  * supporting the project with new suggestions,
+  * taking out their time to report any bugs,
+  * making sure that [our rules](https://github.com/TEHGAM/RW2/wiki/RW:-The-rules) are being followed,
+  * and maintaining the [general order](https://community.bistudio.com/wiki/Guide_to_Online_Etiquette) and a friendly game environment.
