@@ -9,7 +9,7 @@ Russian War №2
 При наличии навыков редактирования ARMA 3 и желании содействовать дальнейшей разработке миссии напрямую, вы можете присоединиться к [нашим разработчикам](https://github.com/TEHGAM/RW2/graphs/contributors), свободно оставляя [запросы на включение](https://github.com/TEHGAM/RW2/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/tym32167).
 
 ####Огромное Спасибо
-* [Rarek](https://bitbucket.org/Rarek) и сообщество [Ahoy World](http://www.ahoyworld.co.uk/) за исходную миссию.
+* [Rarek](https://bitbucket.org/Rarek), [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI) и сообщество [Ahoy World](http://www.ahoyworld.co.uk/) за исходную миссию.
 * [AgentRev](https://github.com/AgentRev) за [оптимизации](https://github.com/TEHGAM/RW2/blob/master/co40_Invade_Annex_2_77.Altis/scripts/fpsFix/vehicleManager.sqf).
 * [Giallustio](http://www.giallustio.altervista.org/) за скрипт [возрождения](http://www.armaholic.com/page.php?id=18955) и [наказания](http://www.armaholic.com/page.php?id=19099) игроков.
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) за [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
