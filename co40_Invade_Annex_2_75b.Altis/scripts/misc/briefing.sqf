@@ -91,40 +91,29 @@ player createDiaryRecord ["mods",
 [
 "Моды",
 "
-<br /> Mods currently running on server (subject to change without notice):<br /><br />
+<br /> Разрешенные моды на сервере:<br /><br />
+
+<br />- Community Base addons.
+		http://tehgam.com/viewtopic.php?f=5&t=21 <br /><br />
+
+<br />- JSRS. (Community Base addons нужен обязательно)
+		http://tehgam.com/viewtopic.php?f=5&t=19&p=19#p19 <br /><br />
+
+<br />- VTS Simple weapon resting (Сошки).
+		http://tehgam.com/viewtopic.php?f=5&t=49 <br /><br />		
 
 <br />
 "
 ]];
 
-player createDiaryRecord ["mods",
-[
-"Mods Allowed",
-"
-<br /> Mods currently allowed (subject to change without notice):<br /><br />
 
-<br />- CBA - 1.00 beta5 - Required to run the below mods.
-		http://www.armaholic.com/page.php?id=18768<br /><br />
-		
-<br />- JSRS - 2.0 and 2.1 - Enhanced sounds and audio.
-		http://www.armaholic.com/page.php?id=22150<br /><br />
-		
-<br />- Blastcore - R3 - Enhanced visual effects.
-		http://www.armaholic.com/page.php?id=23899<br /><br />
-		
-<br />- ShackTac Fireteam HUD - v140302 - Situational awareness HUD
-		http://www.armaholic.com/page.php?id=9936<br /><br />
-
-<br />- VTS Weapon resting - v05 - Simulates 'bipod' and weapon resting.
-		http://www.armaholic.com/page.php?id=20817
-"
-]];
 
 //-------------------------------------------------- Teamspeak
 
+
 player createDiaryRecord ["teamspeak",
 [
-"Скачать TS3",
+"TS3",
 "
 <br /> Teamspeak:<br /><br />
 <br /> http://www.teamspeak.com/?page=downloads
@@ -133,11 +122,10 @@ player createDiaryRecord ["teamspeak",
 
 player createDiaryRecord ["teamspeak",
 [
-"All FPS",
+"Наш teamspeak",
 "
-<br /> Address: ts3.allfps.com.au:9992
-<br />
-<br /> Visitors and guests welcome!
+<br /> Адрес: 213.21.12.135
+
 "
 ]];
 
