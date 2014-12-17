@@ -1,6 +1,6 @@
 //------------------------- On Load
 
-author = Rarek & Quiksilver, with aid from Ahoy World & allFPS;
+author = Jack Williams (Rarek) & Quicksilver;
 onLoadName = "Invade & Annex";
 OnLoadMission = "[Редакция TEHGAM.COM, вер.3.4]";
 loadScreen = "media\images\loading.paa";			
