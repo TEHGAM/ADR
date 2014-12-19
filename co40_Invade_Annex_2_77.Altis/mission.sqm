@@ -4531,7 +4531,7 @@ class Mission
 			azimut=225;
 			id=168;
 			side="EMPTY";
-			vehicle="Land_JumpTarget_F";
+			vehicle="Land_HelipadSquare_F";
 			skill=0.60000002;
 			text="rep_ter";
 		};
