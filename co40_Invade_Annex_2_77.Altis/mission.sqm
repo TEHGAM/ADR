@@ -4525,6 +4525,16 @@ class Mission
 			text="WY-55 ""Хеллкет"" [респаун 30 мин]";
 			type="b_air";
 		};
+		class Item122
+		{
+			position[]={14567.062,17.91,16824.371};
+			azimut=225;
+			id=168;
+			side="EMPTY";
+			vehicle="Land_JumpTarget_F";
+			skill=0.60000002;
+			text="rep_ter";
+		};
 	};
 	class Sensors
 	{
