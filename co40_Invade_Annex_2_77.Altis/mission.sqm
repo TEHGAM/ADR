@@ -4535,6 +4535,12 @@ class Mission
 			skill=0.60000002;
 			text="rep_ter";
 		};
+		class Item123
+		{
+			position[]={14242.925,19.950718,16246.317};
+			name="respawn_pilot2";
+			type="Empty";
+		};
 	};
 	class Sensors
 	{
