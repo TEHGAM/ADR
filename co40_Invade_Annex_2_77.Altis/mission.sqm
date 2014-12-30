@@ -2480,7 +2480,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=107;
+		items=112;
 		class Item0
 		{
 			position[]={14596.355,17.814484,16894.135};
@@ -3624,10 +3624,66 @@ class Mission
 			skill=0.60000002;
 			init="this addAction[""<t color='#FFBF00'>Снаряжение и экипировка</t>"", ""scripts\VAS\open.sqf""]; this allowDamage false; this enablesimulation false;  clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; this addaction [""<t color='#97BC3F'>Виртуальный арсенал</t>"", { [""Open"",true] call BIS_fnc_arsenal; }]; this enableRopeAttach false;";
 		};
+		class Item107
+		{
+			position[]={14568.459,17.91,16826.119};
+			azimut=315;
+			special="NONE";
+			id=168;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			leader=1;
+			skill=0.60000002;
+			description="Alpha Squad Leader";
+		};
+		class Item108
+		{
+			position[]={14560.311,17.91,16826.121};
+			azimut=315;
+			id=169;
+			side="EMPTY";
+			vehicle="RoadCone_F";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item109
+		{
+			position[]={14568.441,17.91,16834.234};
+			azimut=315;
+			id=170;
+			side="EMPTY";
+			vehicle="RoadCone_F";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item110
+		{
+			position[]={14576.632,17.91,16826.205};
+			azimut=315;
+			id=171;
+			side="EMPTY";
+			vehicle="RoadCone_F";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item111
+		{
+			position[]={14568.411,17.91,16818.078};
+			azimut=315;
+			id=172;
+			side="EMPTY";
+			vehicle="RoadCone_F";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
 	};
 	class Markers
 	{
-		items=122;
+		items=124;
 		class Item0
 		{
 			position[]={-17281.484,0,-2069.5022};
@@ -4174,7 +4230,7 @@ class Mission
 		{
 			position[]={494.88678,-0.0018025674,32783.863};
 			name="ts";
-			text="TeamSpeak 3 адрес: 213.21.12.135";
+			text="TeamSpeak 3 адрес: ts.tehgam.com";
 			type="mil_box";
 			colorName="ColorRed";
 		};
@@ -4497,19 +4553,12 @@ class Mission
 		};
 		class Item118
 		{
-			position[]={14567.344,17.91,16824.715};
-			name="vehService";
-			text="Ремонт техники";
-			type="b_maint";
-		};
-		class Item119
-		{
 			position[]={15116.457,17.91,17223.021};
 			name="UAV";
 			text="БПА";
 			type="b_uav";
 		};
-		class Item120
+		class Item119
 		{
 			position[]={14861.612,17.91,16780.727};
 			name="ammocargo";
@@ -4518,28 +4567,33 @@ class Mission
 			colorName="ColorWEST";
 			angle=359.22;
 		};
-		class Item121
+		class Item120
 		{
 			position[]={14171.881,20.853296,16162.772};
 			name="wh5_1";
 			text="WY-55 ""Хеллкет"" [респаун 30 мин]";
 			type="b_air";
 		};
+		class Item121
+		{
+			position[]={14731.459,17.91,16734.004};
+			name="smReward3_1";
+			type="Empty";
+			angle=30.700912;
+		};
 		class Item122
 		{
-			position[]={14567.062,17.91,16824.371};
-			azimut=225;
-			id=168;
-			side="EMPTY";
-			vehicle="Land_HelipadSquare_F";
-			skill=0.60000002;
-			text="rep_ter";
+			position[]={14583.439,17.91,16810.248};
+			name="smReward4_1";
+			type="Empty";
+			angle=30.700912;
 		};
 		class Item123
 		{
-			position[]={14242.925,19.950718,16246.317};
-			name="respawn_pilot2";
-			type="Empty";
+			position[]={14568.354,17.91,16826.129};
+			name="heliService2_1";
+			text="Ремонт техники";
+			type="b_maint";
 		};
 	};
 	class Sensors
@@ -4659,23 +4713,6 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={14566.95,17.91,16824.566};
-			a=6;
-			b=6;
-			angle=45;
-			rectangular=1;
-			activationBy="WEST";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="this and ((getPos (thisList select 0)) select 2 < 1)";
-			expActiv="_handle = [(thisList select 0)] execVM ""scripts\misc\rearmVehicle.sqf"";";
-			class Effects
-			{
-			};
-		};
-		class Item8
-		{
 			position[]={14861.62,17.91,16780.525};
 			a=4;
 			b=4;
@@ -4687,6 +4724,23 @@ class Mission
 			age="UNKNOWN";
 			name="amb1";
 			expActiv="nothing = [amb1] execVM ""boxZone.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item8
+		{
+			position[]={14568.427,17.91,16826.082};
+			a=6;
+			b=6;
+			angle=45;
+			rectangular=1;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="this and ((getPos (thisList select 0)) select 2 < 1)";
+			expActiv="_handle = [(thisList select 0)] execVM ""scripts\misc\rearmVehicle.sqf"";";
 			class Effects
 			{
 			};
