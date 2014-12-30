@@ -13,7 +13,8 @@ while {true} do {
 	_ui = uiNameSpace getVariable "HudNames";
 	_HudNames = _ui displayCtrl 99999;
 
-	if (player != vehicle player) then {
+    if(player != vehicle player) then
+    {
         _name = "";
         _vehicle = assignedVehicle player;
         //Air vehicles
@@ -33,14 +34,14 @@ while {true} do {
 				(_vehicle turretUnit [9] == _x)
 				) then {    
 					if((driver _vehicle == _x) || (_vehicle turretUnit [0] == _x)) then {
-						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa'/> %2</t><br/>", _name, profileName];
+						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa'/> %2</t><br/>", _name, (name _x)];
 					}
 					else {
-						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa'/> %2</t><br/>", _name, profileName];
+						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa'/> %2</t><br/>", _name, (name _x)];
 					};
 				}
 				else {
-					_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getincargo_ca.paa'/> %2</t><br/>", _name, profileName];
+					_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getincargo_ca.paa'/> %2</t><br/>", _name, (name _x)];
 					};
 			} forEach crew _vehicle;
 		}
@@ -49,18 +50,18 @@ while {true} do {
 			{
 				if ((driver _vehicle == _x) || (gunner _vehicle == _x)) then {    
 					if(driver _vehicle == _x) then {
-						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getindriver_ca.paa'/> %2</t><br/>", _name, profileName];
+						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getindriver_ca.paa'/> %2</t><br/>", _name, (name _x)];
 					}
 					else {
-						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa'/> %2</t><br/>", _name, profileName];
+						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa'/> %2</t><br/>", _name, (name _x)];
 					};
 				}
 				else {
 					if(commander _vehicle == _x) then {
-						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getincommander_ca.paa'/> %2</t><br/>", _name, profileName];	
+						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getincommander_ca.paa'/> %2</t><br/>", _name, (name _x)];	
 					}
 					else {
-						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getincargo_ca.paa'/> %2</t><br/>", _name, profileName];
+						_name = format ["<t size='0.85' color='#f0e68c'>%1<img size='0.8' color='#FF9D00' image='a3\ui_f\data\IGUI\Cfg\Actions\getincargo_ca.paa'/> %2</t><br/>", _name, (name _x)];
 					};
 				};
 			} forEach crew _vehicle;
