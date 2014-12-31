@@ -4230,7 +4230,7 @@ class Mission
 		{
 			position[]={494.88678,-0.0018025674,32783.863};
 			name="ts";
-			text="TeamSpeak 3 адрес: ts.tehgam.com";
+			text="TeamSpeak 3 адрес: TS.TEHGAM.COM";
 			type="mil_box";
 			colorName="ColorRed";
 		};
