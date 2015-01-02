@@ -9,7 +9,7 @@ smRewards =
 	["Ми-48 «Кайман»", "O_Heli_Attack_02_black_F"],
 	["AH-99 «Блэкфут»", "B_Heli_Attack_01_F"],
 	["ПО-30 «Касатка»", "O_Heli_Light_02_F"],
-	["WY-55 «Хеллккэт»", "I_Heli_light_03_F"],
+	["WY-55 «Хеллкэт»", "I_Heli_light_03_F"],
 	["AH-9 «Пауни»", "B_Heli_Light_01_armed_F"],
 	["FV-720 «Мора»", "I_APC_tracked_03_cannon_F"],
 	["AFV-4 «Горгона»", "I_APC_Wheeled_03_cannon_F"],
