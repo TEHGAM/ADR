@@ -3227,7 +3227,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Quadbike_01_F";
 			skill=0.60000002;
-			init="_m = [this,5,5] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1,1] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item70
 		{
@@ -3238,7 +3238,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Quadbike_01_F";
 			skill=0.60000002;
-			init="_m = [this,5,5] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1,1] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item71
 		{
@@ -3249,7 +3249,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Quadbike_01_F";
 			skill=0.60000002;
-			init="_m = [this,5,5] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1,1] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item72
 		{
@@ -3260,7 +3260,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Quadbike_01_F";
 			skill=0.60000002;
-			init="_m = [this,5,5] execVM ""scripts\vehicle\monitor.sqf"";";
+			init="_m = [this,1,1] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item73
 		{
