@@ -2483,8 +2483,8 @@ class Mission
 		items=112;
 		class Item0
 		{
-			position[]={14596.355,17.814484,16894.135};
-			azimut=270;
+			position[]={14562.167,17.739775,16890.959};
+			azimut=225;
 			id=61;
 			side="EMPTY";
 			vehicle="B_Truck_01_medical_F";
@@ -2554,7 +2554,7 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={14590.893,17.794941,16899.039};
+			position[]={14600.993,17.820887,16889.334};
 			azimut=270;
 			id=67;
 			side="EMPTY";
@@ -2604,7 +2604,7 @@ class Mission
 		};
 		class Item10
 		{
-			position[]={14586.166,17.770582,16904.115};
+			position[]={14590.888,17.79451,16899.197};
 			azimut=270;
 			id=71;
 			side="EMPTY";
@@ -2883,8 +2883,8 @@ class Mission
 		};
 		class Item38
 		{
-			position[]={14601.335,17.821262,16889.053};
-			azimut=270;
+			position[]={14569.879,17.766506,16883.313};
+			azimut=225;
 			id=99;
 			side="EMPTY";
 			vehicle="B_Truck_01_covered_F";
