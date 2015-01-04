@@ -122,7 +122,7 @@ player createDiaryRecord ["teamspeak",
 "Наш TeamSpeak",
 "
 <br />Адрес:<br />
-<br /><font size='16'>ts.tehgam.com</font>
+<br /><font size='16'>TS.TEHGAM.COM</font>
 "
 ]];
 
