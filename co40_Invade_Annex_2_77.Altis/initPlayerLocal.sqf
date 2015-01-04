@@ -33,6 +33,7 @@ _null = [] execVM "scripts\playerMarkers.sqf";                  // Blufor map tr
 _null = [] execVM "scripts\admin_uid.sqf";
 _null = [] execVM "scripts\fpsFix\vehicleManager.sqf";
 _null = [] execVM "scripts\general.sqf";                        // Общие
+_null = [] execVM 'scripts\QS_turretSafety.sqf';                // Меню турелей
 
 //  PVEHs
 
