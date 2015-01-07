@@ -2497,7 +2497,7 @@ class Mission
 						items=9;
 						class Item0
 						{
-							value="300";
+							value="120";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
@@ -2577,7 +2577,7 @@ class Mission
 						items=9;
 						class Item0
 						{
-							value="1800";
+							value="120";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
@@ -2734,7 +2734,7 @@ class Mission
 						items=9;
 						class Item0
 						{
-							value="300";
+							value="120";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
@@ -2813,7 +2813,7 @@ class Mission
 						items=9;
 						class Item0
 						{
-							value="1800";
+							value="120";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
@@ -2892,7 +2892,7 @@ class Mission
 						items=9;
 						class Item0
 						{
-							value="1800";
+							value="120";
 							parentCls="ModuleRespawnVehicle_F";
 							typeName="Delay";
 						};
