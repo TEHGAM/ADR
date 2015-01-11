@@ -1,4 +1,4 @@
-Russian War №2 22
+Russian War №2
 ==============
 ####[Вики](https://github.com/TEHGAM/RW2/wiki) | [Форум](http://www.tehgam.com/viewforum.php?f=36)&nbsp;&nbsp;&nbsp;&nbsp;[![](http://img.shields.io/badge/Версия-3.4.2-blue.svg?style=flat)](https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F) [![](http://img.shields.io/badge/Скачать-1.1_МБ-green.svg?style=flat)](http://www.tehgam.com/viewtopic.php?p=12639&sid=0b59cfe07d8bdfde53a6c1ff56e6c029#p12639) [![](http://img.shields.io/badge/Лицензия-MIT-red.svg?style=flat)](https://github.com/TEHGAM/RW2/blob/master/LICENSE) [![](http://img.shields.io/github/issues-raw/TEHGAM/RW2.svg?label=Задачи&style=flat)](https://github.com/TEHGAM/RW2/issues)
 <a href="https://github.com/TEHGAM/RW2"><img src="https://raw.githubusercontent.com/TEHGAM/Docs/master/images/forum/banner-01.jpg" alt="Russian War №2"></a>
