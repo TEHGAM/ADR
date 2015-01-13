@@ -314,9 +314,9 @@ QS_ehRespawnTurretSafety = player addEventHandler [
 	"Respawn",
 	{
 		QS_inturretloop = FALSE;
-		QS_turretAction = player addAction ["Turret Safety",QS_fnc_turretControl,[],-95,FALSE,FALSE,'','[] call QS_fnc_conditionTurretControl'];
+		QS_turretAction = player addAction ["Меню турелей",QS_fnc_turretControl,[],-95,FALSE,FALSE,'','[] call QS_fnc_conditionTurretControl'];
 	}
 ];
 
 QS_inturretloop = FALSE;
-QS_turretAction = player addAction ["Turret Safety",QS_fnc_turretControl,[],-95,FALSE,FALSE,'','[] call QS_fnc_conditionTurretControl'];
+QS_turretAction = player addAction ["Меню турелей",QS_fnc_turretControl,[],-95,FALSE,FALSE,'','[] call QS_fnc_conditionTurretControl'];
