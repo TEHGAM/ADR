@@ -351,7 +351,7 @@ BTC_first_aid =
 		if (group player == group _injured) then
 		{
 			addToScore = [player, 2]; publicVariable "addToScore";
-			["ScoreBonus", ["Возродил сокомандника", "1"]] call bis_fnc_showNotification;
+			["ScoreBonus", ["Возродил сокомандника", "2"]] call bis_fnc_showNotification;
 		} else {
 			addToScore = [player, 2]; publicVariable "addToScore";
 			["ScoreBonus", ["Возродил соотрядника", "2"]] call bis_fnc_showNotification;
