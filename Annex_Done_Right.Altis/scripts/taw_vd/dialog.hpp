@@ -289,7 +289,7 @@ class TAW_VD
 		class VDonFoot : TAWVD_RscText
 		{
 			idc = -1;
-			text = "On Foot:";
+			text = "Пешком:";
 			
 			x = 0.32; y = 0.258;
 			w = 0.275; h = 0.04;
@@ -298,7 +298,7 @@ class TAW_VD
 		class VDinCar : TAWVD_RscText
 		{
 			idc = -1;
-			text = "In Car:";
+			text = "Техника:";
 			
 			x = 0.32; y = 0.305;
 			w = 0.275; h = 0.04;
@@ -307,7 +307,7 @@ class TAW_VD
 		class VDinAir : TAWVD_RscText
 		{
 			idc = -1;
-			text = "In Air:";
+			text = "Авиация:";
 			
 			x = 0.32; y = 0.355;
 			w = 0.275; h = 0.04;
@@ -315,14 +315,14 @@ class TAW_VD
 
 		class VDObject : VDinAir
 		{
-			text = "Object:";
+			text = "Объекты:";
 			y = 0.655;
 		};
 		
 		class VDTerrSet : TAWVD_RscText
 		{
 			idc = -1;
-			text = "Grass Settings";
+			text = "Параметры травы";
 			shadow = 0;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 
@@ -334,7 +334,7 @@ class TAW_VD
 
 		class VDObjectSet : VDTerrSet
 		{
-			text = "Object Settings";
+			text = "Параметры объекта";
 			y = 0.55;
 		};
 
@@ -345,7 +345,7 @@ class TAW_VD
 		class Title : TAWVD_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "TAW View Distance Script";
+			text = "Дистанция прорисовки";
 			x = 0.3;
 			y = 0.2;
 			w = 0.8;
@@ -357,7 +357,7 @@ class TAW_VD
 			idc = 2901;
 			text = "";
 			onSliderPosChanged = "[0,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "View distance while on foot";
+			tooltip = "Дальность видимости пехотой";
 			x = 0.42;
 			y = 0.30 - (1 / 25);
 			
@@ -379,7 +379,7 @@ class TAW_VD
 			idc = 2911;
 			text = "";
 			onSliderPosChanged = "[1,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "View distance while in a land vehicle";
+			tooltip = "Дальность видимости в технике";
 			x = 0.42;
 			y = 0.35 - (1 / 25);
 			
@@ -401,7 +401,7 @@ class TAW_VD
 			idc = 2921;
 			text = "";
 			onSliderPosChanged = "[2,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "View distance while in a air vehicle";
+			tooltip = "Дальность видимости в воздушной технике";
 			x = 0.42;
 			y = 0.40 - (1 / 25);
 			
@@ -422,7 +422,7 @@ class TAW_VD
 		{
 			idc = 2931;
 			x = 0.32; y = 0.6;
-			tooltip = "Sync object rendering with view rendering";
+			tooltip = "Синхронизация прорисовки объектов с прорисовкой видимости";
 			onCheckedChanged = "if((_this select 1) == 1) then {tawvd_syncObject = true;ctrlEnable [2941,false];} else {tawvd_syncObject = false; ctrlEnable [2941,true];};";
 
 		};
@@ -430,7 +430,7 @@ class TAW_VD
 		class ObjectSyncText : TAWVD_RscText
 		{
 			idc = -1;
-			text = "Sync with view";
+			text = "Синхронизация с прорисовкой";
 			x = 0.345; y = 0.596;
 			w = 0.35; h = 0.04;
 		};
@@ -439,7 +439,7 @@ class TAW_VD
 		{
 			idc = 2941;
 			onSliderPosChanged = "[3,_this select 1] call TAWVD_fnc_onSliderChange;";
-			tooltip = "Object rendering distance";
+			tooltip = "Прорисовка объектов";
 			y = 0.70 - (1 / 25);
 		};
 
@@ -452,7 +452,7 @@ class TAW_VD
 		class VD_terr_none : TAWVD_activeText
 		{
 			idc = -1;
-			text = "None";
+			text = "Нет";
 			action = "['none'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -463,7 +463,7 @@ class TAW_VD
 		class VD_terr_low : TAWVD_activeText
 		{
 			idc = -1;
-			text = "Low";
+			text = "Мало";
 			action = "['low'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -474,7 +474,7 @@ class TAW_VD
 		class VD_terr_normal : TAWVD_activeText
 		{
 			idc = -1;
-			text = "Normal";
+			text = "Средне";
 			action = "['norm'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -485,7 +485,7 @@ class TAW_VD
 		class VD_terr_high : TAWVD_activeText
 		{
 			idc = -1;
-			text = "High";
+			text = "Много";
 			action = "['high'] call TAWVD_fnc_onTerrainChange;";
 			sizeEx = 0.04;
 			
@@ -496,7 +496,7 @@ class TAW_VD
 		class ButtonClose : TAWVD_RscButtonMenu {
 			idc = -1;
 			//shortcuts[] = {0x00050000 + 2};
-			text = "Close";
+			text = "Закрыть";
 			onButtonClick = "closeDialog 0;";
 			x = 0.48;
 			y = 0.77 - (1 / 25);
