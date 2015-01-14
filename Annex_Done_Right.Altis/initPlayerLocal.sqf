@@ -21,7 +21,7 @@ enableEngineArtillery false;
 //cutRsc ["WELCOME", "PLAIN"];
 
 _null = [] execvm "scripts\vehicle\crew\crew.sqf";              // Vehicle HUD
-//_null = [] execVM 'scripts\group_manager.sqf';                  // Group manager
+_null = [] execVM 'scripts\group_manager.sqf';                  // Group manager
 _null = [] execVM "scripts\restrictions.sqf";                   // Gear restrictions
 //_null = [] execVM "scripts\pilotCheck.sqf";                   // Pilots-only
 _null = [] execVM "scripts\safezone.sqf";                       // Spawn protection
