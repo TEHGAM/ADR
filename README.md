@@ -8,11 +8,11 @@
 <h2 align="center">ANNEX ДONE RIGHT</h2>
 <p align="center">
   <a href="https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F">
-    <img src="http://img.shields.io/badge/Версия-3.4.2-blue.svg?style=flat"
+    <img src="http://img.shields.io/badge/Версия-3.4.3-blue.svg?style=flat"
          alt="Версия" />
   </a>
-  <a href="http://www.tehgam.com/viewtopic.php?p=12639&sid=0b59cfe07d8bdfde53a6c1ff56e6c029#p12639">
-    <img src="http://img.shields.io/badge/Скачать-1.1_МБ-brightgreen.svg?style=flat"
+  <a href="http://www.tehgam.com/viewtopic.php?p=13192#p13192">
+    <img src="http://img.shields.io/badge/Скачать-1.12_МБ-brightgreen.svg?style=flat"
          alt="Скачать" />
   </a>
   <a href="https://github.com/TEHGAM/RW2/issues">
