@@ -1,50 +1,45 @@
 /*
-| Author: 
-|
-|	Quiksilver.
-|_____
-|
-| Description: 
-|	
-|	Created: 26/11/2013.
-|	Last modified: 18/11/2014.
-|	Coded for I&A and hosted on allfps.com.au servers.
-|	You may use and edit the code.
-|	You may not remove any entries from Credits without first removing the relevant author's contributions, 
-|	or asking permission from the mission authors/contributors.
-|	You may not remove the Credits tab, without consent of Ahoy World or allFPS.
-| 	Feel free to re-format or make it look better.
-|_____
-|
-| Usage: 
-|	
-|	Search below for the diary entries you would like to edit. 
-|	DiarySubjects appear in descending order when player map is open.
-|	DiaryRecords appear in ascending order when selected.
-|_____
-|
-| Credit:
-|
-|	Invade & Annex 2.00 was developed by Rarek [ahoyworld.co.uk] with hundreds of hours of work 
-|	The current version was developed by Quiksilver with hundreds more hours of work.
-|	
-|	Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
-|	
-|	Please be respectful and do not remove credits.
-|______________________________________________________________*/
+
+  Author:
+  Quiksilver
+
+  Description:
+  Created: 26/11/2013.
+  Last modified: 18/11/2014.
+  Coded for I&A and hosted on allfps.com.au servers.
+  You may use and edit the code.
+  You may not remove any entries from Credits
+  without first removing the relevant author's contributions,
+  or asking permission from the mission authors/contributors.
+  You may not remove the Credits tab, without consent of Ahoy World or allFPS.
+  Feel free to re-format or make it look better.
+
+  Usage:
+  Search below for the diary entries you would like to edit.
+  DiarySubjects appear in descending order when player map is open.
+  DiaryRecords appear in ascending order when selected.
+
+  Credit:
+  Invade & Annex 2.00 was developed by Rarek [ahoyworld.co.uk] with hundreds of hours of work
+  The current version was developed by Quiksilver with hundreds more hours of work.
+
+  Contributors:
+  Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
+
+  Please be respectful and do not remove credits.
+*/
 
 if (!hasInterface) exitWith {};
 
 waitUntil {!isNull player};
 
 player createDiarySubject ["rules", "Правила"];
-player createDiarySubject ["mods", "Моды"];
-player createDiarySubject ["teamspeak", "TeamSpeak"];
+player createDiarySubject ["mods", "Аддоны"];
+player createDiarySubject ["teamspeak", "Тимспик"];
 player createDiarySubject ["changelog", "История"];
 player createDiarySubject ["credits", "Создатели"];
 
-//-------------------------------------------------- Rules
-
+//Правила
 player createDiaryRecord ["rules",
 [
 "Правила",
@@ -88,11 +83,10 @@ player createDiaryRecord ["rules",
 "
 ]];
 
-//-------------------------------------------------- Mods
-
+//Аддоны на сервере
 player createDiaryRecord ["mods",
 [
-"Моды",
+"Аддоны",
 "
 <br /> Разрешенные моды на сервере:<br /><br />
 
@@ -106,11 +100,10 @@ player createDiaryRecord ["mods",
 "
 ]];
 
-//-------------------------------------------------- TeamSpeak
-
+//Тимспик
 player createDiaryRecord ["teamspeak",
 [
-"Скачать TeamSpeak 3",
+"Где скачать",
 "
 <br />Клиент и сервер TS3 можно скачать с его официального сайта по адресу:<br />
 <br />TEAMSPEAK.COM, в разделе Downloads/TeamSpeak 3.
@@ -119,97 +112,211 @@ player createDiaryRecord ["teamspeak",
 
 player createDiaryRecord ["teamspeak",
 [
-"Наш TeamSpeak",
+"Адрес нашего ТС",
 "
 <br />Адрес:<br />
 <br /><font size='16'>TS.TEHGAM.COM</font>
 "
 ]];
 
-//-------------------------------------------------- Change Log
+//Журнал изменений
+player createDiaryRecord ["changelog",
+[
+"Версия 3.4.3 (18 января 2015 г)",
+"
+<br />• Медики теперь получают 2 очка за возрождение товарищей по команде (#288);
+<br />• При защите основной точки, у врага среди вертолетов в наличии теперь только два Каймана;
+<br />• Застава Сагониси теперь является одним из возможных местоположений для дополнительных заданий;
+<br />• Скрипт управленя дальностью отображения и прорисовки (TAW_VD) обновлен до [вер.1.4], скрипт очистки мусора до [вер.1.9] (#290);
+<br />• Наше ответвление Invade & Annex теперь имеет собственное название — Annex Дone Right (#310).
+<br />
+"
+]];
 
 player createDiaryRecord ["changelog",
 [
-"Версия 3.4 (17 ноября 2014 г)",
-"<br />• Зона запрета на использование оружия на базе расширена до авиаангаров (исправил Noart);
-<br />• Количество членов экипажа и пассажиров теперь отображается полностью (это и все нижеуказанные изменения в данном выпуске подготовил PR9INICHEK);
-<br />• Установили запрет на подвешивание вертолетами ящика со снаряжением и экипировкой;
-<br />• Обновили скрипт снаряжения и экипировки (VAS) до [вер.2.6].<br />"
+"Версия 3.4.2",
+"
+<br />• Передвинули грузовики HEMTT таким образом, чтобы они друг друга не взрывали при их появлении (#323);
+<br />• Добавили меню контроля турелей, которое дает пилотам вертолетов возможность блокировать стрельбу из боковых пулемётов (#322);
+<br />• Поправили встроенный адрес Тимспика.
+<br />
+"
 ]];
 
-//-------------------------------------------------- Credits
+player createDiaryRecord ["changelog",
+[
+"Версия 3.4.1",
+"
+<br />• Решен критический баг связанный с дублированием имен пассажиров техники (#303);
+<br />• Расширена зона безопасности на базе, до авиационных ангаров включительно (#2);
+<br />• Добавлена разметка транспортной рем площадки за терминалом базы (#307).
+<br />
+"
+]];
 
+player createDiaryRecord ["changelog",
+[
+"Версия 3.4",
+"
+<br />• Зона запрета на использование оружия на базе расширена до авиаангаров (исправил Noart);
+<br />• Количество членов экипажа и пассажиров теперь отображается полностью (это и все нижеуказанные изменения в данном выпуске подготовил PR9INICHEK);
+<br />• Установили запрет на подвешивание вертолетами ящика со снаряжением и экипировкой;
+<br />• Обновили скрипт снаряжения и экипировки (VAS) до [вер.2.6].<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"Версия 3.3",
+"
+<br />• Добавили три вертолета из нового официального дополнения;
+<br />• Перенесли ящики со снаряжением и экипировкой для игроков в терминал;
+<br />• Добавили библиотеку RotorLib на сервер;
+<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"Версия 3.2.1",
+"
+<br />• Проведена работа над упрощением исходных текстов для достижения более кратких, быстро читаемых и направленных игровых сообщении;
+<br />• Переименовали допзадание «Пусковики» на более понятный вариант «Система ПВО» (предложение от Sky);
+<br />• Исправили ошибку форматирования в сообщений о возрождении на базе (заметил Noart);
+<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"Версия 3.2",
+"
+<br />• Добавлен скрипт индикации целей для техники (за авторством longbow);
+<br />• Отключили баллистический компьютер миномёта;
+<br />• Поменяли боевой вертолёт Хеллкэт на его транспортную модификацию;
+<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"Версия 3.1.1",
+"
+<br />• Добавлен Хеллкэт возле нынешнего местоположения Пауни, на территории авиаангаров.
+<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"Версия 3.1",
+"
+<br />• Переформатировали ряд игровых сообщений ввиду пространственных ограничений интерфейса.
+<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"Версия 3.0.2",
+"
+<br />• Добавили возможность возрождаться обратно на базе по нажатию клавиши Enter, в период ожидания медицинской помощи (недееспособный режим).
+<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"Версия 3.0.1",
+"
+<br />• Добавлен общий инструктаж миссии;
+<br />• Добавлены новые переводы. Работа по локализации продолжается.
+<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"Версия 3.0",
+"
+<br />• Большая часть исходного текста (игровые сообщения, описания и т. д.) переведена с английского на русский язык (трудами KaMeG и Tourorist);
+<br />• По выходу из строя, при получении тяжелого ранения, теперь на экране высвечивается сообщение об оставшемся времени до возрождения обратно на базе, а также о наличии либо отсутствии дружественных медиков в близи вашей позиции;
+<br />• Убрали все дополнительные квадроциклы, ранее установленные в [вер.1.8];
+<br />• Разрешено, ранее повсеместно отключенное в [вер.1.7.1], использование тепловизоров на пусковых установках Титан;
+<br />• Разрешено использование миномётов;
+<br />• Из необязательных модов оставили только CBA, JSRS и VTS.
+<br />
+"
+]];
+
+//Авторы
 player createDiaryRecord ["credits",
 [
 "Invade & Annex",
 "
 <br />Mission authors:<br /><br />
+  • <font size='16'>Quiksilver</font> — All FPS (allfps.com.au)<br /><br />
+  • <font size='16'>Rarek</font> — Ahoy World (ahoyworld.co.uk)<br />
 
-		• <font size='16'>Quiksilver</font> - All FPS (allfps.com.au)<br /><br />
-		• <font size='16'>Rarek</font> - Ahoy World (ahoyworld.co.uk)<br />
-		
 <br />Contributors:<br /><br />
-		• Jester - Ahoy World (ahoyworld.co.uk)<br />
-		• Razgriz33 - Ahoy World (ahoyworld.co.uk)<br />
-		• Kamaradski - Ahoy World (ahoyworld.co.uk)<br />
-		• chucky - All FPS (allfps.com.au)<br /><br />
-		
+  • Jester — Ahoy World (ahoyworld.co.uk)<br />
+  • Razgriz33 — Ahoy World (ahoyworld.co.uk)<br />
+  • Kamaradski — Ahoy World (ahoyworld.co.uk)<br />
+  • chucky — All FPS (allfps.com.au)<br /><br />
+
 <br />Other:<br /><br />
-		VAS<br />
-		• Kronzky<br />
-		• Sa-Matra<br />
-		• Dslyecxi<br /><br />
-		=BTC= Revive<br />
-		• Giallustio<br /><br />
-		EOS<br />
-		• BangaBob<br /><br />
-		Squad Manager<br />
-		• aeroson<br /> <br />
-		TAW View Distance<br />
-		• Tonic<br /> <br />
-		aw_fnc<br />
-		• Alex Wise<br /><br />
-		Vehicle Respawn<br />
-		• Tophe<br /><br />
-		SHK Taskmaster<br />
-		• Shuko<br /><br />
-		Fast rope<br />
-		• Zealot<br /><br />
-		Map markers<br />
-		• aeroson<br /><br />
-		Jump<br />
-		• ProGamer<br /><br />
-		Gear restrictions<br />
-		• wildw1ng<br /><br />
-		Safe zone<br />
-		• Bake<br />
+  VAS<br />
+  • Kronzky<br />
+  • Sa-Matra<br />
+  • Dslyecxi<br /><br />
+  =BTC= Revive<br />
+  • Giallustio<br /><br />
+  EOS<br />
+  • BangaBob<br /><br />
+  Squad Manager<br />
+  • aeroson<br /> <br />
+  TAW View Distance<br />
+  • Tonic<br /> <br />
+  aw_fnc<br />
+  • Alex Wise<br /><br />
+  Vehicle Respawn<br />
+  • Tophe<br /><br />
+  SHK Taskmaster<br />
+  • Shuko<br /><br />
+  Fast rope<br />
+  • Zealot<br /><br />
+  Map markers<br />
+  • aeroson<br /><br />
+  Jump<br />
+  • ProGamer<br /><br />
+  Gear restrictions<br />
+  • wildw1ng<br /><br />
+  Safe zone<br />
+  • Bake<br />
 "
 ]];
 
 player createDiaryRecord ["credits",
 [
-"TEHGAM сообщество",
+"Annex Дone Right",
 "
-<br />Соучредители проекта:<br /><br />
-		• mexan<br />
-		• Cleric<br /><br />
-
-<br />Нынешний руководитель:<br /><br />
-		• <font size='16'>tym32167</font><br /><br />
+<br />Руководитель проекта:<br /><br />
+  • <font size='16'>tym32167</font><br /><br />
 
 <br />Разработчики миссии:<br /><br />
-		• a11archer<br />
-		• longbow<br />
-		• Noart<br />
-		• PR9INICHEK<br />
-		• vosur<br />
-		• ZeRoKoOl<br /><br />
+  • a11archer<br />
+  • longbow<br />
+  • Noart<br />
+  • PR9INICHEK<br />
+  • vosur<br />
+  • ZeRoKoOl<br /><br />
 
 <br />Локализация на русский язык:<br /><br />
-		• Tourorist<br />
-		• KaMeG<br /><br />
+  • KaMeG<br />
+  • Tourorist<br /><br />
 
 <br />Благодарности:<br /><br />
-	Мы благодарим всех игроков, которые уделяют своё время проекту оставляя нам отзывы и комментарии на форуме. Тем самым Вы способствуете в исправлении текущих неполадок и разработке дальнейших улучшений данной миссии. Огромное спасибо!<br />
+  Мы благодарим всех игроков, которые уделяют своё время проекту оставляя нам отзывы и комментарии на форуме. Тем самым Вы способствуете в исправлении текущих неполадок и разработке дальнейших улучшений данной миссии. Огромное спасибо!<br />
 "
 ]];
