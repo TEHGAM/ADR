@@ -13,28 +13,28 @@
 
 class TAWVD_Checkbox
 {
-  access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
-  idc = -1; // Control identification (without it, the control won't be displayed)
-  type = 77; // Type
+  access = 0; //Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
+  idc = -1; //Control identification (without it, the control won't be displayed)
+  type = 77; //Type
   style = ST_LEFT + ST_MULTI; // Style
-  default = 0; // Control selected by default (only one within a display can be used)
-  blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
+  default = 0; //Control selected by default (only one within a display can be used)
+  blinkingPeriod = 0; //Time in which control will fade out and back in. Use 0 to disable the effect.
   x = 0; y = 0;
   w = 1 * GUI_GRID_CENTER_W; h = 1 * GUI_GRID_CENTER_H;
 
   //Colors
-  color[] = { 1, 1, 1, 0.7 }; // Texture color
-  colorFocused[] = { 1, 1, 1, 1 }; // Focused texture color
-  colorHover[] = { 1, 1, 1, 1 }; // Mouse over texture color
-  colorPressed[] = { 1, 1, 1, 1 }; // Mouse pressed texture color
-  colorDisabled[] = { 1, 1, 1, 0.2 }; // Disabled texture color
+  color[] = { 1, 1, 1, 0.7 };         //Texture color
+  colorFocused[] = { 1, 1, 1, 1 };    //Focused texture color
+  colorHover[] = { 1, 1, 1, 1 };      //Mouse over texture color
+  colorPressed[] = { 1, 1, 1, 1 };    //Mouse pressed texture color
+  colorDisabled[] = { 1, 1, 1, 0.2 }; //Disabled texture color
 
   //Background colors
-  colorBackground[] = { 0, 0, 0, 0 }; // Fill color
-  colorBackgroundFocused[] = { 0, 0, 0, 0 }; // Focused fill color
-  colorBackgroundHover[] = { 0, 0, 0, 0 }; // Mouse hover fill color
-  colorBackgroundPressed[] = { 0, 0, 0, 0 }; // Mouse pressed fill color
-  colorBackgroundDisabled[] = { 0, 0, 0, 0 }; // Disabled fill color
+  colorBackground[] = { 0, 0, 0, 0 };         //Fill color
+  colorBackgroundFocused[] = { 0, 0, 0, 0 };  //Focused fill color
+  colorBackgroundHover[] = { 0, 0, 0, 0 };    //Mouse hover fill color
+  colorBackgroundPressed[] = { 0, 0, 0, 0 };  //Mouse pressed fill color
+  colorBackgroundDisabled[] = { 0, 0, 0, 0 }; //Disabled fill color
 
   //Textures
   textureChecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
@@ -51,13 +51,13 @@ class TAWVD_Checkbox
   //Tooltip properties
   tooltip = ""; //Text
   tooltipColorShade[] = { 0, 0, 0, 1 }; //Background color
-  tooltipColorText[] = { 1, 1, 1, 1 }; //Text color
-  tooltipColorBox[] = { 1, 1, 1, 1 }; //Frame color
+  tooltipColorText[] = { 1, 1, 1, 1 };  //Text color
+  tooltipColorBox[] = { 1, 1, 1, 1 };   //Frame color
 
   //Sounds
-  soundClick[] = { "\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1 }; //Control is activated in format {file, volume, pitch}
-  soundEnter[] = { "\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1 }; //Mouse cursor enters the control
-  soundPush[] = { "\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1 }; //Control is pushed down
+  soundClick[] = { "\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1 };   //Control is activated in format {file, volume, pitch}
+  soundEnter[] = { "\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1 };   //Mouse cursor enters the control
+  soundPush[] = { "\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1 };     //Control is pushed down
   soundEscape[] = { "\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1 }; //Control is released after pushing down
 
 };
@@ -397,7 +397,7 @@ class TAW_VD
     class ObjectSyncText : TAWVD_RscText
     {
       idc = -1;
-      text = "Синхронизировать с дальностью видимости";
+      text = "Синхронно с Пешком";
       x = 0.345; y = 0.596;
       w = 0.35; h = 0.04;
     };
