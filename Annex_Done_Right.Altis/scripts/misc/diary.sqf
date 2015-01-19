@@ -1,5 +1,4 @@
 /*
-
   Author:
   Quiksilver
 
@@ -114,8 +113,7 @@ player createDiaryRecord ["teamspeak",
 [
 "Адрес нашего ТС",
 "
-<br />Адрес:<br />
-<br /><font size='16'>TS.TEHGAM.COM</font>
+<br /><font size='32'>TS.TEHGAM.COM</font>
 "
 ]];
 
@@ -255,17 +253,17 @@ player createDiaryRecord ["credits",
 [
 "Invade & Annex",
 "
-<br />Mission authors:<br /><br />
+<br />Mission authors:<br />
   • <font size='16'>Quiksilver</font> — All FPS (allfps.com.au)<br /><br />
   • <font size='16'>Rarek</font> — Ahoy World (ahoyworld.co.uk)<br />
 
-<br />Contributors:<br /><br />
+<br />Contributors:<br />
   • Jester — Ahoy World (ahoyworld.co.uk)<br />
   • Razgriz33 — Ahoy World (ahoyworld.co.uk)<br />
   • Kamaradski — Ahoy World (ahoyworld.co.uk)<br />
   • chucky — All FPS (allfps.com.au)<br /><br />
 
-<br />Other:<br /><br />
+<br />Other:<br />
   VAS<br />
   • Kronzky<br />
   • Sa-Matra<br />
@@ -301,10 +299,10 @@ player createDiaryRecord ["credits",
 [
 "Annex Дone Right",
 "
-<br />Руководитель проекта:<br /><br />
+<br />Руководитель проекта:<br />
   • <font size='16'>tym32167</font><br /><br />
 
-<br />Разработчики миссии:<br /><br />
+<br />Разработчики миссии:<br />
   • a11archer<br />
   • longbow<br />
   • Noart<br />
@@ -312,11 +310,11 @@ player createDiaryRecord ["credits",
   • vosur<br />
   • ZeRoKoOl<br /><br />
 
-<br />Локализация на русский язык:<br /><br />
+<br />Локализация на русский язык:<br />
   • KaMeG<br />
   • Tourorist<br /><br />
 
-<br />Благодарности:<br /><br />
-  Мы благодарим всех игроков, которые уделяют своё время проекту оставляя нам отзывы и комментарии на форуме. Тем самым Вы способствуете в исправлении текущих неполадок и разработке дальнейших улучшений данной миссии. Огромное спасибо!<br />
+<br />Благодарности:<br />
+Мы благодарим всех игроков, которые уделяют своё время проекту оставляя нам отзывы и комментарии на форуме. Тем самым Вы способствуете в исправлении текущих неполадок и разработке дальнейших улучшений данной миссии. Огромное спасибо!<br />
 "
 ]];

@@ -95,8 +95,8 @@ class Mission
 	randomSeed=12935265;
 	class Intel
 	{
-		briefingName="I & A [TEHGAM.COM]";
-		overviewText="Версия 3.4.1";
+		briefingName="Annex Дone Right";
+		overviewText="Версия 3.4.3";
 		resistanceWest=0;
 		startWind=0;
 		forecastWind=0;

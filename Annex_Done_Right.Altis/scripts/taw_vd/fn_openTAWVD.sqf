@@ -9,7 +9,7 @@
   Called via addAction and opens the TAW View Distance Menu
 */
 
-if(!createDialog "TAW_VD") exitWith {hint "Something went wrong, the menu won't open?"};
+if(!createDialog "TAW_VD") exitWith {hint "Что-то не так; меню не открывается?"};
 disableSerialization;
 
 ctrlSetText[2902, format["%1", tawvd_foot]];

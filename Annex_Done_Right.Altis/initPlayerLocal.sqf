@@ -1,6 +1,6 @@
 /*
-
-  Filename: initPlayerLocal.sqf
+  Filename:
+  initPlayerLocal.sqf
 
   Author:
   Quiksilver
@@ -10,14 +10,12 @@
 
   Description:
   Client-side scripts and event handlers.
-
 */
 
 enableSentences false;
 enableEngineArtillery false;
 
-//  Client executions
-
+//Client executions
 //cutRsc ["WELCOME", "PLAIN"];
 
 _null = [] execvm "scripts\vehicle\crew\crew.sqf";              // Vehicle HUD
@@ -35,8 +33,7 @@ _null = [] execVM "scripts\fpsFix\vehicleManager.sqf";
 _null = [] execVM "scripts\general.sqf";                        // Общие
 _null = [] execVM 'scripts\QS_turretSafety.sqf';                // Меню турелей
 
-//  PVEHs
-
+//PVEHs
 "showNotification" addPublicVariableEventHandler
 {
   private ["_type", "_message"];
