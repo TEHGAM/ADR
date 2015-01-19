@@ -85,5 +85,3 @@ _null = [] execVM 'scripts\QS_turretSafety.sqf';                // Меню ту
   "priorityCircle" setMarkerPosLocal (markerPos "priorityCircle");
   "priorityMarker" setMarkerTextLocal format["Вторичная цель: %1",priorityTargetText];
 };
-
-tawvd_disablenone = false;
