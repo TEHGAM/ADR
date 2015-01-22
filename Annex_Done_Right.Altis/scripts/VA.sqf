@@ -257,7 +257,7 @@
 		//--- Разное
 		"U_C_Scientist",
 		"U_C_WorkerCoveralls",
-		"U_C_HunterBody_grn",
+		"U_C_HunterBody_grn"
 ],true] call BIS_fnc_addVirtualItemCargo;
 
 //--- Рюкзаки
