@@ -3771,189 +3771,189 @@ class Mission
 		};
 		class Item8
 		{
-			position[]={14827.386,17.91,16710.418};
+			position[]={15467.071,18.655628,17017.264};
 			name="smReward1";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item9
 		{
-			position[]={14821.115,17.91,16703.51};
+			position[]={15460.801,18.620152,17010.355};
 			name="smReward2";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item10
 		{
-			position[]={14814.203,17.91,16696.424};
+			position[]={15453.889,18.700903,17003.27};
 			name="smReward3";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item11
 		{
-			position[]={14807.154,17.91,16689.414};
+			position[]={15446.84,18.739614,16996.26};
 			name="smReward4";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item12
 		{
-			position[]={14847.95,17.91,16705.83};
+			position[]={15487.636,18.765848,17012.676};
 			name="smReward5";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item13
 		{
-			position[]={14841.416,17.91,16699.086};
+			position[]={15481.102,18.875118,17005.932};
 			name="smReward6";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item14
 		{
-			position[]={14835.137,17.91,16692.15};
+			position[]={15474.822,18.787292,16998.996};
 			name="smReward7";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item15
 		{
-			position[]={14828.213,17.91,16685.074};
+			position[]={15467.898,18.801741,16991.92};
 			name="smReward8";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item16
 		{
-			position[]={14821.191,17.91,16678.078};
+			position[]={15460.877,18.883867,16984.924};
 			name="smReward9";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item17
 		{
-			position[]={14814.462,17.91,16671.609};
+			position[]={15454.147,18.936674,16978.455};
 			name="smReward10";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item18
 		{
-			position[]={14807.048,17.91,16664.129};
+			position[]={15446.002,18.874166,16969.65};
 			name="smReward11";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item19
 		{
-			position[]={14800.776,17.91,16657.223};
+			position[]={15439.73,18.9725,16962.744};
 			name="smReward12";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item20
 		{
-			position[]={14793.864,17.91,16650.131};
+			position[]={15432.818,18.93288,16955.652};
 			name="smReward13";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item21
 		{
-			position[]={14786.68,17.91,16643.225};
+			position[]={15425.634,18.900093,16948.746};
 			name="smReward14";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item22
 		{
-			position[]={14780.109,17.91,16636.666};
+			position[]={15419.063,18.768774,16942.188};
 			name="smReward15";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item23
 		{
-			position[]={14773.554,17.91,16629.898};
+			position[]={15412.508,18.72834,16935.42};
 			name="smReward16";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item24
 		{
-			position[]={14767.289,17.91,16622.986};
+			position[]={15406.243,18.756998,16928.508};
 			name="smReward17";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item25
 		{
-			position[]={14760.369,17.91,16615.906};
+			position[]={15399.323,18.76,16921.428};
 			name="smReward18";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item26
 		{
-			position[]={14753.333,17.91,16608.896};
+			position[]={15392.287,18.780846,16914.418};
 			name="smReward19";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item27
 		{
-			position[]={14746.601,17.91,16602.43};
+			position[]={15385.555,18.775515,16907.951};
 			name="smReward20";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item28
 		{
-			position[]={14739.936,17.91,16595.406};
+			position[]={15378.89,18.73608,16900.928};
 			name="smReward21";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item29
 		{
-			position[]={14733.662,17.91,16588.488};
+			position[]={15372.617,18.634722,16894.01};
 			name="smReward22";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item30
 		{
-			position[]={14726.738,17.91,16581.396};
+			position[]={15365.692,18.583483,16886.918};
 			name="smReward23";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item31
 		{
-			position[]={14747.106,17.91,16628.072};
+			position[]={15386.061,18.88699,16933.594};
 			name="smReward24";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item32
 		{
-			position[]={14740.379,17.91,16621.621};
+			position[]={15379.333,18.88422,16927.143};
 			name="smReward25";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item33
 		{
-			position[]={14733.838,17.91,16614.854};
+			position[]={15372.792,18.85573,16920.375};
 			name="smReward26";
 			type="Empty";
 			angle=30.700912;
 		};
 		class Item34
 		{
-			position[]={14727.566,17.91,16607.932};
+			position[]={15366.521,18.737951,16913.453};
 			name="smReward27";
 			type="Empty";
 			angle=30.700912;
@@ -4473,7 +4473,7 @@ class Mission
 		};
 		class Item107
 		{
-			position[]={14790.009,17.91,16647.232};
+			position[]={15428.963,18.895937,16952.754};
 			name="Side_1";
 			text="Наградная техника";
 			type="b_unknown";
