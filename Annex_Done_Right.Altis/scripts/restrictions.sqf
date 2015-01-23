@@ -113,7 +113,12 @@ _________________________________________________*/
 			"I_AT_01_weapon_F",
 			"O_AT_01_weapon_F",
 			"I_AA_01_weapon_F",
-			"O_AA_01_weapon_F"
+			"O_AA_01_weapon_F",	
+			"B_Respawn_TentDome_F",
+			"B_Respawn_TentA_F",
+			"B_Respawn_Sleeping_bag_F",
+			"B_Respawn_Sleeping_bag_blue_F",
+			"B_Respawn_Sleeping_bag_brown_F"
 		];
 
 		if (backpack player in _backpackRestricted) then
