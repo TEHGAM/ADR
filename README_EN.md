@@ -20,7 +20,7 @@
          alt="Issues" />
   </a>
 </p>
-We welcome, appreciate and would be grateful for any contributions to the ongoing development of this version of [Invade & Annex](https://bitbucket.org/ahoyworld/aw-i-a-2). You can help us by leaving your feedback about the project in [our section](http://www.tehgam.com/viewforum.php?f=36) of TEHGAM forum, by reporting any potential [bugs](https://github.com/TEHGAM/RW2/issues/new?title=[BUG]%20Summarize%20the%20problem%20within%20title%20(provide%20details%20in%20the%20comment%20box%20below).), or by setting [new goals](https://github.com/TEHGAM/RW2/issues/new?title=The%20title%20of%20your%20suggestion%20goes%20here.) for its further improvements.
+We welcome, appreciate and would be grateful for any contributions to the ongoing development of this version of [Invade & Annex](https://bitbucket.org/ahoyworld/aw-i-a-2). You can help us by leaving your feedback about the project in [our section](http://www.tehgam.com/viewforum.php?f=36) of TEHGAM forum, by reporting any potential [bugs](https://github.com/TEHGAM/RW2/issues/new?title=Summarize%20the%20problem%20within%20title%20(provide%20details%20in%20the%20comment%20box%20below).), or by setting [new goals](https://github.com/TEHGAM/RW2/issues/new?title=The%20title%20of%20your%20suggestion%20goes%20here.) for its further improvements.
 
 If you have some experience with editing Arma 3 and are interested in assisting the development of AДR directly, you can join its [development team](https://github.com/TEHGAM/RW2/graphs/contributors) by creating [pull requests](https://github.com/TEHGAM/RW2/pulls?q=is%3Apr+is%3Aclosed) with your changes, for consideration by the [project lead](https://github.com/tym32167).
 
@@ -53,5 +53,4 @@ If you have some experience with editing Arma 3 and are interested in assisting 
     <img src="https://img.shields.io/badge/TEHGAM 2-Forum-lightgrey.svg?style=flat"
          alt="Forum" />
   </a>
-  </p>
-  
+</p>
