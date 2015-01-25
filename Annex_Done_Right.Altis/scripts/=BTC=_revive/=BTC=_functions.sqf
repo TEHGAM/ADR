@@ -1,4 +1,4 @@
-/*
+﻿/*
 Created by =BTC= Giallustio
 
 Visit us at: 
@@ -113,6 +113,7 @@ BTC_set_gear =
 		_fire_mode,15
 		_ammo
 	];*/
+/* Конфликтует с VAS Virtualbox и Арсеналом (загрузка по умолчанию)
 	_unit = _this select 0;
 	_gear = _this select 1;
 	_id = 0;
@@ -177,6 +178,7 @@ BTC_set_gear =
 	if (count (_gear select 10) > 0) then {{if (_x != "") then {_unit addHandgunItem _x;};} foreach (_gear select 10);};
 	_unit selectweapon (_gear select 14);
 	if ((_gear select 15) != -1) then {player action ["SWITCHWEAPON", player, player, (_gear select 15)];};
+*/
 };
 /*
 BTC_r_debug =
