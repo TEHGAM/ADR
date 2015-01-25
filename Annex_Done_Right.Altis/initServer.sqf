@@ -26,6 +26,8 @@
 
 enableSaving [false, false];
 
+adminCurators = [];
+
 //  Handle parameters
 
 for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
