@@ -15,6 +15,10 @@
 			{
 				[_x, 3, [0,2,-10]] execVM "scripts\transport\fn_SetupTransport.sqf";			
 			};
+			case "O_Heli_Transport_04_F":
+			{
+				[_x, 3, [0,2,-10]] execVM "scripts\transport\fn_SetupTransport.sqf";			
+			};
 		};
 	}
 	else 
