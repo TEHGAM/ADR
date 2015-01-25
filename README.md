@@ -21,9 +21,9 @@
   </a>
 </p>
 
-Мы приветствуем, будем рады и благодарны за любой вклад в развитие нашей версии [Invade & Annex](https://bitbucket.org/ahoyworld/aw-i-a-2). Вы можете помочь в этом оставляя свои отзывы на [форуме TEHGAM 2](http://www.tehgam.com/viewforum.php?f=36), а также определяя и ставя [новые задачи](https://github.com/TEHGAM/RW2/issues) для будущих исправлений и улучшений миссии.
+Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии [Invade & Annex](https://bitbucket.org/ahoyworld/aw-i-a-2). Вы можете помочь нам в этом оставляя свои отзывы в [частном разделе](http://www.tehgam.com/viewforum.php?f=36) проекта на форуме TEHGAM, а также [определяя задачи](https://github.com/TEHGAM/RW2/issues) по его дальнейшему улучшению.
 
-При наличии навыков редактирования Arma 3 и желании содействовать дальнейшей разработке миссии напрямую, вы можете присоединиться к [нашим разработчикам](https://github.com/TEHGAM/RW2/graphs/contributors), свободно оставляя [запросы на включение](https://github.com/TEHGAM/RW2/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/tym32167).
+При наличии навыков редактирования Arma 3 и желании содействовать в разработке AДR напрямую, Вы можете присоединиться к [её разработчикам](https://github.com/TEHGAM/RW2/graphs/contributors) делая [запросы на включение](https://github.com/TEHGAM/RW2/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/tym32167).
 
 ####Огромное Спасибо
 * Джек Уильямс ([Rarek](https://bitbucket.org/Rarek)) и [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), а также сообщества [Ahoy World](http://www.ahoyworld.co.uk/) и [allFPS](http://allfps.com.au/) — за труд над исходной миссией.

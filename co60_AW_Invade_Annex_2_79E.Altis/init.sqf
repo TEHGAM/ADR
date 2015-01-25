@@ -16,3 +16,5 @@ ______________________________________________________*/
 
 
 call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf";		// revive
+[["scripts\transport\init.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP; //Транспортировка подвесом.
+[["scripts\player\init.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP;

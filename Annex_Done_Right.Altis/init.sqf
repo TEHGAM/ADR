@@ -1,4 +1,4 @@
-/*
+﻿/*
   filename:
   init.sqf
 
@@ -18,3 +18,5 @@ call compile preprocessFile "scripts\=BTC=_TK_punishment\=BTC=_tk_init.sqf";
 
 [] execVM "scripts\DOM_squad\init.sqf";
 if (isDedicated) exitWith { "addToScore" addPublicVariableEventHandler { ((_this select 1) select 0) addScore ((_this select 1) select 1); }; }; // Относится к скрипту =BTC=_revive
+[["scripts\transport\init.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP; //Транспортировка подвесом.
+[["scripts\player\init.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP;

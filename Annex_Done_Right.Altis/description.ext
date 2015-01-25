@@ -1,7 +1,7 @@
 //On Load
 author = Jack Williams (Rarek) & Quicksilver;
 onLoadName = "Annex Дone Right";
-OnLoadMission = "[Редакция от сообщества TEHGAM, вер.3.4.3]";
+OnLoadMission = "Версия 3.4.3 — редакция TEHGAM сообщества.";
 loadScreen = "media\images\loading.paa";
 overviewPicture = "media\images\loading.paa";
 onLoadIntro = "";           //Displays a message while the intro is loading.
