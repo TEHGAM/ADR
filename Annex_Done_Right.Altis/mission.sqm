@@ -4251,6 +4251,24 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false;";
 		};
+		class Item112
+		{
+			position[]={15315.761,4.1459861,15874.207};
+			azimut=181.16084;
+			id=181;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+		};
+		class Item113
+		{
+			position[]={15323.397,4.0971632,15874.048};
+			azimut=181.16084;
+			id=182;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
