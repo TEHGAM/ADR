@@ -96,7 +96,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Annex Дone Right";
-		overviewText="Версия 3.4.3";
+		overviewText="v3.4.4";
 		resistanceWest=0;
 		startWind=0;
 		forecastWind=0;
