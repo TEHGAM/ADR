@@ -8,11 +8,11 @@
 <h2 align="center">ANNEX ДONE RIGHT</h2>
 <p align="center">
   <a href="https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F">
-    <img src="http://img.shields.io/badge/Версия-3.4.3-blue.svg?style=flat"
+    <img src="http://img.shields.io/badge/Версия-3.4.4-blue.svg?style=flat"
          alt="Версия" />
   </a>
-  <a href="http://www.tehgam.com/viewtopic.php?p=13192#p13192">
-    <img src="http://img.shields.io/badge/Скачать-1.12_МБ-brightgreen.svg?style=flat"
+  <a href="http://www.tehgam.com/viewtopic.php?p=13735#p13735">
+    <img src="http://img.shields.io/badge/Скачать-1.13_МБ-brightgreen.svg?style=flat"
          alt="Скачать" />
   </a>
   <a href="https://github.com/TEHGAM/RW2/issues">
@@ -34,6 +34,7 @@
 * [Tonic](https://github.com/TAWTonic) за систему снаряжения и экипировки ([VAS](https://github.com/TAWTonic/VAS)) и управления [дальностью отображения](http://www.armaholic.com/page.php?id=19751).
 * [aeroson](https://github.com/aeroson) за скрипт сбора мусора ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) и скрипт [маркировки игроков](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf).
 * [Tophe](http://meadows.se/) за скрипт [востановления техники](http://www.armaholic.com/page.php?id=6080).
+* [Bob_Gneu](http://gneu.org/) за скрипт [крепления стропами](http://www.armaholic.com/page.php?id=20530).
 * Отдельное спасибо всем регулярным игрокам и администраторам [официального сервера](https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%A1%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0), которые уделяют свое время проекту:
   * внося нам свои предложения по дальнейшей разработке миссии,
   * указывая на её существующие проблемы,
