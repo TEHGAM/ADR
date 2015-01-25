@@ -8,11 +8,11 @@
 <h2 align="center">ANNEX ДONE RIGHT</h2>
 <p align="center">
   <a href="https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F">
-    <img src="http://img.shields.io/badge/Version-3.4.3-blue.svg?style=flat"
+    <img src="http://img.shields.io/badge/Version-3.4.4-blue.svg?style=flat"
          alt="Version" />
   </a>
-  <a href="http://www.tehgam.com/viewtopic.php?p=13192#p13192">
-    <img src="http://img.shields.io/badge/Download-1.12_МB-brightgreen.svg?style=flat"
+  <a href="http://www.tehgam.com/viewtopic.php?p=13735#p13735">
+    <img src="http://img.shields.io/badge/Download-1.13_МB-brightgreen.svg?style=flat"
          alt="Download" />
   </a>
   <a href="https://github.com/TEHGAM/RW2/issues">
@@ -20,6 +20,7 @@
          alt="Issues" />
   </a>
 </p>
+
 We welcome, appreciate and would be grateful for any contributions to the ongoing development of this version of [Invade & Annex](https://bitbucket.org/ahoyworld/aw-i-a-2). You can help us by leaving your feedback about the project in [our section](http://www.tehgam.com/viewforum.php?f=36) of TEHGAM forum, by reporting any potential [bugs](https://github.com/TEHGAM/RW2/issues/new?title=Summarize%20the%20problem%20within%20title%20(provide%20details%20in%20the%20comment%20box%20below).), or by setting [new goals](https://github.com/TEHGAM/RW2/issues/new?title=The%20title%20of%20your%20suggestion%20goes%20here.) for its further improvements.
 
 If you have some experience with editing Arma 3 and are interested in assisting the development of AДR directly, you can join its [development team](https://github.com/TEHGAM/RW2/graphs/contributors) by creating [pull requests](https://github.com/TEHGAM/RW2/pulls?q=is%3Apr+is%3Aclosed) with your changes, for consideration by the [project lead](https://github.com/tym32167).
@@ -33,6 +34,7 @@ If you have some experience with editing Arma 3 and are interested in assisting 
 * [Tonic](https://github.com/TAWTonic) for Virtual Ammobox System ([VAS](https://github.com/TAWTonic/VAS)) and the [view distance](http://www.armaholic.com/page.php?id=19751) script.
 * [aeroson](https://github.com/aeroson) for the garbage collection ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) and the [player marking](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf) scripts.
 * [Tophe](http://meadows.se/) for the [vehicle respawn](http://www.armaholic.com/page.php?id=6080) script.
+* [Bob_Gneu](http://gneu.org/) for the [sling loading](http://www.armaholic.com/page.php?id=20530) script.
 * And last but not least, a big thank you to all regular players and administrators of the [official server](https://github.com/TEHGAM/RW2/wiki/RW2:-Summary) for:
   * supporting the project with new suggestions,
   * taking out their time to report any bugs,
