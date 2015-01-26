@@ -39,7 +39,7 @@ _airEgg4 = getMarkerPos "airfield4";
 	};
 	_easterEgg = _x createVehicle _flatPos;
 	_easterEgg setDir (random 360);
-} forEach ["B_Heli_Light_01_armed_F","B_Heli_Attack_01_F","O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","O_Heli_Light_02_F","O_Heli_Light_02_unarmed_F","I_Heli_light_03_F","I_Heli_light_03_unarmed_F","I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","B_APC_Tracked_01_AA_F","B_MBT_01_cannon_F","I_MBT_03_cannon_F","I_MBT_03_cannon_F"];
+} forEach ["B_Heli_Attack_01_F","O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","O_Heli_Light_02_F","O_Heli_Light_02_unarmed_F","I_Heli_light_03_F","I_Heli_light_03_unarmed_F","I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","B_APC_Tracked_01_AA_F","B_MBT_01_cannon_F","I_MBT_03_cannon_F","I_MBT_03_cannon_F"];
 
 sleep 1;
 
