@@ -1,4 +1,4 @@
-<p align="center"> 
+<p align="center">
   <a href="https://github.com/TEHGAM/RW2">
     <img src="https://raw.githubusercontent.com/Tourorist/TPS/master/rw2/adr-logo-03.png"
          width="320"
