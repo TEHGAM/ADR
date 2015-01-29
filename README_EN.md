@@ -12,7 +12,7 @@
          alt="Version" />
   </a>
   <a href="http://www.tehgam.com/viewtopic.php?p=13735#p13735">
-    <img src="http://img.shields.io/badge/Download-1.13_МB-brightgreen.svg?style=flat"
+    <img src="http://img.shields.io/badge/Download-1.13_МB-green.svg?style=flat"
          alt="Download" />
   </a>
   <a href="https://github.com/TEHGAM/RW2/issues">
@@ -52,7 +52,7 @@ If you have some experience with editing Arma 3 and are interested in assisting 
          alt="License" />
   </a>
     <a href="http://www.tehgam.com/viewforum.php?f=36">
-    <img src="https://img.shields.io/badge/TEHGAM 2-Forum-lightgrey.svg?style=flat"
+    <img src="https://img.shields.io/badge/TEHGAM-Forum-lightgrey.svg?style=flat"
          alt="Forum" />
   </a>
 </p>
