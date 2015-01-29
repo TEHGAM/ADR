@@ -12,7 +12,7 @@
          alt="Версия" />
   </a>
   <a href="http://www.tehgam.com/viewtopic.php?p=13735#p13735">
-    <img src="http://img.shields.io/badge/Скачать-1.13_МБ-brightgreen.svg?style=flat"
+    <img src="http://img.shields.io/badge/Скачать-1.13_МБ-green.svg?style=flat"
          alt="Скачать" />
   </a>
   <a href="https://github.com/TEHGAM/RW2/issues">
@@ -52,7 +52,7 @@
          alt="Лицензия" />
   </a>
     <a href="http://www.tehgam.com/viewforum.php?f=36">
-    <img src="https://img.shields.io/badge/TEHGAM 2-Форум-lightgrey.svg?style=flat"
+    <img src="https://img.shields.io/badge/TEHGAM-Форум-lightgrey.svg?style=flat"
          alt="Форум" />
   </a>
   </p>
