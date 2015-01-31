@@ -31,7 +31,7 @@ If you have some experience with editing Arma 3 and are interested in assisting 
 * [Giallustio](http://www.giallustio.altervista.org/) for the player [revive](http://www.armaholic.com/page.php?id=18955) and [punishment](http://www.armaholic.com/page.php?id=19099) scripts.
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) for [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
 * [Xeno](http://dev.withsix.com/users/22) for the squad management menu ([DOM_squad](https://github.com/TEHGAM/RW2/blob/master/Annex_Done_Right.Altis/scripts/DOM_squad)).
-* [Tonic](https://github.com/TAWTonic) for Virtual Ammobox System ([VAS](https://github.com/TAWTonic/VAS)) and the [view distance](http://www.armaholic.com/page.php?id=19751) script.
+* [Tonic](http://forums.bistudio.com/member.php?75622-Tonic-_-) for Virtual Ammobox System ([VAS](http://www.armaholic.com/page.php?id=19134) and the [view distance](http://www.armaholic.com/page.php?id=19751) script.
 * [aeroson](https://github.com/aeroson) for the garbage collection ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) and the [player marking](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf) scripts.
 * [Tophe](http://meadows.se/) for the [vehicle respawn](http://www.armaholic.com/page.php?id=6080) script.
 * [Bob_Gneu](http://gneu.org/) for the [sling loading](http://www.armaholic.com/page.php?id=20530) script.
