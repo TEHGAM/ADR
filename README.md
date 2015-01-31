@@ -31,7 +31,7 @@
 * [Giallustio](http://www.giallustio.altervista.org/) за скрипт [возрождения](http://www.armaholic.com/page.php?id=18955) и [наказания](http://www.armaholic.com/page.php?id=19099) игроков.
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) за [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
 * [Xeno](http://dev.withsix.com/users/22) за меню управления отрядами ([DOM_squad](https://github.com/TEHGAM/RW2/blob/master/Annex_Done_Right.Altis/scripts/DOM_squad)).
-* [Tonic](https://github.com/TAWTonic) за систему снаряжения и экипировки ([VAS](https://github.com/TAWTonic/VAS)) и управления [дальностью отображения](http://www.armaholic.com/page.php?id=19751).
+* [Tonic](http://forums.bistudio.com/member.php?75622-Tonic-_-) за систему снаряжения и экипировки ([VAS](http://www.armaholic.com/page.php?id=19134)) и управления [дальностью отображения](http://www.armaholic.com/page.php?id=19751).
 * [aeroson](https://github.com/aeroson) за скрипт сбора мусора ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) и скрипт [маркировки игроков](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf).
 * [Tophe](http://meadows.se/) за скрипт [востановления техники](http://www.armaholic.com/page.php?id=6080).
 * [Bob_Gneu](http://gneu.org/) за скрипт [крепления стропами](http://www.armaholic.com/page.php?id=20530).
