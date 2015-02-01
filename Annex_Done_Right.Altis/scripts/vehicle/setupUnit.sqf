@@ -14,6 +14,7 @@ if ((_unit isKindOf "B_Heli_Transport_01_camo_F") || (_unit isKindOf "B_Heli_Tra
 	[_unit] execVM "scripts\vehicle\ghosthawk\heliDoor.sqf";
 	_unit addAction ["<t color='#00B2EE'>Cбросить оперативный боезапас</t>", "scripts\vehicle\drop\drop.sqf",[1],0,false,true,""," driver  _target == _this"];
 	_unit addAction ["<t color='#00B2EE'>Выгрузить снаряжение</t>","scripts\vehicle\clear\clear.sqf",[],-97,false];
-};
-
-
+} Else
+  {  
+  _unit addAction ["<t color='#3f3fff'>Освободить грузовой отсек</t>","scripts\vehicle\clear\clear.sqf",[],-97,false]; 
+  };
