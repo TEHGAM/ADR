@@ -129,7 +129,7 @@ while {_run} do
 		if (["B_UGV_01_rcws_F", _type] call BIS_fnc_inString) then { createVehicleCrew _unit; };
 		
 		[[[_unit],"scripts\vehicle\setupUnit.sqf"],"BIS_fnc_execVM",nil,true] spawn BIS_fnc_MP;		
-		_classify = [_unit] execVM "scripts\transport\classify.sqf" // only for Transport script
+		_classify = [_unit] execVM "scripts\transport\classify.sqf"; // only for Transport script
                 _dead = false;
 
 		// Check respawn amount
