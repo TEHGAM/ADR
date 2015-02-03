@@ -191,7 +191,7 @@ private ["_dir","_PTdir","_pos","_barrier","_unitsArray","_flatPos","_accepted",
   _fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
   { _x setMarkerPos _fuzzyPos; } forEach ["priorityMarker", "priorityCircle"];
   "priorityMarker" setMarkerText "Батарея"; publicVariable "priorityMarker";
-  _briefing = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#d63333'>ВРАЖЕСКАЯ БАТАРЕЯ</t><br/>____________________<br/>Обнаружена точка укрепления зенитных орудий противника. Её близлежащее расположение грозит как группам десантирования, так и всей нашей авиации в целом.";
+  _briefing = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#d63333'>Вражеская батарея</t><br/>____________________<br/>Обнаружена точка укрепления зенитных орудий противника. Её близлежащее расположение грозит как группам десантирования, так и всей нашей авиации в целом.";
   GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
   showNotification = ["NewPriorityTarget", "Обнаружена батарея врага"]; publicVariable "showNotification";
 
@@ -220,7 +220,7 @@ waitUntil {
 };
 
 //9.DE-BRIEF
-  _completeText = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#08b000'>БАТАРЕЯ ПОДАВЛЕНА</t><br/>____________________<br/>Противник лишился основных средств ПВО.<br/><br/>Возвращайтесь к выполнению основной задачи.";
+  _completeText = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#08b000'>Батарея подавлена</t><br/>____________________<br/>Противник лишился основных средств ПВО.<br/><br/>Возвращайтесь к выполнению основной задачи.";
   GlobalHint = _completeText; hint parseText _completeText; publicVariable "GlobalHint";
   showNotification = ["CompletedPriorityTarget", "Зенитная батарея нейтрализована"]; publicVariable "showNotification";
   { _x setMarkerPos [-10000,-10000,-10000]; } forEach ["priorityMarker","priorityCircle"]; publicVariable "priorityMarker";
