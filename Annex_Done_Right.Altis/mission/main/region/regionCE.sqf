@@ -34,7 +34,7 @@ currentAO = _targetArray call BIS_fnc_selectRandom;
 
 //Edit and place markers for new target
   {_x setMarkerPos (getMarkerPos currentAO);} forEach ["aoCircle","aoMarker"];
-  "aoMarker" setMarkerText format["Захватить %1",currentAO];
+  "aoMarker" setMarkerText format["Точка: %1",currentAO];
   sleep 1;
 
 //Create AO detection trigger
@@ -77,7 +77,7 @@ currentAO = _targetArray call BIS_fnc_selectRandom;
   {
     _unitsArray = [_flatPos] call QS_fnc_AOminefield;
 
-    "radioMarker" setMarkerText "Вышка (МИНЫ!)";
+    "radioMarker" setMarkerText "Вышка (мины)";
   } else
   {
     "radioMarker" setMarkerText "Вышка";
