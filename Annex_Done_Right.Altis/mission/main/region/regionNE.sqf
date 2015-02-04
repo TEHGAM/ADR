@@ -98,7 +98,7 @@ while { count _targetArray > 0 } do {
 //Show global target start hint
   GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
   showNotification = ["NewMain", currentAO]; publicVariable "showNotification";
-  showNotification = ["NewSub", "Обнаружена вражеская радиовышка"]; publicVariable "showNotification";
+  showNotification = ["NewSub", "Обнаружена радиовышка противника"]; publicVariable "showNotification";
 
 //CORE LOOP
   currentAOUp = true; publicVariable "currentAOUp";
