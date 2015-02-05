@@ -97,7 +97,7 @@ private ["_flatPos","_accepted","_position","_randomDir","_x","_briefing","_enem
 
   _c4Message = ["Заряд установлен! 5 секунд до взрыва.","C-4 активирован! 5 секунд до детонации.","Взрывчатка на месте! 5 секунд до взрыва."] call BIS_fnc_selectRandom;
 
-  _briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Тайник</t><br/>____________________<br/>Противник тайно переправляет и складирует значительное количество взрывчатых веществ близи своего прибрежного лагеря.<br/><br/>Ваша задача — выдвинутся на указанную точку и обезвредить текущую партию взрывчатки.</t>";
+  _briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Тайник</t><br/>____________________<br/>Противник тайно переправляет и складирует значительное количество взрывчатых веществ близи своего прибрежного лагеря.<br/><br/>Ваша задача — выдвинутся в указанный район, найти и обезвредить текущую партию взрывчатки.</t>";
   GlobalHint = _briefing; publicVariable "GlobalHint"; hint parseText GlobalHint;
   showNotification = ["NewSideMission", "Тайник"]; publicVariable "showNotification";
   sideMarkerText = "Тайник"; publicVariable "sideMarkerText";
@@ -117,13 +117,13 @@ while { sideMissionUp } do
 
 //DE-BRIEFING
     sideMissionUp = false; publicVariable "sideMissionUp";
-    hqSideChat = "Цель уничтожена преждевременно! Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+    hqSideChat = "Цель уничтожена преждевременно. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
     [] spawn QS_fnc_SMhintFAIL;
     { _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"];
     publicVariable "sideMarker";
 
 //DELETE
-    _object setPos [-10000,-10000,0];			// hide objective
+    _object setPos [-10000,-10000,0];             //Hide objective
     sleep 120;
     { deleteVehicle _x } forEach [sideObj,boat,trawler,assaultBoat];
     deleteVehicle nearestObject [getPos sideObj,"Land_Cargo_HQ_V1_ruins_F"];
