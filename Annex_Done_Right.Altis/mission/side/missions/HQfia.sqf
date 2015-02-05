@@ -65,7 +65,7 @@ _c4Message = ["Оперативный боезапас захвачен. C-4 а�
   _fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
   { _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-  "sideMarker" setMarkerText "Допзадание: Лагерь"; publicVariable "sideMarker";
+  "sideMarker" setMarkerText "Допка: Лагерь"; publicVariable "sideMarker";
   publicVariable "sideObj";
 
   _briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Лагерь</t><br/>____________________<br/>Противник проводит подготовку боевиков на территории острова.<br/><br/>Ваша задача — выдвинутся в указанный район, найти и уничтожить врага и захватить их боезапас.</t>";
@@ -85,7 +85,7 @@ while { sideMissionUp } do {
 
 //DE-BRIEFING
     sideMissionUp = false; publicVariable "sideMissionUp";
-    hqSideChat = "Цель уничтожена преждевременно! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+    hqSideChat = "Цель уничтожена преждевременно. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
     [] spawn QS_fnc_SMhintFAIL;
     { _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 
