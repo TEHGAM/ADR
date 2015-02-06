@@ -93,6 +93,8 @@ BTC_get_gear =
 };
 BTC_set_gear =
 {
+player addEventHandler ["Возрождение", { _this execVM "scripts\player\transportCheck.sqf"; } ]; //переинициализация возможностей использования Лифт при возрождении
+player execVM "scripts\player\transportCheck.sqf";
 	/*_gear =
 	[
 		_uniform,0
