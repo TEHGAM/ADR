@@ -3,8 +3,16 @@ private ["_vehicle", "_player", "_target", "_targetClassification", "_classifica
 _player = player;
 _player setVariable ["CurrentTarget", objNull];
 
-while {(alive player)} do
+while {(true)} do
 {
+if (! (Alive player)) then
+	{
+	sleep 20;
+	_player = player; //if player model changed
+	waitUntil {Alive player};
+	};
+
+	sleep 0.15;
 	_vehicle = vehicle player;
 
 	if (isNull(_vehicle getVariable "AttachedVehicle")) then
