@@ -13,10 +13,10 @@ g_transport_transports = ["air"];
 allUnits + vehicles execVM "scripts\transport\classify.sqf";
 SystemChat "=Transport Ropes= initialized.";
 
-/*
+
 while {true} do 
 {
 	sleep 300;
 	allUnits + vehicles execVM "scripts\transport\classify.sqf";
 };
-НЕА ТАК НЕЛЬЗЯ действия дублируются надо вычитать массив уже использовавшейся техники*/
+
