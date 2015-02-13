@@ -16,4 +16,4 @@ if (vehicle _bobcat1 isKindof "B_APC_Tracked_01_CRV_F") then
   _bobcat1 vehiclechat "Загружен на 100%. Готово.";
   _bobcat1 setFuel 1;
   cratercleaner = [7, _bobcat1] execVM "groundWorks.sqf";
-} ELSE {_bobcat1 vehiclechat "В данной машине отсутствует кран для работы с грузом. Используйте Бобкэт!"};
+} else {_bobcat1 vehiclechat "В данной машине отсутствует кран для работы с грузом. Используйте Бобкэт!"};
