@@ -1,22 +1,18 @@
 /*
-@filename: smSwitch.sqf
-Author:
+ Author:
+ Quiksilver
 
-	Quiksilver
-	
-Description:
+ Description:
+ Actioning the character triggers mission cycle.
+*/
 
-	Actioning the character triggers mission cycle.
-	
-_______________________________________________________*/
-	
-if (SM_SWITCH) exitWith {
-	hint "Вторичные цели отсутствуют, ждите дальнейших указаний."
+if (SM_SWITCH) exitWith
+{
+  hint "Дополнительные задания определяются. Ждите дальнейших указаний."
 };
 
-//-------------------- Send hint to player that he's planted the bomb
-
-hint "Дополнительное задание установлено, ждите подробных инструкций.";
+//Send hint to player that he's planted the bomb
+hint "Дополнительное задание выявлено, ждите подробных инструкций.";
 
 sleep 1;
 

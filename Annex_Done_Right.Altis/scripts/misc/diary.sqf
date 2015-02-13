@@ -518,19 +518,19 @@ player createDiaryRecord ["credits",
 </font>
 <br />
 <font size='14'>
-    • Rarek — Ahoy World (ahoyworld.co.uk)
+    • Rarek – Ahoy World (ahoyworld.co.uk)
 </font>
 <br /><br />
 <font size='18' color='#3E9D3F'>Contributors</font>
 <br />
 <font size='14'>
-    • Jester — Ahoy World (ahoyworld.co.uk)
+    • Jester – Ahoy World (ahoyworld.co.uk)
 <br />
-    • Razgriz33 — Ahoy World
+    • Razgriz33 – Ahoy World
 <br />
-    • Kamaradski — Ahoy World
+    • Kamaradski – Ahoy World
 <br />
-    • chucky</font> — All FPS
+    • chucky</font> – All FPS
 </font>
 <br /><br />
 <font size='18' color='#3E9D3F'>Addons</font>

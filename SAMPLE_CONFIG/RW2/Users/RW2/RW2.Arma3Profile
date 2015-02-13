@@ -1,0 +1,158 @@
+version=2;
+activeKeys[]=
+{
+	"BIS_ch40_warfront_aggelochori.altis_done",
+	"BIS_cox_patrol-ops-3-01-nato.Altis_done"
+};
+class Difficulties
+{
+	class Recruit
+	{
+		class Flags
+		{
+			Armor=1;
+			MineTag=0;
+			FriendlyTag=1;
+			UnlimitedSaves=1;
+			ExtendetInfoType=0;
+			HUDGroupInfo=1;
+			EnemyTag=1;
+			HUD=1;
+			HUDPerm=1;
+			HUDWp=1;
+			HUDWpPerm=1;
+			WeaponCursor=0;
+			AutoAim=0;
+			AutoGuideAT=0;
+			3rdPersonView=1;
+			ClockIndicator=1;
+			CameraShake=1;
+			Map=0;
+			Tracers=1;
+			AutoSpot=0;
+			UltraAI=1;
+			DeathMessages=1;
+			NetStats=1;
+			VonID=1;
+		};
+		skillFriendly=0.94999999;
+		skillEnemy=0.94999999;
+		precisionFriendly=0.94999999;
+		precisionEnemy=0.94999999;
+	};
+	class Regular
+	{
+		class Flags
+		{
+			Armor=1;
+			MineTag=0;
+			FriendlyTag=1;
+			UnlimitedSaves=1;
+			ExtendetInfoType=0;
+			HUDGroupInfo=1;
+			EnemyTag=1;
+			HUD=1;
+			HUDPerm=1;
+			HUDWp=1;
+			HUDWpPerm=1;
+			WeaponCursor=1;
+			AutoAim=0;
+			AutoGuideAT=0;
+			3rdPersonView=1;
+			ClockIndicator=1;
+			CameraShake=1;
+			Map=0;
+			Tracers=1;
+			AutoSpot=0;
+			UltraAI=1;
+			DeathMessages=1;
+			NetStats=1;
+			VonID=1;
+		};
+		skillFriendly=0.94999999;
+		skillEnemy=0.94999999;
+		precisionFriendly=0.94999999;
+		precisionEnemy=0.94999999;
+	};
+	class Veteran
+	{
+		class Flags
+		{
+			Armor=1;
+			MineTag=1;
+			FriendlyTag=1;
+			UnlimitedSaves=1;
+			ExtendetInfoType=0;
+			HUDGroupInfo=1;
+			EnemyTag=1;
+			HUD=1;
+			HUDPerm=1;
+			HUDWp=1;
+			HUDWpPerm=1;
+			WeaponCursor=0;
+			AutoAim=0;
+			AutoGuideAT=0;
+			3rdPersonView=1;
+			ClockIndicator=1;
+			CameraShake=1;
+			Map=0;
+			Tracers=1;
+			AutoSpot=0;
+			UltraAI=1;
+			DeathMessages=1;
+			NetStats=1;
+			VonID=1;
+		};
+		skillFriendly=0.94999999;
+		skillEnemy=0.94999999;
+		precisionFriendly=0.94999999;
+		precisionEnemy=0.94999999;
+	};
+	class Mercenary
+	{
+		class Flags
+		{
+			Armor=1;
+			MineTag=0;
+			FriendlyTag=1;
+			UnlimitedSaves=1;
+			ExtendetInfoType=0;
+			HUDGroupInfo=1;
+			EnemyTag=1;
+			HUD=1;
+			HUDPerm=1;
+			HUDWp=1;
+			HUDWpPerm=1;
+			WeaponCursor=1;
+			AutoAim=0;
+			AutoGuideAT=0;
+			3rdPersonView=1;
+			ClockIndicator=1;
+			CameraShake=1;
+			Map=0;
+			Tracers=1;
+			AutoSpot=0;
+			UltraAI=1;
+			DeathMessages=1;
+			NetStats=1;
+			VonID=1;
+		};
+		skillFriendly=0.94999999;
+		skillEnemy=0.94999999;
+		precisionFriendly=0.94999999;
+		precisionEnemy=0.94999999;
+	};
+};
+difficulty="Recruit";
+singleVoice=0;
+maxSamplesPlayed=32;
+sceneComplexity=1000000;
+shadowZDistance=100;
+viewDistance=3000;
+preferredObjectViewDistance=2000;
+terrainGrid=50;
+volumeCD=9;
+volumeFX=9;
+volumeSpeech=9;
+volumeVoN=9;
+vonRecThreshold=0.029999999;
