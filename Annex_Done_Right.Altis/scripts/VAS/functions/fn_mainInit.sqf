@@ -41,49 +41,48 @@
     [
       "Version 2.6",
           "
-Virtual Ammobox System (VAS) by Tonic is a user-friendly alternative to the default interface for handling of personal gear loadout — ammo, guns and items. Please report any VAS issues on the BI forums.
-<br/><br/>
-BIF thread:
+<br/>
+<font color='#3E9D3F'>Virtual Ammobox System</font> (VAS) by Tonic is a user-friendly alternative to the default interface for handling of personal gear loadout – ammo, guns and items. Please report any issues at the following address:
+<br/>
+<font size='10' color='#BECEDA'>
 http://forums.bistudio.com/showthread.php?149077-Virtual-Ammobox-System-%28VAS%29
+</font>
 <br/><br/>
-<p>
-<h1>
-Special THanks:
+<font size='14' color='#4499CC'>
+Special Thanks:
+</font>
 <br/>
-Dslyecxi for his Paper Doll script, giving me insight on how to detect item types.
+  • Dslyecxi<font size='10' color='#BECEDA'> for his Paper Doll script, giving me insight on how to detect item types.</font>
 <br/>
-Kronzky for his string function library.
+  • Kronzky<font size='10' color='#BECEDA'> for his string function library.</font>
 <br/>
-Robalo for providing code changes to help support the new compatibleItems class structure.
+  • Robalo<font size='10' color='#BECEDA'> for providing code changes to help support the new compatibleItems class structure.</font>
 <br/>
-Tyrghen for the tip on CfgFunctions.
+  • Tyrghen<font size='10' color='#BECEDA'> for the tip on CfgFunctions.</font>
 <br/>
-naong for his code tweaks to the Load/Save display.
+  • naong<font size='10' color='#BECEDA'> for his code tweaks to the Load/Save display.</font>
 <br/>
-Sa-Matra — For help with UI resources and Russian translation.
+  • Sa-Matra<font size='10' color='#BECEDA'> for help with UI resources and Russian translation.</font>
 <br/>
-      PR9INICHEK and Tourorist for updates and additions to the Russian localization.
+    • PR9INICHEK<font size='10' color='#BECEDA'> and </font>Tourorist<font size='10' color='#BECEDA'> for tweaks to the Russian localization.</font>
 <br/>
-Coding for translating VAS into German.
+  • Coding<font size='10' color='#BECEDA'> for translating VAS into German.</font>
 <br/>
-      MemphisBelle for tweaks to the German translation.
+    • MemphisBelle<font size='10' color='#BECEDA'> for tweaks to the German translation.</font>
 <br/>
-El nabot for French translation.
+  • El nabot<font size='10' color='#BECEDA'> for French translation.</font>
 <br/>
-czesiek77 for Polish translation.
+  • czesiek77<font size='10' color='#BECEDA'> for Polish translation.</font>
 <br/>
-Ficc for Portuguese translation.
+  • Ficc<font size='10' color='#BECEDA'> for Portuguese translation.</font>
 <br/>
-ramius86 for Italian translation.
+  • ramius86<font size='10' color='#BECEDA'> for Italian translation.</font>
 <br/>
-RabsRincon for Spanish translation.
+  • RabsRincon<font size='10' color='#BECEDA'> for Spanish translation.</font>
 <br/>
-Bakarda for Czech translation.
-<br/>
-The list goes on...
-<br/>
-</p>
-</h1>
+  • Bakarda<font size='10' color='#BECEDA'> for Czech translation.</font>
+<br/><br/>
+  • The list goes on...
       "
     ]
   ];
