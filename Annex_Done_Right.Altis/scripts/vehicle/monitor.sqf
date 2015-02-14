@@ -126,8 +126,8 @@ while {_run} do
 		_unit setPosASL [_position select 0,_position select 1,(_position select 2) + 0.2];
 		_unit setDir _dir;
 
-		//[[[_unit],"scripts\vehicle\setupUnit.sqf"],"BIS_fnc_execVM",nil,true] spawn BIS_fnc_MP; // only for LIFT Transport script
-		//_classify = [ _unit ] execVM "scripts\transport\classify.sqf"; // only for LIFT Transport script
+		[[[_unit],"scripts\vehicle\setupUnit.sqf"],"BIS_fnc_execVM",nil,true] spawn BIS_fnc_MP;
+		_classify = [ _unit ] execVM "scripts\transport\classify.sqf"; // only for LIFT Transport script
 
 		if (["B_UAV_02_CAS_F", _type] call BIS_fnc_inString) then { createVehicleCrew _unit; };
 		if (["B_UGV_01_rcws_F", _type] call BIS_fnc_inString) then { createVehicleCrew _unit; };
