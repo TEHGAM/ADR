@@ -41,7 +41,7 @@
     [
       "Version 2.6",
           "
-Virtual Ammobox System (VAS) by Tonic is a user-friendly alternative to the default interface for handling of personal gear loadout — ammo, guns & items. Please report any VAS issues on the BI forums.
+Virtual Ammobox System (VAS) by Tonic is a user-friendly alternative to the default interface for handling of personal gear loadout — ammo, guns and items. Please report any VAS issues on the BI forums.
 <br/><br/>
 BIF thread:
 http://forums.bistudio.com/showthread.php?149077-Virtual-Ammobox-System-%28VAS%29
@@ -62,7 +62,7 @@ naong for his code tweaks to the Load/Save display.
 <br/>
 Sa-Matra — For help with UI resources and Russian translation.
 <br/>
-      PR9INICHEK & Tourorist for updates and additions to the Russian localization.
+      PR9INICHEK and Tourorist for updates and additions to the Russian localization.
 <br/>
 Coding for translating VAS into German.
 <br/>
