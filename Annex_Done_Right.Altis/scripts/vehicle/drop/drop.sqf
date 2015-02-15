@@ -26,7 +26,7 @@ _minheight = 50;                  //The height you have to be to drop the crate
 _HQ = [West,"HQ"];                //Do not touch this!
 _toLow = format
   [
-    "<t align='center'><t size='2.2' color='#ed3b00'>НАБЕРИ ВЫСОТУ</t><br/>Боезапас можно сбросить только на высоте не менее<br/><t size='1.5' color='#ed3b00'>%1 метров</t></t>",
+    "<t align='center'><t size='2.2' color='#ed3b00'>Слишком низко</t><br/>Боезапас можно сбросить только на высоте не менее<br/><t size='1.5' color='#ed3b00'>%1 метров</t></t>",
     _minheight
   ];  //Text to display when not at the drop height
 
