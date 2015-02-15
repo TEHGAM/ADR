@@ -56,7 +56,7 @@ Special Thanks:
 <br/>
   • Kronzky<font size='10' color='#BECEDA'> for his string function library.</font>
 <br/>
-  • Robalo<font size='10' color='#BECEDA'> for providing code changes to help support a new class structure.</font>
+  • Robalo<font size='10' color='#BECEDA'> for providing code changes to help support the new compatibleItems class structure.</font>
 <br/>
   • Tyrghen<font size='10' color='#BECEDA'> for the tip on CfgFunctions.</font>
 <br/>

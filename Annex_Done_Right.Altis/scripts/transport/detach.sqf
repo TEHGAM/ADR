@@ -15,7 +15,7 @@ _target setmass tmass;
 
 _target setVelocity _velocity;
 _vehicle setVariable ["AttachedVehicle", objNull];
-_vehicle vehicleChat format ["%1 отцеплена.", typeof(_target)]; //Как только залазиш это появляется. Что это?
+_vehicle vehicleChat format ["%1 отцеплена.", typeof(_target)];
 
 if ((getPos _target select 2)>100) then
 {
