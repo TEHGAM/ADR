@@ -1,10 +1,8 @@
 /*
   File:
   fn_tawvdInit.sqf
-
   Author:
   Bryan "Tonic" Boardwine
-
   Description:
   Master init for TAW View Distance (addon version).
   If the script verson is present it will exit.
@@ -25,7 +23,7 @@ tawvd_addon_disable = true;
   waitUntil{!isNil "BIS_fnc_init"};
   waitUntil {!(isNull (findDisplay 46))};
 
-  tawvd_action = player addAction["<t color='#d63333'>Настройки</t>",TAWVD_fnc_openTAWVD,[],-99,false,false,"",''];
+  tawvd_action = player addAction["<t color='#d63333'>  • Настройки</t>",TAWVD_fnc_openTAWVD,[],-99,false,false,"",''];
 
   [] spawn TAWVD_fnc_trackViewDistance;
 };
