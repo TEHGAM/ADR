@@ -487,8 +487,8 @@
   </Package>
   <Package name="DOM_Squad">
     <Key ID="STRD_squadm">
-      <Original>Squad Menu</Original>
-      <Russian>Меню отрядов</Russian>
+      <Original>&#160;&#160;• Squad Menu</Original>
+      <Russian>&#160;&#160;• Меню отрядов</Russian>
     </Key>
     <Key ID="STRD_namegroup">
       <Original>Group Name</Original>
