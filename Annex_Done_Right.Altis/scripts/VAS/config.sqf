@@ -201,7 +201,6 @@ vas_r_items = [
 "U_B_CombatUniform_wdl_tshirt",
 "U_B_CombatUniform_wdl_vest",
 "U_BasicBody",
-"optic_Nightstalker",
 "optic_tws",
 "optic_tws_mg",
 "optic_mas_term"
