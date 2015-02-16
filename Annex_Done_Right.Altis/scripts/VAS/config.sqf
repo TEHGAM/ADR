@@ -138,7 +138,7 @@ vas_r_magazines = [];
 
 //Items to remove from VAS
 vas_r_items = [
-"B_UavTerminal",
+//"B_UavTerminal",
 "I_UavTerminal",
 "O_UavTerminal",
 "U_C_Commoner1_1",
