@@ -646,7 +646,7 @@ BTC_player_respawn =
   {
     deTach player;
     player setVariable ["BTC_need_revive",0,true];
-      loseDialog 0;
+      closeDialog 0;
     if (BTC_black_screen == 0) then {titleText ["", "BLACK OUT"];};
     sleep 0.2;
     titleText ["", "BLACK FADED"];
