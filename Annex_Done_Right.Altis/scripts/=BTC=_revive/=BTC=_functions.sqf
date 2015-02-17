@@ -826,7 +826,7 @@ BTC_mobile_marker =
 			if (speed _obj <= 5 && speed _obj >= -3) then {format ["%1", _var] setMarkerTextLocal format ["%1 уничтожена", _var];format ["%1", _var] setmarkerColorlocal "ColorGreen";} else {format ["%1", _var] setMarkerTextLocal format ["%1 в пути", _var];format ["%1", _var] setmarkerColorlocal "ColorBlack";};
 			sleep 1;
 		};
-		hint format ["%1 был уничтожена!", _var];
+		hint format ["%1 была уничтожена!", _var];
 		format ["%1", _var] setMarkerTextLocal format ["%1 уничтожена!", _var];
 		format ["%1", _var] setmarkerColorlocal "ColorRed";
 		if (BTC_mobile_respawn == 0) exitWith {};
