@@ -6,7 +6,7 @@ _nearUnits = (getPos _helo) nearEntities [["Car","Motorcycle","Tank","Ship"],7];
 if(count _nearUnits < 1) exitWith{hint "Нет Техники Для Зацепки";};
 
 //Add size checks here
-_heavyCant = ["B_MRAP_01_F", "B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F", "O_MRAP_02_F", "O_MRAP_02_hmg_F", "O_MRAP_02_gmg_F", "B_Boat_Armed_01_minigun_F"];
+_heavyCant = ["O_MRAP_02_F", "O_MRAP_02_hmg_F", "O_MRAP_02_gmg_F"];
 _mediumCant = ["B_Quadbike_01_F", "B_G_Offroad_01_F", "B_G_Offroad_01_armed_F", "B_Boat_Transport_01_F", "B_SDV_01_F"];
 _lightCant = ["Tank"];
 
