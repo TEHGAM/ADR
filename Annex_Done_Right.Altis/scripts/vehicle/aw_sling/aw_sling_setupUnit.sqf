@@ -24,8 +24,8 @@ if(isNil "_check") then {_vehicle setVariable ["aw_sling_attached",false,false]}
 if(isNil "aw_sling_cameraOn") then {aw_sling_cameraOn = false};
 
 
-// _vehicle addAction ["<t color='#FF0000'>" + "Подцепить" + "</t>","scripts\vehicle\aw_sling\aw_sling_attach.sqf",[],21,true,true,"","(_this == driver _target) AND (count ((getPos _target) nearEntities [['Car','Motorcycle','Tank','ship'],5]) > 0) AND !(_target getVariable 'aw_sling_attached')"];
-// _vehicle addAction ["<t color='#FF0000'>" + "Отцепить" + "</t>","scripts\vehicle\aw_sling\aw_sling_detach.sqf",[],21,true,true,"","(_this == driver _target) AND (_target getVariable 'aw_sling_attached')"];
+ _vehicle addAction ["<t color='#FF0000'>" + "Подцепить" + "</t>","scripts\vehicle\aw_sling\aw_sling_attach.sqf",[],21,true,true,"","(_this == driver _target) AND (count ((getPos _target) nearEntities [['Car','Motorcycle','Tank','ship'],5]) > 0) AND !(_target getVariable 'aw_sling_attached')"];
+ _vehicle addAction ["<t color='#FF0000'>" + "Отцепить" + "</t>","scripts\vehicle\aw_sling\aw_sling_detach.sqf",[],21,true,true,"","(_this == driver _target) AND (_target getVariable 'aw_sling_attached')"];
 _vehicle addAction ["<t color='#FF0000'>" + "Камера (вкл/выкл)" + "</t>","scripts\vehicle\aw_sling\aw_sling_toggleDisplay.sqf",[],-98,false,true,"","(_this == driver _target)"];
 //pilot eject
 //_vehicle addAction ["Выпрыгнуть",{player action [ "eject", vehicle player]},[],1,false,true,"","_this in _target"];
