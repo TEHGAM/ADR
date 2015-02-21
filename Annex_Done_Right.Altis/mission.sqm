@@ -101,6 +101,7 @@ class Mission
 		startWind=0;
 		forecastWind=0;
 		forecastWaves=0;
+		rainForced=1;
 		wavesForced=1;
 		windForced=1;
 		year=2035;
