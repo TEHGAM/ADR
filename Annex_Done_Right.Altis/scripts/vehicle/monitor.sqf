@@ -127,14 +127,12 @@ while {_run} do
 		_unit setDir _dir;
 
 		[[[_unit],"scripts\vehicle\setupUnit.sqf"],"BIS_fnc_execVM",nil,true] spawn BIS_fnc_MP; // only for LIFT Transport script
-		_classify = [ _unit ] execVM "scripts\transport\classify.sqf"; // only for LIFT Transport script
+		//_classify = [ _unit ] execVM "scripts\transport\classify.sqf"; // only for STROPE LIFT Transport script
 
 		if (["B_UAV_02_CAS_F", _type] call BIS_fnc_inString) then { createVehicleCrew _unit; };
 		if (["B_UGV_01_rcws_F", _type] call BIS_fnc_inString) then { createVehicleCrew _unit; };
 		
-		[[[_unit],"scripts\vehicle\setupUnit.sqf"],"BIS_fnc_execVM",nil,true] spawn BIS_fnc_MP;		
-		_classify = [_unit] execVM "scripts\transport\classify.sqf"; // only for Transport script
-                _dead = false;
+	        _dead = false;
 
 		// Check respawn amount
 		if !(_noend) then {_rounds = _rounds + 1};
