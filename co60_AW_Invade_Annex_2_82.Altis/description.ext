@@ -2,20 +2,20 @@
 
 author = Rarek, AhoyWorld, Quiksilver;					// Visible when loading mission
 onLoadName = "Invade & Annex 2.82";						// Visible when loading mission
-OnLoadMission = "Welcome back to the home of Invade and Annex ... Join us on TeamSpeak at ts.ahoyworld.co.uk:9987";
+OnLoadMission = "До середины марта на Втором проходит тест исходной версии I&amp;A на производительность в сравнении с ADR. Часть сторонних скриптов будет внедряться постепенно. Ждём ваших отзывов на форуме TEHGAM.COM.";
 loadScreen = "media\images\loading.jpg";				// Visible when loading mission
-overviewPicture = "media\images\loading.jpg";			// Visible when selecting mission	
+overviewPicture = "media\images\loading.jpg";			// Visible when selecting mission
 
 onLoadIntro = "";										// Displays a message while the intro is loading.
 onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
 onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
 
-class Header 
+class Header
 	{
 		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
 		minPlayers = 1;									// Min # of players the MISSION supports
 		maxPlayers = 60;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
-	}; 
+	};
 
 //------------------------- Admin
 
@@ -43,7 +43,7 @@ RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard wh
 wreckLimit = 3;											// Limit before removal is triggered
 wreckRemovalMinTime = 120;								// Min time before removal
 wreckRemovalMaxTime = 360;								// Max time before removal
-corpseLimit = 5;										// Limit before removal is triggered		
+corpseLimit = 5;										// Limit before removal is triggered
 corpseRemovalMinTime = 60;								// Min time before removal
 corpseRemovalMaxTime = 120;								// Max time before removal
 
@@ -52,7 +52,7 @@ corpseRemovalMaxTime = 120;								// Max time before removal
 #include "scripts\VAS\menu.hpp" 						// VAS
 #include "scripts\taw_vd\dialog.hpp" 					// TAW View Distance
 #include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
-#include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system 
+#include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system
 #include "dialogs.hpp"									// Intro
 
 class CfgFunctions
@@ -80,7 +80,7 @@ class faction {
 
 //------------------------- Parameters
 
-class Params 
+class Params
 	{
 		class AO {
 				title = "Enable Main AO?";
@@ -171,7 +171,7 @@ class Params
 			values[] = {1,0};
 			texts[] = {"Enabled","Disabled"};
 			default = 0;
-		};	
+		};
 		
 		class rThermal {
 			title = "Specialise Thermal Optics";
@@ -453,21 +453,19 @@ class CfgNotifications
 };
 
 /*
-Authors: 
-
+Authors:
 	Quiksilver & Rarek [AW]
-	
+
 	Invade & Annex 2.00 was developed by Rarek [ahoyworld.co.uk] with hundreds of hours of work, 
 	The current iterations have been developed by Quiksilver with hundreds of hours of work.
-	
+
 	Contributors: BACONMOP [AW], Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
-	
+
 	www.ahoyworld.co.uk
 	www.allfps.com.au
-	
-	Please be respectful and do not remove/alter credits.
-	
-File Reference: 
 
+	Please be respectful and do not remove/alter credits.
+
+File Reference:
 	https://community.bistudio.com/wiki/Description.ext
 */
