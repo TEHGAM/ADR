@@ -39,7 +39,7 @@ waitUntil {!isNull player};
 
 player createDiarySubject ["rules", "Rules"];
 player createDiarySubject ["mods", "Mods"];
-player createDiarySubject ["teamspeak", "Teamspeak"];
+player createDiarySubject ["teamspeak", "Тимспик"];
 player createDiarySubject ["faq", "FAQ"];
 player createDiarySubject ["changelog", "Change Log"];
 player createDiarySubject ["credits", "Credits"];
@@ -135,20 +135,23 @@ player createDiaryRecord ["mods",
 
 player createDiaryRecord ["teamspeak",
 [
-"TS3",
+"Скачать программу",
 "
-<br /> Teamspeak:<br /><br />
-<br /> http://www.teamspeak.com/?page=downloads
+<br />
+Самую последнюю версию ТС можно найти на официальной странице:
+<br />
+<font size='18' color='#3E9D3F'>TEAMSPEAK.COM</font>
+<br />
+• В разделе Downloads/TeamSpeak 3.
+<br />
 "
 ]];
 
 player createDiaryRecord ["teamspeak",
 [
-"AHOY WORLD",
+"Адрес нашего ТС",
 "
-<br /> Address: ts.ahoyworld.co.uk
-<br />
-<br /> Visitors and guests welcome!
+<br /><font size='48' color='#D63333'>TS.TEHGAM.COM</font>
 "
 ]];
 
