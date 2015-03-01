@@ -241,7 +241,7 @@ class Hint_3: RscText
 class Hint_5: RscText
 {
 	idc = 1015;
-	text = "Found a bug? Post it on our forums. Ahoyworld.Co.uk"; //--- ToDo: Localize;
+	text = "Found a bug? Post it on Ahoyworld.Co.uk (or TEHGAM.COM)"; //--- ToDo: Localize;
 	x = -0.65;
 	y = 0.34;
 	w = 0.5625;
