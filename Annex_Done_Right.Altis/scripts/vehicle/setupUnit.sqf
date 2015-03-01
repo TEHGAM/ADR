@@ -8,7 +8,7 @@ if(isNull _unit) exitWith {};
 if(_type in _slingable) then
 {
   [_unit] execVM "scripts\vehicle\aw_sling\aw_sling_setupUnit.sqf";
-  _unit addAction ["<t color='#00B2EE'>  • Удалить снаряжение</t>","scripts\vehicle\clear\clear.sqf",[],-97,false];
+  //_unit addAction ["<t color='#00B2EE'>  • Удалить снаряжение</t>","scripts\vehicle\clear\clear.sqf",[],-97,false]; //Дублируется
 };
 
 if ((_unit isKindOf "B_Heli_Transport_01_camo_F") || (_unit isKindOf "B_Heli_Transport_01_F")) then
