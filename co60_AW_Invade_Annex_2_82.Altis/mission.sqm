@@ -1368,7 +1368,7 @@ class Mission
 					skill=0.60000002;
 					text="s1";
 					init="(group this) setGroupId [""VORTEX""];";
-					description="(TS3: ts.ahoyworld.co.uk) Vortex Pilot";
+					description="Vortex Pilot";
 				};
 				class Item1
 				{
@@ -1382,7 +1382,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="s3";
-					description="(TS3: ts.ahoyworld.co.uk) Vortex Pilot";
+					description="Vortex Pilot";
 				};
 				class Item2
 				{
@@ -1395,7 +1395,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="s4";
-					description="(TS3: ts.ahoyworld.co.uk) Vortex Pilot";
+					description="Vortex Pilot";
 				};
 				class Item3
 				{
@@ -1409,7 +1409,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="s5";
-					description="(TS3: ts.ahoyworld.co.uk) Vortex Pilot";
+					description="Vortex Pilot";
 				};
 				class Item4
 				{
@@ -1420,7 +1420,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="s2";
-					description="(TS3: ts.ahoyworld.co.uk) Vortex Pilot";
+					description="Vortex Pilot";
 				};
 			};
 		};
@@ -16267,7 +16267,7 @@ class Mission
 		{
 			position[]={15956.532,13.939746,17016.742};
 			name="Ts";
-			text="TS3 = Ts.AhoyWorld.Co.Uk";
+			text="Тимспик = TS.TEHGAM.COM";
 			type="mil_triangle";
 			colorName="ColorRed";
 		};
