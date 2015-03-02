@@ -53,7 +53,6 @@ corpseRemovalMaxTime = 120;								// Max time before removal
 #include "scripts\taw_vd\dialog.hpp" 					// TAW View Distance
 #include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
 #include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system
-#include "dialogs.hpp"									// Intro
 
 class CfgFunctions
 	{
