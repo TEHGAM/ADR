@@ -92,7 +92,7 @@ class Params
 				title = "Enable Defend AO?";
 				values[] = {1,0};
 				texts[] = {"Enabled","Disabled"};
-				default = 0;
+				default = 1;
 			};
 
 		class SideObjectives {
