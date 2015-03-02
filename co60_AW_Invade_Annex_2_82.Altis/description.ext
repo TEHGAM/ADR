@@ -2,7 +2,7 @@
 
 author = Rarek, AhoyWorld, Quiksilver;					// Visible when loading mission
 onLoadName = "Invade & Annex 2.82";						// Visible when loading mission
-OnLoadMission = "До середины марта на Втором проходит тест исходной версии I&amp;A на производительность в сравнении с ADR. Часть сторонних скриптов будет внедряться постепенно. Ждём ваших отзывов на форуме TEHGAM.COM.";
+OnLoadMission = "До середины марта на Втором проходит тест исходной версии I&amp;A на производительность в сравнении с ADR. Часть сторонних скриптов будет внедряться постепенно. –TEHGAM.COM.";
 loadScreen = "media\images\loading.jpg";				// Visible when loading mission
 overviewPicture = "media\images\loading.jpg";			// Visible when selecting mission
 
@@ -25,7 +25,7 @@ onPauseScript = "scripts\onPause.sqf";
 
 //------------------------- Misc
 
-disableChannels[] = {6};								// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
+disableChannels[] = {6};								// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global.
 disabledAI = 1;											// No AI in playable units
 aiKills = 0; 											// disable scorelist for AI players
 enableItemsDropping = 0; 								// disabled with 0
