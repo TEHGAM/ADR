@@ -74,7 +74,8 @@ class Mission
 		"A3_Air_F_EPB_Heli_Light_03",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
 		"A3_Air_F_Heli_Heli_Transport_03",
-		"A3_Air_F_Heli_Light_02"
+		"A3_Air_F_Heli_Light_02",
+		"A3_Air_F_Heli_Heli_Transport_04"
 	};
 	addOnsAuto[]=
 	{
@@ -142,6 +143,7 @@ class Mission
 		"A3_Structures_F_Kart_Mil_Flags",
 		"A3_Air_F_Heli_Light_02",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
+		"A3_Air_F_Heli_Heli_Transport_04",
 		"a3_map_altis"
 	};
 	randomSeed=12935265;
@@ -4859,7 +4861,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1003;
+		items=1007;
 		class Item0
 		{
 			position[]={11584.9,23.361359,11913.601};
@@ -15142,6 +15144,45 @@ class Mission
 			skill=0.60000002;
 			text="Quad_2_2_1_1";
 			init="0 = [this,30,FALSE,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
+		};
+		class Item1003
+		{
+			position[]={15158.147,17.91,17208.82};
+			azimut=-49.620392;
+			id=1125;
+			side="EMPTY";
+			vehicle="Land_HelipadCivil_F";
+			skill=0.60000002;
+		};
+		class Item1004
+		{
+			position[]={15145.505,17.91,17194.359};
+			azimut=-49.620392;
+			id=1126;
+			side="EMPTY";
+			vehicle="Land_HelipadCivil_F";
+			skill=0.60000002;
+		};
+		class Item1005
+		{
+			position[]={15145.258,17.91,17194.781};
+			azimut=310;
+			id=1127;
+			side="EMPTY";
+			vehicle="O_Heli_Transport_04_F";
+			skill=0.60000002;
+			text="taru_1";
+		};
+		class Item1006
+		{
+			position[]={15157.9,17.91,17209.273};
+			azimut=310;
+			special="NONE";
+			id=1128;
+			side="EMPTY";
+			vehicle="O_Heli_Transport_04_covered_F";
+			skill=0.60000002;
+			text="taru_2";
 		};
 	};
 	class Markers
