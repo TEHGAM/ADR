@@ -2,28 +2,20 @@
 
 smRewards =
 [
-	["an A-164 Wipeout (CAS)", "B_Plane_CAS_01_F"],
-	["an MI-48 Kajman", "O_Heli_Attack_02_black_F"],
-	["an AH-99 Blackfoot", "B_Heli_Attack_01_F"],
-	["a PO-30 Orca", "O_Heli_Light_02_F"],
-	["a WY-55 Hellcat", "I_Heli_light_03_F"],
-	["an AH-9 Pawnee", "B_Heli_Light_01_armed_F"],
-	["an AH-9 Pawnee GAU - 19", "Rabbit_F"],
-	["an AH-9 Pawnee", "B_Heli_Light_01_armed_F"],
-	["an AH-9 Pawnee GAU - 19", "Rabbit_F"],
-	["an FV-720 Mora", "I_APC_tracked_03_cannon_F"],
-	["an FV-720 Mora", "I_APC_tracked_03_cannon_F"],
-	["an AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F"],
-	["an AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F"],
-	["an IFV-6a Cheetah", "B_APC_Tracked_01_AA_F"],
-	["an IFV-6a Cheetah", "B_APC_Tracked_01_AA_F"],
-	["an AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F"],
-	["a T-100 Varsuk", "O_MBT_02_cannon_F"],
-	["an MBT-52 Kuma", "I_MBT_03_cannon_F"],
-	["a Mobile Mortar Truck", "B_G_Offroad_01_repair_F"],
-	["an M2A4 Slammer (Urban Purpose)", "B_MBT_01_TUSK_F"],
-	["an MI-290 Taru (Transport)", "O_Heli_Transport_04_covered_F"],
-	["an MI-290 Taru (Bench)", "O_Heli_Transport_04_bench_F"]
+ ["То-199 «Неофрон» (штурмовик)", "O_Plane_CAS_02_F"],
+  ["А-164 «Вайпаут» (штурмовик)", "B_Plane_CAS_01_F"],
+  ["A-143 «Буззард» (штурмовик)", "I_Plane_Fighter_03_CAS_F"],
+  ["MQ4A «Грейхок»", "B_UAV_02_F"],
+  ["Ми-48 «Кайман»", "O_Heli_Attack_02_black_F"],
+  ["AH-99 «Блэкфут»", "B_Heli_Attack_01_F"],
+  ["ПО-30 «Касатка»", "O_Heli_Light_02_F"],
+  ["WY-55 «Хеллкэт»", "I_Heli_light_03_F"],
+  ["FV-720 «Мора»", "I_APC_tracked_03_cannon_F"],
+  ["AFV-4 «Горгона»", "I_APC_Wheeled_03_cannon_F"],
+  ["IFV-6a «Гепард»", "B_APC_Tracked_01_AA_F"],
+  ["T-100 «Варсук»", "O_MBT_02_cannon_F"],
+  ["MBT-52 «Кума»", "I_MBT_03_cannon_F"],
+  ["M2A4 «Сламмер» UP ", "B_MBT_01_TUSK_F"]
 ];
 smMarkerList =
 ["smReward1","smReward2","smReward3","smReward4","smReward5","smReward6","smReward7","smReward8","smReward9","smReward10","smReward11","smReward12","smReward13","smReward14","smReward15","smReward16","smReward17","smReward18","smReward19","smReward20","smReward21","smReward22","smReward23","smReward24","smReward25","smReward26","smReward27"];
