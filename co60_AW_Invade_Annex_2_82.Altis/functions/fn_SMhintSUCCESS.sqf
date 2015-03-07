@@ -15,7 +15,8 @@ smRewards =
   ["IFV-6a «Гепард»", "B_APC_Tracked_01_AA_F"],
   ["T-100 «Варсук»", "O_MBT_02_cannon_F"],
   ["MBT-52 «Кума»", "I_MBT_03_cannon_F"],
-  ["M2A4 «Сламмер» UP ", "B_MBT_01_TUSK_F"]
+  ["M2A4 «Сламмер» UP ", "B_MBT_01_TUSK_F"],
+  ["Пауни UP", "B_Heli_Light_01_armed_F"]
 ];
 smMarkerList =
 ["smReward1","smReward2","smReward3","smReward4","smReward5","smReward6","smReward7","smReward8","smReward9","smReward10","smReward11","smReward12","smReward13","smReward14","smReward15","smReward16","smReward17","smReward18","smReward19","smReward20","smReward21","smReward22","smReward23","smReward24","smReward25","smReward26","smReward27"];
@@ -58,10 +59,10 @@ if (_reward isKindOf "Rabbit_F") exitWith {
 	_GAU addMagazine ("500Rnd_127x99_mag_Tracer_Red");
 	{_x addCuratorEditableObjects [[_GAU], false];} foreach adminCurators;
 };
-if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
+/*if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
 	_mortar = createVehicle ["B_Mortar_01_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
 	_mortar attachTo [_reward,[0,-2.5,.3]];
-};
+}; */
 {
 	_x addCuratorEditableObjects [[_reward], false];
 } foreach adminCurators;
