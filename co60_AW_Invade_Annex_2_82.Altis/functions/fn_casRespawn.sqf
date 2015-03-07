@@ -56,9 +56,9 @@ _dir = 207.882;
 	casJet lock 0;
 		
 	if (PARAMS_CasATGM == 0) then {
-		if (casJet isKindOf "I_Plane_Fighter_03_CAS_F") then {
+/*		if (casJet isKindOf "I_Plane_Fighter_03_CAS_F") then {
 			casJet removeWeapon "missiles_SCALPEL";
-		};
+		}; */
 		if (casJet isKindOf "B_Plane_CAS_01_F") then {
 			casJet removeWeapon "Missile_AGM_02_Plane_CAS_01_F";
 		};
