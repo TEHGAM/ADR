@@ -485,8 +485,6 @@ player createDiaryRecord ["credits",
 <br />
     • PR9INICHEK
 <br />
-    • Stevenson
-<br />
     • vosur
 <br />
     • ZeRoKoOl
