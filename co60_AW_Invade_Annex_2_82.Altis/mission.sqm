@@ -1051,8 +1051,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15134.545,17.91,16983.617};
-					azimut=225;
+					position[]={14402.02,18.76885,16224.66};
+					azimut=41;
 					offsetY=0.25;
 					special="NONE";
 					id=58;
