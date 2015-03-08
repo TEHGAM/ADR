@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author: 
 
 	Quiksilver
@@ -41,7 +41,7 @@ while { true } do {
 
 	if (SM_SWITCH) then {
 	
-		hqSideChat = "Вторичная цель выявлена, ждите указаний!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р’С‚РѕСЂРёС‡РЅР°СЏ С†РµР»СЊ РІС‹СЏРІР»РµРЅР°, Р¶РґРёС‚Рµ СѓРєР°Р·Р°РЅРёР№!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 	
 		sleep 3;
 	

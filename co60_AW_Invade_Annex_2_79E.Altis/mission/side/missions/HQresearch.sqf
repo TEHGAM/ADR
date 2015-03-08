@@ -1,4 +1,4 @@
-/*
+п»ї/*
 @file: HQresearch.sqf
 Author:
 
@@ -17,7 +17,7 @@ ____________________________________*/
 
 private ["_flatPos","_accepted","_position","_enemiesArray","_fuzzyPos","_x","_briefing","_unitsArray","_object","_dummy","_SMveh","_SMaa","_c4Message","_vehPos"];
 
-_c4Message = ["Жёсткий диск захвачен. C-4 активирован! 5 секунд до детонации.","Научные данные захвачены. Взрывчатка установлена! 5 секунд до взрыва.","Исследовательская работа перехвачена. Заряд установлен! 5 секунд до взрыва."] call BIS_fnc_selectRandom;
+_c4Message = ["Р–С‘СЃС‚РєРёР№ РґРёСЃРє Р·Р°С…РІР°С‡РµРЅ. C-4 Р°РєС‚РёРІРёСЂРѕРІР°РЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РґРµС‚РѕРЅР°С†РёРё.","РќР°СѓС‡РЅС‹Рµ РґР°РЅРЅС‹Рµ Р·Р°С…РІР°С‡РµРЅС‹. Р’Р·СЂС‹РІС‡Р°С‚РєР° СѓСЃС‚Р°РЅРѕРІР»РµРЅР°! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°.","РСЃСЃР»РµРґРѕРІР°С‚РµР»СЊСЃРєР°СЏ СЂР°Р±РѕС‚Р° РїРµСЂРµС…РІР°С‡РµРЅР°. Р—Р°СЂСЏРґ СѓСЃС‚Р°РЅРѕРІР»РµРЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°."] call BIS_fnc_selectRandom;
 #define VEH_TYPE "O_MRAP_02_F","O_Truck_03_covered_F","O_Truck_03_transport_F","O_Heli_Light_02_unarmed_F","O_Truck_02_transport_F","O_Truck_02_covered_F","C_SUV_01_F","C_Van_01_transport_F"
 
 //-------------------- FIND POSITION FOR OBJECTIVE
@@ -72,13 +72,13 @@ _c4Message = ["Жёсткий диск захвачен. C-4 активирован! 5 секунд до детонации.","
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Допка: Шпионаж"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Р”РѕРїРєР°: РЁРїРёРѕРЅР°Р¶"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 	
-	_briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Шпионаж</t><br/>____________________<br/>Силы противника проводят НИР с целью производства новых типов оружия.<br/><br/>Ваша задача — выдвинутся в указанный район, найти и захватить научные данные и затем уничтожить исследовательский центр.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Р”РѕРїР·Р°РґР°РЅРёРµ</t><br/><t size='1.5' color='#00B2EE'>РЁРїРёРѕРЅР°Р¶</t><br/>____________________<br/>РЎРёР»С‹ РїСЂРѕС‚РёРІРЅРёРєР° РїСЂРѕРІРѕРґСЏС‚ РќРР  СЃ С†РµР»СЊСЋ РїСЂРѕРёР·РІРѕРґСЃС‚РІР° РЅРѕРІС‹С… С‚РёРїРѕРІ РѕСЂСѓР¶РёСЏ.<br/><br/>Р’Р°С€Р° Р·Р°РґР°С‡Р° вЂ” РІС‹РґРІРёРЅСѓС‚СЃСЏ РІ СѓРєР°Р·Р°РЅРЅС‹Р№ СЂР°Р№РѕРЅ, РЅР°Р№С‚Рё Рё Р·Р°С…РІР°С‚РёС‚СЊ РЅР°СѓС‡РЅС‹Рµ РґР°РЅРЅС‹Рµ Рё Р·Р°С‚РµРј СѓРЅРёС‡С‚РѕР¶РёС‚СЊ РёСЃСЃР»РµРґРѕРІР°С‚РµР»СЊСЃРєРёР№ С†РµРЅС‚СЂ.</t>";
 	GlobalHint = _briefing; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewSideMission", "Seize Research Data"]; publicVariable "showNotification";
-	sideMarkerText = "Шпионаж"; publicVariable "sideMarkerText";
+	sideMarkerText = "РЁРїРёРѕРЅР°Р¶"; publicVariable "sideMarkerText";
 
 	sideMissionUp = true; publicVariable "sideMissionUp";
 	SM_SUCCESS = false; publicVariable "SM_SUCCESS";
@@ -91,7 +91,7 @@ while { sideMissionUp } do {
 		
 		//-------------------- DE-BRIEFING
 		
-		hqSideChat = "Цель уничтожена преждевременно. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р¦РµР»СЊ СѓРЅРёС‡С‚РѕР¶РµРЅР° РїСЂРµР¶РґРµРІСЂРµРјРµРЅРЅРѕ. Р—Р°РґР°РЅРёРµ РїСЂРѕРІР°Р»РµРЅРѕ!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		sideMissionUp = false; publicVariable "sideMissionUp";

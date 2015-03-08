@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author: 
 
 	Jester [AW] & Quiksilver
@@ -25,12 +25,12 @@ if(random 1 >= 0.5) then {
 	
 _defendMessages =
   [
-    "Враг контратакует! Займите круговую оборону для защиты нашей территории.",
-    "Противник вызвал подкрепление! Распределите оборону по периметру точки."
+    "Р’СЂР°Рі РєРѕРЅС‚СЂР°С‚Р°РєСѓРµС‚! Р—Р°Р№РјРёС‚Рµ РєСЂСѓРіРѕРІСѓСЋ РѕР±РѕСЂРѕРЅСѓ РґР»СЏ Р·Р°С‰РёС‚С‹ РЅР°С€РµР№ С‚РµСЂСЂРёС‚РѕСЂРёРё.",
+    "РџСЂРѕС‚РёРІРЅРёРє РІС‹Р·РІР°Р» РїРѕРґРєСЂРµРїР»РµРЅРёРµ! Р Р°СЃРїСЂРµРґРµР»РёС‚Рµ РѕР±РѕСЂРѕРЅСѓ РїРѕ РїРµСЂРёРјРµС‚СЂСѓ С‚РѕС‡РєРё."
   ];
   _targetStartText = format
   [
-    "<t align='center' size='2.2'>Оборона</t><br/><t size='1.5' align='center' color='#0d4e8f'>%1</t><br/>____________________<br/>Противник готовит отвлекающий манёвр в поддержку передислокации своих основных сил.<br/><br/>Займите оборонительные позиции!",
+    "<t align='center' size='2.2'>РћР±РѕСЂРѕРЅР°</t><br/><t size='1.5' align='center' color='#0d4e8f'>%1</t><br/>____________________<br/>РџСЂРѕС‚РёРІРЅРёРє РіРѕС‚РѕРІРёС‚ РѕС‚РІР»РµРєР°СЋС‰РёР№ РјР°РЅС‘РІСЂ РІ РїРѕРґРґРµСЂР¶РєСѓ РїРµСЂРµРґРёСЃР»РѕРєР°С†РёРё СЃРІРѕРёС… РѕСЃРЅРѕРІРЅС‹С… СЃРёР».<br/><br/>Р—Р°Р№РјРёС‚Рµ РѕР±РѕСЂРѕРЅРёС‚РµР»СЊРЅС‹Рµ РїРѕР·РёС†РёРё!",
     currentAO
   ];
 
@@ -38,7 +38,7 @@ _defendMessages =
 	showNotification = ["NewMainDefend", currentAO]; publicVariable "showNotification";
 
 	{_x setMarkerPos (getMarkerPos currentAO);} forEach ["aoCircle_2","aoMarker_2"];
-	"aoMarker_2" setMarkerText format["Оборона %1",currentAO];
+	"aoMarker_2" setMarkerText format["РћР±РѕСЂРѕРЅР° %1",currentAO];
 
 	sleep 10;
 	//publicVariable "refreshMarkers";
@@ -48,7 +48,7 @@ _defendMessages =
 
   _playersOnlineHint = format
   [
-    "<t align='center' size='2.2'>Контратака</t><br/><t size='1.5' align='center' color='#C92626'>%1</t><br/>____________________<br/><t align='center'>Противник перегруппировал часть своих сил на контратаку захваченной нами точки.</t>", currentAO
+    "<t align='center' size='2.2'>РљРѕРЅС‚СЂР°С‚Р°РєР°</t><br/><t size='1.5' align='center' color='#C92626'>%1</t><br/>____________________<br/><t align='center'>РџСЂРѕС‚РёРІРЅРёРє РїРµСЂРµРіСЂСѓРїРїРёСЂРѕРІР°Р» С‡Р°СЃС‚СЊ СЃРІРѕРёС… СЃРёР» РЅР° РєРѕРЅС‚СЂР°С‚Р°РєСѓ Р·Р°С…РІР°С‡РµРЅРЅРѕР№ РЅР°РјРё С‚РѕС‡РєРё.</t>", currentAO
   ];
 
 	_defendTimer1 = 480;
@@ -62,15 +62,15 @@ _defendMessages =
 
 	null = [["aoCircle_2"],[6,5],[3,2],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
 	
-	hint "Группировка вражеских сил обнаружена в близи точки захвата.";
+	hint "Р“СЂСѓРїРїРёСЂРѕРІРєР° РІСЂР°Р¶РµСЃРєРёС… СЃРёР» РѕР±РЅР°СЂСѓР¶РµРЅР° РІ Р±Р»РёР·Рё С‚РѕС‡РєРё Р·Р°С…РІР°С‚Р°.";
 			
 	sleep 5;
 			
-	hqSideChat = "Держитесь, противник начинает штурм!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Р”РµСЂР¶РёС‚РµСЃСЊ, РїСЂРѕС‚РёРІРЅРёРє РЅР°С‡РёРЅР°РµС‚ С€С‚СѓСЂРј!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			
 	sleep _defendTimer1;
 		
-	hqSideChat = "Противник начинает отступление."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "РџСЂРѕС‚РёРІРЅРёРє РЅР°С‡РёРЅР°РµС‚ РѕС‚СЃС‚СѓРїР»РµРЅРёРµ."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 	sleep _defendTimer2;
 

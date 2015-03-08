@@ -1,4 +1,4 @@
-/*
+п»ї/*
 @file: destroyUrban.sqf
 Author:
 
@@ -25,7 +25,7 @@ private ["_object","_briefing","_smPos","_c4Message"];
 
 	_object = [crate1,crate2] call BIS_fnc_selectRandom;
 	currentSM = ["sm1","sm2","sm3","sm4","sm5","sm6","sm7","sm8","sm9","sm10","sm11","sm12","sm13","sm14","sm15","sm16","sm17","sm18","sm19"] call BIS_fnc_selectRandom;
-	_c4Message = ["Заряд установлен! 5 секунд до взрыва. В укрытие!","C-4 активирован! 5 секунд до детонации. Пригнитесь!","Взрывчатка на месте! 5 секунд до взрыва. Уходим!"] call BIS_fnc_selectRandom;
+	_c4Message = ["Р—Р°СЂСЏРґ СѓСЃС‚Р°РЅРѕРІР»РµРЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°. Р’ СѓРєСЂС‹С‚РёРµ!","C-4 Р°РєС‚РёРІРёСЂРѕРІР°РЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РґРµС‚РѕРЅР°С†РёРё. РџСЂРёРіРЅРёС‚РµСЃСЊ!","Р’Р·СЂС‹РІС‡Р°С‚РєР° РЅР° РјРµСЃС‚Рµ! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°. РЈС…РѕРґРёРј!"] call BIS_fnc_selectRandom;
 
 //-------------------- SPAWN OBJECTIVE (okay okay, setPos not spawn/create)
 
@@ -42,11 +42,11 @@ private ["_object","_briefing","_smPos","_c4Message"];
 //-------------------- BRIEFING
 	
 	"sideMarker" setMarkerPos (getMarkerPos currentSM);
-	"sideMarker" setMarkerText "Допка: Склад"; publicVariable "sideMarker";
-	_briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Склад</t><br/>____________________<br/>Враг поставляет боевикам современное оружие и взрывчатые вещества. Экипируйтесь с расчётом на ближний бой!<br/><br/>Ваша задача — выдвинутся в указанный район и уничтожить складируемый боезапас противника.</t>";
+	"sideMarker" setMarkerText "Р”РѕРїРєР°: РЎРєР»Р°Рґ"; publicVariable "sideMarker";
+	_briefing = "<t align='center'><t size='2.2'>Р”РѕРїР·Р°РґР°РЅРёРµ</t><br/><t size='1.5' color='#00B2EE'>РЎРєР»Р°Рґ</t><br/>____________________<br/>Р’СЂР°Рі РїРѕСЃС‚Р°РІР»СЏРµС‚ Р±РѕРµРІРёРєР°Рј СЃРѕРІСЂРµРјРµРЅРЅРѕРµ РѕСЂСѓР¶РёРµ Рё РІР·СЂС‹РІС‡Р°С‚С‹Рµ РІРµС‰РµСЃС‚РІР°. Р­РєРёРїРёСЂСѓР№С‚РµСЃСЊ СЃ СЂР°СЃС‡С‘С‚РѕРј РЅР° Р±Р»РёР¶РЅРёР№ Р±РѕР№!<br/><br/>Р’Р°С€Р° Р·Р°РґР°С‡Р° вЂ” РІС‹РґРІРёРЅСѓС‚СЃСЏ РІ СѓРєР°Р·Р°РЅРЅС‹Р№ СЂР°Р№РѕРЅ Рё СѓРЅРёС‡С‚РѕР¶РёС‚СЊ СЃРєР»Р°РґРёСЂСѓРµРјС‹Р№ Р±РѕРµР·Р°РїР°СЃ РїСЂРѕС‚РёРІРЅРёРєР°.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Склад"]; publicVariable "showNotification";
-	sideMarkerText = "Склад"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "РЎРєР»Р°Рґ"]; publicVariable "showNotification";
+	sideMarkerText = "РЎРєР»Р°Рґ"; publicVariable "sideMarkerText";
 			
 	sideMissionUp = true; publicVariable "sideMissionUp";
 	SM_SUCCESS = false;	publicVariable "SM_SUCCESS";

@@ -1,4 +1,4 @@
-/* 
+﻿/* 
 v1g Fast Rope by [STELS]Zealot
 
 Tweaked by Quiksilver, so only Pilots can deploy/retract ropes. 
@@ -10,9 +10,9 @@ ________________________________________*/
 #define MAX_SPEED_ROPES_AVAIL 20
 
 
-#define STR_TOSS_ROPES "  • Сбросить верёвку"
-#define STR_FAST_ROPE "  • Спуск по верёвке — «Пробел»"
-#define STR_CUT_ROPES "  • Убрать верёвку"
+#define STR_TOSS_ROPES "  вЂў РЎР±СЂРѕСЃРёС‚СЊ РІРµСЂС‘РІРєСѓ"
+#define STR_FAST_ROPE "  вЂў РЎРїСѓСЃРє РїРѕ РІРµСЂС‘РІРєРµ вЂ” В«РџСЂРѕР±РµР»В»"
+#define STR_CUT_ROPES "  вЂў РЈР±СЂР°С‚СЊ РІРµСЂС‘РІРєСѓ"
 
 
 if (isdedicated) exitwith {};

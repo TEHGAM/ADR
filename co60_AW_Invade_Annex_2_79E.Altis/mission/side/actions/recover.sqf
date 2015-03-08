@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author:
 
 	Quiksilver
@@ -32,11 +32,11 @@ _actID = _this select 2;  		// ID of the Action
 
 //-------------------- Send hint to player that he's done something...
 
-hint "Передача данных...";
+hint "РџРµСЂРµРґР°С‡Р° РґР°РЅРЅС‹С…...";
 
 sleep 1;
 
-hint "Подтверждение...";
+hint "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ...";
 
 sleep 1;
 

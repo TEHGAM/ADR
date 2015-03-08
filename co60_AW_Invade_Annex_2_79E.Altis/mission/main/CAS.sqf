@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author:
 
 	Jester [AW]
@@ -54,8 +54,8 @@ while {true} do {
 
 
 
-		showNotification = ["EnemyJet", "Новая воздушная цель"]; publicVariable "showNotification";
-		_priorityMessageJet ="<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#d63333'>Вражеский штурмовик</t><br/><br/>Враг запросил авиаподдержку. Примите меры ПВО.<br/><br/>Немедленное уничтожение авиации противника как упростит проведение, так и ускорит выполнение боевой задачи.";
+		showNotification = ["EnemyJet", "РќРѕРІР°СЏ РІРѕР·РґСѓС€РЅР°СЏ С†РµР»СЊ"]; publicVariable "showNotification";
+		_priorityMessageJet ="<t align='center' size='2.2'>Р’РЅРёРјР°РЅРёРµ</t><br/><t size='1.5' color='#d63333'>Р’СЂР°Р¶РµСЃРєРёР№ С€С‚СѓСЂРјРѕРІРёРє</t><br/><br/>Р’СЂР°Рі Р·Р°РїСЂРѕСЃРёР» Р°РІРёР°РїРѕРґРґРµСЂР¶РєСѓ. РџСЂРёРјРёС‚Рµ РјРµСЂС‹ РџР’Рћ.<br/><br/>РќРµРјРµРґР»РµРЅРЅРѕРµ СѓРЅРёС‡С‚РѕР¶РµРЅРёРµ Р°РІРёР°С†РёРё РїСЂРѕС‚РёРІРЅРёРєР° РєР°Рє СѓРїСЂРѕСЃС‚РёС‚ РїСЂРѕРІРµРґРµРЅРёРµ, С‚Р°Рє Рё СѓСЃРєРѕСЂРёС‚ РІС‹РїРѕР»РЅРµРЅРёРµ Р±РѕРµРІРѕР№ Р·Р°РґР°С‡Рё.";
 		GlobalHint = _priorityMessageJet; publicVariable "GlobalHint"; hint parseText _priorityMessageJet;
 
 		waitUntil {

@@ -1,4 +1,4 @@
-/*
+п»ї/*
 @file: HQfia.sqf
 Author:
 
@@ -17,7 +17,7 @@ ____________________________________*/
 
 private ["_flatPos","_accepted","_position","_enemiesArray","_fuzzyPos","_x","_briefing","_unitsArray","_object","_SMveh","_SMaa","_tower1","_tower2","_tower3","_c4Message"];
 
-_c4Message = ["Оперативный боезапас захвачен. C-4 активирован! 5 секунд до детонации.","Оружие боевиков перехвачено. Взрывчатка установлена! 5 секунд до взрыва.","Боезапас террористов захвачен. Заряд установлен! 5 секунд до взрыва."] call BIS_fnc_selectRandom;
+_c4Message = ["РћРїРµСЂР°С‚РёРІРЅС‹Р№ Р±РѕРµР·Р°РїР°СЃ Р·Р°С…РІР°С‡РµРЅ. C-4 Р°РєС‚РёРІРёСЂРѕРІР°РЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РґРµС‚РѕРЅР°С†РёРё.","РћСЂСѓР¶РёРµ Р±РѕРµРІРёРєРѕРІ РїРµСЂРµС…РІР°С‡РµРЅРѕ. Р’Р·СЂС‹РІС‡Р°С‚РєР° СѓСЃС‚Р°РЅРѕРІР»РµРЅР°! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°.","Р‘РѕРµР·Р°РїР°СЃ С‚РµСЂСЂРѕСЂРёСЃС‚РѕРІ Р·Р°С…РІР°С‡РµРЅ. Р—Р°СЂСЏРґ СѓСЃС‚Р°РЅРѕРІР»РµРЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°."] call BIS_fnc_selectRandom;
 
 //-------------------- FIND POSITION FOR OBJECTIVE
 
@@ -71,10 +71,10 @@ _c4Message = ["Оперативный боезапас захвачен. C-4 активирован! 5 секунд до детон
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Допка: Лагерь"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Р”РѕРїРєР°: Р›Р°РіРµСЂСЊ"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 	
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Лагерь</t><br/>____________________<br/>Противник проводит подготовку боевиков на территории острова.<br/><br/>Ваша задача — выдвинутся в указанный район, найти и уничтожить врага и захватить их боезапас.</t>";
+	_briefing = "<t align='center'><t size='2.2'>РќРѕРІРѕРµ РґРѕРїР·Р°РґР°РЅРёРµ</t><br/><t size='1.5' color='#00B2EE'>Р›Р°РіРµСЂСЊ</t><br/>____________________<br/>РџСЂРѕС‚РёРІРЅРёРє РїСЂРѕРІРѕРґРёС‚ РїРѕРґРіРѕС‚РѕРІРєСѓ Р±РѕРµРІРёРєРѕРІ РЅР° С‚РµСЂСЂРёС‚РѕСЂРёРё РѕСЃС‚СЂРѕРІР°.<br/><br/>Р’Р°С€Р° Р·Р°РґР°С‡Р° вЂ” РІС‹РґРІРёРЅСѓС‚СЃСЏ РІ СѓРєР°Р·Р°РЅРЅС‹Р№ СЂР°Р№РѕРЅ, РЅР°Р№С‚Рё Рё СѓРЅРёС‡С‚РѕР¶РёС‚СЊ РІСЂР°РіР° Рё Р·Р°С…РІР°С‚РёС‚СЊ РёС… Р±РѕРµР·Р°РїР°СЃ.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Secure Insurgency Supply"]; publicVariable "showNotification";
 	sideMarkerText = "Secure Insurgency Supply"; publicVariable "sideMarkerText";
@@ -93,7 +93,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 		
 		sideMissionUp = false; publicVariable "sideMissionUp";
-		hqSideChat = "Цель уничтожена преждевременно. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р¦РµР»СЊ СѓРЅРёС‡С‚РѕР¶РµРЅР° РїСЂРµР¶РґРµРІСЂРµРјРµРЅРЅРѕ. Р—Р°РґР°РЅРёРµ РїСЂРѕРІР°Р»РµРЅРѕ!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		

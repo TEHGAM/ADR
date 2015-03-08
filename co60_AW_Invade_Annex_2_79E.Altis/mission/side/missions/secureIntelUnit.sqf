@@ -1,4 +1,4 @@
-/*
+п»ї/*
 @filename: secureIntelUnit.sqf
 Author:
 
@@ -156,11 +156,11 @@ private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup"
 
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];			
-	"sideMarker" setMarkerText "Допзадание: Разведданные"; publicVariable "sideMarker"; 	
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Разведданные</t><br/>____________________<br/>Военная разведка докладывает о предстоящем обмене стратегически важной и конфиденциальной информации между высокопоставленными агентами врага. Данная цель представляет собой удобный случай для контрразведки!<br/><br/>Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата разведданных, находящихся в одной из машин сопровождения или-же лично у одного из агентов.</t>";
+	"sideMarker" setMarkerText "Р”РѕРїР·Р°РґР°РЅРёРµ: Р Р°Р·РІРµРґРґР°РЅРЅС‹Рµ"; publicVariable "sideMarker"; 	
+	_briefing = "<t align='center'><t size='2.2'>РќРѕРІРѕРµ РґРѕРїР·Р°РґР°РЅРёРµ</t><br/><t size='1.5' color='#00B2EE'>Р Р°Р·РІРµРґРґР°РЅРЅС‹Рµ</t><br/>____________________<br/>Р’РѕРµРЅРЅР°СЏ СЂР°Р·РІРµРґРєР° РґРѕРєР»Р°РґС‹РІР°РµС‚ Рѕ РїСЂРµРґСЃС‚РѕСЏС‰РµРј РѕР±РјРµРЅРµ СЃС‚СЂР°С‚РµРіРёС‡РµСЃРєРё РІР°Р¶РЅРѕР№ Рё РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РјРµР¶РґСѓ РІС‹СЃРѕРєРѕРїРѕСЃС‚Р°РІР»РµРЅРЅС‹РјРё Р°РіРµРЅС‚Р°РјРё РІСЂР°РіР°. Р”Р°РЅРЅР°СЏ С†РµР»СЊ РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ СЃРѕР±РѕР№ СѓРґРѕР±РЅС‹Р№ СЃР»СѓС‡Р°Р№ РґР»СЏ РєРѕРЅС‚СЂСЂР°Р·РІРµРґРєРё!<br/><br/>Р’Р°С€Р° Р·Р°РґР°С‡Р° - РІС‹РґРІРёРЅСѓС‚СЃСЏ РЅР° РІС‹С€РµСѓРєР°Р·Р°РЅСѓСЋ С‚РѕС‡РєСѓ СЃ С†РµР»СЊСЋ РїРµСЂРµС…РІР°С‚Р° СЂР°Р·РІРµРґРґР°РЅРЅС‹С…, РЅР°С…РѕРґСЏС‰РёС…СЃСЏ РІ РѕРґРЅРѕР№ РёР· РјР°С€РёРЅ СЃРѕРїСЂРѕРІРѕР¶РґРµРЅРёСЏ РёР»Рё-Р¶Рµ Р»РёС‡РЅРѕ Сѓ РѕРґРЅРѕРіРѕ РёР· Р°РіРµРЅС‚РѕРІ.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Разведданные"]; publicVariable "showNotification";
-	sideMarkerText = "Разведданные"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Р Р°Р·РІРµРґРґР°РЅРЅС‹Рµ"]; publicVariable "showNotification";
+	sideMarkerText = "Р Р°Р·РІРµРґРґР°РЅРЅС‹Рµ"; publicVariable "sideMarkerText";
 	
 	sleep 0.3;
 	
@@ -188,7 +188,7 @@ while { sideMissionUp } do {
 		
 		//---------- DE-BRIEF
 		
-		hqSideChat = "Цель уничтожена преждевременно! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р¦РµР»СЊ СѓРЅРёС‡С‚РѕР¶РµРЅР° РїСЂРµР¶РґРµРІСЂРµРјРµРЅРЅРѕ! Р—РђР”РђРќРР• РџР РћР’РђР›Р•РќРћ!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		sideMissionUp = false; publicVariable "sideMissionUp";
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
@@ -217,7 +217,7 @@ while { sideMissionUp } do {
 		
 			sleep 0.3;
 		
-			hqSideChat = "Вас обнаружили; противник предпринимает попытку уйти вместе с разведданными!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+			hqSideChat = "Р’Р°СЃ РѕР±РЅР°СЂСѓР¶РёР»Рё; РїСЂРѕС‚РёРІРЅРёРє РїСЂРµРґРїСЂРёРЅРёРјР°РµС‚ РїРѕРїС‹С‚РєСѓ СѓР№С‚Рё РІРјРµСЃС‚Рµ СЃ СЂР°Р·РІРµРґРґР°РЅРЅС‹РјРё!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		
 			//---------- WHERE TO / HOW WILL THE OBJECTIVES ESCAPE?
 			
@@ -283,7 +283,7 @@ while { sideMissionUp } do {
 			
 			//---------- DE-BRIEF
 			
-			hqSideChat = "Цель ушла от преследования! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+			hqSideChat = "Р¦РµР»СЊ СѓС€Р»Р° РѕС‚ РїСЂРµСЃР»РµРґРѕРІР°РЅРёСЏ! Р—РђР”РђРќРР• РџР РћР’РђР›Р•РќРћ!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			sideMissionUp = false; publicVariable "sideMissionUp";
 			[] spawn QS_fnc_SMhintFAIL;
 			{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
@@ -303,7 +303,7 @@ while { sideMissionUp } do {
 		
 		//---------- DE-BRIEF
 		
-		hqSideChat = "Разведданные захвачены. ЗАДАНИЕ ВЫПОЛНЕНО! Данные отправлены на исследование."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р Р°Р·РІРµРґРґР°РЅРЅС‹Рµ Р·Р°С…РІР°С‡РµРЅС‹. Р—РђР”РђРќРР• Р’Р«РџРћР›РќР•РќРћ! Р”Р°РЅРЅС‹Рµ РѕС‚РїСЂР°РІР»РµРЅС‹ РЅР° РёСЃСЃР»РµРґРѕРІР°РЅРёРµ."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		sideMissionUp = false; publicVariable "sideMissionUp";
 		[] spawn QS_fnc_SMhintSUCCESS;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";

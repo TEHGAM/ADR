@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author:
 
 	Quiksilver
@@ -14,7 +14,7 @@ ____________________________________*/
 
 #define CHOPPER_TYPE "O_Heli_Attack_02_black_F","O_Heli_Light_02_unarmed_F","B_Heli_Attack_01_F"
 private ["_objPos","_flatPos","_accepted","_position","_randomDir","_hangar","_x","_enemiesArray","_briefing","_fuzzyPos","_unitsArray","_dummy","_object"];
-_c4Message = ["Данные о вертолёте захвачены. Заряд установлен! 5 секунд до взрыва.","Чертежи вертолёта у нас. Взрывчатка установлена! 5 секунд до взрыва.","Данные прототипа захвачены. C-4 активирован! 5 секунд до детонации."] call BIS_fnc_selectRandom;
+_c4Message = ["Р”Р°РЅРЅС‹Рµ Рѕ РІРµСЂС‚РѕР»С‘С‚Рµ Р·Р°С…РІР°С‡РµРЅС‹. Р—Р°СЂСЏРґ СѓСЃС‚Р°РЅРѕРІР»РµРЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°.","Р§РµСЂС‚РµР¶Рё РІРµСЂС‚РѕР»С‘С‚Р° Сѓ РЅР°СЃ. Р’Р·СЂС‹РІС‡Р°С‚РєР° СѓСЃС‚Р°РЅРѕРІР»РµРЅР°! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°.","Р”Р°РЅРЅС‹Рµ РїСЂРѕС‚РѕС‚РёРїР° Р·Р°С…РІР°С‡РµРЅС‹. C-4 Р°РєС‚РёРІРёСЂРѕРІР°РЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РґРµС‚РѕРЅР°С†РёРё."] call BIS_fnc_selectRandom;
 
 
 //-------------------- FIND SAFE POSITION FOR OBJECTIVE
@@ -75,10 +75,10 @@ _c4Message = ["Данные о вертолёте захвачены. Заряд установлен! 5 секунд до взрыв
 	"sideMarker" setMarkerText "Side Mission: Secure Enemy Chopper"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 
-	_briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Прототип</t><br/>____________________<br/>Вражеские силы взяли на испытание новый прототип боевого вертолёта, который они скрывают в одном из своих ангаров.<br/><br/>Ваша задача — выдвинутся в указанный район, захватить данные о вертолёте и уничтожить прототип.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Р”РѕРїР·Р°РґР°РЅРёРµ</t><br/><t size='1.5' color='#00B2EE'>РџСЂРѕС‚РѕС‚РёРї</t><br/>____________________<br/>Р’СЂР°Р¶РµСЃРєРёРµ СЃРёР»С‹ РІР·СЏР»Рё РЅР° РёСЃРїС‹С‚Р°РЅРёРµ РЅРѕРІС‹Р№ РїСЂРѕС‚РѕС‚РёРї Р±РѕРµРІРѕРіРѕ РІРµСЂС‚РѕР»С‘С‚Р°, РєРѕС‚РѕСЂС‹Р№ РѕРЅРё СЃРєСЂС‹РІР°СЋС‚ РІ РѕРґРЅРѕРј РёР· СЃРІРѕРёС… Р°РЅРіР°СЂРѕРІ.<br/><br/>Р’Р°С€Р° Р·Р°РґР°С‡Р° вЂ” РІС‹РґРІРёРЅСѓС‚СЃСЏ РІ СѓРєР°Р·Р°РЅРЅС‹Р№ СЂР°Р№РѕРЅ, Р·Р°С…РІР°С‚РёС‚СЊ РґР°РЅРЅС‹Рµ Рѕ РІРµСЂС‚РѕР»С‘С‚Рµ Рё СѓРЅРёС‡С‚РѕР¶РёС‚СЊ РїСЂРѕС‚РѕС‚РёРї.</t>";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Прототип"]; publicVariable "showNotification";
-	sideMarkerText = "Прототип"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "РџСЂРѕС‚РѕС‚РёРї"]; publicVariable "showNotification";
+	sideMarkerText = "РџСЂРѕС‚РѕС‚РёРї"; publicVariable "sideMarkerText";
 	
 	sideMissionUp = true; publicVariable "sideMissionUp";
 	SM_SUCCESS = false; publicVariable "SM_SUCCESS";
@@ -90,7 +90,7 @@ while { sideMissionUp } do {
 		
 		//-------------------- DE-BRIEFING
 		
-		hqSideChat = "Данные о прототипе утеряны. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р”Р°РЅРЅС‹Рµ Рѕ РїСЂРѕС‚РѕС‚РёРїРµ СѓС‚РµСЂСЏРЅС‹. Р—Р°РґР°РЅРёРµ РїСЂРѕРІР°Р»РµРЅРѕ!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		sideMissionUp = false; publicVariable "sideMissionUp";

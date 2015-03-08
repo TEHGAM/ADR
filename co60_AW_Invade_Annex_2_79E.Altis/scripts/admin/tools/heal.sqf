@@ -1,5 +1,5 @@
-hint format ["Перевязывает раны..."];
+﻿hint format ["РџРµСЂРµРІСЏР·С‹РІР°РµС‚ СЂР°РЅС‹..."];
 sleep 2;
 player setDamage 0;
-"Перевязал свои раны" call BIS_fnc_log;
-hint format ["Готов"];
+"РџРµСЂРµРІСЏР·Р°Р» СЃРІРѕРё СЂР°РЅС‹" call BIS_fnc_log;
+hint format ["Р“РѕС‚РѕРІ"];

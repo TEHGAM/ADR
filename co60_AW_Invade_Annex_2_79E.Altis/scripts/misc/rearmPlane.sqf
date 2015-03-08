@@ -1,13 +1,13 @@
-private ["_veh"];
+п»їprivate ["_veh"];
 _veh = _this select 0;
 
 if (_veh isKindOf "ParachuteBase" || !alive _veh) exitWith {};
 
 if (!(_veh isKindOf "plane")) exitWith { 
-	_veh vehicleChat "Эта площадка предназначена только для обслуживания самолётов!"; 
+	_veh vehicleChat "Р­С‚Р° РїР»РѕС‰Р°РґРєР° РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅР° С‚РѕР»СЊРєРѕ РґР»СЏ РѕР±СЃР»СѓР¶РёРІР°РЅРёСЏ СЃР°РјРѕР»С‘С‚РѕРІ!"; 
 };
 
-_veh vehicleChat "Обслуживание самолета, это займет около 5 минут";
+_veh vehicleChat "РћР±СЃР»СѓР¶РёРІР°РЅРёРµ СЃР°РјРѕР»РµС‚Р°, СЌС‚Рѕ Р·Р°Р№РјРµС‚ РѕРєРѕР»Рѕ 5 РјРёРЅСѓС‚";
 
 _veh setFuel 0;
 
@@ -15,33 +15,33 @@ _veh setFuel 0;
 
 sleep 100;
 
-_veh vehicleChat "Перезаряжаем...";
+_veh vehicleChat "РџРµСЂРµР·Р°СЂСЏР¶Р°РµРј...";
 
 //---------- REPAIRING
 
 sleep 100;
 
-_veh vehicleChat "Ремонтируем...";
+_veh vehicleChat "Р РµРјРѕРЅС‚РёСЂСѓРµРј...";
 
 //---------- REFUELING
 
 sleep 100;
 
-_veh vehicleChat "Заправляем...";
+_veh vehicleChat "Р—Р°РїСЂР°РІР»СЏРµРј...";
 
 //---------- FINISHED
 
 sleep 10;
 
 _veh setDamage 0;
-_veh vehicleChat "Отремонтирован (100%).";
+_veh vehicleChat "РћС‚СЂРµРјРѕРЅС‚РёСЂРѕРІР°РЅ (100%).";
 
 _veh setVehicleAmmo 1;
-_veh vehicleChat "Перезаряжен (100%).";
+_veh vehicleChat "РџРµСЂРµР·Р°СЂСЏР¶РµРЅ (100%).";
 
 _veh setFuel 1;
-_veh vehicleChat "Заправлен (100%).";
+_veh vehicleChat "Р—Р°РїСЂР°РІР»РµРЅ (100%).";
 
 sleep 2;
 
-_veh vehicleChat "Обслуживание завершено.";
+_veh vehicleChat "РћР±СЃР»СѓР¶РёРІР°РЅРёРµ Р·Р°РІРµСЂС€РµРЅРѕ.";

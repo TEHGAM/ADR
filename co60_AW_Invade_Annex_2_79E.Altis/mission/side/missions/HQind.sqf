@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author:
 
 	Quiksilver
@@ -15,7 +15,7 @@ ____________________________________*/
 
 private ["_flatPos","_accepted","_position","_enemiesArray","_fuzzyPos","_x","_briefing","_unitsArray","_object","_SMveh","_SMaa","_tower1","_tower2","_tower3","_flatPos1","_flatPos2"];
 
-_c4Message = ["Перехват оружия завершён. Заряд установлен! 5 секунд до взрыва.","Пусковая установка захвачена. Взрывчатка установлена! 5 секунд до взрыва.","Оружие врага захвачено. C-4 активирован! 5 секунд до детонации."] call BIS_fnc_selectRandom;
+_c4Message = ["РџРµСЂРµС…РІР°С‚ РѕСЂСѓР¶РёСЏ Р·Р°РІРµСЂС€С‘РЅ. Р—Р°СЂСЏРґ СѓСЃС‚Р°РЅРѕРІР»РµРЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°.","РџСѓСЃРєРѕРІР°СЏ СѓСЃС‚Р°РЅРѕРІРєР° Р·Р°С…РІР°С‡РµРЅР°. Р’Р·СЂС‹РІС‡Р°С‚РєР° СѓСЃС‚Р°РЅРѕРІР»РµРЅР°! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°.","РћСЂСѓР¶РёРµ РІСЂР°РіР° Р·Р°С…РІР°С‡РµРЅРѕ. C-4 Р°РєС‚РёРІРёСЂРѕРІР°РЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РґРµС‚РѕРЅР°С†РёРё."] call BIS_fnc_selectRandom;
 
 
 //-------------------- FIND POSITION FOR OBJECTIVE
@@ -66,12 +66,12 @@ _c4Message = ["Перехват оружия завершён. Заряд установлен! 5 секунд до взрыва.",
 
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Допка: Система ПВО"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Р”РѕРїРєР°: РЎРёСЃС‚РµРјР° РџР’Рћ"; publicVariable "sideMarker";
 	publicVariable "sideObj";
-	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Система ПВО</t><br/>____________________<br/>Предатель в рядах союзных войск передаёт вражеским силам новейшие пусковые установки для систем ПВО.<br/><br/>Ваша задача — выдвинутся в указанный район, найти и захватить пусковые установки, ликвидируя группировки врага по ходу операции.</t>";
+	_briefing = "<t align='center'><t size='2.2'>РќРѕРІРѕРµ РґРѕРїР·Р°РґР°РЅРёРµ</t><br/><t size='1.5' color='#00B2EE'>РЎРёСЃС‚РµРјР° РџР’Рћ</t><br/>____________________<br/>РџСЂРµРґР°С‚РµР»СЊ РІ СЂСЏРґР°С… СЃРѕСЋР·РЅС‹С… РІРѕР№СЃРє РїРµСЂРµРґР°С‘С‚ РІСЂР°Р¶РµСЃРєРёРј СЃРёР»Р°Рј РЅРѕРІРµР№С€РёРµ РїСѓСЃРєРѕРІС‹Рµ СѓСЃС‚Р°РЅРѕРІРєРё РґР»СЏ СЃРёСЃС‚РµРј РџР’Рћ.<br/><br/>Р’Р°С€Р° Р·Р°РґР°С‡Р° вЂ” РІС‹РґРІРёРЅСѓС‚СЃСЏ РІ СѓРєР°Р·Р°РЅРЅС‹Р№ СЂР°Р№РѕРЅ, РЅР°Р№С‚Рё Рё Р·Р°С…РІР°С‚РёС‚СЊ РїСѓСЃРєРѕРІС‹Рµ СѓСЃС‚Р°РЅРѕРІРєРё, Р»РёРєРІРёРґРёСЂСѓСЏ РіСЂСѓРїРїРёСЂРѕРІРєРё РІСЂР°РіР° РїРѕ С…РѕРґСѓ РѕРїРµСЂР°С†РёРё.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Secure Launchers"]; publicVariable "showNotification";
-	sideMarkerText = "Система ПВО"; publicVariable "sideMarkerText";
+	sideMarkerText = "РЎРёСЃС‚РµРјР° РџР’Рћ"; publicVariable "sideMarkerText";
 	
 //-------------------- [ CORE LOOPS ] ------------------------ [ CORE LOOPS ]
 
@@ -87,7 +87,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 		
 		sideMissionUp = false; publicVariable "sideMissionUp";
-		hqSideChat = "Цель уничтожена преждевременно. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р¦РµР»СЊ СѓРЅРёС‡С‚РѕР¶РµРЅР° РїСЂРµР¶РґРµРІСЂРµРјРµРЅРЅРѕ. Р—Р°РґР°РЅРёРµ РїСЂРѕРІР°Р»РµРЅРѕ!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		

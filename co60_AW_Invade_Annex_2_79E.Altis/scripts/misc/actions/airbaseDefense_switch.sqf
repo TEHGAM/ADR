@@ -1,5 +1,5 @@
-if (AIRBASEDEFENSE_SWITCH) exitWith {
-	hint "Противовоздушная оборона недоступна."
+п»їif (AIRBASEDEFENSE_SWITCH) exitWith {
+	hint "РџСЂРѕС‚РёРІРѕРІРѕР·РґСѓС€РЅР°СЏ РѕР±РѕСЂРѕРЅР° РЅРµРґРѕСЃС‚СѓРїРЅР°."
 };
 
 //-------------------- Wait for player to action
@@ -8,7 +8,7 @@ sleep 1;
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Активирование противовоздушную оборону...";
+hint "РђРєС‚РёРІРёСЂРѕРІР°РЅРёРµ РїСЂРѕС‚РёРІРѕРІРѕР·РґСѓС€РЅСѓСЋ РѕР±РѕСЂРѕРЅСѓ...";
 
 sleep 3;
 

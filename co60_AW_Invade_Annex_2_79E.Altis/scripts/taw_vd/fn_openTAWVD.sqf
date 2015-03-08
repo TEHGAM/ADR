@@ -1,11 +1,11 @@
-/*
+п»ї/*
 	File: fn_openTAWVD.sqf
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
 	Called via addAction and opens the TAW View Distance Menu
 */
-if(!createDialog "TAW_VD") exitWith {hint "Что-то не так; меню не открывается?"};
+if(!createDialog "TAW_VD") exitWith {hint "Р§С‚Рѕ-С‚Рѕ РЅРµ С‚Р°Рє; РјРµРЅСЋ РЅРµ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ?"};
 disableSerialization;
 
 ctrlSetText[2902, format["%1", tawvd_foot]];

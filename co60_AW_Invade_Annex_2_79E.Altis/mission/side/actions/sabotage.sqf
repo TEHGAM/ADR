@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author:
 
 	Quiksilver
@@ -28,7 +28,7 @@ sleep 1;
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Заряд установлен. Уходим!";
+hint "Р—Р°СЂСЏРґ СѓСЃС‚Р°РЅРѕРІР»РµРЅ. РЈС…РѕРґРёРј!";
 
 sleep 1;
 

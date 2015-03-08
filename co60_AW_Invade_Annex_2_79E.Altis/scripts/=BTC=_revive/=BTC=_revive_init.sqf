@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Created by =BTC= Giallustio
 version 0.95 Offical release
 Visit us at:
@@ -30,7 +30,7 @@ BTC_s_mode_view     = ["First person","Behind the back","High","Free"];
 BTC_black_screen    = 0;											//Black screen + button while unconscious or action wheel and clear view
 BTC_action_respawn  = 0;											//if black screen is set to 0 you can choose if you want to use the action wheel or the button. Keep in mind that if you don't use the button, the injured player can use all the action, frag too....
 BTC_camera_unc      = 1;
-BTC_camera_unc_type = ["Вид со спины","Вид свысока"];
+BTC_camera_unc_type = ["Р’РёРґ СЃРѕ СЃРїРёРЅС‹","Р’РёРґ СЃРІС‹СЃРѕРєР°"];
 BTC_respawn_time    = 3;
 BTC_active_mobile   = 0;											//Active mobile respawn (You have to put in map the vehicle and give it a name. Then you have to add one object per side to move to the mobile (BTC_base_flag_west,BTC_base_flag_east) - (1 = yes, 0 = no))
 BTC_mobile_respawn  = 0;											//Active the mobile respawn fnc (1 = yes, 0 = no)
@@ -150,22 +150,22 @@ BTC_respawn_cond = false;
 	player setVariable ["BTC_dragged",0,true];
 	
 	if ([player] call BTC_is_class_can_revive) then {
-		player addAction [("<t color=""#d63333"">") + ("Первая помощь") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_first_aid"];
+		player addAction [("<t color=""#d63333"">") + ("РџРµСЂРІР°СЏ РїРѕРјРѕС‰СЊ") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_first_aid"];
 	};	
 	if (!([player] call BTC_is_class_can_revive)) then {
-        player addAction [("<t color=""#d63333"">") + ("Первая помощь (Медицинский HEMTT)") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_HEMTT"];
+        player addAction [("<t color=""#d63333"">") + ("РџРµСЂРІР°СЏ РїРѕРјРѕС‰СЊ (РњРµРґРёС†РёРЅСЃРєРёР№ HEMTT)") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_HEMTT"];
     };
-	player addAction [("<t color=""#d63333"">") + ("Тащить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_drag], 8, true, true, "", "[] call BTC_check_action_drag"];
-	player addAction [("<t color=""#d63333"">") + ("Нести") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_carry], 8, true, true, "", "[] call BTC_check_action_drag"];
-	player addAction [("<t color=""#d63333"">") + ("Выгрузить раненого") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_pull_out], 8, true, true, "", "[] call BTC_pull_out_check"];
+	player addAction [("<t color=""#d63333"">") + ("РўР°С‰РёС‚СЊ") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_drag], 8, true, true, "", "[] call BTC_check_action_drag"];
+	player addAction [("<t color=""#d63333"">") + ("РќРµСЃС‚Рё") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_carry], 8, true, true, "", "[] call BTC_check_action_drag"];
+	player addAction [("<t color=""#d63333"">") + ("Р’С‹РіСЂСѓР·РёС‚СЊ СЂР°РЅРµРЅРѕРіРѕ") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_pull_out], 8, true, true, "", "[] call BTC_pull_out_check"];
 	
 	if (BTC_active_mobile == 1) then {
 	
 		switch (true) do {
-			case (BTC_side == west) : {{private ["_veh"];_veh = _x;_spawn = [_x] spawn BTC_mobile_marker;{_x addAction [("<t color=""#d63333"">") + ("Выдвинуться к КШМ " + _veh) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_veh],BTC_move_to_mobile], 8, true, true, "", format ["[""%1""] call BTC_mobile_check",_veh]];} foreach BTC_objects_actions_west;} foreach BTC_vehs_mobile_west_str;};
-			case (BTC_side == east) : {{private ["_veh"];_veh = _x;_spawn = [_x] spawn BTC_mobile_marker;{_x addAction [("<t color=""#d63333"">") + ("Выдвинуться к КШМ " + _veh) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_veh],BTC_move_to_mobile], 8, true, true, "", format ["[""%1""] call BTC_mobile_check",_veh]];} foreach BTC_objects_actions_east;} foreach BTC_vehs_mobile_east_str;};
-			case (str (BTC_side) == "guer") : {{private ["_veh"];_veh = _x;_spawn = [_x] spawn BTC_mobile_marker;{_x addAction [("<t color=""#d63333"">") + ("Выдвинуться к КШМ " + _veh) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_veh],BTC_move_to_mobile], 8, true, true, "", format ["[""%1""] call BTC_mobile_check",_veh]];} foreach BTC_objects_actions_guer;} foreach BTC_vehs_mobile_guer_str;};
-			case (BTC_side == civilian) : {{private ["_veh"];_veh = _x;_spawn = [_x] spawn BTC_mobile_marker;{_x addAction [("<t color=""#d63333"">") + ("Выдвинуться к КШМ " + _veh) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_veh],BTC_move_to_mobile], 8, true, true, "", format ["[""%1""] call BTC_mobile_check",_veh]];} foreach BTC_objects_actions_civ;} foreach BTC_vehs_mobile_civ_str;};
+			case (BTC_side == west) : {{private ["_veh"];_veh = _x;_spawn = [_x] spawn BTC_mobile_marker;{_x addAction [("<t color=""#d63333"">") + ("Р’С‹РґРІРёРЅСѓС‚СЊСЃСЏ Рє РљРЁРњ " + _veh) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_veh],BTC_move_to_mobile], 8, true, true, "", format ["[""%1""] call BTC_mobile_check",_veh]];} foreach BTC_objects_actions_west;} foreach BTC_vehs_mobile_west_str;};
+			case (BTC_side == east) : {{private ["_veh"];_veh = _x;_spawn = [_x] spawn BTC_mobile_marker;{_x addAction [("<t color=""#d63333"">") + ("Р’С‹РґРІРёРЅСѓС‚СЊСЃСЏ Рє РљРЁРњ " + _veh) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_veh],BTC_move_to_mobile], 8, true, true, "", format ["[""%1""] call BTC_mobile_check",_veh]];} foreach BTC_objects_actions_east;} foreach BTC_vehs_mobile_east_str;};
+			case (str (BTC_side) == "guer") : {{private ["_veh"];_veh = _x;_spawn = [_x] spawn BTC_mobile_marker;{_x addAction [("<t color=""#d63333"">") + ("Р’С‹РґРІРёРЅСѓС‚СЊСЃСЏ Рє РљРЁРњ " + _veh) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_veh],BTC_move_to_mobile], 8, true, true, "", format ["[""%1""] call BTC_mobile_check",_veh]];} foreach BTC_objects_actions_guer;} foreach BTC_vehs_mobile_guer_str;};
+			case (BTC_side == civilian) : {{private ["_veh"];_veh = _x;_spawn = [_x] spawn BTC_mobile_marker;{_x addAction [("<t color=""#d63333"">") + ("Р’С‹РґРІРёРЅСѓС‚СЊСЃСЏ Рє РљРЁРњ " + _veh) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_veh],BTC_move_to_mobile], 8, true, true, "", format ["[""%1""] call BTC_mobile_check",_veh]];} foreach BTC_objects_actions_civ;} foreach BTC_vehs_mobile_civ_str;};
 		};
 	
 	} else {

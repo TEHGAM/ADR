@@ -1,4 +1,4 @@
-private ["_Source", "_debugPlayer", "_cName", "_cCamera", "_KEGs_cs"];
+Ôªøprivate ["_Source", "_debugPlayer", "_cName", "_cCamera", "_KEGs_cs"];
 
 //diag_log format ["camera menu start: %1", KEGs_target];
 
@@ -130,5 +130,5 @@ _cCamera = 55002;
 	};
 */
 
-ctrlSetText[_cCamera, format[" ‡ÏÂ‡: %1", KEGs_cameraNames select KEGs_cameraIdx]];	
+ctrlSetText[_cCamera, format["–ö–∞–º–µ—Ä–∞: %1", KEGs_cameraNames select KEGs_cameraIdx]];	
 KEGs_camSelLast = lbCurSel KEGs_cLBCameras; 

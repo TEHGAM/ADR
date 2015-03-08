@@ -1,4 +1,4 @@
-/*
+п»ї/*
 	GrenadeStop v0.8 for ArmA 3 Alpha
 	
 AUTHOR:
@@ -16,7 +16,7 @@ CONFIGURATION:
 _______________________________________________________________________*/
 
 #define SAFETY_ZONES	[["respawn_west", 800], ["respawn_pilot", 200]] // Syntax: [["marker1", radius1], ["marker2", radius2], ...]
-#define MESSAGE "Бесцельное использование оружия на базe запрещено!"
+#define MESSAGE "Р‘РµСЃС†РµР»СЊРЅРѕРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РѕСЂСѓР¶РёСЏ РЅР° Р±Р°Р·e Р·Р°РїСЂРµС‰РµРЅРѕ!"
 
 waitUntil {!isNull player};
 

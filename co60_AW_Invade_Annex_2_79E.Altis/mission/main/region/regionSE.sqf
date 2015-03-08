@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author: 
 
 	Quiksilver
@@ -91,9 +91,9 @@ while { count _targetArray > 0 } do {
 	
 		_unitsArray = [_flatPos] call QS_fnc_AOminefield;
 	
-		"radioMarker" setMarkerText "Вышка (мины)";
+		"radioMarker" setMarkerText "Р’С‹С€РєР° (РјРёРЅС‹)";
 	} else {
-		"radioMarker" setMarkerText "Вышка";
+		"radioMarker" setMarkerText "Р’С‹С€РєР°";
 	};
 	publicVariable "radioTower";
 
@@ -105,7 +105,7 @@ while { count _targetArray > 0 } do {
 	
 	_targetStartText = format
 	[
-		"<t align='center' size='2.2'>Захватить</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Начинайте наступление.<br/><br/>Уничтожив радиовышку противника вы устраните их возможность на вызов авиаподдержки.",
+		"<t align='center' size='2.2'>Р—Р°С…РІР°С‚РёС‚СЊ</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>РќР°С‡РёРЅР°Р№С‚Рµ РЅР°СЃС‚СѓРїР»РµРЅРёРµ.<br/><br/>РЈРЅРёС‡С‚РѕР¶РёРІ СЂР°РґРёРѕРІС‹С€РєСѓ РїСЂРѕС‚РёРІРЅРёРєР° РІС‹ СѓСЃС‚СЂР°РЅРёС‚Рµ РёС… РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РЅР° РІС‹Р·РѕРІ Р°РІРёР°РїРѕРґРґРµСЂР¶РєРё.",
 		currentAO
 	];
 
@@ -113,7 +113,7 @@ while { count _targetArray > 0 } do {
 	
 	GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewMain", currentAO]; publicVariable "showNotification";
-	showNotification = ["NewSub", "Обнаружена радиовышка противника"]; publicVariable "showNotification";		
+	showNotification = ["NewSub", "РћР±РЅР°СЂСѓР¶РµРЅР° СЂР°РґРёРѕРІС‹С€РєР° РїСЂРѕС‚РёРІРЅРёРєР°"]; publicVariable "showNotification";		
 	
 	//-------------------------------------------- CORE LOOP
 	
@@ -125,9 +125,9 @@ while { count _targetArray > 0 } do {
 	
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["radioMarker","radioCircle"];
-	_radioTowerDownText = "<t align='center' size='2.2'>Радиовышка</t><br/><t size='1.5' color='#08b000' align='center'>УНИЧТОЖЕНА</t><br/>____________________<br/><t align='center'>Противник больше не имеет возможности вызвать поддержку с воздуха.</t>";
+	_radioTowerDownText = "<t align='center' size='2.2'>Р Р°РґРёРѕРІС‹С€РєР°</t><br/><t size='1.5' color='#08b000' align='center'>РЈРќРР§РўРћР–Р•РќРђ</t><br/>____________________<br/><t align='center'>РџСЂРѕС‚РёРІРЅРёРє Р±РѕР»СЊС€Рµ РЅРµ РёРјРµРµС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РІС‹Р·РІР°С‚СЊ РїРѕРґРґРµСЂР¶РєСѓ СЃ РІРѕР·РґСѓС…Р°.</t>";
 	GlobalHint = _radioTowerDownText; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["CompletedSub", "Радиовышка уничтожена"]; publicVariable "showNotification";
+	showNotification = ["CompletedSub", "Р Р°РґРёРѕРІС‹С€РєР° СѓРЅРёС‡С‚РѕР¶РµРЅР°"]; publicVariable "showNotification";
 	
 	//---------------------------------------------- WHEN ENEMIES KILLED
 
@@ -140,7 +140,7 @@ while { count _targetArray > 0 } do {
 	//---------------------------------------------- DE-BRIEF 1
 	
 	sleep 3;
-	_targetCompleteText = format ["<t align='center' size='2.2'>Захватили</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='center'>Скоординируйте оборону и укрепите захваченные позиции перед контратакой врага.</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Р—Р°С…РІР°С‚РёР»Рё</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='center'>РЎРєРѕРѕСЂРґРёРЅРёСЂСѓР№С‚Рµ РѕР±РѕСЂРѕРЅСѓ Рё СѓРєСЂРµРїРёС‚Рµ Р·Р°С…РІР°С‡РµРЅРЅС‹Рµ РїРѕР·РёС†РёРё РїРµСЂРµРґ РєРѕРЅС‚СЂР°С‚Р°РєРѕР№ РІСЂР°РіР°.</t>",currentAO];
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["aoCircle","aoMarker","radioCircle"];
 	GlobalHint = _targetCompleteText; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["CompletedMain", currentAO]; publicVariable "showNotification";
@@ -161,7 +161,7 @@ while { count _targetArray > 0 } do {
 
 	//----------------------------------------------------- DE-BRIEF
 	
-	_targetCompleteText = format ["<t align='center' size='2.2'>Удержали</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='center'>Начинайте перегруппировку сил.</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>РЈРґРµСЂР¶Р°Р»Рё</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='center'>РќР°С‡РёРЅР°Р№С‚Рµ РїРµСЂРµРіСЂСѓРїРїРёСЂРѕРІРєСѓ СЃРёР».</t>",currentAO];
 	GlobalHint = _targetCompleteText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	
 	//----------------------------------------------------- MAINTENANCE

@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author:
 
 	Quiksilver
@@ -206,9 +206,9 @@ private ["_dir","_PTdir","_pos","_barrier","_unitsArray","_flatPos","_accepted",
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["priorityMarker", "priorityCircle"];    								
 	"priorityMarker" setMarkerText "Priority Target: Anti-Air Battery"; publicVariable "priorityMarker";
-	_briefing = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#d63333'>Вражеская батарея</t><br/>____________________<br/>Обнаружена точка укрепления зенитных орудий противника. Её близлежащее расположение грозит как группам десантирования, так и всей нашей авиации в целом.";
+	_briefing = "<t align='center' size='2.2'>Р’РЅРёРјР°РЅРёРµ</t><br/><t size='1.5' color='#d63333'>Р’СЂР°Р¶РµСЃРєР°СЏ Р±Р°С‚Р°СЂРµСЏ</t><br/>____________________<br/>РћР±РЅР°СЂСѓР¶РµРЅР° С‚РѕС‡РєР° СѓРєСЂРµРїР»РµРЅРёСЏ Р·РµРЅРёС‚РЅС‹С… РѕСЂСѓРґРёР№ РїСЂРѕС‚РёРІРЅРёРєР°. Р•С‘ Р±Р»РёР·Р»РµР¶Р°С‰РµРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РіСЂРѕР·РёС‚ РєР°Рє РіСЂСѓРїРїР°Рј РґРµСЃР°РЅС‚РёСЂРѕРІР°РЅРёСЏ, С‚Р°Рє Рё РІСЃРµР№ РЅР°С€РµР№ Р°РІРёР°С†РёРё РІ С†РµР»РѕРј.";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
-	showNotification = ["NewPriorityTarget", "Обнаружена батарея врага"]; publicVariable "showNotification";
+	showNotification = ["NewPriorityTarget", "РћР±РЅР°СЂСѓР¶РµРЅР° Р±Р°С‚Р°СЂРµСЏ РІСЂР°РіР°"]; publicVariable "showNotification";
 	
 //-------------------- 8. CORE LOOP
 
@@ -235,9 +235,9 @@ waitUntil {
 
 //-------------------- 9. DE-BRIEF
 	
-	_completeText = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#08b000'>Батарея подавлена</t><br/>____________________<br/>Противник лишился основных средств ПВО.<br/><br/>Возвращайтесь к выполнению основной задачи.";
+	_completeText = "<t align='center' size='2.2'>Р’РЅРёРјР°РЅРёРµ</t><br/><t size='1.5' color='#08b000'>Р‘Р°С‚Р°СЂРµСЏ РїРѕРґР°РІР»РµРЅР°</t><br/>____________________<br/>РџСЂРѕС‚РёРІРЅРёРє Р»РёС€РёР»СЃСЏ РѕСЃРЅРѕРІРЅС‹С… СЃСЂРµРґСЃС‚РІ РџР’Рћ.<br/><br/>Р’РѕР·РІСЂР°С‰Р°Р№С‚РµСЃСЊ Рє РІС‹РїРѕР»РЅРµРЅРёСЋ РѕСЃРЅРѕРІРЅРѕР№ Р·Р°РґР°С‡Рё.";
 	GlobalHint = _completeText; hint parseText _completeText; publicVariable "GlobalHint";
-	showNotification = ["CompletedPriorityTarget", "Зенитная батарея нейтрализована"]; publicVariable "showNotification";
+	showNotification = ["CompletedPriorityTarget", "Р—РµРЅРёС‚РЅР°СЏ Р±Р°С‚Р°СЂРµСЏ РЅРµР№С‚СЂР°Р»РёР·РѕРІР°РЅР°"]; publicVariable "showNotification";
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["priorityMarker","priorityCircle"]; publicVariable "priorityMarker";
 
 //-------------------- 10. DELETE

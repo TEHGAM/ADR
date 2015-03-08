@@ -1,4 +1,4 @@
-/*
+п»ї/*
 @file: destroyRadar.sqf
 Author:
 
@@ -15,7 +15,7 @@ _________________________________________________________________________*/
 
 private ["_objPos","_flatPos","_accepted","_position","_randomDir","_hangar","_x","_enemiesArray","_briefing","_fuzzyPos","_unitsArray","_dummy","_object","_tower1","_tower2","_tower3"];
 
-_c4Message = ["Радиолокационные данные захвачены. C-4 активирован! 5 секунд до детонации.","Телеметрические данные радара получены. Взрывчатка установлена! 5 секунд до взрыва.","Данные радара считаны. Заряд установлен! 5 секунд до взрыва."] call BIS_fnc_selectRandom;
+_c4Message = ["Р Р°РґРёРѕР»РѕРєР°С†РёРѕРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ Р·Р°С…РІР°С‡РµРЅС‹. C-4 Р°РєС‚РёРІРёСЂРѕРІР°РЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РґРµС‚РѕРЅР°С†РёРё.","РўРµР»РµРјРµС‚СЂРёС‡РµСЃРєРёРµ РґР°РЅРЅС‹Рµ СЂР°РґР°СЂР° РїРѕР»СѓС‡РµРЅС‹. Р’Р·СЂС‹РІС‡Р°С‚РєР° СѓСЃС‚Р°РЅРѕРІР»РµРЅР°! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°.","Р”Р°РЅРЅС‹Рµ СЂР°РґР°СЂР° СЃС‡РёС‚Р°РЅС‹. Р—Р°СЂСЏРґ СѓСЃС‚Р°РЅРѕРІР»РµРЅ! 5 СЃРµРєСѓРЅРґ РґРѕ РІР·СЂС‹РІР°."] call BIS_fnc_selectRandom;
 
 //-------------------- FIND SAFE POSITION FOR OBJECTIVE
 
@@ -86,7 +86,7 @@ _c4Message = ["Радиолокационные данные захвачены. C-4 активирован! 5 секунд до д
 	"sideMarker" setMarkerText "Side Mission: Secure Radar"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 
-	_briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Радар</t><br/>____________________<br/>В целях поддержки своей авиации вражеские силы захватили небольшую радиостанцию.<br/><br/>Ваша задача — выдвинутся в указанный район, обезвредить противника, захватить радиолокационные данные, а затем уничтожить и сам радар.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Р”РѕРїР·Р°РґР°РЅРёРµ</t><br/><t size='1.5' color='#00B2EE'>Р Р°РґР°СЂ</t><br/>____________________<br/>Р’ С†РµР»СЏС… РїРѕРґРґРµСЂР¶РєРё СЃРІРѕРµР№ Р°РІРёР°С†РёРё РІСЂР°Р¶РµСЃРєРёРµ СЃРёР»С‹ Р·Р°С…РІР°С‚РёР»Рё РЅРµР±РѕР»СЊС€СѓСЋ СЂР°РґРёРѕСЃС‚Р°РЅС†РёСЋ.<br/><br/>Р’Р°С€Р° Р·Р°РґР°С‡Р° вЂ” РІС‹РґРІРёРЅСѓС‚СЃСЏ РІ СѓРєР°Р·Р°РЅРЅС‹Р№ СЂР°Р№РѕРЅ, РѕР±РµР·РІСЂРµРґРёС‚СЊ РїСЂРѕС‚РёРІРЅРёРєР°, Р·Р°С…РІР°С‚РёС‚СЊ СЂР°РґРёРѕР»РѕРєР°С†РёРѕРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ, Р° Р·Р°С‚РµРј СѓРЅРёС‡С‚РѕР¶РёС‚СЊ Рё СЃР°Рј СЂР°РґР°СЂ.</t>";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Secure Radar"]; publicVariable "showNotification";
 	sideMarkerText = "Secure Radar"; publicVariable "sideMarkerText";
@@ -101,7 +101,7 @@ while { sideMissionUp } do {
 		
 		//-------------------- DE-BRIEFING
 		
-		hqSideChat = "Данные радара утеряны. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р”Р°РЅРЅС‹Рµ СЂР°РґР°СЂР° СѓС‚РµСЂСЏРЅС‹. Р—Р°РґР°РЅРёРµ РїСЂРѕРІР°Р»РµРЅРѕ!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		sideMissionUp = false; publicVariable "sideMissionUp";

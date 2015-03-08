@@ -1,4 +1,4 @@
-/*
+п»ї/*
 Author:
 
 	Quiksilver (credit Rarek [AW] for initial design)
@@ -108,8 +108,8 @@ private ["_flatPos","_accepted","_position","_randomDir","_x","_briefing","_enem
 
 	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Secure Smuggled Explosives</t><br/>____________________<br/>The OPFOR have been smuggling explosives onto the island and hiding them in a Mobile HQ on the coastline.<br/><br/>We've marked the building on your map; head over there and secure the current shipment. Keep well back when you blow it; there's a lot of stuff in that building.</t>";
 	GlobalHint = _briefing; publicVariable "GlobalHint"; hint parseText GlobalHint;
-	showNotification = ["NewSideMission", "Тайник"]; publicVariable "showNotification";
-	sideMarkerText = "Тайник"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "РўР°Р№РЅРёРє"]; publicVariable "showNotification";
+	sideMarkerText = "РўР°Р№РЅРёРє"; publicVariable "sideMarkerText";
 	
 //-------------------- [ CORE LOOPS ]----------------------- [CORE LOOPS]
 
@@ -127,7 +127,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 		
 		sideMissionUp = false; publicVariable "sideMissionUp";
-		hqSideChat = "Цель уничтожена преждевременно. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Р¦РµР»СЊ СѓРЅРёС‡С‚РѕР¶РµРЅР° РїСЂРµР¶РґРµРІСЂРµРјРµРЅРЅРѕ. Р—Р°РґР°РЅРёРµ РїСЂРѕРІР°Р»РµРЅРѕ!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"];
 		publicVariable "sideMarker";

@@ -1,6 +1,6 @@
-// "for Spectating Script";
+﻿// "for Spectating Script";
 // "Handles events such as keyboard keypresses";
-// "by Kegetys <kegetys [�t] dnainternet.net>";
+// "by Kegetys <kegetys [дt] dnainternet.net>";
 
 _type = _this select 0;
 _param = _this select 1;
