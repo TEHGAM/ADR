@@ -347,6 +347,16 @@ class TAW_VD
 			w = 0.275; h = 0.04;
 		};
 		
+		class VD_terr_none : TAWVD_activeText
+		{
+			idc = -1;
+			text = "None";
+			action = "['none'] call TAWVD_fnc_onTerrainChange;";
+			sizeEx = 0.04;
+			x = 0.38; y = 0.50;
+			w = 0.275; h = 0.04;
+		};
+		
 		class VD_terr_low : TAWVD_activeText
 		{
 			idc = -1;
