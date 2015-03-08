@@ -695,60 +695,11 @@ class Mission
 					skill=0.60000002;
 					init="[this, [-1, -2, 0, 1]] call bis_fnc_setcuratorvisionmodes;";
 					syncId=0;
-					synchronizations[]={4};
+					synchronizations[]={3};
 				};
 			};
 		};
 		class Item7
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={14901.424,0.087085314,14803.786};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="76561198053877632";
-							parentCls="ModuleCurator_F";
-							typeName="Owner";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="ModuleCurator_F";
-							typeName="Name";
-						};
-						class Item2
-						{
-							value="2";
-							parentCls="ModuleCurator_F";
-							typeName="Addons";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleCurator_F";
-							typeName="Forced";
-						};
-					};
-					id=34;
-					side="LOGIC";
-					vehicle="ModuleCurator_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					init="[this, [-1, -2, 0, 1]] call bis_fnc_setcuratorvisionmodes;";
-					syncId=1;
-					synchronizations[]={4};
-				};
-			};
-		};
-		class Item8
 		{
 			side="LOGIC";
 			class Vehicles
@@ -785,19 +736,19 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=35;
+					id=34;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
 					init="[this, [-1, -2, 0, 1]] call bis_fnc_setcuratorvisionmodes;";
-					syncId=2;
-					synchronizations[]={4};
+					syncId=1;
+					synchronizations[]={3};
 				};
 			};
 		};
-		class Item9
+		class Item8
 		{
 			side="LOGIC";
 			class Vehicles
@@ -834,19 +785,19 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=36;
+					id=35;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
 					init="[this, [-1, -2, 0, 1]] call bis_fnc_setcuratorvisionmodes;";
-					syncId=3;
-					synchronizations[]={4};
+					syncId=2;
+					synchronizations[]={3};
 				};
 			};
 		};
-		class Item10
+		class Item9
 		{
 			side="LOGIC";
 			class Vehicles
@@ -871,19 +822,19 @@ class Mission
 							typeName="AddCrew";
 						};
 					};
-					id=37;
+					id=36;
 					side="LOGIC";
 					vehicle="ModuleCuratorAddEditableObjects";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="curatorEditable";
-					syncId=4;
-					synchronizations[]={6,7,8,0,1,2,3,5,15,16,14,34,40,37,38,19,25,18,24,23,36,33,17,31,30,29,35,13,32,42,41,20,9,26,22,21,27,28,10,12,11,43,44,45,46,48,47,49,50,51,39};
+					syncId=3;
+					synchronizations[]={6,7,8,0,1,2,4,15,16,14,34,40,37,38,19,25,18,24,23,36,33,17,31,30,29,35,13,32,42,41,20,9,26,22,21,27,28,10,12,11,43,44,45,46,48,47,49,50,51,39,5};
 				};
 			};
 		};
-		class Item11
+		class Item10
 		{
 			side="LOGIC";
 			class Vehicles
@@ -920,16 +871,37 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=38;
+					id=37;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="Noart";
 					init="[this, [-1, -2, 0, 1]] call bis_fnc_setcuratorvisionmodes;";
-					syncId=5;
-					synchronizations[]={4};
+					syncId=4;
+					synchronizations[]={3};
+				};
+			};
+		};
+		class Item11
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15281.563,17.782078,17420.625};
+					azimut=131.31799;
+					special="NONE";
+					id=38;
+					side="WEST";
+					vehicle="B_officer_F";
+					leader=1;
+					rank="MAJOR";
+					skill=0.60000002;
+					text="crossroad";
+					init="removeAllWeapons this; this allowDamage false;this enablesimulation false;";
 				};
 			};
 		};
@@ -941,17 +913,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15281.563,17.782078,17420.625};
-					azimut=131.31799;
-					special="NONE";
+					position[]={15266.668,17.975319,17352.586};
+					azimut=487.13974;
 					id=39;
 					side="WEST";
-					vehicle="B_officer_F";
+					vehicle="B_Soldier_F";
 					leader=1;
-					rank="MAJOR";
 					skill=0.60000002;
-					text="crossroad";
-					init="removeAllWeapons this; this allowDamage false;this enablesimulation false;";
+					text="injured";
 				};
 			};
 		};
@@ -963,14 +932,16 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15266.668,17.975319,17352.586};
-					azimut=487.13974;
+					position[]={15272.623,17.950592,17356.809};
+					azimut=434.70642;
+					offsetY=-5;
 					id=40;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_medic_F";
 					leader=1;
+					lock="LOCKED";
 					skill=0.60000002;
-					text="injured";
+					text="Injured1";
 				};
 			};
 		};
@@ -982,16 +953,17 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15272.623,17.950592,17356.809};
-					azimut=434.70642;
-					offsetY=-5;
+					position[]={15297.502,17.725161,17399.609};
+					azimut=257.056;
+					special="NONE";
 					id=41;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="B_officer_F";
 					leader=1;
-					lock="LOCKED";
+					rank="MAJOR";
 					skill=0.60000002;
-					text="Injured1";
+					text="Quartermaster";
+					init="removeAllWeapons this; this allowDamage false;this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];this enablesimulation false; this addAction [""Сохранение снаряжения"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; _K = [this] execVM ""scripts\VAserver.sqf"";";
 				};
 			};
 		};
@@ -1003,17 +975,16 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15297.502,17.725161,17399.609};
-					azimut=257.056;
-					special="NONE";
+					position[]={15409.723,15.834053,17339.34};
+					azimut=235.101;
+					offsetY=-5;
 					id=42;
 					side="WEST";
-					vehicle="B_officer_F";
+					vehicle="B_medic_F";
 					leader=1;
-					rank="MAJOR";
+					lock="LOCKED";
 					skill=0.60000002;
-					text="Quartermaster";
-					init="removeAllWeapons this; this allowDamage false;this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];this enablesimulation false; this addAction [""Сохранение снаряжения"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; _K = [this] execVM ""scripts\VAserver.sqf"";";
+					text="Injured2";
 				};
 			};
 		};
@@ -1025,31 +996,10 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15409.723,15.834053,17339.34};
-					azimut=235.101;
-					offsetY=-5;
-					id=43;
-					side="WEST";
-					vehicle="B_medic_F";
-					leader=1;
-					lock="LOCKED";
-					skill=0.60000002;
-					text="Injured2";
-				};
-			};
-		};
-		class Item17
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={15270.069,17.898523,17400.965};
 					azimut=120;
 					special="NONE";
-					id=44;
+					id=43;
 					side="WEST";
 					vehicle="B_soldier_UAV_F";
 					player="PLAY CDG";
@@ -1062,7 +1012,7 @@ class Mission
 				};
 			};
 		};
-		class Item18
+		class Item17
 		{
 			side="WEST";
 			class Vehicles
@@ -1073,7 +1023,7 @@ class Mission
 					position[]={15281.123,17.878319,17397.006};
 					azimut=136.687;
 					special="NONE";
-					id=45;
+					id=44;
 					side="WEST";
 					vehicle="B_sniper_F";
 					player="PLAY CDG";
@@ -1088,7 +1038,7 @@ class Mission
 					position[]={15280.19,17.883389,17396.037};
 					azimut=136.687;
 					special="NONE";
-					id=46;
+					id=45;
 					side="WEST";
 					vehicle="B_sniper_F";
 					player="PLAY CDG";
@@ -1099,7 +1049,7 @@ class Mission
 				};
 			};
 		};
-		class Item19
+		class Item18
 		{
 			side="WEST";
 			class Vehicles
@@ -1111,7 +1061,7 @@ class Mission
 					azimut=588.1792;
 					offsetY=0.25;
 					special="NONE";
-					id=47;
+					id=46;
 					side="WEST";
 					vehicle="B_UGV_01_rcws_F";
 					isUAV=1;
@@ -1123,7 +1073,7 @@ class Mission
 				};
 			};
 		};
-		class Item20
+		class Item19
 		{
 			side="WEST";
 			class Vehicles
@@ -1135,7 +1085,7 @@ class Mission
 					azimut=422.2821;
 					offsetY=0.80000001;
 					special="NONE";
-					id=48;
+					id=47;
 					side="WEST";
 					vehicle="B_UAV_02_CAS_F";
 					isUAV=1;
@@ -1146,7 +1096,7 @@ class Mission
 				};
 			};
 		};
-		class Item21
+		class Item20
 		{
 			side="WEST";
 			class Vehicles
@@ -1158,7 +1108,7 @@ class Mission
 					azimut=89.598961;
 					offsetY=0.80000001;
 					special="NONE";
-					id=49;
+					id=48;
 					side="WEST";
 					vehicle="B_UAV_02_CAS_F";
 					isUAV=1;
@@ -1166,6 +1116,55 @@ class Mission
 					skill=0.60000002;
 					text="UAV_2_1";
 					init="_m = [this,900,300] execVM ""scripts\vehicle\monitor.sqf"";";
+				};
+			};
+		};
+		class Item21
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14905.164,0.11140013,14802.236};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="76561198163722032";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="2";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=49;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					init="[this, [-1, -2, 0, 1]] call bis_fnc_setcuratorvisionmodes;";
+					syncId=5;
+					synchronizations[]={3};
 				};
 			};
 		};
@@ -4780,7 +4779,7 @@ class Mission
 			fuel=0;
 			init="this allowdamage false; this enablesimulation false;";
 			syncId=6;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item393
 		{
@@ -4794,7 +4793,7 @@ class Mission
 			fuel=0;
 			init="this allowdamage false; this enablesimulation false;";
 			syncId=7;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item394
 		{
@@ -4808,7 +4807,7 @@ class Mission
 			fuel=0;
 			init="this allowdamage false; this enablesimulation false;";
 			syncId=8;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item395
 		{
@@ -4822,7 +4821,7 @@ class Mission
 			text="HEMTT_4";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=9;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item396
 		{
@@ -4845,7 +4844,7 @@ class Mission
 			text="Quad_4";
 			init="_m = [this,60,30] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=10;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item398
 		{
@@ -4858,7 +4857,7 @@ class Mission
 			text="Quad_2";
 			init="_m = [this,60,30] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=11;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item399
 		{
@@ -4871,7 +4870,7 @@ class Mission
 			text="Quad_6";
 			init="_m = [this,60,30] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=12;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item400
 		{
@@ -4886,7 +4885,7 @@ class Mission
 			text="H_3";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=13;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item401
 		{
@@ -4900,7 +4899,7 @@ class Mission
 			skill=0.60000002;
 			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=14;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item402
 		{
@@ -4913,7 +4912,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			syncId=15;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item403
 		{
@@ -4927,7 +4926,7 @@ class Mission
 			skill=0.60000002;
 			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=16;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item404
 		{
@@ -4953,7 +4952,7 @@ class Mission
 			text="Marshall_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=17;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item406
 		{
@@ -4969,7 +4968,7 @@ class Mission
 			text="OB_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=18;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item407
 		{
@@ -4984,7 +4983,7 @@ class Mission
 			text="GH_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=19;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item408
 		{
@@ -4999,7 +4998,7 @@ class Mission
 			text="HEMTT_5";
 			init="_m = [this,1200,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=20;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item409
 		{
@@ -5061,7 +5060,7 @@ class Mission
 			text="strider2";
 			init="_m = [this,60,1200] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=21;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item415
 		{
@@ -5074,7 +5073,7 @@ class Mission
 			text="strider1";
 			init="_m = [this,60,1200] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=22;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item416
 		{
@@ -5088,7 +5087,7 @@ class Mission
 			text="Slammer_2";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=23;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item417
 		{
@@ -5132,7 +5131,7 @@ class Mission
 			text="MH_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=24;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item421
 		{
@@ -5145,7 +5144,7 @@ class Mission
 			text="LB_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=25;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item422
 		{
@@ -5168,7 +5167,7 @@ class Mission
 			skill=0.60000002;
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=26;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item424
 		{
@@ -5361,7 +5360,7 @@ class Mission
 			text="offroad1";
 			init="_m = [this,60,1200] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=27;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item442
 		{
@@ -5376,7 +5375,7 @@ class Mission
 			text="offroad2";
 			init="_m = [this,60,1200] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=28;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item443
 		{
@@ -5391,7 +5390,7 @@ class Mission
 			text="H_4";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=29;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item444
 		{
@@ -5405,7 +5404,7 @@ class Mission
 			text="H_5";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=30;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item445
 		{
@@ -5419,7 +5418,7 @@ class Mission
 			text="H_6";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=31;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item446
 		{
@@ -5434,7 +5433,7 @@ class Mission
 			text="H_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=32;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item447
 		{
@@ -5544,7 +5543,7 @@ class Mission
 			text="Panther_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=33;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item456
 		{
@@ -5555,7 +5554,7 @@ class Mission
 			vehicle="C_Boat_Civil_01_rescue_F";
 			skill=0.60000002;
 			syncId=34;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item457
 		{
@@ -5603,7 +5602,7 @@ class Mission
 			text="H_7";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=35;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item461
 		{
@@ -5616,7 +5615,7 @@ class Mission
 			text="Mora_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=36;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item462
 		{
@@ -5820,7 +5819,7 @@ class Mission
 			vehicle="C_Kart_01_Blu_F";
 			skill=0.60000002;
 			syncId=37;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item478
 		{
@@ -5832,7 +5831,7 @@ class Mission
 			vehicle="C_Kart_01_Fuel_F";
 			skill=0.60000002;
 			syncId=38;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item479
 		{
@@ -5844,7 +5843,7 @@ class Mission
 			vehicle="C_Kart_01_F";
 			skill=0.60000002;
 			syncId=39;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item480
 		{
@@ -5856,7 +5855,7 @@ class Mission
 			vehicle="C_Kart_01_Vrana_F";
 			skill=0.60000002;
 			syncId=40;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item481
 		{
@@ -10678,7 +10677,7 @@ class Mission
 			text="HEMTT_5_1";
 			init="_m = [this,1200,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=41;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item925
 		{
@@ -10690,7 +10689,7 @@ class Mission
 			skill=0.60000002;
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=42;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item926
 		{
@@ -10704,7 +10703,7 @@ class Mission
 			text="Quad_2_2";
 			init="_m = [this,60,30] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=43;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item927
 		{
@@ -10747,7 +10746,7 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false;";
 			syncId=44;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item931
 		{
@@ -11484,7 +11483,7 @@ class Mission
 			text="GH_1_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=45;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item998
 		{
@@ -11505,7 +11504,7 @@ class Mission
 			skill=0.60000002;
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=46;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item1000
 		{
@@ -11529,7 +11528,7 @@ class Mission
 			text="Quad_2_2_1";
 			init="_m = [this,60,30] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=47;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item1002
 		{
@@ -11543,7 +11542,7 @@ class Mission
 			text="Quad_2_2_2";
 			init="_m = [this,60,30] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=48;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item1003
 		{
@@ -11558,7 +11557,7 @@ class Mission
 			text="GH_1_1_1";
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			syncId=49;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item1004
 		{
@@ -11600,7 +11599,7 @@ class Mission
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			description="Пилот вертолета";
 			syncId=50;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item1008
 		{
@@ -11615,7 +11614,7 @@ class Mission
 			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 			description="Пилот вертолета";
 			syncId=51;
-			synchronizations[]={4};
+			synchronizations[]={3};
 		};
 		class Item1009
 		{
