@@ -124,6 +124,10 @@ vas_r_backpacks = [
 	"I_AT_01_weapon_F",
 	"O_AT_01_weapon_F",
 	"I_AA_01_weapon_F",
+	"O_AA_01_weapon_F",
+	"I_AT_01_weapon_F",
+	"O_AT_01_weapon_F",
+	"I_AA_01_weapon_F",
 	"O_AA_01_weapon_F"
 ];
 

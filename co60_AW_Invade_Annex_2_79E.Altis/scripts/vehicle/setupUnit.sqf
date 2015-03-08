@@ -44,7 +44,7 @@ if (((_unit isKindOf "Helicopter") OR (_type in _slingable)) AND !(_type in _not
 
 if (_type in _ghosthawk) then {
 	[_unit] execVM "scripts\vehicle\animate\ghosthawk.sqf";
-	_unit addAction ["<t color='#0000f6'>Ammo Drop</t>", "scripts\vehicle\drop\drop.sqf",[1],0,false,true,"","driver _target == _this"];
+	_unit addAction ["<t color='#00B2EE'>  • Удалить снаряжение</t>", "scripts\vehicle\drop\drop.sqf",[1],0,false,true,"","driver _target == _this"];
 	_unit addEventHandler ["Fired", { _this execVM "scripts\vehicle\spreadTurret.sqf"}];  
 };
 
@@ -58,7 +58,7 @@ if (_type in _strider) then {
 };
 
 if (_type in _VASable) then { 
-	_unit addAction ["<t color='#ff1111'>Mobile VAS</t>","scripts\VAS\open.sqf",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];
+	_unit addAction ["<t color='#ff1111'>Мобильный VAS</t>","scripts\VAS\open.sqf",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];
 };
 
 
@@ -69,4 +69,4 @@ if(_type in _orca) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_02\Data\
 
 if (_type in _noAmmoCargo) then {_unit setAmmoCargo 0;};
 
-_unit addAction ["<t color='#3f3fff'>Clear Inventory</t>","scripts\vehicle\clear\clear.sqf",[],-97,false];
+_unit addAction ["<t color='#00B2EE'>  • Удалить снаряжение</t>","scripts\vehicle\clear\clear.sqf",[],-97,false];

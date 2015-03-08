@@ -130,5 +130,5 @@ _cCamera = 55002;
 	};
 */
 
-ctrlSetText[_cCamera, format["Camera: %1", KEGs_cameraNames select KEGs_cameraIdx]];	
+ctrlSetText[_cCamera, format["Камера: %1", KEGs_cameraNames select KEGs_cameraIdx]];	
 KEGs_camSelLast = lbCurSel KEGs_cLBCameras; 

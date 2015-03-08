@@ -1,5 +1,5 @@
 if (AIRBASEDEFENSE_SWITCH) exitWith {
-	hint "Air-defense unavailable."
+	hint "ѕротивовоздушна€ оборона недоступна."
 };
 
 //-------------------- Wait for player to action
@@ -8,7 +8,7 @@ sleep 1;
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Activating air-defense ...";
+hint "јктивирование противовоздушную оборону...";
 
 sleep 3;
 

@@ -10,9 +10,9 @@ ________________________________________*/
 #define MAX_SPEED_ROPES_AVAIL 20
 
 
-#define STR_TOSS_ROPES "Toss Ropes"
-#define STR_FAST_ROPE "Fast Rope (Press Space)"
-#define STR_CUT_ROPES "Cut Ropes"
+#define STR_TOSS_ROPES "  • Сбросить верёвку"
+#define STR_FAST_ROPE "  • Спуск по верёвке — «Пробел»"
+#define STR_CUT_ROPES "  • Убрать верёвку"
 
 
 if (isdedicated) exitwith {};
