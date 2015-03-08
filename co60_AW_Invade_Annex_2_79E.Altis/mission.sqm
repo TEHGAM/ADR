@@ -2248,7 +2248,7 @@ class Mission
 					rank="MAJOR";
 					skill=0.60000002;
 					text="Quartermaster";
-					init="removeAllWeapons this; this allowDamage false;this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];this enablesimulation false; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; _K = [this] execVM ""scripts\VA-west.sqf"";";
+					init="removeAllWeapons this; this allowDamage false;this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];this enablesimulation false; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; _K = [this] execVM ""scripts\VAserver.sqf"";";
 				};
 			};
 		};
