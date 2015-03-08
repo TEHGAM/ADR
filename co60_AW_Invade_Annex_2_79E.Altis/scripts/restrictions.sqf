@@ -25,7 +25,7 @@ _________________________________________________*/
 
 		if ((player hasWeapon "launch_NLAW_F") || (player hasWeapon "launch_B_Titan_F") || (player hasWeapon "launch_O_Titan_F") || (player hasWeapon "launch_I_Titan_F") || (player hasWeapon "launch_B_Titan_short_F") || (player hasWeapon "launch_O_Titan_short_F") || (player hasWeapon "launch_I_Titan_short_F")) then
 		{
-			if ((playerSide == west && typeOf player != "B_soldier_LAT_F" && typeOf player != "B_recon_LAT_F") || (playerside == east && typeOf player != "O_soldier_LAT_F") || (playerside == resistance && typeOf player != "I_soldier_LAT_F")) then
+			if ((playerSide == west && typeOf player != "B_soldier_LAT_F" && typeOf player != "B_recon_LAT_F" && typeOf player != "B_soldier_AT_F") || (playerside == east && typeOf player != "O_soldier_LAT_F") || (playerside == resistance && typeOf player != "I_soldier_LAT_F")) then
 			{
 				player removeWeapon "launch_NLAW_F";
 				player removeWeapon "launch_B_Titan_F";
