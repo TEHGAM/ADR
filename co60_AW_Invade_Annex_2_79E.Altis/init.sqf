@@ -16,3 +16,6 @@ ______________________________________________________*/
 
 
 call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf";		// revive
+call compile preprocessFile "scripts\=BTC=_TK_punishment\=BTC=_tk_init.sqf";	// team-killer
+
+[] execVM "scripts\DOM_squad\init.sqf";
