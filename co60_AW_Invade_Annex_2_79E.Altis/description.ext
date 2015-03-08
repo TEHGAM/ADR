@@ -2,7 +2,7 @@
 
 author = Rarek, AhoyWorld, Quiksilver;					// Visible when loading mission
 onLoadName = "Invade & Annex 2.79";						// Visible when loading mission
-OnLoadMission = "редакция TEHGAM сообщества.";
+OnLoadMission = "СЂРµРґР°РєС†РёСЏ TEHGAM СЃРѕРѕР±С‰РµСЃС‚РІР°.";
 loadScreen = "media\images\loading.jpg";				// Visible when loading mission
 overviewPicture = "media\images\loading.jpg";			// Visible when selecting mission	
 
@@ -53,6 +53,7 @@ corpseRemovalMaxTime = 120;								// Max time before removal
 #include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
 #include "scripts\spectator\spectating.hpp"     		// Kegetys Spectator Script
 #include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system 
+#include "scripts\DOM_squad\SquadManagement.hpp"		// РЎРєСЂРёРїС‚ РѕС‚СЂСЏРґРѕРІ DOM
 
 class CfgFunctions
 	{
