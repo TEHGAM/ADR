@@ -25,7 +25,7 @@ private ["_object","_briefing","_smPos","_c4Message"];
 
 	_object = [crate1,crate2] call BIS_fnc_selectRandom;
 	currentSM = ["sm1","sm2","sm3","sm4","sm5","sm6","sm7","sm8","sm9","sm10","sm11","sm12","sm13","sm14","sm15","sm16","sm17","sm18","sm19"] call BIS_fnc_selectRandom;
-	_c4Message = ["The charge has been set! 15 seconds until detonation, get BACK!","The c4 has been set! 15 seconds until detonation, RUN!","The bomb is planted! 15 seconds until detonation, find cover!"] call BIS_fnc_selectRandom;
+	_c4Message = ["Заряд установлен! 5 секунд до взрыва. В укрытие!","C-4 активирован! 5 секунд до детонации. Пригнитесь!","Взрывчатка на месте! 5 секунд до взрыва. Уходим!"] call BIS_fnc_selectRandom;
 
 //-------------------- SPAWN OBJECTIVE (okay okay, setPos not spawn/create)
 
@@ -42,11 +42,11 @@ private ["_object","_briefing","_smPos","_c4Message"];
 //-------------------- BRIEFING
 	
 	"sideMarker" setMarkerPos (getMarkerPos currentSM);
-	"sideMarker" setMarkerText "Side Mission: Destroy Weapons Shipment"; publicVariable "sideMarker";
-	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Destroy Weapons Shipment</t><br/>____________________<br/>The enemy is supplying insurgents with advanced weapons and explosives. Neutralize them!<br/><br/>We've marked the location on your map; Looks like it's in town. Get your CQB gear ready.</t>";
+	"sideMarker" setMarkerText "Допка: Склад"; publicVariable "sideMarker";
+	_briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Склад</t><br/>____________________<br/>Враг поставляет боевикам современное оружие и взрывчатые вещества. Экипируйтесь с расчётом на ближний бой!<br/><br/>Ваша задача — выдвинутся в указанный район и уничтожить складируемый боезапас противника.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Destroy Weapons Shipment"]; publicVariable "showNotification";
-	sideMarkerText = "Destroy Weapons Shipment"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Склад"]; publicVariable "showNotification";
+	sideMarkerText = "Склад"; publicVariable "sideMarkerText";
 			
 	sideMissionUp = true; publicVariable "sideMissionUp";
 	SM_SUCCESS = false;	publicVariable "SM_SUCCESS";

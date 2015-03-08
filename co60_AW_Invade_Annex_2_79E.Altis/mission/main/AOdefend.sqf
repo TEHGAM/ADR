@@ -23,20 +23,22 @@ sleep 5;
 
 if(random 1 >= 0.5) then {
 	
-	_defendMessages = [
-		"OPFOR Forces incoming! Seek cover immediately and defend the objective area!",
-		"The enemy managed to call in reinforcements! Form a perimeter around the objective area!"
-	];
-	_targetStartText = format [
-		"<t align='center' size='2.2'>Defend Target</t><br/><t size='1.5' align='center' color='#0d4e8f'>%1</t><br/>____________________<br/>We have a problem. The enemy managed to call in land reinforcements. They are on the way to take back the last target. You need to defend it at all cost!",
-		currentAO
-	];
+_defendMessages =
+  [
+    "Враг контратакует! Займите круговую оборону для защиты нашей территории.",
+    "Противник вызвал подкрепление! Распределите оборону по периметру точки."
+  ];
+  _targetStartText = format
+  [
+    "<t align='center' size='2.2'>Оборона</t><br/><t size='1.5' align='center' color='#0d4e8f'>%1</t><br/>____________________<br/>Противник готовит отвлекающий манёвр в поддержку передислокации своих основных сил.<br/><br/>Займите оборонительные позиции!",
+    currentAO
+  ];
 
 	GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewMainDefend", currentAO]; publicVariable "showNotification";
 
 	{_x setMarkerPos (getMarkerPos currentAO);} forEach ["aoCircle_2","aoMarker_2"];
-	"aoMarker_2" setMarkerText format["Defend %1",currentAO];
+	"aoMarker_2" setMarkerText format["Оборона %1",currentAO];
 
 	sleep 10;
 	//publicVariable "refreshMarkers";
@@ -44,9 +46,10 @@ if(random 1 >= 0.5) then {
 	currentAOUp = true; publicVariable "currentAOUp";
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 
-	_playersOnlineHint = format [
-		"<t size='1.5' align='left' color='#C92626'>Enemy attacking %1!</t><br/><br/>____________________<br/>Get ready boys they are almost here!", currentAO
-	];
+  _playersOnlineHint = format
+  [
+    "<t align='center' size='2.2'>Контратака</t><br/><t size='1.5' align='center' color='#C92626'>%1</t><br/>____________________<br/><t align='center'>Противник перегруппировал часть своих сил на контратаку захваченной нами точки.</t>", currentAO
+  ];
 
 	_defendTimer1 = 480;
 	_defendTimer2 = random 120;
@@ -59,15 +62,15 @@ if(random 1 >= 0.5) then {
 
 	null = [["aoCircle_2"],[6,5],[3,2],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
 	
-	hint "Thermal images show enemy are at the perimeter of the AO!";
+	hint "Группировка вражеских сил обнаружена в близи точки захвата.";
 			
 	sleep 5;
 			
-	hqSideChat = "Assault will end in approximately 10 minutes."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Держитесь, противник начинает штурм!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			
 	sleep _defendTimer1;
 		
-	hqSideChat = "The attack is almost over!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+	hqSideChat = "Противник начинает отступление."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 	sleep _defendTimer2;
 

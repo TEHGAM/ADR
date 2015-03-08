@@ -15,7 +15,7 @@ _________________________________________________________________________*/
 
 private ["_objPos","_flatPos","_accepted","_position","_randomDir","_hangar","_x","_enemiesArray","_briefing","_fuzzyPos","_unitsArray","_dummy","_object","_tower1","_tower2","_tower3"];
 
-_c4Message = ["Radar data secured. The charge has been set! 15 seconds until detonation.","Radar telemetry secured. The explosives have been set! 15 seconds until detonation.","Radar intel secured. The charge is planted! 15 seconds until detonation."] call BIS_fnc_selectRandom;
+_c4Message = ["Радиолокационные данные захвачены. C-4 активирован! 5 секунд до детонации.","Телеметрические данные радара получены. Взрывчатка установлена! 5 секунд до взрыва.","Данные радара считаны. Заряд установлен! 5 секунд до взрыва."] call BIS_fnc_selectRandom;
 
 //-------------------- FIND SAFE POSITION FOR OBJECTIVE
 
@@ -86,7 +86,7 @@ _c4Message = ["Radar data secured. The charge has been set! 15 seconds until det
 	"sideMarker" setMarkerText "Side Mission: Secure Radar"; publicVariable "sideMarker";
 	publicVariable "sideObj";
 
-	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Secure Radar</t><br/>____________________<br/>OPFOR have captured a small radar on the island to support their aircraft.<br/><br/>We've marked the position on your map; head over there and secure the site. Take the data and destroy it.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Радар</t><br/>____________________<br/>В целях поддержки своей авиации вражеские силы захватили небольшую радиостанцию.<br/><br/>Ваша задача — выдвинутся в указанный район, обезвредить противника, захватить радиолокационные данные, а затем уничтожить и сам радар.</t>";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Secure Radar"]; publicVariable "showNotification";
 	sideMarkerText = "Secure Radar"; publicVariable "sideMarkerText";
@@ -101,7 +101,7 @@ while { sideMissionUp } do {
 		
 		//-------------------- DE-BRIEFING
 		
-		hqSideChat = "Intel destroyed! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Данные радара утеряны. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		sideMissionUp = false; publicVariable "sideMissionUp";

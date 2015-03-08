@@ -16,7 +16,7 @@ if (SM_SWITCH) exitWith {
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Side objective available, briefing requested ...";
+hint "Дополнительное задание выявлено, ждите подробных инструкций.";
 
 sleep 1;
 

@@ -206,9 +206,9 @@ private ["_dir","_PTdir","_pos","_barrier","_unitsArray","_flatPos","_accepted",
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["priorityMarker", "priorityCircle"];    								
 	"priorityMarker" setMarkerText "Priority Target: Anti-Air Battery"; publicVariable "priorityMarker";
-	_briefing = "<t align='center' size='2.2'>Priority Target</t><br/><t size='1.5' color='#b60000'>Anti-Air Battery</t><br/>____________________<br/>OPFOR forces are setting up an anti-air battery to hit you guys damned hard! We've picked up their positions with thermal imaging scans and have marked it on your map.<br/><br/>This is a priority target, boys!";
+	_briefing = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#d63333'>Вражеская батарея</t><br/>____________________<br/>Обнаружена точка укрепления зенитных орудий противника. Её близлежащее расположение грозит как группам десантирования, так и всей нашей авиации в целом.";
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
-	showNotification = ["NewPriorityTarget", "Destroy Anti-Air"]; publicVariable "showNotification";
+	showNotification = ["NewPriorityTarget", "Обнаружена батарея врага"]; publicVariable "showNotification";
 	
 //-------------------- 8. CORE LOOP
 
@@ -235,9 +235,9 @@ waitUntil {
 
 //-------------------- 9. DE-BRIEF
 	
-	_completeText = "<t align='center' size='2.2'>Priority Target</t><br/><t size='1.5' color='#08b000'>NEUTRALISED</t><br/>____________________<br/>Incredible job, boys! Make sure you jump on those priority targets quickly; they can really cause havoc if they're left to their own devices.<br/><br/>Keep on with the main objective; we'll tell you if anything comes up.";
+	_completeText = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#08b000'>Батарея подавлена</t><br/>____________________<br/>Противник лишился основных средств ПВО.<br/><br/>Возвращайтесь к выполнению основной задачи.";
 	GlobalHint = _completeText; hint parseText _completeText; publicVariable "GlobalHint";
-	showNotification = ["CompletedPriorityTarget", "Anti-Air Battery Neutralised"]; publicVariable "showNotification";
+	showNotification = ["CompletedPriorityTarget", "Зенитная батарея нейтрализована"]; publicVariable "showNotification";
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["priorityMarker","priorityCircle"]; publicVariable "priorityMarker";
 
 //-------------------- 10. DELETE

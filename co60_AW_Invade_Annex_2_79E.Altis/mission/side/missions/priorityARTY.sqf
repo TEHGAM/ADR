@@ -141,14 +141,12 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
 	GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
 	showNotification = ["NewPriorityTarget", "Destroy Artillery"]; publicVariable "showNotification";
 
-	_firingMessages = [
-		"Thermal scans are picking up those enemy Artillery firing! Heads down!",
-		"Enemy Artillery rounds incoming! Advise you seek cover immediately.",
-		"OPFOR Artillery rounds incoming! Seek cover immediately!",
-		"The Artillery team's firing, boys! Down on the ground!",
-		"Get that damned Artillery team down; they're firing right now! Seek cover!",
-		"They're zeroing in! Incoming Artillery fire; heads down!"
-	];
+  _firingMessages = [
+    "Противник выпустил артиллерийский залп. По укрытиям!",
+    "Наши позиции обстреливает батарея врага. Ищите укрытие!",
+    "Враг начал прицельный артиллерийский огонь. Укройтесь!",
+    "Враг ведёт стрельбу из артиллерийских орудий. Пригнитесь!",
+    "Противник начал артобстрел наших позиций. В укрытие!"];
 	
 //-------------------- FIRING SEQUENCE LOOP
 
@@ -211,9 +209,9 @@ while { canMove priorityObj1 || canMove priorityObj2 } do {
 
 //-------------------- DE-BRIEF
 
-_completeText = "<t align='center' size='2.2'>Priority Target</t><br/><t size='1.5' color='#08b000'>NEUTRALISED</t><br/>____________________<br/>Incredible job, boys! Make sure you jump on those priority targets quickly; they can really cause havoc if they're left to their own devices.<br/><br/>Keep on with the main objective; we'll tell you if anything comes up.";
+_completeText = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#08b000'>Артиллерия подавлена</t><br/>____________________<br/>ИПротивник лишился артиллерийских орудий.<br/><br/>Возвращайтесь к выполнению основной задачи.";
 GlobalHint = _completeText; hint parseText _completeText; publicVariable "GlobalHint";
-showNotification = ["CompletedPriorityTarget", "Enemy Artillery Neutralised"]; publicVariable "showNotification";
+showNotification = ["CompletedPriorityTarget", "Артиллерия нейтрализована"]; publicVariable "showNotification";
 { _x setMarkerPos [-10000,-10000,-10000] } forEach ["priorityMarker","priorityCircle"]; publicVariable "priorityMarker";
 
 //-------------------- DELETE

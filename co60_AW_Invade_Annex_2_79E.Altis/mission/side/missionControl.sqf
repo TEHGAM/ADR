@@ -30,8 +30,8 @@ _missionList = [
 	"priorityAA",	
 	"priorityARTY",
 	"secureChopper",
-	"secureIntelUnit",
-	"secureIntelVehicle",
+	//"secureIntelUnit",
+	//"secureIntelVehicle",
 	"secureRadar"
 ];
 
@@ -41,7 +41,7 @@ while { true } do {
 
 	if (SM_SWITCH) then {
 	
-		hqSideChat = "Side objective assigned, stand-by for orders."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "¬торична€ цель вы€влена, ждите указаний!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 	
 		sleep 3;
 	

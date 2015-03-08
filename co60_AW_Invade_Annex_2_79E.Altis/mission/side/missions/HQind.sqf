@@ -15,7 +15,7 @@ ____________________________________*/
 
 private ["_flatPos","_accepted","_position","_enemiesArray","_fuzzyPos","_x","_briefing","_unitsArray","_object","_SMveh","_SMaa","_tower1","_tower2","_tower3","_flatPos1","_flatPos2"];
 
-_c4Message = ["Weapons transfer secured. The charge has been set! 15 seconds until detonation.","Launchers secured. The explosives have been set! 15 seconds until detonation.","Weapons secured. The charge is planted! 15 seconds until detonation."] call BIS_fnc_selectRandom;
+_c4Message = ["Перехват оружия завершён. Заряд установлен! 5 секунд до взрыва.","Пусковая установка захвачена. Взрывчатка установлена! 5 секунд до взрыва.","Оружие врага захвачено. C-4 активирован! 5 секунд до детонации."] call BIS_fnc_selectRandom;
 
 
 //-------------------- FIND POSITION FOR OBJECTIVE
@@ -66,12 +66,12 @@ _c4Message = ["Weapons transfer secured. The charge has been set! 15 seconds unt
 
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];
-	"sideMarker" setMarkerText "Side Mission: Secure Launchers"; publicVariable "sideMarker";
+	"sideMarker" setMarkerText "Допка: Система ПВО"; publicVariable "sideMarker";
 	publicVariable "sideObj";
-	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Secure Launchers</t><br/>____________________<br/>Rogue AAF are supplying OPFOR with advanced weapons and anti-air launchers.<br/><br/>We've located the transfer location. Get over there quick before they get away, and secure those launchers.</t>";
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Система ПВО</t><br/>____________________<br/>Предатель в рядах союзных войск передаёт вражеским силам новейшие пусковые установки для систем ПВО.<br/><br/>Ваша задача — выдвинутся в указанный район, найти и захватить пусковые установки, ликвидируя группировки врага по ходу операции.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["NewSideMission", "Secure Launchers"]; publicVariable "showNotification";
-	sideMarkerText = "Secure Launchers"; publicVariable "sideMarkerText";
+	sideMarkerText = "Система ПВО"; publicVariable "sideMarkerText";
 	
 //-------------------- [ CORE LOOPS ] ------------------------ [ CORE LOOPS ]
 
@@ -87,7 +87,7 @@ while { sideMissionUp } do {
 		//-------------------- DE-BRIEFING
 		
 		sideMissionUp = false; publicVariable "sideMissionUp";
-		hqSideChat = "Objective destroyed! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена преждевременно. Задание провалено!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
 		
