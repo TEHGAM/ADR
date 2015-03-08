@@ -96,7 +96,7 @@ if (PARAMS_HeliSling != 0) then {call compile preprocessFileLineNumbers "scripts
 	"priorityMarker" setMarkerTextLocal format["Priority Target: %1",priorityTargetText];
 };
 
-tawvd_disablenone = false;
+//tawvd_disablenone = false;
 
 enableEngineArtillery false;
 if (player isKindOf "B_support_Mort_f") then {
