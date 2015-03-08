@@ -1,4 +1,4 @@
-﻿/*
+/*
 Author:
 
 	Jester [AW]
@@ -25,7 +25,7 @@ private ["_heli", "_reloadtime"];
     _reloadtime = 600;  						// time before next ammo drop is available to use, default 600 or 480
     _minheight = 50;  							// the height you have to be before you can actually drop the crate
 	// display this when too low to drop
-    _tooLow = format ["<t align='center'><t size='2.2' color='#ed3b00'>РЎР»РёС€РєРѕРј РЅРёР·РєРѕ</t><br/><t size='1.2' color='#9ef680'>Р‘РѕРµР·Р°РїР°СЃ РјРѕР¶РЅРѕ СЃР±СЂРѕСЃРёС‚СЊ С‚РѕР»СЊРєРѕ РЅР° РІС‹СЃРѕС‚Рµ РЅРµ РјРµРЅРµРµ</t><br/><t size='1.5' color='#ed3b00'>%1 РјРµС‚СЂРѕРІ</t></t>",_minheight];
+    _tooLow = format ["<t align='center'><t size='2.2' color='#ed3b00'>Слишком низко</t><br/><t size='1.2' color='#9ef680'>Боезапас можно сбросить только на высоте не менее</t><br/><t size='1.5' color='#ed3b00'>%1 метров</t></t>",_minheight];
 
 	//--------------------------------------------------------- MEAT AND POTATOES
 	
@@ -78,7 +78,7 @@ private ["_heli", "_reloadtime"];
 
 		//--------------------------------------------------- BRIEF
 		
-		hint "UH-80: Р‘РѕРµР·Р°РїР°СЃ СЃР±СЂРѕС€РµРЅ.";
+		hint "UH-80: Боезапас сброшен.";
 		
 		//--------------------------------------------------- CRATE LANDING
 		
@@ -92,7 +92,7 @@ private ["_heli", "_reloadtime"];
 
 		//--------------------------------------------------- BRIEF
 		
-		hint "UH-80: Р‘РѕРµР·Р°РїР°СЃ РєРѕСЃРЅСѓР»СЃСЏ Р·РµРјР»Рё!";
+		hint "UH-80: Боезапас коснулся земли!";
 
 		//--------------------------------------------------- COOLDOWN TIMER
 		
@@ -104,7 +104,7 @@ private ["_heli", "_reloadtime"];
 
 		//--------------------------------------------------- NEW CRATE READY
 		
-		hint "UH-80: Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЃР±СЂРѕСЃР° Р±РѕРµР·Р°РїР°СЃРѕРІ РІРЅРѕРІСЊ РґРѕСЃС‚СѓРїРЅР°.";
+		hint "UH-80: Возможность сброса боезапасов вновь доступна.";
 		
 		AW_ammoDrop = nil;
 		publicVariable "AW_ammoDrop";

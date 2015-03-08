@@ -1,4 +1,4 @@
-﻿//Healing Others Script
+//Healing Others Script
 _max = 10; snext = false; plist = []; pselect5 = "";
 {if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, name _x];};} forEach entities "CAManBase";
 {if ((count crew _x) > 0) then {{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, name _x];};} forEach crew _x;};} foreach (entities "LandVehicle" + entities "Air" + entities "Ship");
@@ -25,9 +25,9 @@ if (pselect5 != "exit") then
 	{
 		if(name _x == _name) then
 		{
-			hint format ["РџРµСЂРµРІСЏР·С‹РІР°РµС‚ СЂР°РЅС‹ %1", _name];
+			hint format ["Перевязывает раны %1", _name];
 			_x setDamage 0;
-			["РџРµСЂРµРІСЏР·Р°Р» СЂР°РЅС‹ %1", _name] call BIS_fnc_log;
+			["Перевязал раны %1", _name] call BIS_fnc_log;
 			sleep 0.25;
 		};
 	} forEach entities "CAManBase";

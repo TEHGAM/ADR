@@ -1,4 +1,4 @@
-﻿/*
+/*
 
 	AUTHOR: aeroson [tweaked by Quiksilver]
 	NAME: group_manager.sqf	
@@ -142,14 +142,14 @@ GVAR(actions_addBack) = {
 // [unit1] // you have joined unit1's group 
 GVAR(join) = {
 	if(([group _THIS(0)] call GVAR(options_getJoin))!=JOIN_FREE) exitWith {
-		format["РћС‚СЂСЏРґ %1'Р° (РїРѕРґС‡РёРЅРµРЅРЅРѕРіРѕ %2'Р°) С‚РµРїРµСЂСЊ Р·Р°РєСЂС‹С‚ РґР»СЏ Р·Р°СЏРІРѕРє", name _THIS(0), name leader _THIS(0)] call GVAR(msg);
+		format["Отряд %1'а (подчиненного %2'а) теперь закрыт для заявок", name _THIS(0), name leader _THIS(0)] call GVAR(msg);
 	};
 	[
-		format["%1 РІСЃС‚СѓРїРёР» РІ РІР°С€ РѕС‚СЂСЏРґ", name player],
+		format["%1 вступил в ваш отряд", name player],
 		QGVAR(msg),
 		[(units group _THIS(0))-[player]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;
-	format["Р’С‹ РІ СЃС‚СѓРїРёР»Рё РІ РѕС‚СЂСЏРґ %1'Р°, РїРѕРґС‡РёРЅРµРЅРЅРѕРіРѕ %2'Р°", name _THIS(0), name leader _THIS(0)] call GVAR(msg);	
+	format["Вы в ступили в отряд %1'а, подчиненного %2'а", name _THIS(0), name leader _THIS(0)] call GVAR(msg);	
 	[player] joinSilent group _THIS(0);
 	waitUntil{group player==group _THIS(0)};	
 	[] call GVAR(menu_main); 	
@@ -159,11 +159,11 @@ GVAR(join) = {
 GVAR(leaveGroup) = {
 	LOG(QGVAR(leaveGroup))
 	[
-		format["%1 РїРѕРєРёРЅСѓР» РІР°С€ РѕС‚СЂСЏРґ", name player],
+		format["%1 покинул ваш отряд", name player],
 		QGVAR(msg),
 		[(units group player)-[player]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;
-	"Р’С‹ РїРѕРєРёРЅСѓР»Рё РѕС‚СЂСЏРґ!" call GVAR(msg);
+	"Вы покинули отряд!" call GVAR(msg);
 	[player] joinSilent createGroup (side player);
 	[] call GVAR(menu_main);			
 };
@@ -178,11 +178,11 @@ GVAR(invite) = {
 		(_myJoin==JOIN_INVITE_BY_SQUAD && player in units group player) ||
 		(_myJoin==JOIN_INVITE_BY_LEADER && leader player == player)
 	)) exitWith {
-		"Р’С‹ Р±РѕР»СЊС€Рµ РЅРµ РёРјРµРµС‚Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РїСЂРёРіР»Р°СЃРёС‚СЊ" call GVAR(msg);
+		"Вы больше не имеете возможности пригласить" call GVAR(msg);
 	};
-	format["Р’С‹ РїСЂРёРіР»Р°СЃРёР»Рё %1'Р° РІ РІР°С€ РѕС‚СЂСЏРґ", name _THIS(0)] call GVAR(msg);
+	format["Вы пригласили %1'а в ваш отряд", name _THIS(0)] call GVAR(msg);
 	[
-		format["%1 РїСЂРёРіР»Р°С€Р°РµС‚ %2'Р° РІ РІР°С€ РѕС‚СЂСЏРґ", name player, name _THIS(0)],
+		format["%1 приглашает %2'а в ваш отряд", name player, name _THIS(0)],
 		QGVAR(msg),
 		[(units group player)-[player]] call GVAR(playersOnly)	
 	] spawn BIS_fnc_MP;
@@ -200,7 +200,7 @@ GVAR(invite) = {
 // [unit1, group1] // you got invited by unit1 to join a unit1's group1
 GVAR(invited) = {
 	if(_THIS(0) in units _THIS(1)) then {
-		format["%1 РїСЂРёРіР»Р°С€Р°РµС‚ РІР°СЃ РІСЃС‚СѓРїРёС‚СЊ РІ РёС… РѕС‚СЂСЏРґ (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°)", name _THIS(0), name leader _THIS(1)] call GVAR(msg);
+		format["%1 приглашает вас вступить в их отряд (подчиненный %2'а)", name _THIS(0), name leader _THIS(1)] call GVAR(msg);
 		{
 			if((_x select 1)==_THIS(0) && (_x select 2)==_THIS(1)) then {
 				GVAR(invites) set[_forEachIndex, 0];				
@@ -216,14 +216,14 @@ GVAR(invited) = {
 
 // [unit1, forEachIndex] // you have accepted invite by unit1 to unit1's group, forEachIndex in GVAR(invites) 
 GVAR(invite_accepted) = {	
-	format["РџСЂРёРЅСЏС‚Рѕ РїСЂРёРіР»Р°С€РµРЅРёРµ РѕС‚ %1'Р° (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°)", name _THIS(0), name leader _THIS(0)] call GVAR(msg),
+	format["Принято приглашение от %1'а (подчиненный %2'а)", name _THIS(0), name leader _THIS(0)] call GVAR(msg),
 	[
-		format["%1 РїСЂРёРЅСЏР» РІР°С€Рµ РїСЂРёРіР»Р°С€РµРЅРёРµ", name player],
+		format["%1 принял ваше приглашение", name player],
 		QGVAR(msg),
 		[[_THIS(0)]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;
 	[
-		format["%1 РІСЃС‚СѓРїРёР» РІ РІР°С€ РѕС‚СЂСЏРґ, РїРѕ РїСЂРёРіР»Р°С€РµРЅРёСЋ РѕС‚ %2'Р°", name player, name _THIS(0)],
+		format["%1 вступил в ваш отряд, по приглашению от %2'а", name player, name _THIS(0)],
 		QGVAR(msg),
 		[(units group _THIS(0))-[_THIS(0)]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;
@@ -234,9 +234,9 @@ GVAR(invite_accepted) = {
 
 // [unit1, forEachIndex] // you have declined invite by unit1 to unit1's group, forEachIndex in GVAR(invites)
 GVAR(invite_declined) = {	
-	format["РћС‚РєР°Р·Р°РЅРѕ РІ РїСЂРёРіР»Р°С€РµРЅРёРµ РѕС‚ %1'Р° (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°)", name _THIS(0), name leader _THIS(0)] call GVAR(msg),
+	format["Отказано в приглашение от %1'а (подчиненный %2'а)", name _THIS(0), name leader _THIS(0)] call GVAR(msg),
 	[
-		format["%1 РѕС‚РєР°Р·Р°Р»СЃСЏ РѕС‚ РІР°С€РµРіРѕ РїСЂРёРіР»Р°С€РµРЅРёСЏ", name player],
+		format["%1 отказался от вашего приглашения", name player],
 		QGVAR(msg),
 		[[_THIS(0)]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;
@@ -255,9 +255,9 @@ GVAR(request) = {
 		(_accept==ACCEPT_BY_SQUAD && ({isPlayer _x} count units group unit2>0)) ||
 		(_accept==ACCEPT_BY_LEADER && isPlayer leader group unit2) 
 	)) exitWith {
-		format["Р’С‹ Р±РѕР»СЊС€Рµ РЅРµ РјРѕР¶РµС‚Рµ РїРѕРґР°РІР°С‚СЊ Р·Р°СЏРІРєРё РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ РІ РѕС‚СЂСЏРґ %1'Р° (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°)", name _THIS(1), name leader _THIS(1)] call GVAR(msg);
+		format["Вы больше не можете подавать заявки на вступление в отряд %1'а (подчиненный %2'а)", name _THIS(1), name leader _THIS(1)] call GVAR(msg);
 	};				
-	format["Р’С‹ РїРѕРґР°Р»Рё Р·Р°СЏРІРєСѓ РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ РІ РѕС‚СЂСЏРґ %1'Р° (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°)", name _THIS(1), name leader _THIS(1)] call GVAR(msg);
+	format["Вы подали заявку на вступление в отряд %1'а (подчиненный %2'а)", name _THIS(1), name leader _THIS(1)] call GVAR(msg);
 	[
 		[
 			_THIS(0),
@@ -274,7 +274,7 @@ GVAR(request) = {
 // [unit1, group1] // unit1 requested to join yours group1
 GVAR(requested) = {
 	if(player in units _THIS(1)) then {
-		format["%1 РїРѕРґР°Р» Р·Р°СЏРІРєСѓ РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ", name _THIS(0), name leader _THIS(1)] call GVAR(msg);
+		format["%1 подал заявку на вступление", name _THIS(0), name leader _THIS(1)] call GVAR(msg);
 		{
 			if((_x select 1)==_THIS(0) && (_x select 2)==_THIS(1)) then {
 				GVAR(requests) set[_forEachIndex, 0];				
@@ -289,14 +289,14 @@ GVAR(requested) = {
 
 // [unit1, forEachIndex] // you have accepted request from unit1 to join your group, forEachIndex in GVAR(requests) 
 GVAR(request_accepted) = {
-	format["Р—Р°СЏРІРєР° РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ РѕС‚ %1'Р° РїСЂРёРЅСЏС‚Р°", name _THIS(0)] call GVAR(msg),
+	format["Заявка на вступление от %1'а принята", name _THIS(0)] call GVAR(msg),
 	[
-		format["%1 (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°) РїСЂРёРЅСЏР» РІР°С€Сѓ Р·Р°СЏРІРєСѓ РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ", name player, name leader player],
+		format["%1 (подчиненный %2'а) принял вашу заявку на вступление", name player, name leader player],
 		QGVAR(msg),
 		[[_THIS(0)]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;
 	[
-		format["%1 РІСЃС‚СѓРїРёР» РІ РІР°С€ РѕС‚СЂСЏРґ (РїСЂРёРЅСЏС‚ %2'РѕРј)", name _THIS(0), name player],
+		format["%1 вступил в ваш отряд (принят %2'ом)", name _THIS(0), name player],
 		QGVAR(msg),
 		[(units group player)-[player]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;		
@@ -307,9 +307,9 @@ GVAR(request_accepted) = {
 
 // [unit1, forEachIndex] // you have declined request from unit1 to join your group, forEachIndex in GVAR(requests)
 GVAR(request_declined) = {
-	format["%1'y РѕС‚РєР°Р·Р°РЅРѕ РІ Р·Р°СЏРІРєРµ РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ", name _THIS(0)] call GVAR(msg),
+	format["%1'y отказано в заявке на вступление", name _THIS(0)] call GVAR(msg),
 	[
-		format["%1 (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°) РѕС‚РєР°Р·Р°Р» РІ РІР°С€РµР№ Р·Р°СЏРІРєРµ РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ", name player, name leader player],
+		format["%1 (подчиненный %2'а) отказал в вашей заявке на вступление", name player, name leader player],
 		QGVAR(msg),
 		[[_THIS(0)]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;	
@@ -323,12 +323,12 @@ GVAR(request_declined) = {
 GVAR(takeLeaderShip) = {
 	LOG(QGVAR(takeLeaderShip))
 	if(!([player] call GVAR(canTakeLeadership))) exitWith {
-		"Р’С‹ Р±РѕР»СЊС€Рµ РЅРµ РјРѕР¶РµС‚Рµ РІР·СЏС‚СЊ РЅР° СЃРµР±СЏ РєРѕРјР°РЅРґРѕРІР°РЅРёРµ" call GVAR(msg); 
+		"Вы больше не можете взять на себя командование" call GVAR(msg); 
 		[] call GVAR(menu_main);
 	};
-	"Р’С‹ РІР·СЏР»Рё РЅР° СЃРµР±СЏ РєРѕРјР°РЅРґРѕРІР°РЅРёРµ" call GVAR(msg);	
+	"Вы взяли на себя командование" call GVAR(msg);	
 	[
-		format["%1 РІР·СЏР» РЅР° СЃРµР±СЏ РєРѕРјР°РЅРґРѕРІР°РЅРёРµ", name player],
+		format["%1 взял на себя командование", name player],
 		QGVAR(msg),
 		[(units group player)-[player, leader player]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;
@@ -346,7 +346,7 @@ GVAR(takeLeaderShip) = {
 GVAR(takeLeaderShip_remote) = {
 	if(group _THIS(0) == group player) then {
 		if(isPlayer leader player) then {
-			format["%1 РїСЂРёРЅСЏР» РѕС‚ РІР°СЃ РєРѕРјР°РЅРґРѕРІР°РЅРёРµ", name _THIS(0)] call GVAR(msg);
+			format["%1 принял от вас командование", name _THIS(0)] call GVAR(msg);
 		};
 		(group player) selectLeader _THIS(0);
 		[] call GVAR(menu_main);
@@ -382,14 +382,14 @@ GVAR(canTakeLeadership) = {
 GVAR(menu_giveLeaderShip) = {
 	LOG(QGVAR(menu_giveLeaderShip))
 	if(leader player!=player) exitWith {
-		"Р’С‹ Р±РѕР»СЊС€Рµ РЅРµ РєРѕРјР°РЅРґРёСЂ РѕС‚СЂСЏРґР°" call GVAR(msg); 
+		"Вы больше не командир отряда" call GVAR(msg); 
 		[] call GVAR(menu_main);
 	};
 	[] call GVAR(actions_remove);
 	{
 		PUSH_START(GVAR(actions_ids))
 			player addAction [
-				format["<t color='#0099ee'><img image='\A3\ui_f\data\gui\Rsc\RscDisplayConfigViewer\bookmark_gs.paa' size='0.7' /> РџРµСЂРµРґР°С‚СЊ РєРѕРјР°РЅРґРѕРІР°РЅРёРµ %1'Сѓ</t>", name _x],
+				format["<t color='#0099ee'><img image='\A3\ui_f\data\gui\Rsc\RscDisplayConfigViewer\bookmark_gs.paa' size='0.7' /> Передать командование %1'у</t>", name _x],
 				{ _THIS(3) call GVAR(giveLeaderShip); },
 				[_x],
 				5000-_forEachIndex
@@ -402,14 +402,14 @@ GVAR(menu_giveLeaderShip) = {
 
 // [unit1] // you gave group leadership to unit1
 GVAR(giveLeaderShip) = {
-	format["Р’С‹ РїРµСЂРµРґР°Р»Рё РєРѕРјР°РЅРґРѕРІР°РЅРёРµ %1'Сѓ", name _THIS(0)] call GVAR(msg);
+	format["Вы передали командование %1'у", name _THIS(0)] call GVAR(msg);
 	[
-		format["%2 РїРµСЂРµРґР°Р» РєРѕРјР°РЅРґРѕРІР°РЅРёРµ %1'Сѓ", name _THIS(0), name player],
+		format["%2 передал командование %1'у", name _THIS(0), name player],
 		QGVAR(msg),
 		[(units group _THIS(0))-[_THIS(0), player]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;
 	[
-		format["%1 РїРµСЂРµРґР°Р» РІР°Рј РєРѕРјР°РЅРґРѕРІР°РЅРёРµ", name player],
+		format["%1 передал вам командование", name player],
 		QGVAR(msg),
 		[[_THIS(0)]] call GVAR(playersOnly)		
 	] spawn BIS_fnc_MP;			
@@ -422,7 +422,7 @@ GVAR(giveLeaderShip) = {
 GVAR(menu_squadOptions) = {
 	LOG(QGVAR(menu_squadOptions))
 	if(leader player!=player) exitWith {
-		"Р’С‹ Р±РѕР»СЊС€Рµ РЅРµ РєРѕРјР°РЅРґРёСЂ РѕС‚СЂСЏРґР°" call GVAR(msg); 
+		"Вы больше не командир отряда" call GVAR(msg); 
 		[] call GVAR(menu_main);
 	};
 	[] call GVAR(actions_remove);	
@@ -437,7 +437,7 @@ GVAR(menu_squadOptions) = {
 				6000-_forEachIndex
 			]
 		PUSH_END		
-	} forEach ["Р›СЋР±РѕР№ РјРѕР¶РµС‚ РІСЃС‚СѓРїРёС‚СЊ","Р§Р»РµРЅС‹ РѕС‚СЂСЏРґР° РјРѕРіСѓС‚ РїСЂРёРіР»Р°С€Р°С‚СЊ","РљРѕРјР°РЅРґРёСЂ РѕС‚СЂСЏРґР° РјРѕР¶РµС‚ РїСЂРёРіР»Р°С€Р°С‚СЊ","РћС‚РєР»СЋС‡РёС‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РїСЂРёРіР»Р°С€Р°С‚СЊ"];	
+	} forEach ["Любой может вступить","Члены отряда могут приглашать","Командир отряда может приглашать","Отключить возможность приглашать"];	
 	_accept = [group player] call GVAR(options_getAccept);  		
 	{
 		PUSH_START(GVAR(actions_ids))
@@ -448,7 +448,7 @@ GVAR(menu_squadOptions) = {
 				5000-_forEachIndex
 			]
 		PUSH_END		
-	} forEach ["Р§Р»РµРЅС‹ РѕС‚СЂСЏРґР° РјРѕРіСѓС‚ РїСЂРёРЅРёРјР°С‚СЊ Р·Р°СЏРІРєРё РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ","РљРѕРјР°РЅРґРёСЂС‹ РѕС‚СЂСЏРґР° РјРѕРіСѓС‚ РїСЂРёРЅРёРјР°С‚СЊ Р·Р°СЏРІРєРё РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ","РћС‚РєР»СЋС‡РёС‚СЊ Р·Р°СЏРІРєРё РЅР° РІСЃС‚СѓРїР»РµРЅРёРµ"];	
+	} forEach ["Члены отряда могут принимать заявки на вступление","Командиры отряда могут принимать заявки на вступление","Отключить заявки на вступление"];	
 	[] call GVAR(actions_addBack);	
 };
 
@@ -456,14 +456,14 @@ GVAR(menu_squadOptions) = {
 GVAR(menu_kickSquadMember) = {
 	LOG(QGVAR(menu_kickSquadMember))
 	if(leader player!=player) exitWith {
-		"Р’С‹ Р±РѕР»СЊС€Рµ РЅРµ РєРѕРјР°РЅРґРёСЂ РѕС‚СЂСЏРґР°" call GVAR(msg); 
+		"Вы больше не командир отряда" call GVAR(msg); 
 		[] call GVAR(menu_main);
 	};
 	[] call GVAR(actions_remove);
 	{
 		PUSH_START(GVAR(actions_ids)) 
 			player addAction [
-				format["<t color='#ff8822'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\top_close_gs.paa' size='0.7' /> Р’С‹РіРЅР°С‚СЊ %1'Р°</t>", name _x],
+				format["<t color='#ff8822'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\top_close_gs.paa' size='0.7' /> Выгнать %1'а</t>", name _x],
 				{ _THIS(3) call GVAR(kickSquadMember); },
 				[_x],
 				5000-_forEachIndex
@@ -476,7 +476,7 @@ GVAR(menu_kickSquadMember) = {
 // [unit1] // you are kicking unit1
 GVAR(kickSquadMember) = {
 	LOG(QGVAR(kickSquadMember))
-	format["Р’С‹ РІС‹РіРЅР°Р»Рё %1'Р°", name _THIS(0)] call GVAR(msg); 				
+	format["Вы выгнали %1'а", name _THIS(0)] call GVAR(msg); 				
 	[
 		format["%1 was kicked by %2", name _THIS(0), name player],
 		QGVAR(msg),
@@ -494,7 +494,7 @@ GVAR(kickSquadMember) = {
 // [unit1, unit2] // unit2 (local) have been kicked by unit1
 GVAR(kickSquadMember_remote) = {
 	if(isPlayer _THIS(1)) then {	
-		format["%1 РІС‹РіРЅР°Р» РІР°СЃ", name _THIS(0)] call GVAR(msg);
+		format["%1 выгнал вас", name _THIS(0)] call GVAR(msg);
 	};		
 	[_THIS(1)] joinSilent createGroup (side _THIS(1));
 	[] call GVAR(menu_main);
@@ -536,7 +536,7 @@ GVAR(menu_main) = {
 		if(count units group player > 1)then {
 			PUSH_START(GVAR(actions_ids))
 				player addAction [
-					"<t color='#0099ee'><img image='\A3\ui_f\data\gui\Rsc\RscDisplayConfigViewer\bookmark_gs.paa' size='0.7' /> РџРµСЂРµРґР°С‚СЊ РєРѕРјР°РЅРґРѕРІР°РЅРёРµ ...</t>",
+					"<t color='#0099ee'><img image='\A3\ui_f\data\gui\Rsc\RscDisplayConfigViewer\bookmark_gs.paa' size='0.7' /> Передать командование ...</t>",
 					{ _THIS(3) call GVAR(menu_giveLeaderShip); },
 					[],
 					9010				
@@ -544,7 +544,7 @@ GVAR(menu_main) = {
 			PUSH_END
 			PUSH_START(GVAR(actions_ids))
 				player addAction [
-					"<t color='#ff8822'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\top_close_gs.paa' size='0.7' /> Р’С‹РіРЅР°С‚СЊ С‡Р»РµРЅР° РѕС‚СЂСЏРґР°...</t>",
+					"<t color='#ff8822'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\top_close_gs.paa' size='0.7' /> Выгнать члена отряда...</t>",
 					{ _THIS(3) call GVAR(menu_kickSquadMember); },
 					[],
 					9030
@@ -553,7 +553,7 @@ GVAR(menu_main) = {
 		};
 		PUSH_START(GVAR(actions_ids))
 			player addAction [
-				"<t color='#0088ee'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_config_ca.paa' size='0.7' /> РћРїС†РёРё РѕС‚СЂСЏРґР° ...</t>",
+				"<t color='#0088ee'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_config_ca.paa' size='0.7' /> Опции отряда ...</t>",
 				{ _THIS(3) call GVAR(menu_squadOptions); },
 				[],
 				9020
@@ -563,7 +563,7 @@ GVAR(menu_main) = {
 		if([player] call GVAR(canTakeLeadership)) then {
 			PUSH_START(GVAR(actions_ids))
 				player addAction [
-					"<t color='#0099ee'><img image='\A3\ui_f\data\gui\Rsc\RscDisplayConfigViewer\bookmark_gs.paa' size='0.7' /> Р’Р·СЏС‚СЊ РєРѕРјР°РЅРґРѕРІР°РЅРёРµ</t>",
+					"<t color='#0099ee'><img image='\A3\ui_f\data\gui\Rsc\RscDisplayConfigViewer\bookmark_gs.paa' size='0.7' /> Взять командование</t>",
 					{ _THIS(3) call GVAR(takeLeaderShip) },
 					[],
 					9000					
@@ -575,7 +575,7 @@ GVAR(menu_main) = {
 	if(count units group player > 1)then {	
 		PUSH_START(GVAR(actions_ids))
 			player addAction [
-				"<t color='#ff1111'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_sidebar_hide_up.paa' size='0.7' /> РџРѕРєРёРЅСѓС‚СЊ РѕС‚СЂСЏРґ</t>",
+				"<t color='#ff1111'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_sidebar_hide_up.paa' size='0.7' /> Покинуть отряд</t>",
 				{ _THIS(3) call GVAR(leaveGroup) },
 				[],
 				8000					
@@ -591,7 +591,7 @@ GVAR(menu_main) = {
 		if(_unit1 in units (_x select 2) && (_x select 0) + TIMEOUT > time) then {						
 			PUSH_START(GVAR(actions_ids))
 				player addAction [
-					format["<t color='#00cc00'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_continue_ca.paa' size='0.7' /> РџСЂРёРЅСЏС‚СЊ РїСЂРёРіР»Р°С€РµРЅРёРµ РѕС‚ %1'Р° (РёР· РѕС‚СЂСЏРґР° %2'Р°)</t>", name _unit1, name leader _unit1],
+					format["<t color='#00cc00'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_continue_ca.paa' size='0.7' /> Принять приглашение от %1'а (из отряда %2'а)</t>", name _unit1, name leader _unit1],
 					{ _THIS(3) call GVAR(invite_accepted) },
 					[_unit1, _forEachIndex],
 					7500-_forEachIndex					
@@ -599,7 +599,7 @@ GVAR(menu_main) = {
 			PUSH_END			
 			PUSH_START(GVAR(actions_ids))
 				player addAction [
-					format["<t color='#ff1111'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\top_close_gs.paa' size='0.7' /> РћС‚РєР°Р·Р°С‚СЊСЃСЏ РѕС‚ РїСЂРёРіР»Р°С€РµРЅРёСЏ %1'Р° (РёР· РѕС‚СЂСЏРґР° %2'Р°)</t>", name _unit1, name leader _unit1],
+					format["<t color='#ff1111'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\top_close_gs.paa' size='0.7' /> Отказаться от приглашения %1'а (из отряда %2'а)</t>", name _unit1, name leader _unit1],
 					{ _THIS(3) call GVAR(invite_declined) },
 					[_unit1, _forEachIndex],
 					7000-_forEachIndex
@@ -619,7 +619,7 @@ GVAR(menu_main) = {
 	  	if(player in units (_x select 2) && (_x select 0) + TIMEOUT > time) then {						
 			PUSH_START(GVAR(actions_ids))
 				player addAction [
-					format["<t color='#00cc00'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_continue_ca.paa' size='0.7' /> РџСЂРёРЅСЏС‚СЊ %1'Р° РїРѕ Р·Р°СЏРІРєРµ Рѕ РІСЃС‚СѓРїР»РµРЅРёРё</t>", name _unit1],
+					format["<t color='#00cc00'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_continue_ca.paa' size='0.7' /> Принять %1'а по заявке о вступлении</t>", name _unit1],
 					{ _THIS(3) call GVAR(request_accepted) },
 					[_unit1, _forEachIndex],
 					6500-_forEachIndex
@@ -627,7 +627,7 @@ GVAR(menu_main) = {
 			PUSH_END			
 			PUSH_START(GVAR(actions_ids))
 				player addAction [
-					format["<t color='#ff1111'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\top_close_gs.paa' size='0.7' /> РћС‚РєР°Р·Р°С‚СЊ РІ Р·Р°СЏРІРєРµ %1'Р° Рѕ РІСЃС‚СѓРїР»РµРЅРёРё</t>", name _unit1],
+					format["<t color='#ff1111'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\top_close_gs.paa' size='0.7' /> Отказать в заявке %1'а о вступлении</t>", name _unit1],
 					{ _THIS(3) call GVAR(request_declined) },
 					[_unit1, _forEachIndex],
 					6000-_forEachIndex
@@ -657,7 +657,7 @@ GVAR(menu_main) = {
 				) then {
 					PUSH_START(GVAR(actions_ids))
 						player addAction [
-							format["<t color='#ffcc66'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_units_ca.paa' size='0.7' /> РџСЂРёРіР»Р°СЃРёС‚СЊ %1'Р° РІСЃС‚СѓРїРёС‚СЊ РІ РІР°С€ РѕС‚СЂСЏРґ</t>", name _x],
+							format["<t color='#ffcc66'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_units_ca.paa' size='0.7' /> Пригласить %1'а вступить в ваш отряд</t>", name _x],
 							{ _THIS(3) call GVAR(invite); },
 							[_x],
 							5600-_forEachIndex
@@ -673,7 +673,7 @@ GVAR(menu_main) = {
 				if(_join==JOIN_FREE) then {
 					PUSH_START(GVAR(actions_ids))
 						player addAction [
-							format["<t color='#ffcc66'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_units_ca.paa' size='0.7' /> Р’СЃС‚СѓРїРёС‚СЊ РІ РѕС‚СЂСЏРґ %1'Р° (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°)</t>", name _x, name leader _x],
+							format["<t color='#ffcc66'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_units_ca.paa' size='0.7' /> Вступить в отряд %1'а (подчиненный %2'а)</t>", name _x, name leader _x],
 							{ _THIS(3) call GVAR(join); },
 							[_x],
 							5300-_forEachIndex 
@@ -687,7 +687,7 @@ GVAR(menu_main) = {
 					) then {
 						PUSH_START(GVAR(actions_ids)) 
 							player addAction [
-								format["<t color='#ffcc66'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_units_ca.paa' size='0.7' /> РџРѕРґР°С‚СЊ Р·Р°СЏРІРєСѓ Рѕ РІСЃС‚СѓРїР»РµРЅРёРё РІ РѕС‚СЂСЏРґ %1'Р° (РїРѕРґС‡РёРЅРµРЅРЅС‹Р№ %2'Р°)</t>", name _x, name leader _x],
+								format["<t color='#ffcc66'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_units_ca.paa' size='0.7' /> Подать заявку о вступлении в отряд %1'а (подчиненный %2'а)</t>", name _x, name leader _x],
 								{ _THIS(3) call GVAR(request); },
 								[player, _x, _accept],
 								5000-_forEachIndex
