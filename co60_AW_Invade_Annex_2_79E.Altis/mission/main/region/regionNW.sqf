@@ -50,7 +50,7 @@ while { count _targetArray > 0 } do {
 	//------------------------------------------ Edit and place markers for new target
 	
 	{_x setMarkerPos (getMarkerPos currentAO);} forEach ["aoCircle","aoMarker"];
-	"aoMarker" setMarkerText format["Take %1",currentAO];
+	"aoMarker" setMarkerText format["Захватить %1",currentAO];
 	sleep 1;
 
 	//------------------------------------------ Create AO detection trigger
