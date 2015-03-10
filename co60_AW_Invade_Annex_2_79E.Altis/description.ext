@@ -204,12 +204,12 @@ class Params
 				default = 10; // default 7
 			};
 			
-		class EasterEggs {
+/*		class EasterEggs {
 				title = "Enable Easter Eggs?";
 				values[] = {1,0};
 				texts[] = {"Enabled","Disabled"};
 				default = 1;
-			};	
+			};   */	
 };
 
 //------------------------- Notifications
