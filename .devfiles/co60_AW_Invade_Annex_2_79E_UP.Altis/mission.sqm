@@ -219,10 +219,10 @@ class Mission
 					special="NONE";
 					id=2;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Механик";
+					description="Инженер";
 					syncId=2;
 					synchronizations[]={33};
 				};
@@ -342,10 +342,10 @@ class Mission
 					special="NONE";
 					id=10;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Механик";
+					description="Инженер";
 					syncId=10;
 					synchronizations[]={33};
 				};
@@ -465,10 +465,10 @@ class Mission
 					special="NONE";
 					id=18;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Механик";
+					description="Инженер";
 					syncId=18;
 					synchronizations[]={33};
 				};
