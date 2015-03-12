@@ -61,7 +61,7 @@ if ((count enemyCasArray) < _jetLimit) then {
 			_jetActual setVehicleAmmo 1;
 			_jetActual flyInHeight (200 + (random 850));
 			_jetPos = getPosATL _jetActual;
-			_targetList = _jetPos nearEntities [["Air"],7500];
+			_targetList = _jetPos nearEntities [["Air"],4000];
 			{enemyCasGroup reveal [_x,4];} count _targetList;
 			sleep 60;
 		};

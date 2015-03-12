@@ -5013,7 +5013,7 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="myBox";
-			init="this allowDamage false; this enableSimulation false;this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];  this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];";
+			init="this allowDamage false;this addAction [""<t color='#FFBF00'>  • Ящик</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];this enablesimulation false; this addAction [""Сохранение снаржения"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; _K = [this] execVM ""scripts\VA-west.sqf""; this enableRopeAttach false;";
 		};
 		class Item405
 		{
@@ -10816,7 +10816,8 @@ class Mission
 			vehicle="C_Van_01_fuel_F";
 			lock="LOCKEDPLAYER";
 			skill=0.60000002;
-			init="this allowDamage false;";
+			text="topl";
+			init="this allowdamage false; this enableRopeAttach false;";
 			syncId=79;
 			synchronizations[]={33};
 		};
@@ -11602,7 +11603,56 @@ class Mission
 			leader=1;
 			lock="LOCKEDPLAYER";
 			skill=0.60000002;
-			init="this enablesimulation false; this allowdamage false;";
+			text="medair";
+			init="this allowdamage false; this enableRopeAttach false;";
+		};
+		class Item1002
+		{
+			position[]={15061.52,17.91,17156.275};
+			azimut=115;
+			offsetY=1;
+			id=1052;
+			side="EMPTY";
+			vehicle="I_Plane_Fighter_03_AA_F";
+			skill=0.60000002;
+			text="buzaa";
+			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item1003
+		{
+			position[]={15281.419,17.926523,17361.188};
+			azimut=227.78128;
+			id=1053;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="Quad_2_2_1";
+			init="_m = [this,60,30] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item1004
+		{
+			position[]={15284.26,17.926037,17358.711};
+			azimut=227.78128;
+			id=1054;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="Quad_2_2_2";
+			init="_m = [this,60,30] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item1005
+		{
+			position[]={15209.797,17.919775,17257.33};
+			azimut=310;
+			offsetY=1;
+			id=1055;
+			side="EMPTY";
+			vehicle="O_Heli_Transport_04_F";
+			skill=0.60000002;
+			text="taru";
+			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 	};
 	class Markers
