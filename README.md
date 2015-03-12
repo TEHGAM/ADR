@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://github.com/TEHGAM/ADR">
     <img src="https://raw.githubusercontent.com/Tourorist/TPS/master/rw2/adr-logo-03.png"
-         width="320"
+         width="192"
          alt="Annex Done Right" />
   </a>
 </p>
-<h2 align="center">ANNEX ДONE RIGHT</h2>
+<h1 align="center">Annex Done Right</h1>
 <p align="center">
   <a href="https://github.com/TEHGAM/ADR/wiki/ADR:-История">
     <img src="http://img.shields.io/badge/Версия-3.4.4-blue.svg?style=flat"
@@ -21,12 +21,14 @@
   </a>
 </p>
 
-Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии [Invade & Annex](https://bitbucket.org/ahoyworld/aw-i-a-2). Вы можете помочь нам в этом оставляя свои отзывы в [частном разделе](http://www.tehgam.com/viewforum.php?f=36) проекта на форуме TEHGAM, а также [определяя задачи](https://github.com/TEHGAM/ADR/issues) по его дальнейшему улучшению.
+Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии [Invade &amp; Annex](https://bitbucket.org/ahoyworld/aw-i-a-2). Вы можете помочь нам в этом оставляя свои отзывы в [частном разделе](http://www.tehgam.com/viewforum.php?f=36) проекта на форуме TEHGAM, а также [определяя задачи](https://github.com/TEHGAM/ADR/issues) по его дальнейшему улучшению.
 
 При наличии навыков редактирования Arma 3 и желании содействовать в разработке ADR напрямую, Вы можете присоединиться к [её разработчикам](https://github.com/TEHGAM/ADR/graphs/contributors) делая [запросы на включение](https://github.com/TEHGAM/ADR/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/tym32167).
 
 ####Огромное Спасибо
 * Джек Уильямс ([Rarek](https://bitbucket.org/Rarek)) и [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), а также сообщества [Ahoy World](http://www.ahoyworld.co.uk/) и [allFPS](http://allfps.com.au/) — за труд над исходной миссией.
+* [vosur](https://github.com/vosur) за крышу над головой проекта.
+* [AlNazir](https://github.com/AlNazir) и [[OSA]Ricoh](http://www.tehgam.com/memberlist.php?mode=viewprofile&u=63) за предоставление и поддержку официальных игровых серверов.
 * [AgentRev](https://github.com/AgentRev) за [оптимизации](https://github.com/TEHGAM/ADR/blob/master/Annex_Done_Right.Altis/scripts/fpsFix/vehicleManager.sqf).
 * [Giallustio](http://www.giallustio.altervista.org/) за скрипт [возрождения](http://www.armaholic.com/page.php?id=18955) и [наказания](http://www.armaholic.com/page.php?id=19099) игроков.
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) за [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
@@ -35,6 +37,8 @@
 * [aeroson](https://github.com/aeroson) за скрипт сбора мусора ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) и скрипт [маркировки игроков](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf).
 * [Tophe](http://meadows.se/) за скрипт [востановления техники](http://www.armaholic.com/page.php?id=6080).
 * [Bob_Gneu](http://gneu.org/) за скрипт [крепления стропами](http://www.armaholic.com/page.php?id=20530).
+* [longbow](https://github.com/ussrlongbow/) за скрипт [индикации целей](http://www.armaholic.com/page.php?id=27039).
+* [Cleric](http://www.tehgam.com/memberlist.php?mode=viewprofile&u=159), [mexan](http://www.tehgam.com/memberlist.php?mode=viewprofile&u=2) и [ZeRoKoOl](https://github.com/ZeRoKoOl13) за первоначальную работу по редактированию нашей версии I&amp;A.
 * Отдельное спасибо всем регулярным игрокам и администраторам [официального сервера](https://github.com/TEHGAM/ADR/wiki/T2: Сводка), которые уделяют свое время проекту:
   * внося нам свои предложения по дальнейшей разработке миссии,
   * указывая на её существующие проблемы,
