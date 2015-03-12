@@ -309,7 +309,7 @@ player createDiaryRecord ["changelog",
 <br /><br />
 • Обновили скрипт управленя дальностью отображения и прорисовки (TAW_VD) до v1.4, скрипт очистки мусора до v1.9;
 <br /><br />
-• Наше ответвление Invade &amp; Annex теперь имеет собственное название — Annex Дone Right.
+• Наше ответвление Invade &amp; Annex теперь имеет собственное название — Annex Done Right.
 <br />
 "
 ]];
@@ -465,7 +465,7 @@ player createDiaryRecord ["changelog",
 //Авторы
 player createDiaryRecord ["credits",
 [
-"Annex Дone Right",
+"Annex Done Right",
 "
 <br />
 <font size='18' color='#3E9D3F'>Руководитель</font>
@@ -479,8 +479,6 @@ player createDiaryRecord ["credits",
 <font size='14'>
     • a11archer
 <br />
-    • longbow
-<br />
     • Noart
 <br />
     • PR9INICHEK
@@ -488,8 +486,6 @@ player createDiaryRecord ["credits",
     • Stevenson
 <br />
     • vosur
-<br />
-    • ZeRoKoOl
 <br /><br />
 <font size='18' color='#3E9D3F'>Локализация</font>
 <br />
@@ -561,6 +557,8 @@ player createDiaryRecord ["credits",
     • wildw1ng – Gear restrictions
 <br />
     • Bake – Safe Zone
+<br />
+    • longbow – Laser designation for vehicles
 </font>
 "
 ]];
