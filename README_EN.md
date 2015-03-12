@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://github.com/TEHGAM/ADR">
     <img src="https://raw.githubusercontent.com/Tourorist/TPS/master/rw2/adr-logo-03.png"
-         width="320"
+         width="192"
          alt="Annex Done Right" />
   </a>
 </p>
-<h2 align="center">ANNEX ДONE RIGHT</h2>
+<h1 align="center">Anned Done Right</h1>
 <p align="center">
   <a href="https://github.com/TEHGAM/ADR/wiki/ADR:-History">
     <img src="http://img.shields.io/badge/Version-3.4.4-blue.svg?style=flat"
@@ -27,6 +27,8 @@ If you have some experience with editing Arma 3 and are interested in assisting 
 
 ####Special Thanks
 * Jack Williams ([Rarek](https://bitbucket.org/Rarek)) and [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), as well as members of [Ahoy World](http://www.ahoyworld.co.uk/) and [allFPS](http://allfps.com.au/) — for the original mission.
+* [vosur](https://github.com/vosur) for giving the project its home.
+* [AlNazir](https://github.com/AlNazir) and [[OSA]Ricoh](http://www.tehgam.com/memberlist.php?mode=viewprofile&u=63) for hosting and support of the official game servers.
 * [AgentRev](https://github.com/AgentRev) for [optimizations](https://github.com/TEHGAM/ADR/blob/master/Annex_Done_Right.Altis/scripts/fpsFix/vehicleManager.sqf).
 * [Giallustio](http://www.giallustio.altervista.org/) for the player [revive](http://www.armaholic.com/page.php?id=18955) and [punishment](http://www.armaholic.com/page.php?id=19099) scripts.
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) for [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
@@ -35,6 +37,8 @@ If you have some experience with editing Arma 3 and are interested in assisting 
 * [aeroson](https://github.com/aeroson) for the garbage collection ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) and the [player marking](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf) scripts.
 * [Tophe](http://meadows.se/) for the [vehicle respawn](http://www.armaholic.com/page.php?id=6080) script.
 * [Bob_Gneu](http://gneu.org/) for the [sling loading](http://www.armaholic.com/page.php?id=20530) script.
+* [longbow](https://github.com/ussrlongbow/) for the [Laser designation](http://www.armaholic.com/page.php?id=27039) script.
+* [Cleric](http://www.tehgam.com/memberlist.php?mode=viewprofile&u=159), [mexan](http://www.tehgam.com/memberlist.php?mode=viewprofile&u=2) and [ZeRoKoOl](https://github.com/ZeRoKoOl13) for the initial modifications to our version of I&amp;A.
 * And last but not least, a big thank you to all regular players and administrators of the [official server](https://github.com/TEHGAM/ADR/wiki/T2:-Summary) for:
   * supporting the project with new suggestions,
   * taking out their time to report any bugs,
