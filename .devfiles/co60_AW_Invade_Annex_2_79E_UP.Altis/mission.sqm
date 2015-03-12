@@ -1176,7 +1176,7 @@ class Mission
 					special="NONE";
 					id=45;
 					side="WEST";
-					vehicle="B_Helipilot_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					rank="LIEUTENANT";
@@ -1193,7 +1193,7 @@ class Mission
 					special="NONE";
 					id=46;
 					side="WEST";
-					vehicle="B_Helipilot_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -1208,7 +1208,7 @@ class Mission
 					special="NONE";
 					id=47;
 					side="WEST";
-					vehicle="B_Helipilot_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					description="Пилот";
@@ -1222,7 +1222,7 @@ class Mission
 					special="NONE";
 					id=48;
 					side="WEST";
-					vehicle="B_Helipilot_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -1235,7 +1235,7 @@ class Mission
 					position[]={15119.922,17.976023,17246.24};
 					id=49;
 					side="WEST";
-					vehicle="B_Helipilot_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					description="Пилот";
