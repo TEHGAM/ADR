@@ -5998,7 +5998,7 @@ class Mission
 			name="Depo";
 			text="Транспортное депо";
 			type="b_maint";
-			colorName="ColorGreen";
+			colorName="ColorWEST";
 		};
 	};
 	class Sensors
