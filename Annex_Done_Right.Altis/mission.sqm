@@ -100,7 +100,7 @@ class Mission
 	randomSeed=12935265;
 	class Intel
 	{
-		briefingName="Annex Дone Right";
+		briefingName="Annex Done Right";
 		overviewText="v3.4.4";
 		resistanceWest=0;
 		startWind=0;
