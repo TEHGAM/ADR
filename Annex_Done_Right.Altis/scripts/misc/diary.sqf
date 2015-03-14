@@ -241,14 +241,14 @@ player createDiaryRecord ["mods",
 <br /><br />
 <font size='18' color='#3E9D3F'>JSRS3: DragonFyre</font>
 <br />
-Один из лучших звуковых модов для Arma 3 (CBA обязателен).
+Комплект аудио эффектов, скриптов и настроек значительно преображающих звуковую атмосферу игры.
 <br /><br />
-<font size='18' color='#3E9D3F'>VTS Simple weapon resting</font>
+<font size='18' color='#3E9D3F'>VTS Simple Weapon Resting</font>
 <br />
-Даёт возможность использовать оружейные сошки по нажатию клавиш Ctrl+Пробел.
+Добавляет возможность использовать оружейные сошки (Ctrl+Пробел).
 <br /><br />
 <font size='10' color='#BECEDA'>
-Ссылки на все вышеуказанные аддоны Вы можете найти в нашем разделе TEHGAM форума.
+Ссылки на все вышеуказанные аддоны можно найти в нашем разделе TEHGAM форума.
 </font>
 <br />
 "
@@ -277,7 +277,7 @@ player createDiaryRecord ["teamspeak",
 "
 ]];
 
-//Журнал изменений к миссии Annex Дone Right
+//Журнал изменений от ADR
 player createDiaryRecord ["changelog",
 [
 "v3.4.4 (25 января 2015 г)",
