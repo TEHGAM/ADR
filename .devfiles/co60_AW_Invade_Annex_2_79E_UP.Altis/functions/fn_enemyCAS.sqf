@@ -47,9 +47,6 @@ if ((count enemyCasArray) < _jetLimit) then {
 	[(units enemyCasGroup)] call QS_fnc_setSkill2;
 	[enemyCasGroup,_aoPos] call BIS_fnc_taskAttack;
 	
-	{_x addCuratorEditableObjects [[_jetPilot],false];} count allCurators;
-	{_x addCuratorEditableObjects [[_jetActual],false];} count allCurators;
-	
 	0 = enemyCasArray pushBack _jetActual;
 	
 	[_jetActual,_jetPilot] spawn {

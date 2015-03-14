@@ -102,9 +102,6 @@ private ["_basepos","_loopVar","_dir","_PTdir","_pos","_barrier","_unitsArray","
 	
 	_unitsArray = _unitsArray + [_priorityGroup];
 
-	{
-		_x addCuratorEditableObjects [[priorityObj1, priorityObj2, ammoTruck] + (units _priorityGroup), false];
-	} foreach adminCurators;
 
 	
 	//---------- Engines on baby

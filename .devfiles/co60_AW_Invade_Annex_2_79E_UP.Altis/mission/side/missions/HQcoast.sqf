@@ -66,10 +66,6 @@ private ["_flatPos","_accepted","_position","_randomDir","_x","_briefing","_enem
 	
 	_unitsArray = [_smuggleGroup];
 
-	{
-		_x addCuratorEditableObjects [[boat], false];
-		_x addCuratorEditableObjects [units _smuggleGroup, false];
-	} foreach adminCurators;
 	
 	//---------- SHIPPING TRAWLER AND INFLATABLE BOAT FOR AMBIENCE
 	

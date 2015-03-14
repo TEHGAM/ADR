@@ -38,10 +38,6 @@ for "_x" from 0 to (2 + (random 4)) do {
 				
 	_enemiesArray = _enemiesArray + [_infteamPatrol];
 
-	{
-		_x addCuratorEditableObjects [units _infteamPatrol, false];
-	} foreach adminCurators;
-
 };
 
 //---------- SNIPER
@@ -53,10 +49,6 @@ for "_x" from 0 to 1 do {
 	_indSniperTeam setCombatMode "RED";
 	
 	_enemiesArray = _enemiesArray + [_indSniperTeam];
-
-	{
-		_x addCuratorEditableObjects [units _indSniperTeam, false];
-	} foreach adminCurators;
 
 };
 
@@ -82,11 +74,6 @@ _enemiesArray = _enemiesArray + [_SMvehPatrol];
 sleep 0.1;
 _enemiesarray = _enemiesArray + [_SMveh];
 
-{
-	_x addCuratorEditableObjects [[_SMveh], false];
-	_x addCuratorEditableObjects [units _SMvehPatrol, false];
-} foreach adminCurators;
-
 //---------- AA VEHICLE
 
 for "_x" from 0 to 1 do {
@@ -101,11 +88,6 @@ for "_x" from 0 to 1 do {
 	_enemiesArray = _enemiesArray + [_SMaaPatrol];
 	sleep 0.1;
 	_enemiesArray = _enemiesArray + [_SMaa];
-
-	{
-		_x addCuratorEditableObjects [[_SMaa], false];
-		_x addCuratorEditableObjects [units _SMaaPatrol, false];
-	} foreach adminCurators;
 
 };
 
@@ -122,10 +104,6 @@ for "_x" from 0 to 1 do {
 		_newGrp = [_x] call QS_fnc_garrisonFortIND;
 		if (!isNull _newGrp) then { 
 		_enemiesArray = _enemiesArray + [_newGrp]; };
-		{
-			_x addCuratorEditableObjects [units _newGrp, false];
-		} foreach adminCurators;
-
 	} forEach (getPos sideObj nearObjects ["House", 150]);
 
 _enemiesArray

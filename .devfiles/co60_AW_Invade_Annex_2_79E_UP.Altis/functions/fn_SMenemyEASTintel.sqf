@@ -35,9 +35,6 @@ for "_x" from 0 to (1 + (random 3)) do {
 				
 	_enemiesArray = _enemiesArray + [_infteamPatrol];
 
-	{
-		_x addCuratorEditableObjects [units _infteamPatrol, false];
-	} foreach adminCurators;
 
 };
 
@@ -55,10 +52,5 @@ _SMveh lock 3;
 _enemiesArray = _enemiesArray + [_SMvehPatrol];
 sleep 0.1;
 _enemiesArray = _enemiesArray + [_SMveh];
-
-{
-	_x addCuratorEditableObjects [[_SMveh], false];
-	_x addCuratorEditableObjects [units _SMvehPatrol, false];
-} foreach adminCurators;
 
 _enemiesArray

@@ -38,9 +38,6 @@ for "_x" from 0 to (3 + (random 4)) do {
 				
 	_enemiesArray = _enemiesArray + [_infteamPatrol];
 
-	{
-		_x addCuratorEditableObjects [units _infteamPatrol, false];
-	} foreach adminCurators;
 
 };
 
@@ -54,9 +51,6 @@ for "_x" from 0 to 1 do {
 		
 	_enemiesArray = _enemiesArray + [_smSniperTeam];
 
-	{
-		_x addCuratorEditableObjects [units _smSniperTeam, false];
-	} foreach adminCurators;
 
 };
 	
@@ -73,10 +67,6 @@ sleep 0.1;
 	
 _enemiesArray = _enemiesArray + [_SMveh1];
 
-{
-	_x addCuratorEditableObjects [[_SMveh1], false];
-	_x addCuratorEditableObjects [units _SMvehPatrol, false];
-} foreach adminCurators;
 	
 //---------- VEHICLE RANDOM	
 	
@@ -93,10 +83,6 @@ _enemiesArray = _enemiesArray + [_SMveh2];
 sleep 0.1;
 _enemiesArray = _enemiesArray + [_SMvehPatrol];
 
-{
-	_x addCuratorEditableObjects [[_SMveh2], false];
-	_x addCuratorEditableObjects [units _SMvehPatrol, false];
-} foreach adminCurators;
 
 //---------- VEHICLE AA
 	
@@ -112,10 +98,7 @@ _enemiesArray = _enemiesArray + [_SMaaPatrol];
 sleep 0.1;
 _enemiesArray = _enemiesArray + [_SMaa];
 
-{
-	_x addCuratorEditableObjects [[_SMaa], false];
-	_x addCuratorEditableObjects [units _SMaaPatrol, false];
-} foreach adminCurators;
+
 
 //---------- COMMON
 
@@ -130,10 +113,6 @@ _enemiesArray = _enemiesArray + [_SMaa];
 		_newGrp = [_x] call QS_fnc_garrisonFortEAST;
 		if (!isNull _newGrp) then { 
 		_enemiesArray = _enemiesArray + [_newGrp]; };
-		{
-			_x addCuratorEditableObjects [units _newGrp, false];
-		} foreach adminCurators;
-
 	} forEach (getPos sideObj nearObjects ["House", 150]);
 	
 _enemiesArray

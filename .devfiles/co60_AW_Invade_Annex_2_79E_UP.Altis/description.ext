@@ -60,13 +60,7 @@ class CfgFunctions
 		#include "functions\cfgfunctions.hpp"			// Integrated I&A functions
 		#include "scripts\VAS\cfgfunctions.hpp"			// VAS
 		#include "scripts\taw_vd\CfgFunctions.hpp"		// View distance
-	    class FETT {									// Curator synch http://forums.bistudio.com/showthread.php?176691-Making-placed-units-be-editable-for-every-Zeus
-	        class curator {
-	            class eventHandlers {postInit = 1;};
-	            class objPlaced {};
-	            class grpPlaced {};
-	        };
-	    };
+	    
 	};
 
 class RscTitles
