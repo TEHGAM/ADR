@@ -1,7 +1,7 @@
 /*
   Author: Bryan "Tonic" Boardwine
   Website: www.iamtonic.co
-  Use of the VAS system is permitted although modification and distribution must be approved by Tonic.
+  License: Use is allowed, but any distribution of modified versions has to be approved first.
 */
 
 #include "common.hpp"
@@ -78,8 +78,7 @@ class VAS_Diag
       idc = 2960;
       text = "";
       onLBDrop = "_this call VAS_fnc_quickAddDrag;";
-      x = 0.905;
-      y = 0.25;
+      x = 0.905; y = 0.25;
       w = "3 * ( ( (safezoneW / safezoneH) min 1.2) / 40)";
       h = "3 * ( ( ( (safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
     };
@@ -251,7 +250,7 @@ class VAS_Diag
       w = (6.25 / 40); h = (1 / 25);
     };
 
-    //Filter Buttons
+    //Кнопки фильтрация по классам
     class Filter1 : VAS_RscActiveText
     {
       idc = 2580;
@@ -307,10 +306,8 @@ class VAS_Diag
       colorBackground[] = {0, 0, 0, 0};
       idc = -1;
       text = "Мобильный ящик снаряжения и оружия";
-      x = 0.1;
-      y = 0.2;
-      w = 0.8;
-      h = (1 / 25);
+      x = 0.1; y = 0.2;
+      w = 0.8; h = (1 / 25);
     };
 
     class VersionNumber : Title
@@ -346,10 +343,8 @@ class VAS_Diag
       //shortcuts[] = {0x00050000 + 2};
       text = "$STR_VAS_Main_btnClose";
       onButtonClick = "closeDialog 0;";
-      x = 0.1;
-      y = 0.8 - (1 / 25);
-      w = (6.25 / 40);
-      h = (1 / 25);
+      x = 0.1; y = 0.8 - (1 / 25);
+      w = (6.25 / 40); h = (1 / 25);
     };
 
     class ButtonSaveGear : VAS_RscButtonMenu
@@ -357,10 +352,8 @@ class VAS_Diag
       idc = -1;
       text = "$STR_VAS_Main_btnSave";
       onButtonClick = "createDialog ""VAS_Save_Diag"";";
-      x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-      y = 0.8 - (1 / 25);
-      w = (6.25 / 40);
-      h = (1 / 25);
+      x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH)); y = 0.8 - (1 / 25);
+      w = (6.25 / 40); h = (1 / 25);
     };
 
     class ButtonLoadGear : VAS_RscButtonMenu
@@ -368,10 +361,8 @@ class VAS_Diag
       idc = -1;
       text = "$STR_VAS_Main_btnLoad";
       onButtonClick = "createDialog ""VAS_Load_Diag"";";
-      x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-      y = 0.8 - (1 / 25);
-      w = (6.25 / 40);
-      h = (1 / 25);
+      x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH)); y = 0.8 - (1 / 25);
+      w = (6.25 / 40); h = (1 / 25);
     };
 
     class ButtonRemoveAll : VAS_RscButtonMenu
@@ -379,10 +370,8 @@ class VAS_Diag
       idc = -1;
       text = "$STR_VAS_Main_btnRemoveAll";
       onButtonClick = "[true] spawn VAS_fnc_removeGear;";
-      x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-      y = 0.8 - (1 / 25);
-      w = (6.25 / 40);
-      h = (1 / 25);
+      x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH)); y = 0.8 - (1 / 25);
+      w = (6.25 / 40); h = (1 / 25);
     };
   };
 };
@@ -401,20 +390,16 @@ class VAS_Load_Diag
     {
       colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
       idc = -1;
-      x = 0.1;
-      y = 0.2;
-      w = 0.6;
-      h = (1 / 25);
+      x = 0.1; y = 0.2;
+      w = 0.6; h = (1 / 25);
     };
 
     class MainBackground:VAS_RscText
     {
       colorBackground[] = {0, 0, 0, 0.7};
       idc = -1;
-      x = 0.1;
-      y = 0.2 + (11 / 250);
-      w = 0.6;
-      h = 0.6 - (22 / 250);
+      x = 0.1; y = 0.2 + (11 / 250);
+      w = 0.6; h = 0.6 - (22 / 250);
     };
   };
 
