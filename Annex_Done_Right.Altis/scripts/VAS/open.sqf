@@ -1,5 +1,5 @@
-if(isNil "VAS_init_complete") exitWith {hint "VAS не инициализирован.\n\nThis means CfgFunctions.hpp was never called via Description.ext";};
-if(!VAS_init_complete && !vas_disableSafetyCheck) exitWith {if((time - VAS_init_timeOnStart) > 25) then {[] call VAS_fnc_mainInit;}; hint "VAS пока не загрузился."};
+if(isNil "VAS_init_complete") exitWith {hint "Ящик не инициализирован.\n\nЭто значит CfgFunctions.hpp не получил запрос от Description.ext";};
+if(!VAS_init_complete && !vas_disableSafetyCheck) exitWith {if((time - VAS_init_timeOnStart) > 25) then {[] call VAS_fnc_mainInit;}; hint "Ящик пока еще не прогрузился."};
 
 //Set up some variables incase a 'limited' weapons/mags/items field is meant for that container (Mainly support for an upcoming feature).
 VAS_box_weapons = (_this select 0) getVariable "bis_weapons";
