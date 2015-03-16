@@ -1,7 +1,7 @@
 #include "macro.sqf"
 /*
 	File: fn_details.sqf
-	Version Edit: 2.5
+	Version Edit: 2.7
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
@@ -54,7 +54,7 @@ _addToLb = {
 	};
 } foreach _magazines;
 
-_items = [_data] call VAS_fnc_accList;
+_items = if (isNil "asdg_jointrails_fnc_getCompatibleAttachments") then {[_data] call VAS_fnc_accList} else {[_data] call asdg_jointrails_fnc_getCompatibleAttachments};
 
 _control = ((findDisplay 2500) displayCtrl 2851);
 lbClear _control;
