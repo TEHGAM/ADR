@@ -485,4 +485,42 @@
       <French>Si vous choisissez de placer cette objet sur votre arme, sachez que l'objet actuellement placé sur l'arme sera automatiquement supprimé</French>
     </Key>
   </Package>
+  <Package name="DOM_Squad">
+    <Key ID="STRD_squadm">
+      <Original>&#160;&#160;• Squad Menu</Original>
+      <Russian>&#160;&#160;• Меню отрядов</Russian>
+    </Key>
+    <Key ID="STRD_namegroup">
+      <Original>Group Name</Original>
+      <Russian>Название отряда</Russian>
+    </Key>
+    <Key ID="STRD_locked">
+      <Original>Locked</Original>
+      <Russian>Закрыт</Russian>
+    </Key>
+    <Key ID="STRD_Quit">
+      <Original>Quit</Original>
+      <Russian>Выйти</Russian>
+    </Key>
+    <Key ID="STRD_Lock">
+      <Original>Lock</Original>
+      <Russian>Закрыть</Russian>
+    </Key>
+    <Key ID="STRD_Unlock">
+      <Original>Unlock</Original>
+      <Russian>Открыть</Russian>
+    </Key>
+    <Key ID="STRD_Remove">
+      <Original>Remove</Original>
+      <Russian>Выгнать</Russian>
+    </Key>
+    <Key ID="STRD_Leave">
+      <Original>Leave</Original>
+      <Russian>Покинуть</Russian>
+    </Key>
+    <Key ID="STRD_Join">
+      <Original>Join</Original>
+      <Russian>Вступить</Russian>
+    </Key>
+  </Package>
 </Project>
