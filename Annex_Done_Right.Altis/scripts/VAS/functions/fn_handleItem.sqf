@@ -109,7 +109,7 @@ if(_bool) then
 			{
 				if((_details select 4) == 4096) then
 				{
-					if((_details select 5) == -1) then
+					if((_details select 5) == -1 && !((_details select 15))) then
 					{
 						_isgun = true;
 					};
@@ -144,7 +144,7 @@ if(_bool) then
 						}
 							else
 						{
-							if(_override) then
+							if(_override OR (getNumber(configFile >> "CfgWeapons" >> _item >> "detectRange") == -1)) then
 							{
 								player addItem _item;
 							}
@@ -502,7 +502,7 @@ if(_bool) then
 			{
 				if((_details select 4) == 4096) then
 				{
-					if((_details select 5) == -1) then
+					if((_details select 5) == -1 && !(_details select 15)) then
 					{
 						_isgun = true;
 					};
