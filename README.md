@@ -28,7 +28,7 @@
 ####Огромное Спасибо
 * Джек Уильямс ([Rarek](https://bitbucket.org/Rarek)) и [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), а также сообщества [Ahoy World](http://www.ahoyworld.co.uk/) и [allFPS](http://allfps.com.au/) — за труд над исходной миссией.
 * [vosur](https://github.com/vosur) за крышу над головой проекта.
-* [AlNazir](https://github.com/AlNazir) и [[OSA]Ricoh](http://www.tehgam.com/memberlist.php?mode=viewprofile&u=63) за предоставление и поддержку официальных игровых серверов.
+* [AlNazir](https://github.com/AlNazir) и [[OSA]Ricoh](http://www.tehgam.com/memberlist.php?mode=viewprofile&u=63) за официальные игровые сервера ADR и их поддержку.
 * [AgentRev](https://github.com/AgentRev) за [оптимизации](https://github.com/TEHGAM/ADR/blob/master/Annex_Done_Right.Altis/scripts/fpsFix/vehicleManager.sqf).
 * [Giallustio](http://www.giallustio.altervista.org/) за скрипт [возрождения](http://www.armaholic.com/page.php?id=18955) и [наказания](http://www.armaholic.com/page.php?id=19099) игроков.
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) за [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
