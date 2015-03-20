@@ -8,10 +8,10 @@
 <h1 align="center">Anned Done Right</h1>
 <p align="center">
   <a href="https://github.com/TEHGAM/ADR/wiki/ADR:-History">
-    <img src="http://img.shields.io/badge/Version-3.4.4-blue.svg?style=flat"
+    <img src="http://img.shields.io/badge/Version-3.4.5-blue.svg?style=flat"
          alt="Version" />
   </a>
-  <a href="http://www.tehgam.com/viewtopic.php?p=13735#p13735">
+  <a href="https://github.com/TEHGAM/ADR/raw/master/Annex_Done_Right.Altis.pbo">
     <img src="http://img.shields.io/badge/Download-1.13_МB-green.svg?style=flat"
          alt="Download" />
   </a>
