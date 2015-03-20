@@ -372,7 +372,7 @@ class TAW_VD
       idc = 2921;
       text = "";
       onSliderPosChanged = "[2,_this select 1] call TAWVD_fnc_onSliderChange;";
-      tooltip = "Дальность видимости находясь в вождушной технике";
+      tooltip = "Дальность видимости находясь в воздушной технике";
       x = 0.42; y = 0.40 - (1 / 25);
       w = "9 * (((safezoneW / safezoneH) min 1.2) / 40)";
       h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
