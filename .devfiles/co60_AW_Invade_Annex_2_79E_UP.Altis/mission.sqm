@@ -15897,20 +15897,6 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={-249.91916,0.078890793,555.2301};
-			a=0;
-			b=0;
-			interruptable=1;
-			age="UNKNOWN";
-			name="ahoycoin";
-			expCond="true";
-			expActiv="onPlayerConnected ""[_uid, _name] execVM """"scripts\ac\init.sqf"""""";";
-			class Effects
-			{
-			};
-		};
-		class Item6
-		{
 			position[]={15058.505,17.303106,17303.832};
 			a=4;
 			b=4;
@@ -15926,7 +15912,7 @@ class Mission
 			{
 			};
 		};
-		class Item7
+		class Item6
 		{
 			position[]={15274.97,17.944826,17356.438};
 			a=0;
@@ -15940,7 +15926,7 @@ class Mission
 			{
 			};
 		};
-		class Item8
+		class Item7
 		{
 			position[]={15113.422,17.91,17204.172};
 			a=8;
@@ -15956,7 +15942,7 @@ class Mission
 			{
 			};
 		};
-		class Item9
+		class Item8
 		{
 			position[]={14853.688,17.91,16748.715};
 			a=8;
@@ -15972,7 +15958,7 @@ class Mission
 			{
 			};
 		};
-		class Item10
+		class Item9
 		{
 			position[]={14686.106,17.91,16578.713};
 			a=8;
@@ -15987,7 +15973,7 @@ class Mission
 			{
 			};
 		};
-		class Item11
+		class Item10
 		{
 			position[]={23642.422,5.23,16372.918};
 			a=8;
@@ -16003,7 +15989,7 @@ class Mission
 			{
 			};
 		};
-		class Item12
+		class Item11
 		{
 			position[]={23724.473,5.23,16366.601};
 			a=8;
@@ -16019,7 +16005,7 @@ class Mission
 			{
 			};
 		};
-		class Item13
+		class Item12
 		{
 			position[]={21237.082,22.443348,7125.8721};
 			a=4;
@@ -16036,7 +16022,7 @@ class Mission
 			{
 			};
 		};
-		class Item14
+		class Item13
 		{
 			position[]={11823.896,12.556641,14149.716};
 			a=4;
@@ -16053,7 +16039,7 @@ class Mission
 			{
 			};
 		};
-		class Item15
+		class Item14
 		{
 			position[]={5021.0049,16.925327,14433.892};
 			a=4;
@@ -16070,7 +16056,7 @@ class Mission
 			{
 			};
 		};
-		class Item16
+		class Item15
 		{
 			position[]={12648.836,49.377216,19822.482};
 			a=4;
