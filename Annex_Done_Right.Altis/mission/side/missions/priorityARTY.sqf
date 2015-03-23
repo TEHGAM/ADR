@@ -128,7 +128,7 @@ private ["_flatPos","_accepted","_position","_flatPos1","_flatPos2","_flatPos3",
   "priorityMarker" setMarkerText "Артиллерия"; publicVariable "priorityMarker";
   priorityTargetText = "Артиллерия"; publicVariable "priorityTargetText";
 
-  _briefing = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#d63333'>Вражеская артиллерия</t><br/>____________________<br/>Обнаружена точка укрепления артиллерийских орудий противника. Её близлежащее расположение от района дислокации грозит всей нашей наземной группировке.<br/><br/>Первый залп ожидается уже через 5 минут.";
+  _briefing = "<t align='center' size='2.2'>Внимание</t><br/><t size='1.5' color='#d63333'>Вражеская артиллерия</t><br/>____________________<br/>Обнаружена точка укрепления артиллерийских орудий противника. Её близлежащее расположение от района дислокации грозит всей нашей наземной группировке.<br/><br/>Первый залп через пару минут.";
   GlobalHint = _briefing; hint parseText _briefing; publicVariable "GlobalHint";
   showNotification = ["NewPriorityTarget", "Обнаружена артиллерия врага"]; publicVariable "showNotification";
 
