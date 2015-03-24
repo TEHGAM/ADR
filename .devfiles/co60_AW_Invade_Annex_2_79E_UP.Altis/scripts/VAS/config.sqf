@@ -89,10 +89,8 @@ vas_glasses = [];
 vas_r_weapons = [];
 //Backpacks to remove from VAS
 vas_r_backpacks = [
-	"B_Mortar_01_support_F",
 	"O_Mortar_01_support_F",
 	"I_Mortar_01_support_F",
-	"B_Mortar_01_weapon_F",
 	"O_Mortar_01_weapon_F",
 	"I_Mortar_01_weapon_F",
 	"O_UAV_01_backpack_F",
