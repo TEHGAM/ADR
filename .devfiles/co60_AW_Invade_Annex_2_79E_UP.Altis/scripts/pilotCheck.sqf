@@ -24,7 +24,7 @@ true spawn {
 
             //------------------------------ pilot can be pilot seat only
 			
-            if((_veh isKindOf "Helicopter" || _veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase")) then {
+            if((_veh isKindOf "Helicopter") && !(_veh isKindOf "ParachuteBase")) then {
 				if(({typeOf _veh == _x} count _aircraft_nocopilot) > 0) then {
 					_forbidden = [_veh turretUnit [0]];
 					if(player in _forbidden) then {
