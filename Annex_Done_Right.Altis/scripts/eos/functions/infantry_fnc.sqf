@@ -22,5 +22,8 @@ for "_x" from 1 to _grpSize do {
 		_unit = _grp createUnit [_unitType, _pos, [], 6, "FORM"];  
 	};
 
+{
+	_x addCuratorEditableObjects [units _grp, false];
+} foreach adminCurators;
 
 _grp

@@ -1,5 +1,7 @@
-_eosMarkers=server getvariable "EOSmarkers";
+/*_eosMarkers=server getvariable "EOSmarkers";
 
-{_x setMarkerAlpha (MarkerAlpha _x);
-_x setMarkercolor (getMarkercolor _x);
-}foreach _eosMarkers;
+{	
+	_x setMarkerAlpha (MarkerAlpha _x);
+	_x setMarkercolor (getMarkercolor _x);
+}	forEach _eosMarkers;
+*\

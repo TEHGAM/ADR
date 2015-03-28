@@ -1,6 +1,5 @@
 /*
 	File: fn_quickAddDrag.sqf
-	Version Edit: 2.5
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
@@ -35,4 +34,3 @@ switch(_ctrl) do
 //Update UI.
 [] call VAS_fnc_updateLoad;
 [] spawn VAS_fnc_playerDisplay;
-true;

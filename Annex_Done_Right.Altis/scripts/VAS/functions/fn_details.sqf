@@ -1,15 +1,14 @@
 #include "macro.sqf"
 /*
-	File: fn_details.sqf
-	Version Edit: 2.7
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Displays details about the weapon mainly magazines.
+	@version: 1.3
+	@file_name: fn_details.sqf
+	@file_author: TAW_Tonic
+	@file_edit: 6/22/2013
+	@file_description: Displays details about the weapon mainly magazines.
 */
 disableSerialization;
 if((uiNamespace getvariable "VAS_UI_FILTER") != "guns" && !(uiNamespace getVariable "VAS_UI_QuickMag")) exitWith {call VAS_fnc_closeDetails;}; //Filter not on guns? exit
-private["_control","_data","_control","_magazines","_details","_items","_addToLb"];
+private["_control","_data","_control","_magazines","_details","_items"];
 _control = _this select 0;
 if(isNil {_control}) exitWith {call VAS_fnc_closeDetails;};
 if((_this select 1) == -1) exitWith {call VAS_fnc_closeDetails;};
@@ -24,37 +23,17 @@ _magazines = (_details select 7);
 _control = VAS_getControl(VAS_Main_Display,VAS_detail_mags_list);
 lbClear _control;
 
-_addToLb = {
-	private["_control","_item","_tmp"];
-	disableSerialization;
-	_control = _this select 0;
-	_item = _this select 1;
-	_tmp = [_item,"CfgMagazines"] call VAS_fnc_fetchCfgDetails;
-	
+{
+	_tmp = [_x,"CfgMagazines"] call VAS_fnc_fetchCfgDetails;
 	if(count _tmp > 0) then
 	{
 		_control lbAdd format["%1", (_tmp select 1)];
 		_control lbSetData [(lbSize _control)-1,_x];
 		_control lbSetPicture [(lbSize _control)-1,(_tmp select 2)];
 	};
-};
-
-{
-	if(!isNil "VAS_box_magazines") then {
-		if(!(_x in VAS_box_magazines)) exitWith {};
-		[_control,_x] call _addToLb;
-	} else {
-		if(count vas_magazines == 0) then {
-			if(_x in vas_r_magazines) exitWith {};
-			[_control,_x] call _addToLb;
-		} else {
-			if(!(_x in vas_magazines)) exitWith {};
-			[_control,_x] call _addToLb;
-		};
-	};
 } foreach _magazines;
 
-_items = if (isNil "asdg_jointrails_fnc_getCompatibleAttachments") then {[_data] call VAS_fnc_accList} else {[_data] call asdg_jointrails_fnc_getCompatibleAttachments};
+_items = [_data] call VAS_fnc_accList;
 
 _control = ((findDisplay 2500) displayCtrl 2851);
 lbClear _control;

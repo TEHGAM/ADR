@@ -7,15 +7,18 @@ class QS
 		class AOdelete {};
 		class AOenemy {};
 		class AOminefield {};
+		class enemyCAS {};
 		class deleteUnits {};
 		class garrisonFortEAST {};
 		class garrisonFortIND {};
 		class garrisonFortFIA {};
+		class loadInventory {};
 		class setSkill1 {};
 		class setSkill2 {};
 		class setSkill3 {};
 		class setSkill4 {};
 		class PTenemyEAST {};
+		class saveInventory {};
 		class SMenemyEAST {};
 		class SMenemyEASTintel {};
 		class SMenemyIND {};

@@ -68,6 +68,7 @@ waitUntil {sleep 0.5; !isNull _SMveh1};
 [_SMveh1, _SMvehPatrol] call BIS_fnc_spawnCrew;
 [_SMvehPatrol, getPos sideObj, 75] call BIS_fnc_taskPatrol;
 _SMveh1 lock 3;
+_SMveh1 allowCrewInImmobile true;
 sleep 0.1;
 	
 _enemiesArray = _enemiesArray + [_SMveh1];
@@ -85,6 +86,7 @@ waitUntil {sleep 0.5; !isNull _SMveh2};
 [_SMveh2, _SMvehPatrol] call BIS_fnc_spawnCrew;
 [_SMvehPatrol, getPos sideObj, 150] call BIS_fnc_taskPatrol;
 _SMveh2 lock 3;
+_SMveh2 allowCrewInImmobile true;
 sleep 0.1;
 	
 _enemiesArray = _enemiesArray + [_SMveh2];
@@ -103,6 +105,7 @@ _SMaa = "O_APC_Tracked_02_AA_F" createVehicle _randomPos;
 waitUntil {sleep 0.5; !isNull _SMaa};
 [_SMaa, _SMaaPatrol] call BIS_fnc_spawnCrew;
 _SMaa lock 3;
+_SMaa allowCrewInImmobile true;
 [_SMaaPatrol, getPos sideObj, 150] call BIS_fnc_taskPatrol;
 	
 _enemiesArray = _enemiesArray + [_SMaaPatrol];

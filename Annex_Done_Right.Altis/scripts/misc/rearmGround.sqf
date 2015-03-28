@@ -23,19 +23,19 @@ private ["_damage","_percentage","_veh","_vehType","_fuelLevel"];
 _veh = _this select 0;
 _vehType = getText(configFile>>"CfgVehicles">>typeOf _veh>>"DisplayName");
 
-//if (_veh isKindOf "LandVehicle") exitWith { _veh vehicleChat "Эта площадка предназначена только для наземного транспорта!"; };
+//if (_veh isKindOf "LandVehicle") exitWith { _veh vehicleChat "This pad is for vehicle service only, soldier!"; };
 
 _fuelLevel = fuel _veh;
 _damage = getDammage _veh;
 _veh setFuel 0;
 
-_veh vehicleChat format ["Ремонтируем и заправляем %1. Ждите...", _vehType];
+_veh vehicleChat format ["Заправка и перезарядка %1. Ждите...", _vehType];
 
 while {_damage > 0} do
 {
 	sleep 0.5;
 	_percentage = 100 - (_damage * 100);
-	_veh vehicleChat format ["Ремонтируем (%1%)...", floor _percentage];
+	_veh vehicleChat format ["Ремонт (%1%)...", floor _percentage];
 	if ((_damage - 0.01) <= 0) then
 	{
 		_veh setDamage 0;
@@ -52,7 +52,7 @@ while {_fuelLevel < 1} do
 {
 	sleep 0.5;
 	_percentage = (_fuelLevel * 100);
-	_veh vehicleChat format["Заправляем (%1%)...", floor _percentage];
+	_veh vehicleChat format["Заправка (%1%)...", floor _percentage];
 	if ((_fuelLevel + 0.01) >= 1) then
 	{
 		_veh setFuel 1;
@@ -77,7 +77,7 @@ if (count _magazines > 0) then {
 		};
 	} forEach _magazines;
 	{
-		_veh vehicleChat format ["Перезаряжаем %1", _x];
+		_veh vehicleChat format ["Перезарядка %1", _x];
 		sleep 0.05;
 		_veh addMagazine _x;
 	} forEach _magazines;
@@ -98,7 +98,7 @@ if (_count > 0) then {
 			};
 		} forEach _magazines;
 		{
-			_veh vehicleChat format ["Перезаряжаем %1", _x];
+			_veh vehicleChat format ["Перезарядка %1", _x];
 			sleep 0.05;
 			_veh addMagazine _x;
 			sleep 0.05;
@@ -116,7 +116,7 @@ if (_count > 0) then {
 					};
 				} forEach _magazines;
 				{
-					_veh vehicleChat format ["Перезаряжаем %1", _x]; 
+					_veh vehicleChat format ["Перезарядка %1", _x]; 
 					sleep 0.05;
 					_veh addMagazine _x;
 					sleep 0.05;
@@ -127,4 +127,18 @@ if (_count > 0) then {
 };
 _veh setVehicleAmmo 1;	// Reload turrets / drivers magazine
 
-_veh vehicleChat format ["%1 полностью отремонтирован и заправлен.", _vehType];
+_veh vehicleChat format ["%1 Успешно отремонтирован и заправлен.", _vehType];
+
+_fuelVeh = ["B_APC_Tracked_01_CRV_F","B_Truck_01_fuel_F"];
+_repairVeh = ["B_APC_Tracked_01_CRV_F","B_Truck_01_Repair_F","C_Offroad_01_repair_F"];
+_ammoVeh = ["B_APC_Tracked_01_CRV_F","B_Truck_01_ammo_F"];
+if (({_veh isKindOf _x} count _repairVeh) > 0) then {
+    _veh setRepairCargo 1;
+};
+if (({_veh isKindOf _x} count _ammoVeh) > 0) then {
+    // to prevent unauthorized re-arm
+	//_veh setAmmoCargo 1;
+};
+if (({_veh isKindOf _x} count _fuelVeh) > 0) then {
+    _veh setFuelCargo 1;
+};

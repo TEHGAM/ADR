@@ -25,7 +25,7 @@ _missionList = [
 	"regionCE"
 ];
 
-if (PARAMS_AOReinforcementJet == 1) then { _null = [] execVM "mission\main\CAS.sqf"; };		
+_null = [] execVM "mission\main\CAS.sqf";		
 	
 while { true } do {	
 	
