@@ -20,7 +20,7 @@ __________________________________________________________________*/
 #define INF_URBANTYPE "OIA_GuardSentry","OIA_GuardSquad","OIA_GuardTeam"
 #define MRAP_TYPE "O_MRAP_02_gmg_F","O_MRAP_02_hmg_F"
 #define VEH_TYPE "O_MBT_02_cannon_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_APC_Tracked_02_cannon_F","I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","I_MBT_03_cannon_F"
-#define AIR_TYPE "O_Heli_Attack_02_F"
+#define AIR_TYPE "O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","I_Heli_light_03_F","O_Heli_Light_02_F"
 #define STATIC_TYPE "O_HMG_01_F","O_HMG_01_high_F"
 
 private ["_enemiesArray","_randomPos","_patrolGroup","_AOvehGroup","_AOveh","_AOmrapGroup","_AOmrap","_pos","_spawnPos","_overwatchGroup","_x","_staticGroup","_static","_aaGroup","_aa","_airGroup","_air","_sniperGroup","_staticDir"];
@@ -45,6 +45,9 @@ for "_x" from 1 to PARAMS_AAPatrol do {
 		((units _aaGroup) select 2) moveInCommander _aa;
 	[_aaGroup, getMarkerPos currentAO, 500] call BIS_fnc_taskPatrol;
 	_aa lock 3;
+	if (random 1 >= 0.3) then {
+		_aa allowCrewInImmobile true;
+	};
 		
 	_enemiesArray = _enemiesArray + [_aaGroup];
 	sleep 0.1;
@@ -133,6 +136,9 @@ for "_x" from 0 to 1 do {
 		((units _AOmrapGroup) select 2) moveInCargo _AOmrap;
 	[_AOmrapGroup, getMarkerPos currentAO, 600] call BIS_fnc_taskPatrol;
 	_AOmrap lock 3;
+	if (random 1 >= 0.5) then {
+		_AOmrap allowCrewInImmobile true;
+	};
 	
 	_enemiesArray = _enemiesArray + [_AOmrapGroup];
 	sleep 0.1;
@@ -164,6 +170,9 @@ for "_x" from 0 to (3 + (random 2)) do {
 		((units _AOvehGroup) select 2) moveInCommander _AOveh;
 	[_AOvehGroup, getMarkerPos currentAO, 400] call BIS_fnc_taskPatrol;
 	_AOveh lock 3;
+	if (random 1 >= 0.4) then {
+		_AOveh allowCrewInImmobile true;
+	};
 	
 	_enemiesArray = _enemiesArray + [_AOvehGroup,_AOveh];
 	sleep 0.1;
@@ -220,49 +229,6 @@ if((random 10 <= PARAMS_AirPatrol)) then {
 
 };
 
-//---------- HELICOPTER2	
-	
-if((random 10 <= PARAMS_AirPatrol)) then {
-	_airGroup = createGroup east;
-	_randomPos = [[[getMarkerPos currentAO, PARAMS_AOSize],_dt],["water","out"]] call BIS_fnc_randomPos;
-	_air = [AIR_TYPE] call BIS_fnc_selectRandom createVehicle [_randomPos select 0,_randomPos select 1,1000];
-	waitUntil{!isNull _air};
-	_air engineOn true;
-	_air setPos [_randomPos select 0,_randomPos select 1,300];
-
-	_air spawn
-	{
-		private["_x"];
-		for [{_x=0},{_x<=200},{_x=_x+1}] do
-		{
-			_this setVelocity [0,0,0];
-			sleep 0.1;
-		};
-	};
-
-		"O_helipilot_F" createUnit [_randomPos,_airGroup];
-		((units _airGroup) select 0) assignAsDriver _air;
-		((units _airGroup) select 0) moveInDriver _air;
-		"O_helipilot_F" createUnit [_randomPos,_airGroup];
-		((units _airGroup) select 1) assignAsGunner _air;
-		((units _airGroup) select 1) moveInGunner _air;
-
-	[_airGroup, getMarkerPos currentAO, 800] call BIS_fnc_taskPatrol;
-	[(units _airGroup)] call QS_fnc_setSkill4;
-	_air flyInHeight 300;
-	_airGroup setCombatMode "RED";
-	_air lock 3;
-		
-	_enemiesArray = _enemiesArray + [_airGroup];
-	sleep 0.1;
-	_enemiesArray = _enemiesArray + [_air];
-
-	{
-		_x addCuratorEditableObjects [[_air], false];
-		_x addCuratorEditableObjects [units _airGroup, false];
-	} foreach adminCurators;
-
-};
 //---------- SNIPERS
 	
 for "_x" from 1 to PARAMS_SniperTeamsPatrol do {
@@ -285,7 +251,7 @@ for "_x" from 1 to PARAMS_SniperTeamsPatrol do {
 [(units _patrolGroup)] call QS_fnc_setSkill1;
 [(units _overwatchGroup)] call QS_fnc_setSkill2;
 [(units _AOvehGroup)] call QS_fnc_setSkill2;
-[(units _sniperGroup)] call QS_fnc_setSkill3;
+[(units _sniperGroup)] call QS_fnc_setSkill4;
 [(units _staticGroup)] call QS_fnc_setSkill3;
 [(units _aaGroup)] call QS_fnc_setSkill4;
 	

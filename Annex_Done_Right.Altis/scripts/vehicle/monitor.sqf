@@ -1,4 +1,7 @@
-/*  
+/*
+
+Quiksilver to do: finish vehicle register script and do away with constant (performance costly) monitoring of all vehicles. WIP.
+  
 ==================================================================================================================
   Simple Vehicle Respawn Script v1.81 for Arma 3
   by Tophe of ?stg?ta Ops [OOPS]
@@ -83,25 +86,28 @@ if (_respawns <= 0) then {_respawns= 0; _noend = true;};
 if (_respawns > 0) then {_noend = false};
 
 _dir = getDir _unit;
-_position = getPosASL _unit;
+_position = getPosATL _unit;
+
 _dead = false;
 _nodelay = false;
 
 // Start monitoring the vehicle
-while {_run} do 
-{	
-	sleep (5 + (random 20));
+
+while {_run} do {	
+
+	sleep (20 + (random 20));
+	
 	if ((getDammage _unit > 0.8) and ({alive _x} count crew _unit == 0)) then {_dead = true};
 
 	// Check if the vehicle is deserted.
-	if (_deserted > 0) then
-	{
+	
+	if (_deserted > 0) then {
 		_nearPlayers = false;
-		{ if ((_x distance _unit) < PARAMS_VehicleRespawnDistance) exitWith { _nearPlayers = true; };
+		{ 
+			if ((_x distance _unit) < PARAMS_VehicleRespawnDistance) exitWith { _nearPlayers = true; };
 		} forEach playableUnits;
 
-		if ((getPosASL _unit distance _position > 10) and ({alive _x} count crew _unit == 0) and (getDammage _unit < 0.8) and !_nearPlayers) then 
-		{
+		if ((getPosATL _unit distance _position > 10) and ({alive _x} count crew _unit == 0) and (getDammage _unit < 0.8) and !_nearPlayers) then {
 			_timeout = time + _deserted;
 			sleep 0.1;
 			waitUntil {_timeout < time or !alive _unit or {alive _x} count crew _unit > 0};
@@ -112,27 +118,30 @@ while {_run} do
 	};
 
 	// Respawn vehicle
-	if (_dead) then 
-	{	
+	
+	if (_dead) then {
+	
 		if (_nodelay) then {sleep 0.1; _nodelay = false;} else {sleep _delay;};
-		if (_dynamic) then {_position = getPosASL _unit; _dir = getDir _unit;};
-		if (_explode) then {_effect = "M_AT" createVehicle getPosASL _unit; _effect setPosASL getPosASL _unit;};
-		sleep 0.1;
+		if (_dynamic) then {_position = getPosATL _unit; _dir = getDir _unit;};
+		if (_explode) then {_effect = "M_AT" createVehicle getPosATL _unit; _effect setPosATL getPosATL _unit;};
+		
+		sleep 1;
 
 		deleteVehicle _unit;
-		sleep 2;
+		
+		sleep 3;
 		
 		_unit = _type createVehicle _position;
-		_unit setPosASL [_position select 0,_position select 1,(_position select 2) + 0.2];
+		_unit setPosATL [_position select 0,_position select 1,(_position select 2) + 0.2];
 		_unit setDir _dir;
-
-		[[[_unit],"scripts\vehicle\setupUnit.sqf"],"BIS_fnc_execVM",nil,true] spawn BIS_fnc_MP; // only for LIFT Transport script
-		//_classify = [ _unit ] execVM "scripts\transport\classify.sqf"; // only for STROPE LIFT Transport script
-
-		if (["B_UAV_02_CAS_F", _type] call BIS_fnc_inString) then { createVehicleCrew _unit; };
-		if (["B_UGV_01_rcws_F", _type] call BIS_fnc_inString) then { createVehicleCrew _unit; };
 		
-	        _dead = false;
+		[[[_unit],"scripts\vehicle\setupUnit.sqf"],"BIS_fnc_execVM",nil,true] spawn BIS_fnc_MP;
+
+		{
+			_x addCuratorEditableObjects [[_unit],false];
+		} foreach adminCurators;
+
+		_dead = false;
 
 		// Check respawn amount
 		if !(_noend) then {_rounds = _rounds + 1};

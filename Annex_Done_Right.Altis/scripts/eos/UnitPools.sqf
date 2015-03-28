@@ -6,7 +6,7 @@ _tempArray=[];
 // EAST CSAT FACTION
 	if (_faction==0) then {
 	_InfPool=	["O_Soldier_AR_F","O_Soldier_AA_F","O_Soldier_LAT_F","O_Soldier_F","O_Soldier_lite_F","O_soldier_M_F","O_medic_F","O_soldier_PG_F"];		
-	_ArmPool=	["O_APC_Wheeled_02_rcws_F"];
+	_ArmPool=	["O_APC_Wheeled_02_rcws_F","O_APC_Tracked_02_cannon_F"];
 	_MotPool=	["O_MRAP_02_hmg_F","O_MRAP_02_F"];
 	_ACHPool=	["O_Heli_Attack_02_F","I_Heli_light_03_F"];
 	_CHPool=	["O_Heli_Light_02_F","I_Heli_light_03_F"];

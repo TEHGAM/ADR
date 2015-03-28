@@ -18,14 +18,6 @@ _toVest = [_this,6,false,[false]] call BIS_fnc_param; //Manual override to send 
 if(_item == "") exitWith {};
 _isgun = false;
 
-//Patch by Robalo for TFAR radio's.
-if (getText (configFile >> "CfgWeapons" >> _item >> "simulation") == "ItemRadio") then {
-	if (isClass(configFile >> "CfgPatches" >> "task_force_radio_items")) then {
-		_radio = getText (configFile >> "CfgWeapons" >> _item >> "tf_parent");
-		if (typeName _radio == "STRING" && _radio != "") then {_item = _radio};
-	};
-};
-
 _details = [_item] call VAS_fnc_fetchCfgDetails;
 if(count _details == 0) exitWith {};
 
@@ -109,7 +101,7 @@ if(_bool) then
 			{
 				if((_details select 4) == 4096) then
 				{
-					if((_details select 5) == -1 && !((_details select 15))) then
+					if((_details select 5) == -1) then
 					{
 						_isgun = true;
 					};
@@ -144,7 +136,7 @@ if(_bool) then
 						}
 							else
 						{
-							if(_override OR (getNumber(configFile >> "CfgWeapons" >> _item >> "detectRange") == -1)) then
+							if(_override) then
 							{
 								player addItem _item;
 							}
@@ -217,11 +209,7 @@ if(_bool) then
 										removeUniform player;
 									};
 									
-									if(!(player isUniformAllowed _item)) then {
-										player forceAddUniform _item;
-									} else {
-										player addUniform _item;
-									};
+									player addUniform _item;
 									
 									if(!isNil {_items}) then
 									{
@@ -502,7 +490,7 @@ if(_bool) then
 			{
 				if((_details select 4) == 4096) then
 				{
-					if((_details select 5) == -1 && !(_details select 15)) then
+					if((_details select 5) == -1) then
 					{
 						_isgun = true;
 					};

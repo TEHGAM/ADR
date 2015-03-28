@@ -1,4 +1,4 @@
-private ["_veh","_vehName","_vehVarname","_completeText","_reward"];
+	private ["_veh","_vehName","_vehVarname","_completeText","_reward","_GAU","_rabbit"];
 
 smRewards =
 [
@@ -33,10 +33,18 @@ waitUntil {!isNull _reward};
 
 _reward setDir 284;
 
+GlobalHint = _completeText; publicVariable "GlobalHint"; hint parseText _completeText;
+showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "showNotification";
+showNotification = ["Reward", format["Ваша команда получила %1!", _vehName]]; publicVariable "showNotification";
+
+if (_reward isKindOf "O_Plane_CAS_02_F") exitWith { 
+	_reward removeMagazine "120Rnd_CMFlare_Chaff_Magazine";
+	_reward addMagazine "60Rnd_CMFlare_Chaff_Magazine";
+};
+if (_reward isKindOf "B_Plane_CAS_01_F") exitWith { 
+	_reward removeMagazine "120Rnd_CMFlare_Chaff_Magazine";
+	_reward addMagazine "60Rnd_CMFlare_Chaff_Magazine";
+};
 {
 	_x addCuratorEditableObjects [[_reward], false];
 } foreach adminCurators;
-
-GlobalHint = _completeText; publicVariable "GlobalHint"; hint parseText _completeText;
-showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "showNotification";
-showNotification = ["Reward", format["Участники задания получили %1", _vehName]]; publicVariable "showNotification";

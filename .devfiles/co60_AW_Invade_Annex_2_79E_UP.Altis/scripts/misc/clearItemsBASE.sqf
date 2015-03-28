@@ -29,7 +29,7 @@ while { true } do {
 	
 		//---------- BRIEF
 
-		hqSideChat = "Очистка мусора на базе..."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Clearing items around base ..."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 		sleep 5;
 
@@ -44,14 +44,14 @@ while { true } do {
 	
 		//---------- DE-BRIEF
 	
-		hqSideChat = "Следующая очиста будет доступна через несколько минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Maintenance cycle complete. Unavailable for several minutes."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 	
 		sleep _delay;
 	
 		//---------- RESET
 	
 		CLEARITEMSBASE_SWITCH = false; publicVariable "CLEARITEMSBASE_SWITCH";
-		hqSideChat = "Очистка базы доступна"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Maintenance cycle available."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 	};
 	

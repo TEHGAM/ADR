@@ -9,12 +9,11 @@ http://forums.bistudio.com/showthread.php?157481-crewmen
 true spawn {
 
     _pilots = ["B_Helipilot_F"];
-    _aircraft_nocopilot = ["B_Heli_Transport_01_camo_F", "B_Heli_Transport_01_F", "I_Heli_Transport_02_F", "O_Heli_Light_02_F", "O_Heli_Light_02_unarmed_F", "B_Heli_Light_01_armed_F"];
+    _aircraft_nocopilot = ["B_Heli_Transport_01_camo_F", "I_Heli_light_03_unarmed_F", "O_Heli_Transport_04_covered_F", "B_Heli_Transport_03_F", "O_Heli_Transport_04_F", "I_Heli_light_03_F", "B_Heli_Transport_01_F", "I_Heli_Transport_02_F", "O_Heli_Light_02_F", "O_Heli_Light_02_unarmed_F", "B_Heli_Light_01_armed_F"];
 
     waitUntil {player == player};
 
     _iampilot = ({typeOf player == _x} count _pilots) > 0;
-	_uid = getPlayerUID player;
 
     while { true } do {
         _oldvehicle = vehicle player;
@@ -25,18 +24,18 @@ true spawn {
 
             //------------------------------ pilot can be pilot seat only
 			
-            if((_veh isKindOf "Helicopter" || _veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase") && _uid != "76561198012462806") then {
+            if((_veh isKindOf "Helicopter" || _veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase")) then {
 				if(({typeOf _veh == _x} count _aircraft_nocopilot) > 0) then {
 					_forbidden = [_veh turretUnit [0]];
 					if(player in _forbidden) then {
-						systemChat "Co-pilot is disabled on this vehicle";
+						systemChat "Второй пилот отключен на данной технике.";
 						player action ["getOut", _veh];
 					};
 				};
 				if(!_iampilot) then {
 					_forbidden = [driver _veh];
 					if(player in _forbidden) then {
-						systemChat "You must be a pilot to fly this aircraft";
+						systemChat "Вы должны быть пилотом, чтобы летать на этой технике.";
 						player action ["getOut", _veh];
 					};
 				};

@@ -1,6 +1,5 @@
 /*
 	File: fn_accList.sqf
-	Version Edit: 2.5
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
@@ -27,20 +26,8 @@ if(count (_configInfo select 14) > 0) then {
 					_badItems set[count _badItems,(configName _entry)];
 				};
 			} else {
-				if(!isNil "VAS_box_items") then {
-					if((configName _entry) in VAS_box_items) then {
-						_items set[count _items,(configName _entry)];
-					};
-				} else {
-					if(count (vas_items) == 0) then {
-						if(!((configName _entry) in vas_r_items)) then {
-							_items set[count _items,(configName _entry)];
-						};
-					} else {
-						if((configName _entry) in vas_items) then {
-							_items set[count _items,(configName _entry)];
-						};
-					};
+				if(((configName _entry) in VAS_items) OR !((configName _entry) in VAS_r_items)) then {
+					_items set[count _items,(configName _entry)];
 				};
 			};
 		};
@@ -51,20 +38,8 @@ if(count (_configInfo select 14) > 0) then {
 			{
 				_entry = _parent select _i;
 				if(!((configName _entry) in _badItems)) then {
-					if(!isNil "VAS_box_items") then {
-						if((configName _entry) in VAS_box_items) then {
-							_items set[count _items,(configName _entry)];
-						};
-					} else {
-						if(count (vas_items) == 0) then {
-							if(!((configName _entry) in vas_r_items)) then {
-								_items set[count _items,(configName _entry)];
-							};
-						} else {
-							if((configName _entry) in vas_items) then {
-								_items set[count _items,(configName _entry)];
-							};
-						};
+					if(((configName _entry) in VAS_items) OR !((configName _entry) in VAS_r_items)) then {
+						_items set[count _items,(configName _entry)];
 					};
 				};
 			};
@@ -72,20 +47,8 @@ if(count (_configInfo select 14) > 0) then {
 	} foreach (_configInfo select 14);
 	
 	{
-		if(!isNil "VAS_box_items") then {
-			if(_x in VAS_box_items) then {
-				_items set[count _items,_x];
-			};
-		} else {
-			if(count (vas_items) == 0) then {
-				if(!(_x in vas_r_items)) then {
-					_items set[count _items,_x];
-				};
-			} else {
-				if(_x in vas_items) then {
-					_items set[count _items,_x];
-				};
-			};
+		if((_x in VAS_items) OR !(_x in VAS_r_items)) then {
+			_items set[count _items,_x];
 		};
 	} foreach (_configInfo select 12);
 		
@@ -93,20 +56,8 @@ if(count (_configInfo select 14) > 0) then {
 } else {
 	_items = [];
 	{
-		if(!isNil "VAS_box_items") then {
-			if(_x in VAS_box_items) then {
-				_items set[count _items,_x];
-			};
-		} else {
-			if(count (vas_items) == 0) then {
-				if(!(_x in vas_r_items)) then {
-					_items set[count _items,_x];
-				};
-			} else {
-				if(_x in vas_items) then {
-					_items set[count _items,_x];
-				};
-			};
+		if((_x in VAS_items) OR !(_x in VAS_r_items)) then {
+			_items set[count _items,_x];
 		};
 	} foreach ((_configInfo select 10) + (_configInfo select 11) + (_configInfo select 12));
 };
