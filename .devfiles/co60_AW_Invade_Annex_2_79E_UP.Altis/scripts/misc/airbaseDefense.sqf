@@ -28,7 +28,7 @@ while { true } do {
 
 	if (AIRBASEDEFENSE_SWITCH) then {
 	
-		hqSideChat = "Противовоздушная оборона активирована!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Air-defense activated."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 		//---------- Useful stuff
 
@@ -82,7 +82,7 @@ while { true } do {
 
 		sleep _inactiveTimer;
 		AIRBASEDEFENSE_SWITCH = false; publicVariable "AIRBASEDEFENSE_SWITCH";
-		hqSideChat = "Противовоздушная оборона доступна."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Air-defense available."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		
 	};
 	

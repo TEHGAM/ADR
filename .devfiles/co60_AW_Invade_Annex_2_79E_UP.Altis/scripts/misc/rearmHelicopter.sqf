@@ -4,46 +4,44 @@ _veh = _this select 0;
 if (_veh isKindOf "ParachuteBase" || !alive _veh) exitWith {};
 
 if (!(_veh isKindOf "helicopter")) exitWith { 
-	_veh vehicleChat "Эта площадка только для вертолетов"; 
+	_veh vehicleChat "This pad is for Helicopters service only, soldier!"; 
 };
 
-_veh vehicleChat "Обслуживание. Пожалуйста ждите ...";
+_veh vehicleChat "Servicing Helicopters, please wait ...";
 
 _veh setFuel 0;
 
 //---------- RE-ARMING
 
-_veh vehicleChat "Перезарядка ...";
-
 sleep 10;
 
-_veh setVehicleAmmo 1;
-_veh vehicleChat "Заряжен (100%).";
+_veh vehicleChat "Re-arming ...";
 
 //---------- REPAIRING
 
-sleep 2;
+sleep 10;
 
-_veh vehicleChat "Ремонт ...";
+_veh vehicleChat "Repairing ...";
+
+//---------- REFUELING
+
+sleep 10;
+
+_veh vehicleChat "Refueling ...";
+
+//---------- FINISHED
 
 sleep 10;
 
 _veh setDamage 0;
-_veh vehicleChat "Отремонтирован (100%).";
+_veh vehicleChat "Repaired (100%).";
 
-//---------- REFUELING
-
-sleep 2;
-
-_veh vehicleChat "Заправка ...";
-
-sleep 10;
+_veh setVehicleAmmo 1;
+_veh vehicleChat "Re-armed (100%).";
 
 _veh setFuel 1;
-_veh vehicleChat "Заправлен (100%).";
-
-//---------- FINISHED
+_veh vehicleChat "Refuelled (100%).";
 
 sleep 2;
 
-_veh vehicleChat "Обслуживание завершено. Приятного полета!";
+_veh vehicleChat "Service complete.";

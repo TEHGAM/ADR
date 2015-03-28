@@ -45,3 +45,6 @@ if (_reward isKindOf "B_Plane_CAS_01_F") exitWith {
 	_reward removeMagazine "120Rnd_CMFlare_Chaff_Magazine";
 	_reward addMagazine "60Rnd_CMFlare_Chaff_Magazine";
 };
+{
+	_x addCuratorEditableObjects [[_reward], false];
+} foreach adminCurators;

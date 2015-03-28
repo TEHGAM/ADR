@@ -1,6 +1,6 @@
 private ["_canDeleteGroup","_group","_groups","_units"];
 while { true } do {
-	sleep 600 + (random 240);
+	sleep 480 + (random 240);
 
 	{
 		deleteVehicle _x;

@@ -30,6 +30,8 @@ _missionList = [
 	"priorityAA",	
 	"priorityARTY",
 	"secureChopper",
+//	"secureIntelUnit",
+//	"secureIntelVehicle",
 	"secureRadar"
 ];
 

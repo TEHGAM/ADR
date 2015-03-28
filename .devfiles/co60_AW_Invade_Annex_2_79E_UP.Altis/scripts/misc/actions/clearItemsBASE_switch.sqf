@@ -1,5 +1,5 @@
 if (CLEARITEMSBASE_SWITCH) exitWith {
-	hint "Очистка базы не доступна."
+	hint "Base items cleanup unavailable."
 };
 
 //-------------------- Wait for player to action
@@ -8,7 +8,7 @@ sleep 1;
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Очистка базы от мусора.";
+hint "Base garbage clearance initiated.";
 
 sleep 3;
 
