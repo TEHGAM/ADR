@@ -17778,7 +17778,7 @@ class Mission
 		};
 		class Item177
 		{
-			position[]={15358.799,17.054827,17343.186};
+			position[]={15358.771,17.053713,17343.107};
 			name="landing_13";
 			type="mil_dot";
 			colorName="ColorGreen";
@@ -17787,8 +17787,9 @@ class Mission
 		};
 		class Item178
 		{
-			position[]={15333.87,17.35417,17368.277};
+			position[]={15333.959,17.348495,17368.199};
 			name="landing_14";
+			text="2";
 			type="mil_objective";
 			colorName="ColorRed";
 			a=0.40000001;
@@ -17796,8 +17797,9 @@ class Mission
 		};
 		class Item179
 		{
-			position[]={15313.771,17.83445,17347.979};
+			position[]={15313.594,17.836803,17347.982};
 			name="landing_14_1";
+			text="1";
 			type="mil_objective";
 			colorName="ColorRed";
 			a=0.40000001;
