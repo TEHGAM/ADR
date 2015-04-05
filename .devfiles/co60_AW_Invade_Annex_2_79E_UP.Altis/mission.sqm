@@ -254,10 +254,10 @@ class Mission
 					special="NONE";
 					id=4;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Пулеметчик";
+					description="Медик";
 				};
 				class Item5
 				{
@@ -456,10 +456,10 @@ class Mission
 					special="NONE";
 					id=19;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Пулеметчик";
+					description="Медик";
 				};
 				class Item4
 				{
