@@ -85,7 +85,8 @@ class Mission
 		"A3_Air_F_Heli_Heli_Transport_03",
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Air_F_EPB_Heli_Light_03",
-		"A3_Soft_F_HEMTT"
+		"A3_Soft_F_HEMTT",
+		"a3_boat_f_beta_boat_transport_01"
 	};
 	addOnsAuto[]=
 	{
@@ -161,6 +162,7 @@ class Mission
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Air_F_EPB_Heli_Light_03",
 		"A3_Boat_F_Boat_Transport_01",
+		"a3_boat_f_beta_boat_transport_01",
 		"a3_map_altis"
 	};
 	randomSeed=12935265;
@@ -184,7 +186,7 @@ class Mission
 		windForced=1;
 		year=2035;
 		month=7;
-		hour=2;
+		hour=11;
 		minute=40;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
@@ -1282,7 +1284,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=611;
+		items=613;
 		class Item0
 		{
 			position[]={9019.7969,111.7313,15727.173};
@@ -1868,8 +1870,8 @@ class Mission
 		};
 		class Item58
 		{
-			position[]={15344.252,-0.014176401,15816.295};
-			azimut=170;
+			position[]={15454.065,-0.057418589,15791.154};
+			azimut=441.46625;
 			id=109;
 			side="EMPTY";
 			vehicle="B_Boat_Armed_01_minigun_F";
@@ -1880,8 +1882,8 @@ class Mission
 		};
 		class Item59
 		{
-			position[]={15355.756,-0.0467081,15767.266};
-			azimut=170;
+			position[]={15452.305,0.076263592,15801.08};
+			azimut=80.98497;
 			id=110;
 			side="EMPTY";
 			vehicle="B_Boat_Armed_01_minigun_F";
@@ -1892,8 +1894,8 @@ class Mission
 		};
 		class Item60
 		{
-			position[]={15330.722,0.015527301,15776.73};
-			azimut=170;
+			position[]={15458.729,0.012517938,15777.85};
+			azimut=78.316849;
 			id=111;
 			side="EMPTY";
 			vehicle="B_SDV_01_F";
@@ -2163,8 +2165,8 @@ class Mission
 		};
 		class Item83
 		{
-			position[]={15405.463,0.0004645217,15826.801};
-			azimut=170;
+			position[]={15495.399,0.066933975,15750.524};
+			azimut=80.435898;
 			id=134;
 			side="EMPTY";
 			vehicle="C_Boat_Civil_01_rescue_F";
@@ -7167,7 +7169,7 @@ class Mission
 			special="NONE";
 			id=606;
 			side="EMPTY";
-			vehicle="B_Boat_Transport_01_F";
+			vehicle="I_Boat_Transport_01_F";
 			leader=1;
 			skill=0.60000002;
 			init="_m = [this,300,305] execVM ""scripts\vehicle\monitor.sqf"";";
@@ -7188,15 +7190,15 @@ class Mission
 		class Item557
 		{
 			position[]={14252.799,20.255598,16218.66};
-			azimut=-89.289246;
+			azimut=-87.725998;
 			offsetY=0.1;
 			special="NONE";
 			id=608;
 			side="EMPTY";
-			vehicle="B_Boat_Transport_01_F";
+			vehicle="O_Boat_Transport_01_F";
 			leader=1;
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulationGlobal false;";
+			init="_m = [this,300,305] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item558
 		{
@@ -7262,7 +7264,7 @@ class Mission
 		class Item563
 		{
 			position[]={14226.257,20.203505,16222.311};
-			azimut=341.77826;
+			azimut=341.77802;
 			special="NONE";
 			id=614;
 			side="EMPTY";
@@ -7729,6 +7731,27 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 		};
+		class Item611
+		{
+			position[]={14918.127,17.9,16682.521};
+			azimut=43.314999;
+			id=662;
+			side="EMPTY";
+			vehicle="Land_Flush_Light_red_F";
+			skill=0.60000002;
+		};
+		class Item612
+		{
+			position[]={15457.782,0.008885242,15783.449};
+			azimut=78.316849;
+			id=663;
+			side="EMPTY";
+			vehicle="B_SDV_01_F";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
 	};
 	class Markers
 	{
@@ -7823,7 +7846,7 @@ class Mission
 			position[]={15355.496,-0.011223207,15792.477};
 			name="B2";
 			text="Лодки";
-			type="c_ship";
+			type="o_naval";
 			colorName="ColorWEST";
 			a=0.5;
 			b=0.5;
@@ -9348,7 +9371,7 @@ class Mission
 			position[]={14240.866,20.241318,16218.58};
 			name="UAVspawn_2";
 			text="Лодки";
-			type="o_naval";
+			type="c_ship";
 			colorName="ColorWEST";
 			a=0.5;
 			b=0.5;
