@@ -19,12 +19,12 @@ class Header
 
 //------------------------- Admin
 
-enableDebugConsole = 1;									// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
+enableDebugConsole = 0;									// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
 allowFunctionsLog = 0; 									// Log functions to .rpt. disabled with 0
 
 //------------------------- Misc
 
-disableChannels[]={0}; 									// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global.
+disableChannels[]={0,2}; 								// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global.
 disabledAI = 1;											// No AI in playable units
 aiKills = 0; 											// disable scorelist for AI players
 enableItemsDropping = 0; 								// disabled with 0

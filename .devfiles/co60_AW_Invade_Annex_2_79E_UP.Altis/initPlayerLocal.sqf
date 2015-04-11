@@ -21,7 +21,6 @@ enableSentences false;
 
 
 _null = [] execvm "scripts\vehicle\crew\crew.sqf"; 								// vehicle HUD
-//_null = [] execVM 'scripts\group_manager.sqf';									// group manager
 _null = [] execVM "scripts\restrictions.sqf"; 									// gear restrictions
 _null = [] execVM "scripts\pilotCheck.sqf"; 									// pilots only
 _null = [] execVM "scripts\safezone.sqf"; 										// spawn protection
@@ -29,6 +28,7 @@ _null = [] execVM "scripts\jump.sqf";											// jump action
 _null = [] execVM "scripts\misc\diary.sqf";										// diary tabs	
 _null = [] execVM "scripts\icons.sqf";											// blufor map tracker
 _null = [] execVM "scripts\admin_uid.sqf";
+_null = [] execVM "scripts\Taru.sqf";											//test taru script
 
 //-------------------- PVEHs
 

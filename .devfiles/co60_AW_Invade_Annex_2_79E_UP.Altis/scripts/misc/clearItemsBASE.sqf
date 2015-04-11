@@ -44,7 +44,7 @@ while { true } do {
 	
 		//---------- DE-BRIEF
 	
-		hqSideChat = "Следующая очиста будет доступна через несколько минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Следующая очистка будет доступна через несколько минут."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 	
 		sleep _delay;
 	

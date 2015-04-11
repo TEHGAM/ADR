@@ -523,4 +523,152 @@
       <Russian>Вступить</Russian>
     </Key>
   </Package>
+  <Package ID="XENO_Taru_Pod_Mod">
+		<Container ID="Langages">
+			<Key ID="STR_XENO_Arrimer">
+				<Original>Attach the Pod</Original>
+				<English>Attach the Pod</English>
+				<Czech>Attach the Pod</Czech>
+				<French>Arrimer la nacelle</French>
+				<German>Attach the Pod</German>
+				<Italian>Attacca il Modulo</Italian>
+				<Polish>Attach the Pod</Polish>
+				<Portuguese>Attach the Pod</Portuguese>
+				<Russian>Прикрепить модуль</Russian>
+				<Spanish>Attach the Pod</Spanish>
+			</Key>
+			<Key ID="STR_XENO_Desarrimer">
+				<Original>Detach the Pod</Original>
+				<English>Detach the Pod</English>
+				<Czech>Detach the Pod</Czech>
+				<French>Désarrimer la nacelle</French>
+				<German>Detach the Pod</German>
+				<Italian>Rilascia il Modulo</Italian>
+				<Polish>Detach the Pod</Polish>
+				<Portuguese>Detach the Pod</Portuguese>
+				<Russian>Отцепить модуль</Russian>
+				<Spanish>Detach the Pod</Spanish>
+			</Key>	
+			<Key ID="STR_XENO_Larguer">
+				<Original>Drop the Pod</Original>
+				<English>Drop the Pod</English>
+				<Czech>Drop the Pod</Czech>
+				<French>Larguer la nacelle</French>
+				<German>Drop the Pod</German>
+				<Italian>Sgancia il Modulo</Italian>
+				<Polish>Drop the Pod</Polish>
+				<Portuguese>Drop the Pod</Portuguese>
+				<Russian>Сбросить модуль</Russian>
+				<Spanish>Drop the Pod</Spanish>
+			</Key>		
+			<Key ID="STR_AGM_XENO_Taru_Pod_Mod">
+				<Original>Pod >></Original>
+				<English>Pod >></English>
+				<Czech>Pod >></Czech>
+				<French>Nacelle >></French>
+				<German>Pod >></German>
+				<Italian>Modulo</Italian>
+				<Polish>Pod >></Polish>
+				<Portuguese>Pod >></Portuguese>
+				<Russian>Модуль >></Russian>
+				<Spanish>Pod >></Spanish>
+			</Key>	
+			<Key ID="STR_AGM_XENO_Arrimer">
+				<Original>Attach</Original>
+				<English>Attach</English>
+				<Czech>Attach</Czech>
+				<French>Arrimer</French>
+				<German>Attach</German>
+				<Italian>Attacca</Italian>
+				<Polish>Attach</Polish>
+				<Portuguese>Attach</Portuguese>
+				<Russian>Подцепить</Russian>
+				<Spanish>Attach</Spanish>
+			</Key>	
+			<Key ID="STR_AGM_XENO_Desarrimer">
+				<Original>Detach</Original>
+				<English>Detach</English>
+				<Czech>Detach</Czech>
+				<French>Désarrimer</French>
+				<German>Detach</German>
+				<Italian>Rilascia</Italian>
+				<Polish>Detach</Polish>
+				<Portuguese>Detach</Portuguese>
+				<Russian>Отцепить</Russian>
+				<Spanish>Detach</Spanish>
+			</Key>	
+			<Key ID="STR_AGM_XENO_Larguer">
+				<Original>Drop</Original>
+				<English>Drop</English>
+				<Czech>Drop</Czech>
+				<French>Larguer</French>
+				<German>Drop</German>
+				<Italian>Sgancia</Italian>
+				<Polish>Drop</Polish>
+				<Portuguese>Drop</Portuguese>
+				<Russian>Сбросить</Russian>
+				<Spanish>Drop</Spanish>
+			</Key>
+			<Key ID="STR_XENO_Mauvaise_Version_CBA">
+				<Original>XENO Taru Pod Mod : Your version of CBA is too old for this version of Tao Folding Map. Please upgrade CBA.</Original>
+				<English>XENO Taru Pod Mod : Your version of CBA is too old for this version of Tao Folding Map. Please upgrade CBA.</English>
+				<Czech>XENO Taru Pod Mod : Your version of CBA is too old for this version of Tao Folding Map. Please upgrade CBA.</Czech>
+				<French>XENO Taru Pod Mod : Votre version de CBA est trop ancienne pour cette version de Tao Folding Map. Veuillez mettre à jour CBA.</French>
+				<German>XENO Taru Pod Mod : Your version of CBA is too old for this version of Tao Folding Map. Please upgrade CBA.</German>
+				<Italian>XENO Taru Pod Mod : Your version of CBA is too old for this version of Tao Folding Map. Please upgrade CBA.</Italian>
+				<Polish>XENO Taru Pod Mod : Your version of CBA is too old for this version of Tao Folding Map. Please upgrade CBA.</Polish>
+				<Portuguese>XENO Taru Pod Mod : Your version of CBA is too old for this version of Tao Folding Map. Please upgrade CBA.</Portuguese>
+				<Russian>Обновите CBA аддон!</Russian>
+				<Spanish>XENO Taru Pod Mod : Your version of CBA is too old for this version of Tao Folding Map. Please upgrade CBA.</Spanish>
+			</Key>	
+			<Key ID="STR_XENO_Chat_Arrimer">
+				<Original>Pod attached</Original>
+				<English>Pod attached</English>
+				<Czech>Pod attached</Czech>
+				<French>Nacelle arrimée</French>
+				<German>Pod attached</German>
+				<Italian>attached</Italian>
+				<Polish>Pod attached</Polish>
+				<Portuguese>Pod attached</Portuguese>
+				<Russian>Модуль подцеплен</Russian>
+				<Spanish>Pod attached</Spanish>
+			</Key>
+			<Key ID="STR_XENO_Chat_Desarrimer">
+				<Original>Pod detached</Original>
+				<English>Pod detached</English>
+				<Czech>Pod detached</Czech>
+				<French>Nacelle désarrimée</French>
+				<German>Pod detached</German>
+				<Italian>Pod detached</Italian>
+				<Polish>Pod detached</Polish>
+				<Portuguese>Pod detached</Portuguese>
+				<Russian>Модуль отцеплен</Russian>
+				<Spanish>Pod detached</Spanish>
+			</Key>
+			<Key ID="STR_XENO_Chat_Larguer_Sans_Parachute">
+				<Original>Pod drop without parachute</Original>
+				<English>Pod drop without parachute</English>
+				<Czech>Pod drop without parachute</Czech>
+				<French>Nacelle larguée sans parachute</French>
+				<German>Pod drop without parachute</German>
+				<Italian>Pod drop without parachute</Italian>
+				<Polish>Pod drop without parachute</Polish>
+				<Portuguese>Pod drop without parachute</Portuguese>
+				<Russian>Модуль сброшен без парашюта</Russian>
+				<Spanish>Pod drop without parachute</Spanish>
+			</Key>
+			<Key ID="STR_XENO_Chat_Larguer_Avec_Parachute">
+				<Original>Pod drop with parachute</Original>
+				<English>Pod drop with parachute</English>
+				<Czech>Pod drop with parachute</Czech>
+				<French>Nacelle larguée avec parachute</French>
+				<German>Pod drop with parachute</German>
+				<Italian>Pod drop with parachute</Italian>
+				<Polish>Pod drop with parachute</Polish>
+				<Portuguese>Pod drop with parachute</Portuguese>
+				<Russian>Модуль сброшен с парашютом</Russian>
+				<Spanish>Pod drop with parachute</Spanish>
+			</Key>
+		</Container>
+	</Package>
 </Project>
