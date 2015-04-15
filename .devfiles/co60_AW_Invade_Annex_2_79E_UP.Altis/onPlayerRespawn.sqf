@@ -13,7 +13,7 @@ Description:
 	Client scripts that should execute after respawn.
 	
 ______________________________________________________*/
-
+/*
 if (!isDedicated) then
 {
   player addAction [
@@ -21,3 +21,4 @@ if (!isDedicated) then
     Compile preprocessFileLineNumbers "scripts\DOM_squad\open_dialog.sqf", [], -80, false
   ];
 };
+*/

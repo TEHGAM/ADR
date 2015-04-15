@@ -15,7 +15,8 @@ Description:
 ______________________________________________________*/
 
 
-enableSentences false;															
+enableSentences false;
+enableEngineArtillery false;
 
 //------------------- client executions
 
@@ -28,7 +29,6 @@ _null = [] execVM "scripts\jump.sqf";											// jump action
 _null = [] execVM "scripts\misc\diary.sqf";										// diary tabs	
 _null = [] execVM "scripts\icons.sqf";											// blufor map tracker
 _null = [] execVM "scripts\admin_uid.sqf";
-_null = [] execVM "scripts\Taru.sqf";											//test taru script
 
 //-------------------- PVEHs
 

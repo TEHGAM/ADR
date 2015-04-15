@@ -28,7 +28,7 @@ sleep 1;
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Заряд С4 установлен.";
+hint "Charge planted on objective. Standby...";
 
 sleep 1;
 
