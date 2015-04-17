@@ -504,7 +504,7 @@ JTS_FNC_REQUESTS =
 	while {true} do
 	{
 		waitUntil {alive player};
-		_act = player addaction ["<t color='#00FF00'>Меню группы</t>","JTS_SQUAD\JTS_GroupMenu.sqf",[],-1];
+		_act = player addaction ["<t color='#00FF00'>  • Меню группы</t>","JTS_SQUAD\JTS_GroupMenu.sqf",[],-80];
 		waitUntil {!alive player};
 		vehicle player removeaction _act;
 		player removeaction _act;
