@@ -504,7 +504,7 @@ JTS_FNC_REQUESTS =
 	while {true} do
 	{
 		waitUntil {alive player};
-		_act = player addaction ["<t color='#00FF00'>Меню группы</t>","JTS_SQUAD\JTS_GroupMenu.sqf",[],0];
+		_act = player addaction ["<t color='#00FF00'>Меню группы</t>","JTS_SQUAD\JTS_GroupMenu.sqf",[],-1];
 		waitUntil {!alive player};
 		vehicle player removeaction _act;
 		player removeaction _act;
@@ -523,7 +523,7 @@ JTS_FNC_REQUESTS =
 			{
 				if (units (group player) select _i != player) then
 				{
-					player groupchat format ["%1 HAS BEEN REMOVED FROM YOUR SQUAD", toUpper (name (units (group player) select _i))];
+					player groupchat format ["%1 был удален из вашей команды", toUpper (name (units (group player) select _i))];
 					[units (group player) select _i] joinSilent grpnull
 				};
 			};
