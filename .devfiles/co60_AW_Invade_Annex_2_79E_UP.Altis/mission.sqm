@@ -149,7 +149,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=18;
+		items=17;
 		class Item0
 		{
 			side="WEST";
@@ -168,7 +168,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="(group this) setGroupId [""ALPHA""];";
+					init="(group this) setGroupId [""ALPHA""]; this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Командир отделения";
 				};
 				class Item1
@@ -181,6 +181,8 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Медик";
 				};
 				class Item2
 				{
@@ -192,6 +194,8 @@ class Mission
 					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Инженер";
 				};
 				class Item3
 				{
@@ -203,6 +207,8 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Пулеметчик";
 				};
 				class Item4
 				{
@@ -214,6 +220,8 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Пулеметчик";
 				};
 				class Item5
 				{
@@ -225,6 +233,8 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Гренадер";
 				};
 				class Item6
 				{
@@ -236,6 +246,7 @@ class Mission
 					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Стрелок";
 				};
 				class Item7
@@ -248,6 +259,8 @@ class Mission
 					vehicle="B_soldier_AT_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Ракетчик ПТ";
 				};
 			};
 		};
@@ -269,7 +282,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="(group this) setGroupId [""BRAVO""];";
+					init="(group this) setGroupId [""BRAVO""]; this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Командир отделения";
 				};
 				class Item1
@@ -282,6 +295,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Медик";
 				};
 				class Item2
@@ -294,6 +308,7 @@ class Mission
 					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Инженер";
 				};
 				class Item3
@@ -306,6 +321,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пулеметчик";
 				};
 				class Item4
@@ -318,6 +334,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пулеметчик";
 				};
 				class Item5
@@ -330,6 +347,7 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Гренадер";
 				};
 				class Item6
@@ -342,6 +360,7 @@ class Mission
 					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Стрелок";
 				};
 				class Item7
@@ -354,6 +373,8 @@ class Mission
 					vehicle="B_soldier_AT_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Ракетчик ПТ";
 				};
 			};
 		};
@@ -375,7 +396,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="(group this) setGroupId [""ECHO""];";
+					init="(group this) setGroupId [""ECHO""]; this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Командир отделения";
 				};
 				class Item1
@@ -388,6 +409,8 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Медик";
 				};
 				class Item2
 				{
@@ -399,6 +422,8 @@ class Mission
 					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Инженер";
 				};
 				class Item3
 				{
@@ -410,6 +435,8 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Пулеметчик";
 				};
 				class Item4
 				{
@@ -421,6 +448,7 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Гренадер";
 				};
 				class Item5
@@ -433,6 +461,7 @@ class Mission
 					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Стрелок";
 				};
 				class Item6
@@ -445,104 +474,12 @@ class Mission
 					vehicle="B_soldier_AT_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Ракетчик ПТ";
 				};
 			};
 		};
 		class Item3
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={15281.212,17.877903,17397.072};
-					azimut=136.687;
-					special="NONE";
-					id=23;
-					side="WEST";
-					vehicle="B_sniper_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					init="(group this) setGroupId [""SA""];";
-					description="Снайпер";
-				};
-				class Item1
-				{
-					position[]={15280.371,17.882278,17396.273};
-					azimut=136.687;
-					special="NONE";
-					id=24;
-					side="WEST";
-					vehicle="B_sniper_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					description="Снайпер";
-				};
-				class Item2
-				{
-					position[]={15282.19,17.872593,17398.086};
-					azimut=-93.275803;
-					special="NONE";
-					id=25;
-					side="WEST";
-					vehicle="B_recon_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item4
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={15279.139,17.883194,17397.16};
-					azimut=136.687;
-					special="NONE";
-					id=26;
-					side="WEST";
-					vehicle="B_sniper_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					description="Снайпер";
-				};
-				class Item1
-				{
-					position[]={15279.92,17.879145,17397.898};
-					azimut=136.687;
-					special="NONE";
-					id=27;
-					side="WEST";
-					vehicle="B_sniper_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="(group this) setGroupId [""SB""];";
-					description="Снайпер";
-				};
-				class Item2
-				{
-					position[]={15280.76,17.874054,17398.969};
-					azimut=-93.275803;
-					special="NONE";
-					id=28;
-					side="WEST";
-					vehicle="B_recon_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item5
 		{
 			side="LOGIC";
 			class Vehicles
@@ -551,7 +488,7 @@ class Mission
 				class Item0
 				{
 					position[]={-252.1301,0.00059650524,850.59412};
-					id=29;
+					id=23;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -560,7 +497,7 @@ class Mission
 				};
 			};
 		};
-		class Item6
+		class Item4
 		{
 			side="WEST";
 			class Vehicles
@@ -572,7 +509,7 @@ class Mission
 					azimut=225;
 					offsetY=0.25;
 					special="NONE";
-					id=30;
+					id=24;
 					side="WEST";
 					vehicle="B_UGV_01_rcws_F";
 					isUAV=1;
@@ -584,7 +521,7 @@ class Mission
 				};
 			};
 		};
-		class Item7
+		class Item5
 		{
 			side="WEST";
 			class Vehicles
@@ -595,7 +532,7 @@ class Mission
 					position[]={15297.502,17.725161,17399.609};
 					azimut=257.056;
 					special="NONE";
-					id=31;
+					id=25;
 					side="WEST";
 					vehicle="B_officer_F";
 					leader=1;
@@ -606,7 +543,7 @@ class Mission
 				};
 			};
 		};
-		class Item8
+		class Item6
 		{
 			side="WEST";
 			class Vehicles
@@ -617,7 +554,7 @@ class Mission
 					position[]={15120.145,17.91,17248.893};
 					azimut=315;
 					special="NONE";
-					id=32;
+					id=26;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
@@ -632,7 +569,7 @@ class Mission
 					position[]={15117.101,17.91,17248.42};
 					azimut=45;
 					special="NONE";
-					id=33;
+					id=27;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
@@ -645,7 +582,7 @@ class Mission
 					position[]={15116.882,17.91,17250.197};
 					azimut=120;
 					special="NONE";
-					id=34;
+					id=28;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
@@ -657,7 +594,7 @@ class Mission
 					position[]={15118.792,17.91,17251.867};
 					azimut=180;
 					special="NONE";
-					id=35;
+					id=29;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
@@ -668,7 +605,7 @@ class Mission
 				class Item4
 				{
 					position[]={15119.922,17.976023,17246.24};
-					id=36;
+					id=30;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
@@ -677,7 +614,7 @@ class Mission
 				};
 			};
 		};
-		class Item9
+		class Item7
 		{
 			side="LOGIC";
 			class Vehicles
@@ -714,7 +651,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=37;
+					id=31;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -724,7 +661,7 @@ class Mission
 				};
 			};
 		};
-		class Item10
+		class Item8
 		{
 			side="LOGIC";
 			class Vehicles
@@ -761,7 +698,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=38;
+					id=32;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -771,7 +708,7 @@ class Mission
 				};
 			};
 		};
-		class Item11
+		class Item9
 		{
 			side="LOGIC";
 			class Vehicles
@@ -808,7 +745,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=39;
+					id=33;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -818,7 +755,7 @@ class Mission
 				};
 			};
 		};
-		class Item12
+		class Item10
 		{
 			side="LOGIC";
 			class Vehicles
@@ -855,7 +792,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=40;
+					id=34;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -865,7 +802,7 @@ class Mission
 				};
 			};
 		};
-		class Item13
+		class Item11
 		{
 			side="LOGIC";
 			class Vehicles
@@ -902,7 +839,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=41;
+					id=35;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -912,7 +849,7 @@ class Mission
 				};
 			};
 		};
-		class Item14
+		class Item12
 		{
 			side="LOGIC";
 			class Vehicles
@@ -949,7 +886,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=42;
+					id=36;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -959,7 +896,7 @@ class Mission
 				};
 			};
 		};
-		class Item15
+		class Item13
 		{
 			side="WEST";
 			class Vehicles
@@ -971,7 +908,7 @@ class Mission
 					azimut=63.096138;
 					offsetY=0.80000001;
 					special="NONE";
-					id=43;
+					id=37;
 					side="WEST";
 					vehicle="B_UAV_02_CAS_F";
 					isUAV=1;
@@ -982,7 +919,7 @@ class Mission
 				};
 			};
 		};
-		class Item16
+		class Item14
 		{
 			side="WEST";
 			class Vehicles
@@ -994,7 +931,7 @@ class Mission
 					azimut=89.652687;
 					offsetY=0.80000001;
 					special="NONE";
-					id=44;
+					id=38;
 					side="WEST";
 					vehicle="B_UAV_02_CAS_F";
 					isUAV=1;
@@ -1005,7 +942,7 @@ class Mission
 				};
 			};
 		};
-		class Item17
+		class Item15
 		{
 			side="WEST";
 			class Vehicles
@@ -1016,7 +953,7 @@ class Mission
 					position[]={15281.696,17.845091,17408.131};
 					azimut=120;
 					special="NONE";
-					id=45;
+					id=39;
 					side="WEST";
 					vehicle="B_soldier_UAV_F";
 					player="PLAY CDG";
@@ -1024,7 +961,99 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="uavOperator";
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Оператор БПЛА";
+				};
+			};
+		};
+		class Item16
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={15279.92,17.879145,17397.898};
+					azimut=136.687;
+					special="NONE";
+					id=40;
+					side="WEST";
+					vehicle="B_sniper_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="(group this) setGroupId [""SB""]; this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Снайпер";
+				};
+				class Item1
+				{
+					position[]={15279.139,17.883194,17397.16};
+					azimut=136.687;
+					special="NONE";
+					id=41;
+					side="WEST";
+					vehicle="B_sniper_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Снайпер";
+				};
+				class Item2
+				{
+					position[]={15280.371,17.882278,17396.273};
+					azimut=136.687;
+					special="NONE";
+					id=42;
+					side="WEST";
+					vehicle="B_sniper_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Снайпер";
+				};
+				class Item3
+				{
+					position[]={15281.212,17.877903,17397.072};
+					azimut=136.687;
+					special="NONE";
+					id=43;
+					side="WEST";
+					vehicle="B_sniper_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Снайпер";
+				};
+				class Item4
+				{
+					position[]={15280.76,17.874054,17398.969};
+					azimut=-93.275803;
+					special="NONE";
+					id=44;
+					side="WEST";
+					vehicle="B_recon_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Разведчик-санитар";
+				};
+				class Item5
+				{
+					position[]={15282.19,17.872593,17398.086};
+					azimut=-93.275803;
+					special="NONE";
+					id=45;
+					side="WEST";
+					vehicle="B_recon_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Разведчик-санитар";
 				};
 			};
 		};

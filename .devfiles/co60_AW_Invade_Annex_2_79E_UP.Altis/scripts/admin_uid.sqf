@@ -20,4 +20,14 @@ switch(_uid)do
 		player addAction ["<t color='#FF2626'>Наблюдать</t>", "scripts\spectator\specta.sqf", "", 0, false, true, "", ""];
 		player addAction ["<t color='#FF2626'>Инструменты</t>", "scripts\admin\tools.sqf", "", 1, false, true, "", ""];
  	};
+	case "76561198062030976": // Noart
+ 	{
+		player addAction ["<t color='#FF2626'>Наблюдать</t>", "scripts\spectator\specta.sqf", "", 0, false, true, "", ""];
+		player addAction ["<t color='#FF2626'>Инструменты</t>", "scripts\admin\tools.sqf", "", 1, false, true, "", ""];
+ 	};
+	case "76561197994763606": // DeD Pikhto =rus=
+ 	{
+		player addAction ["<t color='#FF2626'>Наблюдать</t>", "scripts\spectator\specta.sqf", "", 0, false, true, "", ""];
+ 	};
 };
+
