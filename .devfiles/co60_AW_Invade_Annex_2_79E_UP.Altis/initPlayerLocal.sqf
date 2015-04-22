@@ -17,6 +17,7 @@ ______________________________________________________*/
 
 enableSentences false;
 enableEngineArtillery false;
+enableSentences false;
 
 //------------------- client executions
 
