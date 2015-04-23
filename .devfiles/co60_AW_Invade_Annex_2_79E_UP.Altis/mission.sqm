@@ -19,7 +19,6 @@ class Mission
 		"a3_characters_f_beta",
 		"A3_Structures_F_Mil_Cargo",
 		"A3_Structures_F_Items_Electronics",
-		"A3_Armor_F_T100K",
 		"A3_Structures_F_Ind_Cargo",
 		"a3_weapons_f_gamma_ammoboxes",
 		"A3_Modules_F_Curator_Curator",
@@ -64,7 +63,8 @@ class Mission
 		"A3_Air_F_Heli_Light_02",
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
-		"A3_Supplies_F_Heli_Slingload"
+		"A3_Supplies_F_Heli_Slingload",
+		"A3_Soft_F_Quadbike"
 	};
 	addOnsAuto[]=
 	{
@@ -118,6 +118,7 @@ class Mission
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
 		"A3_Supplies_F_Heli_Slingload",
+		"A3_Soft_F_Quadbike",
 		"a3_map_altis"
 	};
 	randomSeed=12935265;
@@ -1058,7 +1059,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=235;
+		items=239;
 		class Item0
 		{
 			position[]={23375.334,12.825771,19807.545};
@@ -3587,6 +3588,46 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_runway_edgelight_blue_F";
 			skill=0.60000002;
+		};
+		class Item235
+		{
+			position[]={15313.093,17.550476,17394.809};
+			azimut=135;
+			id=281;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+			init="_veh = [this,3,3] execVM ""scripts\vehicle\kvadr\fn_vehRespawn.sqf"";";
+		};
+		class Item236
+		{
+			position[]={15311.22,17.606934,17393.029};
+			azimut=135;
+			id=282;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+			init="_veh = [this,3,3] execVM ""scripts\vehicle\kvadr\fn_vehRespawn.sqf"";";
+		};
+		class Item237
+		{
+			position[]={15309.298,17.67304,17391.201};
+			azimut=135;
+			id=283;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+			init="_veh = [this,3,3] execVM ""scripts\vehicle\kvadr\fn_vehRespawn.sqf"";";
+		};
+		class Item238
+		{
+			position[]={15307.289,17.732252,17389.33};
+			azimut=135;
+			id=284;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+			init="_veh = [this,3,3] execVM ""scripts\vehicle\kvadr\fn_vehRespawn.sqf"";";
 		};
 	};
 	class Markers
