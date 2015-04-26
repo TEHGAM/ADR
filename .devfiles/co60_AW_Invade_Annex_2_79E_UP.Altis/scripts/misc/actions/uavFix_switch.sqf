@@ -1,10 +1,10 @@
 if (UAVFIX_SWITCH) exitWith {
-	hint "UAV crew recycle unavailable, please wait ..."
+	hint "Взлом БПЛА недоступен, попробуйте позже."
 };
 
 sleep 1;
 
-hint "Recycling UAV crews, please wait ...";
+hint "Идет взлом БПЛА. Пожалуйста подождите...";
 
 sleep 3;
 

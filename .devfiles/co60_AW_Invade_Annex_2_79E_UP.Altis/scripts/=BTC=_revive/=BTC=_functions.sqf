@@ -1270,10 +1270,10 @@ BTC_player_killed =
 BTC_check_healer =
 {
 	_pos = getpos player;
-	_men = [];_veh = [];_dist = 501;_healer = objNull;_healers = [];
+	_men = [];_veh = [];_dist = 801;_healer = objNull;_healers = [];
 	_msg = "No medics nearby.";
-	_men = nearestObjects [_pos, BTC_who_can_revive, 500];
-	_veh = nearestObjects [_pos, ["LandVehicle", "Air", "Ship"], 500];
+	_men = nearestObjects [_pos, BTC_who_can_revive, 800];
+	_veh = nearestObjects [_pos, ["LandVehicle", "Air", "Ship"], 800];
 	{
 		{private ["_man"];_man = _x;if (isPlayer _man && ({_man isKindOf _x} count BTC_who_can_revive) > 0) then {_men = _men + [_man];};} foreach crew _x;
 	} foreach _veh;

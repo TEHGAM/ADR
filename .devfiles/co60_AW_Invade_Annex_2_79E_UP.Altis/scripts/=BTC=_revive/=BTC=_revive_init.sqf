@@ -39,8 +39,8 @@ BTC_need_first_aid = 1;												//You need a first aid kit to revive (1 = yes
 BTC_pvp = 0; 														//(disable the revive option for the enemy)
 BTC_injured_marker = 0;
 BTC_3d_can_see     = ["B_medic_F","B_recon_medic_F"];
-BTC_3d_distance    = 300;
-BTC_3d_icon_size   = 0.5;
+BTC_3d_distance    = 800;
+BTC_3d_icon_size   = 0.2;
 BTC_3d_icon_color  = [1,0,0,1];
 BTC_dlg_on_respawn = 0;												//1 = Mobile only - 2 Leader group and mobile - 3 = Units group and mobile - 4 = All side units and mobile
 BTC_objects_actions_west = [];
