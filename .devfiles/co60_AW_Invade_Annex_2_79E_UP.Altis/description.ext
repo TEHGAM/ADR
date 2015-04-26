@@ -2,7 +2,7 @@
 
 author = Rarek, AhoyWorld, Quiksilver;					// Visible when loading mission
 onLoadName = "Invade & Annex 2.79";						// Visible when loading mission
-OnLoadMission = "Тестируем скрипт отрядов, о неппполадках и неточностях в переводе, просьба сообщать на форум или администрации сервера. –TEHGAM.COM.";
+OnLoadMission = "Версия 3.4.6 — редакция сообщества – TEHGAM.COM.";
 loadScreen = "media\images\loading.paa";				// Visible when loading mission
 overviewPicture = "media\images\loading.paa";			// Visible when selecting mission
 
