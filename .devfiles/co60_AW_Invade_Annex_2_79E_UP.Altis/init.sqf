@@ -27,8 +27,7 @@ reservedUIDs = ["76561198017758762","76561198062030976","76561198053877632","765
  
 waitUntil {alive player};
 if (player in reservedUnits) then {
-    if ((getPlayerUID player) in reservedUIDs ) then {
-        hint "Вы можете использовать этот слот.";} 
+    if ((getPlayerUID player) in reservedUIDs ) then {}
 	else {endMission "END1";};
 };
 };
