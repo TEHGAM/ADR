@@ -22,7 +22,7 @@ if (isDedicated) exitWith { "addToScore" addPublicVariableEventHandler { ((_this
 
 while {true} do {
 sleep 3;
-reservedUnits = [zeus1, zeus2, zeus3]; // Name of the playable soldier.
+reservedUnits = [zeus1]; // Name of the playable soldier.
 reservedUIDs = ["76561198017758762","76561198062030976","76561198053877632","76561198074604871","76561198163722032","76561198015092620"]; //UIDs obviously
  
 waitUntil {alive player};
