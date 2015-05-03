@@ -46,7 +46,6 @@ if (_type in _VASable) then {
 	_unit addAction ["<t color='#ff1111'>Mobile VAS</t>","scripts\VAS\open.sqf",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];
 };
 
-
 if(_type in _wasp) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_digital_co.paa'];};
 if(_type in _wasp1) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_wasp_co.paa']; _unit addWeapon "CMFlareLauncher"; _unit addMagazine "168Rnd_CMFlare_Chaff_Magazine";};
 
