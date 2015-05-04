@@ -18,9 +18,6 @@ _wasp1 = ["B_Heli_Light_01_F"];
 // The orca
 _orca = ["O_Heli_Light_02_unarmed_F"];
 
-//Other
-_police = ["C_Offroad_01_F"];
-
 //---------- VAS-enabled
 _VASable = ["B_Truck_01_ammo_F"];
 
@@ -34,7 +31,6 @@ if (isNull _unit) exitWith {};
 if (_type in _ghosthawk) then {
 	[_unit] execVM "scripts\vehicle\animate\ghosthawk.sqf";
 	_unit addAction ["<t color='#00B2EE'>  • Cбросить боезапас</t>", "scripts\vehicle\drop\drop.sqf",[1],0,false,true,"","driver _target == _this"];
-	_unit addEventHandler ["Fired", { _this execVM "scripts\vehicle\spreadTurret.sqf"}];  
 };
 
 if (_type in _blackVehicles) then {
@@ -50,12 +46,10 @@ if (_type in _VASable) then {
 	_unit addAction ["<t color='#ff1111'>Mobile VAS</t>","scripts\VAS\open.sqf",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)'];
 };
 
+if(_type in _wasp) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_digital_co.paa'];};
+if(_type in _wasp1) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_wasp_co.paa']; _unit addWeapon "CMFlareLauncher"; _unit addMagazine "168Rnd_CMFlare_Chaff_Magazine";};
 
-if(_type in _wasp) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_digital_co.paa']};
-if(_type in _wasp1) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_wasp_co.paa']};
-if(_type in _police) then {_unit setObjectTexture[0, 'scripts\vehicle\texture\police\police_offroad.paa']};
-
-if(_type in _orca) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa']};
+if(_type in _orca) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa']; _unit addWeapon "CMFlareLauncher"; _unit addMagazine "168Rnd_CMFlare_Chaff_Magazine";};
 
 if (_type in _noAmmoCargo) then {_unit setAmmoCargo 0;};
 
