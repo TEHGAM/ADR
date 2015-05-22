@@ -69,7 +69,7 @@
     <a href="http://www.tehgam.com/memberlist.php?mode=viewprofile&u=159">Cleric</a>, <a href="http://www.tehgam.com/memberlist.php?mode=viewprofile&u=2">mexan</a> and <a href="https://github.com/ZeRoKoOl13">ZeRoKoOl</a> for the initial modifications to our version of I&amp;A.
   </li>
   <li>
-    And last but not least, a big thank you to all regular players and administrators of the <a href="https://github.com/TEHGAM/ADR/wiki/T2:-Summary">official server</a> for:
+    And last but not least, a big thank you to all the regular players and administrators of our <a href="https://github.com/TEHGAM/ADR/wiki/T2:-Summary">official server</a> for:
     <ul>
       <li>supporting the project with new suggestions,</li>
       <li>taking out their time to report any bugs,</li>
