@@ -23,6 +23,7 @@
 <p>
   Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии <a href="https://bitbucket.org/ahoyworld/aw-i-a-2">Invade &amp; Annex</a>. Вы можете помочь нам в этом оставляя свои отзывы в <a href="http://www.tehgam.com/viewforum.php?f=36">частном разделе</a> проекта на форуме TEHGAM, а также <a href="https://github.com/TEHGAM/ADR/issues">определяя задачи</a> по его дальнейшему улучшению.
 </p>
+<h4>Содействие</h4>
 <p>
   При наличии навыков редактирования Arma 3 и желании содействовать в разработке ADR напрямую, Вы можете присоединиться к <a href="https://github.com/TEHGAM/ADR/graphs/contributors">её разработчикам</a> делая <a href="https://github.com/TEHGAM/ADR/pulls?q=is%3Apr+is%3Aclosed">запросы на включение</a> своих изменений для рассмотрения <a href="https://github.com/tym32167">руководителем проекта</a>.
 </p>
@@ -35,7 +36,7 @@
     <a href="https://github.com/vosur">vosur</a> за крышу над головой проекта.
   </li>
   <li>
-    <a href="https://github.com/AlNazir">AlNazir</a> и <a href="http://www.tehgam.com/memberlist.php?mode=viewprofile&u=63">[OSA]Ricoh</a> за официальные игровые сервера ADR и их поддержку.
+    <a href="https://github.com/AlNazir">AlNazir</a> и <a href="http://www.tehgam.com/memberlist.php?mode=viewprofile&u=63">Ricoh</a> за официальные игровые сервера ADR и их поддержку.
   </li>
   <li>
     <a href="https://github.com/AgentRev">AgentRev</a> за <a href="https://github.com/TEHGAM/ADR/blob/master/Annex_Done_Right.Altis/scripts/fpsFix/vehicleManager.sqf">оптимизации</a>.
