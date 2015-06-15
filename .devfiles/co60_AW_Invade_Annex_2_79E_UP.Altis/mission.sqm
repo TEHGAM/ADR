@@ -1065,7 +1065,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15306.515,0.073641986,12850.116};
+					position[]={15158.1,0.075492322,14803.297};
 					azimut=-201.653;
 					special="NONE";
 					id=46;
@@ -1089,7 +1089,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15309.863,0.074370496,12846.239};
+					position[]={15157.422,-0.026437972,14789.578};
 					class args
 					{
 						items=4;
@@ -1124,6 +1124,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					init="[this, [-1, -2, 0, 1]] call bis_fnc_setcuratorvisionmodes;";
 					syncId=1;
 					synchronizations[]={0};
 				};
