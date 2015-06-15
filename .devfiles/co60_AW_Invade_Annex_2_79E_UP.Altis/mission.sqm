@@ -122,6 +122,7 @@ class Mission
 		"A3_Air_F_Gamma_Plane_Fighter_03",
 		"A3_Supplies_F_Heli_Slingload",
 		"A3_Soft_F_Quadbike",
+		"A3_Boat_F_Boat_Transport_01",
 		"a3_map_altis"
 	};
 	randomSeed=12935265;
@@ -1304,7 +1305,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=240;
+		items=248;
 		class Item0
 		{
 			position[]={23375.334,12.825771,19807.545};
@@ -3896,10 +3897,122 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false; this enableRopeAttach false;";
 		};
+		class Item240
+		{
+			position[]={17773.473,-0.0106195,18207.008};
+			azimut=310;
+			offsetY=0.5;
+			special="NONE";
+			id=290;
+			side="EMPTY";
+			vehicle="B_Boat_Armed_01_minigun_F";
+			leader=1;
+			skill=0.60000002;
+			text="boat1";
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item241
+		{
+			position[]={17800.389,0.0035865665,18185.373};
+			azimut=310;
+			offsetY=0.5;
+			special="NONE";
+			id=291;
+			side="EMPTY";
+			vehicle="B_Boat_Armed_01_minigun_F";
+			leader=1;
+			skill=0.60000002;
+			text="boat2";
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item242
+		{
+			position[]={17818.129,-0.00027527779,18161.107};
+			azimut=310;
+			offsetY=0.5;
+			special="NONE";
+			id=292;
+			side="EMPTY";
+			vehicle="B_Boat_Transport_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="boat3";
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item243
+		{
+			position[]={17814.252,-3.3887329,18155.756};
+			azimut=310;
+			offsetY=0.5;
+			special="NONE";
+			id=293;
+			side="EMPTY";
+			vehicle="B_Boat_Transport_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="boat4";
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item244
+		{
+			position[]={17809.27,-0.010016227,18149.664};
+			azimut=310;
+			offsetY=0.5;
+			special="NONE";
+			id=294;
+			side="EMPTY";
+			vehicle="B_Boat_Transport_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="boat5";
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item245
+		{
+			position[]={17804.73,-0.0054836376,18144};
+			azimut=310;
+			offsetY=0.5;
+			special="NONE";
+			id=295;
+			side="EMPTY";
+			vehicle="B_Boat_Transport_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="boat6";
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item246
+		{
+			position[]={17749.693,0.010432431,18183.971};
+			azimut=310;
+			offsetY=0.5;
+			special="NONE";
+			id=296;
+			side="EMPTY";
+			vehicle="B_SDV_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="boat7";
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item247
+		{
+			position[]={17775.07,0.017758457,18165.473};
+			azimut=310;
+			offsetY=0.5;
+			special="NONE";
+			id=297;
+			side="EMPTY";
+			vehicle="B_SDV_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="boat8";
+			init="_m = [this,60,300,0,FALSE] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
 	};
 	class Markers
 	{
-		items=150;
+		items=151;
 		class Item0
 		{
 			position[]={-15683.114,0.0011896361,-3827.8438};
@@ -5011,6 +5124,12 @@ class Mission
 			text="Teamspeak - ts.tehgam.com";
 			type="mil_box";
 			colorName="ColorRed";
+		};
+		class Item150
+		{
+			position[]={17710.488,-0.03428093,18183.738};
+			name="Порт";
+			type="b_naval";
 		};
 	};
 	class Sensors
