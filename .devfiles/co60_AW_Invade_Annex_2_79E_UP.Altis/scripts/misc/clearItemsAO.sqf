@@ -6,5 +6,3 @@ _itemsToClear = nearestObjects [_obj,["WeaponHolder"],_rad];
 {deleteVehicle _x;} count _itemsToClear;
 
 {deleteVehicle _x;} count (allMissionObjects "CraterLong");
-
-{deleteVehicle _x;} count (allMissionObjects "StaticWeapon");
