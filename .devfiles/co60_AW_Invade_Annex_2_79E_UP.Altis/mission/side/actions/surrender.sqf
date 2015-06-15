@@ -23,8 +23,9 @@ To do:
 _______________________________________________________*/
 
 //-------------------- Send hint to player that he's done something...
+[[player,"AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"],"QS_fnc_switchMoveMP",nil,false] spawn BIS_fnc_MP;
 
-hint "You ordered him to surrender";
+hint "Вы приказали ему сдаться";
 
 sleep 1;
 

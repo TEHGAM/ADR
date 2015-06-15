@@ -23,12 +23,13 @@ To do:
 _______________________________________________________*/
 	
 //-------------------- Wait for player to action
+[[player,"AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"],"QS_fnc_switchMoveMP",nil,false] spawn BIS_fnc_MP;
 
 sleep 1;
 
 //-------------------- Send hint to player that he's planted the bomb
 
-hint "Charge planted on objective. Standby...";
+hint "Заряд установлен. Ожидайте...";
 
 sleep 1;
 
