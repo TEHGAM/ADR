@@ -4012,7 +4012,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=151;
+		items=154;
 		class Item0
 		{
 			position[]={-15683.114,0.0011896361,-3827.8438};
@@ -4595,30 +4595,6 @@ class Mission
 		};
 		class Item76
 		{
-			position[]={11317.941,32.257332,11765.509};
-			name="airfield1";
-			type="Empty";
-		};
-		class Item77
-		{
-			position[]={9196.9688,15.44436,21609.768};
-			name="airfield2";
-			type="Empty";
-		};
-		class Item78
-		{
-			position[]={27147.086,24.692556,24890.807};
-			name="airfield3";
-			type="Empty";
-		};
-		class Item79
-		{
-			position[]={20860.637,27.308193,7285.3604};
-			name="airfield4";
-			type="Empty";
-		};
-		class Item80
-		{
 			position[]={14723.821,17.91,16664.521};
 			name="Side";
 			text="Наградная техника";
@@ -4627,164 +4603,164 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item81
+		class Item77
 		{
 			position[]={14791.849,17.91,16695.832};
 			name="smReward1";
 			type="Empty";
 		};
-		class Item82
+		class Item78
 		{
 			position[]={14804.021,17.91,16709.801};
 			name="smReward2";
 			type="Empty";
 			angle=92.781158;
 		};
-		class Item83
+		class Item79
 		{
 			position[]={14782.426,17.91,16686.227};
 			name="smReward3";
 			type="Empty";
 		};
-		class Item84
+		class Item80
 		{
 			position[]={14790.834,17.91,16635.193};
 			name="smReward5";
 			type="Empty";
 		};
-		class Item85
+		class Item81
 		{
 			position[]={14784.3,17.91,16628.447};
 			name="smReward6";
 			type="Empty";
 		};
-		class Item86
+		class Item82
 		{
 			position[]={14778.021,17.91,16621.514};
 			name="smReward7";
 			type="Empty";
 		};
-		class Item87
+		class Item83
 		{
 			position[]={14771.097,17.91,16614.436};
 			name="smReward8";
 			type="Empty";
 		};
-		class Item88
+		class Item84
 		{
 			position[]={14764.075,17.91,16607.439};
 			name="smReward9";
 			type="Empty";
 		};
-		class Item89
+		class Item85
 		{
 			position[]={14757.346,17.91,16600.971};
 			name="smReward10";
 			type="Empty";
 		};
-		class Item90
+		class Item86
 		{
 			position[]={14765.605,17.91,16659.447};
 			name="smReward11";
 			type="Empty";
 		};
-		class Item91
+		class Item87
 		{
 			position[]={14759.334,17.91,16652.541};
 			name="smReward12";
 			type="Empty";
 		};
-		class Item92
+		class Item88
 		{
 			position[]={14751.988,17.91,16645.424};
 			name="smReward13";
 			type="Empty";
 		};
-		class Item93
+		class Item89
 		{
 			position[]={14745.237,17.91,16638.541};
 			name="smReward14";
 			type="Empty";
 		};
-		class Item94
+		class Item90
 		{
 			position[]={14738.666,17.91,16631.982};
 			name="smReward15";
 			type="Empty";
 		};
-		class Item95
+		class Item91
 		{
 			position[]={14732.111,17.91,16625.217};
 			name="smReward16";
 			type="Empty";
 		};
-		class Item96
+		class Item92
 		{
 			position[]={14725.847,17.91,16618.303};
 			name="smReward17";
 			type="Empty";
 		};
-		class Item97
+		class Item93
 		{
 			position[]={14837.196,17.91,16684.785};
 			name="smReward18";
 			type="Empty";
 		};
-		class Item98
+		class Item94
 		{
 			position[]={14830.16,17.91,16677.777};
 			name="smReward19";
 			type="Empty";
 		};
-		class Item99
+		class Item95
 		{
 			position[]={14823.428,17.91,16671.309};
 			name="smReward20";
 			type="Empty";
 		};
-		class Item100
+		class Item96
 		{
 			position[]={14816.763,17.91,16664.285};
 			name="smReward21";
 			type="Empty";
 		};
-		class Item101
+		class Item97
 		{
 			position[]={14810.489,17.91,16657.367};
 			name="smReward22";
 			type="Empty";
 		};
-		class Item102
+		class Item98
 		{
 			position[]={14803.565,17.91,16650.277};
 			name="smReward23";
 			type="Empty";
 		};
-		class Item103
+		class Item99
 		{
 			position[]={14813.651,17.91,16693.889};
 			name="smReward24";
 			type="Empty";
 		};
-		class Item104
+		class Item100
 		{
 			position[]={14805.191,17.91,16686.172};
 			name="smReward25";
 			type="Empty";
 		};
-		class Item105
+		class Item101
 		{
 			position[]={14797.264,17.91,16677.711};
 			name="smReward26";
 			type="Empty";
 		};
-		class Item106
+		class Item102
 		{
 			position[]={14788.804,17.91,16668.879};
 			name="smReward27";
 			type="Empty";
 		};
-		class Item107
+		class Item103
 		{
 			position[]={15058.541,17.303242,17303.805};
 			name="vehService";
@@ -4794,7 +4770,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item108
+		class Item104
 		{
 			position[]={15199.373,17.203257,17439.512};
 			name="Vehicle depot_1";
@@ -4804,7 +4780,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item109
+		class Item105
 		{
 			position[]={15148.149,17.91,17233.852};
 			name="Helo spawn";
@@ -4814,7 +4790,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item110
+		class Item106
 		{
 			position[]={15101.832,17.91,17011.414};
 			name="UAVspawn";
@@ -4824,25 +4800,25 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item111
+		class Item107
 		{
 			position[]={15115.215,17.91,17242.953};
 			name="respawn_pilot";
 			type="Empty";
 		};
-		class Item112
+		class Item108
 		{
 			position[]={15279.046,17.870792,17403.811};
 			name="respawn_west";
 			type="Empty";
 		};
-		class Item113
+		class Item109
 		{
 			position[]={15254.167,17.91,17258.184};
 			name="airbaseDefense";
 			type="Empty";
 		};
-		class Item114
+		class Item110
 		{
 			position[]={15113.397,17.91,17204.086};
 			name="Repair_1";
@@ -4853,7 +4829,7 @@ class Mission
 			b=0.5;
 			angle=-187.185;
 		};
-		class Item115
+		class Item111
 		{
 			position[]={15285.082,17.863092,17398.715};
 			name="HQ";
@@ -4861,7 +4837,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item116
+		class Item112
 		{
 			position[]={15174.894,17.91,16816.588};
 			name="Repair_2";
@@ -4872,7 +4848,7 @@ class Mission
 			b=0.5;
 			angle=-1.6550601;
 		};
-		class Item117
+		class Item113
 		{
 			position[]={14686.067,17.91,16578.619};
 			name="Repair_2_1";
@@ -4882,7 +4858,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item118
+		class Item114
 		{
 			position[]={15186.8,17.888134,17328.734};
 			name="Armor";
@@ -4891,7 +4867,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item119
+		class Item115
 		{
 			position[]={21237.049,22.440001,7125.9946};
 			name="vehService_1_1_1_1";
@@ -4901,7 +4877,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item120
+		class Item116
 		{
 			position[]={11823.807,12.557322,14149.639};
 			name="vehService_1_1_1_1_1";
@@ -4911,7 +4887,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item121
+		class Item117
 		{
 			position[]={5021.0308,16.925291,14434.013};
 			name="vehService_1_1_1_1_2";
@@ -4921,109 +4897,109 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item122
+		class Item118
 		{
 			position[]={20954.951,42.804131,16961.014};
 			name="Paros";
 			type="Empty";
 		};
-		class Item123
+		class Item119
 		{
 			position[]={18842.477,31.368355,16641.371};
 			name="Rodopoli";
 			type="Empty";
 		};
-		class Item124
+		class Item120
 		{
 			position[]={26868.643,26.377251,24482.734};
 			name="Molos Airfirld";
 			type="Empty";
 		};
-		class Item125
+		class Item121
 		{
 			position[]={22033.143,34.356674,21092.943};
 			name="Ghost Hotel";
 			type="Empty";
 		};
-		class Item126
+		class Item122
 		{
 			position[]={18084.033,15.084597,17711.547};
 			name="Kalithea";
 			type="Empty";
 		};
-		class Item127
+		class Item123
 		{
 			position[]={10456.78,85.356834,17261.453};
 			name="Orino";
 			type="Empty";
 		};
-		class Item128
+		class Item124
 		{
 			position[]={11846.54,50.734352,18407.166};
 			name="Koroni";
 			type="Empty";
 		};
-		class Item129
+		class Item125
 		{
 			position[]={10905.729,31.667538,13409.782};
 			name="Poliakko";
 			type="Empty";
 		};
-		class Item130
+		class Item126
 		{
 			position[]={4447.7959,107.99153,17561.309};
 			name="Agios Konstantinos";
 			type="Empty";
 		};
-		class Item131
+		class Item127
 		{
 			position[]={6935.834,149.42125,22630.203};
 			name="Faros";
 			type="Empty";
 		};
-		class Item132
+		class Item128
 		{
 			position[]={8106.4517,110.78787,22951.633};
 			name="Krya Nera Turbines";
 			type="Empty";
 		};
-		class Item133
+		class Item129
 		{
 			position[]={9137.5215,16.943624,21481.791};
 			name="Krya Nera Airfield";
 			type="Empty";
 		};
-		class Item134
+		class Item130
 		{
 			position[]={6999.2192,21.291901,11649.816};
 			name="The Crater";
 			type="Empty";
 		};
-		class Item135
+		class Item131
 		{
 			position[]={10676.902,16.766865,12263.73};
 			name="Therisa";
 			type="Empty";
 		};
-		class Item136
+		class Item132
 		{
 			position[]={7394.0581,55.555477,15423.614};
 			name="Topolia";
 			type="Empty";
 		};
-		class Item137
+		class Item133
 		{
 			position[]={4727.4717,14.738643,10419.486};
 			name="Panochori Bay";
 			type="Empty";
 		};
-		class Item138
+		class Item134
 		{
 			position[]={9174.5645,29.261053,13902.186};
 			name="Xirolimni Dam";
 			type="Empty";
 		};
-		class Item139
+		class Item135
 		{
 			position[]={12649.022,49.372219,19822.541};
 			name="vehService_2_1";
@@ -5033,7 +5009,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item140
+		class Item136
 		{
 			position[]={14339.966,19.305948,16291.472};
 			name="mod_taru";
@@ -5043,7 +5019,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item141
+		class Item137
 		{
 			position[]={11585.187,23.168539,11905.538};
 			name="Repair_1_1";
@@ -5054,7 +5030,7 @@ class Mission
 			b=0.5;
 			angle=-187.185;
 		};
-		class Item142
+		class Item138
 		{
 			position[]={15157.748,17.91,16807.533};
 			name="med";
@@ -5063,7 +5039,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item143
+		class Item139
 		{
 			position[]={15367.609,16.744413,17353.184};
 			name="destroy1";
@@ -5072,7 +5048,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item144
+		class Item140
 		{
 			position[]={14294.012,19.540281,16273.524};
 			name="mod_t";
@@ -5081,7 +5057,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item145
+		class Item141
 		{
 			position[]={14299.186,19.545343,16269.35};
 			name="mod_r";
@@ -5090,7 +5066,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item146
+		class Item142
 		{
 			position[]={14304.646,19.587488,16264.411};
 			name="mod_m";
@@ -5099,7 +5075,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item147
+		class Item143
 		{
 			position[]={14310.283,19.616566,16259.82};
 			name="mod_b";
@@ -5108,7 +5084,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item148
+		class Item144
 		{
 			position[]={14316.209,19.616079,16254.771};
 			name="mod_z";
@@ -5117,7 +5093,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item149
+		class Item145
 		{
 			position[]={21760.861,-185.96001,32650.902};
 			name="ts";
@@ -5125,11 +5101,56 @@ class Mission
 			type="mil_box";
 			colorName="ColorRed";
 		};
-		class Item150
+		class Item146
 		{
 			position[]={17710.488,-0.03428093,18183.738};
 			name="Порт";
 			type="b_naval";
+		};
+		class Item147
+		{
+			position[]={23757.629,3.1900001,18509.088};
+			name="Almira";
+			type="Empty";
+		};
+		class Item148
+		{
+			position[]={13796.183,11.301407,13030.959};
+			name="Sagonisi";
+			type="Empty";
+		};
+		class Item149
+		{
+			position[]={9676.7412,52.164665,8065.1807};
+			name="Sfaka";
+			type="Empty";
+		};
+		class Item150
+		{
+			position[]={4545.7671,263.92715,15398.983};
+			name="Magos";
+			type="Empty";
+		};
+		class Item151
+		{
+			position[]={6451.2817,180.84096,18660.465};
+			name="marker1";
+			type="Empty";
+		};
+		class Item152
+		{
+			position[]={11055.842,65.695778,21950.936};
+			name="marker2";
+			type="Empty";
+		};
+		class Item153
+		{
+			position[]={8467.2461,106.71877,25116.01};
+			name="sm30";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=100;
+			b=100;
 		};
 	};
 	class Sensors
