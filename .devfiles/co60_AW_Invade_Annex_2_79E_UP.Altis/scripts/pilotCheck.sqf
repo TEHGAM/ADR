@@ -6,9 +6,7 @@ Adapted SaMatra's code published on:
 http://forums.bistudio.com/showthread.php?157481-crewmen
 */
 
-true spawn {
-
-    _pilots = ["B_soldier_repair_F"];
+_pilots = ["B_soldier_repair_F"];
     _aircraft_nocopilot = ["B_Heli_Transport_01_camo_F", "I_Heli_light_03_unarmed_F", "O_Heli_Transport_04_covered_F", "B_Heli_Transport_03_F", "O_Heli_Transport_04_F", "I_Heli_light_03_F", "B_Heli_Transport_01_F", "I_Heli_Transport_02_F", "O_Heli_Light_02_F", "O_Heli_Light_02_unarmed_F", "B_Heli_Light_01_armed_F"];
 
     waitUntil {player == player};
@@ -24,7 +22,7 @@ true spawn {
 
             //------------------------------ pilot can be pilot seat only
 			
-            if((_veh isKindOf "Helicopter") && !(_veh isKindOf "ParachuteBase")) then {
+            if((_veh isKindOf "Helicopter" || _veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase")) then {
 				if(({typeOf _veh == _x} count _aircraft_nocopilot) > 0) then {
 					_forbidden = [_veh turretUnit [0]];
 					if(player in _forbidden) then {
@@ -42,5 +40,4 @@ true spawn {
             };
 		};
     };
-}; 
 
