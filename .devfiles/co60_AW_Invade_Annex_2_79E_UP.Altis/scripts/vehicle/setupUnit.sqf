@@ -49,7 +49,7 @@ if (_type in _VASable) then {
 if(_type in _wasp) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_digital_co.paa'];};
 if(_type in _wasp1) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_wasp_co.paa']; _unit addWeapon "CMFlareLauncher"; _unit addMagazine "168Rnd_CMFlare_Chaff_Magazine";};
 
-if(_type in _orca) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa']; _unit addWeapon "CMFlareLauncher"; _unit addMagazine "168Rnd_CMFlare_Chaff_Magazine";};
+if(_type in _orca) then {_unit setObjectTexture[0, 'A3\Air_F\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa'];
 
 if (_type in _noAmmoCargo) then {_unit setAmmoCargo 0;};
 

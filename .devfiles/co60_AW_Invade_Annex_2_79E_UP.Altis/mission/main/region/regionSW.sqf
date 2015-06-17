@@ -22,7 +22,7 @@ eastSide = createCenter east;
 
 //---------------------------------------------- AO location marker array
 
-_targets = ["Skopos Castle","Zaros Power Station","Zaros","Eginio","Panochori","The Stadium","Vikos Outpost","Athanos","The Crater","Therisa","Topolia","Panochori Bay","Xirolimni Dam"];
+_targets = ["Skopos Castle","Zaros Power Station","Zaros","Eginio","Panochori","The Stadium","Vikos Outpost","Athanos","The Crater","Therisa","Topolia","Panochori Bay","Sagonisi","Sfaka","Xirolimni Dam"];
 
 //----------------------------------------------- SELECT A FEW RANDOM AOs
 

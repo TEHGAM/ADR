@@ -23,9 +23,7 @@ _missionList = [
 	"regionSW",
 	"regionSE",
 	"regionCE"
-];
-
-_null = [] execVM "mission\main\CAS.sqf";		
+];	
 	
 while { true } do {	
 	

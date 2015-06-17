@@ -1,10 +1,7 @@
-private ["_itemsToClear","_obj","_rad"];
-_obj = getMarkerPos currentAO; 						// get spawn - might as well
-_rad = 1000;  										//  radius outwards from center point to clear items.
- 
-_itemsToClear = nearestObjects [_obj,["WeaponHolder"],_rad];
-{deleteVehicle _x;} count _itemsToClear;
-
+{deleteVehicle _x;} count (allMissionObjects "WeaponHolder");
+{deleteVehicle _x;} count allMines;
+{deleteVehicle _x;} count allDead;
+{deleteVehicle _x;} count (allMissionObjects "Ruins");
 {deleteVehicle _x;} count (allMissionObjects "CraterLong");
-
-{deleteVehicle _x;} count (allMissionObjects "StaticWeapon");
+sleep 2;
+{if ((count units _x) == 0) then {deleteGroup _x;};} count allGroups;

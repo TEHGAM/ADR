@@ -24,7 +24,7 @@ private ["_object","_briefing","_smPos","_c4Message"];
 //-------------------- PREPARE MISSION. SELECT OBJECT, POSITION AND MESSAGES FROM ARRAYS
 
 	_object = [crate1,crate2] call BIS_fnc_selectRandom;
-	currentSM = ["sm1","sm2","sm3","sm4","sm5","sm6","sm7","sm8","sm9","sm10","sm11","sm12","sm13","sm14","sm15","sm16","sm17","sm18","sm19"] call BIS_fnc_selectRandom;
+	currentSM = ["sm1","sm2","sm3","sm4","sm5","sm6","sm7","sm8","sm9","sm10","sm11","sm12","sm13","sm14","sm15","sm16","sm17","sm18","sm19","sm30"] call BIS_fnc_selectRandom;
 	_c4Message = ["Заряд установлен! 30 секунд до взрыва. В укрытие!","C-4 активирован! 30 секунд до детонации. Пригнитесь!","Взрывчатка на месте! 30 секунд до взрыва. Уходим!"] call BIS_fnc_selectRandom;
 
 //-------------------- SPAWN OBJECTIVE (okay okay, setPos not spawn/create)

@@ -2,7 +2,7 @@
 
 author = Rarek, AhoyWorld, Quiksilver;					// Visible when loading mission
 onLoadName = "Invade & Annex 2.79";						// Visible when loading mission
-OnLoadMission = "Версия 3.4.6 — редакция сообщества – TEHGAM.COM.";
+OnLoadMission = "Версия 3.4.7 — редакция сообщества – TEHGAM.COM.";
 loadScreen = "media\images\loading.paa";				// Visible when loading mission
 overviewPicture = "media\images\loading.paa";			// Visible when selecting mission
 
@@ -60,7 +60,6 @@ class CfgFunctions
 		#include "functions\cfgfunctions.hpp"			// Integrated I&A functions
 		#include "scripts\VAS\cfgfunctions.hpp"			// VAS
 		#include "scripts\taw_vd\CfgFunctions.hpp"		// View distance
-		#include "scripts\vehicle\kvadr\functions.hpp"
 		class FETT {									// Curator synch http://forums.bistudio.com/showthread.php?176691-Making-placed-units-be-editable-for-every-Zeus
 	        class curator {
 	            class eventHandlers {postInit = 1;};
@@ -203,13 +202,6 @@ class Params
 				values[] = {0,1,2,3,4,5,6,7,8,9,10};
 				texts[] = {0,10,20,30,40,50,60,70,80,90,100};
 				default = 7; // default 7
-			};
-			
-		class EasterEggs {
-				title = "Enable Easter Eggs?";
-				values[] = {1,0};
-				texts[] = {"Enabled","Disabled"};
-				default = 0;
 			};
 };
 

@@ -32,13 +32,15 @@ _actID = _this select 2;  		// ID of the Action
 
 //-------------------- Send hint to player that he's done something...
 
-hint "Receiving data...";
+[[player,"AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"],"QS_fnc_switchMoveMP",nil,false] spawn BIS_fnc_MP;
 
-sleep 1;
+hint "Получение данных...";
 
-hint "Verifying...";
+sleep 2;
 
-sleep 1;
+hint "Проверка...";
+
+sleep 2;
 
 //---------- Send notice to all players that something has been done.
 
