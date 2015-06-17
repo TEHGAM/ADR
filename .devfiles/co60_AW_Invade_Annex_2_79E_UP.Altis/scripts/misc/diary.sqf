@@ -280,6 +280,18 @@ player createDiaryRecord ["teamspeak",
 //Журнал изменений от ADR
 player createDiaryRecord ["changelog",
 [
+"v3.4.7.1 (fix) (17 июня 2015 г)",
+"
+<br />
+• (Исправлено) ракетчики ПВО не могли брать титаны;
+<br /><br />
+• Перестроены отряды.
+<br />
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
 "v3.4.7 (16 июня 2015 г)",
 "
 <br />
