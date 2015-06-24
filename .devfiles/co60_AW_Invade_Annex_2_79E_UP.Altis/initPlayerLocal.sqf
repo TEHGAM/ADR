@@ -14,9 +14,9 @@ Description:
 	
 ______________________________________________________*/
 
-
 enableSentences false;
 enableEngineArtillery false;
+enableRadio false;
 
 //------------------- client executions
 
