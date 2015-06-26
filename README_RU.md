@@ -20,6 +20,23 @@
          alt="Задачи" />
   </a>
 </p>
+<p align="center">
+  <a href="https://github.com/TEHGAM/ADR/wiki/ADR:-История">
+    <img src="http://img.shields.io/badge/Версия-3.4.7-blue.svg?style=flat"
+         alt="Версия" />
+  </a>
+  <a href="https://github.com/TEHGAM/ADR/blob/master/.devfiles/co60_AW_Invade_Annex_2_79E_UP.Altis.pbo">
+    <img src="http://img.shields.io/badge/Скачать-1.18_МБ-green.svg?style=flat"
+         alt="Скачать" />
+  </a>
+  <a href="https://github.com/TEHGAM/ADR/issues">
+    <img src="http://img.shields.io/github/issues-raw/TEHGAM/ADR.svg?label=Задачи&style=flat"
+         alt="Задачи" />
+  </a>
+  <a href=""><img src="http://img.shields.io/badge/Язык-RU-red.svg?style=flat" 
+         alt="Язык_ru" />
+  </a>
+</p>
 <p>
   Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии <a href="https://bitbucket.org/ahoyworld/aw-i-a-2">Invade &amp; Annex</a>. Вы можете помочь нам в этом оставляя свои отзывы в <a href="http://www.tehgam.com/viewforum.php?f=36">частном разделе</a> проекта на форуме TEHGAM, а также <a href="https://github.com/TEHGAM/ADR/issues">определяя задачи</a> по его дальнейшему улучшению.
 </p>
