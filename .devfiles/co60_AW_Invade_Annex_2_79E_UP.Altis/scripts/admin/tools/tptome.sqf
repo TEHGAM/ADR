@@ -9,7 +9,7 @@ smenu =
 	{_arr = [format['%1', plist select (_i)], [12],  "", -5, [["expression", format ["pselect5 = plist select %1;", _i]]], "1", "1"]; _pmenu set [_i + 2, _arr];};
 	if (count plist > (_this select 1)) then {_pmenu set [(_this select 1) + 2, ["Next", [13], "", -5, [["expression", "snext = true;"]], "1", "1"]];}
 	else {_pmenu set [(_this select 1) + 2, ["", [-1], "", -5, [["expression", ""]], "1", "0"]];};
-	_pmenu set [(_this select 1) + 3, ["Exit", [13], "", -5, [["expression", "pselect5 = 'exit';"]], "1", "1"]];
+	_pmenu set [(_this select 1) + 3, ["Выход", [13], "", -5, [["expression", "pselect5 = 'exit';"]], "1", "1"]];
 	showCommandingMenu "#USER:_pmenu";
 };
 _j = 0; _max = 10; if (_max>9) then {_max = 10;};
