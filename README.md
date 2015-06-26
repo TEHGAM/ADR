@@ -18,7 +18,24 @@
   <a href="https://github.com/TEHGAM/ADR/issues">
     <img src="http://img.shields.io/github/issues-raw/TEHGAM/ADR.svg?label=Issues&style=flat"
          alt="Issues" />
+  </a></p>
+<p align="center">
+<a href="https://github.com/TEHGAM/ADR/wiki/ADR:-История">
+    <img src="http://img.shields.io/badge/Version-3.4.7-blue.svg?style=flat"
+         alt="Version" />
   </a>
+  <a href="https://github.com/TEHGAM/ADR/raw/master/Annex_Done_Right.Altis.pbo">
+    <img src="http://img.shields.io/badge/Download-1.18_МB-green.svg?style=flat"
+         alt="Download" />
+  </a>
+  <a href="https://github.com/TEHGAM/ADR/issues">
+    <img src="http://img.shields.io/github/issues-raw/TEHGAM/ADR.svg?label=Issues&style=flat"
+         alt="Issues" />
+  </a> 
+  </a>
+  <a href="https://github.com/TEHGAM/ADR/raw/master/Annex_Done_Right.Altis.pbo">
+    <img src="http://img.shields.io/badge/Language-RU-red.svg?style=flat"alt="Language" />
+  </a>  
 </p>
 <p>
   We welcome, appreciate and would be grateful for any contributions to the ongoing development of this version of <a href="https://bitbucket.org/ahoyworld/aw-i-a-2">Invade &amp; Annex</a>. You can help us by leaving your feedback about the project in <a href="http://www.tehgam.com/viewforum.php?f=36">our section</a> of TEHGAM forum, by reporting any potential <a href="https://github.com/TEHGAM/ADR/issues/new?title=Summarize%20the%20problem%20within%20title%20(provide%20details%20in%20the%20comment%20box%20below).">bugs</a>, or by setting <a href="https://github.com/TEHGAM/ADR/issues/new?title=The%20title%20of%20your%20suggestion%20goes%20here.">new goals</a> for its further improvements.
