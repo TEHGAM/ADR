@@ -24,7 +24,7 @@
     <img src="http://img.shields.io/badge/Version-3.4.7-blue.svg?style=flat"
          alt="Version" />
   </a>
-  <a href="https://github.com/TEHGAM/ADR/raw/master/Annex_Done_Right.Altis.pbo">
+  <a href="https://github.com/TEHGAM/ADR/blob/master/.devfiles/co60_AW_Invade_Annex_2_79E_UP.Altis.pbo">
     <img src="http://img.shields.io/badge/Download-1.18_МB-green.svg?style=flat"
          alt="Download" />
   </a>
@@ -33,7 +33,7 @@
          alt="Issues" />
   </a> 
   </a>
-  <a href="https://github.com/TEHGAM/ADR/raw/master/Annex_Done_Right.Altis.pbo">
+  <a href="">
     <img src="http://img.shields.io/badge/Language-RU-red.svg?style=flat"alt="Language" />
   </a>  
 </p>
