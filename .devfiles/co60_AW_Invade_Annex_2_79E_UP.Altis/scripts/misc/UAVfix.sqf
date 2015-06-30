@@ -15,11 +15,6 @@ _rad = 300;  													// radius outwards from center point to search for Aut
 _delay = 300;  													// default 600
 _loopTimeout = 20 + (random 20);
 _uavArray = ["B_UAV_02_CAS_F","B_UAV_02_F","B_UGV_01_F","B_UGV_01_rcws_F"];
- 
-//---------- LOOP
- 
-while { true } do { 
-	sleep 900;
 
 	//---------- DESPAWN UAV CREW
 		
@@ -33,4 +28,3 @@ while { true } do {
 		
 	{createVehicleCrew _x;} forEach _uavs;
 	{_x setCombatMode "BLUE";} count _uavs;
-};
