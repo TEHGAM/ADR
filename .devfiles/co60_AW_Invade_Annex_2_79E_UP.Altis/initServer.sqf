@@ -19,20 +19,11 @@ Credit:
 	
 	Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
 	
-	ts.ahoyworld.co.uk:9987
-	ts3.allfps.com.au:9992
-	
 	Please be respectful and do not remove/alter credits.
 ______________________________________________________*/
 
-
 enableSaving [false, false];
-
-//------------------------------------------------ Set up curator classes
-
-curators = allCurators;
-adminCurators = curators;
-
+adminCurators = allCurators;
 //------------------------------------------------ Handle parameters
 
 for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
