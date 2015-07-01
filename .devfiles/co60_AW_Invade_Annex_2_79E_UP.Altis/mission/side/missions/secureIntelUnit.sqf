@@ -156,12 +156,12 @@ private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup"
 
 	_fuzzyPos = [((_flatPos select 0) - 300) + (random 600),((_flatPos select 1) - 300) + (random 600),0];
 	{ _x setMarkerPos _fuzzyPos; } forEach ["sideMarker", "sideCircle"];			
-	sideMarkerText = "Secure Intel"; publicVariable "sideMarkerText";
-	"sideMarker" setMarkerText "Side Mission: Secure Intel"; publicVariable "sideMarker"; 	
-	_briefing = "<t align='center'><t size='2.2'>New Side Mission</t><br/><t size='1.5' color='#00B2EE'>Secure Intel</t><br/>____________________<br/>We have reports from locals that sensitive, strategic information is changing hands. This is a target of opportunity!<br/><br/>We've marked the position on your map; head over there and secure the intel. It should be stored on one of the vehicles or on their persons.</t>";
+	sideMarkerText = "Разведданные"; publicVariable "sideMarkerText";
+	"sideMarker" setMarkerText "Допзадание: Разведданные"; publicVariable "sideMarker"; 	
+	_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Разведданные</t><br/>____________________<br/>Военная разведка докладывает о предстоящем обмене стратегически важной и конфиденциальной информации между высокопоставленными агентами врага. Данная цель представляет собой удобный случай для контрразведки!<br/><br/>Ваша задача - выдвинутся на вышеуказаную точку с целью перехвата разведданных, находящихся в одной из машин сопровождения или-же лично у одного из агентов.</t>";
 	GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["NewSideMission", "Secure Intel"]; publicVariable "showNotification";
-	sideMarkerText = "Secure Intel"; publicVariable "sideMarkerText";
+	showNotification = ["NewSideMission", "Разведданные"]; publicVariable "showNotification";
+	sideMarkerText = "Разведданные"; publicVariable "sideMarkerText";
 	
 	sleep 0.3;
 	
@@ -189,7 +189,7 @@ while { sideMissionUp } do {
 		
 		//---------- DE-BRIEF
 		
-		hqSideChat = "Objective destroyed! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Цель уничтожена преждевременно! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		sideMissionUp = false; publicVariable "sideMissionUp";
 		[] spawn QS_fnc_SMhintFAIL;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
@@ -218,7 +218,7 @@ while { sideMissionUp } do {
 		
 			sleep 0.3;
 		
-			hqSideChat = "Target has spotted you and is trying to escape with the intel!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+			hqSideChat = "Вас обнаружили; противник предпринимает попытку уйти вместе с разведданными!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		
 			//---------- WHERE TO / HOW WILL THE OBJECTIVES ESCAPE?
 			
@@ -284,7 +284,7 @@ while { sideMissionUp } do {
 			
 			//---------- DE-BRIEF
 			
-			hqSideChat = "Objective escaped! Mission FAILED!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+			hqSideChat = "Цель ушла от преследования! ЗАДАНИЕ ПРОВАЛЕНО!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 			sideMissionUp = false; publicVariable "sideMissionUp";
 			[] spawn QS_fnc_SMhintFAIL;
 			{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";
@@ -304,7 +304,7 @@ while { sideMissionUp } do {
 		
 		//---------- DE-BRIEF
 		
-		hqSideChat = "Intel received. Mission accomplished! We're sending the data up to HQ for analysis."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
+		hqSideChat = "Разведданные захвачены. ЗАДАНИЕ ВЫПОЛНЕНО! Данные отправлены на исследование."; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 		sideMissionUp = false; publicVariable "sideMissionUp";
 		[] spawn QS_fnc_SMhintSUCCESS;
 		{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["sideMarker", "sideCircle"]; publicVariable "sideMarker";

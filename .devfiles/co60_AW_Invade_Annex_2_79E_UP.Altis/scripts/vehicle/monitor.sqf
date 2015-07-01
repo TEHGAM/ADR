@@ -107,7 +107,7 @@ while {_run} do {
 			if ((_x distance _unit) < PARAMS_VehicleRespawnDistance) exitWith { _nearPlayers = true; };
 		} forEach playableUnits;
 
-		if ((getPosATL _unit distance _position > 10) and ({alive _x} count crew _unit == 0) and (getDammage _unit < 0.8) and !_nearPlayers) then {
+		if ((getPosATL _unit distance _position > 10) and ({alive _x} count crew _unit == 0) and !_nearPlayers) then {
 			_timeout = time + _deserted;
 			sleep 0.1;
 			waitUntil {_timeout < time or !alive _unit or {alive _x} count crew _unit > 0};

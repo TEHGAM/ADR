@@ -14,7 +14,6 @@ Description:
 	
 ______________________________________________________*/
 
-
 enableSentences false;
 enableEngineArtillery false;
 
