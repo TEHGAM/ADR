@@ -22,11 +22,11 @@
 </p>
 <p align="center">
   <a href="https://github.com/TEHGAM/ADR/wiki/ADR:-История">
-    <img src="http://img.shields.io/badge/Версия-3.4.7-blue.svg?style=flat"
+    <img src="http://img.shields.io/badge/Версия-3.4.8-blue.svg?style=flat"
          alt="Версия" />
   </a>
   <a href="https://github.com/TEHGAM/ADR/blob/master/.devfiles/co60_AW_Invade_Annex_2_79E_UP.Altis.pbo">
-    <img src="http://img.shields.io/badge/Скачать-1.18_МБ-green.svg?style=flat"
+    <img src="http://img.shields.io/badge/Скачать-1.23_МБ-green.svg?style=flat"
          alt="Скачать" />
   </a>
   <a href="https://github.com/TEHGAM/ADR/issues">
