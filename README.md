@@ -25,7 +25,7 @@
          alt="Version" />
   </a>
   <a href="https://github.com/TEHGAM/ADR/blob/master/.devfiles/co60_AW_Invade_Annex_2_79E_UP.Altis.pbo">
-    <img src="http://img.shields.io/badge/Download-1.18_МB-green.svg?style=flat"
+    <img src="http://img.shields.io/badge/Download-1.23_МB-green.svg?style=flat"
          alt="Download" />
   </a>
   <a href="https://github.com/TEHGAM/ADR/issues">
