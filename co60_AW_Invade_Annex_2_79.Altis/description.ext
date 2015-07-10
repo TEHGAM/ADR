@@ -2,7 +2,7 @@
 
 author = Rarek, AhoyWorld, Quiksilver;					// Visible when loading mission
 onLoadName = "Invade & Annex 2.79";						// Visible when loading mission
-OnLoadMission = "Версия 3.4.8 — редакция сообщества – TEHGAM.COM.";
+OnLoadMission = "Версия 3.4.9 — редакция сообщества – TEHGAM.COM.";
 loadScreen = "media\images\loading.paa";				// Visible when loading mission
 overviewPicture = "media\images\loading.paa";			// Visible when selecting mission
 
@@ -14,7 +14,7 @@ class Header
 	{
 		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
 		minPlayers = 1;									// Min # of players the MISSION supports
-		maxPlayers = 35;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
+		maxPlayers = 45;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
 	};
 
 //------------------------- Admin
