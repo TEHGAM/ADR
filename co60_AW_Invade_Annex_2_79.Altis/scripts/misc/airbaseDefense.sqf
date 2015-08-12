@@ -33,7 +33,7 @@ while { true } do {
 		//---------- Useful stuff
 
 		_activeTimer = 300;										// How long will it remain active for, in seconds. 300 = 5 minutes
-		_inactiveTimer = 600;									// Shortest time between activations, in seconds. 900 = 15 minutes
+		_inactiveTimer = 300;									// Shortest time between activations, in seconds. 900 = 15 minutes
 		_defensePos = getMarkerPos "airbaseDefense";
 		_airdefenseGroup = createGroup west;
 

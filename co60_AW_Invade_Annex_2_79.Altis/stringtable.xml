@@ -485,6 +485,8 @@
       <French>Si vous choisissez de placer cette objet sur votre arme, sachez que l'objet actuellement placé sur l'arme sera automatiquement supprimé</French>
     </Key>
   </Package>
+</Project>
+<Project name="DOM_Squad">
   <Package name="DOM_Squad">
     <Key ID="STRD_squadm">
       <Original>&#160;&#160;• Squad Menu</Original>

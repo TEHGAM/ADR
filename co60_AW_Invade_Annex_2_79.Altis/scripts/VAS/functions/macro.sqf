@@ -41,3 +41,16 @@
 //Control Macros
 #define VAS_getControl(disp,ctrl) ((findDisplay ##disp) displayCtrl ##ctrl)
 #define VAS_getSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
+
+//Stuff carried from Altis life
+#define EQUAL(condition1,condition2) condition1 isEqualTo condition2
+#define SVAR_MNS missionNamespace setVariable 
+#define SVAR_UINS uiNamespace setVariable 
+#define SVAR_PNS parsingNamespace setVariable 
+#define GVAR_MNS missionNamespace getVariable 
+#define GVAR_UINS uiNamespace getVariable
+#define pushBackMNS(VARNAME,ITEM) \
+	private "_dummyMacroVar"; \
+	_dummyMacroVar = GVAR_MNS [VARNAME,[]]; \
+	_dummyMacroVar pushBack ITEM; \
+	SVAR_MNS [##VARNAME,_dummyMacroVar];

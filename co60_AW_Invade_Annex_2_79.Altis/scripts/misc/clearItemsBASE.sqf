@@ -15,8 +15,8 @@ ____________________________________________________________________*/
 
 private ["_itemsToClear","_obj","_rad","_delay","_loopTimeout"];
 _obj = getMarkerPos "respawn_west"; 							// base area
-_rad = 300;  													// radius outwards from center point to clear items.
-_delay = 600;  													// default 600, or should be done after each AO?
+_rad = 600;  													// radius outwards from center point to clear items.
+_delay = 120;  													// default 600, or should be done after each AO?
 _loopTimeout = 10 + (random 10);								// default 300 or 600? greater time = less costly loop?
 
 CLEARITEMSBASE_SWITCH = false; publicVariable "CLEARITEMSBASE_SWITCH";

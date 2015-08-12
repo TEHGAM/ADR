@@ -19,19 +19,15 @@ Credit:
 	
 	Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
 	
-	ts.ahoyworld.co.uk:9987
-	ts3.allfps.com.au:9992
-	
 	Please be respectful and do not remove/alter credits.
 ______________________________________________________*/
 
-
 enableSaving [false, false];
+["Initialize"] call BIS_fnc_dynamicGroups;
 
 //------------------------------------------------ Set up curator classes
 
-curators = allCurators;
-adminCurators = curators;
+adminCurators = allCurators;
 
 //------------------------------------------------ Handle parameters
 
@@ -53,4 +49,3 @@ _null = [] execVM "scripts\misc\airbaseDefense.sqf";													// Airbase air 
 _null = [] execVM "scripts\misc\clearBodies.sqf";														// clear bodies around island
 _null = [] execVM "scripts\misc\clearItemsBASE.sqf";													// clear items around base
 _null = [] execVM "scripts\misc\islandConfig.sqf";														// prep the island for mission
-_null = [] execVM "scripts\misc\UAVfix.sqf";															// attempt UAV fix

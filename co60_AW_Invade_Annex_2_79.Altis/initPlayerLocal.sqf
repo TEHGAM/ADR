@@ -11,22 +11,22 @@ Last modified:
 Description:
 
 	Client scripts and event handlers.
-	
 ______________________________________________________*/
 
 enableSentences false;
 enableEngineArtillery false;
+["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
 //------------------- client executions
 
-
 _null = [] execvm "scripts\vehicle\crew\crew.sqf"; 								// vehicle HUD
 _null = [] execVM "scripts\restrictions.sqf"; 									// gear restrictions
+_null = [] execVM "scripts\VAS\config.sqf"; 									// VAS
 _null = [] execVM "scripts\pilotCheck.sqf"; 									// pilots only
-_null = [] execVM "scripts\safezone.sqf"; 										// spawn protection
 _null = [] execVM "scripts\jump.sqf";											// jump action
 _null = [] execVM "scripts\misc\diary.sqf";										// diary tabs	
 _null = [] execVM "scripts\icons.sqf";											// blufor map tracker
+_null = [] execVM "scripts\VAclient.sqf";										// Virtual Arsenal
 _null = [] execVM "scripts\admin_uid.sqf";
 
 //-------------------- PVEHs

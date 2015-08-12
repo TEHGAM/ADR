@@ -24,18 +24,22 @@
 	12: acc_Muzzles
 	13: Base (Superclass)
 	14: New compatibleItems Structure
+	15: Some bullshit
+	16: Under Barrel Items
 */
-private["_entity","_cfg","_ret","_type","_acc_p","_acc_o","_slotclasses","_acc_m","_scope","_displayName","_picture","_config","_itemInfo","_muzzles","_magazines","_desc","_base"];
+private["_entity","_cfg","_ret","_type","_acc_u","_acc_p","_acc_o","_slotclasses","_acc_m","_scope","_displayName","_picture","_config","_itemInfo","_muzzles","_magazines","_desc","_base","_AGMItem"];
 _entity = [_this,0,"",[""]] call BIS_fnc_param;
 _type = -1;
 _acc_p = [];
 _acc_o = [];
 _acc_m = [];
+_acc_u = [];
 _slotclasses = [];
 _scope = 0;
 _itemInfo = -1;
 _muzzles = [];
 _magazines = [];
+_AGMItem = false;
 if(_entity == "") exitWith {[]};
 _cfg = if(isNil {_this select 1}) then
 {
@@ -78,6 +82,7 @@ switch (_cfg) do
 		_scope = getNumber(_config >> "scope");
 		_type = getNumber(_config >> "type");
 		_desc = getText(_config >> "descriptionshort");
+		if(isClass (_config >> "Armory")) then {_AGMItem = true;};
 		
 		//Compatible attachments
 		if(isClass (_config >> "WeaponSlotsInfo")) then
@@ -85,6 +90,9 @@ switch (_cfg) do
 			_acc_p = getArray(_config >> "WeaponSlotsInfo" >> "PointerSlot" >> "compatibleItems");
 			_acc_o = getArray(_config >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems");
 			_acc_m = getArray(_config >> "WeaponSlotsInfo" >> "MuzzleSlot" >> "compatibleItems");
+			if(isClass (_config >> "WeaponSlotsInfo" >> "UnderBarrelSlot")) then {
+				_acc_u = getArray(_config >> "WeaponSlotsInfo" >> "UnderBarrelSlot" >> "compatibleItems");
+			};
 			
 			{	private "_thiscfgitem";
 				for "_i" from 0 to (count(_x) - 1) do {
@@ -99,15 +107,13 @@ switch (_cfg) do
 
 		};
 		
-		if(isClass (_config >> "ItemInfo")) then
-		{
+		if(isClass (_config >> "ItemInfo")) then {
 			_itemInfo = getNumber(_config >> "ItemInfo" >> "Type");
 		};
 		
 		_muzzles = getArray(_config >> "muzzles");
 		_magazines = getArray(_config >> "magazines");
-		if(!isNil {_muzzles}) then
-		{
+		if(!isNil {_muzzles}) then {
 			private["_tmp"];
 		//	_base = inheritsFrom (configFile >> "CfgWeapons" >> _entity);
 			{
@@ -128,11 +134,11 @@ switch (_cfg) do
 	};
 };
 
-if(!isNil "_slotclasses") then
-{
+if(!isNil "_slotclasses") then {
 	_slotclasses = _slotclasses - ["MuzzleSlot"];
 	_slotclasses = _slotclasses - ["CowsSlot"];
 	_slotclasses = _slotclasses - ["PointerSlot"];
+	_slotclasses = _slotclasses - ["UnderBarrelSlot"];
 };
-_ret = [_entity,_displayName,_picture,_scope,_type,_itemInfo,_cfg,_magazines,_muzzles,_desc,_acc_p,_acc_o,_acc_m,_base,_slotclasses];
+_ret = [_entity,_displayName,_picture,_scope,_type,_itemInfo,_cfg,_magazines,_muzzles,_desc,_acc_p,_acc_o,_acc_m,_base,_slotclasses,_AGMItem,_acc_u];
 _ret;
