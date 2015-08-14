@@ -1320,7 +1320,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}]; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""11Rnd_45ACP_Mag"";};  this addItemToUniform ""SmokeShellOrange"";  this addVest ""V_TacVest_oli"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""11Rnd_45ACP_Mag"";};  this addItemToVest ""SmokeShellOrange"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_blue"";};  this addBackpack ""B_AssaultPack_mcamo"";  this addItemToBackpack ""ToolKit"";  this addHeadgear ""H_CrewHelmetHeli_B"";  this addWeapon ""hgun_Pistol_heavy_01_F"";  this addHandgunItem ""optic_MRD"";  this addWeapon ""Binocular"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemRadio"";  this linkItem ""ItemGPS"";  this linkItem ""NVGoggles_OPFOR"";  this setFace ""GreekHead_A3_01"";  this setSpeaker ""Male01ENG"";  ";
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пилот";
 				};
 				class Item1
@@ -1333,7 +1333,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}]; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""11Rnd_45ACP_Mag"";};  this addItemToUniform ""SmokeShellOrange"";  this addVest ""V_TacVest_oli"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""11Rnd_45ACP_Mag"";};  this addItemToVest ""SmokeShellOrange"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_blue"";};  this addBackpack ""B_AssaultPack_mcamo"";  this addItemToBackpack ""ToolKit"";  this addHeadgear ""H_CrewHelmetHeli_B"";  this addWeapon ""hgun_Pistol_heavy_01_F"";  this addHandgunItem ""optic_MRD"";  this addWeapon ""Binocular"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemRadio"";  this linkItem ""ItemGPS"";  this linkItem ""NVGoggles_OPFOR"";  this setFace ""GreekHead_A3_01"";  this setSpeaker ""Male01ENG"";  ";
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пилот";
 				};
 				class Item2
@@ -1346,7 +1346,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}]; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""11Rnd_45ACP_Mag"";};  this addItemToUniform ""SmokeShellOrange"";  this addVest ""V_TacVest_oli"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""11Rnd_45ACP_Mag"";};  this addItemToVest ""SmokeShellOrange"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_blue"";};  this addBackpack ""B_AssaultPack_mcamo"";  this addItemToBackpack ""ToolKit"";  this addHeadgear ""H_CrewHelmetHeli_B"";  this addWeapon ""hgun_Pistol_heavy_01_F"";  this addHandgunItem ""optic_MRD"";  this addWeapon ""Binocular"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemRadio"";  this linkItem ""ItemGPS"";  this linkItem ""NVGoggles_OPFOR"";  this setFace ""GreekHead_A3_01"";  this setSpeaker ""Male01ENG"";  ";
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пилот";
 				};
 				class Item3
@@ -1359,7 +1359,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}]; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""11Rnd_45ACP_Mag"";};  this addItemToUniform ""SmokeShellOrange"";  this addVest ""V_TacVest_oli"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""11Rnd_45ACP_Mag"";};  this addItemToVest ""SmokeShellOrange"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_blue"";};  this addBackpack ""B_AssaultPack_mcamo"";  this addItemToBackpack ""ToolKit"";  this addHeadgear ""H_CrewHelmetHeli_B"";  this addWeapon ""hgun_Pistol_heavy_01_F"";  this addHandgunItem ""optic_MRD"";  this addWeapon ""Binocular"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemRadio"";  this linkItem ""ItemGPS"";  this linkItem ""NVGoggles_OPFOR"";  this setFace ""GreekHead_A3_01"";  this setSpeaker ""Male01ENG"";  ";
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пилот";
 				};
 				class Item4
@@ -1372,7 +1372,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}]; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""11Rnd_45ACP_Mag"";};  this addItemToUniform ""SmokeShellOrange"";  this addVest ""V_TacVest_oli"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""11Rnd_45ACP_Mag"";};  this addItemToVest ""SmokeShellOrange"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_blue"";};  this addBackpack ""B_AssaultPack_mcamo"";  this addItemToBackpack ""ToolKit"";  this addHeadgear ""H_CrewHelmetHeli_B"";  this addWeapon ""hgun_Pistol_heavy_01_F"";  this addHandgunItem ""optic_MRD"";  this addWeapon ""Binocular"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemRadio"";  this linkItem ""ItemGPS"";  this linkItem ""NVGoggles_OPFOR"";  this setFace ""GreekHead_A3_01"";  this setSpeaker ""Male01ENG"";  ";
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пилот";
 				};
 				class Item5
@@ -1385,7 +1385,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}]; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""11Rnd_45ACP_Mag"";};  this addItemToUniform ""SmokeShellOrange"";  this addVest ""V_TacVest_oli"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""11Rnd_45ACP_Mag"";};  this addItemToVest ""SmokeShellOrange"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_blue"";};  this addBackpack ""B_AssaultPack_mcamo"";  this addItemToBackpack ""ToolKit"";  this addHeadgear ""H_CrewHelmetHeli_B"";  this addWeapon ""hgun_Pistol_heavy_01_F"";  this addHandgunItem ""optic_MRD"";  this addWeapon ""Binocular"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemRadio"";  this linkItem ""ItemGPS"";  this linkItem ""NVGoggles_OPFOR"";  this setFace ""GreekHead_A3_01"";  this setSpeaker ""Male01ENG"";  ";
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пилот";
 				};
 			};
