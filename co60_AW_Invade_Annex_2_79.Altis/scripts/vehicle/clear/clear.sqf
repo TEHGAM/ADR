@@ -1,5 +1,5 @@
-_unit = _this select 0;
-clearItemCargoGlobal _unit;
-clearMagazineCargoGlobal _unit;
-clearBackpackCargoGlobal _unit;
-clearWeaponCargoGlobal _unit;
+_u = _this select 0;
+clearItemCargoGlobal _u;
+clearMagazineCargoGlobal _u;
+clearBackpackCargo _u;
+clearWeaponCargo _u;
