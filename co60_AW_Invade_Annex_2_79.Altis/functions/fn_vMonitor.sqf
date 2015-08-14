@@ -21,7 +21,7 @@ if (!isServer) exitWith { /* GO AWAY PLAYER */ };
 
 private ["_v","_t","_d","_s","_i","_sd","_sp","_ti","_u"];
 
-#define DIST_FROM_SPAWN 150
+#define DIST_FROM_SPAWN 300
 
 _v = _this select 0;												// vehicle
 _d = _this select 1;												// spawn delay

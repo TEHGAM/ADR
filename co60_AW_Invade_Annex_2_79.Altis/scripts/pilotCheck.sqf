@@ -10,7 +10,7 @@ if (_uid in _whitelist) exitWith {};
 _pilots = ["B_soldier_repair_F"];	//Специализация пилота
 //---------- Место 2-го пилота заблокировано
 _aircraft_nocopilot = [
-"B_Heli_Transport_03_unarmed_green_F" //Хурон
+"B_Heli_Transport_03_unarmed_green_F", //Хурон
 "O_Heli_Transport_04_covered_F",	//Тару транспортный
 "O_Heli_Transport_04_F",			//Тару грузовой
 "O_Heli_Light_02_unarmed_F",		//Касатка транспортная
@@ -22,7 +22,7 @@ _aircraft_nocopilot = [
 ];
 //---------- Место пилота заблокировано
 _aircraft_nopilot = [
-"B_Heli_Transport_03_unarmed_green_F" //Хурон
+"B_Heli_Transport_03_unarmed_green_F", //Хурон
 "O_Heli_Transport_04_covered_F",	//Тару транспортный
 "O_Heli_Transport_04_F",			//Тару грузовой
 "O_Heli_Light_02_unarmed_F",		//Касатка транспортная
