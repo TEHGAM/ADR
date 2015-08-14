@@ -1,5 +1,4 @@
-	private ["_veh","_vehName","_vehVarname","_completeText","_reward","_GAU","_Pauni_prot_F","_mortar"];
-
+	private ["_veh","_vehName","_vehVarname","_completeText","_reward","_GAU","_mortar","_GMG","_HEL","_CAS"];
 smRewards =
 [
 	["То-199 «Неофрон» (штурмовик)", "O_Plane_CAS_02_F"],
@@ -26,7 +25,7 @@ smRewards =
 	["Страйдер с гранотометом", "I_MRAP_03_gmg_F"],
 	["Прототип: Передвижной миномет", "B_G_Offroad_01_repair_F"],
 	["WY-55 Хелкат UP", "I_Heli_light_03_F"],
-	["Прототип Пауни UP HMG", "_Pauni_prot_F"],
+	["Прототип Пауни UP HMG", "Land_Tyre_F"],
 	["Прототип Пауни UP GMG - 20MM", "Land_GarbageBags_F"]
 ];
 smMarkerList =
@@ -49,9 +48,10 @@ GlobalHint = _completeText; publicVariable "GlobalHint"; hint parseText _complet
 showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "showNotification";
 showNotification = ["Reward", format["Ваша команда получила %1!", _vehName]]; publicVariable "showNotification";
 
-if (_reward isKindOf "_Pauni_prot_F") exitWith {
+if (_reward isKindOf "Land_Tyre_F") exitWith {
 	_GAU = createVehicle ["B_Heli_Light_01_armed_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
 	_GAU setDir 284;
+	_reward setPos [(random 1000),(random 1000),(10000 + (random 20000))];
 	_reward setDamage 1;
 	_GAU removeMagazine ("5000Rnd_762x51_Belt");
 	_GAU removeWeapon ("M134_minigun");
@@ -65,6 +65,7 @@ if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
 if (_reward isKindOf "Land_GarbageBags_F") exitWith {
 	_GMG = createVehicle ["B_Heli_Light_01_armed_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
 	_GMG setDir 284;
+	_reward setPos [(random 1000),(random 1000),(10000 + (random 20000))];
 	_reward setDamage 1;
 	_GMG removeMagazine ("5000Rnd_762x51_Belt");
 	_GMG removeWeapon ("M134_minigun");
@@ -75,6 +76,7 @@ if (_reward isKindOf "Land_GarbageBags_F") exitWith {
 if (_reward isKindOf "I_Heli_light_03_F") exitWith {
 	_HEL = createVehicle ["I_Heli_light_03_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
 	_HEL setDir 284;
+	_reward setPos [(random 1000),(random 1000),(10000 + (random 20000))];
 	_reward setDamage 1;
 	_HEL addMagazine ("24Rnd_missiles");
 	_HEL addMagazine ("24Rnd_missiles");
@@ -82,6 +84,7 @@ if (_reward isKindOf "I_Heli_light_03_F") exitWith {
 if (_reward isKindOf "I_Plane_Fighter_03_CAS_F") exitWith {
 	_CAS = createVehicle ["I_Plane_Fighter_03_CAS_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
 	_CAS setDir 284;
+	_reward setPos [(random 1000),(random 1000),(10000 + (random 20000))];
 	_reward setDamage 1;
 	_CAS addMagazine ("2Rnd_LG_scalpel");
 	_CAS addMagazine ("2Rnd_AAA_missiles");
