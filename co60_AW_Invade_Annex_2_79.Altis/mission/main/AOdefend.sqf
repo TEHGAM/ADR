@@ -64,7 +64,7 @@ if(random 1 >= 0.5) then {
 		null = [["aoCircle_2"],[5,2],[3,4],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 2) then {
-		null = [["aoCircle_2"],[4,2],[2,4],[0],[3,4],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+		null = [["aoCircle_2"],[4,2],[3,4],[0],[3,4],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 3) then {
 		null = [["aoCircle_2"],[3,2],[4,4],[1],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
