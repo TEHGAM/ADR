@@ -282,6 +282,15 @@ player createDiaryRecord ["teamspeak",
 //Журнал изменений от ADR
 player createDiaryRecord ["changelog",
 [
+"v3.5.0.3 (18 августа 2015 г)",
+"
+<br />- [Обновлено] Защита основной миссии. 
+<br />- [Исправлено] Неверные значения во времени респавна техники.
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
 "v3.5.0.2 (14 августа 2015 г)",
 "
 <br />- [Исправлено] Зависание доп задания.
@@ -654,6 +663,8 @@ player createDiaryRecord ["credits",
     • Stevenson
 <br />
     • vosur
+<br />
+    • evil_c0okie
 <br /><br />
 <font size='18' color='#3E9D3F'>Локализация</font>
 <br />
