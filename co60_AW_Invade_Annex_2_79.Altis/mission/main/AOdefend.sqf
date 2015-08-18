@@ -57,7 +57,15 @@ if(random 1 >= 0.5) then {
 
 	hqSideChat = _defendMessages call BIS_fnc_selectRandom; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
-	null = [["aoCircle_2"],[6,5],[3,2],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+	_type = [1,2];
+	_selectedType = _type select (floor (random (count _type)));
+	
+	if (_selectedType == 1) then {
+		null = [["aoCircle_2"],[5,2],[3,4],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+	};
+	if (_selectedType == 2) then {
+		null = [["aoCircle_2"],[3,2],[4,4],[1],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+	};
 	
 	hint "В близи захваченной территории, обнаружены вражеские силы.";
 			
