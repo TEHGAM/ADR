@@ -79,4 +79,3 @@ if (_t in _uav) then {
 		createVehicleCrew _u;
 	};
 };
-_u addAction ["<t color='#00B2EE'>  • Удалить снаряжение</t>","scripts\vehicle\clear\clear.sqf",[],-97,false];

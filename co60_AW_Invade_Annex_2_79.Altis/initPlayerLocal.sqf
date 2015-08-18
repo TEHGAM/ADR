@@ -15,6 +15,7 @@ ______________________________________________________*/
 
 enableSentences false;
 enableEngineArtillery false;
+player enableFatigue false;
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
 //------------------- client executions
