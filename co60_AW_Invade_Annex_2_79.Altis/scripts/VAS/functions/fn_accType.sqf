@@ -28,7 +28,7 @@ _weaponArray = [primaryWeapon player, secondaryWeapon player, handgunWeapon play
 	{
 		_weapon = _x;
 		_cfgInfo = [_weapon,"CfgWeapons"] call VAS_fnc_fetchCfgDetails;
-		_legacyItems = ((_cfgInfo select 10) + (_cfgInfo select 11) + (_cfgInfo select 12));
+		_legacyItems = ((_cfgInfo select 10) + (_cfgInfo select 11) + (_cfgInfo select 12) + (_cfgInfo select 16));
 		_newItems = _cfgInfo select 14;
 		
 		//Check Legacy Items first

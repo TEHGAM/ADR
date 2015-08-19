@@ -1,10 +1,10 @@
 //------------------------- On Load
 
-author = Rarek, AhoyWorld, Quiksilver;					// Visible when loading mission
-onLoadName = "Invade & Annex 2.79";						// Visible when loading mission
-OnLoadMission = "Версия 3.4.9 — редакция сообщества – TEHGAM.COM.";
-loadScreen = "media\images\loading.paa";				// Visible when loading mission
-overviewPicture = "media\images\loading.paa";			// Visible when selecting mission
+author = "Rarek, AhoyWorld, Quiksilver";
+onLoadName = "Invade & Annex 2.79";
+OnLoadMission = "Версия 3.5.0.3 — редакция TEHGAM.COM.";
+loadScreen = "media\images\loading.paa";
+overviewPicture = "media\images\loading.paa";
 
 onLoadIntro = "";										// Displays a message while the intro is loading.
 onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
@@ -13,8 +13,8 @@ forceRotorLibSimulation= 1;								//Default value: 0 - options-based; 1 - force
 class Header
 	{
 		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
-		minPlayers = 1;									// Min # of players the MISSION supports
-		maxPlayers = 45;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
+		minPlayers = 1;
+		maxPlayers = 45;
 	};
 
 //------------------------- Admin
@@ -38,7 +38,7 @@ RespawnDelay = 4;										// Delay prior to respawn, ensure longer than BTC rev
 RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
 
 //------------------------- Garbage collector
-							
+	
 wreckLimit = 3;											// Limit before removal is triggered
 wreckRemovalMinTime = 120;								// Min time before removal
 wreckRemovalMaxTime = 360;								// Max time before removal
@@ -53,14 +53,14 @@ corpseRemovalMaxTime = 120;								// Max time before removal
 #include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
 #include "scripts\spectator\spectating.hpp"				// Kegetys Spectator Script
 #include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system
-#include "scripts\DOM_squad\SquadManagement.hpp"
+#include "scripts\DOM_squad\SquadManagement.hpp"		// Squad manager
 
 class CfgFunctions
 	{
 		#include "functions\cfgfunctions.hpp"			// Integrated I&A functions
 		#include "scripts\VAS\cfgfunctions.hpp"			// VAS
 		#include "scripts\taw_vd\CfgFunctions.hpp"		// View distance
-		class FETT {									// Curator synch http://forums.bistudio.com/showthread.php?176691-Making-placed-units-be-editable-for-every-Zeus
+		class FETT {
 	        class curator {
 	            class eventHandlers {postInit = 1;};
 	            class objPlaced {};
@@ -79,21 +79,21 @@ class RscTitles
 class Params
 	{
 		class AO {
-				title = "Enable Main AO?";
+				title = "Включить основное задание?";
 				values[] = {1,0};
 				texts[] = {"Enabled","Disabled"};
 				default = 1;
 			};
 		
 		class DefendAO {
-				title = "Enable Defend AO?";
+				title = "Включить защиту?";
 				values[] = {1,0};
 				texts[] = {"Enabled","Disabled"};
 				default = 1;
 			};
 
 		class SideObjectives {
-				title = "Enable Side Objectives?";
+				title = "Включть дополнительные задания?";
 				values[] = {1,0};
 				texts[] = {"Enabled","Disabled"};
 				default = 1;
@@ -124,7 +124,7 @@ class Params
 				title = "MINIMUM Time between Priority Target actions";
 				values[] = {30,60,120,180,240,300,600,900};
 				texts[] = {"30 seconds","1 minute","2 minutes","3 minutes","4 minutes","5 minutes","10 minutes","15 minutes"};
-				default = 30; // 120 default
+				default = 60; // 120 default
 			};
 
 		class ArtilleryTargetTickTimeMax {
@@ -202,6 +202,12 @@ class Params
 				values[] = {0,1,2,3,4,5,6,7,8,9,10};
 				texts[] = {0,10,20,30,40,50,60,70,80,90,100};
 				default = 7; // default 7
+			};			
+		class PilotRespawn {
+				title = "Респавн пилотов";
+				values[] = {0,1};
+				texts[] = {"DISABLED","ENABLED"};
+				default = 1;
 			};
 };
 

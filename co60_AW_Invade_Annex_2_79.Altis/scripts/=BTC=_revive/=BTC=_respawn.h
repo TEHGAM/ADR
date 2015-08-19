@@ -75,7 +75,7 @@ class BTC_r_button_menu : BTC_r_shortcutButton
 	default = 0;
 	shadow = 0;
 	x = 0;
-	y = 0;
+	y = 0 * safezoneH + safezoneY;
 	w = 0.15;//0.095589;
 	h = 0.039216;
 	animTextureNormal = "#(argb,8,8,3)color(1,1,1,1)";
@@ -122,7 +122,7 @@ class BTC_r_combo
 	style = 16;
 	type = 4;
 	x = 0;
-	y = 0;
+	y = 0 * safezoneH + safezoneY;
 	w = 0.12;
 	h = 0.035;
 	shadow = 0;
@@ -171,7 +171,7 @@ class BTC_respawn_button_dialog
 			text = "Respawn"; 
 			action = "BTC_respawn_cond = true;closeDialog 0;if (BTC_r_new_system == 0) then {_respawn = [] spawn BTC_player_respawn;} else {player setDamage 1;};";
 			x = 0.7;
-			y = 0.6;
+			y = 0.6 * safezoneH + safezoneY;
 			default = true;
 		};
 	};
@@ -194,7 +194,7 @@ class BTC_move_to_mobile_dialog
 			text = "Apply"; 
 			action = "_spawn = [] spawn BTC_r_apply";
 			x = 0.54;
-			y = 0.25;
+			y = 0.25 * safezoneH + safezoneY;
 			default = true;
 		};
 		class BTC_r_Close : BTC_r_button_menu 
@@ -203,7 +203,7 @@ class BTC_move_to_mobile_dialog
 			text = "Close"; 
 			action = "_spawn = [] spawn BTC_r_close";
 			x = 0.34;
-			y = 0.25;
+			y = 0.25 * safezoneH + safezoneY;
 			default = true;
 		};
 		class BTC_r_spawn_points : BTC_r_combo 
@@ -211,7 +211,7 @@ class BTC_move_to_mobile_dialog
 			idc = 119;
 			onLBSelChanged = "_spawn = [] spawn BTC_r_change_target";
 			x = 0.34; 
-			y = 0.1;
+			y = 0.1 * safezoneH + safezoneY;
 			w = 0.4; 
 			h = 0.055;
 		};
@@ -234,7 +234,7 @@ class BTC_spectating_dialog
 			idc = 120;
 			onLBSelChanged = "_spawn = [] spawn BTC_r_s_change_target";
 			x = 0; 
-			y = -0.2;
+			y = 0.2 * safezoneH + safezoneY;
 			w = 0.4; 
 			h = 0.035;
 		};
@@ -243,7 +243,7 @@ class BTC_spectating_dialog
 			idc = 121;
 			onLBSelChanged = "_spawn = [] spawn BTC_r_s_change_view";
 			x = 0.5; 
-			y = -0.2;
+			y = 0.2 * safezoneH + safezoneY;
 			w = 0.2; 
 			h = 0.035;
 		};
@@ -253,7 +253,7 @@ class BTC_spectating_dialog
 			text = "Respawn"; 
 			action = "BTC_respawn_cond = true;closeDialog 0;if (BTC_r_new_system == 0) then {_respawn = [] spawn BTC_player_respawn;} else {player setDamage 1;};";
 			x = 0.7;
-			y = -0.2;
+			y = 0.2 * safezoneH + safezoneY;
 			default = true;
 		};
 	};

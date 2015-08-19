@@ -21,7 +21,7 @@ __________________________________________________________________*/
 #define MRAP_TYPE "O_MRAP_02_gmg_F","O_MRAP_02_hmg_F"
 #define VEH_TYPE "O_MBT_02_cannon_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_APC_Tracked_02_cannon_F","I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F","I_MBT_03_cannon_F"
 #define AIR_TYPE "O_Heli_Attack_02_F","O_Heli_Attack_02_black_F","I_Heli_light_03_F","O_Heli_Light_02_F"
-#define STATIC_TYPE "O_HMG_01_F","O_HMG_01_high_F"
+#define STATIC_TYPE "O_HMG_01_F","O_HMG_01_high_F", "O_Mortar_01_F"
 
 private ["_enemiesArray","_randomPos","_patrolGroup","_AOvehGroup","_AOveh","_AOmrapGroup","_AOmrap","_pos","_spawnPos","_overwatchGroup","_x","_staticGroup","_static","_aaGroup","_aa","_airGroup","_air","_sniperGroup","_staticDir"];
 _pos = getMarkerPos (_this select 0);
@@ -80,6 +80,7 @@ for "_x" from 1 to PARAMS_StaticMG do {
 		((units _staticGroup) select 0) moveInGunner _static;
 	_staticGroup setBehaviour "COMBAT";
 	_staticGroup setCombatMode "RED";
+	_static setVectorUp [0,0,1];
 	_static lock 3;
 	
 	_enemiesArray = _enemiesArray + [_staticGroup];

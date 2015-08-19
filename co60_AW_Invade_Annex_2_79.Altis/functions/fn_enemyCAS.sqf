@@ -60,7 +60,7 @@ if ((count enemyCasArray) < _jetLimit) then {
 			_jetPos = getPosATL _jetActual;
 			_targetList = _jetPos nearEntities [["Air"],4000];
 			{enemyCasGroup reveal [_x,4];} count _targetList;
-			sleep 60;
+			sleep 180;
 		};
 		showNotification = ["EnemyJetDown","Штурмовик сбит! Хорошая работа!"]; publicVariable "showNotification";
 		enemyCasArray = enemyCasArray - [_jetActual];
@@ -69,3 +69,4 @@ if ((count enemyCasArray) < _jetLimit) then {
 		if (!isNull _jetPilot) then {deleteVehicle _jetPilot;};
 	};
 };
+

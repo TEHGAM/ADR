@@ -5,22 +5,24 @@ Visit us at:
 http://www.blacktemplars.altervista.org/
 06/03/2012
 
-Tweaked by Quiksilver
-Remember BTC_revive_loop
+Edited by Quiksilver
+14/10/2014 ArmA 1.30
 
 */
 //Functions
 BTC_assign_actions =
 {	
 	if ([player] call BTC_is_class_can_revive) then {
-		player addAction [("<t color=""#d63333"">") + ("Первая помощь") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_first_aid"];
+		player addAction [("<t color=""#ED2744"">") + ("Первая помощь") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_first_aid"];
 	};
-	if (!([player] call BTC_is_class_can_revive)) then {
-        player addAction [("<t color=""#d63333"">") + ("Первая помощь (Медицинский HEMTT)") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_HEMTT"];
-    };
-	player addAction [("<t color=""#d63333"">") + ("Тащить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_drag], 8, true, true, "", "[] call BTC_check_action_drag"];
-	player addAction [("<t color=""#d63333"">") + ("Выгрузить раненого") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_pull_out], 8, true, true, "", "[] call BTC_pull_out_check"];
-	player addAction [("<t color=""#d63333"">") + ("Нести") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_carry], 8, true, true, "", "[] call BTC_check_action_drag"];
+	if (BTC_Medical_TruckToggle != 0) then {
+		if (!([player] call BTC_is_class_can_revive)) then {
+			player addAction [("<t color=""#ED2744"">") + (BTC_Medical_Trucks_addActionText) + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_first_aid], 8, true, true, "", "[] call BTC_check_action_HEMTT"];
+		};
+	};
+	player addAction [("<t color=""#ED2744"">") + ("Тащить") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_drag], 8, true, true, "", "[] call BTC_check_action_drag"];
+	player addAction [("<t color=""#ED2744"">") + ("Выгрузить раненого") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_pull_out], 8, true, true, "", "[] call BTC_pull_out_check"];
+	player addAction [("<t color=""#ED2744"">") + ("Нести") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_carry], 8, true, true, "", "[] call BTC_check_action_drag"];
 };
 BTC_get_gear =
 {
@@ -1001,7 +1003,6 @@ BTC_first_aid =
 		_injured removeItem "FirstAidKit";
 	};
 	player playMove "AinvPknlMstpSlayWrflDnon_medic";
-	player setFatigue 0;
 	sleep 5;
 	waitUntil {!Alive player || (animationState player != "AinvPknlMstpSlayWrflDnon_medic" && animationState player != "amovpercmstpsraswrfldnon_amovpknlmstpsraswrfldnon" && animationState player != "amovpknlmstpsraswrfldnon_ainvpknlmstpslaywrfldnon" && animationState player != "ainvpknlmstpslaywrfldnon_amovpknlmstpsraswrfldnon")};
 	if (Alive player && Alive _injured && format ["%1",player getVariable "BTC_need_revive"] == "0") then
@@ -1017,7 +1018,6 @@ BTC_first_aid =
 		};
 		_injured playMoveNow "AinjPpneMstpSnonWrflDnon_rolltoback";
 	};
-	
 };
 
 BTC_drag =
@@ -1031,7 +1031,7 @@ BTC_drag =
 	_injured attachTo [player, [0, 1.1, 0.092]];
 	player playMoveNow "AcinPknlMstpSrasWrflDnon";
 	hintSilent "Can't move? Press 'C'";
-	_id = player addAction [("<t color=""#ED2744"">") + ("Drop") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_release], 9, true, true, "", "true"];
+	_id = player addAction [("<t color=""#ED2744"">") + ("Положить на землю") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_release], 9, true, true, "", "true"];
 	BTC_drag_pveh = [1,_injured];publicVariable "BTC_drag_pveh";
 	WaitUntil {!Alive player || ((animationstate player == "acinpknlmstpsraswrfldnon") || (animationstate player == "acinpknlmwlksraswrfldb"))};
 	private ["_act","_veh_selected","_array","_array_veh","_name_veh","_text_action","_action_id"];
@@ -1046,7 +1046,7 @@ BTC_drag =
 		{
 			_veh_selected    = _array_veh select 0;
 			_name_veh        = getText (configFile >> "cfgVehicles" >> typeof _veh_selected >> "displayName");
-			_text_action     = ("<t color=""#d63333"">" + "Погрузить раненого в " + (_name_veh) + "</t>");
+			_text_action     = ("<t color=""#ED2744"">" + "Load wounded in " + (_name_veh) + "</t>");
 			_action_id = player addAction [_text_action,"scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_injured,_veh_selected],BTC_load_in], 7, true, true];
 			_act  = 1;
 		};
@@ -1072,7 +1072,7 @@ BTC_carry =
 	_injured setVariable ["BTC_dragged",1,true];
 	detach _injured;
 	player playMoveNow "acinpknlmstpsraswrfldnon_acinpercmrunsraswrfldnon";
-	_id = player addAction [("<t color=""#ED2744"">") + ("Drop") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_release], 9, true, true, "", "true"];
+	_id = player addAction [("<t color=""#ED2744"">") + ("Положить на землю") + "</t>","scripts\=BTC=_revive\=BTC=_addAction.sqf",[[],BTC_release], 9, true, true, "", "true"];
 	BTC_carry_pveh = [5,_injured,_healer];publicVariable "BTC_carry_pveh";
 	WaitUntil {!Alive player || ((animationstate player == "acinpercmstpsraswrfldnon") || (animationstate player == "acinpercmrunsraswrfldf") || (animationstate player == "acinpercmrunsraswrfldr") || (animationstate player == "acinpercmrunsraswrfldl"))};
 	_injured attachto [player,[0.15, 0.15, 0]];_injured setDir 180;
@@ -1088,7 +1088,7 @@ BTC_carry =
 		{
 			_veh_selected    = _array_veh select 0;
 			_name_veh        = getText (configFile >> "cfgVehicles" >> typeof _veh_selected >> "displayName");
-			_text_action     = ("<t color=""#ED2744"">" + "Load wounded in " + (_name_veh) + "</t>");
+			_text_action     = ("<t color=""#ED2744"">" + "Погрузить раненого в " + (_name_veh) + "</t>");
 			_action_id = player addAction [_text_action,"scripts\=BTC=_revive\=BTC=_addAction.sqf",[[_injured,_veh_selected],BTC_load_in], 7, true, true];
 			_act  = 1;
 		};
@@ -1143,11 +1143,13 @@ BTC_pull_out_check =
 	_cond
 };
 
-BTC_player_killed =
-{
+BTC_player_killed = {
 	private ["_type_backpack","_weapons","_magazines","_weapon_backpack","_ammo_backpack","_score","_score_array","_name","_body_marker","_ui"];
 	titleText ["", "BLACK OUT"];
 	_body = _this select 0;
+	killed_PrimaryWeapon = primaryWeapon _body;
+	if (!isNil killed_PrimaryWeapon) then {killed_PrimaryWeaponItems = primaryWeaponItems _body;};
+	[_body,[player,"KilledInventory"]] call BIS_fnc_saveInventory;
 	[_body] spawn
 	{
 		_body = _this select 0;
@@ -1155,22 +1157,20 @@ BTC_player_killed =
 		_pos = getPosATL vehicle _body;
 		if (BTC_lifes != 0 || BTC_active_lifes == 0) then
 		{
-			WaitUntil {Alive player};
+			WaitUntil {sleep 0.1; alive player};
 			detach player;
 			_body_marker = player;
-			player setcaptive true;
+			player setCaptive true;
 			BTC_r_camera_nvg = false;
 			BTC_killed_pveh = [2,_body_marker];publicVariable "BTC_killed_pveh";player allowDamage false;
 			player setVariable ["BTC_need_revive",1,true];
 			player switchMove "AinjPpneMstpSnonWrflDnon";
 			_actions = [] spawn BTC_assign_actions;
-
 			[player,[player,"KilledInventory"]] call BIS_fnc_loadInventory;
-			
-			if (!isNil killed_PrimaryWeapon) then {
-				player addWeapon killed_PrimaryWeapon;
-				{player addPrimaryWeaponItem _x;} count killed_PrimaryWeaponItems;
-			};
+			if (!isNil killed_PrimaryWeapon) then {player addWeapon killed_PrimaryWeapon;{player addPrimaryWeaponItem _x;} count killed_PrimaryWeaponItems;};
+			sleep 0.1;
+			killed_PrimaryWeapon = nil;
+			killed_PrimaryWeaponItems = nil;
 			
 			WaitUntil {animationstate player == "ainjppnemstpsnonwrfldnon"};
 			sleep 2;
@@ -1182,9 +1182,11 @@ BTC_player_killed =
 			_injured = player;
 			if (BTC_injured_marker == 1) then {BTC_marker_pveh = [0,BTC_side,_pos,_body_marker];publicVariable "BTC_marker_pveh";};
 			disableUserInput true;
+
+			
 			for [{_n = BTC_revive_time_min}, {_n > 0 && player getVariable "BTC_need_revive" == 1}, {_n = _n - 0.5}] do
 			{
-				if (BTC_active_lifes == 1) then {titleText [format ["Lifes remaining: %1",BTC_lifes], "BLACK FADED"];} else {titleText ["", "BLACK FADED"];};
+				if (BTC_active_lifes == 1) then {titleText [format ["Осталось возрождений: %1",BTC_lifes], "BLACK FADED"];} else {titleText ["", "BLACK FADED"];};
 				sleep 0.5;
 			};
 			if (BTC_black_screen == 0) then {titleText ["", "BLACK IN"]; titleFadeOut 1;};
@@ -1216,23 +1218,28 @@ BTC_player_killed =
 				BTC_r_camera_EH_keydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "_keydown = _this spawn BTC_r_s_keydown"];
 				{_lb = lbAdd [121,_x];if (_x == BTC_camera_unc_type select 0) then {lbSetCurSel [121,_lb];}} foreach BTC_camera_unc_type;
 			};
-			while {format ["%1", player getVariable "BTC_need_revive"] == "1" && time < _timeout && !BTC_respawn_cond} do
-			{
-				if (BTC_disable_respawn == 0) then {if (BTC_black_screen == 1 || (BTC_black_screen == 0 && BTC_action_respawn == 0)) then {if (!Dialog && !BTC_respawn_cond) then {_dlg = createDialog "BTC_respawn_button_dialog";};};};
+			while {(format ["%1", player getVariable "BTC_need_revive"] == "1") && {(time < _timeout)} && {(!BTC_respawn_cond)}} do {				if (BTC_disable_respawn == 0) then {if (BTC_black_screen == 1 || (BTC_black_screen == 0 && BTC_action_respawn == 0)) then {if (!Dialog && !BTC_respawn_cond) then {_dlg = createDialog "BTC_respawn_button_dialog";};};};
 				_healer = call BTC_check_healer;
 				_lifes = "";
 				if (BTC_active_lifes == 1) then {_lifes = format ["Lifes remaining: %1",BTC_lifes];};
 				if (BTC_black_screen == 1 && BTC_camera_unc == 0) then {titleText [format ["%1\n%2\n%3", round (_timeout - time),_healer,_lifes], "BLACK FADED"]} else {hintSilent format ["%1\n%2\n%3", round (_timeout - time),_healer,_lifes];};
-				if (BTC_camera_unc == 1) then
-				{
+				if (BTC_camera_unc == 1) then {
 					titleText [format ["%1\n%2\n%3", round (_timeout - time),_healer,_lifes], "PLAIN"]; titleFadeOut 1;
-					sleep 1.5;
+					//sleep 1.5;
 					if (!dialog) then {disableSerialization;_r_dlg = createDialog "BTC_spectating_dialog";sleep 0.01;_ui = uiNamespace getVariable "BTC_r_spectating";(_ui displayCtrl 120) ctrlShow false;if (BTC_disable_respawn == 1) then {(_ui displayCtrl 122) ctrlShow false;};{_lb = lbAdd [121,_x];if (_x == BTC_camera_unc_type select 0) then {lbSetCurSel [121,_lb];}} foreach BTC_camera_unc_type;};
-					BTC_r_u_camera attachTo [player,BTC_r_s_cam_view];
-					BTC_r_u_camera camCommit 0;
-					if (BTC_r_camera_nvg) then {camusenvg true;} else {camusenvg false;};
+					
+					[_timeout] spawn {
+						private ["_timeout"];
+						_timeout = _this select 0;
+						while {(format ["%1", player getVariable "BTC_need_revive"] == "1") && {(time < _timeout)} && {(!BTC_respawn_cond)}} do {
+							BTC_r_u_camera attachTo [player,BTC_r_s_cam_view];
+							BTC_r_u_camera camCommit 0;
+							if (BTC_r_camera_nvg) then {camusenvg true;} else {camusenvg false;};
+							sleep 0.01;
+						};
+					};
 				};
-				//sleep 0.5;
+				sleep 1.5;
 			};
 			if (BTC_camera_unc == 0) then
 			{
@@ -1270,10 +1277,10 @@ BTC_player_killed =
 BTC_check_healer =
 {
 	_pos = getpos player;
-	_men = [];_veh = [];_dist = 801;_healer = objNull;_healers = [];
+	_men = [];_veh = [];_dist = 501;_healer = objNull;_healers = [];
 	_msg = "No medics nearby.";
-	_men = nearestObjects [_pos, BTC_who_can_revive, 800];
-	_veh = nearestObjects [_pos, ["LandVehicle", "Air", "Ship"], 800];
+	_men = nearestObjects [_pos, BTC_who_can_revive, 500];
+	_veh = nearestObjects [_pos, ["LandVehicle", "Air", "Ship"], 500];
 	{
 		{private ["_man"];_man = _x;if (isPlayer _man && ({_man isKindOf _x} count BTC_who_can_revive) > 0) then {_men = _men + [_man];};} foreach crew _x;
 	} foreach _veh;
@@ -1291,8 +1298,7 @@ BTC_check_healer =
 	_msg
 };
 
-BTC_player_respawn =
-{
+BTC_player_respawn = {
 	BTC_respawn_cond = true;
 	if (BTC_active_lifes == 1) then {BTC_lifes = BTC_lifes - 1;};
 	if (BTC_active_lifes == 1 && BTC_lifes == 0) exitWith BTC_out_of_lifes;
@@ -1329,6 +1335,8 @@ BTC_player_respawn =
 			};
 		};
 		player setVariable ["BTC_need_revive",0,true];
+		
+		_dialogTestRespawn = ["76561198084065754"];
 		closeDialog 0;
 		sleep 0.1;
 		BTC_respawn_cond = false;
@@ -1342,13 +1350,21 @@ BTC_player_respawn =
 			sleep 0.1;
 			deTach player;
 			player setVelocity [0,0,0];
+			_testDlg = getPlayerUID player;
 			player setPos getMarkerPos BTC_respawn_marker;
 			player enableSimulation true;
 			player switchMove "amovpercmstpsraswrfldnon";
 			player switchMove "";//amovpercmstpsraswrfldnon
 			
-			if (respawnInventory_Saved) then {
-				[player,[player,"ClassGear"]] call BIS_fnc_loadInventory;
+			[] call QS_fnc_respawnPilot;
+			
+			if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
+			
+			//==== experimental respawn dialog
+			
+			if (_testDlg in _dialogTestRespawn) then {
+				player removeAction testRespawn;
+				testRespawn = player addAction [profileNamespace getVariable ["testRespawnAction","testRespawnAction"],{ createDialog (profileNamespace getVariable ["testRespawnDlg","testRespawnDlg"]); },[]];
 			};
 			
 			if (BTC_black_screen == 1 && BTC_respawn_time == 0) then {titleText ["", "BLACK IN"];sleep 2;titleText ["", "PLAIN"]; titleFadeOut 1;};
@@ -1362,8 +1378,7 @@ BTC_player_respawn =
 	};
 };
 
-BTC_check_action_first_aid =
-{
+BTC_check_action_first_aid = {
 	private ["_injured","_array_item_injured"];
 	_cond = false;
 	_array_item = items player;
@@ -1394,7 +1409,7 @@ BTC_check_action_HEMTT = {
     if (count _men > 1 && format ["%1", player getVariable "BTC_need_revive"] == "0") then {
         if (format ["%1", (_men select 1) getVariable "BTC_need_revive"] == "1" && !BTC_dragging && format ["%1", (_men select 1) getVariable "BTC_dragged"] != "1") then {
 			_hemtt = [];
-			_hemtt = (position player) nearEntities [["B_Truck_01_medical_F"],5];
+			_hemtt = (position player) nearEntities [BTC_Medical_Trucks,7];
 			if ((count _hemtt) > 0) then {
 				_itemsP = items player;
 				_itemsI = items (_men select 1);
@@ -1408,8 +1423,7 @@ BTC_check_action_HEMTT = {
     _cond;
 };
 
-BTC_check_action_drag =
-{
+BTC_check_action_drag = {
 	_cond = false;
 	_men = nearestObjects [vehicle player, ["Man"], 2];
 	if (count _men > 1) then
@@ -1429,7 +1443,7 @@ BTC_is_class_can_revive =
 {
 	_unit    = _this select 0;
 	_cond = false;
-	{if (_unit isKindOf _x) then {_cond = true};} foreach BTC_who_can_revive;
+	{if (_unit isKindOf _x) then {_cond = true};} count BTC_who_can_revive;
 	_cond
 };
 BTC_can_revive =
@@ -1439,7 +1453,7 @@ BTC_can_revive =
 	_array_item_unit    = items _unit;
 	_array_item_injured = items _injured;
 	_cond = false;
-	{if (_unit isKindOf _x) then {_cond = true};} foreach BTC_who_can_revive;
+	{if (_unit isKindOf _x) then {_cond = true};} count BTC_who_can_revive;
 	if (_cond && BTC_need_first_aid == 1) then
 	{
 		if (_array_item_unit find "FirstAidKit" == -1) then {_cond = false;};
@@ -1448,8 +1462,7 @@ BTC_can_revive =
 	_cond
 };
 //Mobile
-BTC_move_to_mobile =
-{
+BTC_move_to_mobile = {
 	_var = _this select 0;
 	_side = "";
 	switch (true) do
@@ -1465,63 +1478,99 @@ BTC_move_to_mobile =
 		{
 			if ((_x getvariable _side) == _var) then {_mobile = _x;};
 		};
-	} foreach vehicles;
+	} count vehicles;
 	if (isNull _mobile) exitWith {};
-	if (speed _mobile > 5) exitWith {hint "Mobile respawn is moving! Can't move there!";};
+	
+	if (speed _mobile > 5) exitWith {
+		if (enable_BTC_mobileRespawn_MovingHint == 1) then {
+			hint BTC_mobileRespawn_MovingHint;
+		};
+	};
+	
 	_pos = getPos _mobile;
-	titleText ["Moving to FOB", "BLACK OUT"];
+	titleText [BTC_mobileRespawn_MoveToText, "BLACK OUT"];
 	sleep 3;
-	titleText ["Moving to FOB", "BLACK FADED"];
+	titleText [BTC_mobileRespawn_MoveToText, "BLACK FADED"];
 	sleep 2;
 	titleText ["", "BLACK IN"];
 	player setPos [(_pos select 0) + ((random 10) - (random 5)), (_pos select 1) + ((random 10) - (random 5)), 0];
 };
 
-/*
-BTC_mobile_marker =
-{
+BTC_mobile_marker = {
 	_var = _this select 0;
 	_side = "";
-	switch (true) do
-	{
+	
+	switch (true) do {
 		case (BTC_side == west) : {_side = "BTC_mobile_west";};
 		case (BTC_side == east) : {_side = "BTC_mobile_east";};
 		case (str(BTC_side) == "guer") : {_side = "BTC_mobile_guer";};
 		case (str(BTC_side) == "civ") : {_side = "BTC_mobile_civ";};
 	};
-	while {true} do
-	{
+	
+	while {true} do {
 		_obj = objNull;
-		while {isNull _obj} do
-		{
+		while {isNull _obj} do {
 			{
 				if (format ["%1",_x getVariable _side] == _var && Alive _x) then {_obj = _x;};
-			} foreach vehicles;
-			sleep 1;
+			} forEach vehicles;
+			sleep 3;
 		};
 		deleteMarkerLocal format ["%1", _var];
-		_marker = createmarkerLocal [format ["%1", _var], getPos _obj];
-		format ["%1", _var] setmarkertypelocal "mil_dot";
-		format ["%1", _var] setMarkerTextLocal format ["%1", _var];
-		format ["%1", _var] setmarkerColorlocal "ColorGreen";
-		format ["%1", _var] setMarkerSizeLocal [0.5, 0.5];
-		//hint format ["%1 is available!", _var];
-		while {Alive _obj} do
-		{
-			format ["%1", _var] setMarkerPosLocal (getPos _obj);
-			if (speed _obj <= 5 && speed _obj >= -3) then {format ["%1", _var] setMarkerTextLocal format ["%1 deployed", _var];format ["%1", _var] setmarkerColorlocal "ColorGreen";} else {format ["%1", _var] setMarkerTextLocal format ["%1 is moving", _var];format ["%1", _var] setmarkerColorlocal "ColorBlack";};
-			sleep 1;
+		_marker = createMarkerLocal [format ["%1", _var], getPos _obj];
+		format ["%1", _var] setMarkerTypeLocal BTC_mobileRespawn_MarkerType;
+		format ["%1", _var] setMarkerTextLocal BTC_mobileRespawn_MarkerText;
+		format ["%1", _var] setmarkerColorLocal BTC_mobileRespawn_MarkerColor;
+		format ["%1", _var] setMarkerAlphaLocal BTC_mobileRespawn_MarkerAlpha;
+		format ["%1", _var] setMarkerSizeLocal [BTC_mobileRespawn_MarkerSize,BTC_mobileRespawn_MarkerSize];
+		
+		if (BTC_mobileRespawn_AvailableHint == 1) then {
+			hint BTC_mobileRespawn_AvailableHintText;
 		};
-		hint format ["%1 has been destroyed!", _var];
-		format ["%1", _var] setMarkerTextLocal format ["%1 destroyed!", _var];
-		format ["%1", _var] setmarkerColorlocal "ColorRed";
+		
+		while {Alive _obj} do {
+			format ["%1", _var] setMarkerPosLocal (getPos _obj);
+			
+			if (speed _obj <= BTC_mobileRespawn_DeployMaxSpeed && speed _obj >= -3) then {
+				if (enable_newText_config == 1) then {
+					format ["%1", _var] setMarkerTextLocal BTC_mobileRespawn_MarkerText;
+				} else {
+					format ["%1", _var] setMarkerTextLocal format ["%1 deployed", _var];
+				};
+				format ["%1", _var] setMarkerAlphaLocal BTC_mobileRespawn_MarkerAlpha;
+				format ["%1", _var] setmarkerColorLocal BTC_mobileRespawn_MarkerColor;
+			} else {
+				if (enable_newText_config == 1) then {
+					format ["%1", _var] setMarkerTextLocal BTC_mobileRespawn_MarkerTextMoving;
+				} else {
+					format ["%1", _var] setMarkerTextLocal format ["%1 is moving", _var];
+				};
+				format ["%1", _var] setMarkerTypeLocal BTC_mobileRespawn_MarkerTypeMoving;
+				format ["%1", _var] setMarkerSizeLocal [BTC_mobileRespawn_MarkerSizeMoving,BTC_mobileRespawn_MarkerSizeMoving];
+				format ["%1", _var] setMarkerAlphaLocal BTC_mobileRespawn_MarkerAlphaMoving;
+				format ["%1", _var] setmarkerColorLocal BTC_mobileRespawn_MarkerColorMoving;
+			};
+			
+			sleep BTC_mobileRespawn_MarkerUpdateFrequency;
+		};
+		
+		if (BTC_mobileRespawn_DestroyedHint == 1) then {
+			hint BTC_mobileRespawn_DestroyedHintText;
+		};
+		
+		if (enable_newText_config == 1) then {
+			format ["%1", _var] setMarkerTextLocal BTC_mobileRespawn_MarkerTextDestroyed;
+		} else {
+			format ["%1", _var] setMarkerTextLocal format ["%1 destroyed!", _var];
+		};
+		format ["%1", _var] setMarkerTypeLocal BTC_mobileRespawn_MarkerTypeDestroyed;
+		format ["%1", _var] setMarkerSizeLocal [BTC_mobileRespawn_MarkerSizeDestroyed,BTC_mobileRespawn_MarkerSizeDestroyed];
+		format ["%1", _var] setMarkerAlphaLocal BTC_mobileRespawn_MarkerAlphaDestroyed;
+		format ["%1", _var] setMarkerColorLocal BTC_mobileRespawn_MarkerColorDestroyed;
 		if (BTC_mobile_respawn == 0) exitWith {};
 	};
 };
-*/
 
-BTC_mobile_check =
-{
+BTC_mobile_check = {
 	_var = _this select 0;
 	_side = "";
 	switch (true) do
@@ -1537,18 +1586,30 @@ BTC_mobile_check =
 		{
 			if ((_x getvariable _side) == _var) then {_cond = true;};
 		};
-	} foreach vehicles;
+	} count vehicles;
 	_cond
 };
-BTC_vehicle_mobile_respawn =
-{
+
+BTC_vehicle_mobile_respawn = {
+
+	private ["_loopVar"];
+
 	_veh  = _this select 0;
 	_var  = _this select 1;
 	_set  = _this select 2;
 	_type = typeOf _veh;
 	_pos  = getPos _veh;
 	_dir  = getDir _veh;
-	waitUntil {sleep 1; !Alive _veh};
+	
+	
+	//===== while loop is slower than a waitUntil, less CPU intensive
+	_loopVar = true;
+	while {(_loopVar)} do {
+		if (!alive _veh) then {
+			_loopVar = false;
+		};
+	};
+			
 	_veh setVariable [_set,0,true];
 	sleep BTC_mobile_respawn_time;
 	deleteVehicle _veh;
@@ -1559,6 +1620,8 @@ BTC_vehicle_mobile_respawn =
 	_resp = [_veh,_var,_set] spawn BTC_vehicle_mobile_respawn;
 	_veh setpos _pos;
 };
+
+
 BTC_out_of_lifes =
 {
 	if (BTC_lifes == 0) then

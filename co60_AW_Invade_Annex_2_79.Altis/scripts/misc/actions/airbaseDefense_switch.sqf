@@ -1,5 +1,5 @@
 if (AIRBASEDEFENSE_SWITCH) exitWith {
-	hint "Противовоздушная оборона недоступна."
+	hint "Противовоздушная оборона будет доступна в течение 5 минут."
 };
 
 //-------------------- Wait for player to action

@@ -58,11 +58,11 @@ KEGsMouseCoord = [0.5, 0.5];
 KEGsUseNVG = false;
 //KEGsMissileCamActive = false;
 //KEGsUseMissileCam = false;
-KEGsMarkerNames = false; // True = display marker names and arrows
+KEGsMarkerNames = true; // True = display marker names and arrows
 KEGsMarkerType = 1; // 0 = disabled, 1 = names, 2 = types
 KEGsTags = false; // Particlesource tags
 KEGsTagsStat = false; // Particlesource status tags
-KEGsAIfilter = false; // Filter AI units (only players displayed)
+KEGsAIfilter = true; // Filter AI units (only players displayed)
 KEGsDeadFilter = false; // Filter Unknown Dead units (only Alive players displayed)
 KEGsCombatActionFilter = false; // automatically set camera focus on shooter
 //KEGsClientAddonPresent = false; // Is client-side addon present?

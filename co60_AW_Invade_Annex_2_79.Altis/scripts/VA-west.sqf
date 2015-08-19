@@ -9,14 +9,19 @@ _myBox = _this select 0;
 "B_Carryall_cbr",
 "B_Carryall_oli",
 "B_Carryall_khk",
+"B_Carryall_ocamo",
+"B_Carryall_mcamo",
 "B_Kitbag_cbr",
 "B_Kitbag_sgg",
+"B_Kitbag_rgr",
 "B_Kitbgg_mcamo",
 "B_FieldPack_cbr",
 "B_FieldPack_cbr",
 "B_FieldPack_oli",
+"B_FieldPack_blk",
 "B_FieldPack_khk",
-"G_Bergen",
+"B_FieldPack_ocamo",
+"B_FieldPack_oucamo",
 "B_Bergen_rgr",
 "B_Bergen_blk",
 "B_Bergen_mcamo",
@@ -25,6 +30,7 @@ _myBox = _this select 0;
 "B_TacticalPack_oli",
 "B_TacticalPack_blk",
 "B_TacticalPack_mcamo",
+"B_TacticalPack_ocamo",
 "B_Parachute",
 "B_AssaultPack_rgr",
 "B_AssaultPack_cbr",
@@ -37,17 +43,17 @@ _myBox = _this select 0;
 "B_AssaultPackG",
 "B_AssaultPack",
 //--- Рюкзаки с оружием
-"B_Mortar_01_support_F",//Сошка миномета
-"B_HMG_01_support_F",   //Сложенная тренога
-"B_HMG_01_support_high_F",  //Тренога поднята
-"B_Mortar_01_weapon_F", //Миномет
-"B_AA_01_weapon_F", //Титан ПВО
-"B_AT_01_weapon_F", //Титан ПТ
-"B_UAV_01_backpack_F",  //Дартер
-"B_GMG_01_high_weapon_F",   //Гранатомет подн
-"B_HMG_01_high_weapon_F",   //Пул. подн
-"B_GMG_01_weapon_F",//Авт. гранатомет
-"B_HMG_01_weapon_F" //Пулемет Mk30
+"B_Mortar_01_support_F",
+"B_HMG_01_support_F",
+"B_HMG_01_support_high_F",
+"B_Mortar_01_weapon_F",
+"B_AA_01_weapon_F",
+"B_AT_01_weapon_F",
+"B_UAV_01_backpack_F",
+"B_GMG_01_high_weapon_F",
+"B_HMG_01_high_weapon_F",
+"B_GMG_01_weapon_F",
+"B_HMG_01_weapon_F"
 ],true] call BIS_fnc_addVirtualBackpackCargo;
 [_myBox,[
 //--- НАТО
@@ -377,8 +383,10 @@ _myBox = _this select 0;
 "5Rnd_127x108_Mag",
 "30Rnd_9x21_Mag",
 "16Rnd_9x21_Mag",
+"150Rnd_762x54_Box",
+"150Rnd_762x54_Box_Tracer",
 //marksman
-"0Rnd_338_Mag",
+"10Rnd_338_Mag",
 "130Rnd_338_Mag",
 "10Rnd_127x54_Mag",
 "150Rnd_93x64_Mag",

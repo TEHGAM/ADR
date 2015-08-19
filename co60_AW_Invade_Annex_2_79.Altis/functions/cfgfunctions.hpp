@@ -33,6 +33,9 @@ class QS
 		class removeAction {};
 		class removeAction0 {};
 		class removeAction1 {};
+		class respawnPilot {};
+		class vMonitor {};
+		class vSetup02 {};
 		class serverMapTP {};
 	};
 };
