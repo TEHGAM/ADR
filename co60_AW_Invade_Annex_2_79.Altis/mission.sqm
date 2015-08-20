@@ -6,7 +6,6 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"A3_uav_f_characters_f_gamma",
 		"A3_Structures_F_Civ_Camping",
-		"A3_Signs_F",
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_weapons_f_beta_ammoboxes",
@@ -34,7 +33,6 @@ class Mission
 		"A3_Armor_F_AMV",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Soft_F_MRAP_03",
-		"A3_Armor_F_EPC_MBT_01",
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Soft_F_HEMTT",
@@ -46,11 +44,9 @@ class Mission
 		"A3_Armor_F_EPB_APC_tracked_03",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Mil_Flags",
-		"A3_Structures_F_Mil_Shelters",
 		"A3_Weapons_F_Bootcamp_Ammoboxes",
 		"A3_Structures_F_Mil_BagBunker",
 		"A3_Structures_F_Civ_Lamps",
-		"A3_Soft_F_Truck",
 		"A3_Air_F_EPB_Heli_Light_03",
 		"A3_Air_F_Heli_Heli_Transport_03",
 		"A3_Air_F_Heli_Light_02",
@@ -63,7 +59,8 @@ class Mission
 		"A3_Characters_F_Gamma",
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Modules_F_Curator_Ordnance",
-		"A3_Structures_F_Heli_Ind_AirPort"
+		"A3_Structures_F_Heli_Ind_AirPort",
+		"A3_Armor_F_Slammer"
 	};
 	addOnsAuto[]=
 	{
@@ -94,7 +91,7 @@ class Mission
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Soft_F_MRAP_03",
-		"A3_Armor_F_EPC_MBT_01",
+		"A3_Armor_F_Slammer",
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Soft_F_HEMTT",
@@ -128,15 +125,11 @@ class Mission
 		overviewText="Version 2.79";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0;
+		startWeather=0.30000001;
 		startWind=0;
-		forecastWeather=0;
+		forecastWeather=0.30000001;
 		forecastWind=0;
 		forecastWaves=0;
-		rainForced=1;
-		lightningsForced=1;
-		wavesForced=1;
-		windForced=1;
 		year=2035;
 		month=7;
 		hour=8;
@@ -1669,7 +1662,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=220;
+		items=226;
 		class Item0
 		{
 			position[]={23375.334,12.825771,19807.545};
@@ -2082,7 +2075,7 @@ class Mission
 			age="15 MIN";
 			id=108;
 			side="EMPTY";
-			vehicle="B_MBT_01_TUSK_F";
+			vehicle="B_MBT_01_cannon_F";
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="Slammer_2";
@@ -2971,7 +2964,7 @@ class Mission
 		};
 		class Item121
 		{
-			position[]={15337.313,17.291679,17371.693};
+			position[]={15335.628,17.352852,17370.586};
 			azimut=135;
 			id=193;
 			side="EMPTY";
@@ -3016,7 +3009,7 @@ class Mission
 		};
 		class Item126
 		{
-			position[]={15337.573,17.073902,17363.646};
+			position[]={15335.888,17.133286,17362.539};
 			azimut=45;
 			id=198;
 			side="EMPTY";
@@ -3025,7 +3018,7 @@ class Mission
 		};
 		class Item127
 		{
-			position[]={15329.156,17.553965,17371.365};
+			position[]={15327.471,17.600689,17370.258};
 			azimut=45;
 			id=199;
 			side="EMPTY";
@@ -3034,7 +3027,7 @@ class Mission
 		};
 		class Item128
 		{
-			position[]={15337.108,17.216852,17379.783};
+			position[]={15335.423,17.271452,17378.676};
 			azimut=45;
 			id=200;
 			side="EMPTY";
@@ -3043,7 +3036,7 @@ class Mission
 		};
 		class Item129
 		{
-			position[]={15345.408,17.14761,17371.869};
+			position[]={15343.723,17.177729,17370.762};
 			azimut=45;
 			id=201;
 			side="EMPTY";
@@ -4082,6 +4075,60 @@ class Mission
 			vehicle="Windsock_01_F";
 			skill=0.60000002;
 			init="this allowdamage false;";
+		};
+		class Item220
+		{
+			position[]={15332.723,17.255278,17336.699};
+			azimut=43.314999;
+			id=292;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+		};
+		class Item221
+		{
+			position[]={15341.283,16.99947,17328.373};
+			azimut=43.314999;
+			id=293;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+		};
+		class Item222
+		{
+			position[]={15350.826,17.016117,17319.514};
+			azimut=43.314999;
+			id=294;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+		};
+		class Item223
+		{
+			position[]={15351.059,17.286757,17355.533};
+			azimut=43.314999;
+			id=295;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+		};
+		class Item224
+		{
+			position[]={15360.386,17.09096,17346.596};
+			azimut=43.314999;
+			id=296;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
+		};
+		class Item225
+		{
+			position[]={15369.487,16.546728,17337.787};
+			azimut=43.314999;
+			id=297;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight";
+			skill=0.60000002;
 		};
 	};
 	class Markers
@@ -5371,7 +5418,7 @@ class Mission
 		};
 		class Item170
 		{
-			position[]={15240.582,18.000778,17336.117};
+			position[]={15221.926,17.744801,17159.49};
 			name="safezone_marker";
 			type="Empty";
 		};
