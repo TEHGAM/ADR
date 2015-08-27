@@ -56,27 +56,31 @@ if(random 1 >= 0.5) then {
 	sleep 10;
 
 	hqSideChat = _defendMessages call BIS_fnc_selectRandom; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
-	
-	null = [["aoCircle_2"],[6,5],[3,2],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
-/*
-	_type = [1,2];
+
+	_type = [1,2,3,4];
 	_selectedType = _type select (floor (random (count _type)));
-	
+
 	if (_selectedType == 1) then {
-		null = [["aoCircle_2"],[5,2],[3,4],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+		null = [["aoCircle_2"],[6,2],[4,4],[0],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 2) then {
-		null = [["aoCircle_2"],[3,2],[4,4],[1],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
-	}; */
-	
+		null = [["aoCircle_2"],[6,2],[2,4],[1],[4,4],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+	};
+	if (_selectedType == 3) then {
+		null = [["aoCircle_2"],[6,2],[3,4],[2],[1,0],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+	};
+	if (_selectedType == 4) then {
+		null = [["aoCircle_2"],[6,2],[2,4],[3],[2,4],[0,0,EAST],[0,1,120,FALSE,true]] call Bastion_Spawn;
+	};
+
 	hint "В близи захваченной территории, обнаружены вражеские силы.";
-			
+
 	sleep 5;
-			
+
 	hqSideChat = "Обороняйтесь, противник начинает штурм!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
-			
+
 	sleep _defendTimer1;
-		
+
 	hqSideChat = "Атака врага отбита, противник отступает!"; publicVariable "hqSideChat"; [WEST,"HQ"] sideChat hqSideChat;
 
 	sleep _defendTimer2;

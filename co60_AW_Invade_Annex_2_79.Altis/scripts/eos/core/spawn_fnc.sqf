@@ -1,14 +1,13 @@
-
 IF (isnil "server")then{hint "YOU MUST PLACE A GAME LOGIC NAMED SERVER!";};
-eos_fnc_spawnvehicle=compile preprocessfilelinenumbers "scripts\eos\functions\eos_SpawnVehicle.sqf";
-eos_fnc_grouphandlers=compile preprocessfilelinenumbers "scripts\eos\functions\setSkill.sqf";
-eos_fnc_findsafepos=compile preprocessfilelinenumbers "scripts\eos\functions\findSafePos.sqf";
-eos_fnc_spawngroup= compile preprocessfile "scripts\eos\functions\infantry_fnc.sqf";
+eos_fnc_spawnvehicle = compile preprocessfilelinenumbers "scripts\eos\functions\eos_SpawnVehicle.sqf";
+eos_fnc_grouphandlers = compile preprocessfilelinenumbers "scripts\eos\functions\setSkill.sqf";
+eos_fnc_findsafepos = compile preprocessfilelinenumbers "scripts\eos\functions\findSafePos.sqf";
+eos_fnc_spawngroup = compile preprocessfile "scripts\eos\functions\infantry_fnc.sqf";
 eos_fnc_setcargo = compile preprocessfile "scripts\eos\functions\cargo_fnc.sqf";
-eos_fnc_taskpatrol= compile preprocessfile "scripts\eos\functions\shk_patrol.sqf";
-SHK_pos= compile preprocessfile "scripts\eos\functions\shk_pos.sqf";
+eos_fnc_taskpatrol = compile preprocessfile "scripts\eos\functions\shk_patrol.sqf";
+call compile preprocessfile "scripts\eos\SHK_pos\shk_pos_init.sqf";
 shk_fnc_fillhouse = compile preprocessFileLineNumbers "scripts\eos\Functions\SHK_buildingpos.sqf";
-eos_fnc_getunitpool= compile preprocessfilelinenumbers "scripts\eos\UnitPools.sqf";
+eos_fnc_getunitpool = compile preprocessfilelinenumbers "scripts\eos\UnitPools.sqf";
 call compile preprocessfilelinenumbers "scripts\eos\AI_Skill.sqf";
 
 EOS_Deactivate = {
