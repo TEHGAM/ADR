@@ -60,13 +60,15 @@ class Mission
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Structures_F_Heli_Ind_AirPort",
-		"A3_Armor_F_Slammer"
+		"A3_Armor_F_Slammer",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Modules_F",
 		"A3_Soft_F_Crusher_UGV",
-		"A3_Modules_F_Curator_Curator",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"A3_Air_F_Gamma_UAV_02",
 		"A3_Modules_F_Multiplayer",
 		"A3_Characters_F_BLUFOR",
@@ -125,14 +127,18 @@ class Mission
 		overviewText="Version 2.79";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0.30000001;
+		startWeather=0;
 		startWind=0;
-		forecastWeather=0.30000001;
+		forecastWeather=0;
 		forecastWind=0;
 		forecastWaves=0;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		month=7;
-		hour=8;
+		hour=6;
 		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
@@ -3344,7 +3350,7 @@ class Mission
 			vehicle="I_Plane_Fighter_03_AA_F";
 			lock="UNLOCKED";
 			skill=0.60000002;
-			init="0 = [this,600,605,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
+			init="0 = [this,1800,1805,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
 		};
 		class Item157
 		{
@@ -4050,7 +4056,6 @@ class Mission
 			side="EMPTY";
 			vehicle="C_Quadbike_01_F";
 			skill=0.60000002;
-			init="0 = [this,30,FALSE,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
 			syncId=11;
 			synchronizations[]={2};
 		};
@@ -4062,7 +4067,6 @@ class Mission
 			side="EMPTY";
 			vehicle="C_Quadbike_01_F";
 			skill=0.60000002;
-			init="0 = [this,30,FALSE,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
 			syncId=12;
 			synchronizations[]={2};
 		};
@@ -4133,7 +4137,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=171;
+		items=172;
 		class Item0
 		{
 			position[]={-15683.114,0.0011896361,-3827.8438};
@@ -5420,6 +5424,12 @@ class Mission
 		{
 			position[]={15221.926,17.744801,17159.49};
 			name="safezone_marker";
+			type="Empty";
+		};
+		class Item171
+		{
+			position[]={15143.668,17.91,17171.428};
+			name="Ammo_Supply_drop";
 			type="Empty";
 		};
 	};
