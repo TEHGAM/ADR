@@ -69,7 +69,7 @@ _bastClear setTriggerStatements ["this", "", ""];
 // PAUSE IF REQUESTED
 if (_pause > 0 and !_initialLaunch) then {
 	for "_counter" from 1 to _pause do {
-		if (_hints) then  {hint format ["Attack ETA : %1",(_pause - _counter)];};
+		if (_hints) then  {hint format ["Attack ETA : %1", (_pause - _counter)];};
 
 		sleep 1;
 	};
@@ -79,12 +79,12 @@ if (_pause > 0 and !_initialLaunch) then {
 // SPAWN PATROLS
 _aGroup = [];
 for "_counter" from 1 to _PApatrols do {
-	_pos = [_mPos, [_Placement, (_Placement + 50)], random 360, 1, [0,0]] call SHK_pos;
+	_pos = [_mPos, [_Placement, (_Placement + 50)], random 360, 1, [0, 0]] call SHK_pos;
 	_grp = [_pos, _PAgroupSize, _faction, _side] call EOS_fnc_spawngroup;
-	_aGroup set [count _aGroup,_grp];
+	_aGroup set [count _aGroup, _grp];
 
 	if (_debug) then {
-		PLAYER SIDECHAT (format ["Spawned Patrol: %1",_counter]);
+		PLAYER SIDECHAT (format ["Spawned Patrol: %1", _counter]);
 		0 = [_mkr, _counter, "patrol", getpos (leader _grp)] call EOS_debug
 	};
 
@@ -97,14 +97,14 @@ _bGrp = [];
 for "_counter" from 1 to _LVehGroups do {
 
 	_direction = random 360;
-	_newpos = [_mPos, [(_Placement + 550),(_Placement + 650)], _direction, 1, [1, 300], [200, "O_MBT_02_cannon_F"]] call SHK_pos;
+	_newpos = [_mPos, [(_Placement + 550), (_Placement + 650)], _direction, 1, [1, 300], [200, "O_MBT_02_cannon_F"]] call SHK_pos;
 	if (surfaceiswater _newpos) then {_vehType = 8; _cargoType = 9;} else {_vehType = 7; _cargoType = 9;};
 	_bGroup = [_newpos, _side, _faction, _vehType] call EOS_fnc_spawnvehicle;
 
 	if ((_LVgroupSize select 0) > 0) then {
 		_cargoGrp = createGroup _side;
 		0 = [(_bGroup select 0), _LVgroupSize, (_bGroup select 2), _faction, _cargoType] call eos_fnc_setcargo;
-		0 = [_cargoGrp,"INFskill"] call eos_fnc_grouphandlers;
+		0 = [_cargoGrp, "INFskill"] call eos_fnc_grouphandlers;
 		_bGroup set [count _bGroup, _cargoGrp];
 		0 = [_mkr, _bGroup, _counter, _direction, _vehType] execvm "scripts\eos\functions\LVehUnload_fnc.sqf";
 	} else {
@@ -131,17 +131,17 @@ for "_counter" from 1 to _LVehGroups do {
 _cGrp=[];
 for "_counter" from 1 to _AVehGroups do {
 
-	_newpos = [_mPos, [(_Placement + 700),(_Placement + 800)], random 360, 3, [1,300], [200,"O_MBT_02_cannon_F"]] call SHK_pos;
+	_newpos = [_mPos, [(_Placement + 700), (_Placement + 800)], random 360, 3, [1, 300], [200, "O_MBT_02_cannon_F"]] call SHK_pos;
 	_vehType = 2;
 	_cGroup = [_newpos, _side, _faction, _vehType] call EOS_fnc_spawnvehicle;
 
 	0 = [(_cGroup select 2), "ARMskill"] call eos_fnc_grouphandlers;
 
-	_cGrp set [count _cGrp,_cGroup];
+	_cGrp set [count _cGrp, _cGroup];
 
 	if (_debug) then {
-		player sidechat format ["Armoured:%1 - r%2",_counter,_AVehGroups];
-		0 = [_mkr,_counter,"Armour",(getpos leader (_cGroup select 2))] call EOS_debug;
+		player sidechat format ["Armoured:%1 - r%2", _counter, _AVehGroups];
+		0 = [_mkr, _counter, "Armour", (getpos leader (_cGroup select 2))] call EOS_debug;
 	};
 
 	sleep 1;
@@ -162,7 +162,7 @@ for "_counter" from 1 to _CHGroups do {
 		_cargoGrp = createGroup _side;
 		0 = [(_fGroup select 0), _fSize, (_fGroup select 2), _faction, 9] call eos_fnc_setcargo;
 		0 = [_cargoGrp, "INFskill"] call eos_fnc_grouphandlers;
-		_fGroup set [count _fGroup,_cargoGrp];
+		_fGroup set [count _fGroup, _cargoGrp];
 		0 = [_mkr, _fGroup, _counter, _direction] execvm "scripts\eos\functions\TransportUnload_fnc.sqf";
 	} else {
 		_wp1 = (_fGroup select 2) addWaypoint [(markerpos _mkr), 0];
@@ -174,8 +174,9 @@ for "_counter" from 1 to _CHGroups do {
 	_fGrp set [count _fGrp, _fGroup];
 
 	if (_debug) then {
-		player sidechat format ["Chopper:%1",_counter];
-		0 = [_mkr,_counter, "Chopper", (getpos leader (_fGroup select 2))] call EOS_debug};
+		player sidechat format ["Chopper:%1", _counter];
+		0 = [_mkr, _counter, "Chopper", (getpos leader (_fGroup select 2))] call EOS_debug
+	};
 
 	sleep 1;
 };
@@ -205,12 +206,12 @@ waituntil {triggeractivated _bastActive};
 
 for "_counter" from 1 to _timeout do {
 	if (_hints) then {
-		if (_waves > 1) then {hint format ["Next wave ETA : %1",(_timeout - _counter)];};
+		if (_waves > 1) then {hint format ["Next wave ETA : %1", (_timeout - _counter)];};
 	};
 	sleep 1;
 
 	if (!triggeractivated _bastActive || getmarkercolor _mkr == "colorblack") exitwith {
-		hint "Точка потеряна!"//"Zone lost. You must re-capture it";
+		hint "Точка потеряна!";//"Zone lost. You must re-capture it";
 		_mkr setmarkercolor hostileColor;
 		_mkr setmarkeralpha _mAN;
 
@@ -237,9 +238,26 @@ if (triggeractivated _bastActive and triggeractivated _bastClear and (_waves < 1
 waituntil {getmarkercolor _mkr == "colorblack" OR getmarkercolor _mkr == VictoryColor OR getmarkercolor _mkr == hostileColor or !triggeractivated _bastActive};
 if (_debug) then {player sidechat "delete units";};
 
-{
-	{deleteVehicle _x} forEach units _x;
-} forEach _aGroup;
+
+// DELETE UNITS
+if (count _aGroup > 0) then {
+	{
+		{deleteVehicle _x} forEach units _x;
+	} forEach _aGroup;
+};
+
+if (count _bGrp > 0) then {
+	{
+		_vehicle = _x select 0;
+		_crew = _x select 1;
+		_grp = _x select 2;
+		_cargoGrp = _x select 3;
+		{deleteVehicle _x} forEach (_crew);
+		if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
+		{deleteVehicle _x} forEach units _grp; deleteGroup _grp;
+		{deleteVehicle _x} forEach units _cargoGrp; deleteGroup _cargoGrp;
+	} forEach _bGrp;
+};
 
 if (count _cGrp > 0) then {
 	{
@@ -253,23 +271,12 @@ if (count _cGrp > 0) then {
 	} forEach _cGrp;
 };
 
-if (count _bGrp > 0) then {
+if (count _fGrp > 0) then {
 	{
 		_vehicle = _x select 0;
 		_crew = _x select 1;
 		_grp = _x select 2;
-		{deleteVehicle _x} forEach (_crew);
-		if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach[_vehicle];};
-		{deleteVehicle _x} forEach units _grp;
-		deleteGroup _grp;
-	} forEach _bGrp;
-};
-
-
-// CACHE HELICOPTER TRANSPORT
-if (count _fGrp > 0) then {
-	{
-		_vehicle = _x select 0; _crew = _x select 1; _grp = _x select 2; _cargoGrp = _x select 3;
+		_cargoGrp = _x select 3;
 		{deleteVehicle _x} forEach (_crew);
 		if (!(vehicle player == _vehicle)) then {{deleteVehicle _x} forEach [_vehicle];};
 		{deleteVehicle _x} forEach units _grp; deleteGroup _grp;
