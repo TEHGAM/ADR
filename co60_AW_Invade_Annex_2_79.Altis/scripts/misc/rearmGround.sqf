@@ -6,6 +6,7 @@ if (!(_veh isKindOf "LandVehicle")) exitWith { _veh vehicleChat "Этот сер
 _veh vehicleChat "Сервис. Ожидайте...";
 
 _veh setFuel 0;
+_veh setDamage 0.3;
 
 //---------- RE-ARMING
 _veh vehicleChat "Перезарядка ...";
@@ -13,7 +14,6 @@ _veh vehicleChat "Перезарядка ...";
 uiSleep 10;
 
 _veh setVehicleAmmo 1;
-_veh vehicleChat "Перезарядка завершена.";
 
 //---------- REPAIRING
 
@@ -24,7 +24,6 @@ _veh vehicleChat "Ремонт ...";
 uiSleep 10;
 
 _veh setDamage 0;
-_veh vehicleChat "Отремонтирован.";
 
 //---------- REFUELING
 
@@ -35,7 +34,6 @@ _veh vehicleChat "Заправка ...";
 uiSleep 10;
 
 _veh setFuel 1;
-_veh vehicleChat "Заправлен.";
 
 //---------- FINISHED
 

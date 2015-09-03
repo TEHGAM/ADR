@@ -78,7 +78,7 @@ while { count _targetArray > 0 } do {
 		0
 	];
 
-	radioTower = "Land_TTowerBig_2_F" createVehicle _flatPos;
+	radioTower = "Land_Radar_F" createVehicle _flatPos;
 	waitUntil { sleep 0.5; alive radioTower };
 	radioTower setVectorUp [0,0,1];
 	radioTowerAlive = true; publicVariable "radioTowerAlive";
@@ -105,7 +105,7 @@ while { count _targetArray > 0 } do {
 	
 	_targetStartText = format
 	[
-		"<t align='center' size='2.2'>Захватить</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Начинайте наступление.<br/><br/>Уничтожив радиовышку вы устраните их возможность на вызов авиаподдержки.",
+		"<t align='center' size='2.2'>Захватить</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Начинайте наступление.<br/><br/>Уничтожив радар вы устраните их возможность на вызов авиаподдержки.",
 		currentAO
 	];
 
@@ -113,7 +113,7 @@ while { count _targetArray > 0 } do {
 	
 	GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewMain", currentAO]; publicVariable "showNotification";
-	showNotification = ["NewSub", "Уничтожить радиовышку противника"]; publicVariable "showNotification";	
+	showNotification = ["NewSub", "Уничтожить радар противника"]; publicVariable "showNotification";	
 	
 	//-------------------------------------------- CORE LOOP
 	
@@ -137,9 +137,9 @@ while { count _targetArray > 0 } do {
 	
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["radioMarker","radioCircle"];
-	_radioTowerDownText = "<t align='center' size='2.2'>Радиовышка</t><br/><t size='1.5' color='#08b000' align='center'>Уничтожена</t><br/>____________________<br/><t size='1.2' color='#08b000' align='center'>Теперь противник не сможет вызвать авиаподдержку.</t><br/>";
+	_radioTowerDownText = "<t align='center' size='2.2'>Радар</t><br/><t size='1.5' color='#08b000' align='center'>Уничтожен</t><br/>____________________<br/><t size='1.2' color='#08b000' align='center'>Теперь противник не сможет вызвать авиаподдержку.</t><br/>";
 	GlobalHint = _radioTowerDownText; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["CompletedSub", "Радиовышка уничтожена!"]; publicVariable "showNotification";
+	showNotification = ["CompletedSub", "Радар уничтожен!"]; publicVariable "showNotification";
 	
 	//---------------------------------------------- WHEN ENEMIES KILLED
 
@@ -152,7 +152,7 @@ while { count _targetArray > 0 } do {
 	//---------------------------------------------- DE-BRIEF 1
 	
 	sleep 3;
-	_targetCompleteText = format ["<t align='center' size='2.2'>Захватили</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/><t align='left'>Хорошая работа! %1, мужики! Возвращайтесь на базу для перегруппировки на следующее задание.</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Захватили</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>",currentAO];
 	{ _x setMarkerPos [-10000,-10000,-10000]; } forEach ["aoCircle","aoMarker","radioCircle"];
 	GlobalHint = _targetCompleteText; hint parseText GlobalHint; publicVariable "GlobalHint";
 	showNotification = ["CompletedMain", currentAO]; publicVariable "showNotification";
@@ -173,7 +173,7 @@ while { count _targetArray > 0 } do {
 
 	//----------------------------------------------------- DE-BRIEF
 	
-	_targetCompleteText = format ["<t align='center' size='2.2'>Удержали</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>Начинайте перегруппировку сил.</t>",currentAO];
+	_targetCompleteText = format ["<t align='center' size='2.2'>Удержали</t><br/><t size='1.5' align='center' color='#00FF80'>%1</t><br/>____________________<br/><t align='left'>Хорошая работа! Возвращайтесь на базу для перегруппировки на следующее задание.</t>",currentAO];
 	GlobalHint = _targetCompleteText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	
 	//----------------------------------------------------- MAINTENANCE

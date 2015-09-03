@@ -18,7 +18,6 @@ _veh vehicleChat "Перезарядка ...";
 sleep 10;
 
 _veh setVehicleAmmo 1;
-_veh vehicleChat "Заряжен (100%).";
 
 //---------- REPAIRING
 
@@ -29,7 +28,6 @@ _veh vehicleChat "Ремонт ...";
 sleep 10;
 
 _veh setDamage 0;
-_veh vehicleChat "Отремонтирован (100%).";
 
 //---------- REFUELING
 
@@ -40,7 +38,6 @@ _veh vehicleChat "Заправка ...";
 sleep 10;
 
 _veh setFuel 1;
-_veh vehicleChat "Заправлен (100%).";
 
 //---------- FINISHED
 

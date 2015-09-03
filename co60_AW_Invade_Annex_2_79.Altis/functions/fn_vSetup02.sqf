@@ -20,6 +20,7 @@ private ["_u","_t"];
 
 _u = _this select 0;
 _t = typeOf _u;
+_i = _this select 3;
 
 if (isNull _u) exitWith {};
 
