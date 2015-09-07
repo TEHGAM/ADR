@@ -181,6 +181,7 @@ class VAS_RscActiveText {
 	font = "PuristaLight";
 	color[] = {1, 1, 1, 1};
 	colorActive[] = {1, 0.2, 0.2, 1};
+	colorDisabled[] = {1, 0.2, 0.2, 0.3};
 	soundEnter[] = {"\A3\ui_f\data\Sound\RscButtonMenu\soundEnter", 0.09, 1};
 	soundPush[] = {"\A3\ui_f\data\Sound\RscButtonMenu\soundPush", 0.0, 0};
 	soundClick[] = {"\A3\ui_f\data\Sound\RscButtonMenu\soundClick", 0.07, 1};
@@ -533,6 +534,7 @@ class VAS_RscSlider {
 	h = 0.025;
 	color[] = {1, 1, 1, 0.8};
 	colorActive[] = {1, 1, 1, 1};
+	colorDisabled[] = {1, 1, 1, 0.3};
 };
 
 class VAS_RscFrame {
@@ -1062,6 +1064,7 @@ class VAS_ActiveTextPicture
 	color[] = {1,1,1,1};
 	colorText[] = {1,1,1,1};
 	colorActive[] = {1,1,1,1};
+	colorDisabled[] = {1, 1, 1, 0.3};
 	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
     soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
     soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
