@@ -379,15 +379,6 @@ class CfgNotifications
 		color[] = {0.38, 0.81, 0.16, 1};
 		priority = 6;
 	};
-	
-		class Attention
-	{
-		title = "Внимание!";
-		description = "%1";
-		iconPicture = "media\images\attention.paa";
-		size = 3;
-		priority = 6;
-	};
 
 	class ScoreBonus
 	{

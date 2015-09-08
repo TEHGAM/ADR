@@ -10,7 +10,7 @@ BACO_ammoSuppAvail = FALSE; publicVariable "BACO_ammoSuppAvail";
 
 _heli = _this select 0;
 _crateType =  "B_Slingload_01_Cargo_F";		//ammocrate class for blufor, feel free to change to whichever box you desire
-_reloadtime = 600;  						// time before next ammo drop is available to use, default 600 or 480
+_reloadtime = 30;  						// time before next ammo drop is available to use, default 600 or 480
 
 //--------------------------------------------------------- MEAT AND POTATOES
 
@@ -43,4 +43,4 @@ Supply_Ammo addMagazineCargoGlobal ["NLAW_F", 3];
 Supply_Ammo addMagazineCargoGlobal ["Titan_AT", 2];
 Supply_Ammo addMagazineCargoGlobal ["Titan_AA", 2];
 
-sleep _reloadtime; BACO_ammoSuppAvail = TRUE; publicVariable "BACO_ammoSuppAvail";
+uiSleep _reloadtime; BACO_ammoSuppAvail = TRUE; publicVariable "BACO_ammoSuppAvail";

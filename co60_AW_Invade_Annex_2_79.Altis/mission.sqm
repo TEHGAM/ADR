@@ -1231,7 +1231,7 @@ class Mission
 					id=59;
 					side="WEST";
 					vehicle="B_soldier_repair_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -1589,7 +1589,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15104.616,17.91,17191.629};
+					position[]={15049.079,17.91,17075.986};
 					azimut=90;
 					special="NONE";
 					id=71;
@@ -1606,7 +1606,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=218;
+		items=219;
 		class Item0
 		{
 			position[]={23375.334,12.825771,19807.545};
@@ -3956,6 +3956,15 @@ class Mission
 			vehicle="Land_runway_edgelight";
 			skill=0.60000002;
 		};
+		class Item218
+		{
+			position[]={11563.192,23.248829,11897.21};
+			id=290;
+			side="EMPTY";
+			vehicle="Windsock_01_F";
+			skill=0.60000002;
+			init="this allowdamage false;";
+		};
 	};
 	class Markers
 	{
@@ -5184,21 +5193,11 @@ class Mission
 		};
 		class Item164
 		{
-			position[]={15094.694,17.91,17181.412};
+			position[]={15007.556,17.91,17076.705};
 			name="Ammo_Supply_drop";
 			type="Empty";
 		};
 		class Item165
-		{
-			position[]={15105.012,17.91,17191.764};
-			name="cont";
-			text="Контейнеры";
-			type="hd_destroy";
-			colorName="ColorOrange";
-			a=0.69999999;
-			b=0.69999999;
-		};
-		class Item166
 		{
 			position[]={5768.4194,222.50842,20082.279};
 			name="vehService_2_1_1";
@@ -5208,7 +5207,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item167
+		class Item166
 		{
 			position[]={13646.714,15.544265,12264.02};
 			name="sm36";
@@ -5217,7 +5216,7 @@ class Mission
 			a=100;
 			b=100;
 		};
-		class Item168
+		class Item167
 		{
 			position[]={13504.448,10.999852,12013.117};
 			name="sm37";
@@ -5226,7 +5225,7 @@ class Mission
 			a=100;
 			b=100;
 		};
-		class Item169
+		class Item168
 		{
 			position[]={13349.25,22.262657,11826.881};
 			name="sm38";
@@ -5235,7 +5234,7 @@ class Mission
 			a=100;
 			b=100;
 		};
-		class Item170
+		class Item169
 		{
 			position[]={8528.4961,86.046898,25249.904};
 			name="sm39";
@@ -5244,7 +5243,7 @@ class Mission
 			a=100;
 			b=100;
 		};
-		class Item171
+		class Item170
 		{
 			position[]={11579.062,23.204199,11907.399};
 			name="Repair_1_1";
@@ -5254,6 +5253,16 @@ class Mission
 			a=0.5;
 			b=0.5;
 			angle=-187.185;
+		};
+		class Item171
+		{
+			position[]={15018.827,17.91,17076.086};
+			name="m_mod";
+			text="Модули";
+			type="mil_warning";
+			colorName="ColorOrange";
+			a=0.5;
+			b=0.5;
 		};
 	};
 	class Sensors
