@@ -119,9 +119,9 @@ private ["_x","_targetTrigger","_surrenderTrigger","_aGroup","_bGroup","_cGroup"
 	//---------- COMMON
 	
 	{ _x lock 3 } forEach [_obj1,_obj2,_obj3];
-	[(units _aGroup)] call QS_fnc_setSkill2;
-	[(units _bGroup)] call QS_fnc_setSkill2;
-	[(units _cGroup)] call QS_fnc_setSkill2;
+	[(units _aGroup)] call QS_fnc_setSkill4;
+	[(units _bGroup)] call QS_fnc_setSkill4;
+	[(units _cGroup)] call QS_fnc_setSkill4;
 	
 //--------------------------------------------------------------------------- ADD ACTION TO OBJECTIVE. NOTE: NEEDS WORK STILL. avoid BIS_fnc_MP! Good enough for now though.
 	
