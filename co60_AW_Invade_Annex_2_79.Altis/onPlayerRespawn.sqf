@@ -21,4 +21,4 @@ if (_iampilot) then {
 
 //====================== Clear vehicle inventory
 inventory_cleared = false;
-player addAction ["<t color='#2196F3'>&#160;&#160;• Освободить грузотсек</t>", QS_fnc_actionClearInventory, [] ,-96, false, false, '', '[] call QS_fnc_conditionClearInventory'];
+player addAction ["<t color='#2196F3'>&#160;&#160;• Освободить грузотсек</t>", QS_fnc_actionClearInventory, [], -96, false, false, '', '[] call QS_fnc_conditionClearInventory'];
