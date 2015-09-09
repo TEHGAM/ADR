@@ -26,6 +26,7 @@ if (isNull _u) exitWith {};
 //============================================= ARRAYS
 
 _ghosthawk = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"]; 			// ghosthawk
+_m900 = ["C_Heli_Light_01_civil_F"];											// M900
 _strider = ["I_MRAP_03_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F"];					// strider
 _wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9
 _orca = ["O_Heli_Light_02_unarmed_F"];											// Orca
@@ -43,7 +44,15 @@ if (_t in _strider) then {
 //===== bee skin
 
 if(_t in _wasp) then {
-	_u setObjectTextureGlobal [0,'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_wasp_co.paa']; 
+	_u setObjectTextureGlobal [0,'A3\air_f\Heli_Light_01\Data\skins\heli_light_01_ext_wasp_co.paa']; 
+	_u addWeapon "CMFlareLauncher"; 
+	_u addMagazine "168Rnd_CMFlare_Chaff_Magazine";
+};
+
+//===== m900
+
+if(_t in _m900) then {
+	_u setObjectTextureGlobal [0,'A3\Air_F\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa'];
 	_u addWeapon "CMFlareLauncher"; 
 	_u addMagazine "168Rnd_CMFlare_Chaff_Magazine";
 };
