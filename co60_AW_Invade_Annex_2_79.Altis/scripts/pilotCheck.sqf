@@ -35,6 +35,7 @@ _aircraft_nopilot = [
 "I_Heli_Transport_02_F",			//Мохаук
 "I_Heli_light_03_unarmed_F",		//Хелкат транспортный
 "I_Heli_light_03_F",				//Хелкат боевой
+"B_Heli_Light_01_F",				//Хамингберд
 // Самолеты
 "B_Plane_CAS_01_F",					//А10
 "O_Plane_CAS_02_F",					//Неофрон

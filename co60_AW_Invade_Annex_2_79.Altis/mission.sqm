@@ -61,7 +61,8 @@ class Mission
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Structures_F_Heli_Ind_AirPort",
 		"A3_Armor_F_Slammer",
-		"3DEN"
+		"3DEN",
+		"A3_Air_F_Heli_Heli_Light_01"
 	};
 	addOnsAuto[]=
 	{
@@ -118,6 +119,7 @@ class Mission
 		"A3_Air_F_EPB_Heli_Light_03",
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Structures_F_Heli_Ind_AirPort",
+		"A3_Air_F_Heli_Heli_Light_01",
 		"a3_map_altis"
 	};
 	randomSeed=12935265;
@@ -1606,7 +1608,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=219;
+		items=221;
 		class Item0
 		{
 			position[]={23375.334,12.825771,19807.545};
@@ -3964,6 +3966,29 @@ class Mission
 			vehicle="Windsock_01_F";
 			skill=0.60000002;
 			init="this allowdamage false;";
+		};
+		class Item219
+		{
+			position[]={15204.563,17.917305,17255.479};
+			azimut=260;
+			id=291;
+			side="EMPTY";
+			vehicle="Land_HelipadCivil_F";
+			skill=0.60000002;
+			syncId=10;
+			synchronizations[]={10};
+		};
+		class Item220
+		{
+			position[]={15205.073,17.916742,17255.057};
+			azimut=315;
+			id=292;
+			side="EMPTY";
+			vehicle="C_Heli_Light_01_civil_F";
+			leader=1;
+			skill=0.60000002;
+			init="0 = [this,300,305,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
+			description="Пилот";
 		};
 	};
 	class Markers
