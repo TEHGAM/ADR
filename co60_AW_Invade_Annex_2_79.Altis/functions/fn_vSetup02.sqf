@@ -27,8 +27,8 @@ if (isNull _u) exitWith {};
 
 _gh_huron = ["B_Heli_Transport_01_camo_F", "B_Heli_Transport_01_F", "B_Heli_Transport_03_F"]; 			// ghosthawk and huron
 _m900 = ["C_Heli_Light_01_civil_F"];											// M900
-_strider = ["I_MRAP_03_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F"];					// strider
-_wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9
+_strider = ["I_MRAP_03_F", "I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"];					// strider
+_wasp = ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F"];						// MH-9
 _orca = ["O_Heli_Light_02_unarmed_F"];											// Orca
 _uav = ["B_UAV_02_CAS_F", "B_UAV_02_F", "B_UGV_01_F", "B_UGV_01_rcws_F"];			// UAVs
 _noAmmoCargo = ["B_APC_Tracked_01_CRV_F", "B_Truck_01_ammo_F"];					// Bobcat CRV
