@@ -13,7 +13,7 @@ Description:
 	Add action condition for pilot control of UH80 turrets
 _______________________________________________________________*/
 
-private ["_c","_v","_type"];
+private ["_c", "_v", "_type"];
 
 _c = false;
 _v = vehicle player;

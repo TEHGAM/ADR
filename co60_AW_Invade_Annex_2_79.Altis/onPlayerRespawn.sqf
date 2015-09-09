@@ -15,10 +15,10 @@ _iampilot = ({typeOf player == _x} count _pilots) > 0;
 
 if (_iampilot) then {
 	//===== HELI TURRETS LOCK
-	player addAction ["<t color='#FF9800'>&#160;&#160;• Разрешить стрельбу</t>", QS_fnc_uh80TurretActions, [0], -94, FALSE, FALSE, '', '[] call QS_fnc_conditionUH80TurretActionUnlock'];
-	player addAction ["<t color='#FF9800'>&#160;&#160;• Запретить стрельбу</t>", QS_fnc_uh80TurretActions, [1], -95, FALSE, FALSE, '', '[] call QS_fnc_conditionUH80TurretActionLock'];
+	player addAction ["<t color='#FF9800'>&#160;&#160;• Разрешить стрельбу</t>", QS_fnc_uh80TurretActions, [0], -94, false, false, '', '[] call QS_fnc_conditionUH80TurretActionUnlock'];
+	player addAction ["<t color='#FF9800'>&#160;&#160;• Запретить стрельбу</t>", QS_fnc_uh80TurretActions, [1], -95, false, false, '', '[] call QS_fnc_conditionUH80TurretActionLock'];
 };
 
 //====================== Clear vehicle inventory
-inventory_cleared = FALSE;
-player addAction ["<t color='#2196F3'>&#160;&#160;• Освободить грузотсек</t>",QS_fnc_actionClearInventory,[],-96,FALSE,FALSE,'','[] call QS_fnc_conditionClearInventory'];
+inventory_cleared = false;
+player addAction ["<t color='#2196F3'>&#160;&#160;• Освободить грузотсек</t>", QS_fnc_actionClearInventory, [] ,-96, false, false, '', '[] call QS_fnc_conditionClearInventory'];

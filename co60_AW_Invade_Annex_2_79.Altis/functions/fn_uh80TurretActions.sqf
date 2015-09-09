@@ -16,7 +16,7 @@ Description:
 	_v setVariable ["turretR_locked",FALSE,TRUE];
 _______________________________________________*/
 
-private ["_array","_v","_lock"];
+private ["_array", "_v", "_lock"];
 
 _array = _this select 3;
 
