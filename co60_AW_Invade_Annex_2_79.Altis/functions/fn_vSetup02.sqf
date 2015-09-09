@@ -25,12 +25,12 @@ if (isNull _u) exitWith {};
 
 //============================================= ARRAYS
 
-_ghosthawk = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"]; 			// ghosthawk
-_strider = ["I_MRAP_03_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F"];					// strider
-_wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9
+_gh_huron = ["B_Heli_Transport_01_camo_F", "B_Heli_Transport_01_F", "B_Heli_Transport_03_F"]; 			// ghosthawk and huron
+_strider = ["I_MRAP_03_F", "I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"];					// strider
+_wasp = ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F"];						// MH-9
 _orca = ["O_Heli_Light_02_unarmed_F"];											// Orca
-_uav = ["B_UAV_02_CAS_F","B_UAV_02_F","B_UGV_01_F","B_UGV_01_rcws_F"];			// UAVs
-_noAmmoCargo = ["B_APC_Tracked_01_CRV_F","B_Truck_01_ammo_F"];					// Bobcat CRV
+_uav = ["B_UAV_02_CAS_F", "B_UAV_02_F", "B_UGV_01_F", "B_UGV_01_rcws_F"];			// UAVs
+_noAmmoCargo = ["B_APC_Tracked_01_CRV_F", "B_Truck_01_ammo_F"];					// Bobcat CRV
 
 //============================================= SORT
 //===== strider nato skin
@@ -63,4 +63,10 @@ if (_t in _uav) then {
 		sleep 2;
 		createVehicleCrew _u;
 	};
+};
+
+//===== Turret locking system
+
+if (_t in _gh_huron) then {
+	_u setVariable ["turrets_locked", false, true];
 };
