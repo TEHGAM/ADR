@@ -18,7 +18,7 @@ Notes:
 	
 ______________________________________________*/
 
-private ["_target1","_target2","_target3","_target4","_targetArray","_pos","_i","_position","_flatPos","_roughPos","_targetStartText","_targets","_targetsLeft","_dt","_enemiesArray","_unitsArray","_radioTowerDownText","_targetCompleteText","_regionCompleteText","_null","_mines","_chance"];
+private ["_target1","_target2","_target3","_target4","_targetArray","_pos","_i","_position","_flatPos","_roughPos","_targetStartText","_targets","_targetsLeft","_dt","_enemiesArray","_unitsArray","_radioTowerDownText","_targetCompleteText","_regionCompleteText","_null","_mines","_chance","_tower"];
 eastSide = createCenter east;
 
 //---------------------------------------------- AO location marker array
@@ -82,11 +82,17 @@ while { count _targetArray > 0 } do {
 		0
 	];
 
-	radioTower = "Land_TTowerBig_2_F" createVehicle _flatPos;
+	_tower = ["Land_TTowerBig_1_F", "Land_TTowerBig_2_F"] call BIS_fnc_selectRandom;
+	radioTower = _tower createVehicle _flatPos;
 	waitUntil { sleep 0.5; alive radioTower };
 	radioTower setVectorUp [0,0,1];
 	radioTowerAlive = true; publicVariable "radioTowerAlive";
 	{ _x setMarkerPos _roughPos; } forEach ["radioMarker", "radioCircle"];
+	radioTower addEventHandler ["HandleDamage", {
+			if (((_this select 4) == "SatchelCharge_Remote_Ammo") or ((_this select 4) == "DemoCharge_Remote_Ammo")) then {
+				radioTower setDamage (_this select 2);
+			};
+	}];
 
 	//-----------------------------------------------Spawn minefield
 	
