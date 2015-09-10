@@ -2,7 +2,7 @@
 
 B_Soldier_SL_F				Командир отделения				4
 B_recon_TL_F					Командир разведгруппы			1
-B_medic_F						  Медик							        4
+B_medic_F							Медик							        4
 B_recon_medic_F				Разведчик-санитар				  3
 B_soldier_AR_F				Пулеметчик						    5
 B_Soldier_GL_F				Гренадер					      	4
