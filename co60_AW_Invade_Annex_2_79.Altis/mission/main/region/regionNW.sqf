@@ -18,7 +18,7 @@ Notes:
 	
 ______________________________________________*/
 
-private ["_target1","_target2","_target3","_target4","_targetArray","_pos","_i","_position","_flatPos","_roughPos","_targetStartText","_targets","_targetsLeft","_dt","_enemiesArray","_unitsArray","_radioTowerDownText","_targetCompleteText","_regionCompleteText","_null","_mines","_chance","_tower"];
+private ["_target1","_target2","_target3","_target4","_targetArray","_pos","_i","_position","_flatPos","_roughPos","_targetStartText","_targets","_targetsLeft","_dt","_enemiesArray","_unitsArray","_radioTowerDownText","_targetCompleteText","_regionCompleteText","_null","_mines","_chance","_tower","_tower_dmg"];
 eastSide = createCenter east;
 
 //---------------------------------------------- AO location marker array
@@ -88,11 +88,17 @@ while { count _targetArray > 0 } do {
 	radioTower setVectorUp [0,0,1];
 	radioTowerAlive = true; publicVariable "radioTowerAlive";
 	{ _x setMarkerPos _roughPos; } forEach ["radioMarker", "radioCircle"];
-	radioTower addEventHandler ["HandleDamage", {
-			if (((_this select 4) == "SatchelCharge_Remote_Ammo") or ((_this select 4) == "DemoCharge_Remote_Ammo")) then {
-				radioTower setDamage (_this select 2);
+	radioTower addEventHandler
+	[
+		"HandleDamage",
+		{
+			_tower_dmg = 0;
+			if (((_this select 4) == "SatchelCharge_Remote_Ammo") or ((_this select 4) == "DemoCharge_Remote_Ammo") or ((_this select 4) == "")) then {
+				_tower_dmg = (_this select 2);
 			};
-	}];
+			_tower_dmg;
+		}
+	];
 
 	//-----------------------------------------------Spawn minefield
 	
