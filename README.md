@@ -5,7 +5,7 @@
          alt="Annex Done Right" />
   </a>
 </p>
-<h1 align="center">Anned Done Right</h1>
+<h1 align="center">Annex Done Right</h1>
 <p align="center">
   <a href="https://github.com/TEHGAM/ADR/wiki/ADR:-History">
     <img src="http://img.shields.io/badge/Version-3.4.5-blue.svg?style=flat"

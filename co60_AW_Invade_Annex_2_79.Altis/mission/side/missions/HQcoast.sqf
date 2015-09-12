@@ -62,7 +62,7 @@ private ["_flatPos","_accepted","_position","_randomDir","_x","_briefing","_enem
 	boat setDir random 360;
 		"O_diver_TL_F" createUnit [_boatPos,_smuggleGroup]; "O_diver_F" createUnit [_boatPos,_smuggleGroup]; "O_diver_F" createUnit [_boatPos,_smuggleGroup]; "O_diver_F" createUnit [_boatPos,_smuggleGroup]; "O_diver_F" createUnit [_boatPos,_smuggleGroup];
 		((units _smuggleGroup) select 0) assignAsCommander boat; ((units _smuggleGroup) select 0) moveInCommander boat; ((units _smuggleGroup) select 1) assignAsDriver boat; ((units _smuggleGroup) select 1) moveInDriver boat; ((units _smuggleGroup) select 2) assignAsGunner boat; ((units _smuggleGroup) select 2) moveInGunner boat; ((units _smuggleGroup) select 3) assignAsCargo boat; ((units _smuggleGroup) select 3) moveInCargo boat; ((units _smuggleGroup) select 4) assignAsCargo boat; ((units _smuggleGroup) select 4) moveInCargo boat;
-	[(units _smuggleGroup)] call QS_fnc_setSkill2;
+	[(units _smuggleGroup)] call QS_fnc_setSkill4;
 	
 	_unitsArray = [_smuggleGroup];
 

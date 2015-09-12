@@ -19,7 +19,7 @@ _backpackRestricted = ["O_Mortar_01_support_F","I_Mortar_01_support_F","O_Mortar
 _basePos = getMarkerPos "respawn_west";
 
 _szmkr = getMarkerPos "safezone_marker";
-#define SZ_RADIUS 300
+#define SZ_RADIUS 500
 
 _EHFIRED = {
 	deleteVehicle (_this select 6);

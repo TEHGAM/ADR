@@ -16,7 +16,7 @@ _______________________________________________*/
 
 //============================================= CONFIG
 
-private ["_u","_t"];
+private ["_u", "_t"];
 
 _u = _this select 0;
 _t = typeOf _u;
@@ -25,21 +25,15 @@ if (isNull _u) exitWith {};
 
 //============================================= ARRAYS
 
-_ghosthawk = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"]; 			// ghosthawk
-_strider = ["I_MRAP_03_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F"];					// strider
-_blackVehicles = ["B_Heli_Light_01_armed_F"];									// black skin
-_wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9
+_gh_huron = ["B_Heli_Transport_01_camo_F", "B_Heli_Transport_01_F", "B_Heli_Transport_03_F"]; 			// ghosthawk and huron
+_m900 = ["C_Heli_Light_01_civil_F"];											// M900
+_strider = ["I_MRAP_03_F", "I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"];					// strider
+_wasp = ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F"];						// MH-9
 _orca = ["O_Heli_Light_02_unarmed_F"];											// Orca
-_uav = ["B_UAV_02_CAS_F","B_UAV_02_F","B_UGV_01_F","B_UGV_01_rcws_F"];			// UAVs
-_noAmmoCargo = ["B_APC_Tracked_01_CRV_F","B_Truck_01_ammo_F"];					// Bobcat CRV
+_uav = ["B_UAV_02_CAS_F", "B_UAV_02_F", "B_UGV_01_F", "B_UGV_01_rcws_F"];			// UAVs
+_noAmmoCargo = ["B_APC_Tracked_01_CRV_F", "B_Truck_01_ammo_F"];					// Bobcat CRV
 
 //============================================= SORT
-//===== black camo
-
-if (_t in _blackVehicles) then {
-	for "_i" from 0 to 9 do {_u setObjectTextureGlobal [_i,"#(argb,8,8,3)color(0,0,0,0.6)"];};
-};
-
 //===== strider nato skin
 
 if (_t in _strider) then {
@@ -50,7 +44,15 @@ if (_t in _strider) then {
 //===== bee skin
 
 if(_t in _wasp) then {
-	_u setObjectTextureGlobal [0,'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_wasp_co.paa']; 
+	_u setObjectTextureGlobal [0,'A3\air_f\Heli_Light_01\Data\skins\heli_light_01_ext_wasp_co.paa']; 
+	_u addWeapon "CMFlareLauncher"; 
+	_u addMagazine "168Rnd_CMFlare_Chaff_Magazine";
+};
+
+//===== m900
+
+if(_t in _m900) then {
+	_u setObjectTextureGlobal [0,'A3\Air_F\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa'];
 	_u addWeapon "CMFlareLauncher"; 
 	_u addMagazine "168Rnd_CMFlare_Chaff_Magazine";
 };
@@ -59,14 +61,6 @@ if(_t in _wasp) then {
 
 if(_t in _orca) then {
 	_u setObjectTextureGlobal [0,'A3\Air_F\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa'];
-};
-
-//===== remove ammo cargo
-
-if (PARAMS_VehicleAmmoCargo == 0) then {
-	if (_t in _noAmmoCargo) then {
-		_u setAmmoCargo 0;
-	};
 };
 
 //===== UAV respawn fixer
@@ -78,4 +72,10 @@ if (_t in _uav) then {
 		sleep 2;
 		createVehicleCrew _u;
 	};
+};
+
+//===== Turret locking system
+
+if (_t in _gh_huron) then {
+	_u setVariable ["turrets_locked", false, true];
 };

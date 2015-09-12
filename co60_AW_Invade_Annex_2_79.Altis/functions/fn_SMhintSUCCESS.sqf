@@ -1,25 +1,19 @@
-	private ["_veh","_vehName","_vehVarname","_completeText","_reward","_GAU","_mortar","_GMG","_HEL","_CAS"];
+	private ["_veh","_vehName","_vehVarname","_completeText","_reward","_GAU","_mortar","_GMG","_HEL"];
 smRewards =
 [
 	["То-199 «Неофрон» (штурмовик)", "O_Plane_CAS_02_F"],
 	["А-164 «Вайпаут» (штурмовик)", "B_Plane_CAS_01_F"],
-	["A-143 «Буззард» (штурмовик) UP", "I_Plane_Fighter_03_CAS_F"],
-	["MQ4A «Грейхок»", "B_UAV_02_F"],
+	["A-143 «Буззард» (штурмовик)", "I_Plane_Fighter_03_CAS_F"],
 	["Ми-48 «Кайман»", "O_Heli_Attack_02_black_F"],
 	["AH-99 «Блэкфут»", "B_Heli_Attack_01_F"],
 	["ПО-30 «Касатка»", "O_Heli_Light_02_F"],
 	["AFV-4 «Горгона»", "I_APC_Wheeled_03_cannon_F"],
-	["AFV-4 «Горгона»", "I_APC_Wheeled_03_cannon_F"],
-	["БТР-К «Камыш»", "O_APC_Tracked_02_cannon_F"],
 	["БТР-К «Камыш»", "O_APC_Tracked_02_cannon_F"],
 	["ЗСУ-39 «Тигр»", "O_APC_Tracked_02_AA_F"],
-	["ЗСУ-39 «Тигр»", "O_APC_Tracked_02_AA_F"],
-	["IFV-6a «Гепард»", "B_APC_Tracked_01_AA_F"],
 	["IFV-6a «Гепард»", "B_APC_Tracked_01_AA_F"],
 	["T-100 «Варсук»", "O_MBT_02_cannon_F"],
 	["MBT-52 «Кума»", "I_MBT_03_cannon_F"],
-	["M2A4 «Сламмер» UP ", "B_MBT_01_TUSK_F"],
-	["MSE-3 «Марид»", "O_APC_Wheeled_02_rcws_F"],
+	["M2A4 «Сламмер» UP", "B_MBT_01_TUSK_F"],
 	["MSE-3 «Марид»", "O_APC_Wheeled_02_rcws_F"],
 	["Страйдер с пулеметом", "I_MRAP_03_hmg_F"],
 	["Страйдер с гранотометом", "I_MRAP_03_gmg_F"],
@@ -78,15 +72,6 @@ if (_reward isKindOf "I_Heli_light_03_F") exitWith {
 	_HEL setDir 284;
 	_reward setPos [(random 1000),(random 1000),(10000 + (random 20000))];
 	_reward setDamage 1;
-	_HEL addMagazine ("24Rnd_missiles");
-	_HEL addMagazine ("24Rnd_missiles");
-};
-if (_reward isKindOf "I_Plane_Fighter_03_CAS_F") exitWith {
-	_CAS = createVehicle ["I_Plane_Fighter_03_CAS_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
-	_CAS setDir 284;
-	_reward setPos [(random 1000),(random 1000),(10000 + (random 20000))];
-	_reward setDamage 1;
-	_CAS addMagazine ("2Rnd_LG_scalpel");
-	_CAS addMagazine ("2Rnd_AAA_missiles");
-	_CAS addMagazine ("300Rnd_20mm_shells");
+	_HEL addWeapon ("autocannon_35mm");
+	_HEL addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
 };
