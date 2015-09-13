@@ -92,10 +92,15 @@ while { count _targetArray > 0 } do {
 	[
 		"HandleDamage",
 		{
-			_tower_dmg = 0;
+			_tower_dmg = damage (_this select 0);
 			if (((_this select 4) == "SatchelCharge_Remote_Ammo") or ((_this select 4) == "DemoCharge_Remote_Ammo") or ((_this select 4) == "")) then {
 				_tower_dmg = (_this select 2);
 			};
+
+			//====== DEBUG
+			//[format ["TOWER_DEBUG: src <%2> | ammo <%3> | in <%1> | out <%4>", _this select 2, _this select 3, _this select 4, _tower_dmg], "systemChat"] call BIS_fnc_MP;
+			diag_log format ["TOWER_DEBUG: src <%2> | ammo <%3> | in <%1> | out <%4>", _this select 2, _this select 3, _this select 4, _tower_dmg];
+
 			_tower_dmg;
 		}
 	];
