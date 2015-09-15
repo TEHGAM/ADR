@@ -105,7 +105,7 @@
     <img src="http://img.shields.io/badge/License-MIT-red.svg?style=flat"
          alt="License" />
   </a>
-    <a href="http://www.tehgam.com/viewforum.php?f=36">
+    <a href="http://www.tehgam.com/">
     <img src="https://img.shields.io/badge/TEHGAM-Forum-lightgrey.svg?style=flat"
          alt="Forum" />
   </a>
