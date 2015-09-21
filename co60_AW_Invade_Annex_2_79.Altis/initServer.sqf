@@ -44,6 +44,7 @@ for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
 
 if (PARAMS_AO == 1) then { _null = [] execVM "mission\main\missionControl.sqf"; };						// Main AO
 if (PARAMS_SideObjectives == 1) then { _null = [] execVM "mission\side\missionControl.sqf"; };			// Side Objectives
+if (PARAMS_InfantryObjectives == 1) then { _null = [] execVM "mission\infantry\missionControl.sqf"; };  // Infantry Special Operation          
 _null = [] execVM "scripts\eos\OpenMe.sqf";																// EOS (urban mission and defend AO)
 _null = [] execVM "scripts\misc\airbaseDefense.sqf";													// Airbase air defense
 _null = [] execVM "scripts\misc\clearBodies.sqf";														// clear bodies around island
