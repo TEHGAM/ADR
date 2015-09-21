@@ -6,7 +6,9 @@ class QS
 		file = "functions";
 		class actionClearInventory {};
 		class addAction {};
+		class addActionGetData {};
 		class addActionGetIntel {};
+        class addActionSabotage {};
 		class addActionSurrender {};
 		class AOdelete {};
 		class AOenemy {};
@@ -19,6 +21,7 @@ class QS
 		class garrisonFortEAST {};
 		class garrisonFortFIA {};
 		class garrisonFortIND {};
+		class InfantryhintSUCCESS {};
 		class loadInventory {};
 		class PTenemyEAST {};
 		class removeAction {};

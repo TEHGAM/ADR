@@ -4040,7 +4040,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=172;
+		items=174;
 		class Item0
 		{
 			position[]={-15683.114,0.0011896361,-3827.8438};
@@ -5335,6 +5335,7 @@ class Mission
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
+		};
         class Item172
 		{
 			position[]={-15683.114,0.0011896361,-3827.8438};
