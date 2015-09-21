@@ -19,7 +19,7 @@ class Header
 
 //------------------------- Admin
 
-enableDebugConsole = 0;									// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
+enableDebugConsole = 1;									// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
 allowFunctionsLog = 0; 									// Log functions to .rpt. disabled with 0
 
 //------------------------- Misc
@@ -94,6 +94,13 @@ class Params
 
 		class SideObjectives {
 				title = "Включть дополнительные задания?";
+				values[] = {1,0};
+				texts[] = {"Enabled","Disabled"};
+				default = 1;
+			};
+
+	    class InfantryObjectives {
+				title = "Включть спецоперации?";
 				values[] = {1,0};
 				texts[] = {"Enabled","Disabled"};
 				default = 1;
@@ -388,6 +395,42 @@ class CfgNotifications
 		iconText = "+%2";
 		color[] = {0.38, 0.81, 0.16, 1};
 		priority = 5;
+	};
+
+	class NewInfantryMission
+	{
+		title = "НОВАЯ СПЕЦОПЕРАЦИЯ";
+		iconPicture = "media\images\notificons\sub_objective.paa";
+		description = "%1";
+		color[] = {0, 0.7, 0.93, 1};
+		priority = 7;
+	};
+
+	class NewInfantryMissionFileData
+	{
+		title = "НОВАЯ СПЕЦОПЕРАЦИЯ";
+		iconPicture = "media\images\notificons\laptop.paa";
+		description = "%1";
+		color[] = {0, 0.7, 0.93, 1};
+		priority = 7;
+	};
+
+	class NewInfantryMissionFileDataComplete
+	{
+		title = "СПЕЦОПЕРАЦИЯ ВЫПОЛНЕНА";
+		description = "%1";
+		iconPicture = "media\images\notificons\laptop.paa";
+		color[] = {0.38, 0.81, 0.16, 1};
+		priority = 6;
+	};
+
+	class CompletedInfantryMission
+	{
+		title = "СПЕЦОПЕРАЦИЯ ВЫПОЛНЕНА";
+		iconPicture = "media\images\notificons\sub_objective_completed.paa";
+		description = "%1";
+		color[] = {0, 0.7, 0.93, 1};
+		priority = 7;
 	};
 };
 

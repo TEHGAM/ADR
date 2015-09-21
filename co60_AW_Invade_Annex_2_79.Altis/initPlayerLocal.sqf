@@ -80,3 +80,10 @@ _null = [] execVM "scripts\admin_uid.sqf";
 	"priorityCircle" setMarkerPosLocal (markerPos "priorityCircle");
 	"priorityMarker" setMarkerTextLocal format["Вторичная цель: %1",priorityTargetText];
 };
+
+"infantryMarker" addPublicVariableEventHandler
+{
+	"infantryMarker" setMarkerPosLocal (markerPos "infantryMarker");
+	"infantryCircle" setMarkerPosLocal (markerPos "infantryCircle");
+	"infantryMarker" setMarkerTextLocal format["Спецоперация: %1", infantryMarkerText];
+};

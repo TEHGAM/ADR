@@ -5335,6 +5335,27 @@ class Mission
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
+        class Item172
+		{
+			position[]={-15683.114,0.0011896361,-3827.8438};
+			name="infantryMarker";
+			text="Спецоперация";
+			type="mil_box";
+			colorName="ColorEAST";
+			a=0.5;
+			b=0.5;
+		};
+		class Item173
+		{
+			position[]={-16469.441,0.053718656,-3839.417};
+			name="infantryCircle";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorOPFOR";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
 		};
 	};
 	class Sensors
