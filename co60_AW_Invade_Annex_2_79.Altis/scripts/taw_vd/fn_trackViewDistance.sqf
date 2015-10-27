@@ -17,7 +17,7 @@ while {true} do
     _old = player;
     _old removeAction tawvd_action;
     waitUntil {alive player};
-    tawvd_action = player addAction["<t color='#d63333'>  • Прорисовка</t>",TAWVD_fnc_openTAWVD,[],-99,false,false,"",''];
+    tawvd_action = player addAction["<t color='#d63333'><t color='#d63333'><img image='\a3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_intel_ca.paa' size='1.0'/> Прорисовка</t>",TAWVD_fnc_openTAWVD,[],-98,false,false,"",''];
   };
   [] call TAWVD_fnc_updateViewDistance;
   waitUntil {_recorded != vehicle player || !alive player};
