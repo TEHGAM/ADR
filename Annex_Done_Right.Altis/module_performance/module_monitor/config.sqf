@@ -1,1 +1,0 @@
-pvpfw_monitor_infoOnMap = true;
