@@ -1,7 +1,7 @@
 //------------------------- On Load
 
 author = "Rarek, AhoyWorld, Quiksilver";
-onLoadName = "Invade & Annex 2.79";
+onLoadName = "ADR: Blue Shark (I&A)";
 OnLoadMission = "Версия 3.5.1.1 — редакция TEHGAM.COM.";
 loadScreen = "media\images\loading.paa";
 overviewPicture = "media\images\loading.paa";
