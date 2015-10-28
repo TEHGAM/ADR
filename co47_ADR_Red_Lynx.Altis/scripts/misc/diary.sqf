@@ -777,6 +777,16 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"Red Lynx v4.2.1 (29.10.2015)",
+"
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Исчезает основное оружие.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Игрок исчезает с карты.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Ошибка в прорисовке.
+"
+]];
+
 //Авторы
 player createDiaryRecord ["credits",
 [
