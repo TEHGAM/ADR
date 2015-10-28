@@ -41,6 +41,9 @@ waitUntil {!isNull _reward};
 _reward setDir 284;
 
 GlobalHint = _completeText; publicVariable "GlobalHint"; hint parseText _completeText;
+if (count sideMarkerText == 2) then {
+    sideMarkerText = sideMarkerText select 0;
+};
 showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "showNotification";
 showNotification = ["Reward", format["Ваша команда получила %1!", _vehName]]; publicVariable "showNotification";
 
