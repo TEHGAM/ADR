@@ -6,6 +6,12 @@
 // Show squad management and fill group list boxes
 FUNC(squadmanagementfill) = {
 	private ["_disp", "_units", "_i", "_helper", "_ctrl", "_ctrl2", "_sidegrppl", "_grptxtidc", "_grplbidc", "_grpbutidc", "_grpkickbutidc", "_grpinvitebutidc", "_curgrp", "_leader", "_unitsar", "_name", "_isppp", "_index", "_pic", "_diff", "_invitedPerson", "_invitedGroup", "_show", "_newInvites"];
+
+	if (captive player) then {
+        player setCaptive false;
+        player allowDamage true;
+    };
+
 	disableSerialization;
 	_disp = __uiGetVar(X_SQUADMANAGEMENT_DIALOG);
 	_units = if (isMultiplayer) then {playableUnits} else {switchableUnits};
