@@ -8,6 +8,7 @@ class QS
 		class addAction {};
 		class addActionGetData {};
 		class addActionGetIntel {};
+		class addActionRescue {};
 		class addActionSabotage {};
 		class addActionSurrender {};
 		class AOdelete {};
@@ -18,6 +19,7 @@ class QS
 		class conditionUH80TurretActionUnlock {};
 		class deleteUnits {};
 		class enemyCAS {};
+		class FindPosBuilding {};
 		class garrisonFortFIA {};
 		class garrisonFortIND {};
 		class garrisonFortWEST {};
