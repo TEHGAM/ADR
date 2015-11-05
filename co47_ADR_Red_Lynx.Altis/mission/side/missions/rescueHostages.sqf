@@ -286,16 +286,13 @@ _unitPos = ["UP", "MIDDLE"];
 
 // officer
 _commanderGroup = createGroup ENEMY_SIDE;
-_cargoPos = getPos _cargoHQ;
-if (random 10 > 5) then {
-    _commanderPos = [(_cargoPos select 0), (_cargoPos select 1), (_cargoPos select 2) + 3.5];
-} else {
-    _commanderPos = [(_cargoPos select 0), (_cargoPos select 1), (_cargoPos select 2) + 0.2];
-};
-([INFANTRY_OFFICER] call BIS_fnc_selectRandom) createUnit [[10,10,10], _commanderGroup, "officer = this"];
+
+_posATL = _cargoHQ buildingPos ([1,6] call BIS_fnc_selectRandom);
+_posATL = [(_posATL select 0), (_posATL select 1), ((_posATL select 2) + 0.2)];
+([INFANTRY_OFFICER] call BIS_fnc_selectRandom) createUnit [[1,1,0], _commanderGroup, "officer = this"];
 waitUntil{!isNull officer};
 officer allowDamage false;
-officer setPos _commanderPos;    
+officer setPos _posATL;    
 doStop officer;
 commandStop officer;
 officer disableAI "MOVE";
@@ -304,6 +301,12 @@ officer setDir (random 360);
 officer setUnitPos (_unitPos call BIS_fnc_selectRandom);
 removeHeadgear officer;
 officer addHeadgear "H_Cap_red";
+sleep 0.5;
+_distance = [_posATL, getPos officer] call BIS_fnc_distance2D;
+if (_distance > 100) then {
+    _posATL = [(getPos _cargoHQ), 0, 20, 3, 0, 15, 0] call BIS_fnc_findSafePos;
+    officer setPos _posATL;
+};
 officer allowDamage true;
 
 // guards with static weapons on cargoHQ
@@ -327,7 +330,7 @@ _staticGroup = createGroup ENEMY_SIDE;
     currentGuard allowDamage true;
     _static allowDamage true;
     _static = nil;
-} forEach [5,6,7]; 
+} forEach [5,7]; 
 
 // other guards in cargoHQ
 {
@@ -351,7 +354,7 @@ _staticGroup = createGroup ENEMY_SIDE;
     currentGuard setDir (([currentGuard, _cargoHQ] call BIS_fnc_dirTo) + _y);
     currentGuard setUnitPos (_unitPos call BIS_fnc_selectRandom);  
     currentGuard allowDamage true;
-} forEach [0,1,2,4,8,9,11];  
+} forEach [0,2,3,4,8,9,10,11];  
 
 // guards in small bunkers
 {
@@ -491,7 +494,7 @@ while { sideMissionUp } do {
     };
 
     // officer killed
-    if (!alive officer && _showOfficerMessage) then {   
+    if ((!alive officer || (lifeState officer == "DEAD")) && _showOfficerMessage) then {   
         SM_SUCCESS_OFFICER = true; publicVariable "SM_SUCCESS_OFFICER";    
         if (SM_SUCCESS_HOSTAGES) then {
             hqSideChat = "Вражеский командир уничтожен!"; 
