@@ -80,18 +80,23 @@ _targets = [
 ];
 
 // select correct place for mission
-_accepted = false;
-while {!_accepted} do {    
-    _position = _targets call BIS_fnc_selectRandom;
-    _flatPos  = _position select 1;  
-    _distance = [_flatPos, getMarkerPos currentAO] call BIS_fnc_distance2D;
-    if (_distance > 3000) then {
-        _distance = [_flatPos, getMarkerPos "priorityMarker"] call BIS_fnc_distance2D;
-        if (_distance > 1500) then {
-            _accepted = true;
-        };  
+if (PARAMS_AO == 1) then {
+    _accepted = false;
+    while {!_accepted} do {    
+        _position = _targets call BIS_fnc_selectRandom;
+        _flatPos  = _position select 1;  
+        _distance = [_flatPos, getMarkerPos currentAO] call BIS_fnc_distance2D;
+        if (_distance > 3000) then {
+            _distance = [_flatPos, getMarkerPos "priorityMarker"] call BIS_fnc_distance2D;
+            if (_distance > 1500) then {
+                _accepted = true;
+            };  
+        };
+        sleep 5;
     };
-    sleep 5;
+} else {
+    _position = _targets call BIS_fnc_selectRandom;
+    _flatPos  = _position select 1;
 };
 
 // set zone area
