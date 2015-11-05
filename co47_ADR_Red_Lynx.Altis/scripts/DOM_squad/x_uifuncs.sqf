@@ -9,7 +9,12 @@ FUNC(squadmanagementfill) = {
 
 	if (captive player) then {
         player setCaptive false;
-        player allowDamage true;
+    };
+    
+    _side = EAST; // should be changed to WEST in ADR: Blue Shark mission
+    if (side (group player) != _side || (group player) == grpNull) then {
+        _newGroup = createGroup _side;
+		[player] joinSilent _newGroup;
     };
 
 	disableSerialization;
