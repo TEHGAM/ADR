@@ -1716,7 +1716,7 @@ BTC_revive_loop =
 {
 	while {true} do
 	{
-		sleep 1;
+		sleep 3;
 		if (Alive player && format ["%1",player getVariable "BTC_need_revive"] != "1") then
 		{
 			//hintsilent format ["%1 %2",currentWeaponMode player,currentMagazineDetail player];
