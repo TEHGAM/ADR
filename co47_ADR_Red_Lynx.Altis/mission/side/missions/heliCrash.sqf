@@ -115,10 +115,15 @@ _heliObj setVehicleLock "LOCKED";
 _heliObj lock true;
 sleep 0.5;
 
+_distance = [_heliPos, _startPoint] call BIS_fnc_distance2D;
+if (_distance > 200) then {
+    _fullyRandom = true; 
+}
+
 if (_fullyRandom) then {
     _z = (getPos _heliObj) select 2;
     while {_z < -1 || _z > 2} do {
-        _heliPos = [(_flatPos select 0) + (random 190), (_flatPos select 1) + (random 190), 10];
+        _heliPos = [(_flatPos select 0) + (random 160), (_flatPos select 1) + (random 160), 10];
         _heliObj setPos _heliPos;
         sleep 5;
         _z = (getPos _heliObj) select 2;
