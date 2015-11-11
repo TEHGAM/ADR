@@ -118,7 +118,7 @@ sleep 0.5;
 _distance = [_heliPos, _startPoint] call BIS_fnc_distance2D;
 if (_distance > 200) then {
     _fullyRandom = true; 
-}
+};
 
 if (_fullyRandom) then {
     _z = (getPos _heliObj) select 2;
