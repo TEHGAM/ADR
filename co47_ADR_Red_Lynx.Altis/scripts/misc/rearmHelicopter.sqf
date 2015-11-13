@@ -15,32 +15,30 @@ _veh setFuel 0;
 
 _veh vehicleChat "Перезарядка ...";
 
-sleep 10;
+uiSleep 10;
 
 _veh setVehicleAmmo 1;
 
 //---------- REPAIRING
 
-sleep 2;
+uiSleep 2;
 
 _veh vehicleChat "Ремонт ...";
 
-sleep 10;
+uiSleep 10;
 
 _veh setDamage 0;
 
 //---------- REFUELING
 
-sleep 2;
+uiSleep 2;
 
 _veh vehicleChat "Заправка ...";
 
-sleep 10;
+uiSleep 10;
 
 _veh setFuel 1;
 
 //---------- FINISHED
-
-sleep 2;
 
 _veh vehicleChat "Обслуживание завершено. Приятного полета!";

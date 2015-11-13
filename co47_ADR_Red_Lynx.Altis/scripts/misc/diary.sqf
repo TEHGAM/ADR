@@ -789,6 +789,12 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+"Red Lynx v4.2.2 (13.11.2015)",
+"
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Исправление ошибок дополнительных миссий.
+"
+]];
+
 //Авторы
 player createDiaryRecord ["credits",
 [
