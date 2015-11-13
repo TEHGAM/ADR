@@ -788,7 +788,8 @@ player createDiaryRecord ["changelog",
 <br />- <font color='#FFEB3B'>[Исправлено]</font> Ошибка в прорисовке.
 "
 ]];
-
+player createDiaryRecord ["changelog",
+[
 "Red Lynx v4.2.2 (13.11.2015)",
 "
 <br />- <font color='#FFEB3B'>[Исправлено]</font> Исправление ошибок дополнительных миссий.
