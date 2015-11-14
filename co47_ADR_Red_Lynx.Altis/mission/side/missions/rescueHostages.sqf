@@ -132,9 +132,11 @@ for "_c" from 0 to 109 do {
         if (surfaceIsWater _minePos) then {
             _minePos = [_minePos select 0, _minePos select 1, getTerrainHeightASL _minePos];
             _mine = createMine ["UnderwaterMinePDM", [_minePos select 0, _minePos select 1], [], 0];
+            waitUntil {alive _mine};
             _mine setPosATL [_minePos select 0,_minePos select 1, (getPosATL _mine select 2) - 2];
         } else {
             _mine = createMine ["APERSTripMine", [_minePos select 0, _minePos select 1, 0.1], [], 0];
+            waitUntil {alive _mine};
             _mine setDir (_dir1 + 0.8);
             _pos = getPosATL _mine;
             if (_pos select 2 > 0.2) then {
@@ -142,7 +144,9 @@ for "_c" from 0 to 109 do {
                 _mine setPosATL _pos;
             };
         };
-        _minesArray = _minesArray + [_mine];
+        if (!isNil "_mine") then {
+            _minesArray = _minesArray + [_mine];
+        };
     };
     _dir1 = _dir1 + 3.3;        
     _unitsArray = _unitsArray + [_sign1];
@@ -166,6 +170,7 @@ for "_c" from 0 to 109 do {
     if (surfaceIsWater _minePos) then {
         _minePos = [_minePos select 0, _minePos select 1, getTerrainHeightASL _minePos];
         _mine = createMine ["UnderwaterMine", [_minePos select 0, _minePos select 1], [], 0];
+        waitUntil {alive _mine};
         _mine setPosATL [_minePos select 0,_minePos select 1, (getPosATL _mine select 2) - 2];
     } else {
         _mine = createVehicle ["ATMine", [40,40,40], [], 0, "CAN_COLLIDE"];
@@ -178,7 +183,9 @@ for "_c" from 0 to 109 do {
         };           
     };         
     _dir4 = _dir4 + 3.45;    
-    _unitsArray = _unitsArray + [_mine];
+    if (!isNil "_mine") then {
+        _minesArray = _minesArray + [_mine];
+    };
 
     if (_c <= 56) then {
         _pos2 = [_flatPos, 90, _dir2] call BIS_fnc_relPos;    
@@ -196,13 +203,16 @@ for "_c" from 0 to 109 do {
         if ((random 10) > 2) then {
             _minePos = [_startPoint, 89.8, (_dir2 + 5)] call BIS_fnc_relPos;
             _mine = createMine ["APERSBoundingMine", [_minePos select 0, _minePos select 1, 0.1], [], 0];
+            waitUntil {alive _mine};
             _mine setDir (_dir2 + 1.5);
             _pos = getPosATL _mine;
             if (_pos select 2 > 0.2) then {
                 _pos = [_pos select 0, _pos select 1, 0];
                 _mine setPosATL _pos;
             };
-            _minesArray = _minesArray + [_mine];
+            if (!isNil "_mine") then {
+                _minesArray = _minesArray + [_mine];
+            };
         };
         _dir2 = _dir2 + 6.5;        
         _unitsArray = _unitsArray + [_sign2];
@@ -412,7 +422,7 @@ for "_x" from 1 to 2 do {
     } forEach (units _patrolGroup);
     for "_i" from 0 to 6 do
     {
-        if (_x == 1) then {
+        if (_i == 1) then {
             _initAngle = _initAngle + 45;
         } else {
             _initAngle = _initAngle - 45;
@@ -434,7 +444,9 @@ for "_x" from 1 to 2 do {
 
 // set all mines positions as "known" for enemies
 {
-    ENEMY_SIDE revealMine _x;
+    if ((typeOf _x) isKindOf "TimeBombCore") then {
+        ENEMY_SIDE revealMine _x;
+    };
 } forEach _minesArray;
 
 // set skills and behaviour
