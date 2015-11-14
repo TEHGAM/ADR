@@ -37,6 +37,4 @@ _veh setFuel 1;
 
 //---------- FINISHED
 
-uiSleep 2;
-
 _veh vehicleChat "Обслуживание завершено. Приятного путешествия!";
