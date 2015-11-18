@@ -777,6 +777,26 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"Red Lynx v4.2.1 (29.10.2015)",
+"
+<br />- <font color='#090000'>[Добавлено]</font> Дополнительная миссия Прерванный полёт.
+<br />- <font color='#c40000'>[Удалена]</font> Дополнительная миссия Разведданные.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Исчезает основное оружие.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Игрок исчезает с карты.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Ошибка в прорисовке.
+"
+]];
+player createDiaryRecord ["changelog",
+[
+"Red Lynx v4.2.2 (13.11.2015)",
+"
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Исправление ошибок дополнительных миссий.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Небольшие изменения в ремонте техники, наградной технике.
+"
+]];
+
 //Авторы
 player createDiaryRecord ["credits",
 [

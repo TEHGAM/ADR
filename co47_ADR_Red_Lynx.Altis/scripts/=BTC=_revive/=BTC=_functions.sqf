@@ -31,7 +31,8 @@ BTC_get_gear =
 	_gear = [];
 	_weapons = [];
 	_prim_weap = primaryWeapon _unit;
-	_prim_items = primaryWeaponItems _unit;
+	_prim_magazine = primaryWeaponMagazine _unit;
+	_prim_items = primaryWeaponItems _unit;	
 	_sec_weap = secondaryWeapon _unit;
 	_sec_items = secondaryWeaponItems _unit;
 	_items_assigned = assignedItems _unit;
@@ -95,7 +96,10 @@ BTC_get_gear =
 		_vest_items,
 		_weap_sel,
 		_fire_mode,
-		_ammo
+		_ammo,
+		_prim_weap,
+        _prim_magazine,
+        _prim_items
 	];
 	//diag_log text format ["------------------------------------------",""];
 	//{diag_log text format ["%1",_x]} foreach _gear;
@@ -122,7 +126,10 @@ BTC_set_gear =
 		_vest_items,13
 		_weap_sel,14
 		_fire_mode,15
-		_ammo
+		_ammo, 16
+		_prim_weap, 17
+        _prim_magazine, 18
+        _prim_items
 	];*/
 	_unit = _this select 0;
 	_gear = _this select 1;
@@ -190,6 +197,28 @@ BTC_set_gear =
 	if (count (_gear select 10) > 0) then {{if (_x != "") then {_unit addHandgunItem _x;};} foreach (_gear select 10);};
 	_unit selectweapon (_gear select 14);
 	if ((_gear select 15) != -1) then {player action ["SWITCHWEAPON", player, player, (_gear select 15)];};
+
+    if (_unit == player) then {
+        sleep 0.2;
+        _prim_weapon = _gear select 17;	
+    	_prim_magazine = _gear select 18;
+    	_prim_items = _gear select 19;
+        if (!isDedicated && hasInterface) then {
+            if (!isNil _prim_weapon && {_prim_weapon != ""} && {_prim_weapon != "any"} && {_prim_weapon != (primaryWeapon player)}) then {
+                if (count _prim_magazine > 0) then {
+                	{
+                        player addMagazine _x;
+                    } forEach _prim_magazine;                
+                    player addWeapon _prim_weapon;
+                    sleep 0.1;
+                    if (count _prim_items > 0) then {
+                        player addPrimaryWeaponItem _x;
+                    };
+                };
+    
+            };
+        };
+    };
 };
 
 BTC_fnc_handledamage_gear =
@@ -1145,7 +1174,8 @@ BTC_pull_out_check =
 
 BTC_player_killed = {
 	private ["_type_backpack","_weapons","_magazines","_weapon_backpack","_ammo_backpack","_score","_score_array","_name","_body_marker","_ui"];
-	titleText ["", "BLACK OUT"];
+	BTC_gear = [player] call BTC_get_gear;
+	titleText ["", "BLACK OUT"];	
 	_body = _this select 0;
 	killed_PrimaryWeapon = primaryWeapon _body;
 	if (!isNil killed_PrimaryWeapon) then {killed_PrimaryWeaponItems = primaryWeaponItems _body;};
@@ -1167,11 +1197,7 @@ BTC_player_killed = {
 			player switchMove "AinjPpneMstpSnonWrflDnon";
 			_actions = [] spawn BTC_assign_actions;
 			[player,[player,"KilledInventory"]] call BIS_fnc_loadInventory;
-			if (!isNil killed_PrimaryWeapon) then {player addWeapon killed_PrimaryWeapon;{player addPrimaryWeaponItem _x;} count killed_PrimaryWeaponItems;};
-			sleep 0.1;
-			killed_PrimaryWeapon = nil;
-			killed_PrimaryWeaponItems = nil;
-			
+			if (!isNil killed_PrimaryWeapon) then {player addWeapon killed_PrimaryWeapon;{player addPrimaryWeaponItem _x;} count killed_PrimaryWeaponItems;};	
 			WaitUntil {animationstate player == "ainjppnemstpsnonwrfldnon"};
 			sleep 2;
 			player setDir _dir;
@@ -1181,9 +1207,7 @@ BTC_player_killed = {
 			_side = playerSide;
 			_injured = player;
 			if (BTC_injured_marker == 1) then {BTC_marker_pveh = [0,BTC_side,_pos,_body_marker];publicVariable "BTC_marker_pveh";};
-			disableUserInput true;
-
-			
+			disableUserInput true;			
 			for [{_n = BTC_revive_time_min}, {_n > 0 && player getVariable "BTC_need_revive" == 1}, {_n = _n - 0.5}] do
 			{
 				if (BTC_active_lifes == 1) then {titleText [format ["Осталось возрождений: %1",BTC_lifes], "BLACK FADED"];} else {titleText ["", "BLACK FADED"];};
@@ -1270,6 +1294,26 @@ BTC_player_killed = {
 			//player switchMove "";
 			player allowDamage true;
 			hintSilent "";
+            sleep 0.2;
+            _currentPrimaryWeapon = primaryWeapon player;
+            if ((isNil _currentPrimaryWeapon || _currentPrimaryWeapon == "any") && {!isDedicated} && {hasInterface} && {alive player}) then {			                    
+                _prim_weapon = BTC_gear select 17;	
+    	        _prim_magazine = BTC_gear select 18;
+    	        _prim_items =BTC_gear select 19;
+                if (!isNil _prim_weapon && {_prim_weapon != ""} && {_prim_weapon != "any"}) then {
+                    if (count _prim_magazine > 0) then {
+                    	{
+                            player addMagazine _x;
+                        } forEach _prim_magazine; 
+                    };   
+                    sleep 0.1;            
+                    player addWeaponGlobal _prim_weapon;
+                    sleep 0.1;
+                    if (count _prim_items > 0) then {
+                        player addPrimaryWeaponItem _x;
+                    };                    
+                };
+            };
 		};
 	};
 };
@@ -1672,7 +1716,7 @@ BTC_revive_loop =
 {
 	while {true} do
 	{
-		sleep 1;
+		sleep 3;
 		if (Alive player && format ["%1",player getVariable "BTC_need_revive"] != "1") then
 		{
 			//hintsilent format ["%1 %2",currentWeaponMode player,currentMagazineDetail player];

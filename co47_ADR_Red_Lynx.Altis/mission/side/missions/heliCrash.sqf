@@ -65,18 +65,23 @@ _targets = [
 ];
 
 // select correct place for mission
-_accepted = false;
-while {!_accepted} do {    
-	_position = _targets call BIS_fnc_selectRandom;
-	_flatPos  = _position select 1;	 
-	_distance = [_flatPos, getMarkerPos currentAO] call BIS_fnc_distance2D;
-    if (_distance > 3000) then {
-        _distance = [_flatPos, getMarkerPos "priorityMarker"] call BIS_fnc_distance2D;
-        if (_distance > 1500) then {
-            _accepted = true;
-        };	
-	};
-	sleep 5;
+if (PARAMS_AO == 1) then {
+    _accepted = false;
+    while {!_accepted} do {    
+        _position = _targets call BIS_fnc_selectRandom;
+        _flatPos  = _position select 1;  
+        _distance = [_flatPos, getMarkerPos currentAO] call BIS_fnc_distance2D;
+        if (_distance > 3000) then {
+            _distance = [_flatPos, getMarkerPos "priorityMarker"] call BIS_fnc_distance2D;
+            if (_distance > 1500) then {
+                _accepted = true;
+            };  
+        };
+        sleep 5;
+    };
+} else {
+    _position = _targets call BIS_fnc_selectRandom;
+    _flatPos  = _position select 1;
 };
 
 // set zone area
@@ -110,10 +115,15 @@ _heliObj setVehicleLock "LOCKED";
 _heliObj lock true;
 sleep 0.5;
 
+_distance = [_heliPos, _startPoint] call BIS_fnc_distance2D;
+if (_distance > 200) then {
+    _fullyRandom = true; 
+};
+
 if (_fullyRandom) then {
     _z = (getPos _heliObj) select 2;
     while {_z < -1 || _z > 2} do {
-        _heliPos = [(_flatPos select 0) + (random 190), (_flatPos select 1) + (random 190), 10];
+        _heliPos = [(_flatPos select 0) + (random 160), (_flatPos select 1) + (random 160), 10];
         _heliObj setPos _heliPos;
         sleep 5;
         _z = (getPos _heliObj) select 2;

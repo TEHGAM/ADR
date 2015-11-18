@@ -7,7 +7,7 @@ if (!(_veh isKindOf "plane")) exitWith {
 	_veh vehicleChat "Эта площадка для самолетов!"; 
 };
 
-_veh vehicleChat "Обслуживание займет три минуты.";
+_veh vehicleChat "Обслуживание займет две минуты.";
 
 _veh setFuel 0;
 
@@ -15,7 +15,7 @@ _veh setFuel 0;
 
 _veh vehicleChat "Перезарядка ...";
 
-uiSleep 60;
+uiSleep 40;
 
 _veh setVehicleAmmo 1;
 
@@ -25,7 +25,7 @@ uiSleep 2;
 
 _veh vehicleChat "Ремонт ...";
 
-uiSleep 60;
+uiSleep 40;
 
 _veh setDamage 0;
 
@@ -35,12 +35,10 @@ uiSleep 2;
 
 _veh vehicleChat "Заправка ...";
 
-uiSleep 60;
+uiSleep 40;
 
 _veh setFuel 1;
 
 //---------- FINISHED
-
-uiSleep 2;
 
 _veh vehicleChat "Обслуживание завершено. Приятного полета!";
