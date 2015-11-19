@@ -80,7 +80,7 @@ ammoTruck setDir random 360;
 //-------------------- 3. SPAWN CREW
 _unitsArray = [objNull]; 			// for crew and h-barriers
 
-_priorityGroup = createGroup east;
+_priorityGroup = createGroup west;
 
 "B_officer_F" createUnit [_flatPos, _priorityGroup];
 "B_officer_F" createUnit [_flatPos, _priorityGroup];
