@@ -4,14 +4,15 @@ class Mission
 	addOns[]=
 	{
 		"A3_Modules_F",
-		"A3_Soft_F_Crusher_UGV",
-		"3DEN",
-		"a3_modules_f_curator_curator",
-		"A3_Air_F_Gamma_UAV_02",
+		"A3_Characters_F_OPFOR",
 		"a3_characters_f",
 		"A3_Characters_F_Gamma",
+		"A3_Modules_F_Curator_Curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
+		"A3_Data_F_Curator_Characters",
+		"A3_Soft_F_Crusher_UGV",
+		"A3_Air_F_Gamma_UAV_02",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Structures_F_Mil_BagBunker",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
@@ -20,9 +21,12 @@ class Mission
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Civ_Camping",
 		"A3_Weapons_F_Beta_Ammoboxes",
+		"A3_Soft_F_Gamma_TruckHeavy",
+		"A3_Soft_F_MRAP_02",
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_Boat_F_SDV_01",
 		"A3_Air_F_Heli_Heli_Transport_03",
+		"A3_Soft_F_TruckHeavy",
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Soft_F_MRAP_03",
 		"A3_Air_F_Beta_Heli_Transport_02",
@@ -30,35 +34,26 @@ class Mission
 		"A3_Soft_F_Gamma_Offroad",
 		"a3_soft_f_offroad_01",
 		"A3_Structures_F_Mil_Fortification",
-		"A3_Armor_F_Panther",
 		"A3_Boat_F_Civilian_Boat",
+		"A3_armor_f_beta_APC_Tracked_02",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Civ_Lamps",
 		"A3_Data_F",
 		"a3_roads_f",
 		"A3_Structures_F_Mil_Flags",
 		"A3_Air_F_Heli_Light_02",
+		"A3_Armor_F_Panther",
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
 		"A3_Soft_F_Quadbike",
 		"A3_Supplies_F_Heli_Slingload",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Weapons_F_Bootcamp_Ammoboxes",
-		"A3_Air_F_EPB_Heli_Light_03",
-		"A3_Soft_F_EPC_Truck_03",
-		"A3_Structures_F_Heli_Ind_AirPort",
-		"a3_map_altis",
-		"A3_Characters_F_OPFOR",
-		"A3_Data_F_Curator_Characters",
-		"A3_Soft_F_MRAP_02",
-		"A3_Armor_F_APC_Wheeled_03",
-		"A3_Soft_F_TruckHeavy",
-		"a3_soft_f_gamma_truckheavy",
-		"A3_Armor_F_T100K",
-		"A3_armor_f_beta_APC_Tracked_02",
-		"A3_Characters_F_Mark",
 		"A3_Air_F_Heli_Heli_Light_02",
-		"A3_Armor_F_Marid"
+		"A3_Structures_F_Heli_Ind_AirPort",
+		"A3_Air_F_EPB_Heli_Light_03",
+		"A3_Armor_F_Marid",
+		"a3_map_altis"
 	};
 	addOnsAuto[]=
 	{
@@ -66,8 +61,7 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"a3_characters_f",
 		"A3_Characters_F_Gamma",
-		"3DEN",
-		"a3_modules_f_curator_curator",
+		"A3_Modules_F_Curator_Curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
 		"A3_Data_F_Curator_Characters",
@@ -119,7 +113,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-47 ADR: Red Lynx (AW Invade & Annex)";
-		overviewText="Version 4.2.0";
+		overviewText="Version 4.2.2";
 		timeOfChanges=28800;
 		startWeather=0.55000001;
 		startWind=0.099999994;
@@ -175,7 +169,7 @@ class Mission
 					id=1;
 					side="EAST";
 					vehicle="O_Soldier_SL_F";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
