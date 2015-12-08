@@ -64,7 +64,6 @@ class Mission
 		"A3_Modules_F_Multiplayer",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"A3_Characters_F_Mark",
 		"A3_Characters_F_Gamma",
 		"A3_Air_F_Gamma_UAV_02",
 		"A3_Soft_F_Crusher_UGV",
@@ -116,19 +115,12 @@ class Mission
 		overviewText="Version 4.2.2.1";
 		resistanceWest=0;
 		resistanceEast=1;
-		timeOfChanges=3600;
 		startWeather=0.39999998;
-		startWind=0.099999994;
-		startWindDir=90;
-		startWaves=0.14999999;
-		startGust=0.16;
+		startWind=0;
 		forecastWeather=0.69999999;
-		forecastWind=0.099999994;
-		forecastWaves=0.099999994;
-		rainForced=1;
-		lightningsForced=1;
-		wavesForced=1;
-		windForced=1;
+		forecastFog=0.48999998;
+		forecastWind=0;
+		forecastWaves=0;
 		year=2035;
 		month=7;
 		day=15;
@@ -1167,7 +1159,7 @@ class Mission
 					azimut=135;
 					id=42;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_sniper_F";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -1180,7 +1172,7 @@ class Mission
 					azimut=135;
 					id=43;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_sniper_F";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -1193,7 +1185,7 @@ class Mission
 					azimut=135;
 					id=44;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_sniper_F";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -1206,7 +1198,7 @@ class Mission
 					azimut=135;
 					id=45;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_sniper_F";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -1418,7 +1410,7 @@ class Mission
 					vehicle="B_officer_F";
 					leader=1;
 					skill=0.60000002;
-					init="removeAllWeapons this; this allowDamage false; this enablesimulation false;     this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_h_f.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_m.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_r.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_h_b.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#CDDC39'><img image='\a3\ui_f\data\map\VehicleIcons\iconcrateammo_ca.paa' size='1.0'/> Запросить ящик с боеприпасами</t>"",""scripts\misc\SupplyCrates\Supply_h_a.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_t_f.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_m.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_r.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_t_b.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль сидений</t>"",""scripts\misc\SupplyCrates\Supply_t_s.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить транспортный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_p.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];";
+					init="removeAllWeapons this; this allowDamage false; this enablesimulation false;     this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_h_f.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_m.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_r.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_h_b.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#CDDC39'><img image='\a3\ui_f\data\map\VehicleIcons\iconcrateammo_ca.paa' size='1.0'/> Запросить ящик с боеприпасами</t>"",""scripts\misc\SupplyCrates\Supply_h_a.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_t_f.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_m.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_r.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_t_b.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль сидений</t>"",""scripts\misc\SupplyCrates\Supply_t_s.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить транспортный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_p.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_soldier_repair_F"")'];";
 				};
 			};
 		};
@@ -1799,7 +1791,7 @@ class Mission
 		};
 		class Item26
 		{
-			position[]={15221.949,17.09774,17469.945};
+			position[]={15222.394,17.095188,17470.473};
 			azimut=135;
 			special="NONE";
 			id=92;
@@ -1873,7 +1865,7 @@ class Mission
 		};
 		class Item33
 		{
-			position[]={15235.583,17.307774,17477.629};
+			position[]={15236.719,17.324688,17478.725};
 			azimut=135;
 			id=99;
 			side="EMPTY";
@@ -3846,7 +3838,7 @@ class Mission
 		};
 		class Item221
 		{
-			position[]={15198.478,17.098417,17445.857};
+			position[]={15197.14,17.090696,17445.047};
 			azimut=135;
 			id=287;
 			side="EMPTY";
