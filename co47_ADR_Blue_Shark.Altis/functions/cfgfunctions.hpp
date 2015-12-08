@@ -6,11 +6,13 @@ class QS
 		file = "functions";
 		class actionClearInventory {};
 		class addAction {};
+		class addActionDefuse {};
 		class addActionGetData {};
 		class addActionGetIntel {};
 		class addActionRescue {};
 		class addActionSabotage {};
 		class addActionSurrender {};
+		class addActionTimer {};
 		class AOdelete {};
 		class AOenemy {};
 		class AOminefield {};
