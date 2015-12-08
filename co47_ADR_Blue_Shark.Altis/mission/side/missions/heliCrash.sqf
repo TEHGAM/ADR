@@ -197,7 +197,7 @@ if (_fullyRandom) then {
 if (!_inHouse || (count _houseList) > 20) then {
     _mkrScout = createMarker ["scoutMarker", _scoutPos];
     _mkrScout setMarkerType "Mil_dot";
-    _mkrScout setMarkercolor "Color4_FD_F";
+    _mkrScout setMarkercolor "colorRed";
     _mkrScout setMarkerSize [0.5,0.5];
     _mkrScout setMarkerDir 1;
     _mkrScout setMarkerText 'разведданные';
