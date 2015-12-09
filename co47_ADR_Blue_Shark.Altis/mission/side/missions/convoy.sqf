@@ -203,7 +203,7 @@ while {!_convoyVclDestroyed && !SM_CONVOY_SUCCESS && !SM_CONVOY_FAIL} do {
     {
 
         // check destination point
-        if ((typeOf _x) == "B_Truck_01_mover_F") then {            
+        if ((typeOf _x) == "O_Truck_03_device_F") then {            
             if (((getPos _x) distance2D _currentWP) < 100) then {
                 SM_CONVOY_FAIL = true; publicVariable "SM_CONVOY_FAIL";
             };
