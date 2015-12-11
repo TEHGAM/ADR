@@ -16,8 +16,8 @@ private ["_opticsAllowed","_specialisedOptics","_basePos","_firstRun","_insideSa
 #define MRK_MSG "Только пехотные снайперы могут использовать это оружие."
 #define PILOT_MSG "Пилоты могут использовать только пистолеты и пистолет-пулемёты."
 #define GRENADIER_MSG "Только гренадеры и командиры отделений могут использовать подствольные гранатометы."
-#define SOPT_MSG "Только снайперы могут использовать оптический прицел LRPS."
-#define MARKSMANOPT_MSG "Только снайперы и пехотные снайперы могут использовать оптические прицелы MOS, AMS, KAHLIA."
+//#define SOPT_MSG "Только снайперы могут использовать оптический прицел LRPS."
+#define MARKSMANOPT_MSG "Только снайперы и пехотные снайперы могут использовать оптические прицелы LRPS, SOS, AMS, KAHLIA."
 
 //===== UAV TERMINAL
 _uavOperator = ["O_soldier_UAV_F"];
@@ -43,12 +43,13 @@ _pilotWeapons = ["hgun_PDW2000_F","SMG_01_F","SMG_02_F"];
 _grenadier = ["O_Soldier_GL_F","O_Soldier_SL_F"];
 _grenadierWeapons = ["arifle_Katiba_GL_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F","arifle_MX_GL_F","arifle_MX_GL_Black_F","arifle_TRG21_GL_F"];
 
-//===== SNIPER OPTICS
-_sniperTeam = ["O_sniper_F"];
-_sniperOpt = ["optic_LRPS"];
+//===== THERMAL
+_ThermalTeam = ["b_g_survivor_F"];
+_ThermalOpt = ["optic_Nightstalker","optic_tws","optic_tws_mg"];
+
 //===== MARKSMAN OPTICS
 _marksmanOpticsGrp = ["O_sniper_F","O_soldier_M_F"];
-_marksmanOpticsItems = ["optic_KHS_blk","optic_KHS_hex","optic_KHS_old","optic_KHS_tan","optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_SOS"];
+_marksmanOpticsItems = ["optic_KHS_blk","optic_KHS_hex","optic_KHS_old","optic_KHS_tan","optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_SOS","optic_LRPS"];
 
 
 _basePos = getMarkerPos "respawn_east";
@@ -137,16 +138,16 @@ while {true} do {
 	};
 	sleep 0.1;
 
-	//------------------------------------- Sniper optics
+	//------------------------------------- Thermal optics
 	_optics = primaryWeaponItems player;	
-	if (({_x in _optics} count _sniperOpt) > 0) then {
-		if (({player isKindOf _x} count _sniperTeam) < 1) then {
-			{player removePrimaryWeaponItem  _x;} count _sniperOpt;
-			titleText [SOPT_MSG,"PLAIN",2];
+	if (({_x in _optics} count _TermalOpt) > 0) then {
+		if (({player isKindOf _x} count _ThermalTeam) < 1) then {
+			{player removePrimaryWeaponItem  _x;} count _ThermalOpt;
+			titleText [AUTOTUR_MSG,"PLAIN",2];
 		};
 	};
 	sleep 0.1;
-
+	
 	//------------------------------------- Marksman optics
 	_optics = primaryWeaponItems player;	
 	if (({_x in _optics} count _marksmanOpticsItems) > 0) then {
