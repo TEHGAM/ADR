@@ -89,10 +89,10 @@ GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 showNotification = ["NewSideMission", "Конвой"]; publicVariable "showNotification";
 sideMissionUp = true; publicVariable "sideMissionUp";
 
-// wait for player in zone, then wait 5-7 mins and spawn convoy
+// wait for player in zone, then wait 2-3 mins and spawn convoy
 canStart = false;
 _trig = createTrigger ["EmptyDetector", _flatPos, false]; 
-_trig setTriggerArea [200, 200, 0, false];
+_trig setTriggerArea [150, 150, 0, false];
 _trig setTriggerActivation ["ANY", "PRESENT", false];
 _trig setTriggerStatements ["this", "canStart = true;", ""];
 while {!canStart} do {
@@ -101,7 +101,7 @@ while {!canStart} do {
 hqSideChat = "Конвой будет в зоне операции через несколько минут, приготовьтесь!"; publicVariable "hqSideChat"; [OUR_SIDE, "HQ"] sideChat hqSideChat;
 
 // wait for 5-7 mins
-sleep (300 + (random 120));
+sleep (120 + (random 60));
 
 // convoy start
 _currentWP = false;
