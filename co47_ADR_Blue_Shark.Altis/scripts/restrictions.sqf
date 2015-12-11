@@ -42,11 +42,11 @@ _pilotWeapons = ["hgun_PDW2000_F","SMG_01_F","SMG_02_F"];
 //=== GRENADIERS
 _grenadier = ["B_Soldier_GL_F","B_Soldier_SL_F"];
 _grenadierWeapons = ["arifle_Katiba_GL_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F","arifle_MX_GL_F","arifle_MX_GL_Black_F","arifle_TRG21_GL_F"];
-/*
-//===== SNIPER OPTICS
-_sniperTeam = ["B_sniper_F","B_soldier_M_F"];
-_sniperOpt = ["optic_LRPS"];
-*/
+
+//===== THERMAL
+_ThermalTeam = ["b_g_survivor_F"];
+_ThermalOpt = ["optic_Nightstalker","optic_tws","optic_tws_mg"];
+
 //===== MARKSMAN OPTICS
 _marksmanOpticsGrp = ["B_sniper_F","B_soldier_M_F"];
 _marksmanOpticsItems = ["optic_KHS_blk","optic_KHS_hex","optic_KHS_old","optic_KHS_tan","optic_AMS","optic_AMS_khk","optic_AMS_snd","optic_SOS","optic_LRPS"];
@@ -137,17 +137,17 @@ while {true} do {
 		};
 	};
 	sleep 0.1;
-/*
-	//------------------------------------- Sniper optics
+
+	//------------------------------------- Thermal optics
 	_optics = primaryWeaponItems player;	
-	if (({_x in _optics} count _sniperOpt) > 0) then {
-		if (({player isKindOf _x} count _sniperTeam) < 1) then {
-			{player removePrimaryWeaponItem  _x;} count _sniperOpt;
-			titleText [SOPT_MSG,"PLAIN",2];
+	if (({_x in _optics} count _TermalOpt) > 0) then {
+		if (({player isKindOf _x} count _ThermalTeam) < 1) then {
+			{player removePrimaryWeaponItem  _x;} count _ThermalOpt;
+			titleText [AUTOTUR_MSG,"PLAIN",2];
 		};
 	};
 	sleep 0.1;
-*/
+
 	//------------------------------------- Marksman optics
 	_optics = primaryWeaponItems player;	
 	if (({_x in _optics} count _marksmanOpticsItems) > 0) then {
