@@ -1,7 +1,7 @@
 private ["_iampilot"];
 
 //=========================== PILOTS ONLY
-_pilots = ["O_soldier_repair_F"];
+_pilots = ["B_soldier_repair_F"];
 _iampilot = ({typeOf player == _x} count _pilots) > 0;
 
 if (_iampilot) then {

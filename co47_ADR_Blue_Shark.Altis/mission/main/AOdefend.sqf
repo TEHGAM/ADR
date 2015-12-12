@@ -59,20 +59,48 @@ if(random 1 >= 0.5) then {
 
 	hqSideChat = _defendMessages call BIS_fnc_selectRandom; publicVariable "hqSideChat"; [WEST, "HQ"] sideChat hqSideChat;
 
+	// Determine the multiplier to increase amount of enemies during defence phase, based on player count
+	_playerCount = playersNumber WEST;
+	_enemyMultiplier = _playerCount / 47 + 1;
+
+	// Randomly choose from 4 different enemy compositions
 	_type = [1, 2, 3, 4];
 	_selectedType = _type select (floor (random (count _type)));
 
+	// DEBUG
+	//[format ["DEFENCE_DEBUG: _playerCount <%1> | _enemyMultiplier <%2> | _selectedType <%3>", _playerCount, _enemyMultiplier, _selectedType, _tower_dmg], "systemChat"] call BIS_fnc_MP;
+
 	if (_selectedType == 1) then {
-		null = [["aoCircle_2"], [6, 2], [4, 4], [0], [1, 0], [0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
+		null = [["aoCircle_2"],
+		[round(4 * _enemyMultiplier), 2],	// Infantry [Number of groups, Groups size]
+		[round(3 * _enemyMultiplier), 4],	// Light vehicles [Number of groups, Cargo size]
+		[0],								// Armored vehicles [Numger of groups]
+		[1, 0],								// Helicopters [Number of groups, Cargo size]
+		[0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 2) then {
-		null = [["aoCircle_2"], [6, 2], [2, 4], [1], [4, 4], [0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
+		null = [["aoCircle_2"],
+		[round(4 * _enemyMultiplier), 2],	// Infantry [Number of groups, Groups size]
+		[round(1 * _enemyMultiplier), 4],	// Light vehicles [Number of groups, Cargo size]
+		[round(1 * _enemyMultiplier)],		// Armored vehicles [Numger of groups]
+		[round(3 * _enemyMultiplier), 4],	// Helicopters [Number of groups, Cargo size]
+		[0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 3) then {
-		null = [["aoCircle_2"], [6, 2], [3, 4], [2], [1, 0], [0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
+		null = [["aoCircle_2"],
+		[round(4 * _enemyMultiplier), 2],	// Infantry [Number of groups, Groups size]
+		[round(2 * _enemyMultiplier), 4],	// Light vehicles
+		[round(1 * _enemyMultiplier)],		// Armored vehicles
+		[1, 0],								// Helicopters
+		[0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 4) then {
-		null = [["aoCircle_2"], [6, 2], [2, 4], [3], [2, 4], [0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
+		null = [["aoCircle_2"],
+		[round(4 * _enemyMultiplier), 2],	// Infantry [Number of groups, Groups size]
+		[round(1 * _enemyMultiplier), 4],	// Light vehicles [Number of groups, Cargo size]
+		[round(1.5 * _enemyMultiplier)],	// Armored vehicles [Numger of groups]
+		[round(2 * _enemyMultiplier), 4],	// Helicopters [Number of groups, Cargo size]
+		[0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
 	};
 
 	hint "В близи захваченной территории, обнаружены вражеские силы.";
