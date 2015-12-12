@@ -195,8 +195,9 @@ for "_i" from 0 to ((count _vehicles) - 1) do {
     };
     sleep 0.5;       
 };
-[(units _convoyGroup)] call QS_fnc_setSkill4;
+[(units _convoyGroup)] call QS_fnc_setSkill3;
 _enemiesArray = _enemiesArray + [_convoyGroup];
+sleep 5;
 
 // wait for attack
 while {!_convoyVclDestroyed && !SM_CONVOY_SUCCESS && !SM_CONVOY_FAIL} do {
@@ -209,11 +210,11 @@ while {!_convoyVclDestroyed && !SM_CONVOY_SUCCESS && !SM_CONVOY_FAIL} do {
             };
         };
 
-        if (!alive _x || !canMove _x || !isNull (_x findNearestEnemy (getPos _x)) || isNull (driver _x)) exitWith {
+        if (!alive _x || !canMove _x || isNull (driver _x)) exitWith {
             _convoyVclDestroyed = true;
         };
     } foreach _convoy;
-    sleep 2;    
+    sleep 4;    
 }; 
 
 // Convoy under attack - remove waypoints
