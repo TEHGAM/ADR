@@ -1,4 +1,4 @@
-/* 
+/*
 Обновление 24.07.15 версия миссии 3.5
 Изменена система блокировки вертолетов
 */
@@ -17,7 +17,7 @@ _whitelist = [
 
 if (_uid in _whitelist) exitWith {};
 
-_pilots = ["B_soldier_repair_F"];	//Специализация пилота
+_pilots = ["B_Helipilot_F", "O_helipilot_F"];	//Специализация пилота
 
 //---------- Место 2-го пилота заблокировано
 _aircraft_nocopilot = [
@@ -63,7 +63,7 @@ _aircraft_nopilot = [
 //---------- Место loadmaster заблокировано
 _aircraft_noloadmaster = [
 "O_Heli_Transport_04_covered_F",	//Тару транспортный
-"O_Heli_Transport_04_F"				//Тару грузовой	
+"O_Heli_Transport_04_F"				//Тару грузовой
 ];
 
 waitUntil {player == player};
@@ -76,7 +76,7 @@ while { true } do {
 
 	if(vehicle player != player) then {
 		_veh = vehicle player;
-		
+
 		if((_veh isKindOf "Helicopter" || _veh isKindOf "Plane") && !(_veh isKindOf "ParachuteBase")) then {
 			if(!_iampilot && ({typeOf _veh == _x} count _aircraft_nocopilot) > 0) then {
 				_forbidden = [_veh turretUnit [0]];
@@ -88,7 +88,7 @@ while { true } do {
 			if(!_iampilot && ({typeOf _veh == _x} count _aircraft_nopilot) > 0) then {
 				_forbidden = [driver _veh];
 				if(player in _forbidden) then {
-					systemChat "Вы должны быть пилотом, чтобы летать на этой технике.";
+					systemChat "Вы должны быть пилотом, чтобы пилотировать данную технику.";
 					player action ["getOut", _veh];
 				};
 			};

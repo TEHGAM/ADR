@@ -1,13 +1,13 @@
 /*
 @filename: initPlayerLocal.sqf
 Author:
-	
+
 	Quiksilver
 
 Last modified:
 
 	12/05/2014
-	
+
 Description:
 
 	Client scripts and event handlers.
@@ -15,7 +15,15 @@ ______________________________________________________*/
 
 enableSentences false;
 enableEngineArtillery false;
-player enableFatigue false;
+
+//------------------- Pilots only
+_pilots = ["B_Helipilot_F", "O_helipilot_F"];
+_iampilot = ({typeOf player == _x} count _pilots) > 0;
+
+if (_iampilot) then {
+	player addBackpack "B_AssaultPack_sgg";
+	player addItemToBackpack "ToolKit";
+};
 
 //------------------- client executions
 
@@ -24,7 +32,7 @@ _null = [] execVM "scripts\restrictions.sqf"; 									// gear restrictions
 _null = [] execVM "scripts\VAS\config.sqf"; 									// VAS
 _null = [] execVM "scripts\pilotCheck.sqf"; 									// pilots only
 _null = [] execVM "scripts\jump.sqf";											// jump action
-_null = [] execVM "scripts\misc\diary.sqf";										// diary tabs	
+_null = [] execVM "scripts\misc\diary.sqf";										// diary tabs
 _null = [] execVM "scripts\icons.sqf";											// blufor map tracker
 _null = [] execVM "scripts\VAclient.sqf";										// Virtual Arsenal
 _null = [] execVM "scripts\admin_uid.sqf";
@@ -51,7 +59,7 @@ _null = [] execVM "scripts\admin_uid.sqf";
 "hqSideChat" addPublicVariableEventHandler
 {
 	_message = _this select 1;
-	[EAST, "HQ"] sideChat _message;
+	[WEST, "HQ"] sideChat _message;
 };
 
 "addToScore" addPublicVariableEventHandler

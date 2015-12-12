@@ -54,11 +54,13 @@ class Mission
 		"A3_Soft_F_HEMTT",
 		"A3_Armor_F_AMV",
 		"A3_Air_F_Beta_Heli_Transport_01",
-		"A3_Characters_F_Mark"
+		"A3_Characters_F_Mark",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Modules_F",
+		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
@@ -112,15 +114,17 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-47 ADR: Blue Shark (AW Invade & Annex)";
-		overviewText="Version 4.2.2.1";
+		overviewText="Version 4.2.2.2";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0.39999998;
+		timeOfChanges=28800;
+		startWeather=0.55000001;
 		startWind=0;
 		forecastWeather=0.69999999;
-		forecastFog=0.48999998;
 		forecastWind=0;
 		forecastWaves=0;
+		rainForced=1;
+		lightningsForced=1;
 		year=2035;
 		month=7;
 		day=15;
@@ -796,12 +800,12 @@ class Mission
 				items=47;
 				class Item0
 				{
-					position[]={15295.229,17.755224,17400.117};
+					position[]={15294.392,17.759809,17401.061};
 					azimut=135;
 					id=14;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="CAPTAIN";
 					skill=0.60000002;
@@ -810,7 +814,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={15294.132,17.783306,17399.293};
+					position[]={15293.295,17.785048,17400.236};
 					azimut=135;
 					id=15;
 					side="WEST";
@@ -823,7 +827,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={15294.375,17.759201,17401.154};
+					position[]={15293.538,17.763788,17402.098};
 					azimut=135;
 					id=16;
 					side="WEST";
@@ -836,7 +840,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={15293.313,17.78359,17400.363};
+					position[]={15292.477,17.788103,17401.307};
 					azimut=135;
 					id=17;
 					side="WEST";
@@ -849,7 +853,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={15292.366,17.767982,17403.619};
+					position[]={15291.108,17.778894,17404.248};
 					azimut=135;
 					id=18;
 					side="WEST";
@@ -862,7 +866,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={15291.118,17.792294,17402.797};
+					position[]={15290.069,17.800081,17403.461};
 					azimut=135;
 					id=19;
 					side="WEST";
@@ -875,7 +879,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={15291.362,17.770557,17404.777};
+					position[]={15290.209,17.780092,17405.404};
 					azimut=135;
 					id=20;
 					side="WEST";
@@ -888,7 +892,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={15290.265,17.793156,17403.926};
+					position[]={15289.111,17.802664,17404.553};
 					azimut=135;
 					id=21;
 					side="WEST";
@@ -901,7 +905,7 @@ class Mission
 				};
 				class Item8
 				{
-					position[]={15291.972,17.823164,17397.158};
+					position[]={15291.587,17.815767,17398.729};
 					azimut=135;
 					id=22;
 					side="WEST";
@@ -914,7 +918,7 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={15290.844,17.838877,17396.154};
+					position[]={15290.495,17.830975,17397.758};
 					azimut=135;
 					id=23;
 					side="WEST";
@@ -927,7 +931,7 @@ class Mission
 				};
 				class Item10
 				{
-					position[]={15291.057,17.822969,17398.285};
+					position[]={15290.567,17.817335,17399.717};
 					azimut=135;
 					id=24;
 					side="WEST";
@@ -940,7 +944,7 @@ class Mission
 				};
 				class Item11
 				{
-					position[]={15290.052,17.837095,17397.371};
+					position[]={15289.563,17.831467,17398.803};
 					azimut=135;
 					id=25;
 					side="WEST";
@@ -953,20 +957,20 @@ class Mission
 				};
 				class Item12
 				{
-					position[]={15289.868,17.822111,17399.84};
+					position[]={15291.861,17.822758,17397.352};
 					azimut=135;
 					id=26;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
+					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
-					rank="SERGEANT";
+					rank="CORPORAL";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Ракетчик ПТ";
+					description="Пулеметчик";
 				};
 				class Item13
 				{
-					position[]={15288.893,17.835186,17399.049};
+					position[]={15288.992,17.822947,17401.277};
 					azimut=135;
 					id=27;
 					side="WEST";
@@ -979,7 +983,7 @@ class Mission
 				};
 				class Item14
 				{
-					position[]={15289.168,17.823269,17400.846};
+					position[]={15287.948,17.834335,17400.518};
 					azimut=135;
 					id=28;
 					side="WEST";
@@ -992,7 +996,7 @@ class Mission
 				};
 				class Item15
 				{
-					position[]={15287.979,17.835575,17400.146};
+					position[]={15288.084,17.826206,17402.279};
 					azimut=135;
 					id=29;
 					side="WEST";
@@ -1005,7 +1009,7 @@ class Mission
 				};
 				class Item16
 				{
-					position[]={15288.284,17.825693,17402.006};
+					position[]={15286.999,17.83824,17401.439};
 					azimut=135;
 					id=30;
 					side="WEST";
@@ -1018,7 +1022,7 @@ class Mission
 				};
 				class Item17
 				{
-					position[]={15287.248,17.836548,17401.365};
+					position[]={15287.199,17.829332,17403.266};
 					azimut=135;
 					id=31;
 					side="WEST";
@@ -1031,19 +1035,20 @@ class Mission
 				};
 				class Item18
 				{
-					position[]={15287.007,17.858572,17397.523};
+					position[]={15286.164,17.841015,17402.416};
 					azimut=135;
 					id=32;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="B_soldier_AT_F";
 					player="PLAY CDG";
+					rank="SERGEANT";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Медик";
+					description="Ракетчик ПТ";
 				};
 				class Item19
 				{
-					position[]={15286.123,17.859175,17398.623};
+					position[]={15285.959,17.859137,17398.885};
 					azimut=135;
 					id=33;
 					side="WEST";
@@ -1055,7 +1060,7 @@ class Mission
 				};
 				class Item20
 				{
-					position[]={15285.239,17.860033,17399.627};
+					position[]={15285.075,17.859489,17399.984};
 					azimut=135;
 					id=34;
 					side="WEST";
@@ -1067,7 +1072,7 @@ class Mission
 				};
 				class Item21
 				{
-					position[]={15285.97,17.86499,17396.672};
+					position[]={15284.191,17.860352,17400.988};
 					azimut=135;
 					id=35;
 					side="WEST";
@@ -1079,7 +1084,7 @@ class Mission
 				};
 				class Item22
 				{
-					position[]={15285.087,17.865919,17397.648};
+					position[]={15284.922,17.86545,17398.033};
 					azimut=135;
 					id=36;
 					side="WEST";
@@ -1091,7 +1096,7 @@ class Mission
 				};
 				class Item23
 				{
-					position[]={15284.142,17.865715,17398.713};
+					position[]={15284.039,17.865198,17399.01};
 					azimut=135;
 					id=37;
 					side="WEST";
@@ -1103,20 +1108,19 @@ class Mission
 				};
 				class Item24
 				{
-					position[]={15289.566,17.854343,17395.27};
+					position[]={15283.094,17.864981,17400.074};
 					azimut=135;
 					id=38;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Пехотный снайпер";
+					description="Медик";
 				};
 				class Item25
 				{
-					position[]={15288.652,17.860115,17394.477};
+					position[]={15288.553,17.85589,17396.211};
 					azimut=135;
 					id=39;
 					side="WEST";
@@ -1129,7 +1133,7 @@ class Mission
 				};
 				class Item26
 				{
-					position[]={15288.592,17.855562,17396.275};
+					position[]={15287.465,17.862541,17395.348};
 					azimut=135;
 					id=40;
 					side="WEST";
@@ -1142,7 +1146,7 @@ class Mission
 				};
 				class Item27
 				{
-					position[]={15287.586,17.861862,17395.422};
+					position[]={15287.685,17.856588,17397.25};
 					azimut=135;
 					id=41;
 					side="WEST";
@@ -1155,33 +1159,33 @@ class Mission
 				};
 				class Item28
 				{
-					position[]={15286.948,17.870752,17393.043};
+					position[]={15286.538,17.86363,17396.33};
 					azimut=135;
 					id=42;
 					side="WEST";
-					vehicle="B_sniper_F";
+					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
-					rank="LIEUTENANT";
+					rank="CORPORAL";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Снайпер";
+					description="Пехотный снайпер";
 				};
 				class Item29
 				{
-					position[]={15285.942,17.878065,17392.039};
+					position[]={15288.938,17.857882,17394.885};
 					azimut=135;
 					id=43;
 					side="WEST";
-					vehicle="B_sniper_F";
+					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
-					rank="LIEUTENANT";
+					rank="CORPORAL";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Снайпер";
+					description="Пехотный снайпер";
 				};
 				class Item30
 				{
-					position[]={15285.881,17.871927,17394.203};
+					position[]={15285.9,17.87252,17393.953};
 					azimut=135;
 					id=44;
 					side="WEST";
@@ -1194,7 +1198,7 @@ class Mission
 				};
 				class Item31
 				{
-					position[]={15284.783,17.878798,17393.166};
+					position[]={15284.859,17.879171,17392.949};
 					azimut=135;
 					id=45;
 					side="WEST";
@@ -1207,33 +1211,33 @@ class Mission
 				};
 				class Item32
 				{
-					position[]={15284.539,17.872952,17395.604};
+					position[]={15284.833,17.873472,17395.113};
 					azimut=135;
 					id=46;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_sniper_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
+					rank="LIEUTENANT";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Инженер";
+					description="Снайпер";
 				};
 				class Item33
 				{
-					position[]={15283.656,17.877497,17394.781};
+					position[]={15283.7,17.879259,17394.076};
 					azimut=135;
 					id=47;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_sniper_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
+					rank="LIEUTENANT";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Инженер";
+					description="Снайпер";
 				};
 				class Item34
 				{
-					position[]={15283.748,17.872532,17396.551};
+					position[]={15283.107,17.874159,17396.58};
 					azimut=135;
 					id=48;
 					side="WEST";
@@ -1246,7 +1250,7 @@ class Mission
 				};
 				class Item35
 				{
-					position[]={15282.803,17.877087,17395.787};
+					position[]={15282.154,17.878889,17395.76};
 					azimut=135;
 					id=49;
 					side="WEST";
@@ -1259,55 +1263,55 @@ class Mission
 				};
 				class Item36
 				{
-					position[]={15282.772,17.871567,17397.889};
+					position[]={15282.177,17.874113,17397.529};
 					azimut=135;
 					id=50;
 					side="WEST";
-					vehicle="B_soldier_exp_F";
+					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Сапер";
+					description="Инженер";
 				};
 				class Item37
 				{
-					position[]={15281.949,17.876032,17397.037};
+					position[]={15281.231,17.87867,17396.766};
 					azimut=135;
 					id=51;
 					side="WEST";
-					vehicle="B_soldier_exp_F";
+					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Сапер";
+					description="Инженер";
 				};
 				class Item38
 				{
-					position[]={15281.828,17.871319,17398.926};
+					position[]={15281.201,17.873983,17398.553};
 					azimut=135;
 					id=52;
 					side="WEST";
-					vehicle="B_soldier_exp_F";
+					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Сапер";
+					description="Инженер";
 				};
 				class Item39
 				{
-					position[]={15281.004,17.875626,17398.135};
+					position[]={15280.17,17.879208,17397.627};
 					azimut=135;
 					id=53;
 					side="WEST";
-					vehicle="B_soldier_exp_F";
+					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Сапер";
+					description="Инженер";
 				};
 				class Item40
 				{
@@ -1315,7 +1319,7 @@ class Mission
 					azimut=135;
 					id=54;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1327,7 +1331,7 @@ class Mission
 					azimut=135;
 					id=55;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1339,7 +1343,7 @@ class Mission
 					azimut=135;
 					id=56;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1351,7 +1355,7 @@ class Mission
 					azimut=135;
 					id=57;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1363,7 +1367,7 @@ class Mission
 					azimut=135;
 					id=58;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1375,7 +1379,7 @@ class Mission
 					azimut=135;
 					id=59;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1716,7 +1720,7 @@ class Mission
 		};
 		class Item20
 		{
-			position[]={15216.185,17.111763,17463.98};
+			position[]={15215.795,17.125168,17462.285};
 			azimut=135;
 			id=86;
 			side="EMPTY";
@@ -1727,7 +1731,7 @@ class Mission
 		};
 		class Item21
 		{
-			position[]={15190.334,17.350914,17428.691};
+			position[]={15187.781,17.399166,17426.188};
 			azimut=135;
 			id=87;
 			side="EMPTY";
@@ -1791,7 +1795,7 @@ class Mission
 		};
 		class Item26
 		{
-			position[]={15222.394,17.095188,17470.473};
+			position[]={15220.222,17.124964,17467.254};
 			azimut=135;
 			special="NONE";
 			id=92;
@@ -1853,7 +1857,7 @@ class Mission
 		};
 		class Item32
 		{
-			position[]={15232.012,17.254194,17474.117};
+			position[]={15229.126,17.200415,17471.795};
 			azimut=135;
 			id=98;
 			side="EMPTY";
@@ -1865,7 +1869,7 @@ class Mission
 		};
 		class Item33
 		{
-			position[]={15236.719,17.324688,17478.725};
+			position[]={15232.31,17.249954,17475.219};
 			azimut=135;
 			id=99;
 			side="EMPTY";
@@ -1901,7 +1905,7 @@ class Mission
 		};
 		class Item36
 		{
-			position[]={15204.325,17.114182,17451.734};
+			position[]={15206.334,17.115139,17453.387};
 			azimut=135;
 			id=102;
 			side="EMPTY";
@@ -1924,7 +1928,7 @@ class Mission
 		};
 		class Item38
 		{
-			position[]={15178.603,17.457104,17417.41};
+			position[]={15176.598,17.501141,17414.852};
 			azimut=135;
 			id=104;
 			side="EMPTY";
@@ -1937,7 +1941,7 @@ class Mission
 		};
 		class Item39
 		{
-			position[]={15174.225,17.478296,17413.098};
+			position[]={15171.821,17.503588,17409.996};
 			azimut=135;
 			id=105;
 			side="EMPTY";
@@ -2879,7 +2883,7 @@ class Mission
 		};
 		class Item131
 		{
-			position[]={15210.663,17.123158,17457.879};
+			position[]={15210.829,17.123505,17458.029};
 			azimut=135;
 			special="NONE";
 			id=197;
@@ -2947,7 +2951,7 @@ class Mission
 			azimut=320;
 			id=203;
 			side="EMPTY";
-			vehicle="Flag_CSAT_F";
+			vehicle="Flag_NATO_F";
 			leader=1;
 			skill=0.60000002;
 			text="CSATFlag";
@@ -3816,7 +3820,7 @@ class Mission
 		};
 		class Item219
 		{
-			position[]={15185.711,17.393063,17424.523};
+			position[]={15182.756,17.448753,17421.016};
 			azimut=135;
 			id=285;
 			side="EMPTY";
@@ -3838,7 +3842,7 @@ class Mission
 		};
 		class Item221
 		{
-			position[]={15197.14,17.090696,17445.047};
+			position[]={15201.52,17.10939,17448.967};
 			azimut=135;
 			id=287;
 			side="EMPTY";

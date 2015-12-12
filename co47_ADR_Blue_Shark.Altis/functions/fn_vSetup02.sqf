@@ -3,11 +3,11 @@
 Author:
 
 	???
-	
+
 Last modified:
 
 	22/10/2014 ArmA 1.32 by Quiksilver
-	
+
 Description:
 
 	Apply code to vehicle
@@ -33,14 +33,14 @@ _strider = ["I_MRAP_03_F", "I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"];								// stri
 _mh9 = ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F"];										// MH-9
 //_orca = ["O_Heli_Light_02_unarmed_F"];														// Orca
 _uav = ["B_UAV_02_CAS_F", "B_UAV_02_F", "B_UGV_01_F", "B_UGV_01_rcws_F"];						// UAVs
-_hellcat = ["I_Heli_light_03_unarmed_F"];														// Hellcat
+//_hellcat = ["I_Heli_light_03_unarmed_F"];														// Hellcat
 
 //============================================= SORT
 
 //===== strider nato skin
 if (_t in _strider) then {
 	_u setObjectTextureGlobal [0, '\A3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa'];
-	_u setObjectTextureGlobal [1, '\A3\data_f\vehicles\turret_co.paa']; 
+	_u setObjectTextureGlobal [1, '\A3\data_f\vehicles\turret_co.paa'];
 };
 
 //===== mh-9 skin
@@ -57,9 +57,9 @@ if(_t in _huron) then {
 };
 
 //==== hellcat skin
-if(_t in _hellcat) then {
-	_u setObjectTextureGlobal [0, 'A3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co.paa'];
-};
+//if(_t in _hellcat) then {
+//	_u setObjectTextureGlobal [0, 'A3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co.paa'];
+//};
 
 //==== taru skins
 if(_t in _taru) then {

@@ -3,11 +3,11 @@
 Author:
 
 	???
-	
+
 Last modified:
 
 	22/10/2014 ArmA 1.32 by Quiksilver
-	
+
 Description:
 
 	Apply code to vehicle
@@ -44,7 +44,7 @@ _bobcat = ["B_APC_Tracked_01_CRV_F"];															// Bobcat
 //===== strider nato skin
 if (_t in _strider) then {
 	//_u setObjectTextureGlobal [0, '\A3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa'];
-	//_u setObjectTextureGlobal [1, '\A3\data_f\vehicles\turret_co.paa']; 
+	//_u setObjectTextureGlobal [1, '\A3\data_f\vehicles\turret_co.paa'];
 	_u setObjectTextureGlobal [0, 'media\textures\mrap_03_ext_coCSAT.paa'];
 	_u setObjectTextureGlobal [1, 'media\textures\turret_opfor_co.paa'];
 };
