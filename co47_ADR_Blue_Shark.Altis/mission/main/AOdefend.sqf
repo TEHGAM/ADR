@@ -1,21 +1,21 @@
 /*
-Author: 
+Author:
 
 	Jester [AW] & Quiksilver
 
-Last modified: 
+Last modified:
 
 	16/04/2014 by QS
-	
+
 Description:
 
 	When AO is complete, a chance that OPFOR will counterattack.
-	
+
 	Create AO detection trigger
 	At end of sequence, count EAST.
 	if (EAST < 1) exitWith {lost};
 	if (EAST > 0) exitWith (held);
-	
+
 	Also, APCs spawned with EOS do not engage for whatever reason
 _______________________________________________________*/
 
@@ -63,16 +63,16 @@ if(random 1 >= 0.5) then {
 	_selectedType = _type select (floor (random (count _type)));
 
 	if (_selectedType == 1) then {
-		null = [["aoCircle_2"], [6, 2], [4, 4], [0], [1, 0], [1, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
+		null = [["aoCircle_2"], [6, 2], [4, 4], [0], [1, 0], [0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 2) then {
-		null = [["aoCircle_2"], [6, 2], [2, 4], [1], [4, 4], [1, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
+		null = [["aoCircle_2"], [6, 2], [2, 4], [1], [4, 4], [0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 3) then {
-		null = [["aoCircle_2"], [6, 2], [3, 4], [2], [1, 0], [1, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
+		null = [["aoCircle_2"], [6, 2], [3, 4], [2], [1, 0], [0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
 	};
 	if (_selectedType == 4) then {
-		null = [["aoCircle_2"], [6, 2], [2, 4], [3], [2, 4], [1, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
+		null = [["aoCircle_2"], [6, 2], [2, 4], [3], [2, 4], [0, 0, EAST], [0, 1, 120, FALSE, true]] call Bastion_Spawn;
 	};
 
 	hint "В близи захваченной территории, обнаружены вражеские силы.";
