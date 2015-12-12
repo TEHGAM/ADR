@@ -5,6 +5,7 @@ class QS
 	{
 		file = "functions";
 		class actionClearInventory {};
+		class actionPilotRepair {};
 		class addAction {};
 		class addActionDefuse {};
 		class addActionGetData {};
@@ -17,16 +18,18 @@ class QS
 		class AOenemy {};
 		class AOminefield {};
 		class conditionClearInventory {};
+		class conditionPilotRepair {};
 		class conditionUH80TurretActionLock {};
 		class conditionUH80TurretActionUnlock {};
+		class deleteOldSMUnits {};
 		class deleteUnits {};
 		class enemyCAS {};
 		class FindPosBuilding {};
+		class garrisonFortEAST {};
 		class garrisonFortFIA {};
 		class garrisonFortIND {};
-		class garrisonFortWEST {};
 		class loadInventory {};
-		class PTenemyWEST {};
+		class PTenemyEAST {};
 		class removeAction {};
 		class removeAction0 {};
 		class removeAction1 {};
@@ -39,10 +42,10 @@ class QS
 		class setSkill3 {};
 		class setSkill4 {};
 		class SMdelete {};
+		class SMenemyEAST {};
+		class SMenemyEASTintel {};
 		class SMenemyFIA {};
 		class SMenemyIND {};
-		class SMenemyWEST {};
-		class SMenemyWESTintel {};
 		class SMhintFAIL {};
 		class SMhintSUCCESS {};
 		class uh80Turret {};

@@ -1319,7 +1319,7 @@ class Mission
 					azimut=135;
 					id=54;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1331,7 +1331,7 @@ class Mission
 					azimut=135;
 					id=55;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1343,7 +1343,7 @@ class Mission
 					azimut=135;
 					id=56;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1355,7 +1355,7 @@ class Mission
 					azimut=135;
 					id=57;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1367,7 +1367,7 @@ class Mission
 					azimut=135;
 					id=58;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
@@ -1379,7 +1379,7 @@ class Mission
 					azimut=135;
 					id=59;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";

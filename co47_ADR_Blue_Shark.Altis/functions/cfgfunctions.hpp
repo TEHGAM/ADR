@@ -5,6 +5,7 @@ class QS
 	{
 		file = "functions";
 		class actionClearInventory {};
+		class actionPilotRepair {};
 		class addAction {};
 		class addActionDefuse {};
 		class addActionGetData {};
@@ -17,6 +18,7 @@ class QS
 		class AOenemy {};
 		class AOminefield {};
 		class conditionClearInventory {};
+		class conditionPilotRepair {};
 		class conditionUH80TurretActionLock {};
 		class conditionUH80TurretActionUnlock {};
 		class deleteOldSMUnits {};

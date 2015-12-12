@@ -37,8 +37,8 @@ _autoSpecialised = ["LMG_Mk200_F","LMG_Zafir_F","MMG_01_hex_F","MMG_01_tan_F","M
 _marksman = ["B_soldier_M_F"];
 _marksmanGun = ["srifle_DMR_01_F","srifle_EBR_F","srifle_DMR_02_F","srifle_DMR_02_camo_F","srifle_DMR_02_sniper_F","srifle_DMR_03_F","srifle_DMR_03_khaki_F","srifle_DMR_03_tan_F","srifle_DMR_03_multicam_F","srifle_DMR_03_woodland_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F"];
 //==== PILOTS
-_pilot = ["B_soldier_repair_F"];
-_pilotWeapons = ["hgun_PDW2000_F","SMG_01_F","SMG_02_F"];
+_pilot = ["B_Helipilot_F"];
+_pilotWeapons = ["hgun_PDW2000_F","SMG_01_F","SMG_01_Holo_F","SMG_02_F","SMG_02_ACO_F"];
 //=== GRENADIERS
 _grenadier = ["B_Soldier_GL_F","B_Soldier_SL_F"];
 _grenadierWeapons = ["arifle_Katiba_GL_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F","arifle_MX_GL_F","arifle_MX_GL_Black_F","arifle_TRG21_GL_F"];
@@ -139,7 +139,7 @@ while {true} do {
 	sleep 0.1;
 
 	//------------------------------------- Thermal optics
-	_optics = primaryWeaponItems player;	
+	_optics = primaryWeaponItems player;
 	if (({_x in _optics} count _TermalOpt) > 0) then {
 		if (({player isKindOf _x} count _ThermalTeam) < 1) then {
 			{player removePrimaryWeaponItem  _x;} count _ThermalOpt;
@@ -149,7 +149,7 @@ while {true} do {
 	sleep 0.1;
 
 	//------------------------------------- Marksman optics
-	_optics = primaryWeaponItems player;	
+	_optics = primaryWeaponItems player;
 	if (({_x in _optics} count _marksmanOpticsItems) > 0) then {
 		if (({player isKindOf _x} count _marksmanOpticsGrp) < 1) then {
 			{player removePrimaryWeaponItem  _x;} count _marksmanOpticsItems;
@@ -189,14 +189,14 @@ while {true} do {
 	sleep 1;
 
 	if (_outsideSafezone) then {
-		if ((player distance _szmkr) < SZ_RADIUS) then { 
+		if ((player distance _szmkr) < SZ_RADIUS) then {
 			_outsideSafezone = FALSE;
 			_insideSafezone = TRUE;
 			EHFIRED = player addEventHandler ["Fired",_EHFIRED];
 		};
 	};
-	
-	//----- Sleep 
+
+	//----- Sleep
 	_basePos = getMarkerPos "respawn_west";
 	if ((player distance _basePos) <= 500) then {
 		sleep 2;
