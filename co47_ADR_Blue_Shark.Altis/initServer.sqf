@@ -1,24 +1,24 @@
 /*
 @filename: initServer.sqf
 Author:
-	
+
 	Quiksilver
 
 Last modified:
 
 	1/05/2014
-	
+
 Description:
 
 	Server scripts such as missions, modules, third party and clean-up.
-	
+
 Credit:
 
-	Invade & Annex 2.00 was created by Rarek [ahoyworld.co.uk] with countless hours of work, 
-	and further developed by Quiksilver [allFPS.com.au] with countless hours more. 
-	
+	Invade & Annex 2.00 was created by Rarek [ahoyworld.co.uk] with countless hours of work,
+	and further developed by Quiksilver [allFPS.com.au] with countless hours more.
+
 	Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
-	
+
 	Please be respectful and do not remove/alter credits.
 ______________________________________________________*/
 
@@ -45,6 +45,6 @@ if (PARAMS_AO == 1) then { _null = [] execVM "mission\main\missionControl.sqf"; 
 if (PARAMS_SideObjectives == 1) then { _null = [] execVM "mission\side\missionControl.sqf"; };			// Side Objectives
 _null = [] execVM "scripts\eos\OpenMe.sqf";																// EOS (urban mission and defend AO)
 _null = [] execVM "scripts\misc\airbaseDefense.sqf";													// Airbase air defense
-_null = [] execVM "scripts\misc\clearBodies.sqf";														// clear bodies around island
+[] execVM "scripts\clean.sqf";																			// cleanup
 _null = [] execVM "scripts\misc\clearItemsBASE.sqf";													// clear items around base
 _null = [] execVM "scripts\misc\islandConfig.sqf";														// prep the island for mission
