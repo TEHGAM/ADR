@@ -4,15 +4,15 @@ class Mission
 	addOns[]=
 	{
 		"A3_Modules_F",
-		"A3_Characters_F_OPFOR",
-		"a3_characters_f",
-		"A3_Characters_F_Gamma",
-		"A3_Modules_F_Curator_Curator",
+		"a3_modules_f_curator_curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
-		"A3_Data_F_Curator_Characters",
-		"A3_Soft_F_Crusher_UGV",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Characters_F_Gamma",
 		"A3_Air_F_Gamma_UAV_02",
+		"A3_Soft_F_Crusher_UGV",
+		"A3_Data_F_Curator_Characters",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Structures_F_Mil_BagBunker",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
@@ -21,6 +21,8 @@ class Mission
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Civ_Camping",
 		"A3_Weapons_F_Beta_Ammoboxes",
+		"A3_Soft_F_Gamma_HEMTT",
+		"A3_Soft_F_MRAP_01",
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_Boat_F_SDV_01",
 		"A3_Air_F_Heli_Heli_Transport_03",
@@ -28,15 +30,18 @@ class Mission
 		"A3_Soft_F_MRAP_03",
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Air_F_Heli_Light_01",
+		"A3_Soft_F_HEMTT",
 		"A3_Soft_F_Gamma_Offroad",
 		"a3_soft_f_offroad_01",
 		"A3_Structures_F_Mil_Fortification",
 		"A3_Boat_F_Civilian_Boat",
+		"A3_Armor_F_AMV",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Civ_Lamps",
 		"A3_Data_F",
 		"a3_roads_f",
 		"A3_Structures_F_Mil_Flags",
+		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Armor_F_Panther",
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
@@ -44,23 +49,13 @@ class Mission
 		"A3_Supplies_F_Heli_Slingload",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Weapons_F_Bootcamp_Ammoboxes",
-		"A3_Air_F_Heli_Heli_Light_02",
 		"A3_Structures_F_Heli_Ind_AirPort",
 		"A3_Air_F_EPB_Heli_Light_03",
-		"a3_map_altis",
-		"A3_Characters_F_BLUFOR",
-		"A3_Soft_F_Gamma_HEMTT",
-		"A3_Soft_F_MRAP_01",
-		"A3_Soft_F_HEMTT",
-		"A3_Armor_F_AMV",
-		"A3_Air_F_Beta_Heli_Transport_01",
-		"A3_Characters_F_Mark",
-		"3DEN"
+		"a3_map_altis"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Modules_F",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
@@ -114,17 +109,23 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-47 ADR: Blue Shark (AW Invade & Annex)";
-		overviewText="Version 4.2.2.2";
+		overviewText="Version 4.2.3";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
-		startWeather=0.55000001;
-		startWind=0;
-		forecastWeather=0.69999999;
-		forecastWind=0;
+		startWeather=0.84999996;
+		startWind=0.099999994;
+		startWindDir=135;
+		startGust=0.099999994;
+		forecastWeather=0.84999996;
+		forecastWind=0.099999994;
 		forecastWaves=0;
+		forecastGust=0.099999994;
+		forecastWindDir=180;
 		rainForced=1;
 		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		month=7;
 		day=15;
@@ -5243,7 +5244,7 @@ class Mission
 			b=4;
 			angle=45;
 			rectangular=1;
-			activationBy="EAST";
+			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
