@@ -10,17 +10,22 @@ if (!TIMER_IN_USE) then {
     _time = _this select 3 select 0;
     _step = _this select 3 select 1;
     [_object,"QS_fnc_removeAction0",nil,true] spawn BIS_fnc_MP;
-    while {_time > 0} do {           
+    while {_time > 0} do {    
+        if (!alive _object) exitWith {};       
         hqSideChat = format ["%1 секунд до подрыва", _time];        
         publicVariable "hqSideChat"; 
         [WEST, "HQ"] sideChat hqSideChat;
         _time = _time - _step; 
         sleep _step;
     };
-    hqSideChat = "Подрыв!";        
-    publicVariable "hqSideChat"; 
-    [WEST, "HQ"] sideChat hqSideChat;
-    _object setDamage 1;
+    if (alive _object) then {
+        hqSideChat = "Подрыв!";        
+        publicVariable "hqSideChat"; 
+        [WEST, "HQ"] sideChat hqSideChat;
+    };    
+    _object setDamage 0.9;
+    _epicenter = getPos _object;
+    _bigBomb = createVehicle ["Bo_GBU12_LGB", _epicenter, [], 0, "NONE"];
 } else {
 	hintSilent "Таймер уже запущен - ищите укрытие!";
 };
