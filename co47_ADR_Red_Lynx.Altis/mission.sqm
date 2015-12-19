@@ -115,7 +115,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-47 ADR: Red Lynx (AW Invade & Annex)";
-		overviewText="Version 4.2.2";
+		overviewText="Version 4.2.3";
 		timeOfChanges=28800;
 		startWeather=0.55000001;
 		startWind=0.099999994;

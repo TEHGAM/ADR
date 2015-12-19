@@ -25,11 +25,11 @@ class QS
 		class deleteUnits {};
 		class enemyCAS {};
 		class FindPosBuilding {};
-		class garrisonFortEAST {};
 		class garrisonFortFIA {};
 		class garrisonFortIND {};
+		class garrisonFortWEST {};
 		class loadInventory {};
-		class PTenemyEAST {};
+		class PTenemyWEST {};
 		class removeAction {};
 		class removeAction0 {};
 		class removeAction1 {};
@@ -42,10 +42,10 @@ class QS
 		class setSkill3 {};
 		class setSkill4 {};
 		class SMdelete {};
-		class SMenemyEAST {};
-		class SMenemyEASTintel {};
 		class SMenemyFIA {};
 		class SMenemyIND {};
+		class SMenemyWEST {};
+		class SMenemyWESTintel {};
 		class SMhintFAIL {};
 		class SMhintSUCCESS {};
 		class uh80Turret {};

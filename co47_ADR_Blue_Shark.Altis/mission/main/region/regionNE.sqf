@@ -1,9 +1,9 @@
 /*
-Author: 
+Author:
 
 	Quiksilver
 
-Last modified: 
+Last modified:
 
 	2/05/2014
 
@@ -59,7 +59,7 @@ while { count _targetArray > 0 } do {
 		_flatPos = _position isFlatEmpty[3, 1, 0.3, 30, 0, false];
 	};
 
-	_roughPos = 
+	_roughPos =
 	[
 		((_flatPos select 0) - 200) + (random 400),
 		((_flatPos select 1) - 200) + (random 400),
@@ -112,11 +112,11 @@ while { count _targetArray > 0 } do {
 		currentAO
 	];
 
-	//-------------------------------------------- Show global target start hint	
+	//-------------------------------------------- Show global target start hint
 	GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewMain", currentAO]; publicVariable "showNotification";
-	showNotification = ["NewSub", "Уничтожить радиовышку противника"]; publicVariable "showNotification";	
-	
+	showNotification = ["NewSub", "Уничтожить радиовышку противника"]; publicVariable "showNotification";
+
 	//-------------------------------------------- CORE LOOP
 	currentAOUp = true; publicVariable "currentAOUp";
 
@@ -172,9 +172,5 @@ while { count _targetArray > 0 } do {
 	GlobalHint = _targetCompleteText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 
 	//----------------------------------------------------- MAINTENANCE
-	_aoClean = [] execVM "scripts\misc\clearItemsAO.sqf";
-	waitUntil {
-		scriptDone _aoClean
-	};
 	sleep 20;
 };

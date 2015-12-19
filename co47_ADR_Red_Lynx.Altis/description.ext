@@ -2,7 +2,7 @@
 
 author = "Rarek, AhoyWorld, Quiksilver";
 onLoadName = "ADR: Red Lynx (I&A)";
-OnLoadMission = "Версия 4.2.2.2 — редакция TEHGAM.COM";
+OnLoadMission = "Версия 4.2.3 — редакция TEHGAM.COM";
 loadScreen = "media\images\adr_redlynx_loading.jpg";
 overviewPicture = "media\images\adr_redlynx_loading.jpg";
 
