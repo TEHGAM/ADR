@@ -3,7 +3,7 @@
 Author:
 
 	Quiksilver 	(credit to Jester [AW] for initial build)
-				(credit to chucky [allFPS] for initial help with addAction)	
+				(credit to chucky [allFPS] for initial help with addAction)
 				(credit to BangaBob [EOS] for EOS)
 Last modified:
 
@@ -42,7 +42,7 @@ sleep 1;
 _object setPosATL _smPos;
 
 //-------------------- SPAWN GUARDS and CIVILIANS
-[[currentSM], [6, 1], [7, 1], [0, 0], [0], [0], [0, 0], [6, 1, 1200, EAST, FALSE, FALSE]] call EOS_Spawn; //guards
+[[currentSM], [6, 1], [7, 1], [0, 0], [0], [0], [0, 0], [5, 1, 1200, EAST, FALSE, FALSE]] call EOS_Spawn; //guards
 sleep 1;
 [[currentSM], [3, 1], [4, 1], [0, 0], [0], [0], [0, 0], [3, 1, 1100, EAST, FALSE, FALSE]] call EOS_Spawn; //civs
 
@@ -76,5 +76,5 @@ sideMissionUp = false; publicVariable "sideMissionUp";
 
 //--------------------- DELETE, DESPAWN, HIDE and RESET
 SM_SUCCESS = false; publicVariable "SM_SUCCESS";	// reset var for next cycle
-sleep 120;											// sleep to hide despawns from players. default 120, 1 for testing	
+sleep 120;											// sleep to hide despawns from players. default 120, 1 for testing
 [[currentSM]] call EOS_deactivate;					// despawn enemies and civs
