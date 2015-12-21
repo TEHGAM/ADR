@@ -395,7 +395,7 @@ for "_x" from 1 to 2 do {
     _patrolGroup = [_randomPos, ENEMY_SIDE, (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> [INFANTRY_PATROL] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
     _patrolGroup setBehaviour "COMBAT";
     _patrolGroup setCombatMode "RED";
-    [(units _patrolGroup)] call QS_fnc_setSkill4;
+    [(units _patrolGroup)] call QS_fnc_setSkill3;
     [_patrolGroup, _startPoint, 150] call BIS_fnc_taskPatrol;
     _enemiesArray = _enemiesArray + [_patrolGroup];
     {
@@ -415,7 +415,7 @@ for "_x" from 1 to 2 do {
     _patrolGroup = [_startPos, ENEMY_SIDE, (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Infantry" >> [INFANTRY_PATROL] call BIS_fnc_selectRandom)] call BIS_fnc_spawnGroup;
     _patrolGroup setBehaviour "COMBAT";
     _patrolGroup setCombatMode "RED";
-    [(units _patrolGroup)] call QS_fnc_setSkill4;
+    [(units _patrolGroup)] call QS_fnc_setSkill3;
     _enemiesArray = _enemiesArray + [_patrolGroup];
     {
         _x addItem "MineDetector";
@@ -464,10 +464,10 @@ _houseGroup setBehaviour "COMBAT";
 _houseGroup setCombatMode "RED";
 _enemiesArray = _enemiesArray + [_houseGroup];
 
-[(units _commanderGroup)] call QS_fnc_setSkill4;
-[(units _houseGroup)] call QS_fnc_setSkill4;
-[(units _staticGroup)] call QS_fnc_setSkill4;
-[(units _hostagesGroup)] call QS_fnc_setSkill1;
+[(units _commanderGroup)] call QS_fnc_setSkill3;
+[(units _houseGroup)] call QS_fnc_setSkill3;
+[(units _staticGroup)] call QS_fnc_setSkill3;
+[(units _hostagesGroup)] call QS_fnc_setSkill3;
 
 // show brief information
 _city = _position select 0;

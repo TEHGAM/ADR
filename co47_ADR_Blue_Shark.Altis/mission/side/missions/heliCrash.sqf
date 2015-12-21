@@ -309,11 +309,11 @@ for "_x" from 1 to 2 do {
 };
 
 // set skills
-[(units _patrolGroup)] call QS_fnc_setSkill4;
-[(units _houseGroup)] call QS_fnc_setSkill4;
-[(units _sniperGroup)] call QS_fnc_setSkill4;
-[(units _staticGroup)] call QS_fnc_setSkill4;
-[(units _technicalGroup)] call QS_fnc_setSkill4;
+[(units _patrolGroup)] call QS_fnc_setSkill3;
+[(units _houseGroup)] call QS_fnc_setSkill3;
+[(units _sniperGroup)] call QS_fnc_setSkill3;
+[(units _staticGroup)] call QS_fnc_setSkill3;
+[(units _technicalGroup)] call QS_fnc_setSkill3;
 
 // show brief information
 _city = _position select 0;
