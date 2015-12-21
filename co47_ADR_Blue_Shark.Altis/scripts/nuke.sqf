@@ -4,7 +4,7 @@ Based on script made by MOERDERHOSCHI
 */
 _object = _this select 0;
 _epicenter = _this select 1;
-if (isServer || isDedicated || player distance _epicenter > 5000) exitWith {};
+if (isDedicated || player distance _epicenter > 5000) exitWith {};
 
 // smoke conus
 _cone = "#particlesource" createVehicleLocal _epicenter;
