@@ -2,9 +2,13 @@
 Author: ToxaBes
 Based on script made by MOERDERHOSCHI
 */
-_object = _this select 0;
-_epicenter = _this select 1;
-if (isDedicated || player distance _epicenter > 5000) exitWith {};
+_epicenter = _this select 0;
+
+// we don't want to show it for all players
+//if (player distance _epicenter > 5000) exitWith {};
+
+// make fake object for attaching effects
+_object = createVehicle ["Land_HelipadEmpty_F", _epicenter, [], 0, "NONE"];
 
 // smoke conus
 _cone = "#particlesource" createVehicleLocal _epicenter;

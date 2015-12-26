@@ -145,43 +145,46 @@ for "_i" from 0 to ((count _vehicles) - 1) do {
     _spawned = (_spawn select 0);    
     _initDir = (_positions select _i) select 3;
     _spawned setPos _initPosition;
-    _spawned setDir _initDir;      
-    _spawned setVariable ["convoyDestination",false,false];
+    _spawned setDir _initDir;
     if (_currentVeh == INFANTRY_DEVICE_VEHICLE) then {
-        _spawned setDamage 0.5;
-        nukeExplosion = false; publicVariable "nukeExplosion";
-        _spawned addEventHandler ["Killed",
-            {
-                convoyVclDestroyed = true; publicVariable "convoyVclDestroyed";
-                [(_this select 0),"QS_fnc_removeAction0",nil,true] spawn BIS_fnc_MP;
-                _basePos = getMarkerPos "respawn_west";
-                _epicenter = getPos (_this select 0);
-                if (((_this select 0) distance _basePos) > 2200 && !nukeExplosion) then {
-                    nukeExplosion = true; publicVariable "nukeExplosion";
+        [_spawned, "QS_fnc_addActionDefuse", nil, true] spawn BIS_fnc_MP;
+        vehDevice = (_spawn select 0);
+        vehDevice setDamage 0.5;
+        vehDevice addMPEventHandler ["MPKilled", {
+            SM_CONVOY_FAIL = true; publicVariable "SM_CONVOY_FAIL";
+            _basePos = getMarkerPos "respawn_west";
+            _curObj = _this select 0;
+            _epicenter = getPos _curObj;            
+            if (isServer) then {
+                convoyVclDestroyed = true; publicVariable "convoyVclDestroyed";                                               
+                _bigBomb = createVehicle ["Bo_GBU12_LGB", _epicenter, [], 0, "NONE"];   
+                if (((_this select 0) distance _basePos) > 2200) then {      
                     _k = 1.66;
                     _radius = 900;
-                    _radiusEMI = 1400;                            
-                    _bigBomb = createVehicle ["Bo_GBU12_LGB", _epicenter, [], 0, "NONE"];
-                    _obj = createVehicle ["Land_HelipadEmpty_F", _epicenter, [], 0, "NONE"];
-                    [[[_obj, _epicenter], "scripts\nuke.sqf"], "BIS_fnc_execVM", true, false, false] call BIS_fnc_MP;
-                    _allObjects = nearestObjects [_epicenter,[], _radius];
+                    _radiusEMI = 1400;                   
+                    _allObjects1 = nearestObjects [_epicenter,[], _radius];
                     {
                         _distance = [_epicenter, getPos _x] call BIS_fnc_distance2D;
                         _x setDamage (abs ((_distance / _radius) - _k));
-                    } foreach _allObjects;
-                    _allObjects = nearestObjects [_epicenter, ["LandVehicle","Air","Ship"], _radiusEMI];
+                    } foreach _allObjects1;
+                    _allObjects2 = nearestObjects [_epicenter, ["LandVehicle","Air","Ship"], _radiusEMI];
                     {
                         _x engineOn false;
                         _x setfuel 0;        
-                    } foreach _allObjects;
-                } else {
-                    _bigBomb = createVehicle ["Bo_GBU12_LGB", _epicenter, [], 0, "NONE"];
-                };
-                SM_CONVOY_FAIL = true; publicVariable "SM_CONVOY_FAIL";
-                deleteVehicle (_this select 0);
-            }
-        ];
-        [_spawned, "QS_fnc_addActionDefuse",nil,true] spawn BIS_fnc_MP;
+                    } foreach _allObjects2;
+                };     
+                [_curObj, "QS_fnc_removeAction0", nil, true] spawn BIS_fnc_MP;
+                deleteVehicle _curObj;                
+            };
+
+            // show nuke explotion effect for players
+            if (hasInterface) then {
+                //[[_epicenter], "scripts\nuke.sqf"] call BIS_fnc_execVM;
+                [_epicenter] execVM "scripts\nuke.sqf";
+            };            
+        }];
+
+        // remove passengers from device vehicle        
         {
             if (_x != driver _spawned) then {
                 deleteVehicle _x;
