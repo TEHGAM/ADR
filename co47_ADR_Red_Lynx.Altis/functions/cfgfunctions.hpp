@@ -5,18 +5,23 @@ class QS
 	{
 		file = "functions";
 		class actionClearInventory {};
+		class actionPilotRepair {};
 		class addAction {};
+		class addActionDefuse {};
 		class addActionGetData {};
 		class addActionGetIntel {};
 		class addActionRescue {};
 		class addActionSabotage {};
 		class addActionSurrender {};
+		class addActionTimer {};
 		class AOdelete {};
 		class AOenemy {};
 		class AOminefield {};
 		class conditionClearInventory {};
+		class conditionPilotRepair {};
 		class conditionUH80TurretActionLock {};
 		class conditionUH80TurretActionUnlock {};
+		class deleteOldSMUnits {};
 		class deleteUnits {};
 		class enemyCAS {};
 		class FindPosBuilding {};

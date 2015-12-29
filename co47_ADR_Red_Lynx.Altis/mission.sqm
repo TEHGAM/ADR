@@ -4,14 +4,15 @@ class Mission
 	addOns[]=
 	{
 		"A3_Modules_F",
-		"A3_Soft_F_Crusher_UGV",
-		"3DEN",
-		"a3_modules_f_curator_curator",
-		"A3_Air_F_Gamma_UAV_02",
+		"A3_Characters_F_OPFOR",
 		"a3_characters_f",
 		"A3_Characters_F_Gamma",
+		"A3_Modules_F_Curator_Curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
+		"A3_Data_F_Curator_Characters",
+		"A3_Soft_F_Crusher_UGV",
+		"A3_Air_F_Gamma_UAV_02",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Structures_F_Mil_BagBunker",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
@@ -20,9 +21,12 @@ class Mission
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Civ_Camping",
 		"A3_Weapons_F_Beta_Ammoboxes",
+		"A3_Soft_F_Gamma_TruckHeavy",
+		"A3_Soft_F_MRAP_02",
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_Boat_F_SDV_01",
 		"A3_Air_F_Heli_Heli_Transport_03",
+		"A3_Soft_F_TruckHeavy",
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Soft_F_MRAP_03",
 		"A3_Air_F_Beta_Heli_Transport_02",
@@ -30,35 +34,27 @@ class Mission
 		"A3_Soft_F_Gamma_Offroad",
 		"a3_soft_f_offroad_01",
 		"A3_Structures_F_Mil_Fortification",
-		"A3_Armor_F_Panther",
 		"A3_Boat_F_Civilian_Boat",
+		"A3_armor_f_beta_APC_Tracked_02",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Civ_Lamps",
 		"A3_Data_F",
 		"a3_roads_f",
 		"A3_Structures_F_Mil_Flags",
 		"A3_Air_F_Heli_Light_02",
+		"A3_Armor_F_Panther",
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
 		"A3_Soft_F_Quadbike",
 		"A3_Supplies_F_Heli_Slingload",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Weapons_F_Bootcamp_Ammoboxes",
-		"A3_Air_F_EPB_Heli_Light_03",
-		"A3_Soft_F_EPC_Truck_03",
-		"A3_Structures_F_Heli_Ind_AirPort",
-		"a3_map_altis",
-		"A3_Characters_F_OPFOR",
-		"A3_Data_F_Curator_Characters",
-		"A3_Soft_F_MRAP_02",
-		"A3_Armor_F_APC_Wheeled_03",
-		"A3_Soft_F_TruckHeavy",
-		"a3_soft_f_gamma_truckheavy",
-		"A3_Armor_F_T100K",
-		"A3_armor_f_beta_APC_Tracked_02",
-		"A3_Characters_F_Mark",
 		"A3_Air_F_Heli_Heli_Light_02",
-		"A3_Armor_F_Marid"
+		"A3_Structures_F_Heli_Ind_AirPort",
+		"A3_Air_F_EPB_Heli_Light_03",
+		"A3_Armor_F_Marid",
+		"a3_map_altis",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
@@ -119,7 +115,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-47 ADR: Red Lynx (AW Invade & Annex)";
-		overviewText="Version 4.2.0";
+		overviewText="Version 4.2.3";
 		timeOfChanges=28800;
 		startWeather=0.55000001;
 		startWind=0.099999994;
@@ -175,7 +171,7 @@ class Mission
 					id=1;
 					side="EAST";
 					vehicle="O_Soldier_SL_F";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -327,6 +323,19 @@ class Mission
 				};
 				class Item12
 				{
+					position[]={15288.241,17.866961,17392.527};
+					azimut=135;
+					id=38;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Пулеметчик";
+				};
+				class Item13
+				{
 					position[]={15286.938,17.832579,17402.977};
 					azimut=135;
 					id=13;
@@ -338,7 +347,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Гранатометчик";
 				};
-				class Item13
+				class Item14
 				{
 					position[]={15288.17,17.835369,17399.889};
 					azimut=135;
@@ -351,7 +360,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Гранатометчик";
 				};
-				class Item14
+				class Item15
 				{
 					position[]={15288.001,17.828775,17401.801};
 					azimut=135;
@@ -364,7 +373,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Гранатометчик";
 				};
-				class Item15
+				class Item16
 				{
 					position[]={15289.331,17.821804,17400.883};
 					azimut=135;
@@ -377,7 +386,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Гранатометчик";
 				};
-				class Item16
+				class Item17
 				{
 					position[]={15286.924,17.841257,17400.836};
 					azimut=135;
@@ -390,7 +399,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Гранатометчик";
 				};
-				class Item17
+				class Item18
 				{
 					position[]={15285.689,17.846525,17401.988};
 					azimut=135;
@@ -403,7 +412,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Гранатометчик";
 				};
-				class Item18
+				class Item19
 				{
 					position[]={15283.147,17.869656,17398.23};
 					azimut=135;
@@ -416,7 +425,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Медик";
 				};
-				class Item19
+				class Item20
 				{
 					position[]={15282.976,17.875362,17396.262};
 					azimut=135;
@@ -429,7 +438,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Медик";
 				};
-				class Item20
+				class Item21
 				{
 					position[]={15284.217,17.869587,17397.188};
 					azimut=135;
@@ -442,7 +451,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Медик";
 				};
-				class Item21
+				class Item22
 				{
 					position[]={15282.003,17.875002,17397.369};
 					azimut=135;
@@ -455,7 +464,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Медик";
 				};
-				class Item22
+				class Item23
 				{
 					position[]={15282.004,17.869707,17399.355};
 					azimut=135;
@@ -468,7 +477,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Медик";
 				};
-				class Item23
+				class Item24
 				{
 					position[]={15280.957,17.875017,17398.41};
 					azimut=135;
@@ -481,7 +490,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Медик";
 				};
-				class Item24
+				class Item25
 				{
 					position[]={15293.322,17.739544,17405.066};
 					azimut=135;
@@ -494,7 +503,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пехотный снайпер";
 				};
-				class Item25
+				class Item26
 				{
 					position[]={15291.227,17.770517,17404.977};
 					azimut=135;
@@ -507,7 +516,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пехотный снайпер";
 				};
-				class Item26
+				class Item27
 				{
 					position[]={15292.213,17.747782,17406.004};
 					azimut=135;
@@ -520,7 +529,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пехотный снайпер";
 				};
-				class Item27
+				class Item28
 				{
 					position[]={15292.332,17.764259,17404.068};
 					azimut=135;
@@ -533,7 +542,20 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Пехотный снайпер";
 				};
-				class Item28
+				class Item29
+				{
+					position[]={15293.715,17.745308,17403.775};
+					azimut=135;
+					id=39;
+					side="EAST";
+					vehicle="O_soldier_M_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
+					description="Пехотный снайпер";
+				};
+				class Item30
 				{
 					position[]={15287.635,17.778425,17409.963};
 					azimut=135;
@@ -546,7 +568,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Снайпер";
 				};
-				class Item29
+				class Item31
 				{
 					position[]={15288.759,17.769661,17409.031};
 					azimut=135;
@@ -559,7 +581,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Снайпер";
 				};
-				class Item30
+				class Item32
 				{
 					position[]={15287.635,17.79007,17408.217};
 					azimut=135;
@@ -572,7 +594,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Снайпер";
 				};
-				class Item31
+				class Item33
 				{
 					position[]={15286.587,17.797834,17409.148};
 					azimut=135;
@@ -585,7 +607,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Снайпер";
 				};
-				class Item32
+				class Item34
 				{
 					position[]={15279.729,17.87191,17401.607};
 					azimut=135;
@@ -598,7 +620,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Инженер";
 				};
-				class Item33
+				class Item35
 				{
 					position[]={15278.597,17.873701,17402.527};
 					azimut=135;
@@ -611,7 +633,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Инженер";
 				};
-				class Item34
+				class Item36
 				{
 					position[]={15278.444,17.87657,17400.682};
 					azimut=135;
@@ -624,7 +646,7 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Инженер";
 				};
-				class Item35
+				class Item37
 				{
 					position[]={15277.495,17.87801,17401.498};
 					azimut=135;
@@ -637,57 +659,31 @@ class Mission
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 					description="Инженер";
 				};
-				class Item36
+				class Item38
 				{
-					position[]={15282.896,17.846138,17406.27};
+					position[]={15280.738,17.867926,17402.578};
 					azimut=135;
 					id=37;
 					side="EAST";
-					vehicle="O_soldier_exp_F";
+					vehicle="O_engineer_F";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Сапер";
-				};
-				class Item37
-				{
-					position[]={15284.109,17.843885,17405.215};
-					azimut=135;
-					id=38;
-					side="EAST";
-					vehicle="O_soldier_exp_F";
-					player="PLAY CDG";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Сапер";
-				};
-				class Item38
-				{
-					position[]={15282.854,17.854872,17404.143};
-					azimut=135;
-					id=39;
-					side="EAST";
-					vehicle="O_soldier_exp_F";
-					player="PLAY CDG";
-					rank="SERGEANT";
-					skill=0.60000002;
-					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Сапер";
+					description="Инженер";
 				};
 				class Item39
 				{
-					position[]={15281.777,17.856653,17405.131};
+					position[]={15279.693,17.869408,17403.555};
 					azimut=135;
 					id=40;
 					side="EAST";
-					vehicle="O_soldier_exp_F";
+					vehicle="O_engineer_F";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
-					description="Сапер";
+					description="Инженер";
 				};
 				class Item40
 				{
@@ -696,7 +692,7 @@ class Mission
 					special="NONE";
 					id=41;
 					side="EAST";
-					vehicle="O_soldier_repair_F";
+					vehicle="O_helipilot_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					rank="SERGEANT";
@@ -711,7 +707,7 @@ class Mission
 					special="NONE";
 					id=42;
 					side="EAST";
-					vehicle="O_soldier_repair_F";
+					vehicle="O_helipilot_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					rank="CORPORAL";
@@ -726,7 +722,7 @@ class Mission
 					special="NONE";
 					id=43;
 					side="EAST";
-					vehicle="O_soldier_repair_F";
+					vehicle="O_helipilot_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					rank="CORPORAL";
@@ -741,7 +737,7 @@ class Mission
 					special="NONE";
 					id=44;
 					side="EAST";
-					vehicle="O_soldier_repair_F";
+					vehicle="O_helipilot_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					rank="CORPORAL";
@@ -756,7 +752,7 @@ class Mission
 					special="NONE";
 					id=45;
 					side="EAST";
-					vehicle="O_soldier_repair_F";
+					vehicle="O_helipilot_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					rank="CORPORAL";
@@ -771,7 +767,7 @@ class Mission
 					special="NONE";
 					id=46;
 					side="EAST";
-					vehicle="O_soldier_repair_F";
+					vehicle="O_helipilot_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					rank="CORPORAL";
@@ -1403,7 +1399,7 @@ class Mission
 					rank="MAJOR";
 					skill=0.60000002;
 					text="Supply_Officer";
-					init="removeAllWeapons this; this allowDamage false; this enablesimulation false;     this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_h_f.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_m.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_r.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_h_b.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#CDDC39'><img image='\a3\ui_f\data\map\VehicleIcons\iconcrateammo_ca.paa' size='1.0'/> Запросить ящик с боеприпасами</t>"",""scripts\misc\SupplyCrates\Supply_h_a.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_t_f.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_m.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_r.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_t_b.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль сидений</t>"",""scripts\misc\SupplyCrates\Supply_t_s.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить транспортный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_p.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_soldier_repair_F"")'];";
+					init="removeAllWeapons this; this allowDamage false; this enablesimulation false;     this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_h_f.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_m.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_r.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_h_b.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#CDDC39'><img image='\a3\ui_f\data\map\VehicleIcons\iconcrateammo_ca.paa' size='1.0'/> Запросить ящик с боеприпасами</t>"",""scripts\misc\SupplyCrates\Supply_h_a.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_t_f.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_m.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_r.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_t_b.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль сидений</t>"",""scripts\misc\SupplyCrates\Supply_t_s.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить транспортный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_p.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""O_helipilot_F"")'];";
 				};
 			};
 		};

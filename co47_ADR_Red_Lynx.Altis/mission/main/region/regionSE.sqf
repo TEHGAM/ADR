@@ -1,9 +1,9 @@
 /*
-Author: 
+Author:
 
 	Quiksilver
 
-Last modified: 
+Last modified:
 
 	2/05/2014
 
@@ -59,7 +59,7 @@ while { count _targetArray > 0 } do {
 		_flatPos = _position isFlatEmpty[3, 1, 0.3, 30, 0, false];
 	};
 
-	_roughPos = 
+	_roughPos =
 	[
 		((_flatPos select 0) - 200) + (random 400),
 		((_flatPos select 1) - 200) + (random 400),
@@ -108,15 +108,15 @@ while { count _targetArray > 0 } do {
 	//------------------------------------------- Set target start text
 	_targetStartText = format
 	[
-		"<t align='center' size='2.2'>Захватить</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Начинайте наступление.<br/><br/>Уничтожив радар вы устраните их возможность на вызов авиаподдержки.",
+		"<t align='center' size='2.2'>Захватить</t><br/><t size='1.5' align='center' color='#FFCF11'>%1</t><br/>____________________<br/>Начинайте наступление.<br/><br/>Уничтожив радиовышку вы устраните их возможность на вызов авиаподдержки.",
 		currentAO
 	];
 
-	//-------------------------------------------- Show global target start hint	
+	//-------------------------------------------- Show global target start hint
 	GlobalHint = _targetStartText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 	showNotification = ["NewMain", currentAO]; publicVariable "showNotification";
-	showNotification = ["NewSub", "Уничтожить радар противника"]; publicVariable "showNotification";	
-	
+	showNotification = ["NewSub", "Уничтожить радиовышку противника"]; publicVariable "showNotification";
+
 	//-------------------------------------------- CORE LOOP
 	currentAOUp = true; publicVariable "currentAOUp";
 
@@ -137,9 +137,9 @@ while { count _targetArray > 0 } do {
 	//--------------------------------------------- RADIO TOWER DESTROYED
 	radioTowerAlive = false; publicVariable "radioTowerAlive";
 	{ _x setMarkerPos [-10000, -10000, -10000]; } forEach ["radioMarker", "radioCircle"];
-	_radioTowerDownText = "<t align='center' size='2.2'>Радар</t><br/><t size='1.5' color='#08b000' align='center'>Уничтожен</t><br/>____________________<br/><t size='1.2' color='#08b000' align='center'>Теперь противник не сможет вызвать авиаподдержку.</t><br/>";
+	_radioTowerDownText = "<t align='center' size='2.2'>Радиовышка</t><br/><t size='1.5' color='#08b000' align='center'>Уничтожен</t><br/>____________________<br/><t size='1.2' color='#08b000' align='center'>Теперь противник не сможет вызвать авиаподдержку.</t><br/>";
 	GlobalHint = _radioTowerDownText; hint parseText GlobalHint; publicVariable "GlobalHint";
-	showNotification = ["CompletedSub", "Радар уничтожен!"]; publicVariable "showNotification";
+	showNotification = ["CompletedSub", "Радиовышка уничтожен!"]; publicVariable "showNotification";
 
 	//---------------------------------------------- WHEN ENEMIES KILLED
 	waitUntil {sleep 5; count list _dt < PARAMS_EnemyLeftThreshhold};
@@ -172,9 +172,5 @@ while { count _targetArray > 0 } do {
 	GlobalHint = _targetCompleteText; publicVariable "GlobalHint"; hint parseText GlobalHint;
 
 	//----------------------------------------------------- MAINTENANCE
-	_aoClean = [] execVM "scripts\misc\clearItemsAO.sqf";
-	waitUntil {
-		scriptDone _aoClean
-	};
 	sleep 20;
 };

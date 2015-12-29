@@ -2,7 +2,7 @@
 
 author = "Rarek, AhoyWorld, Quiksilver";
 onLoadName = "ADR: Red Lynx (I&A)";
-OnLoadMission = "Версия 4.2.2 — редакция TEHGAM.COM";
+OnLoadMission = "Версия 4.2.3 — редакция TEHGAM.COM";
 loadScreen = "media\images\adr_redlynx_loading.jpg";
 overviewPicture = "media\images\adr_redlynx_loading.jpg";
 
@@ -38,7 +38,7 @@ RespawnDelay = 4;										// Delay prior to respawn, ensure longer than BTC rev
 RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
 
 //------------------------- Garbage collector
-	
+
 wreckLimit = 3;											// Limit before removal is triggered
 wreckRemovalMinTime = 120;								// Min time before removal
 wreckRemovalMaxTime = 360;								// Max time before removal
@@ -47,11 +47,10 @@ corpseRemovalMinTime = 60;								// Min time before removal
 corpseRemovalMaxTime = 120;								// Max time before removal
 
 //------------------------- Includes / Functions
-	
+
 #include "scripts\VAS\menu.hpp" 						// VAS
 #include "scripts\taw_vd\dialog.hpp" 					// TAW View Distance
 #include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
-#include "scripts\spectator\spectating.hpp"				// Kegetys Spectator Script
 #include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system
 #include "scripts\DOM_squad\SquadManagement.hpp"		// Squad manager
 
@@ -84,7 +83,7 @@ class Params
 				texts[] = {"Включено","Выключено"};
 				default = 1;
 			};
-		
+
 		class DefendAO {
 				title = "Защита";
 				values[] = {1,0};
@@ -105,14 +104,14 @@ class Params
 				texts[] = {"Включено","Выключено"};
 				default = 1;
 			};
-			
+
 		class EnemyLeftThreshhold {
 				title = "Кол-во оставшихся врагов для завершения миссии";
-				values[] = {1,2,3,4,5,6,7,8,9,10};
-				texts[] = {"1","2","3","4","5","6","7","8","9","10"};
-				default = 9;
+				values[] = {2,4,8,16};
+				texts[] = {"2","4","8","16"};
+				default = 16;
 			};
-	
+
 		class RadioTowerMineFieldChance {
 				title = "Шанс появления минного поля рядом с вышкой";
 				values[] = {0,1,2,3,4,5,6,7,8,9,11};
@@ -161,7 +160,7 @@ class Params
 				texts[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
 				default = 8; // default 11... remember, more AI = less FPS
 			};
-	
+
 		class SniperTeamsPatrol {
 				title = "Кол-во групп снайперов";
 				values[] = {0,1,2,3};
@@ -196,13 +195,13 @@ class Params
 				texts[] = {1,2,3,4,5};
 				default = 2; // default 2
 			};
-			
+
 		class AirPatrol {
 				title = "Шанс появления вражеского штурмовика";
 				values[] = {0,1,2,3,4,5,6,7,8,9,10};
 				texts[] = {0%,10%,20%,30%,40%,50%,60%,70%,80%,90%,100%};
 				default = 7; // default 7
-			};			
+			};
 		class PilotRespawn {
 				title = "Респавн пилотов";
 				values[] = {0,1};
@@ -395,17 +394,17 @@ class CfgNotifications
 Authors:
 
 	Quiksilver & Rarek [AW]
-	
-	Invade & Annex 2.00 was developed by Rarek [ahoyworld.co.uk] with hundreds of hours of work, 
+
+	Invade & Annex 2.00 was developed by Rarek [ahoyworld.co.uk] with hundreds of hours of work,
 	The current iterations have been developed by Quiksilver with hundreds of hours of work.
-	
+
 	Contributors: Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
-	
+
 	www.ahoyworld.co.uk
 	www.allfps.com.au
-	
+
 	Please be respectful and do not remove/alter credits.
-	
+
 File Reference:
 
 	https://community.bistudio.com/wiki/Description.ext

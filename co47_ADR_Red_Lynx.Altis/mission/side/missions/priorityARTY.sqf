@@ -69,7 +69,7 @@ sleep 1;
 
 _unitsArray = [objNull];
 
-_priorityGroup = createGroup east;
+_priorityGroup = createGroup west;
 
 "B_officer_F" createUnit [_flatPos, _priorityGroup];
 "B_officer_F" createUnit [_flatPos, _priorityGroup];
