@@ -319,7 +319,6 @@ _myBox = _this select 0;
 "optic_MRD",
 "optic_LRPS",
 "optic_NVS",
-"optic_Nightstalker",
 "optic_AMS",
 "optic_AMS_khk",
 "optic_AMS_snd",
