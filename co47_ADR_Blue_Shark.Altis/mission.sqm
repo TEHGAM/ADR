@@ -51,11 +51,13 @@ class Mission
 		"A3_Weapons_F_Bootcamp_Ammoboxes",
 		"A3_Structures_F_Heli_Ind_AirPort",
 		"A3_Air_F_EPB_Heli_Light_03",
-		"a3_map_altis"
+		"a3_map_altis",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Modules_F",
+		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
@@ -113,11 +115,11 @@ class Mission
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
-		startWeather=0.84999996;
+		startWeather=0.64999998;
 		startWind=0.099999994;
 		startWindDir=135;
 		startGust=0.099999994;
-		forecastWeather=0.84999996;
+		forecastWeather=0.75;
 		forecastWind=0.099999994;
 		forecastWaves=0;
 		forecastGust=0.099999994;
@@ -130,7 +132,6 @@ class Mission
 		month=7;
 		day=15;
 		hour=5;
-		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
