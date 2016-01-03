@@ -382,10 +382,10 @@ for "_c" from 0 to 150 do {
 _unitsArray = _unitsArray + _minesArray;
 
 // set skills
-[(units _campGroup)] call QS_fnc_setSkill4;
-[(units _aaGroup)] call QS_fnc_setSkill4;
-[(units _staticGroup)] call QS_fnc_setSkill4;
-[(units _heliGroup)] call QS_fnc_setSkill4;
+[(units _campGroup)] call QS_fnc_setSkill3;
+[(units _aaGroup)] call QS_fnc_setSkill3;
+[(units _staticGroup)] call QS_fnc_setSkill3;
+[(units _heliGroup)] call QS_fnc_setSkill3;
 
 while { sideMissionUp } do {
     sleep 2;
