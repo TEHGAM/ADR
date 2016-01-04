@@ -154,9 +154,10 @@ for "_i" from 0 to ((count _vehicles) - 1) do {
             SM_CONVOY_FAIL = true; publicVariable "SM_CONVOY_FAIL";
             _basePos = getMarkerPos "respawn_west";
             _curObj = _this select 0;
+            _curObj setDamage 0.9;
             _epicenter = getPos _curObj;            
             if (isServer) then {
-                convoyVclDestroyed = true; publicVariable "convoyVclDestroyed";                                               
+                convoyVclDestroyed = true; publicVariable "convoyVclDestroyed";   
                 _bigBomb = createVehicle ["Bo_GBU12_LGB", _epicenter, [], 0, "NONE"];   
                 if (((_this select 0) distance _basePos) > 2200) then {      
                     _k = 1.66;

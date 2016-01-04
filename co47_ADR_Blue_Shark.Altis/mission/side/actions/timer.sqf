@@ -28,7 +28,7 @@ if (!TIMER_IN_USE) then {
     [WEST, "HQ"] sideChat hqSideChat;
     _epicenter = getPos _object;
     if ((_object distance _basePos) > 2200) then {  
-       _object setDamage 0.9;    
+       _object setDamage 0.95;    
        _bigBomb = createVehicle ["Bo_GBU12_LGB", _epicenter, [], 0, "NONE"];
     };
 } else {
