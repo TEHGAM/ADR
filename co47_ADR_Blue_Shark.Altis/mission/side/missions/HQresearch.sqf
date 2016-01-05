@@ -70,7 +70,7 @@ sideMarkerText = "Шпионаж"; publicVariable "sideMarkerText";
 "sideMarker" setMarkerText "Допзадание: Шпионаж"; publicVariable "sideMarker";
 publicVariable "sideObj";
 
-_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Шпионаж</t><br/>____________________<br/>Силы противника проводят НИР с целью производства новых типов оружия.<br/><br/>Ваша задача — выдвинутся в указанный район, найти и захватить научные данные и затем уничтожить исследовательский центр.</t>";
+_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Шпионаж</t><br/>____________________<br/>Силы противника проводят НИР с целью производства новых типов оружия.<br/><br/>Ваша задача — выдвинуться в указанный район, найти и захватить научные данные и затем уничтожить исследовательский центр.</t>";
 GlobalHint = _briefing; publicVariable "GlobalHint"; hint parseText GlobalHint;
 showNotification = ["NewSideMission", "Шпионаж"]; publicVariable "showNotification";
 sideMarkerText = "Шпионаж"; publicVariable "sideMarkerText";

@@ -50,7 +50,7 @@ sleep 1;
 "sideMarker" setMarkerPos (getMarkerPos currentSM);
 sideMarkerText = "Склад"; publicVariable "sideMarkerText";
 "sideMarker" setMarkerText "Допзадание: Склад"; publicVariable "sideMarker";
-_briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Склад</t><br/>____________________<br/>Враг поставляет боевикам современное оружие и взрывчатые вещества. Экипируйтесь с расчётом на ближний бой!<br/><br/>Ваша задача — выдвинутся в указанный район и уничтожить складируемый боезапас противника.</t>";
+_briefing = "<t align='center'><t size='2.2'>Допзадание</t><br/><t size='1.5' color='#00B2EE'>Склад</t><br/>____________________<br/>Враг поставляет боевикам современное оружие и взрывчатые вещества. Экипируйтесь с расчётом на ближний бой!<br/><br/>Ваша задача — выдвинуться в указанный район и уничтожить складируемый боезапас противника.</t>";
 GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 showNotification = ["NewSideMission", "Склад"]; publicVariable "showNotification";
 
