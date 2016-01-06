@@ -137,9 +137,11 @@ _heliData = _helicopters call BIS_fnc_selectRandom;
 _heliType = _heliData select 0;
 heliSnatch = createVehicle [_heliType, _heliPos, [], 0, "NONE"]; 
 heliSnatch setDir _heliDir;
-heliSnatch addEventHandler ["Killed",
+heliSnatch addMPEventHandler ["MPKilled",
     {
-        SM_SNATCH_FAIL = true; publicVariable "SM_SNATCH_FAIL";
+        if (isServer) then {
+            SM_SNATCH_FAIL = true; publicVariable "SM_SNATCH_FAIL";
+        };
     }
 ];
 
