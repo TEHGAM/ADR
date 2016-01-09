@@ -1,9 +1,10 @@
 _myBox = _this select 0;
-["AmmoboxInit",[_myBox,true]] call BIS_fnc_arsenal;
-[_myBox,[true],true] call BIS_fnc_removeVirtualBackpackCargo;
-[_myBox,[true],true] call BIS_fnc_removeVirtualItemCargo;
-[_myBox,[true],true] call BIS_fnc_removeVirtualWeaponCargo;
-[_myBox,[true],true] call BIS_fnc_removeVirtualMagazineCargo;
+["AmmoboxInit", [_myBox, false]] call BIS_fnc_arsenal;
+clearBackpackCargoGlobal _myBox;
+clearItemCargoGlobal _myBox;
+clearMagazineCargoGlobal _myBox;
+clearWeaponCargoGlobal _myBox;
+
 //--- Рюкзаки
 [_myBox,[
 "B_Carryall_cbr",
@@ -55,6 +56,7 @@ _myBox = _this select 0;
 "B_GMG_01_weapon_F",
 "B_HMG_01_weapon_F"
 ],true] call BIS_fnc_addVirtualBackpackCargo;
+
 [_myBox,[
 //--- НАТО
 "U_B_CombatUniform_mcam",
