@@ -177,6 +177,10 @@
 			<Russian>Очистить</Russian>
 			<Spanish>Eliminar Todo</Spanish>
 		</Key>
+		<Key ID="STR_VAS_Main_btnInfo">
+			<Original>Info</Original>
+			<Russian>Таблица</Russian>
+		</Key>
 		<Key ID="STR_VAS_Main_VirtGear">
 			<Original>Virtual Ammobox</Original>
 			<German>Interaktive Waffenkiste</German>
@@ -277,6 +281,10 @@
 			<Czech>Virtuální Ammobox Systém - Nahrát Vybavení</Czech>
 			<Russian>Список имеющихся наборов экипировки</Russian>
 			<Spanish>Virtual Ammobox System - Cargar Equipamiento</Spanish>
+		</Key>
+		<Key ID="STR_VAS_Info_Title">
+			<Original>Allowed weapon and scopes</Original>
+			<Russian>Разрешенное оружие и прицелы</Russian>
 		</Key>
 		<Key ID="STR_VAS_Load_LOR">
 			<Original>Load On Respawn</Original>

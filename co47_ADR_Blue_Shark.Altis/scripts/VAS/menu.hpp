@@ -398,6 +398,17 @@ class VAS_Diag {
 			h = (1 / 25);
 		};
 
+		class ButtonShowInfo : VAS_RscButtonMenu
+		{
+			idc = -1;
+			text = "$STR_VAS_Main_btnInfo";
+			onButtonClick = "createDialog ""VAS_Info_Diag"";";
+			x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.8 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+
 		class ButtonRemoveAll : VAS_RscButtonMenu {
 			idc = -1;
 			text = "$STR_VAS_Main_btnRemoveAll";
@@ -406,6 +417,148 @@ class VAS_Diag {
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
+		};
+	};
+};
+
+class VAS_Info_Diag {
+	idd = 1520;
+	name= "Virtual_Ammobox_Sys Load";
+	movingEnable = false;
+	enableSimulation = true;
+	onLoad = "[1] spawn VAS_fnc_SaveLoad";
+
+    class controlsBackground {
+		class VAS_BackGround : VAS_RscBG {
+			x = "SafeZoneXAbs";
+			y = "SafeZoneY";
+			w = "safeZoneWAbs";
+			h = "SafeZoneH";
+			colorBackground[] = {0.149, 0.196, 0.219, 0.9};
+		};
+	};
+
+	class controls {
+
+		class VAS_XD_MainCaption : VAS_XC_RscText {
+			colorBackground[] = {1, 1, 1, 0};
+		    colorText[] = {1, 1, 1, 1};
+			idc = -1;
+			text = "$STR_VAS_Info_Title";
+			x = "SafeZoneX";
+		    y = "SafeZoneY + 0.01";
+		    w = "SafeZoneW";
+		    h = 0.13;
+		    sizeEx = 0.1;
+		    style = 2;
+		    shadow = 0;
+		};
+
+        class Dom2 : VAS_XD_MainCaption {
+			x = "SafeZoneX + 0.05";
+			y = "SafeZoneY + SafeZoneH - 0.1";
+			colorText[] = {1, 1, 1, 1};
+			text = "";
+		};
+		
+        class VAS_XD_CloseButton: VAS_XD_ButtonBase {
+			idc = 9999;
+			text = "$STR_VAS_Main_btnClose"; 
+			action = "closeDialog 0";
+			default = true;
+			x = "SafeZoneX + SafeZoneW - 0.3";
+			y = "SafeZoneY + SafeZoneH - 0.07";
+			colorFocused[] = { 1, 1, 1, 1 };
+			colorBackgroundFocused[] = { 1, 1, 1, 0 };
+		};		
+
+		class RscControlsGroup : VAS_XD_RscControlsGroup {	
+			idc = -1;
+			type = 15;
+			style = 2;
+		    x = "SafeZoneX + 0.02";
+			y = "SafeZoneY + 0.15";
+			w = "SafeZoneW - 0.05";
+			h = "SafeZoneH - 0.25";		
+
+			class VScrollbar: ScrollBar {
+				color[] = {1,1,1,1};
+	        	width = 0.028;
+	        	shadow = 0;	  	
+	        };
+
+	        class HScrollbar: ScrollBar {
+	        	color[] = {1,1,1,1};
+	        	height = 0.028;
+	        	shadow = 0;
+	        };	       
+
+	        class controls{
+
+                class HTMLpage {
+                    idc = 7777;
+			        type = 9;
+			        style = 2;
+			        filename = "scripts\VAS\table.html";
+			        x = 0.005;
+			        y = 0.005;
+			        w = "SafeZoneW - 0.1";
+			        h = 4; // height of html table
+			        colorBackground[] = {0.149, 0.196, 0.219, 0.9};
+                    colorBold[] = {1, 1, 1, 1};
+                    colorLink[] = {0, 0, 1, 1};
+                    colorLinkActive[] = {1, 0, 0, 1};
+                    colorPicture[] = {1, 1, 1, 1};
+                    colorPictureBorder[] = {1, 0, 0, 1};
+                    colorPictureLink[] = {0, 0, 1, 1};
+                    colorPictureSelected[] = {0, 1, 0, 1};
+                    colorText[] = {1, 1, 1, 1};
+                    class H1 {
+	                	font = "PuristaLight";
+	                	fontBold = "PuristaLight";
+	                	sizeEx = 0.02474;
+	                };
+	                
+	                class H2 {
+	                	font = "PuristaLight";
+	                	fontBold = "PuristaLight";
+	                	sizeEx = 0.0286458;
+	                };
+	                
+	                class H3 {
+	                	font = "PuristaLight";
+	                	fontBold = "PuristaLight";
+	                	sizeEx = 0.0286458;
+	                };
+	                
+	                class H4 {
+	                	font = "PuristaLight";
+	                	fontBold = "PuristaLight";
+	                	sizeEx = 0.0208333;
+	                };
+	                
+	                class H5 {
+	                	font = "PuristaLight";
+	                	fontBold = "PuristaLight";
+	                	sizeEx = 0.0208333;
+	                };
+	                
+	                class H6 {
+	                	font = "PuristaLight";
+	                	fontBold = "PuristaLight";
+	                	sizeEx = 0.0208333;
+	                };
+	                
+	                class P {
+	                	font = "PuristaLight";
+	                	fontBold = "PuristaLight";
+	                	sizeEx = 0.04;
+	                };
+        
+	                prevPage = "\ca\ui\data\arrow_left_ca.paa";
+                    nextPage = "\ca\ui\data\arrow_right_ca.paa";
+                };
+	        };
 		};
 	};
 };

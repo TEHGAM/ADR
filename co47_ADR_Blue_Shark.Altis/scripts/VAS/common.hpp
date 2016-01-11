@@ -1070,3 +1070,211 @@ class VAS_ActiveTextPicture
     soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
     soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
 };
+
+
+
+class VAS_XC_RscText {	
+	idc = -1;
+	type = 0;
+	x = 0;
+	y = 0;
+	h = 0.037;
+	w = 0.3;
+	style = 0;
+	shadow = 1;
+	colorShadow[] = {0,0,0,0.5};
+	font = "PuristaMedium";
+	SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	colorText[] = {1,1,1,1.0};
+	colorBackground[] = {0,0,0,0};
+	linespacing = 1;
+	text = "";
+};
+class VAS_SXRscText {
+	idc = -1;
+	type = 0;
+	x = 0;
+	y = 0;
+	h = 0.037;
+	w = 0.3;
+	style = 0;
+	shadow = 1;
+	colorShadow[] = {0,0,0,0.5};
+	font = "PuristaMedium";
+	SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	colorText[] = {1,1,1,1.0};
+	colorBackground[] = {0,0,0,0};
+	linespacing = 1;
+};
+class VAS_RscBG: VAS_SXRscText {
+	idc = -1;
+	type = 0;
+	x = 0;
+	y = 0;
+	h = 0.037;
+	w = 0.3;
+	style = 0;
+	shadow = 1;
+	colorShadow[] = {0,0,0,0.5};
+	font = "PuristaMedium";
+	SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	colorText[] = {1,1,1,1.0};
+	colorBackground[] = {0,0,0,0};
+	linespacing = 1;
+	text = "";
+};
+class VAS_RscShortcutButtonDOM {
+	idc = -1;
+	style = 0;
+	default = 0;
+	shadow = 1;
+	w = 0.183825;
+	h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 20)";
+	color[] = {1,1,1,1.0};
+	color2[] = {0.95,0.95,0.95,1};
+	colorDisabled[] = {1,1,1,0.25};
+	colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",1};
+	colorBackground2[] = {1,1,1,1};
+	textureNoShortcut = "";
+	animTextureDefault = __UI_Path_ShortcutButton(normal_ca.paa);
+	animTextureNormal = __UI_Path_ShortcutButton(normal_ca.paa);
+	animTextureDisabled = __UI_Path_ShortcutButton(normal_ca.paa);
+	animTextureOver = __UI_Path_ShortcutButton(over_ca.paa);
+	animTextureFocused = __UI_Path_ShortcutButton(focus_ca.paa);
+	animTexturePressed = __UI_Path_ShortcutButton(down_ca.paa);
+	periodFocus = 1.2;
+	periodOver = 0.8;
+	class HitZone {
+		left = 0.0;
+		top = 0.0;
+		right = 0.0;
+		bottom = 0.0;
+	};
+	class ShortcutPos {
+		left = 0;
+		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
+		w = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1) * (3/4)";
+		h = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	};
+	class TextPos {
+		left = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1) * (3/4)";
+		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
+		right = 0.005;
+		bottom = 0.0;
+	};
+	period = 0.4;
+	font = "PuristaMedium";
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	text = "";
+	soundEnter[] = {"",0.09,1};
+	soundPush[] = {"",0.0,0};
+	soundClick[] = {"",0.07,1};
+	soundEscape[] = {"",0.09,1};
+	action = "";
+	class Attributes {
+		font = "PuristaMedium";
+		color = "#E5E5E5";
+		align = "left";
+		shadow = "true";
+	};
+	class AttributesImage {
+		font = "PuristaMedium";
+		color = "#E5E5E5";
+		align = "left";
+	};
+};
+
+class VAS_XD_ButtonBase: VAS_RscShortcutButtonDOM {
+	idc = -1;
+	type = 16;
+	style = "0x02 + 0xC0";
+	default = 0;
+	shadow = 0;
+	x = 0;
+	y = 0;
+	w = 0.3;
+	h = 0.039216;
+	animTextureNormal = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureDisabled = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureOver = "#(argb,8,8,3)color(1,1,1,0.5)";
+	animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";
+	animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
+	colorBackground[] = {0,0,0,0.8};
+	colorBackground2[] = {1,1,1,0.5};
+	color[] = {1,1,1,1};
+	color2[] = {1,1,1,1};
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.25};
+	period = 1.2;
+	periodFocus = 1.2;
+	periodOver = 1.2;
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	class TextPos {
+		left = "0.25 * (((safezoneW / safezoneH) min 1.2) / 40)";
+		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
+		right = 0.005;
+		bottom = 0.0;
+	};
+	class Attributes {
+		font = "PuristaLight";
+		color = "#E5E5E5";
+		align = "left";
+		shadow = "false";
+	};
+	class ShortcutPos {
+		left = "(6.25 * (((safezoneW / safezoneH) min 1.2) / 40)) - 0.0225 - 0.005";
+		top = 0.005;
+		w = 0.0225;
+		h = 0.03;
+	};
+};
+
+class VAS_XD_RscControlsGroup {
+	type = 15;
+	idc = -1;
+	x = 0;
+	y = 0;
+	w = 1;
+	h = 1;
+	shadow = 0;
+	style = 16;
+	class VScrollbar {
+		color[] = {1,1,1,1};
+		width = 0.021;
+		autoScrollSpeed = -1;
+		autoScrollDelay = 5;
+		autoScrollRewind = 0;
+		shadow = 0;
+	};
+	class HScrollbar {
+		color[] = {1,1,1,1};
+		height = 0.028;
+		shadow = 0;
+	};
+	class ScrollBar {
+		color[] = {1,1,1,0.6};
+		colorActive[] = {1,1,1,1};
+		colorDisabled[] = {1,1,1,0.3};
+		shadow = 0;
+		thumb = __UI_Path_Scrollbar(thumb_ca.paa);
+		arrowFull = __UI_Path_Scrollbar(arrowFull_ca.paa);
+		arrowEmpty = __UI_Path_Scrollbar(arrowEmpty_ca.paa);
+		border = __UI_Path_Scrollbar(border_ca.paa);
+	};
+	class ListScrollBar : ScrollBar
+	{
+		color[] = {1,1,1,1};
+		autoScrollEnabled = 1;
+		colorActive[] = {1, 1, 1, 1};
+		colorDisabled[] = {1, 1, 1, 0.3};
+		thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+		arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+		arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+	};
+
+	class Controls{};
+};
