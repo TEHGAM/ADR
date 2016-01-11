@@ -55,8 +55,7 @@ class Mission
 		"3DEN",
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Signs_F_AD",
-		"A3_Structures_F_EPA_Civ_Camping",
-		"task_force_radio_items"
+		"A3_Structures_F_EPA_Civ_Camping"
 	};
 	addOnsAuto[]=
 	{
@@ -93,7 +92,6 @@ class Mission
 		"a3_soft_f_offroad_01",
 		"A3_Structures_F_Mil_Fortification",
 		"A3_Boat_F_Civilian_Boat",
-		"task_force_radio_items",
 		"A3_Armor_F_AMV",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Civ_Lamps",
