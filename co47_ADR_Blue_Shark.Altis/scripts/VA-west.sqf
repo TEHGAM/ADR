@@ -1,9 +1,5 @@
 _myBox = _this select 0;
 ["AmmoboxInit", [_myBox, false]] call BIS_fnc_arsenal;
-clearBackpackCargoGlobal _myBox;
-clearItemCargoGlobal _myBox;
-clearMagazineCargoGlobal _myBox;
-clearWeaponCargoGlobal _myBox;
 
 //--- Рюкзаки
 [_myBox,[
