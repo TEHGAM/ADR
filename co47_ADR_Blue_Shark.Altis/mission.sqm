@@ -5295,7 +5295,7 @@ class Mission
 		{
 			position[]={15286.087,17.735424,17420.365};
 			name="Laptops";
-			text="ПВО/Отчистка";
+			text="ПВО/Очистка";
 			type="loc_Transmitter";
 			colorName="ColorWEST";
 			a=0.5;
