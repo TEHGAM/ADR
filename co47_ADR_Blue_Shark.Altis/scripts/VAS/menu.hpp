@@ -503,7 +503,7 @@ class VAS_Info_Diag {
 			        x = 0.005;
 			        y = 0.005;
 			        w = "SafeZoneW - 0.1";
-			        h = 4; // height of html table
+			        h = 2.6; // height of html table
 			        colorBackground[] = {0.149, 0.196, 0.219, 0.9};
                     colorBold[] = {1, 1, 1, 1};
                     colorLink[] = {0, 0, 1, 1};

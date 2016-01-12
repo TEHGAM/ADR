@@ -298,6 +298,10 @@
 			<Original>Allowed weapons and scopes</Original>
 			<Russian>Разрешенное оружие и прицелы</Russian>
 		</Key>
+		<Key ID="STR_VAS_Menu_Title">
+			<Original>Allowed weapons</Original>
+			<Russian>Разрешенное оружие</Russian>
+		</Key>
 		<Key ID="STR_VAS_Load_LOR">
 			<Original>Load On Respawn</Original>
 			<German>Beim Respawn Laden</German>
