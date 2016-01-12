@@ -5,22 +5,20 @@ _magList = [];
     _currentMag = _x select 0;
     _currentAmmo = _x select 1;
     _currentMagSize = getNumber (configFile >> "CfgMagazines" >> _currentMag >> "count");
-    if (_currentMagSize > 1) then {
-        if (_x select 3 == -1) then {
-            if (count _magList > 0) then {
-                _counter = 0;
-                for "_x" from ((count _magList) - 1) to 0 step -1 do {
-                    if ((_magList select _x) select 0 == _currentMag) then {
-                        _magList set [_x, [_currentMag, ((_magList select _x) select 1) + _currentAmmo, ((_magList select _x) select 2) + 1]];
-                        _counter = _counter + 1;
-                    };
-                    if ((_x == 0) and (_counter == 0)) then {
-                        _magList pushBack [_currentMag, _currentAmmo, 1];
-                    };
-                }
-            } else {
-                _magList pushBack [_currentMag, _currentAmmo, 1];
-            };
+    if ((_currentMagSize > 1) and (_x select 3 == -1)) then {
+        if (count _magList > 0) then {
+            _counter = 0;
+            for "_x" from ((count _magList) - 1) to 0 step -1 do {
+                if ((_magList select _x) select 0 == _currentMag) then {
+                    _magList set [_x, [_currentMag, ((_magList select _x) select 1) + _currentAmmo, ((_magList select _x) select 2) + 1]];
+                    _counter = _counter + 1;
+                };
+                if ((_x == 0) and (_counter == 0)) then {
+                    _magList pushBack [_currentMag, _currentAmmo, 1];
+                };
+            }
+        } else {
+            _magList pushBack [_currentMag, _currentAmmo, 1];
         };
     };
 } forEach _magListFull;
