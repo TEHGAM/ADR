@@ -18,11 +18,14 @@ if (_iampilot) then {
 inventory_cleared = false;
 player addAction ["<t color='#2196F3'><img image='\a3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_modules_ca.paa' size='1.0'/> Освободить грузоотсек</t>", QS_fnc_actionClearInventory, [], -96, false, false, '', '[] call QS_fnc_conditionClearInventory'];
 
+//====================== Magazine Repack
+player addAction ["<t color='#FFEB3B'><img image='\a3\ui_f\data\gui\rsc\rscdisplayarsenal\cargomag_ca.paa' size='1.0'/> " + localize "STR_ADR_MagRepack" + "</t>", QS_fnc_actionMagRepack, [], -97, false, false, ''];
+
 //====================== DOM_SQUAD
 if (!isDedicated) then
 {
   player addAction [
     ("<t color='#04cc6b'><img image='\a3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_groups_ca.paa' size='1.0'/> " + localize "STRD_squadm" + "</t>"),
-    Compile preprocessFileLineNumbers "scripts\DOM_squad\open_dialog.sqf", [], -97, false
+    Compile preprocessFileLineNumbers "scripts\DOM_squad\open_dialog.sqf", [], -98, false
   ];
 };

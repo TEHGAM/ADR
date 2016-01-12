@@ -1,3 +1,4 @@
+// Create array with all ammo and magazine amount [magazineClassname, ammoSum, magazineCount]
 _magListFull = magazinesAmmoFull player;
 _magList = [];
 {
@@ -29,16 +30,20 @@ _newMags = 0;
 
 _stance = stance player;
 
-if (_stance == "STAND") then {
-    player switchMove "AinvPercMstpSrasWrflDnon_G01";
-};
-if (_stance == "CROUCH") then {
-    player switchMove "AinvPknlMstpSrasWrflDnon_G01";
-};
-if (_stance == "PRONE") then {
-    player switchMove "AinvPpneMstpSrasWrflDnon_G01";
+// Play animation
+call {
+    if (_stance == "STAND") exitWith {
+        player playMove "AinvPercMstpSrasWrflDnon";
+    };
+    if (_stance == "CROUCH") exitWith {
+        player playMove "AinvPknlMstpSrasWrflDnon";
+    };
+    if (_stance == "PRONE") exitWith {
+        player playMove "AinvPpneMstpSrasWrflDnon";
+    };
 };
 
+// Remove old magazines and add new ones
 {
     _currentMag = _x select 0;
     _currentAmmo = _x select 1;
@@ -57,4 +62,4 @@ if (_stance == "PRONE") then {
     };
 } forEach _magList;
 
-systemChat format ["Магазины перепакованы. Было %1, стало %2.", _currentMags, _newMags];
+systemChat format [localize "STR_ADR_MagRepack_ChatMsg", _currentMags, _newMags];

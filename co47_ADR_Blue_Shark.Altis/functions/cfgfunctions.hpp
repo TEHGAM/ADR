@@ -5,6 +5,7 @@ class QS
 	{
 		file = "functions";
 		class actionClearInventory {};
+		class actionMagRepack {};
 		class actionPilotRepair {};
 		class addAction {};
 		class addActionDefuse {};

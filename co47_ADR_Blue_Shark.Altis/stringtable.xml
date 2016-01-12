@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Project name="ADR">
+	<Package name="MagRepack">
+		<Key ID="STR_ADR_MagRepack">
+			<Original>Repack magazines</Original>
+			<Russian>Перепаковать магазины</Russian>
+		</Key>
+		<Key ID="STR_ADR_MagRepack_ChatMsg">
+			<Original>Magazines have been repacked. You had %1, now %2.</Original>
+			<Russian>Магазины перепакованы. Было %1, стало %2.</Russian>
+		</Key>
+	</Package>
+</Project>
 <Project name="Virtual Ammobox System">
 	<Package name="Main">
 		<Key ID="STR_VAS_Main_Weapons">
