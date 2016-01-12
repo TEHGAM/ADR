@@ -514,7 +514,6 @@ _myBox = _this select 0;
 "srifle_DMR_03_tan_F",
 "srifle_DMR_03_multicam_F",
 "srifle_DMR_03_woodland_F",
-"srifle_DMR_03_spotter_F",
 "srifle_DMR_04_F",
 "srifle_DMR_04_Tan_F",
 "srifle_DMR_05_blk_F",

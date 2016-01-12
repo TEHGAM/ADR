@@ -283,7 +283,7 @@
 			<Spanish>Virtual Ammobox System - Cargar Equipamiento</Spanish>
 		</Key>
 		<Key ID="STR_VAS_Info_Title">
-			<Original>Allowed weapon and scopes</Original>
+			<Original>Allowed weapons and scopes</Original>
 			<Russian>Разрешенное оружие и прицелы</Russian>
 		</Key>
 		<Key ID="STR_VAS_Load_LOR">
