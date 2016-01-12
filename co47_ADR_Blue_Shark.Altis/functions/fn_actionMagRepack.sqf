@@ -51,7 +51,7 @@ call {
     _magsToAdd = floor (_currentAmmo / _currentMagSize);
     _magsToAddLeft = _currentAmmo - (_magsToAdd * _currentMagSize);
     _currentMags = _currentMags + (_x select 2);
-    if (_magsToAdd > 0) then {
+    if ((_magsToAdd > 0) or (_magsToAddLeft > 0)) then {
         player removeMagazines _currentMag;
         player addMagazines [_currentMag, _magsToAdd];
         _newMags = _newMags + _magsToAdd;
