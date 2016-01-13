@@ -140,7 +140,7 @@ while {true} do {
 
 	//------------------------------------- Thermal optics
 	_optics = primaryWeaponItems player;
-	if (({_x in _optics} count _TermalOpt) > 0) then {
+	if (({_x in _optics} count _ThermalOpt) > 0) then {
 		if (({player isKindOf _x} count _ThermalTeam) < 1) then {
 			{player removePrimaryWeaponItem  _x;} count _ThermalOpt;
 			titleText [AUTOTUR_MSG,"PLAIN",2];
