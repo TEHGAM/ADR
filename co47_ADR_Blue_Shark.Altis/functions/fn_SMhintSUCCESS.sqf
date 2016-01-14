@@ -24,7 +24,7 @@ smRewards =
 
 smMarkerList =
 ["smReward1", "smReward2", "smReward3", "smReward4", "smReward5", "smReward6", "smReward7", "smReward8", "smReward9", "smReward10", "smReward11", "smReward12", "smReward13", "smReward14", "smReward15", "smReward16", "smReward17", "smReward18", "smReward19", "smReward20", "smReward21", "smReward22", "smReward23", "smReward24", "smReward25", "smReward26", "smReward27"];
-
+_timelock = uisleep 600;
 _veh = smRewards call BIS_fnc_selectRandom;
 
 _vehName = _veh select 0;
@@ -59,3 +59,6 @@ if (_reward isKindOf "I_Heli_light_03_F") exitWith {
 	_HEL addWeapon ("autocannon_35mm");
 	_HEL addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
 };
+_reward lock;
+_timelock;
+_reward unlock;
