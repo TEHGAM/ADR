@@ -29,6 +29,3 @@ if (!isDedicated) then
     Compile preprocessFileLineNumbers "scripts\DOM_squad\open_dialog.sqf", [], -98, false
   ];
 };
-
-//====================== Allowed Weapons/Optics Table
-player addAction ["<t color='#007F7F'><img image='\a3\ui_f\data\gui\rsc\rscdisplayarsenal\primaryweapon_ca.paa' size='1.0'/> " + localize "STR_VAS_Menu_Title" + "</t>", 'createDialog "VAS_Info_Diag";', [], -99, false, false, ''];
