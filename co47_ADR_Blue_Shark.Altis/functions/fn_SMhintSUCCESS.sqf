@@ -38,6 +38,7 @@ waitUntil {!isNull _reward};
 
 _reward setDir 284;
 
+_reward lock 3;
 GlobalHint = _completeText; publicVariable "GlobalHint"; hint parseText _completeText;
 if (count sideMarkerText == 2) then {
     sideMarkerText = sideMarkerText select 0;
@@ -59,3 +60,4 @@ if (_reward isKindOf "I_Heli_light_03_F") exitWith {
 	_HEL addWeapon ("autocannon_35mm");
 	_HEL addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
 };
+waitUntil { sleep 600; _reward lock 0;};

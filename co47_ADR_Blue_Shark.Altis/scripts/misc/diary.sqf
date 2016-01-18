@@ -824,6 +824,14 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"Blue Shark v4.2.4 (xx.01.2016)",
+"
+<br />- <font color='#CDDC39'>[Добавлено]</font> Наградная техника закрыта 10 минут после доставки на базу.
+"
+]];
+
 //Авторы
 player createDiaryRecord ["credits",
 [
