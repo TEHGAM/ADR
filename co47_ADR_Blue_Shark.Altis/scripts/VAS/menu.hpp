@@ -422,11 +422,11 @@ class VAS_Diag {
 };
 
 class VAS_Info_Diag {
-	idd = 1520;
+	idd = 1543;
 	name= "Virtual_Ammobox_Sys Load";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[1] spawn VAS_fnc_SaveLoad";
+	onLoad = "[1] spawn VAS_fnc_SaveLoad; uiNamespace setVariable ['VAS_Info_Dispaly', (_this select 0)];execVM 'scripts\VAS\info.sqf';";
 
     class controlsBackground {
 		class VAS_BackGround : VAS_RscBG {
@@ -443,7 +443,7 @@ class VAS_Info_Diag {
 		class VAS_XD_MainCaption : VAS_XC_RscText {
 			colorBackground[] = {1, 1, 1, 0};
 		    colorText[] = {1, 1, 1, 1};
-			idc = -1;
+			idc = 7778;
 			text = "$STR_VAS_Info_Title";
 			x = "SafeZoneX";
 		    y = "SafeZoneY + 0.01";
@@ -455,6 +455,7 @@ class VAS_Info_Diag {
 		};
 
         class Dom2 : VAS_XD_MainCaption {
+        	idc = -1;
 			x = "SafeZoneX + 0.05";
 			y = "SafeZoneY + SafeZoneH - 0.1";
 			colorText[] = {1, 1, 1, 1};
@@ -472,94 +473,59 @@ class VAS_Info_Diag {
 			colorBackgroundFocused[] = { 1, 1, 1, 0 };
 		};		
 
-		class RscControlsGroup : VAS_XD_RscControlsGroup {	
-			idc = -1;
-			type = 15;
-			style = 2;
-		    x = "SafeZoneX + 0.02";
+        class Table: VAS_RscListNBox {
+            idc = 7777;
+            type = 102;
+            columns[] = {0.005,0.055,0.15,0.25,0.33,0.415,0.49,0.6,0.68,0.765,0.84,0.94};
+            drawSideArrows = 0;
+            idcLeft = -1; 
+            idcRight = -1;
+            maxHistoryDelay = 1;
+            rowHeight = 0.05;
+            x = "SafeZoneX + 0.02";
+			y = "SafeZoneY + 0.21";
+			w = "SafeZoneW - 0.05";
+			h = "SafeZoneH - 0.3";
+			font = "PuristaLight";
+	        sizeEx = 0.03921;
+		    soundSelect[] = {"", 0.1, 1}; 
+		    colorBackground[] = {0.149, 0.196, 0.219, 0.9};
+		    colorPicture[] = {1,1,1,1};
+            colorPictureSelected[] = {1,1,1,1};
+            colorPictureDisabled[] = {1,1,1,1};
+		    class ListScrollBar {
+		    	width = 0.7; 
+		    	height = 0.7;
+		    	scrollSpeed = 0.01;
+		    	arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+		    	arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+		    	border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+		    	thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+		    	color[] = {1,1,1,1};
+		    };			        
+        };
+
+        class Table_Header : Table {
+            idc = 7776;
+            x = "SafeZoneX + 0.02";
 			y = "SafeZoneY + 0.15";
 			w = "SafeZoneW - 0.05";
-			h = "SafeZoneH - 0.25";		
-
-			class VScrollbar: ScrollBar {
-				color[] = {1,1,1,1};
-	        	width = 0.028;
-	        	shadow = 0;	  	
-	        };
-
-	        class HScrollbar: ScrollBar {
-	        	color[] = {1,1,1,1};
-	        	height = 0.028;
-	        	shadow = 0;
-	        };	       
-
-	        class controls{
-
-                class HTMLpage {
-                    idc = 7777;
-			        type = 9;
-			        style = 2;
-			        filename = "scripts\VAS\table.html";
-			        x = 0.005;
-			        y = 0.005;
-			        w = "SafeZoneW - 0.1";
-			        h = 2.6; // height of html table
-			        colorBackground[] = {0.149, 0.196, 0.219, 0.9};
-                    colorBold[] = {1, 1, 1, 1};
-                    colorLink[] = {0, 0, 1, 1};
-                    colorLinkActive[] = {1, 0, 0, 1};
-                    colorPicture[] = {1, 1, 1, 1};
-                    colorPictureBorder[] = {1, 0, 0, 1};
-                    colorPictureLink[] = {0, 0, 1, 1};
-                    colorPictureSelected[] = {0, 1, 0, 1};
-                    colorText[] = {1, 1, 1, 1};
-                    class H1 {
-	                	font = "PuristaLight";
-	                	fontBold = "PuristaLight";
-	                	sizeEx = 0.02474;
-	                };
-	                
-	                class H2 {
-	                	font = "PuristaLight";
-	                	fontBold = "PuristaLight";
-	                	sizeEx = 0.0286458;
-	                };
-	                
-	                class H3 {
-	                	font = "PuristaLight";
-	                	fontBold = "PuristaLight";
-	                	sizeEx = 0.0286458;
-	                };
-	                
-	                class H4 {
-	                	font = "PuristaLight";
-	                	fontBold = "PuristaLight";
-	                	sizeEx = 0.0208333;
-	                };
-	                
-	                class H5 {
-	                	font = "PuristaLight";
-	                	fontBold = "PuristaLight";
-	                	sizeEx = 0.0208333;
-	                };
-	                
-	                class H6 {
-	                	font = "PuristaLight";
-	                	fontBold = "PuristaLight";
-	                	sizeEx = 0.0208333;
-	                };
-	                
-	                class P {
-	                	font = "PuristaLight";
-	                	fontBold = "PuristaLight";
-	                	sizeEx = 0.04;
-	                };
-        
-	                prevPage = "\ca\ui\data\arrow_left_ca.paa";
-                    nextPage = "\ca\ui\data\arrow_right_ca.paa";
-                };
-	        };
-		};
+			h = "0.05";
+			colorSelect[] = {0.95, 0.95, 0.95, 1};
+	        colorSelect2[] = {0.95, 0.95, 0.95, 1};
+			colorSelectBackground[] = {0.149, 0.196, 0.219, 0};
+			colorSelectBackground2[] = {0.149, 0.196, 0.219, 0};
+			class ListScrollBar {
+		    	width = 0; 
+		    	height = 0;
+		    	scrollSpeed = 0.01;
+		    	arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+		    	arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+		    	border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+		    	thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+		    	color[] = {1,1,1,1};
+		    };	
+        };
 	};
 };
 
