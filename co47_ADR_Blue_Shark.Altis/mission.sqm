@@ -3925,7 +3925,7 @@ class Mission
 			vehicle="SignAd_Sponsor_F";
 			skill=0.60000002;
 			text="bb_arsenal_1";
-			init="this setObjectTexture [0, ""media\images\bb_arsenal.jpg""]; this enableSimulationGlobal false;";
+			init="this setObjectTexture [0, ""media\images\bb_arsenal.jpg""]; this enableSimulationGlobal false; this allowDamage false;";
 		};
 		class Item230
 		{
@@ -3946,7 +3946,7 @@ class Mission
 			vehicle="SignAd_Sponsor_F";
 			skill=0.60000002;
 			text="bb_arsenal_1_1";
-			init="this setObjectTexture [0, ""media\images\bb_arsenal.jpg""]; this enableSimulationGlobal false;";
+			init="this setObjectTexture [0, ""media\images\bb_arsenal.jpg""]; this enableSimulationGlobal false; this allowDamage false;";
 		};
 		class Item232
 		{
