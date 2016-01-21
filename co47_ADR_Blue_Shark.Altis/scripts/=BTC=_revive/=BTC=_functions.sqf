@@ -1174,6 +1174,15 @@ BTC_pull_out_check =
 
 BTC_player_killed = {
 	private ["_type_backpack","_weapons","_magazines","_weapon_backpack","_ammo_backpack","_score","_score_array","_name","_body_marker","_ui"];
+
+	// save laserbatteries
+    _playerOld = _this select 0;
+    if ("Laserbatteries" in (items _playerOld + assignedItems _playerOld + magazines _playerOld)) then {
+        profileNamespace setVariable ["laserbatteries", true];
+    } else {
+        profileNamespace setVariable ["laserbatteries", false];
+    };
+
 	BTC_gear = [player] call BTC_get_gear;
 	titleText ["", "BLACK OUT"];
 	_body = _this select 0;
@@ -1197,6 +1206,16 @@ BTC_player_killed = {
 			player switchMove "AinjPpneMstpSnonWrflDnon";
 			_actions = [] spawn BTC_assign_actions;
 			[player,[player,"KilledInventory"]] call BIS_fnc_loadInventory;
+
+			// load laserbatteries
+            _laserbatteries = profileNamespace getVariable "laserbatteries";   
+            profileNamespace setVariable ["laserbatteries", false];
+            if (_laserbatteries) then {     
+                if (!("Laserbatteries" in (magazines player))) then {
+                    player addItem "Laserbatteries";
+                };        
+            };
+            
 			if (!isNil killed_PrimaryWeapon) then {player addWeapon killed_PrimaryWeapon;{player addPrimaryWeaponItem _x;} count killed_PrimaryWeaponItems;};
 			WaitUntil {animationstate player == "ainjppnemstpsnonwrfldnon"};
 			sleep 2;
