@@ -55,11 +55,13 @@ class Mission
 		"A3_Weapons_F_Bootcamp_Ammoboxes",
 		"A3_Structures_F_EPA_Civ_Camping",
 		"A3_Structures_F_EPC_Civ_Accessories",
-		"a3_map_altis"
+		"a3_map_altis",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Modules_F",
+		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
@@ -5260,7 +5262,7 @@ class Mission
 		};
 		class Item170
 		{
-			position[]={15049.951,17.91,17107.949};
+			position[]={15048.847,17.91,17076.797};
 			name="m_mod";
 			text="Модули";
 			type="o_support";
