@@ -55,13 +55,11 @@ class Mission
 		"A3_Weapons_F_Bootcamp_Ammoboxes",
 		"A3_Structures_F_EPA_Civ_Camping",
 		"A3_Structures_F_EPC_Civ_Accessories",
-		"a3_map_altis",
-		"3DEN"
+		"a3_map_altis"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Modules_F",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F_Curator_Ordnance",
 		"A3_Modules_F_Multiplayer",
