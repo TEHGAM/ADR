@@ -58,7 +58,6 @@ if (_reward isKindOf "I_Heli_light_03_F") exitWith {
 	_reward setDamage 1;
 	_HEL addWeapon ("autocannon_35mm");
 	_HEL addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
-	_HEL lock 3;
 };
 _reward lock 3;
 sleep 600; 
