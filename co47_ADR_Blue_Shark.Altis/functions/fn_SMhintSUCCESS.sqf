@@ -60,4 +60,5 @@ if (_reward isKindOf "I_Heli_light_03_F") exitWith {
 	_HEL addWeapon ("autocannon_35mm");
 	_HEL addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
 };
-waitUntil { sleep 600; _reward lock 0;};
+sleep 600; 
+_reward lock 0;
