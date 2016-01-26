@@ -1,9 +1,9 @@
 /*
-Author: 
+Author:
 
 	Quiksilver
 
-Last modified: 
+Last modified:
 
 	1/05/2014
 
@@ -58,5 +58,5 @@ while { true } do {
 
 		SM_SWITCH = true; publicVariable "SM_SWITCH";
 	};
-	_loopTimeout;
+	sleep _loopTimeout;
 };
