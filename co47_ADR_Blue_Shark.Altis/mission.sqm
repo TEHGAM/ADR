@@ -1490,7 +1490,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=235;
+		items=234;
 		class Item0
 		{
 			position[]={23375.334,12.825771,19807.545};
@@ -3939,39 +3939,28 @@ class Mission
 		};
 		class Item231
 		{
-			position[]={14940.459,17.91,17006.189};
-			azimut=250;
-			id=296;
-			side="EMPTY";
-			vehicle="SignAd_Sponsor_F";
-			skill=0.60000002;
-			text="bb_arsenal_1_1";
-			init="this setObjectTexture [0, ""media\images\bb_arsenal.jpg""]; this enableSimulationGlobal false; this allowDamage false;";
-		};
-		class Item232
-		{
 			position[]={15099.336,17.91,17183.441};
 			azimut=165;
-			id=297;
+			id=296;
 			side="EMPTY";
 			vehicle="Land_Pallet_MilBoxes_F";
 			skill=0.60000002;
 			init="this enableSimulationGlobal false;";
 		};
-		class Item233
+		class Item232
 		{
 			position[]={15163.727,17.91,17211.527};
 			azimut=315;
-			id=298;
+			id=297;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
 		};
-		class Item234
+		class Item233
 		{
 			position[]={15062.372,17.91,17075.887};
 			azimut=270;
-			id=299;
+			id=298;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
