@@ -19,7 +19,7 @@ smRewards =
 	["Страйдер с пулеметом", "I_MRAP_03_hmg_F"],
 	["Страйдер с гранатометом", "I_MRAP_03_gmg_F"],
 	["Прототип: Передвижной миномет", "B_G_Offroad_01_repair_F"],
-	["WY-55 Хелкат UP", "I_Heli_light_03_F"]
+	["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"]
 ];
 
 smMarkerList =
@@ -52,13 +52,9 @@ if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
 };
 
 if (_reward isKindOf "I_Heli_light_03_F") exitWith {
-	_HEL = createVehicle ["I_Heli_light_03_F", getMarkerPos "smReward1", smMarkerList, 0, "NONE"];
-	_HEL setDir 284;
-	_reward setPos [(random 1000), (random 1000), (10000 + (random 20000))];
-	_reward setDamage 1;
-	_HEL addWeapon ("autocannon_35mm");
-	_HEL addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
+	_reward addWeapon ("autocannon_35mm");
+	_reward addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
 };
 _reward lock 3;
-sleep 600; 
+sleep 600;
 _reward lock 0;
