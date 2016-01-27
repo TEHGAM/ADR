@@ -46,12 +46,12 @@ showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "sho
 showNotification = ["Reward", format["Ваша команда получила %1!", _vehName]]; publicVariable "showNotification";
 
 
-if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
+if (_reward isKindOf "B_G_Offroad_01_repair_F") then {
 	_mortar = createVehicle ["B_Mortar_01_F", getMarkerPos "smReward1", smMarkerList, 0, "NONE"];
 	_mortar attachTo [_reward, [0, -2.5, .3]];
 };
 
-if (_reward isKindOf "I_Heli_light_03_F") exitWith {
+if (_reward isKindOf "I_Heli_light_03_F") then {
 	_reward addWeapon ("autocannon_35mm");
 	_reward addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
 };
