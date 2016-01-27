@@ -55,6 +55,9 @@ if (_reward isKindOf "I_Heli_light_03_F") exitWith {
 	_reward addWeapon ("autocannon_35mm");
 	_reward addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
 };
-_reward lock 3;
-sleep 600;
-_reward lock 0;
+
+[_reward] spawn {
+	(_this select 0) lock 3;
+	sleep 600;
+	(_this select 0) lock 0;
+};
