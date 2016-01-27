@@ -117,7 +117,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-47 ADR: Blue Shark (AW Invade & Annex)";
-		overviewText="Version 4.2.4";
+		overviewText="Version 4.2.4.1";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
