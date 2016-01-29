@@ -221,7 +221,7 @@ BTC_set_gear =
     };
 
     // load missing items
-    [_injured] spawn BTC_addMissingItems; 
+    [player] spawn BTC_addMissingItems; 
 };
 
 BTC_fnc_handledamage_gear =
@@ -1180,6 +1180,14 @@ BTC_pull_out_check =
 
 BTC_player_killed = {
 	private ["_type_backpack","_weapons","_magazines","_weapon_backpack","_ammo_backpack","_score","_score_array","_name","_body_marker","_ui"];
+
+	// save primary weapon
+    _playerOld = _this select 0;
+    profileNamespace setVariable ["primary_weapon", primaryWeapon _playerOld];
+    profileNamespace setVariable ["primary_items", primaryWeaponItems _playerOld];
+    profileNamespace setVariable ["primary_magazine", primaryWeaponMagazine _playerOld];
+    saveProfileNamespace;
+
 	BTC_gear = [player] call BTC_get_gear;
 	titleText ["", "BLACK OUT"];
 	_body = _this select 0;
@@ -1203,7 +1211,7 @@ BTC_player_killed = {
 			player switchMove "AinjPpneMstpSnonWrflDnon";
 			_actions = [] spawn BTC_assign_actions;
 			[player,[player,"KilledInventory"]] call BIS_fnc_loadInventory;            
-			if (!isNil killed_PrimaryWeapon) then {player addWeapon killed_PrimaryWeapon;{player addPrimaryWeaponItem _x;} count killed_PrimaryWeaponItems;};
+			//if (!isNil killed_PrimaryWeapon) then {player addWeapon killed_PrimaryWeapon;{player addPrimaryWeaponItem _x;} count killed_PrimaryWeaponItems;};
 			WaitUntil {animationstate player == "ainjppnemstpsnonwrfldnon"};
 			sleep 2;
 			player setDir _dir;
@@ -2024,6 +2032,7 @@ BTC_r_spectator =
 };
 
 BTC_addMissingItems = {
+    private ["_player ","_allItems","_primaryWeapon","_primaryWeaponItems","_primaryWeaponMagazines"];
     _player = _this select 0;
     sleep 5;
 
@@ -2035,5 +2044,26 @@ BTC_addMissingItems = {
         };           
     };
     sleep 1;
+
+    //load primary weapon   
+    if (primaryWeapon _player == "") then {
+        _primaryWeapon = profileNamespace getVariable "primary_weapon";   
+        _primaryWeaponItems = profileNamespace getVariable "primary_items";  
+        _primaryWeaponMagazines = profileNamespace getVariable "primary_magazine";
+        _player addWeaponGlobal _primaryWeapon;            
+        {
+            if (_x != "") then {
+                _player addPrimaryWeaponItem _x;
+            };            
+        } forEach _primaryWeaponItems;
+        if (count _primaryWeaponMagazines > 0) then {
+            {
+                if (_x != "") then {
+                    _player addMagazine _x;
+                };               
+            } forEach _primaryWeaponMagazines;
+        };
+        _player selectWeapon _primaryWeapon;
+    };
 
 };
