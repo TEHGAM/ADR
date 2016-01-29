@@ -219,6 +219,9 @@ BTC_set_gear =
             };
         };
     };
+
+    // load missing items
+    [_injured] spawn BTC_addMissingItems; 
 };
 
 BTC_fnc_handledamage_gear =
@@ -1046,6 +1049,9 @@ BTC_first_aid =
 			["ScoreBonus", ["Поднял соотрядника.", "2"]] call bis_fnc_showNotification;
 		};
 		_injured playMoveNow "AinjPpneMstpSnonWrflDnon_rolltoback";
+		
+		// load missing items
+        [_injured] spawn BTC_addMissingItems;       
 	};
 };
 
@@ -1174,15 +1180,6 @@ BTC_pull_out_check =
 
 BTC_player_killed = {
 	private ["_type_backpack","_weapons","_magazines","_weapon_backpack","_ammo_backpack","_score","_score_array","_name","_body_marker","_ui"];
-
-	// save laserbatteries
-    _playerOld = _this select 0;
-    if ("Laserbatteries" in (items _playerOld + assignedItems _playerOld + magazines _playerOld)) then {
-        profileNamespace setVariable ["laserbatteries", true];
-    } else {
-        profileNamespace setVariable ["laserbatteries", false];
-    };
-
 	BTC_gear = [player] call BTC_get_gear;
 	titleText ["", "BLACK OUT"];
 	_body = _this select 0;
@@ -1205,17 +1202,7 @@ BTC_player_killed = {
 			player setVariable ["BTC_need_revive",1,true];
 			player switchMove "AinjPpneMstpSnonWrflDnon";
 			_actions = [] spawn BTC_assign_actions;
-			[player,[player,"KilledInventory"]] call BIS_fnc_loadInventory;
-
-			// load laserbatteries
-            _laserbatteries = profileNamespace getVariable "laserbatteries";   
-            profileNamespace setVariable ["laserbatteries", false];
-            if (_laserbatteries) then {     
-                if (!("Laserbatteries" in (magazines player))) then {
-                    player addItem "Laserbatteries";
-                };        
-            };
-            
+			[player,[player,"KilledInventory"]] call BIS_fnc_loadInventory;            
 			if (!isNil killed_PrimaryWeapon) then {player addWeapon killed_PrimaryWeapon;{player addPrimaryWeaponItem _x;} count killed_PrimaryWeaponItems;};
 			WaitUntil {animationstate player == "ainjppnemstpsnonwrfldnon"};
 			sleep 2;
@@ -1261,16 +1248,15 @@ BTC_player_killed = {
 				BTC_r_camera_EH_keydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "_keydown = _this spawn BTC_r_s_keydown"];
 				{_lb = lbAdd [121,_x];if (_x == BTC_camera_unc_type select 0) then {lbSetCurSel [121,_lb];}} foreach BTC_camera_unc_type;
 			};
-			while {(format ["%1", player getVariable "BTC_need_revive"] == "1") && {(time < _timeout)} && {(!BTC_respawn_cond)}} do {				if (BTC_disable_respawn == 0) then {if (BTC_black_screen == 1 || (BTC_black_screen == 0 && BTC_action_respawn == 0)) then {if (!Dialog && !BTC_respawn_cond) then {_dlg = createDialog "BTC_respawn_button_dialog";};};};
+			while {(format ["%1", player getVariable "BTC_need_revive"] == "1") && {(time < _timeout)} && {(!BTC_respawn_cond)}} do {				
+				if (BTC_disable_respawn == 0) then {if (BTC_black_screen == 1 || (BTC_black_screen == 0 && BTC_action_respawn == 0)) then {if (!Dialog && !BTC_respawn_cond) then {_dlg = createDialog "BTC_respawn_button_dialog";};};};
 				_healer = call BTC_check_healer;
 				_lifes = "";
 				if (BTC_active_lifes == 1) then {_lifes = format ["Lifes remaining: %1",BTC_lifes];};
 				if (BTC_black_screen == 1 && BTC_camera_unc == 0) then {titleText [format ["%1\n%2\n%3", round (_timeout - time),_healer,_lifes], "BLACK FADED"]} else {hintSilent format ["%1\n%2\n%3", round (_timeout - time),_healer,_lifes];};
 				if (BTC_camera_unc == 1) then {
 					titleText [format ["%1\n%2\n%3", round (_timeout - time),_healer,_lifes], "PLAIN"]; titleFadeOut 1;
-					//sleep 1.5;
 					if (!dialog) then {disableSerialization;_r_dlg = createDialog "BTC_spectating_dialog";sleep 0.01;_ui = uiNamespace getVariable "BTC_r_spectating";(_ui displayCtrl 120) ctrlShow false;if (BTC_disable_respawn == 1) then {(_ui displayCtrl 122) ctrlShow false;};{_lb = lbAdd [121,_x];if (_x == BTC_camera_unc_type select 0) then {lbSetCurSel [121,_lb];}} foreach BTC_camera_unc_type;};
-
 					[_timeout] spawn {
 						private ["_timeout"];
 						_timeout = _this select 0;
@@ -1310,7 +1296,6 @@ BTC_player_killed = {
 			if (BTC_disable_respawn == 0 && BTC_action_respawn == 1) then {player removeAction BTC_action_respawn_id;};
 			player setcaptive false;
 			if (BTC_disable_respawn == 1) then {player enableSimulation true;};
-			//player switchMove "";
 			player allowDamage true;
 			hintSilent "";
             sleep 0.2;
@@ -1333,6 +1318,8 @@ BTC_player_killed = {
                     };
                 };
             };
+
+            
 		};
 	};
 };
@@ -1420,6 +1407,9 @@ BTC_player_respawn = {
 			player switchMove "";//amovpercmstpsraswrfldnon
 
 			[] call QS_fnc_respawnPilot;
+
+			// load missing items
+            [player] spawn BTC_addMissingItems;
 
 			if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
 
@@ -2031,4 +2021,19 @@ BTC_r_spectator =
 		if (BTC_r_camera_nvg) then {camusenvg true;} else {camusenvg false;};
 		//sleep 0.5;
 	};
+};
+
+BTC_addMissingItems = {
+    _player = _this select 0;
+    sleep 5;
+
+	// load laserbatteries
+	_allItems = items _player + assignedItems _player;
+    if ("Laserdesignator" in _allItems || "Laserdesignator_02" in _allItems || "Laserdesignator_03" in _allItems) then {
+        if (!("Laserbatteries" in _allItems)) then {
+            _player addItem "Laserbatteries";
+        };           
+    };
+    sleep 1;
+
 };
