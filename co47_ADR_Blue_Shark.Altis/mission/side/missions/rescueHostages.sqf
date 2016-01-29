@@ -542,14 +542,15 @@ while { sideMissionUp } do {
         } else {
             [] call QS_fnc_SMhintSUCCESS;   
         };
-        sleep 120;
-        { [_x] spawn QS_fnc_SMdelete } forEach [_enemiesArray, _unitsArray, _minesArray];
 
-        // doublecheck for AT mines
-        _nearestMines = nearestObjects [_startPoint, ["ATMine"], 300];
+        // delete mines
+        _nearestMines = nearestObjects [_startPoint, ["ATMine","APERSTripMine","APERSBoundingMine","UnderwaterMinePDM","UnderwaterMine"], 300];
         {
             deleteVehicle _x;
-        } forEach _nearestMines; 
+        } forEach _nearestMines;
+
+        sleep 120;
+        { [_x] spawn QS_fnc_SMdelete } forEach [_enemiesArray, _unitsArray];
     };
 
     sleep 3;

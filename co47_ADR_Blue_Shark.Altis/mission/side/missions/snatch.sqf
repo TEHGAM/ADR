@@ -376,7 +376,13 @@ for "_c" from 0 to 150 do {
     };
     
 };
-_unitsArray = _unitsArray + _minesArray;
+
+// set all mines positions as "known" for enemies
+{
+    if ((typeOf _x) isKindOf "TimeBombCore") then {
+        ENEMY_SIDE revealMine _x;
+    };
+} forEach _minesArray;
 
 // set skills
 [(units _campGroup)] call QS_fnc_setSkill3;
@@ -398,10 +404,17 @@ while { sideMissionUp } do {
         } else {
             [] call QS_fnc_SMhintSUCCESS;                     
         };
+
+        // delete mines
+        _nearestMines = nearestObjects [_startPoint, ["ATMine","APERSTripMine","APERSBoundingMine","UnderwaterMinePDM","UnderwaterMine"], 300];   
+        {
+            deleteVehicle _x;
+        } forEach _nearestMines;
+
         sleep 120;  
         { 
             [_x] spawn QS_fnc_SMdelete;
-        } forEach [_enemiesArray, _unitsArray];
+        } forEach [_enemiesArray, _unitsArray];       
     };
     sleep 3;
 };
