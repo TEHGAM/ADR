@@ -23,7 +23,6 @@ private ["_targets","_accepted","_distance","_briefing","_position","_flatPos","
 
 _enemiesArray = [grpNull];
 _unitsArray = [];
-_minesArray = [];
 
 // Thanks KK for fastest shuffle alghoritm
 KK_fnc_arrayShufflePlus = {
@@ -321,8 +320,8 @@ for "_c" from 0 to 150 do {
             _pos = getPosATL _sign; 
             if (_pos select 2 > 0.2) then {
                 _pos = [_pos select 0, _pos select 1, 0];
-                _sign3 setPosATL _pos;
-            };
+                _sign setPosATL _pos;
+            };      
             _unitsArray = _unitsArray + [_sign];
             _mine = createMine ["APERSBoundingMine", [(_posSign select 0) + random 3, (_posSign select 1) + random 3, 0.1], [], 0];
             waitUntil {alive _mine};
@@ -331,7 +330,6 @@ for "_c" from 0 to 150 do {
                 _pos = [_pos select 0, _pos select 1, 0];
                 _mine setPosATL _pos;
             };
-            minesArray = _minesArray + [_mine];
         };
         _dirSign = _dirSign + 4;
     };
@@ -354,7 +352,6 @@ for "_c" from 0 to 150 do {
         };           
         _vehMineDir = _vehMineDir + 3; 
     };               
-    _minesArray = _minesArray + [_mine];
 
     // AP bounding mines
     _minePos = [_startPoint, 200, _apMineDir] call BIS_fnc_relPos;
@@ -371,18 +368,10 @@ for "_c" from 0 to 150 do {
             _pos = [_pos select 0, _pos select 1, 0];
             _mine setPosATL _pos;
         };
-        _minesArray = _minesArray + [_mine];
         _apMineDir = _apMineDir + 4; 
     };
     
 };
-
-// set all mines positions as "known" for enemies
-{
-    if ((typeOf _x) isKindOf "TimeBombCore") then {
-        ENEMY_SIDE revealMine _x;
-    };
-} forEach _minesArray;
 
 // set skills
 [(units _campGroup)] call QS_fnc_setSkill3;
@@ -406,6 +395,11 @@ while { sideMissionUp } do {
         };
 
         // delete mines
+        {
+            if (_x distance _startPoint < 300) then {
+               deleteVehicle _x;
+            };            
+        } forEach allMines;
         _nearestMines = nearestObjects [_startPoint, ["ATMine","APERSTripMine","APERSBoundingMine","UnderwaterMinePDM","UnderwaterMine"], 300];   
         {
             deleteVehicle _x;

@@ -544,7 +544,12 @@ while { sideMissionUp } do {
         };
 
         // delete mines
-        _nearestMines = nearestObjects [_startPoint, ["ATMine","APERSTripMine","APERSBoundingMine","UnderwaterMinePDM","UnderwaterMine"], 300];
+        {
+            if (_x distance _startPoint < 300) then {
+               deleteVehicle _x;
+            };            
+        } forEach allMines;
+        _nearestMines = nearestObjects [_startPoint, ["ATMine","APERSTripMine","APERSBoundingMine","UnderwaterMinePDM","UnderwaterMine"], 300];   
         {
             deleteVehicle _x;
         } forEach _nearestMines;
