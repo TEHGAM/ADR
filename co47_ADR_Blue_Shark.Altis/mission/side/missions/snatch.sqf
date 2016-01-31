@@ -337,10 +337,9 @@ for "_c" from 0 to 150 do {
     // AT/underwater mines    
     _minePos = [_startPoint, 195, _vehMineDir] call BIS_fnc_relPos;
     if (surfaceIsWater _minePos) then {        
-        _minePos = [_minePos select 0, _minePos select 1, getTerrainHeightASL _minePos];
-        _mine = createMine ["UnderwaterMine", [_minePos select 0, _minePos select 1], [], 0];
-        waitUntil {alive _mine};
-        _mine setPosATL [(_minePos select 0) + random 3, (_minePos select 1) + random 3, (getPosATL _mine select 2)-3];      
+        _height = random (floor ((getTerrainHeightASL _minePos) * -1));
+        _pos = [(_minePos select 0) + random 3, (_minePos select 1) + random 3, (0 - _height)];
+        _mine = createMine ["UnderwaterMine", _pos, [], 0];     
         _vehMineDir = _vehMineDir + 6; 
     } else {
         _mine = createVehicle ["ATMine", [40,40,40], [], 0, "CAN_COLLIDE"];
@@ -356,9 +355,9 @@ for "_c" from 0 to 150 do {
     // AP bounding mines
     _minePos = [_startPoint, 200, _apMineDir] call BIS_fnc_relPos;
     if (surfaceIsWater _minePos) then {
-        _minePos = [_minePos select 0, _minePos select 1, getTerrainHeightASL _minePos];
-        _mine = createMine ["UnderwaterMine", [_minePos select 0, _minePos select 1], [], 0];
-        _mine setPosATL [(_minePos select 0) + random 3,(_minePos select 1) + random 3, (getPosATL _mine select 2)-2];
+        _height = random (floor ((getTerrainHeightASL _minePos) * -1));
+        _pos = [(_minePos select 0) + random 3, (_minePos select 1) + random 3, (0 - _height)];
+        _mine = createMine ["UnderwaterMine", _pos, [], 0];
         _apMineDir = _apMineDir + 2; 
     } else {
         _mine = createMine ["APERSBoundingMine", [(_minePos select 0) + random 6, (_minePos select 1) + random 6, 0.1], [], 0];
