@@ -34,7 +34,8 @@ _missionList = [
 	"heliCrash",
 	"rescueHostages",
 	"convoy",
-	"snatch"
+	"snatch",
+	"swordfish"
 ];
 
 SM_SWITCH = true; publicVariable "SM_SWITCH";
