@@ -118,15 +118,16 @@ if (!isDedicated) then
 		BTC_side = side player;
 		BTC_vip = [];
 		_uid = getPlayerUID player;
-		if (isNil {BTC_logic getVariable _uid}) then
-		{
-			BTC_logic setVariable [_uid,0,true];
-			BTC_teamkiller = 0;
-		}
-		else
-		{
-			BTC_teamkiller = BTC_logic getVariable _uid;
-			if (BTC_teamkiller > BTC_tk_last_warning) then {_tk = [] spawn BTC_Teamkill;}
+		if (!isNil "BTC_logic") then {
+		    if (BTC_logic getVariable _uid) then {
+		    	BTC_logic setVariable [_uid,0,true];
+		    	BTC_teamkiller = 0;
+		    } else {
+		    	BTC_teamkiller = BTC_logic getVariable _uid;
+		    	if (BTC_teamkiller > BTC_tk_last_warning) then {
+		    		_tk = [] spawn BTC_Teamkill;
+		    	};
+		    };
 		};
 	};
 };

@@ -1419,7 +1419,7 @@ BTC_player_respawn = {
 			// load missing items
             [player] spawn BTC_addMissingItems;
 
-			if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
+			if (!isNil "PARAMS_Fatigue" && {PARAMS_Fatigue == 0}) then {player enableFatigue FALSE;};
 
 			//==== experimental respawn dialog
 
