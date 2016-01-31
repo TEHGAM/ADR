@@ -63,22 +63,8 @@ _lockTime = 600;
 [_reward, _lockTime] spawn {
 	_reward = _this select 0;
 	_lockTime = _this select 1;
+
 	_reward lock 3;
-	_startTime = serverTime;
-	_rewardName = getText (configFile >> "cfgVehicles" >> typeOf _reward >> "displayName");
-
-	call compile format ["rewardEH = addMissionEventHandler ['Draw3D', {
-		_distance = player distance (objectFromNetId '%1');
-		_currentTime = floor(serverTime - %3);
-		_timeLeft = %4 - _currentTime;
-		if ((_distance < 50) and (_timeLeft > 0)) then {
-			_alpha = linearConversion [30, 50, _distance, 1, 0, true];
-			drawIcon3D ['', [0.9, 0.32, 0, _alpha], (objectFromNetId '%1') modelToWorld [0, 0, 1.5], 0, 0, 0, '%2 закрыт на ' + str _timeLeft + ' секунд', 1, 0.04, 'PuristaMedium'];
-		};
-    }];", netid _reward, _rewardName, _startTime, _lockTime];
-
-	//Unlock the vehicle and remove Draw3D EH.
 	sleep _lockTime;
-	removeMissionEventHandler ["Draw3D", rewardEH];
 	_reward lock 0;
 };
