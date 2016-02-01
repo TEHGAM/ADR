@@ -1051,7 +1051,8 @@ BTC_first_aid =
 		_injured playMoveNow "AinjPpneMstpSnonWrflDnon_rolltoback";
 		
 		// load missing items
-        [_injured] spawn BTC_addMissingItems;       
+        //[_injured] spawn BTC_addMissingItems;
+        [_injured,"BTC_addMissingItems",nil,true] spawn BIS_fnc_MP; 
 	};
 };
 
@@ -2034,6 +2035,7 @@ BTC_r_spectator =
 BTC_addMissingItems = {
     private ["_player ","_allItems","_primaryWeapon","_primaryWeaponItems","_primaryWeaponMagazines"];
     _player = _this select 0;
+    if (_player != player) exitWith {};
     sleep 5;
 
 	// load laserbatteries
