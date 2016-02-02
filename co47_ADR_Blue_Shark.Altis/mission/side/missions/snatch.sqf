@@ -167,7 +167,7 @@ if (_heliType == "B_Heli_Light_01_armed_F") then {
 _trig = createTrigger ["EmptyDetector", _flatPos, false]; 
 _trig setTriggerArea [1000, 1000, 0, false];
 _trig setTriggerActivation ["ANY", "PRESENT", false];
-_trig setTriggerStatements ["this && ((alive heliSnatch) && !(heliSnatch in thisList))", "SM_SNATCH_SUCCESS = true; publicVariable ""SM_SNATCH_SUCCESS"";", ""];
+_trig setTriggerStatements ["this && ((alive heliSnatch) && !(heliSnatch in thisList))", "SM_SNATCH_SUCCESS = true; publicVariable ""SM_SNATCH_SUCCESS""; heliSnatch removeAllMPEventHandlers ""MPKilled"";", ""];
 
 // spawn few mil boxes
 for "_x" from 1 to 2 do {

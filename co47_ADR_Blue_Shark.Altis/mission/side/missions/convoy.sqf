@@ -551,7 +551,42 @@ while { sideMissionUp } do {
             [] call QS_fnc_SMhintFAIL;            
         } else {
             _delConvoy = _convoyVehs;
-            [] call QS_fnc_SMhintSUCCESS;                     
+            [] call QS_fnc_SMhintSUCCESS;  
+
+            // change event to prevent next convoy fail on destroy device from previous mission
+            vehDevice removeAllMPEventHandlers "MPKilled";
+            vehDevice addMPEventHandler ["MPKilled", {
+                _basePos = getMarkerPos "respawn_west";
+                _curObj = _this select 0;
+                _curObj setDamage 0.9;
+                _epicenter = getPos _curObj;            
+                if (isServer) then {  
+                    _bigBomb = createVehicle ["Bo_GBU12_LGB", _epicenter, [], 0, "NONE"];   
+                    if (((_this select 0) distance _basePos) > 2200) then {      
+                        _k = 1.66;
+                        _radius = 900;
+                        _radiusEMI = 1400;                   
+                        _allObjects1 = nearestObjects [_epicenter,[], _radius];
+                        {
+                            _distance = [_epicenter, getPos _x] call BIS_fnc_distance2D;
+                            _x setDamage (abs ((_distance / _radius) - _k));
+                        } foreach _allObjects1;
+                        _allObjects2 = nearestObjects [_epicenter, ["LandVehicle","Air","Ship"], _radiusEMI];
+                        {
+                            _x engineOn false;
+                            _x setfuel 0;        
+                        } foreach _allObjects2;
+                    };
+                    [_curObj, "QS_fnc_removeAction0", nil, true] spawn BIS_fnc_MP;
+                    deleteVehicle _curObj;                
+                };
+    
+                // show nuke explotion effect for players
+                if (hasInterface) then {
+                    //[[_epicenter], "scripts\nuke.sqf"] call BIS_fnc_execVM;
+                    [_epicenter] execVM "scripts\nuke.sqf";
+                };            
+            }];
         };
         _i = 0;
         {
