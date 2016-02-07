@@ -4,23 +4,27 @@
 	Visit us at: 
 	http://www.blacktemplars.altervista.org/
 	06/03/2012
+
+Changelog:
+    06/02/2016 - added prison with effects [ToxaBes]
 */
 //Def
 BTC_tk_blackscreen_punishment = 0;
 BTC_tk_last_warning = 10;
+BTC_tk_prison_coords = [15259,17355,0];
+BTC_tk_light_pos = [15244,17345,0];
 
-BTC_fnc_tk_PVEH =
-{
+BTC_fnc_tk_PVEH = {
 	//0 - first aid - create // [0,east,pos]
 	//1 - first aid - delete
 	_array = _this select 1;
 	_name  = _array select 0;
 	_punisher = _array select 1;
 	hint format ["%1 убил своего и был наказан игроком %2", _name, _punisher];
-	if (name player == _name) then {_spawn = [] spawn BTC_Teamkill;};
+	_time = profileNamespace getVariable ["btc_tk_prison", 0];
+	if (name player == _name && _time == 0) then {_spawn = [] spawn BTC_Teamkill;};
 };
-BTC_EH_killed =
-{
+BTC_EH_killed = {
 	_body = _this select 0;
 	_killer = _this select 1;
 	_veh_body = vehicle _body;
@@ -52,12 +56,34 @@ BTC_EH_killed =
 		};
 	};
 };
-BTC_Teamkill =
-{
-	player addrating 9999;
-	BTC_teamkiller = BTC_teamkiller + 1;
+BTC_Effects = {
+    private ["_bolt", "_lighting", "_light"];
+    _bolt = createVehicle ["LightningBolt", BTC_tk_light_pos, [], 0, "CAN_COLLIDE"];
+    _bolt setVelocity [0, 0, -10];
+    _lighting = "lightning_F" createvehiclelocal BTC_tk_light_pos;
+    _lighting setPos BTC_tk_light_pos;
+    _light = "#lightpoint" createvehiclelocal BTC_tk_light_pos;
+    _light setPos BTC_tk_light_pos;
+    _light setLightBrightness 30;
+    _light setLightAmbient [0.5, 0.5, 1];
+    _light setlightcolor [1, 1, 2];
+    sleep (0.2 + random 0.1);
+    deletevehicle _bolt;
+    deletevehicle _light;
+    deletevehicle _lighting;
+    sleep 0.5;
+    playSound (["thunder_1", "thunder_2"] call BIS_fnc_selectRandom);
+};
+BTC_Teamkill = {
+	player addrating 9999;	
 	_uid = getPlayerUID player;
-	BTC_logic setVariable [_uid,BTC_teamkiller,true];
+	if (!isNil "BTC_logic") then {
+        BTC_teamkiller = BTC_logic getVariable _uid;
+	    BTC_teamkiller = BTC_teamkiller + 1;
+	    BTC_logic setVariable [_uid,BTC_teamkiller,true];
+    } else {
+        BTC_teamkiller = 1;
+    };	
 	switch (true) do
 	{
 		case (BTC_teamkiller <= BTC_tk_blackscreen_punishment) : 
@@ -68,23 +94,7 @@ BTC_Teamkill =
 		};
 		case (BTC_teamkiller > BTC_tk_blackscreen_punishment && BTC_teamkiller <= BTC_tk_last_warning) : 
 		{
-			private ["_n","_array_tk","_msg"];
-			_msg = "";
-			disableUserInput true;
-			if (BTC_teamkiller == BTC_tk_last_warning) then
-			{
-				_msg = "STOP TEAMKILLING, LAST WARNING";
-			} else {_msg = "ВАС НАКАЗАЛИ ЗА УБИЙСТВО СВОИХ \ YOU HAVE BEEN PUNISHED FOR TEAMKILLING!";};
-			player setPos [0,0,0];
-			_n = 0;
-			while {_n < 120} do
-			{
-				titleText [_msg,"BLACK FADED"];
-				_n = _n + 1;
-				sleep 1;
-			};
-			disableUserInput false;
-			player setDamage 1;
+            [[[player], "scripts\=BTC=_TK_punishment\Prison.sqf"], "BIS_fnc_execVM", true, false, false] call BIS_fnc_MP;           
 		};
 		case (BTC_teamkiller > BTC_tk_last_warning) : 
 		{
@@ -101,14 +111,63 @@ BTC_Teamkill =
 		};
 	};
 };
-if (isServer) then
-{
+if (isServer) then {
 	BTC_tk_PVEH = [];publicVariable "BTC_tk_PVEH";
+
+	// build prison
+	private ["_dir1", "_dir2", "_coordsData", "_coords", "_pos", "_wall", "_obj"];
+	_dir1 = 180;
+    _dir2 = 180;
+    _coordsData = [[0,4,0.1],[3.5,4.2,0.4],[3.5,0.62,0.3],[3.5,-2,0.5],[3.5,-9.5,1.5],[-1.5,-4.1,0.3],[-1,-0.58,0.1],[-1,0.18,0.1],[-0.5,0.59,0.1]];
+    for "_c" from 0 to 10 do {	
+    	if (_c < 1) then {
+            _wall = createVehicle ["Land_Mil_WiredFence_F", [BTC_tk_prison_coords select 0, BTC_tk_prison_coords select 1, 5.4], [], 0, "CAN_COLLIDE"];                
+            _wall setDir _dir1;
+            _coords = _coordsData select _c;
+            _wall setVectorUp _coords;
+            _wall allowDamage false; 
+            _wall enableSimulationGlobal false;
+        };
+        if (_c < 9) then {
+            _pos = [BTC_tk_prison_coords, 10.3, _dir1] call BIS_fnc_relPos;
+            _wall = createVehicle ["Land_Mil_WiredFence_F", [_pos select 0, _pos select 1, -0.1], [], 0, "CAN_COLLIDE"];                    
+            _wall setDir _dir1;
+            _wall setVectorUp (surfaceNormal (getPosATL _wall));
+            _wall allowDamage false; 
+            _wall enableSimulationGlobal false;
+            _wall = createVehicle ["Land_Mil_WiredFence_F", [_pos select 0, _pos select 1, 3.3], [], 0, "CAN_COLLIDE"];                 
+            _wall setDir _dir1;
+            _wall setVectorUp (surfaceNormal (getPosATL _wall));
+            _wall allowDamage false;    
+            _wall enableSimulationGlobal false;
+            _pos = [BTC_tk_prison_coords, 7.8, _dir1] call BIS_fnc_relPos;
+            _wall = createVehicle ["Land_Mil_WiredFence_F", [_pos select 0, _pos select 1, 4.45], [], 0, "CAN_COLLIDE"];                
+            _wall setDir _dir1 + 180;
+            _coords = _coordsData select _c;
+            _wall setVectorUp _coords;
+            _wall allowDamage false;    
+            _wall enableSimulationGlobal false;
+            _pos = [BTC_tk_prison_coords, 3.7, _dir1] call BIS_fnc_relPos;
+            _wall = createVehicle ["Land_Mil_WiredFence_F", [_pos select 0, _pos select 1, 5.4], [], 0, "CAN_COLLIDE"];                
+            _wall setDir _dir1;
+            _coords = _coordsData select _c;
+            _wall setVectorUp _coords;
+            _wall allowDamage false; 
+            _wall enableSimulationGlobal false;
+            _dir1 = _dir1 + 40; 
+        };
+        _pos = [BTC_tk_prison_coords, 12, _dir2] call BIS_fnc_relPos;
+        _wall = createVehicle ["Land_Mil_WiredFence_F", [_pos select 0, _pos select 1, -1], [], 0, "CAN_COLLIDE"];        
+        _wall setDir (_dir2 + 180);
+        _wall setVectorUp (surfaceNormal (getPosATL _wall));
+        _wall allowDamage false;    
+        _wall enableSimulationGlobal false;
+        _dir2 = _dir2 + 34.5; 
+    };
+    _obj = createVehicle ["Land_Garbage_square3_F", BTC_tk_prison_coords, [], 0, "CAN_COLLIDE"];
 };
-if (!isDedicated) then
-{
-	[] spawn
-	{
+if (!isDedicated) then {
+	[] spawn {
 		private ["_uid","_array_tk"];
 		waitUntil {!isNull player};
 		waitUntil {player == player};

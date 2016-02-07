@@ -1,4 +1,4 @@
-private ["_iampilot"];
+private ["_iampilot", "_btc_tk_prison"];
 
 //=========================== PILOTS ONLY
 _pilots = ["B_Helipilot_F", "O_helipilot_F"];
@@ -28,4 +28,12 @@ if (!isDedicated) then
     ("<t color='#04cc6b'><img image='\a3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_toolbox_groups_ca.paa' size='1.0'/> " + localize "STRD_squadm" + "</t>"),
     Compile preprocessFileLineNumbers "scripts\DOM_squad\open_dialog.sqf", [], -98, false
   ];
+};
+
+//====================== Prison check
+if (!isDedicated) then {
+    _btc_tk_prison = profileNamespace getVariable ["btc_tk_prison", 0];
+    if (_btc_tk_prison > 0) then {
+        _tk = [] spawn BTC_Teamkill;
+    };
 };
