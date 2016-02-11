@@ -1052,7 +1052,7 @@ BTC_first_aid =
 		
 		// load missing items
         //[_injured] spawn BTC_addMissingItems;
-        [_injured,"BTC_addMissingItems",nil,true] spawn BIS_fnc_MP; 
+        [[_injured],"BTC_addMissingItems",nil,true] spawn BIS_fnc_MP; 
 	};
 };
 
