@@ -161,7 +161,7 @@ if (isServer) then {
         _wall setDir (_dir2 + 180);
         _wall setVectorUp (surfaceNormal (getPosATL _wall));
         _wall allowDamage false;    
-        _wall enableSimulationGlobal false;
+        //_wall enableSimulationGlobal false;
         _dir2 = _dir2 + 34.5; 
     };
     _obj = createVehicle ["Land_Garbage_square3_F", BTC_tk_prison_coords, [], 0, "CAN_COLLIDE"];
