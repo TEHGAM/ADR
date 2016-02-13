@@ -37,3 +37,17 @@ if (!isDedicated) then {
         _tk = [] spawn BTC_Teamkill;
     };
 };
+
+//====================== Rules check
+if (!isDedicated) then {
+    _uid = getPlayerUID player;
+    _rules = missionNamespace getVariable ["TEHGAM_RULES",[]];
+    if (!(_uid in _rules)) then {
+        createDialog "tehgam_rules";
+    };
+};
+
+//test
+if (!isDedicated) then {
+    player addAction [("TEST"), "createDialog ""tehgam_rules""", [], -102, false];
+};

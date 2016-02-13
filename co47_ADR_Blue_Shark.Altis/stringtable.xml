@@ -578,3 +578,11 @@
 		</Key>
 	</Package>
 </Project>
+<Project name="TEHGAM_Rules">
+	<Package name="TEHGAM_Rules">
+		<Key ID="STR_TEHGAM_RULES_Title">
+			<Original>TEHGAM 2 Server Rules</Original>
+			<Russian>Правила сервера TEHGAM 2</Russian>
+		</Key>
+    </Package>
+</Project>
