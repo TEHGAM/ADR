@@ -46,8 +46,3 @@ if (!isDedicated) then {
         createDialog "tehgam_rules";
     };
 };
-
-//test
-if (!isDedicated) then {
-    player addAction [("TEST"), "createDialog ""tehgam_rules""", [], -102, false];
-};
