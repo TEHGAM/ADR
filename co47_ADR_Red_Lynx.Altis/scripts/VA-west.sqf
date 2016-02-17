@@ -1,9 +1,9 @@
 _myBox = _this select 0;
-["AmmoboxInit", [_myBox, true]] call BIS_fnc_arsenal;
-[_myBox, [true], true] call BIS_fnc_removeVirtualBackpackCargo;
-[_myBox, [true], true] call BIS_fnc_removeVirtualItemCargo;
-[_myBox, [true], true] call BIS_fnc_removeVirtualWeaponCargo;
-[_myBox, [true], true] call BIS_fnc_removeVirtualMagazineCargo;
+["AmmoboxInit", [_myBox, false]] call BIS_fnc_arsenal;
+clearBackpackCargoGlobal _myBox;
+clearItemCargoGlobal _myBox;
+clearMagazineCargoGlobal _myBox;
+clearWeaponCargoGlobal _myBox;
 
 //---- РЮКЗАКИ
 [_myBox,[

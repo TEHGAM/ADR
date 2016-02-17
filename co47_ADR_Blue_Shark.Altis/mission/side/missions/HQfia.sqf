@@ -75,7 +75,7 @@ sideMarkerText = "Лагерь"; publicVariable "sideMarkerText";
 "sideMarker" setMarkerText "Допзадание: Лагерь"; publicVariable "sideMarker";
 publicVariable "sideObj";
 
-_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Лагерь</t><br/>____________________<br/>Противник проводит подготовку боевиков на территории острова.<br/><br/>Ваша задача — выдвинутся в указанный район, найти и уничтожить врага и захватить их боезапас.</t>";
+_briefing = "<t align='center'><t size='2.2'>Новое допзадание</t><br/><t size='1.5' color='#00B2EE'>Лагерь</t><br/>____________________<br/>Противник проводит подготовку боевиков на территории острова.<br/><br/>Ваша задача — выдвинуться в указанный район, найти и уничтожить врага и захватить их боезапас.</t>";
 GlobalHint = _briefing; hint parseText GlobalHint; publicVariable "GlobalHint";
 showNotification = ["NewSideMission", "Лагерь"]; publicVariable "showNotification";
 sideMarkerText = "Лагерь"; publicVariable "sideMarkerText";

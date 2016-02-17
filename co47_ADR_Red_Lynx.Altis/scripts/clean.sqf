@@ -252,25 +252,7 @@ for '_x' from 0 to 1 step 0 do {
 			};
 		} count allGroups;
 	};
-        sleep 1;
-		 {if (!isPlayer _x) then {_x enableFatigue FALSE;};} count allUnits;
-    if (!(AW_ammoDropAvail)) then {
-        if (!(ammocheck_switch)) then {
-            ammocheck_switch = true;
-            [] spawn {
-                sleep 480;
-                if (!isNull ammoDropCrate) then {
-                    deleteVehicle ammoDropCrate;
-                };
-                pvBroadcast = [WEST,"AirBase"] sideChat "UH-80 Supply Drop is available."; publicVariable "pvBroadcast";
-                AW_ammoDropAvail = true; publicVariable "AW_ammoDropAvail";
-                ammocheck_switch = false;
-            };
-        };
-    };
-    if (!isNull heliFuelTruck) then {
-        heliFuelTruck setFuelCargo 1;
-    };
+    sleep 1;
 	//================================= SLEEP
 	if (_checkPlayerCount) then {
 		if ((count allPlayers) >= _playerThreshold) then {

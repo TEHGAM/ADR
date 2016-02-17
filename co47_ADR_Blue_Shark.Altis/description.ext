@@ -2,7 +2,7 @@
 
 author = "Rarek, AhoyWorld, Quiksilver";
 onLoadName = "ADR: Blue Shark (I&A)";
-OnLoadMission = "Версия 4.2.3 — редакция TEHGAM.COM";
+OnLoadMission = "Версия 4.3.0 — редакция TEHGAM.COM";
 loadScreen = "media\images\adr_blueshark_loading.jpg";
 overviewPicture = "media\images\adr_blueshark_loading.jpg";
 
@@ -53,6 +53,7 @@ corpseRemovalMaxTime = 120;								// Max time before removal
 #include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
 #include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system
 #include "scripts\DOM_squad\SquadManagement.hpp"		// Squad manager
+#include "scripts\rules\dialog.hpp"		                // Server rules dialog
 
 class CfgFunctions
 	{
@@ -75,139 +76,146 @@ class RscTitles
 
 //------------------------- Parameters
 
-class Params
-	{
-		class AO {
-				title = "Основное задание";
-				values[] = {1,0};
-				texts[] = {"Включено","Выключено"};
-				default = 1;
-			};
+class Params {
+	class AO {
+		title = "Основное задание";
+		values[] = {1,0};
+		texts[] = {"Включено","Выключено"};
+		default = 1;
+	};
 
-		class DefendAO {
-				title = "Защита";
-				values[] = {1,0};
-				texts[] = {"Включено","Выключена"};
-				default = 1;
-			};
+	class DefendAO {
+		title = "Защита";
+		values[] = {1,0};
+		texts[] = {"Включено","Выключена"};
+		default = 1;
+	};
 
-		class SideObjectives {
-				title = "Дополнительные миссии";
-				values[] = {1,0};
-				texts[] = {"Включено","Выключено"};
-				default = 1;
-			};
+	class SideObjectives {
+		title = "Дополнительные миссии";
+		values[] = {1,0};
+		texts[] = {"Включено","Выключено"};
+		default = 1;
+	};
 
-		class AOReinforcementJet {
-				title = "Вражеский самолет оказывает поддержку";
-				values[] = {1,0};
-				texts[] = {"Включено","Выключено"};
-				default = 1;
-			};
+	class AOReinforcementJet {
+		title = "Вражеский самолет оказывает поддержку";
+		values[] = {1,0};
+		texts[] = {"Включено","Выключено"};
+		default = 1;
+	};
 
-		class EnemyLeftThreshhold {
-				title = "Кол-во оставшихся врагов для завершения миссии";
-				values[] = {2,4,8,16};
-				texts[] = {"2","4","8","16"};
-				default = 16;
-			};
+	class EnemyLeftThreshhold {
+		title = "Кол-во оставшихся врагов для завершения миссии";
+		values[] = {2,4,8,16};
+		texts[] = {"2","4","8","16"};
+		default = 16;
+	};
 
-		class RadioTowerMineFieldChance {
-				title = "Шанс появления минного поля рядом с вышкой";
-				values[] = {0,1,2,3,4,5,6,7,8,9,11};
-				texts[] = {"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-				default = 6; // default 5
-			};
+	class RadioTowerMineFieldChance {
+		title = "Шанс появления минного поля рядом с вышкой";
+		values[] = {0,1,2,3,4,5,6,7,8,9,11};
+		texts[] = {"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
+		default = 6; // default 5
+	};
 
-		class ArtilleryTargetTickTimeMin {
-				title = "Минимальный интервал стрельбы артиллерии";
-				values[] = {30,60,120,180,240,300,600,900};
-				texts[] = {"30 секунд","1 минута","2 минуты","3 минуты","4 минуты","5 минут","10 минут","15 минут"};
-				default = 60; // 120 default
-			};
+	class ArtilleryTargetTickTimeMin {
+		title = "Минимальный интервал стрельбы артиллерии";
+		values[] = {30,60,120,180,240,300,600,900};
+		texts[] = {"30 секунд","1 минута","2 минуты","3 минуты","4 минуты","5 минут","10 минут","15 минут"};
+		default = 60; // 120 default
+	};
 
-		class ArtilleryTargetTickTimeMax {
-				title = "Максимаьный интервал стрельбы артиллерии";
-				values[] = {30,60,120,180,240,300,600,900};
-				texts[] = {"30 секунд","1 минута","2 минуты","3 минуты","4 минуты","5 минут","10 минут","15 минут"};
-				default = 180; // 300 default
-			};
+	class ArtilleryTargetTickTimeMax {
+		title = "Максимаьный интервал стрельбы артиллерии";
+		values[] = {30,60,120,180,240,300,600,900};
+		texts[] = {"30 секунд","1 минута","2 минуты","3 минуты","4 минуты","5 минут","10 минут","15 минут"};
+		default = 180; // 300 default
+	};
 
-		class ArtilleryTargetTickWarning {
-				title = "Предупреждение о залпе артилерии";
-				values[] = {1,0};
-				texts[] = {"Включено","Выключено"};
-				default = 1;
-			};
+	class ArtilleryTargetTickWarning {
+		title = "Предупреждение о залпе артилерии";
+		values[] = {1,0};
+		texts[] = {"Включено","Выключено"};
+		default = 1;
+	};
 
-		class AOSize {
-				title = "Диаметр маркера основной миссии";
-				values[] = {200,300,400,500,600,700,800,900,1000};
-				texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1,000m"};
-				default = 1000;
-			};
+	class AOSize {
+		title = "Диаметр маркера основной миссии";
+		values[] = {200,300,400,500,600,700,800,900,1000};
+		texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1,000m"};
+		default = 1000;
+	};
 
-		class VehicleRespawnDistance {
-				title = "Расстояние от транспорта до игроков, при котором транспорт респавнится";
-				values[] = {10,50,100,200,300,400,500,1000,2000,5000,10000};
-				texts[] = {"10m","50m","100m","200m","300m","400m","500m","1km","2km","5km","10km"};
-				default = 300;
-			};
+	class VehicleRespawnDistance {
+		title = "Расстояние от транспорта до игроков, при котором транспорт респавнится";
+		values[] = {10,50,100,200,300,400,500,1000,2000,5000,10000};
+		texts[] = {"10m","50m","100m","200m","300m","400m","500m","1km","2km","5km","10km"};
+		default = 300;
+	};
 
-		class GroupPatrol {
-				title = "Кол-во групп патрулей";
-				values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
-				texts[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
-				default = 8; // default 11... remember, more AI = less FPS
-			};
+	class GroupPatrol {
+		title = "Кол-во групп патрулей";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+		texts[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+		default = 8; // default 11... remember, more AI = less FPS
+	};
 
-		class SniperTeamsPatrol {
-				title = "Кол-во групп снайперов";
-				values[] = {0,1,2,3};
-				texts[] = {1,2,3,4};
-				default = 2; // default 2
-			};
+	class SniperTeamsPatrol {
+		title = "Кол-во групп снайперов";
+		values[] = {0,1,2,3};
+		texts[] = {1,2,3,4};
+		default = 2; // default 2
+	};
 
-		class StaticMG {
-				title = "Кол-во стационарных установок";
-				values[] = {0,1,2,3};
-				texts[] = {1,2,3,4};
-				default = 2; // default 2
-			};
+	class StaticMG {
+		title = "Кол-во стационарных установок";
+		values[] = {0,1,2,3};
+		texts[] = {1,2,3,4};
+		default = 2; // default 2
+	};
 
-		class Overwatch {
-				title = "Кол-во разведывательных патрулей";
-				values[] = {0,1,2,3,4,5,6,7};
-				texts[] = {1,2,3,4,5,6,7,8};
-				default = 4; // default 6
-			};
+	class Overwatch {
+		title = "Кол-во разведывательных патрулей";
+		values[] = {0,1,2,3,4,5,6,7};
+		texts[] = {1,2,3,4,5,6,7,8};
+		default = 4; // default 6
+	};
 
-		class VEHPatrol {
-				title = "Кол-во техники";
-				values[] = {0,1,2,3,4,5,6};
-				texts[] = {1,2,3,4,5,6,7};
-				default = 4; // default 2
-			};
+	class VEHPatrol {
+		title = "Кол-во техники";
+		values[] = {0,1,2,3,4,5,6};
+		texts[] = {1,2,3,4,5,6,7};
+		default = 4; // default 2
+	};
 
-		class AAPatrol {
-				title = "Кол-во ЗСУ";
-				values[] = {0,1,2,3,4};
-				texts[] = {1,2,3,4,5};
-				default = 2; // default 2
-			};
+	class AAPatrol {
+		title = "Кол-во ЗСУ";
+		values[] = {0,1,2,3,4};
+		texts[] = {1,2,3,4,5};
+		default = 2; // default 2
+	};
 
-		class AirPatrol {
-				title = "Шанс появления вражеского штурмовика";
-				values[] = {0,1,2,3,4,5,6,7,8,9,10};
-				texts[] = {0%,10%,20%,30%,40%,50%,60%,70%,80%,90%,100%};
-				default = 7; // default 7
-			};
-		class PilotRespawn {
-				title = "Респавн пилотов";
-				values[] = {0,1};
-				texts[] = {"Выключено","Включено"};
-				default = 1;
-			};
+	class AirPatrol {
+		title = "Шанс появления вражеского штурмовика";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10};
+		texts[] = {0%,10%,20%,30%,40%,50%,60%,70%,80%,90%,100%};
+		default = 7; // default 7
+	};
+
+	class PilotRespawn {
+		title = "Респавн пилотов";
+		values[] = {0,1};
+		texts[] = {"Выключено","Включено"};
+		default = 1;
+	};
+
+	class Fatigue {
+		title = "Усталость игроков";
+		values[] = {0,1};
+		texts[] = {"Выключено","Включено"};
+		default = 1;
+	};
 };
 
 //------------------------- Notifications

@@ -5,8 +5,10 @@ class QS
 	{
 		file = "functions";
 		class actionClearInventory {};
+		class actionMagRepack {};
 		class actionPilotRepair {};
 		class addAction {};
+		class addActionBlock {};
 		class addActionDefuse {};
 		class addActionGetData {};
 		class addActionGetIntel {};

@@ -1,9 +1,9 @@
 /*
-Author: 
+Author:
 
 	Quiksilver
 
-Last modified: 
+Last modified:
 
 	1/05/2014
 
@@ -33,7 +33,9 @@ _missionList = [
 	"secureRadar",
 	"heliCrash",
 	"rescueHostages",
-	"convoy"
+	"convoy",
+	"snatch",
+	"swordfish"
 ];
 
 SM_SWITCH = true; publicVariable "SM_SWITCH";
@@ -58,5 +60,5 @@ while { true } do {
 
 		SM_SWITCH = true; publicVariable "SM_SWITCH";
 	};
-	_loopTimeout;
+	sleep _loopTimeout;
 };

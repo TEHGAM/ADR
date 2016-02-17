@@ -1,9 +1,6 @@
 _myBox = _this select 0;
-["AmmoboxInit",[_myBox,true]] call BIS_fnc_arsenal;
-[_myBox,[true],true] call BIS_fnc_removeVirtualBackpackCargo;
-[_myBox,[true],true] call BIS_fnc_removeVirtualItemCargo;
-[_myBox,[true],true] call BIS_fnc_removeVirtualWeaponCargo;
-[_myBox,[true],true] call BIS_fnc_removeVirtualMagazineCargo;
+["AmmoboxInit", [_myBox, false]] call BIS_fnc_arsenal;
+
 //--- Рюкзаки
 [_myBox,[
 "B_Carryall_cbr",
@@ -55,6 +52,7 @@ _myBox = _this select 0;
 "B_GMG_01_weapon_F",
 "B_HMG_01_weapon_F"
 ],true] call BIS_fnc_addVirtualBackpackCargo;
+
 [_myBox,[
 //--- НАТО
 "U_B_CombatUniform_mcam",
@@ -319,7 +317,6 @@ _myBox = _this select 0;
 "optic_MRD",
 "optic_LRPS",
 "optic_NVS",
-"optic_Nightstalker",
 "optic_AMS",
 "optic_AMS_khk",
 "optic_AMS_snd",
@@ -517,7 +514,6 @@ _myBox = _this select 0;
 "srifle_DMR_03_tan_F",
 "srifle_DMR_03_multicam_F",
 "srifle_DMR_03_woodland_F",
-"srifle_DMR_03_spotter_F",
 "srifle_DMR_04_F",
 "srifle_DMR_04_Tan_F",
 "srifle_DMR_05_blk_F",

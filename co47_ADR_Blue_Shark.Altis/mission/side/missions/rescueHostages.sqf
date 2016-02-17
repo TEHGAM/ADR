@@ -130,7 +130,7 @@ for "_c" from 0 to 109 do {
     if ((random 10) > 1) then {
         _minePos = [_startPoint, 179.8, (_dir1 + 2.2)] call BIS_fnc_relPos;
         if (surfaceIsWater _minePos) then {
-            _minePos = [_minePos select 0, _minePos select 1, getTerrainHeightASL _minePos];
+            _minePos = [_minePos select 0, _minePos select 1, getTerrainHeightASL _minePos];        
             _mine = createMine ["UnderwaterMinePDM", [_minePos select 0, _minePos select 1], [], 0];
             waitUntil {alive _mine};
             _mine setPosATL [_minePos select 0,_minePos select 1, (getPosATL _mine select 2) - 2];
@@ -168,10 +168,9 @@ for "_c" from 0 to 109 do {
 
     _minePos = [_startPoint, 190, _dir4] call BIS_fnc_relPos;
     if (surfaceIsWater _minePos) then {
-        _minePos = [_minePos select 0, _minePos select 1, getTerrainHeightASL _minePos];
-        _mine = createMine ["UnderwaterMine", [_minePos select 0, _minePos select 1], [], 0];
-        waitUntil {alive _mine};
-        _mine setPosATL [_minePos select 0,_minePos select 1, (getPosATL _mine select 2) - 2];
+        _height = random (floor ((getTerrainHeightASL _minePos) * -1));
+        _pos = [_minePos select 0, _minePos select 1, (0 - _height)];
+        _mine = createMine ["UnderwaterMine", _pos, [], 0]; 
     } else {
         _mine = createVehicle ["ATMine", [40,40,40], [], 0, "CAN_COLLIDE"];
         waitUntil {alive _mine};
@@ -542,8 +541,20 @@ while { sideMissionUp } do {
         } else {
             [] call QS_fnc_SMhintSUCCESS;   
         };
+
+        // delete mines
+        {
+            if (_x distance _startPoint < 300) then {
+               deleteVehicle _x;
+            };            
+        } forEach allMines;
+        _nearestMines = nearestObjects [_startPoint, ["ATMine","APERSTripMine","APERSBoundingMine","UnderwaterMinePDM","UnderwaterMine"], 300];   
+        {
+            deleteVehicle _x;
+        } forEach _nearestMines;
+
         sleep 120;
-        { [_x] spawn QS_fnc_SMdelete } forEach [_enemiesArray, _unitsArray, _minesArray]; 
+        { [_x] spawn QS_fnc_SMdelete } forEach [_enemiesArray, _unitsArray];
     };
 
     sleep 3;

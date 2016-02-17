@@ -398,6 +398,17 @@ class VAS_Diag {
 			h = (1 / 25);
 		};
 
+		class ButtonShowInfo : VAS_RscButtonMenu
+		{
+			idc = -1;
+			text = "$STR_VAS_Main_btnInfo";
+			onButtonClick = "createDialog ""VAS_Info_Diag"";";
+			x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.8 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+
 		class ButtonRemoveAll : VAS_RscButtonMenu {
 			idc = -1;
 			text = "$STR_VAS_Main_btnRemoveAll";
@@ -407,6 +418,114 @@ class VAS_Diag {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+	};
+};
+
+class VAS_Info_Diag {
+	idd = 1543;
+	name= "Virtual_Ammobox_Sys Load";
+	movingEnable = false;
+	enableSimulation = true;
+	onLoad = "[1] spawn VAS_fnc_SaveLoad; uiNamespace setVariable ['VAS_Info_Dispaly', (_this select 0)];execVM 'scripts\VAS\info.sqf';";
+
+    class controlsBackground {
+		class VAS_BackGround : VAS_RscBG {
+			x = "SafeZoneXAbs";
+			y = "SafeZoneY";
+			w = "safeZoneWAbs";
+			h = "SafeZoneH";
+			colorBackground[] = {0.149, 0.196, 0.219, 0.9};
+		};
+	};
+
+	class controls {
+
+		class VAS_XD_MainCaption : VAS_XC_RscText {
+			colorBackground[] = {1, 1, 1, 0};
+		    colorText[] = {1, 1, 1, 1};
+			idc = 7778;
+			text = "$STR_VAS_Info_Title";
+			x = "SafeZoneX";
+		    y = "SafeZoneY + 0.01";
+		    w = "SafeZoneW";
+		    h = 0.13;
+		    sizeEx = 0.1;
+		    style = 2;
+		    shadow = 0;
+		};
+
+        class Dom2 : VAS_XD_MainCaption {
+        	idc = -1;
+			x = "SafeZoneX + 0.05";
+			y = "SafeZoneY + SafeZoneH - 0.1";
+			colorText[] = {1, 1, 1, 1};
+			text = "";
+		};
+		
+        class VAS_XD_CloseButton: VAS_XD_ButtonBase {
+			idc = 9999;
+			text = "$STR_VAS_Main_btnClose"; 
+			action = "closeDialog 0";
+			default = true;
+			x = "SafeZoneX + SafeZoneW - 0.3";
+			y = "SafeZoneY + SafeZoneH - 0.07";
+			colorFocused[] = { 1, 1, 1, 1 };
+			colorBackgroundFocused[] = { 1, 1, 1, 0 };
+		};		
+
+        class Table: VAS_RscListNBox {
+            idc = 7777;
+            type = 102;
+            columns[] = {0.005,0.055,0.15,0.25,0.33,0.415,0.49,0.6,0.68,0.765,0.84,0.94};
+            drawSideArrows = 0;
+            idcLeft = -1; 
+            idcRight = -1;
+            maxHistoryDelay = 1;
+            rowHeight = 0.05;
+            x = "SafeZoneX + 0.02";
+			y = "SafeZoneY + 0.21";
+			w = "SafeZoneW - 0.05";
+			h = "SafeZoneH - 0.3";
+			font = "PuristaLight";
+	        sizeEx = 0.03921;
+		    soundSelect[] = {"", 0.1, 1}; 
+		    colorBackground[] = {0.149, 0.196, 0.219, 0.9};
+		    colorPicture[] = {1,1,1,1};
+            colorPictureSelected[] = {1,1,1,1};
+            colorPictureDisabled[] = {1,1,1,1};
+		    class ListScrollBar {
+		    	width = 0.7; 
+		    	height = 0.7;
+		    	scrollSpeed = 0.01;
+		    	arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+		    	arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+		    	border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+		    	thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+		    	color[] = {1,1,1,1};
+		    };			        
+        };
+
+        class Table_Header : Table {
+            idc = 7776;
+            x = "SafeZoneX + 0.02";
+			y = "SafeZoneY + 0.15";
+			w = "SafeZoneW - 0.05";
+			h = "0.05";
+			colorSelect[] = {0.95, 0.95, 0.95, 1};
+	        colorSelect2[] = {0.95, 0.95, 0.95, 1};
+			colorSelectBackground[] = {0.149, 0.196, 0.219, 0};
+			colorSelectBackground2[] = {0.149, 0.196, 0.219, 0};
+			class ListScrollBar {
+		    	width = 0; 
+		    	height = 0;
+		    	scrollSpeed = 0.01;
+		    	arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+		    	arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+		    	border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+		    	thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+		    	color[] = {1,1,1,1};
+		    };	
+        };
 	};
 };
 

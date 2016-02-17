@@ -3,7 +3,7 @@ Author: Quiksilver
 Date modified: 12/10/2014 ArmA 1.30
 */
 
-if (saving_inventory) exitWith {hint "Сохранение снаряжения, пожалуйста ждите ...";};
+if (!isNil "saving_inventory" && {saving_inventory}) exitWith {hint "Сохранение снаряжения, пожалуйста ждите ...";};
 saving_inventory = true;
 respawnInventory_Saved = true;
 hint "Снаряжение сохранено. При следующем возрождении, будет загружено ваше текущее снаряжение.";

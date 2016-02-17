@@ -19,7 +19,7 @@ smRewards =
 	["Страйдер с пулеметом", "I_MRAP_03_hmg_F"],
 	["Страйдер с гранатометом", "I_MRAP_03_gmg_F"],
 	["Прототип: Передвижной миномет", "B_G_Offroad_01_repair_F"],
-	["WY-55 Хелкат UP", "I_Heli_light_03_F"]
+	["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"]
 ];
 
 smMarkerList =
@@ -46,16 +46,25 @@ showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "sho
 showNotification = ["Reward", format["Ваша команда получила %1!", _vehName]]; publicVariable "showNotification";
 
 
-if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
+if (_reward isKindOf "B_G_Offroad_01_repair_F") then {
 	_mortar = createVehicle ["B_Mortar_01_F", getMarkerPos "smReward1", smMarkerList, 0, "NONE"];
 	_mortar attachTo [_reward, [0, -2.5, .3]];
 };
 
-if (_reward isKindOf "I_Heli_light_03_F") exitWith {
-	_HEL = createVehicle ["I_Heli_light_03_F", getMarkerPos "smReward1", smMarkerList, 0, "NONE"];
-	_HEL setDir 284;
-	_reward setPos [(random 1000), (random 1000), (10000 + (random 20000))];
-	_reward setDamage 1;
-	_HEL addWeapon ("autocannon_35mm");
-	_HEL addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
+if (_reward isKindOf "I_Heli_light_03_F") then {
+	_reward addWeapon ("autocannon_35mm");
+	_reward addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
+};
+
+// Setting reward vehicle timmer.
+_lockTime = 600;
+
+// Spawn vehicle lock, timer and Draw3D EH in different thread.
+[_reward, _lockTime] spawn {
+	_reward = _this select 0;
+	_lockTime = _this select 1;
+
+	_reward lock 3;
+	sleep _lockTime;
+	_reward lock 0;
 };
