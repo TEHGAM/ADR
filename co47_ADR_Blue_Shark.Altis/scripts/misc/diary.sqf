@@ -861,6 +861,13 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"Blue Shark v4.3.1 (24.02.2016)",
+"
+<br />- <font color='#CDDC39'>[Добавлено]</font> Квадрациклы в зоне наградной техники.
+"
+]];
 
 //Авторы
 player createDiaryRecord ["credits",
