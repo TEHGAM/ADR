@@ -63,7 +63,7 @@ sleep 0.5;
 waitUntil{!isNull (ropeAttachedTo _cargo)};
 sleep 0.5;
 waitUntil{isNull (ropeAttachedTo _cargo)};
-sleep 3;
+sleep 2;
 waitUntil{(getPos _cargo select 2)<=120};
 
 _velocity = velocity _cargo;
