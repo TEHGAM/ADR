@@ -19,7 +19,10 @@ smRewards =
 	["Страйдер с пулеметом", "I_MRAP_03_hmg_F"],
 	["Страйдер с гранатометом", "I_MRAP_03_gmg_F"],
 	["Прототип: Передвижной миномет", "B_G_Offroad_01_repair_F"],
-	["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"]
+	["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"],
+	["FV-720 «Мора»", "I_APC_tracked_03_cannon_F"],
+	["MSE-3 «Марид» с НУРС", "O_APC_Wheeled_02_rcws_F"]
+	
 ];
 
 smMarkerList =
@@ -54,6 +57,11 @@ if (_reward isKindOf "B_G_Offroad_01_repair_F") then {
 if (_reward isKindOf "I_Heli_light_03_F") then {
 	_reward addWeapon ("autocannon_35mm");
 	_reward addMagazine ("680Rnd_35mm_AA_shells_Tracer_Yellow");
+};
+
+if (_reward isKindOf "O_APC_Wheeled_02_rcws_F") then {
+	_reward addWeapon ("rockets_Skyfire");
+	_reward addMagazine ("14Rnd_80mm_rockets");
 };
 
 // Setting reward vehicle timmer.
