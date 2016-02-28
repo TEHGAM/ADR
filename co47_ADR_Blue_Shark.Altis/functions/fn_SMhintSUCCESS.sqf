@@ -60,8 +60,10 @@ if (_reward isKindOf "I_Heli_light_03_F") then {
 };
 
 if (_reward isKindOf "O_APC_Wheeled_02_rcws_F") then {
-	_reward addWeapon ("rockets_Skyfire");
-	_reward addMagazine ("14Rnd_80mm_rockets");
+	_reward addWeapon ("Rocket_04_AP_Plane_CAS_01_F");
+	_reward addMagazine ("7Rnd_Rocket_04_AP_F");
+	_reward addWeapon ("Rocket_04_HE_Plane_CAS_01_F");
+	_reward addMagazine ("7Rnd_Rocket_04_HE_F");
 };
 
 // Setting reward vehicle timmer.
