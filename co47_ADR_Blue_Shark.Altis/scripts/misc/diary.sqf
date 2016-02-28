@@ -863,9 +863,11 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"Blue Shark v4.3.1 (24.02.2016)",
+"Blue Shark v4.3.1 (28.02.2016)",
 "
 <br />- <font color='#CDDC39'>[Добавлено]</font> Квадрациклы в зоне наградной техники.
+<br />- <font color='#CDDC39'>[Добавлено]</font> В награду добавлена Мора, и Марид с НУРСами.
+<br />- <font color='#2196F3'>[Изменено]</font> Модули теперь сбрасываются с парашюта при высоте более 50 м.
 "
 ]];
 
