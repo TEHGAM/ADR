@@ -4,7 +4,7 @@ Last modified: 13/10/2014 ArmA 1.30 by Quiksilver
 Description: Separate pilot respawn
 */
 
-if (PARAMS_PilotRespawn == 0) exitWith {};
+if (PARAMS_PilotRespawn == 0) exitWith {sleep 0.1};
 
 _pos = getMarkerPos "respawn_pilot";
 _pilots = ["B_Pilot_F","B_Helipilot_F"];
