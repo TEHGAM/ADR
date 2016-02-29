@@ -42,9 +42,8 @@ sleep 0.2;
 detach _cargo;
 sleep 10;
 _smoke2 = _smokeType createVehicle [getPos _cargo select 0, getPos _cargo select 1,5];
-sleep _reloadtime; BACO_ammoSuppAvail = TRUE; publicVariable "BACO_ammoSuppAvail";
 };
-
+sleep _reloadtime; BACO_ammoSuppAvail = TRUE; publicVariable "BACO_ammoSuppAvail";
 //--------------------------------------------------------- Удаление контейнера
 
 sleep _timedel;
