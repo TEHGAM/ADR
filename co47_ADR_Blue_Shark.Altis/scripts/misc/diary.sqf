@@ -873,6 +873,14 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"Blue Shark v4.3.2 (29.02.2016)",
+"
+<br />- <font color='#2196F3'>[Изменено]</font> Рытвины очищаются чаще (4-8 мин).
+"
+]];
+
 //Авторы
 player createDiaryRecord ["credits",
 [
