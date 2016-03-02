@@ -22,7 +22,6 @@ smRewards =
 	["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"],
 	["FV-720 «Мора»", "I_APC_tracked_03_cannon_F"],
 	["MSE-3 «Марид» с НУРС", "O_APC_Wheeled_02_rcws_F"]
-	
 ];
 
 smMarkerList =
