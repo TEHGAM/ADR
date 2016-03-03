@@ -12,6 +12,7 @@ class QS
 		class addActionDefuse {};
 		class addActionGetData {};
 		class addActionGetIntel {};
+		class addActionNeutralize {};
 		class addActionRescue {};
 		class addActionSabotage {};
 		class addActionSurrender {};
