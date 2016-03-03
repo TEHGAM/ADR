@@ -38,7 +38,7 @@ _completeText = format[
 _reward = createVehicle [_vehVarname, getMarkerPos "smReward1", smMarkerList, 0, "NONE"];
 waitUntil {!isNull _reward};
 
-_reward setDir 284;
+_reward setDir 135;
 
 GlobalHint = _completeText; publicVariable "GlobalHint"; hint parseText _completeText;
 if (count sideMarkerText == 2) then {

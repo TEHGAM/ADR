@@ -1830,7 +1830,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=244;
+		items=245;
 		class Item0
 		{
 			position[]={23375.334,12.825771,19807.545};
@@ -4411,12 +4411,22 @@ class Mission
 		class Item243
 		{
 			position[]={15053.71,17.91,17013.102};
-			offsetY=3;
 			id=312;
 			side="EMPTY";
 			vehicle="Windsock_01_F";
 			skill=0.60000002;
 			init="this allowdamage false;";
+		};
+		class Item244
+		{
+			position[]={14286.151,19.091042,16339.513};
+			azimut=165;
+			id=313;
+			side="EMPTY";
+			vehicle="O_Heli_Transport_04_bench_F";
+			leader=1;
+			skill=0.60000002;
+			init="0 = [this,300,305,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
 		};
 	};
 	class Markers
