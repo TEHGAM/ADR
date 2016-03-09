@@ -2074,20 +2074,22 @@ BTC_addMissingItems = {
     if (secondaryWeapon _player == "") then {
         _secondaryWeapon = profileNamespace getVariable "secondary_weapon";   
         _secondaryWeaponItems = profileNamespace getVariable "secondary_items";  
-        _secondaryWeaponMagazines = profileNamespace getVariable "secondary_magazine";        
-        _player addWeaponGlobal _secondaryWeapon;            
-        {
-            if (_x != "") then {
-                _player addSecondaryWeaponItem _x;
-            };            
-        } forEach _secondaryWeaponItems;
-        if (count _secondaryWeaponMagazines > 0) then {
+        _secondaryWeaponMagazines = profileNamespace getVariable "secondary_magazine";     
+        if (_secondaryWeapon != "") then {   
+            _player addWeaponGlobal _secondaryWeapon;         
             {
                 if (_x != "") then {
-                    _player addMagazine _x;
-                };               
-            } forEach _secondaryWeaponMagazines;
-        };
+                    _player addSecondaryWeaponItem _x;
+                };            
+            } forEach _secondaryWeaponItems;
+            if (count _secondaryWeaponMagazines > 0) then {
+                {
+                    if (_x != "") then {
+                        _player addMagazine _x;
+                    };               
+                } forEach _secondaryWeaponMagazines;
+            };
+        }; 
     };
 
 };
