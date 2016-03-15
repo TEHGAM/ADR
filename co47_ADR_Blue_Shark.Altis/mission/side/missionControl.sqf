@@ -36,7 +36,8 @@ _missionList = [
 	"convoy",
 	"snatch",
 	"swordfish",
-	"yellowfog"
+	"yellowfog",
+	"grapeswrath"
 ];
 
 SM_SWITCH = true; publicVariable "SM_SWITCH";

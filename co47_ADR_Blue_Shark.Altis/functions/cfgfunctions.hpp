@@ -12,6 +12,7 @@ class QS
 		class addActionDefuse {};
 		class addActionGetData {};
 		class addActionGetIntel {};
+		class addActionHack {};
 		class addActionNeutralize {};
 		class addActionRescue {};
 		class addActionSabotage {};
@@ -28,6 +29,7 @@ class QS
 		class deleteUnits {};
 		class enemyCAS {};
 		class FindPosBuilding {};
+		class FillBots {};
 		class garrisonFortEAST {};
 		class garrisonFortFIA {};
 		class garrisonFortIND {};
@@ -51,6 +53,7 @@ class QS
 		class SMenemyIND {};
 		class SMhintFAIL {};
 		class SMhintSUCCESS {};
+		class TBshuffle {};
 		class uh80Turret {};
 		class uh80TurretActions {};
 		class vMonitor {};
