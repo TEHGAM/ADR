@@ -895,6 +895,16 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"Blue Shark v4.4.0 (17.03.2016)",
+"
+<br />- <font color='#CDDC39'>[Добавлено]</font> Спецоперация: Гроздья Гнева (описание в информации).
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Спецоперация: Рыба-меч устройства теперь появляются корректно.
+<br />- <font color='#2196F3'>[Изменено]</font> Уменьшен шанс выдачи Неофрона в награду за доп миссии.
+<br />- <font color='#F44336'>[Удалено]</font> Убран джип с минометом из списка наградной.
+"
+]];
 //Авторы
 player createDiaryRecord ["credits",
 [

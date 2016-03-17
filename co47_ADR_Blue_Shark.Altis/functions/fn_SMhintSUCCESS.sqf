@@ -11,14 +11,12 @@ smRewards =
 	["AFV-4 «Горгона»", "I_APC_Wheeled_03_cannon_F"],
 	["БТР-К «Камыш»", "O_APC_Tracked_02_cannon_F"],
 	["ЗСУ-39 «Тигр»", "O_APC_Tracked_02_AA_F"],
-	["То-199 «Неофрон» (штурмовик)", "O_Plane_CAS_02_F"],
 	["IFV-6a «Гепард»", "B_APC_Tracked_01_AA_F"],
 	["T-100 «Варсук»", "O_MBT_02_cannon_F"],
 	["MBT-52 «Кума»", "I_MBT_03_cannon_F"],
 	["M2A4 «Сламмер» UP", "B_MBT_01_TUSK_F"],
 	["Страйдер с пулеметом", "I_MRAP_03_hmg_F"],
 	["Страйдер с гранатометом", "I_MRAP_03_gmg_F"],
-	["Прототип: Передвижной миномет", "B_G_Offroad_01_repair_F"],
 	["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"],
 	["FV-720 «Мора»", "I_APC_tracked_03_cannon_F"],
 	["MSE-3 «Марид» с НУРС", "O_APC_Wheeled_02_rcws_F"]
@@ -46,12 +44,6 @@ if (count sideMarkerText == 2) then {
 };
 showNotification = ["CompletedSideMission", sideMarkerText]; publicVariable "showNotification";
 showNotification = ["Reward", format["Ваша команда получила %1!", _vehName]]; publicVariable "showNotification";
-
-
-if (_reward isKindOf "B_G_Offroad_01_repair_F") then {
-	_mortar = createVehicle ["B_Mortar_01_F", getMarkerPos "smReward1", smMarkerList, 0, "NONE"];
-	_mortar attachTo [_reward, [0, -2.5, .3]];
-};
 
 if (_reward isKindOf "I_Heli_light_03_F") then {
 	_reward addWeapon ("autocannon_35mm");
