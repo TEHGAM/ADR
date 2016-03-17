@@ -4176,7 +4176,7 @@ class Mission
 			azimut=115;
 			id=290;
 			side="EMPTY";
-			vehicle="B_Heli_Light_01_armed_F";
+			vehicle="I_Heli_light_03_F";
 			leader=1;
 			lock="UNLOCKED";
 			skill=0.60000002;

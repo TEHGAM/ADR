@@ -30,7 +30,6 @@ private ["_opticsAllowed","_specialisedOptics","_basePos","_firstRun","_insideSa
 #define MRK_MSG "Только пехотные снайперы могут использовать это оружие."
 #define PILOT_MSG "Пилоты могут использовать только пистолеты и пистолет-пулемёты."
 #define GRENADIER_MSG "Только гренадеры и командиры отделений могут использовать подствольные гранатометы."
-//#define SOPT_MSG "Только снайперы могут использовать оптический прицел LRPS."
 #define MARKSMANOPT_MSG "Только снайперы и пехотные снайперы могут использовать оптические прицелы LRPS, SOS, AMS, KAHLIA."
 
 //===== UAV TERMINAL
