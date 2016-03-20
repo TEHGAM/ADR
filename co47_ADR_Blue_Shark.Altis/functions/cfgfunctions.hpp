@@ -33,6 +33,7 @@ class QS
 		class garrisonFortEAST {};
 		class garrisonFortFIA {};
 		class garrisonFortIND {};
+		class killerCatcher {};
 		class loadInventory {};
 		class PTenemyEAST {};
 		class removeAction {};

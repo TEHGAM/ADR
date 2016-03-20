@@ -586,3 +586,15 @@
 		</Key>
     </Package>
 </Project>
+<Project name="Prison_Reasons">
+	<Package name="Prison_Reasons">
+		<Key ID="STR_PRISON_TEAMKILL">
+			<Original>YOU PUNISHED FOR TEAMKILL! Time: %1 sec</Original>
+			<Russian>ВАС НАКАЗАЛИ ЗА УБИЙСТВО СВОИХ! Наказание: %1 сек</Russian>
+		</Key>
+		<Key ID="STR_PRISON_VEHICLE">
+			<Original>YOU PUNISHED FOR DESTROING VEHICLES! Time: %1 sec</Original>
+			<Russian>ВАС НАКАЗАЛИ ЗА УНИЧТОЖЕНИЕ ТЕХНИКИ! Наказание: %1 сек</Russian>
+		</Key>
+    </Package>
+</Project>

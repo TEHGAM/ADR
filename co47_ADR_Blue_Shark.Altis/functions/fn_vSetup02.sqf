@@ -93,3 +93,6 @@ if (_t in _uav) then {
 if (_t in _gh_huron) then {
 	_u setVariable ["turrets_locked", false, true];
 };
+
+//===== Vehicle Killer monitor system
+[_u] call QS_fnc_killerCatcher;
