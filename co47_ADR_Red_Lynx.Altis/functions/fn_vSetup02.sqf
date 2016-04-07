@@ -65,7 +65,9 @@ if(_t in _huron) then {
 
 //==== hellcat skin
 if(_t in _hellcat) then {
-	_u setObjectTextureGlobal [0, 'media\textures\Heli_light_03_CSAT.paa'];//'A3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co.paa'];
+	_u setObjectTextureGlobal [0, 'media\textures\Heli_light_03_CSAT.paa']; //'A3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co.paa'];
+	_u addWeapon "Laserdesignator_mounted";
+	_u addMagazine "Laserbatteries";
 };
 
 //==== mohawk skin
