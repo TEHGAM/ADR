@@ -1,6 +1,9 @@
 /*
 Обновление 24.07.15 версия миссии 3.5
 Изменена система блокировки вертолетов
+---
+Обновление 09.04.16 версия 4.4.2
+Добавлен Тару с сидениями
 */
 
 _uid = getPlayerUID player;
@@ -24,6 +27,7 @@ _aircraft_nocopilot = [
 "B_Heli_Transport_03_F",				//Хурон
 "O_Heli_Transport_04_covered_F",		//Тару транспортный
 "O_Heli_Transport_04_F",				//Тару грузовой
+"O_Heli_Transport_04_bench_F",			//Тару сидения
 "O_Heli_Light_02_unarmed_F",			//Касатка транспортная
 "O_Heli_Light_02_F",					//Касатка боевая
 "B_Heli_Transport_01_F",				//Гостхок
@@ -40,6 +44,7 @@ _aircraft_nopilot = [
 "B_Heli_Transport_03_F",				//Хурон
 "O_Heli_Transport_04_covered_F",		//Тару транспортный
 "O_Heli_Transport_04_F",				//Тару грузовой
+"O_Heli_Transport_04_bench_F",			//Тару сидения
 "O_Heli_Light_02_unarmed_F",			//Касатка транспортная
 "O_Heli_Light_02_F",					//Касатка боевая
 "B_Heli_Attack_01_F",					//Блэкфут
@@ -63,7 +68,8 @@ _aircraft_nopilot = [
 //---------- Место loadmaster заблокировано
 _aircraft_noloadmaster = [
 "O_Heli_Transport_04_covered_F",	//Тару транспортный
-"O_Heli_Transport_04_F"				//Тару грузовой
+"O_Heli_Transport_04_F",			//Тару грузовой
+"O_Heli_Transport_04_bench_F"		//Тару сидения
 ];
 
 waitUntil {player == player};
