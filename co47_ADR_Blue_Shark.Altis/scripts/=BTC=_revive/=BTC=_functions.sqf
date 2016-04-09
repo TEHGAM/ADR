@@ -1187,8 +1187,10 @@ BTC_player_killed = {
     profileNamespace setVariable ["primary_weapon", primaryWeapon _playerOld];
     profileNamespace setVariable ["primary_items", primaryWeaponItems _playerOld];
     profileNamespace setVariable ["primary_magazine", primaryWeaponMagazine _playerOld];
-    saveProfileNamespace;
-
+    profileNamespace setVariable ["secondary_weapon", secondaryWeapon _playerOld];
+    profileNamespace setVariable ["secondary_items", secondaryWeaponItems _playerOld];
+    profileNamespace setVariable ["secondary_magazine", secondaryWeaponMagazine _playerOld];
+    saveProfileNamespace;  
 	BTC_gear = [player] call BTC_get_gear;
 	titleText ["", "BLACK OUT"];
 	_body = _this select 0;
@@ -2051,7 +2053,7 @@ BTC_addMissingItems = {
     if (primaryWeapon _player == "") then {
         _primaryWeapon = profileNamespace getVariable "primary_weapon";   
         _primaryWeaponItems = profileNamespace getVariable "primary_items";  
-        _primaryWeaponMagazines = profileNamespace getVariable "primary_magazine";
+        _primaryWeaponMagazines = profileNamespace getVariable "primary_magazine";        
         _player addWeaponGlobal _primaryWeapon;            
         {
             if (_x != "") then {
@@ -2066,6 +2068,28 @@ BTC_addMissingItems = {
             } forEach _primaryWeaponMagazines;
         };
         _player selectWeapon _primaryWeapon;
+    };
+
+    //load secondary weapon
+    if (secondaryWeapon _player == "") then {
+        _secondaryWeapon = profileNamespace getVariable "secondary_weapon";   
+        _secondaryWeaponItems = profileNamespace getVariable "secondary_items";  
+        _secondaryWeaponMagazines = profileNamespace getVariable "secondary_magazine";     
+        if (_secondaryWeapon != "") then {   
+            _player addWeaponGlobal _secondaryWeapon;         
+            {
+                if (_x != "") then {
+                    _player addSecondaryWeaponItem _x;
+                };            
+            } forEach _secondaryWeaponItems;
+            if (count _secondaryWeaponMagazines > 0) then {
+                {
+                    if (_x != "") then {
+                        _player addMagazine _x;
+                    };               
+                } forEach _secondaryWeaponMagazines;
+            };
+        }; 
     };
 
 };

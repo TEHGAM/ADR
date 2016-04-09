@@ -33,7 +33,7 @@ _strider = ["I_MRAP_03_F", "I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"];								// stri
 _mh9 = ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F"];										// MH-9
 //_orca = ["O_Heli_Light_02_unarmed_F"];														// Orca
 _uav = ["B_UAV_02_CAS_F", "B_UAV_02_F", "B_UGV_01_F", "B_UGV_01_rcws_F"];						// UAVs
-//_hellcat = ["I_Heli_light_03_unarmed_F"];														// Hellcat
+_hellcat = ["I_Heli_light_03_unarmed_F"];														// Hellcat
 
 //============================================= SORT
 
@@ -60,6 +60,10 @@ if(_t in _huron) then {
 //if(_t in _hellcat) then {
 //	_u setObjectTextureGlobal [0, 'A3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co.paa'];
 //};
+if(_t in _hellcat) then {
+	_u addWeapon "Laserdesignator_mounted";
+	_u addMagazine "Laserbatteries";
+};
 
 //==== taru skins
 if(_t in _taru) then {
@@ -93,3 +97,6 @@ if (_t in _uav) then {
 if (_t in _gh_huron) then {
 	_u setVariable ["turrets_locked", false, true];
 };
+
+//===== Vehicle Killer monitor system
+[_u] call QS_fnc_killerCatcher;

@@ -6,6 +6,20 @@ Description:
 	Restricts certain weapon systems to different roles
 _________________________________________________*/
 
+_uid = getPlayerUID player;
+_whitelist = [
+	"76561198053877632",	// tim
+	"76561198017758762",	// [K]STELS
+	"76561198074604871",	// vosur
+	"76561198062030976",	// Noart
+	"76561197994763606",	// DeD Pikhto =rus=
+	"76561198015092620",	// Rembo
+	"76561198163722032",	// Swat
+	"76561198001830065"		// evil_c0okie
+];
+
+if (_uid in _whitelist) exitWith {};
+
 private ["_opticsAllowed","_specialisedOptics","_basePos","_firstRun","_insideSafezone","_outsideSafezone"];
 
 #define AT_MSG "Только гранатометчики могут использовать это оружие."
@@ -16,7 +30,6 @@ private ["_opticsAllowed","_specialisedOptics","_basePos","_firstRun","_insideSa
 #define MRK_MSG "Только пехотные снайперы могут использовать это оружие."
 #define PILOT_MSG "Пилоты могут использовать только пистолеты и пистолет-пулемёты."
 #define GRENADIER_MSG "Только гренадеры и командиры отделений могут использовать подствольные гранатометы."
-//#define SOPT_MSG "Только снайперы могут использовать оптический прицел LRPS."
 #define MARKSMANOPT_MSG "Только снайперы и пехотные снайперы могут использовать оптические прицелы LRPS, SOS, AMS, KAHLIA."
 
 //===== UAV TERMINAL

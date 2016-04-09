@@ -95,7 +95,7 @@ sideMissionUp = true; publicVariable "sideMissionUp";
 canStart = false;
 _trig = createTrigger ["EmptyDetector", _flatPos, false]; 
 _trig setTriggerArea [150, 150, 0, false];
-_trig setTriggerActivation ["ANY", "PRESENT", false];
+_trig setTriggerActivation ["WEST", "PRESENT", false];
 _trig setTriggerStatements ["this", "canStart = true;", ""];
 while {!canStart} do {
     sleep 5;

@@ -2,7 +2,7 @@
 
 author = "Rarek, AhoyWorld, Quiksilver";
 onLoadName = "ADR: Blue Shark (I&A)";
-OnLoadMission = "Версия 4.3.0 — редакция TEHGAM.COM";
+OnLoadMission = "Версия 4.4.1 — редакция TEHGAM.COM";
 loadScreen = "media\images\adr_blueshark_loading.jpg";
 overviewPicture = "media\images\adr_blueshark_loading.jpg";
 
