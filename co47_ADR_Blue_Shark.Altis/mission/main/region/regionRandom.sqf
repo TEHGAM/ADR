@@ -1,23 +1,8 @@
-/*
-Author:
-
-	Quiksilver
-
-Last modified:
-
-	2/05/2014
-
-Description:
-
-	South-West Theater
-
-______________________________________________*/
-
 private ["_target1", "_target2", "_target3", "_targetArray", "_pos", "_i", "_position", "_flatPos", "_roughPos", "_targetStartText", "_targets", "_targetsLeft", "_dt", "_enemiesArray", "_unitsArray", "_radioTowerDownText", "_targetCompleteText", "_regionCompleteText", "_null", "_mines", "_chance", "_tower", "_tower_dmg"];
 eastSide = createCenter EAST;
 
 //---------------------------------------------- AO location marker array
-_targets = ["Skopos Castle", "Zaros Power Station", "Zaros", "Eginio", "Panochori", "The Stadium", "Vikos Outpost", "Athanos", "The Crater", "Therisa", "Topolia", "Panochori Bay", "Sagonisi", "Sfaka", "Xirolimni Dam", "Ayos Panayotis", "Tafos", "Quarry"];
+_targets = ["Ayya Stemma", "Coast", "Island", "Holm", "Didimos", "Aktinarki", "Joosa", "The Mine", "Ayos Georgios", "Andreas", "Military", "Triada"];
 
 //----------------------------------------------- SELECT A FEW RANDOM AOs
 _target1 = _targets call BIS_fnc_selectRandom;

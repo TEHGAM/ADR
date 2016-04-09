@@ -22,7 +22,8 @@ _missionList = [
 	"regionNE",
 	"regionSW",
 	"regionSE",
-	"regionCE"
+	"regionCE",
+	"regionRandom"
 ];
 
 while { true } do {
