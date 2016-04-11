@@ -13,9 +13,10 @@ Description:
 	Spawn an enemy CAS jet
 ______________________________________________________*/
 
-private ["_aoPos", "_spawnPos", "_jetSelect", "_casArray", "_jetLimit", "_jetPilot", "_jetActual", "_new"];
+private ["_aoPos", "_spawnPos", "_jetSelect", "_casArray", "_jetLimit", "_jetPilot", "_jetActual", "_new", _buzzard];
 
-_casArray = ["O_Plane_CAS_02_F","I_Plane_Fighter_03_CAS_F"];
+_casArray = ["O_Plane_CAS_02_F","I_Plane_Fighter_03_CAS_F","I_Plane_Fighter_03_AA_F"];
+_buzzard = ["I_Plane_Fighter_03_CAS_F","I_Plane_Fighter_03_AA_F"];
 
 _jetLimit = 1;
 
@@ -39,6 +40,16 @@ if ((count enemyCasArray) < _jetLimit) then {
 	_jetActual lock 2;
 	_jetPilot assignAsDriver _jetActual;
 	_jetPilot moveInDriver _jetActual;
+	
+	if (_jetActual in _buzzard) then 
+	{
+	_jetActual removeWeapon ("Twin_Cannon_20mm");
+	_jetActual removeMagazine ("300Rnd_20mm_shells");
+	_jetActual addWeapon ("Cannon_30mm_Plane_CAS_02_F");
+	_jetActual addMagazine ("500Rnd_Cannon_30mm_Plane_CAS_02_F");
+	_jetActual addWeapon ("Rocket_03_HE_Plane_CAS_02_F");
+	_jetActual addMagazine ("20Rnd_Rocket_03_HE_F");
+	};
 
 	if (_new) then {_jetPilot setRank "COLONEL";} else {_jetPilot setRank "MAJOR";};
 	enemyCasGroup setCombatMode "RED";
