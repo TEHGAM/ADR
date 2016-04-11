@@ -15,7 +15,7 @@ ______________________________________________________*/
 
 private ["_aoPos", "_spawnPos", "_jetSelect", "_casArray", "_jetLimit", "_jetPilot", "_jetActual", "_new"];
 
-_casArray = ["O_Plane_CAS_02_F","I_Plane_Fighter_03_AA_F"];
+_casArray = ["O_Plane_CAS_02_F","I_Plane_Fighter_03_CAS_F"];
 
 _jetLimit = 1;
 
@@ -60,7 +60,7 @@ if ((count enemyCasArray) < _jetLimit) then {
 			_jetPos = getPosATL _jetActual;
 			_targetList = _jetPos nearEntities [["Air"], 4000];
 			{enemyCasGroup reveal [_x,4];} count _targetList;
-			sleep 180;
+			sleep 300;
 		};
 		showNotification = ["EnemyJetDown", "Штурмовик сбит! Хорошая работа!"]; publicVariable "showNotification";
 		enemyCasArray = enemyCasArray - [_jetActual];
