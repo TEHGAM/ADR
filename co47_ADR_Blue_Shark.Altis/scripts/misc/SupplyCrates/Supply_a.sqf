@@ -1,19 +1,17 @@
-private ["_cargo", "_crateType", "_smokeType", "_lightType", "_timereload", "_timedel", "_cargo_pos", "_chute", "_velocity", "_light1", "_light2", "_light3", "_Signal2", "_Signal"];
+private ["_cargo", "_crateType", "_lightType", "_timereload", "_timedel", "_light1", "_light2", "_light3"];
 
-if (!(BACO_ammoSuppAvail2)) exitWith {
+if (!(BACO_ammoSuppAvail)) exitWith {
 	hint "Модуль в данный момент не доступен!"
 };
 
-BACO_ammoSuppAvail2 = FALSE; publicVariable "BACO_ammoSuppAvail2";
+BACO_ammoSuppAvail = FALSE; publicVariable "BACO_ammoSuppAvail";
 
 //------------------------------------------------------- Переменные
 
 _crateType =  "B_supplyCrate_F";
-_smokeType =  "SmokeShellPurple";
 _lightType =  "Chemlight_blue";
-_timereload = 300;
+_timereload = 60;
 _timedel = 600; // +timereload
-_cargo_pos = [0,0,0];
 
 //--------------------------------------------------------- Создание посылки
 
@@ -68,34 +66,18 @@ _cargo addBackpackCargoGlobal ["B_AssaultPack_rgr", 2];
 _cargo addBackpackCargoGlobal ["B_Kitbag_mcamo", 2];
 
 sleep 0.5;
-waitUntil{!isNull (ropeAttachedTo _cargo)};
-sleep 0.5;
-waitUntil{isNull (ropeAttachedTo _cargo)};
-sleep 2;
-waitUntil{(getPos _cargo select 2)<=120};
 
-_velocity = velocity _cargo;
+//---------------------------------------------------- Освещение
+
 _light1 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
 _light2 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
 _light3 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
 _light1 attachTo [_cargo, [-0.7, 0, 0.15]];
 _light2 attachTo [_cargo, [0, 0.5, 0.15]];
 _light3 attachTo [_cargo, [0.7, 0, 0.15]];
-_Signal2 = createVehicle [_smokeType, position _cargo, [], 0, 'NONE'];
-_Signal2 attachTo [_cargo, _cargo_pos];
-
-_chute = createVehicle ["B_Parachute_02_F", position _cargo, [], 0, "CAN_COLLIDE"];
-_cargo attachTo [_chute, _cargo_pos];
-_chute setVelocity _velocity;
-
-waitUntil {getPos _cargo select 2 < 4 || isNull _chute};
-sleep 0.2;
-detach _cargo;
-sleep 10;
-_Signal = _smokeType createVehicle [getPos _cargo select 0, getPos _cargo select 1,5];
 
 sleep _timereload;
-BACO_ammoSuppAvail2 = TRUE; publicVariable "BACO_ammoSuppAvail2";
+BACO_ammoSuppAvail = TRUE; publicVariable "BACO_ammoSuppAvail";
 
 //--------------------------------------------------------- Удаление контейнера
 
