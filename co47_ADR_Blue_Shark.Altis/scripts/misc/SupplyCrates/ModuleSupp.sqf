@@ -2,8 +2,8 @@
 
 //---- Checking created modules and remove them
 
-_modules = ["B_Slingload_01_Fuel_F", "B_Slingload_01_Medevac_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Ammo_F", "Land_Pod_Heli_Transport_04_fuel_F", "Land_Pod_Heli_Transport_04_medevac_F", "Land_Pod_Heli_Transport_04_repair_F", "Land_Pod_Heli_Transport_04_ammo_F", "Land_Pod_Heli_Transport_04_bench_F", "Land_Pod_Heli_Transport_04_covered_F"];
-_objects = nearestObjects [(getMarkerPos "Ammo_Supply_drop"), _modules, 50];
+_modules = ["B_Slingload_01_Fuel_F", "B_Slingload_01_Medevac_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Ammo_F", "Land_Pod_Heli_Transport_04_fuel_F", "Land_Pod_Heli_Transport_04_medevac_F", "Land_Pod_Heli_Transport_04_repair_F", "Land_Pod_Heli_Transport_04_ammo_F", "Land_Pod_Heli_Transport_04_bench_F", "Land_Pod_Heli_Transport_04_covered_F", "B_Slingload_01_Cargo_F", "B_supplyCrate_F"];
+_objects = nearestObjects [(getMarkerPos "Ammo_Supply_drop"), _modules, 30];
 {
     deleteVehicle _x;
 } forEach _objects;
