@@ -5,7 +5,7 @@ _objects = nearestObjects [(getMarkerPos "Ammo_Supply_drop"), _modules, 30];
 {
     deleteVehicle _x;
 } forEach _objects;
-sleep 0.1;
+sleep 0.5;
 
 //----- Variables
 _cargoType =  _this select 3;
@@ -16,7 +16,7 @@ _cargo_pos = [0,0,0];
 if (_cargoType == 11) then {
 
 	//----- Creating cargo
-	_cargo = "B_supplyCrate_F" createVehicle (getMarkerPos "Ammo_Supply_drop"); publicVariable "_cargo";
+	_cargo = "B_supplyCrate_F" createVehicle (getMarkerPos "Ammo_Supply_drop");
 	_cargo allowDamage false;
 
 	//----- Clearing cargo
@@ -71,7 +71,7 @@ if (_cargoType == 11) then {
 if (_cargoType == 12) then {
 
 	//----- Creating cargo
-	_cargo = "B_Slingload_01_Cargo_F" createVehicle (getMarkerPos "Ammo_Supply_drop"); publicVariable "_cargo";
+	_cargo = "B_Slingload_01_Cargo_F" createVehicle (getMarkerPos "Ammo_Supply_drop");
 
 	//----- Clearing cargo
 	clearWeaponCargoGlobal _cargo;

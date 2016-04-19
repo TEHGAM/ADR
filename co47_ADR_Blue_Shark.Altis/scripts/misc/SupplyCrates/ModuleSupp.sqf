@@ -7,7 +7,7 @@ _objects = nearestObjects [(getMarkerPos "Ammo_Supply_drop"), _modules, 30];
 {
     deleteVehicle _x;
 } forEach _objects;
-sleep 0.1;
+sleep 0.5;
 
 //---- Variables
 _modtype = _this select 3;
