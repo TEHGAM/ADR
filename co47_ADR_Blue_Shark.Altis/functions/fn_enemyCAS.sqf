@@ -13,7 +13,7 @@ Description:
 	Spawn an enemy CAS jet
 ______________________________________________________*/
 
-private ["_aoPos", "_spawnPos", "_jetSelect", "_casArray", "_jetLimit", "_jetPilot", "_jetActual", "_new", _buzzard];
+private ["_aoPos", "_spawnPos", "_jetSelect", "_casArray", "_jetLimit", "_jetPilot", "_jetActual", "_new", "_buzzard"];
 
 _casArray = ["O_Plane_CAS_02_F","I_Plane_Fighter_03_CAS_F","I_Plane_Fighter_03_AA_F"];
 _buzzard = ["I_Plane_Fighter_03_CAS_F","I_Plane_Fighter_03_AA_F"];
