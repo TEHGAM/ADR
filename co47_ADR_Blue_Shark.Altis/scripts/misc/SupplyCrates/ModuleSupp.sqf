@@ -51,8 +51,8 @@ if (getPos _veh select 2 < 50) then {hint "Модуль сброшен без п
 		_veh attachTo [_chute, _veh_pos];
 		sleep 0.1;
 		_chute setVelocity _velocity;
-		waitUntil {sleep 0.5; getPos _veh select 2 < 10 || isNull _chute};
 		sleep 0.1;
+		waitUntil {getPos _veh select 2 < 20};
 		detach _veh;
 		sleep 10;
 		_smoke2 = _smokeType createVehicle [getPos _veh select 0, getPos _veh select 1,5];

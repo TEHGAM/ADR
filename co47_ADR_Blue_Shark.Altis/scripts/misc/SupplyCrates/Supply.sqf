@@ -125,30 +125,30 @@ if (_cargoType == 12) then {
 	_cargo addBackpackCargoGlobal ["B_Kitbag_mcamo", 2];
 	_cargo addBackpackCargoGlobal ["B_UAV_01_backpack_F", 2];
 	};
-
 sleep 0.5;
 waitUntil{sleep 3; !isNull (ropeAttachedTo _cargo)};
 sleep 0.5;
 waitUntil{sleep 0.5; isNull (ropeAttachedTo _cargo)};
-sleep 2;
-waitUntil{(getPos _cargo select 2)<=200};
+if (getPos _veh select 2 < 50) then {hint "Модуль сброшен без парашюта    (малая высота)"} else 
+	{
+		sleep 2;
+		waitUntil{(getPos _cargo select 2)<=200};
+		_velocity = velocity _cargo;
+		_light1 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
+		_light2 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
+		_light3 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
+		_light1 attachTo [_cargo, [-0.7, 0, 0.15]];
+		_light2 attachTo [_cargo, [0, 0.5, 0.15]];
+		_light3 attachTo [_cargo, [0.7, 0, 0.15]];
+		_Signal2 = createVehicle [_smokeType, position _cargo, [], 0, 'NONE'];
+		_Signal2 attachTo [_cargo, _cargo_pos];
 
-_velocity = velocity _cargo;
-_light1 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
-_light2 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
-_light3 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
-_light1 attachTo [_cargo, [-0.7, 0, 0.15]];
-_light2 attachTo [_cargo, [0, 0.5, 0.15]];
-_light3 attachTo [_cargo, [0.7, 0, 0.15]];
-_Signal2 = createVehicle [_smokeType, position _cargo, [], 0, 'NONE'];
-_Signal2 attachTo [_cargo, _cargo_pos];
-
-_chute = createVehicle ["B_Parachute_02_F", position _cargo, [], 0, "CAN_COLLIDE"];
-_cargo attachTo [_chute, _cargo_pos];
-_chute setVelocity _velocity;
-
-waitUntil {getPos _cargo select 2 < 5 || isNull _chute};
-sleep 0.2;
-detach _cargo;
-sleep 10;
-_Signal = _smokeType createVehicle [getPos _cargo select 0, getPos _cargo select 1,5];
+		_chute = createVehicle ["B_Parachute_02_F", position _cargo, [], 0, "CAN_COLLIDE"];
+		_cargo attachTo [_chute, _cargo_pos];
+		_chute setVelocity _velocity;
+		sleep 0.1;
+		waitUntil {getPos _veh select 2 < 20};
+		detach _cargo;
+		sleep 10;
+		_Signal = _smokeType createVehicle [getPos _cargo select 0, getPos _cargo select 1,5];
+	};
