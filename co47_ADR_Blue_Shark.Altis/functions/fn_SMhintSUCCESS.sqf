@@ -14,9 +14,9 @@ smRewards =
 	["IFV-6a «Гепард»", "B_APC_Tracked_01_AA_F"],
 	["T-100 «Варсук»", "O_MBT_02_cannon_F"],
 	["MBT-52 «Кума»", "I_MBT_03_cannon_F"],
-	["M2A4 «Сламмер» UP", "B_MBT_01_TUSK_F"],
+	["M2A1 «Сламмер»", "B_MBT_01_cannon_F"],
 	["Страйдер с пулеметом", "I_MRAP_03_hmg_F"],
-	["Страйдер с гранатометом", "I_MRAP_03_gmg_F"],
+	["Ифрит с пулеметом", "O_MRAP_02_hmg_F"],
 	["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"],
 	["FV-720 «Мора»", "I_APC_tracked_03_cannon_F"],
 	["MSE-3 «Марид» с НУРС", "O_APC_Wheeled_02_rcws_F"]
