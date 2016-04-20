@@ -930,6 +930,20 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"Blue Shark v4.4.3 (xx.04.2016)",
+"
+<br />- <font color='#CDDC39'>[Добавлено]</font> Внедорожник.
+<br />- <font color='#CDDC39'>[Добавлено]</font> Управление защитой базы, рядом с респавном пилотов.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Исправлена ошибка вызова модулей.
+<br />- <font color='#2196F3'>[Изменено]</font> Наградной Слемер UP заменен на Слемер.
+<br />- <font color='#2196F3'>[Изменено]</font> Наградной страйдер с гранатометом заменен на ифрит с пулеметом.
+<br />- <font color='#2196F3'>[Изменено]</font> Одинаковые доп задания не будут повляться 2 раза подряд.
+
+"
+]];
+
 //Авторы
 player createDiaryRecord ["credits",
 [
