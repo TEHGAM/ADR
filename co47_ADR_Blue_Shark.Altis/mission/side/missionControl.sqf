@@ -1,24 +1,6 @@
-/*
-Author:
+private ["_mission", "_missionList", "_currentMission", "_delay", "_loopTimeout"];
 
-	Quiksilver
-
-Last modified:
-
-	1/05/2014
-
-Description:
-
-	Mission control
-
-To do:
-
-	Rescue/capture/HVT missions
-______________________________________________*/
-
-private ["_mission", "_missionList", "_currentMission", "_nextMission", "_delay", "_loopTimeout"];
-
-_delay = 300 + (random 600);
+_delay = 300; + (random 600);
 _loopTimeout = 10 + (random 10);
 
 _missionList = [
@@ -27,13 +9,14 @@ _missionList = [
 	"HQcoast",
 	"HQfia",
 	"secureRadar",
-	"HQresearch",
 */
+	"HQresearch",
 	"HQind",
 	"priorityAA",
 	"priorityARTY",
 	"secureChopper",
 	"heliCrash",
+	"destroyUrban",
 	"rescueHostages",
 	"convoy",
 	"snatch",
@@ -53,13 +36,22 @@ while { true } do {
 		sleep 3;
 
 		_mission = _missionList call BIS_fnc_selectRandom;
-		_currentMission = execVM format ["mission\side\missions\%1.sqf", _mission];
 
+			if !(isNil "LAST_SIDE_MISSION") then {           
+				while {_mission == LAST_SIDE_MISSION} do {
+					_mission = _missionList call BIS_fnc_selectRandom;
+				};
+			};
+	    LAST_SIDE_MISSION = _mission;
+	    publicVariable "LAST_SIDE_MISSION";
+		
+		_currentMission = execVM format ["mission\side\missions\%1.sqf", _mission];
+		
 		waitUntil {
 			sleep 3;
 			scriptDone _currentMission
 		};
-
+		
 		sleep _delay;
 
 		SM_SWITCH = true; publicVariable "SM_SWITCH";

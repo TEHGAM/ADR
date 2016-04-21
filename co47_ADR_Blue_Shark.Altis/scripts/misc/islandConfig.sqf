@@ -23,7 +23,7 @@ ______________________________________________________________________*/
 
 private ["_airTower","_urbanMarkers","_uav1Hangar","_uav2Hangar","_ugvHangar","_jetHangar"];
 
-_urbanMarkers =["sm1","sm2","sm3","sm4","sm5","sm6","sm7","sm8","sm9","sm10","sm11","sm12","sm13","sm14","sm15","sm16","sm17","sm18","sm19","sm20","sm21","sm22","sm23","sm24","sm25","sm26","sm27","sm28","sm29","sm30","sm31","sm32","sm33","sm34","sm35","sm36","sm37","sm38","sm39"];
+_urbanMarkers =["sm1","sm2","sm3","sm4","sm5","sm6","sm7","sm8","sm9","sm10","sm11","sm12","sm13","sm14","sm15","sm16","sm17","sm18","sm19","sm20","sm21","sm22","sm23","sm24","sm25","sm26","sm27","sm28","sm29","sm30","sm31","sm32","sm33","sm34","sm35","sm36","sm37","sm38","sm39", "sm40", "sm41", "sm42", "sm43", "sm44", "sm45", "sm46", "sm47", "sm48", "sm49", "sm50", "sm51", "sm52", "sm53", "sm54", "sm55", "sm56", "sm57", "sm58", "sm59", "sm60", "sm61", "sm62", "sm63", "sm64", "sm65", "sm66", "sm67", "sm68", "sm69", "sm70", "sm71"];
 { _x setMarkerAlpha 0; } count _urbanMarkers;
 
 /*---------- Delete the airport tower beside terminal building

@@ -27,7 +27,7 @@ if (isNull _u) exitWith {};
 
 _gh_huron = ["B_Heli_Transport_01_camo_F", "B_Heli_Transport_01_F", "B_Heli_Transport_03_F"]; 	// ghosthawk and huron
 _huron = ["B_Heli_Transport_03_F"];																// huron
-_taru = ["O_Heli_Transport_04_F"];																// taru
+_taru = ["O_Heli_Transport_04_F", "O_Heli_Transport_04_bench_F"];								// taru
 _taru_covered = ["O_Heli_Transport_04_covered_F"];												// taru covered
 _strider = ["I_MRAP_03_F", "I_MRAP_03_hmg_F", "I_MRAP_03_gmg_F"];								// strider
 _mh9 = ["B_Heli_Light_01_F", "B_Heli_Light_01_armed_F"];										// MH-9
