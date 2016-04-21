@@ -932,7 +932,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"Blue Shark v4.4.3 (xx.04.2016)",
+"Blue Shark v4.4.3 (21.04.2016)",
 "
 <br />- <font color='#CDDC39'>[Добавлено]</font> Внедорожник.
 <br />- <font color='#CDDC39'>[Добавлено]</font> Управление защитой базы, рядом с респавном пилотов.
