@@ -1,5 +1,6 @@
 private ["_cargoType", "_smokeType", "_lightType", "_cargo_pos", "_cargo", "_velocity", "_light1", "_light2", "_light3", "_Signal2", "_chute", "_Signal", "_modules", "_objects"];
 
+//---- Checking created modules and remove them
 _modules = ["B_Slingload_01_Fuel_F", "B_Slingload_01_Medevac_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Ammo_F", "Land_Pod_Heli_Transport_04_fuel_F", "Land_Pod_Heli_Transport_04_medevac_F", "Land_Pod_Heli_Transport_04_repair_F", "Land_Pod_Heli_Transport_04_ammo_F", "Land_Pod_Heli_Transport_04_bench_F", "Land_Pod_Heli_Transport_04_covered_F", "B_Slingload_01_Cargo_F", "B_supplyCrate_F"];
 _objects = nearestObjects [(getMarkerPos "Ammo_Supply_drop"), _modules, 30];
 {
@@ -129,10 +130,10 @@ sleep 0.5;
 waitUntil{sleep 3; !isNull (ropeAttachedTo _cargo)};
 sleep 0.5;
 waitUntil{sleep 0.5; isNull (ropeAttachedTo _cargo)};
-if (getPos _veh select 2 < 50) then {hint "Модуль сброшен без парашюта    (малая высота)"} else 
+if (getPos _cargo select 2 < 50) then {hint "Модуль сброшен без парашюта    (малая высота)"} else 
 	{
 		sleep 2;
-		waitUntil{(getPos _cargo select 2)<=200};
+		waitUntil{sleep 0.5; (getPos _cargo select 2)<=200};
 		_velocity = velocity _cargo;
 		_light1 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
 		_light2 = createVehicle [_lightType, position _cargo, [], 0, 'NONE'];
@@ -147,8 +148,11 @@ if (getPos _veh select 2 < 50) then {hint "Модуль сброшен без п
 		_cargo attachTo [_chute, _cargo_pos];
 		_chute setVelocity _velocity;
 		sleep 0.1;
-		waitUntil {getPos _veh select 2 < 20};
+		hint "Раскрытие";
+		waitUntil {sleep 0.5; (getPos _cargo select 2) < 20};
 		detach _cargo;
+		hint "успешно";
 		sleep 10;
 		_Signal = _smokeType createVehicle [getPos _cargo select 0, getPos _cargo select 1,5];
 	};
+	hint "скрипт завершен";
