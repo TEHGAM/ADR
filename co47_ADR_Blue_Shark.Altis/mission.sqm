@@ -8,7 +8,7 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=615;
+		nextID=612;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15276.078,39.127663,17411.734};
-		dir[]={0.30270472,-0.63974947,-0.7065528};
-		up[]={0.25194919,0.76856172,-0.5880782};
-		aside[]={-0.91925722,-9.7247539e-007,-0.39383528};
+		pos[]={15078.842,37.463978,17096.723};
+		dir[]={-0.74896049,-0.66012263,-0.05821361};
+		up[]={-0.65815246,0.75113606,-0.051156256};
+		aside[]={-0.077497408,-3.2921707e-007,0.99703503};
 	};
 };
 binarizationWanted=0;
@@ -111,6 +111,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -125,24 +143,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -178,14 +178,15 @@ class Mission
 	class Intel
 	{
 		briefingName="Co-47 ADR: Blue Shark (AW Invade & Annex)";
-		overviewText="Version 4.4.2";
+		overviewText="Version 4.4.3";
 		resistanceWest=0;
 		resistanceEast=1;
 		startWeather=0.30000001;
+		startFog=0.046545725;
 		startWind=0.099999994;
 		startWindDir=135;
 		startGust=0.099999994;
-		forecastWeather=0.30000001;
+		forecastWeather=0;
 		forecastWind=0.099999994;
 		forecastWaves=0;
 		forecastGust=0.099999994;
@@ -197,13 +198,14 @@ class Mission
 		year=2035;
 		month=6;
 		day=15;
+		hour=5;
 		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
 	class Entities
 	{
-		items=527;
+		items=522;
 		class Item0
 		{
 			dataType="Marker";
@@ -1250,7 +1252,7 @@ class Mission
 		class Item111
 		{
 			dataType="Marker";
-			position[]={14563,17.877333,16185};
+			position[]={14440.158,17.881018,16185.487};
 			name="Repair_2_1";
 			text="Сервис БПЛА";
 			type="o_maint";
@@ -1738,7 +1740,7 @@ class Mission
 		class Item162
 		{
 			dataType="Marker";
-			position[]={15051.108,17.91,17094.523};
+			position[]={15063.101,17.91,17092.986};
 			name="Ammo_Supply_drop";
 			type="Empty";
 			id=163;
@@ -10990,7 +10992,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15098.403,18.699808,17186.262};
+				position[]={15098.185,18.699808,17186.408};
 				angles[]={0,4.712389,0};
 			};
 			side="Empty";
@@ -15628,7 +15630,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_h_f.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_m.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_h_r.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_h_b.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#CDDC39'><img image='\a3\ui_f\data\map\VehicleIcons\iconcrateammo_ca.paa' size='1.0'/> Запросить ящик с боеприпасами</t>"",""scripts\misc\SupplyCrates\Supply_h_a.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")']; this addAction [""<t color='#CDDC39'><img image='\a3\ui_f\data\map\VehicleIcons\iconcrateammo_ca.paa' size='1.0'/> Запросить ящик с боеприпасами (парашют)</t>"",""scripts\misc\SupplyCrates\Supply_h_ap.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\Supply_t_f.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_m.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_r.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\Supply_t_b.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль сидений</t>"",""scripts\misc\SupplyCrates\Supply_t_s.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить транспортный модуль</t>"",""scripts\misc\SupplyCrates\Supply_t_p.sqf"",[],21,true,true,'((vehicle player) == player) && ((player distance _target) < 2) && (player isKindOf ""B_Helipilot_F"")'];";
+				init="this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",1,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",2,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",3,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#4FC3F7'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Huron] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",4,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#CDDC39'><img image='\a3\ui_f\data\map\VehicleIcons\iconcrateammo_ca.paa' size='1.0'/> Запросить ящик с боеприпасами</t>"",""scripts\misc\SupplyCrates\Supply.sqf"",11,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];   this addAction [""<t color='#CDDC39'><img image='\a3\ui_f\data\map\VehicleIcons\iconcrateammo_ca.paa' size='1.0'/> Запросить грузовой модуль с боеприпасами</t>"",""scripts\misc\SupplyCrates\Supply.sqf"",12,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль с топливом</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",5,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить медицинский модуль</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",6,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить ремонтный модуль</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",7,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль боеприпасов</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",8,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];    this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить модуль сидений</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",9,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];   this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconhelicopter_ca.paa' size='1.0'/> [Taru] Запросить транспортный модуль</t>"",""scripts\misc\SupplyCrates\ModuleSupp.sqf"",10,21,true,true,'((vehicle player) == player) && ((player distance _target) < 2)'];";
 			};
 			id=425;
 			type="Land_Atm_02_F";
@@ -17283,7 +17285,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="MAJOR";
+						rank="CAPTAIN";
 						init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];";
 						description="Командир отделения";
 						isPlayer=1;
@@ -18202,8 +18204,6 @@ class Mission
 			};
 			class Attributes
 			{
-				combatMode="RED";
-				behaviour="CARELESS";
 			};
 			id=449;
 		};
@@ -18219,14 +18219,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14256.362,19.348244,16314.946};
-						angles[]={0.0012915437,2.7052603,0};
+						position[]={14256.362,19.348246,16314.945};
+						angles[]={0.0012918708,2.7052603,0};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=1;
 					};
 					id=499;
 					type="B_UAV_AI";
@@ -18236,13 +18235,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14256.362,19.348244,16314.946};
-						angles[]={0.0012915437,2.7052603,0};
+						position[]={14256.362,19.348246,16314.945};
+						angles[]={0.0012918708,2.7052603,0};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=1;
 					};
 					id=500;
 					type="B_UAV_AI";
@@ -18337,13 +18335,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14214.425,19.419451,16288.118};
+						position[]={14214.425,19.419468,16288.118};
 						angles[]={0.0093200579,4.0142574,0};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=1;
 					};
 					id=503;
 					type="B_UAV_AI";
@@ -18353,14 +18350,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14214.425,19.419451,16288.118};
+						position[]={14214.425,19.419468,16288.118};
 						angles[]={0.0093200579,4.0142574,0};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=1;
 					};
 					id=504;
 					type="B_UAV_AI";
@@ -18433,13 +18429,12 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14232.715,19.388332,16298.714};
-						angles[]={0.0026529003,2.5307274,0};
+						angles[]={0.0026520467,2.5307274,0};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=1;
 					};
 					id=507;
 					type="B_UAV_AI";
@@ -18450,12 +18445,11 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14232.715,19.388332,16298.714};
-						angles[]={0.0026529003,2.5307274,0};
+						angles[]={0.0026520467,2.5307274,0};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=1;
 					};
 					id=508;
 					type="B_UAV_AI";
@@ -19587,7 +19581,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -19656,7 +19650,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={14243.988,20.177896,16228.091};
-			angle=-1.8325945;
+			angle=-1.8325944;
 			class Attributes
 			{
 				condition="this and ((getPos (thisList select 0)) select 2 < 1)";
@@ -20522,13 +20516,12 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14209.958,19.38559,16293.45};
+						position[]={14209.961,19.385637,16293.436};
 						angles[]={0.0026529003,4.0142574,0.0026529003};
 					};
 					side="West";
 					class Attributes
 					{
-						skill=1;
 					};
 					id=603;
 					type="B_UAV_AI";
@@ -20538,14 +20531,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14209.958,19.38559,16293.45};
+						position[]={14209.961,19.385637,16293.436};
 						angles[]={0.0026529003,4.0142574,0.0026529003};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						skill=1;
 					};
 					id=604;
 					type="B_UAV_AI";
@@ -20592,7 +20584,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14209.952,21.461401,16293.359};
+				position[]={14209.952,21.461666,16293.358};
 				angles[]={0.0026529003,4.0142574,0.0026529003};
 			};
 			side="West";
@@ -20614,412 +20606,6 @@ class Mission
 			type="mil_box";
 			colorName="ColorWhite";
 			id=609;
-		};
-		class Item522
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15098.566,18.872913,17188.586};
-				angles[]={0,1.570796,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this addAction [""<t color='#F44336'><img image='\a3\ui_f\data\map\VehicleIcons\iconplane_ca.paa' size='1.0'/> Активировать ПВО</t>"",""scripts\misc\actions\airbaseDefense_switch.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
-				name="airdefenseTerminal_2";
-			};
-			id=610;
-			type="Land_Laptop_unfolded_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="enableSimulation";
-					expression="if !(is3DEN) then {_this enablesimulation _value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobject !_value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="enableStamina";
-					expression="_this enablestamina _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item523
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15098.567,18.326172,17188.168};
-				angles[]={0,1.570796,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-			};
-			id=611;
-			type="Land_CampingTable_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="enableSimulation";
-					expression="if !(is3DEN) then {_this enablesimulation _value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobject !_value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="enableStamina";
-					expression="_this enablestamina _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item524
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15098.555,18.888729,17187.777};
-				angles[]={0,1.570796,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this addAction [""<t color='#00BCD4'><img image='\a3\ui_f\data\map\VehicleIcons\iconlogic_ca.paa' size='1.0'/> Очистка базы</t>"",""scripts\misc\actions\clearItemsBASE_switch.sqf"",[],21,true,true,"""",'((vehicle player) == player) && ((player distance _target) < 5)'];";
-				name="maintenanceTerminal_1";
-			};
-			id=612;
-			type="Land_Laptop_unfolded_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="enableSimulation";
-					expression="if !(is3DEN) then {_this enablesimulation _value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobject !_value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="enableStamina";
-					expression="_this enablestamina _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item525
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15097.927,18.951054,17188.154};
-				angles[]={0,4.7123895,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				skill=0.60000002;
-				init="this setObjectTexture [0, ""media\images\bb_pvo.jpg""];";
-				name="bb_pvo_1";
-			};
-			id=613;
-			type="SignAd_Sponsor_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="enableSimulation";
-					expression="if !(is3DEN) then {_this enablesimulation _value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobject !_value;};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="enableStamina";
-					expression="_this enablestamina _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item526
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={15242.911,19.23077,17449.826};
-				angles[]={0.0039968039,5.497787,0.020001473};
-			};
-			side="Empty";
-			class Attributes
-			{
-				init="0 = [this,300,305,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
-			};
-			id=614;
-			type="B_G_Offroad_01_F";
 		};
 	};
 	class Connections
