@@ -51,11 +51,8 @@ if (getPos _veh select 2 < 50) then {hint "Модуль сброшен без п
 		sleep 0.1;
 		_chute setVelocity _velocity;
 		sleep 0.1;
-		hint "Раскрытие";
 		waitUntil {sleep 0.5; (getPos _veh select 2) <= 20};
 		detach _veh;
-		hint "успешно";
 		sleep 10;
 		_smoke2 = _smokeType createVehicle [getPos _veh select 0, getPos _veh select 1,5];
 	};
-	hint "скрипт завершен";

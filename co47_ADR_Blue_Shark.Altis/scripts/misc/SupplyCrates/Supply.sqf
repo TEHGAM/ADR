@@ -148,11 +148,8 @@ if (getPos _cargo select 2 < 50) then {hint "Модуль сброшен без 
 		_cargo attachTo [_chute, _cargo_pos];
 		_chute setVelocity _velocity;
 		sleep 0.1;
-		hint "Раскрытие";
 		waitUntil {sleep 0.5; (getPos _cargo select 2) < 20};
 		detach _cargo;
-		hint "успешно";
 		sleep 10;
 		_Signal = _smokeType createVehicle [getPos _cargo select 0, getPos _cargo select 1,5];
 	};
-	hint "скрипт завершен";
