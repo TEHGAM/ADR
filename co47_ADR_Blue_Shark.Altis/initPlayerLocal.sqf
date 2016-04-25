@@ -23,6 +23,11 @@ _iampilot = ({typeOf player == _x} count _pilots) > 0;
 if (_iampilot) then {
 	player addBackpack "B_AssaultPack_sgg";
 	player addItemToBackpack "ToolKit";
+
+	//==== LASER TARGETS ON PILOTS HELMETS
+	player addEventHandler [ "GetInMan", {
+		[_this select 0, _this select 2] spawn QS_fnc_HMDLaserTarget;
+	}];
 };
 
 //------------------- client executions
