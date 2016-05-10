@@ -18,6 +18,7 @@ class QS
 		class addActionSabotage {};
 		class addActionSurrender {};
 		class addActionTimer {};
+		class addHades {};
 		class AOdelete {};
 		class AOenemy {};
 		class AOminefield {};
@@ -25,6 +26,7 @@ class QS
 		class conditionPilotRepair {};
 		class conditionUH80TurretActionLock {};
 		class conditionUH80TurretActionUnlock {};
+		class DeleteEnemyEAST {};
 		class deleteOldSMUnits {};
 		class deleteUnits {};
 		class enemyCAS {};
