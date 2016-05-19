@@ -45,3 +45,28 @@ gatling_30mm		250Rnd_30mm_APDS_shells					//Mi-48 Kajman Бронебойные
 gatling_20mm		1000Rnd_20mm_shells						//AH-99 Blackfoot
 M134_minigun		5000Rnd_762x51_Belt 					//AH-9 Pawnee
 ```
+**Бортовые пулеметы**
+```
+LMG_Minigun_Transport 	2000Rnd_65x39_Belt_Tracer_Red		//CH-67 Huron
+LMG_Minigun_Transport2	2000Rnd_65x39_Belt_Tracer_Red		//CH-67 Huron
+
+LMG_Minigun_Transport	2000Rnd_65x39_Belt_Tracer_Red		//UH-80 Ghost Hawk
+LMG_Minigun_Transport2	2000Rnd_65x39_Belt_Tracer_Red		//UH-80 Ghost Hawk
+```
+**Ракеты водух-воздух**
+```
+missiles_ASRAAM			4Rnd_AAA_missiles					//AH-99 Blackfoot
+```
+**Ракеты воздух поверхность**
+```
+missiles_DAGR			24Rnd_PG_missiles					//AH-99 Blackfoot
+						12Rnd_PG_missiles					//PO-30 Orca 
+missiles_SCALPEL		8Rnd_LG_scalpel						//Mi-48 Kajman
+```
+**Неуправляемые реактивные снаряды:**
+```
+missiles_DAR			24Rnd_missiles						//AH-9 Pawnee, WY-55 Hellcat
+						12Rnd_missiles 						//PO-30 Orca (Black & White)
+rockets_Skyfire			38Rnd_80mm_rockets					//Mi-48 Kajman
+
+```
