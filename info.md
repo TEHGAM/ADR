@@ -74,15 +74,15 @@ rockets_Skyfire			38Rnd_80mm_rockets					//Mi-48 Kajman
 ***
 **Основной калибр**
 ```
-cannon_120mm_long	28Rnd_120mm_APFSDS_shells_Tracer_Yellow	//MBT-52 Kuma
-					14Rnd_120mm_HE_shells_Tracer_Yellow		//MBT-52 Kuma
-cannon_120mm 		32Rnd_120mm_APFSDS_shells_Tracer_Red	//M2A1 Slammer
-					16Rnd_120mm_HE_shells_Tracer_Red		//M2A1 Slammer
-cannon_105mm		40Rnd_105mm_APFSDS_T_Red				//M2A4 Slammer UP
-					20Rnd_105mm_HEAT_MP_T_Red				//M2A4 Slammer UP
-cannon_125mm		24Rnd_125mm_APFSDS_T_Green				//T-100 Varsuk
-					12Rnd_125mm_HE_T_Green					//T-100 Varsuk
-					12Rnd_125mm_HEAT_T_Green				//T-100 Varsuk
+cannon_120mm_long	28Rnd_120mm_APFSDS_shells_Tracer_Yellow	//MBT-52 Kuma Бронебойный подкалиберный трассирующий
+					14Rnd_120mm_HE_shells_Tracer_Yellow		//MBT-52 Kuma Осколочно-фугасный трассирующий
+cannon_120mm 		32Rnd_120mm_APFSDS_shells_Tracer_Red	//M2A1 Slammer Бронебойный подкалиберный трассирующий
+					16Rnd_120mm_HE_shells_Tracer_Red		//M2A1 Slammer Осколочно-фугасный трассирующий
+cannon_105mm		40Rnd_105mm_APFSDS_T_Red				//M2A4 Slammer UP Бронебойный подкалиберный трассирующий
+					20Rnd_105mm_HEAT_MP_T_Red				//M2A4 Slammer UP Кумулятивный трассирующий снаряд многоцелевого назначения 
+cannon_125mm		24Rnd_125mm_APFSDS_T_Green				//T-100 Varsuk Бронебойный подкалиберный трассирующий
+					12Rnd_125mm_HE_T_Green					//T-100 Varsuk Осколочно-фугасный трассирующий
+					12Rnd_125mm_HEAT_T_Green				//T-100 Varsuk Кумулятивно-трассирующий
 ```
 **Пулемет стрелка**
 ```
@@ -101,15 +101,15 @@ HMG_NSVT			450Rnd_127x108_Ball						//T-100 Varsuk
 ***
 **Основной калибр**
 ```
-autocannon_30mm			140Rnd_30mm_MP_shells_Tracer_Yellow		//FV-720 Mora
-						60Rnd_30mm_APFSDS_shells_Tracer_Yellow	//FV-720 Mora
-autocannon_30mm_CTWS	140Rnd_30mm_MP_shells_Tracer_Yellow		//AFV-4 Gorgon
-						60Rnd_30mm_APFSDS_shells_Tracer_Yellow	//AFV-4 Gorgon
-autocannon_40mm_CTWS	60Rnd_40mm_GPR_Tracer_Red_shells		//AMV-7 Marshall
-						40Rnd_40mm_APFSDS_Tracer_Red_shells		//AMV-7 Marshall
+autocannon_30mm			140Rnd_30mm_MP_shells_Tracer_Yellow		//FV-720 Mora ОФ
+						60Rnd_30mm_APFSDS_shells_Tracer_Yellow	//FV-720 Mora БП
+autocannon_30mm_CTWS	140Rnd_30mm_MP_shells_Tracer_Yellow		//AFV-4 Gorgon ОФ
+						60Rnd_30mm_APFSDS_shells_Tracer_Yellow	//AFV-4 Gorgon БП
+autocannon_40mm_CTWS	60Rnd_40mm_GPR_Tracer_Red_shells		//AMV-7 Marshall ОФ
+						40Rnd_40mm_APFSDS_Tracer_Red_shells		//AMV-7 Marshall БП
 GMG_40mm				96Rnd_40mm_G_belt						//IFV-6c Panther, MSE-3 Marid
-autocannon_30mm_CTWS	140Rnd_30mm_MP_shells_Tracer_Green		//BTR-K Kamysh
-						60Rnd_30mm_APFSDS_shells_Tracer_Green	//BTR-K Kamysh
+autocannon_30mm_CTWS	140Rnd_30mm_MP_shells_Tracer_Green		//BTR-K Kamysh ОФ
+						60Rnd_30mm_APFSDS_shells_Tracer_Green	//BTR-K Kamysh БП
 ```
 **Пулемет стрелка**
 ```
@@ -143,10 +143,10 @@ missiles_titan		4Rnd_Titan_long_missiles				//IFV-6a Cheetah , ZSU-39 Tigris
 **Основное орудие**
 ```
 mortar_155mm_AMOS	32Rnd_155mm_Mo_shells		//Осколочно-фугасный снаряд
-					2Rnd_155mm_Mo_guided		//Управляемая ракета
+					2Rnd_155mm_Mo_guided		//Управляемый артиллерийский снаряд
 					6Rnd_155mm_Mo_mine			//Противопехотные мины
-					2Rnd_155mm_Mo_Cluster		//Кассетные снаряда
-					6Rnd_155mm_Mo_smoke			//Дымовые снаряда
+					2Rnd_155mm_Mo_Cluster		//Кассетный снаряд
+					6Rnd_155mm_Mo_smoke			//Дымовой снаряд
 					2Rnd_155mm_Mo_LG			//Снаряд с лазерным наведением
 					6Rnd_155mm_Mo_AT_mine		//Противотанковые мины
 ```
