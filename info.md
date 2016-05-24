@@ -96,3 +96,33 @@ HMG_127_APC			500Rnd_127x99_mag_Tracer_Yellow			//MBT-52 Kuma
 HMG_127_MBT			500Rnd_127x99_mag_Tracer_Red			//M2A4 Slammer UP
 HMG_NSVT			450Rnd_127x108_Ball						//T-100 Varsuk
 ```
+***
+#### **Описание вооружения БТР\БМП**
+***
+**Основной калибр**
+```
+autocannon_30mm			140Rnd_30mm_MP_shells_Tracer_Yellow		//FV-720 Mora
+						60Rnd_30mm_APFSDS_shells_Tracer_Yellow	//FV-720 Mora
+autocannon_30mm_CTWS	140Rnd_30mm_MP_shells_Tracer_Yellow		//AFV-4 Gorgon
+						60Rnd_30mm_APFSDS_shells_Tracer_Yellow	//AFV-4 Gorgon
+autocannon_40mm_CTWS	60Rnd_40mm_GPR_Tracer_Red_shells		//AMV-7 Marshall
+						40Rnd_40mm_APFSDS_Tracer_Red_shells		//AMV-7 Marshall
+GMG_40mm				96Rnd_40mm_G_belt						//IFV-6c Panther, MSE-3 Marid
+autocannon_30mm_CTWS	140Rnd_30mm_MP_shells_Tracer_Green		//BTR-K Kamysh
+						60Rnd_30mm_APFSDS_shells_Tracer_Green	//BTR-K Kamysh
+```
+**Пулемет стрелка**
+```
+LMG_M200				1000Rnd_65x39_Belt_Yellow				//AFV-4 Gorgon
+						2000Rnd_65x39_belt 						//AMV-7 Marshall
+						1000Rnd_65x39_Belt_Green 				//BTR-K Kamysh
+LMG_coax				1000Rnd_762x51_Belt_Yellow				//FV-720 Mora
+HMG_127_APC				500Rnd_127x99_mag_Tracer_Red			//IFV-6c Panther
+						500Rnd_127x99_mag_Tracer_Green 			//MSE-3 Marid
+LMG_RCWS				2000Rnd_65x39_belt 						//CRV-6e Bobcat
+```
+**Противотанковая управляемая ракета**
+```
+missiles_titan			2Rnd_GAT_missiles						//AFV-4 Gorgon, BTR-K Kamysh
+```
+***
