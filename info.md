@@ -68,5 +68,31 @@ missiles_SCALPEL		8Rnd_LG_scalpel						//Mi-48 Kajman
 missiles_DAR			24Rnd_missiles						//AH-9 Pawnee, WY-55 Hellcat
 						12Rnd_missiles 						//PO-30 Orca (Black & White)
 rockets_Skyfire			38Rnd_80mm_rockets					//Mi-48 Kajman
-
+```
+***
+#### **Описание танкового вооружения**
+***
+**Основной калибр**
+```
+cannon_120mm_long	28Rnd_120mm_APFSDS_shells_Tracer_Yellow	//MBT-52 Kuma
+					14Rnd_120mm_HE_shells_Tracer_Yellow		//MBT-52 Kuma
+cannon_120mm 		32Rnd_120mm_APFSDS_shells_Tracer_Red	//M2A1 Slammer
+					16Rnd_120mm_HE_shells_Tracer_Red		//M2A1 Slammer
+cannon_105mm		40Rnd_105mm_APFSDS_T_Red				//M2A4 Slammer UP
+					20Rnd_105mm_HEAT_MP_T_Red				//M2A4 Slammer UP
+cannon_125mm		24Rnd_125mm_APFSDS_T_Green				//T-100 Varsuk
+					12Rnd_125mm_HE_T_Green					//T-100 Varsuk
+					12Rnd_125mm_HEAT_T_Green				//T-100 Varsuk
+```
+**Пулемет стрелка**
+```
+LMG_coax			2000Rnd_762x51_Belt_Yellow				//MBT-52 Kuma
+					2000Rnd_762x51_Belt_Green				//T-100 Varsuk
+LMG_M200			2000Rnd_65x39_belt 						//M2A1 Slammer, M2A4 Slammer UP
+```
+**Командирская турель**
+```
+HMG_127_APC			500Rnd_127x99_mag_Tracer_Yellow			//MBT-52 Kuma
+HMG_127_MBT			500Rnd_127x99_mag_Tracer_Red			//M2A4 Slammer UP
+HMG_NSVT			450Rnd_127x108_Ball						//T-100 Varsuk
 ```
