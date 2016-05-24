@@ -1,4 +1,4 @@
-#### **Описание самолетного вооружения:**
+#### **Вооружение самолетов**
 ***
 **Пушки:**
 ```
@@ -34,7 +34,7 @@ Bomb_04_Plane_CAS_01_F			4Rnd_Bomb_04_F			//A-164 Wipeout
 Bomb_03_Plane_CAS_02_F			2Rnd_Bomb_03_F			//To-199 Neophron
 ```
 ***
-#### **Описание вертолетного вооружения**
+#### **Вооружение вертолетов**
 ***
 **Пушки:**
 ```
@@ -70,7 +70,7 @@ missiles_DAR			24Rnd_missiles						//AH-9 Pawnee, WY-55 Hellcat
 rockets_Skyfire			38Rnd_80mm_rockets					//Mi-48 Kajman
 ```
 ***
-#### **Описание танкового вооружения**
+#### **Вооружения танков**
 ***
 **Основной калибр**
 ```
@@ -97,7 +97,7 @@ HMG_127_MBT			500Rnd_127x99_mag_Tracer_Red			//M2A4 Slammer UP
 HMG_NSVT			450Rnd_127x108_Ball						//T-100 Varsuk
 ```
 ***
-#### **Описание вооружения БТР\БМП**
+#### **Вооружение БТР\БМП**
 ***
 **Основной калибр**
 ```
@@ -126,3 +126,37 @@ LMG_RCWS				2000Rnd_65x39_belt 						//CRV-6e Bobcat
 missiles_titan			2Rnd_GAT_missiles						//AFV-4 Gorgon, BTR-K Kamysh
 ```
 ***
+#### **Вооружение самоходных зенитных установок**
+***
+**Ствольное вооружение**
+```
+autocannon_35mm		680Rnd_35mm_AA_shells_Tracer_Red		//IFV-6a Cheetah
+					680Rnd_35mm_AA_shells_Tracer_Green		//ZSU-39 Tigris
+```
+**Ракеты земля-воздух**
+```
+missiles_titan		4Rnd_Titan_long_missiles				//IFV-6a Cheetah , ZSU-39 Tigris
+```
+***
+#### **Вооружение самоходных артиллерийских установок**
+***
+**Основное орудие**
+```
+mortar_155mm_AMOS	32Rnd_155mm_Mo_shells		//Осколочно-фугасный снаряд
+					2Rnd_155mm_Mo_guided		//Управляемая ракета
+					6Rnd_155mm_Mo_mine			//Противопехотные мины
+					2Rnd_155mm_Mo_Cluster		//Кассетные снаряда
+					6Rnd_155mm_Mo_smoke			//Дымовые снаряда
+					2Rnd_155mm_Mo_LG			//Снаряд с лазерным наведением
+					6Rnd_155mm_Mo_AT_mine		//Противотанковые мины
+```
+**Командирская турель**
+```
+GMG_40mm			96Rnd_40mm_G_belt				//M4 Scorcher, 2S9 Sochor
+HMG_127_APC			500Rnd_127x99_mag_Tracer_Red	//M4 Scorcher
+					500Rnd_127x99_mag_Tracer_Green	//2S9 Sochor
+```
+**Реактивная артиллерия**
+```
+rockets_230mm_GAT	12Rnd_230mm_rockets			//M5 Sandstorm MLRS
+```
