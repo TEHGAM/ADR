@@ -8,37 +8,23 @@
 <h1 align="center">Annex Done Right</h1>
 <p align="center">
   <a href="https://github.com/TEHGAM/ADR/wiki/ADR:-История">
-    <img src="http://img.shields.io/badge/Версия-3.4.5-blue.svg?style=flat"
+    <img src="https://img.shields.io/badge/%D0%92%D0%B5%D1%80%D1%81%D0%B8%D1%8F-4.4.3-blue.svg"
          alt="Версия" />
   </a>
   <a href="https://github.com/TEHGAM/ADR/raw/master/Annex_Done_Right.Altis.pbo">
-    <img src="http://img.shields.io/badge/Скачать-1.13_МБ-green.svg?style=flat"
+    <img src="https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-2.30%20%D0%9C%D0%91-green.svg"
          alt="Скачать" />
   </a>
   <a href="https://github.com/TEHGAM/ADR/issues">
-    <img src="http://img.shields.io/github/issues-raw/TEHGAM/ADR.svg?label=Задачи&style=flat"
+    <img src="https://img.shields.io/github/issues-raw/TEHGAM/ADR.svg?label=%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8&style=flat"
          alt="Задачи" />
   </a>
-</p>
-<p align="center">
-  <a href="https://github.com/TEHGAM/ADR/wiki/ADR:-История">
-    <img src="http://img.shields.io/badge/Версия-3.4.9-blue.svg?style=flat"
-         alt="Версия" />
-  </a>
-  <a href="https://github.com/TEHGAM/ADR/blob/master/Annex_Done_Right_3_4_9.Altis.pbo">
-    <img src="http://img.shields.io/badge/Скачать-1.23_МБ-green.svg?style=flat"
-         alt="Скачать" />
-  </a>
-  <a href="https://github.com/TEHGAM/ADR/issues">
-    <img src="http://img.shields.io/github/issues-raw/TEHGAM/ADR.svg?label=Задачи&style=flat"
-         alt="Задачи" />
-  </a>
-  <a href=""><img src="http://img.shields.io/badge/Язык-RU-red.svg?style=flat" 
+  <a href=""><img src="https://img.shields.io/badge/%D0%AF%D0%B7%D1%8B%D0%BA-RU-red.svg" 
          alt="Язык_ru" />
   </a>
 </p>
 <p>
-  Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии <a href="https://bitbucket.org/ahoyworld/aw-i-a-2">Invade &amp; Annex</a>. Вы можете помочь нам в этом оставляя свои отзывы в <a href="http://www.tehgam.com/viewforum.php?f=36">частном разделе</a> проекта на форуме TEHGAM, а также <a href="https://github.com/TEHGAM/ADR/issues">определяя задачи</a> по его дальнейшему улучшению.
+  Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии <a href="https://bitbucket.org/ahoyworld/aw-i-a-2">Invade &amp; Annex</a>. Вы можете помочь нам в этом оставляя свои отзывы в <a href="http://www.tehgam.com/showthread.php?t=695">частном разделе</a> проекта на форуме TEHGAM, а также <a href="https://github.com/TEHGAM/ADR/issues">определяя задачи</a> по его дальнейшему улучшению.
 </p>
 <h4>Содействие</h4>
 <p>
@@ -86,27 +72,25 @@
     <a href="http://www.tehgam.com/memberlist.php?mode=viewprofile&u=159">Cleric</a>, <a href="http://www.tehgam.com/memberlist.php?mode=viewprofile&u=2">mexan</a> и <a href="https://github.com/ZeRoKoOl13">ZeRoKoOl</a> за первоначальную работу по редактированию нашей версии I&amp;A.
   </li>
   <li>
-    Отдельное спасибо всем регулярным игрокам и администраторам <a href="https://github.com/TEHGAM/ADR/wiki/T2: Сводка">официального сервера</a>, которые уделяют свое время проекту:
+    <a href="https://github.com/ToxaBes">ToxaBes</a> и <a href="https://github.com/malashin">evil_c0okie</a>
+  <li>
+    Отдельное спасибо всем регулярным игрокам и администраторам официального сервера, которые уделяют свое время проекту:
     <ul>
       <li>внося нам свои предложения по дальнейшей разработке миссии,</li>
       <li>указывая на возможные проблемы,</li>
-      <li>следя за соблюдением <a href="https://github.com/TEHGAM/ADR/wiki/Правила">наших правил</a>,</li>
-      <li>и поддерживая <a href="http://tehgam.com/viewtopic.php?f=11&t=6">общий порядок</a> игры.</li>
+      <li>следя за соблюдением <a href="http://www.tehgam.com/showthread.php?t=1618&p=13847&viewfull=1#post13847">наших правил</a>,</li>
+      <li>и поддерживая общий порядок игры.</li>
     </ul>
   </li>
 </ul>
 <hr />
 <p align="center">
-  <a href="https://github.com/TEHGAM/ADR/wiki">
-    <img src="https://img.shields.io/badge/ADR-Вики-orange.svg?style=flat"
+  <a href="ts3server://ts.tehgam.com">
+    <img src="https://img.shields.io/badge/Team%20Speak-ts.tehgam.com-green.svg"
          alt="Вики" />
   </a>
-  <a href="https://github.com/TEHGAM/ADR/blob/master/LICENSE">
-    <img src="http://img.shields.io/badge/Лицензия-MIT-red.svg?style=flat"
-         alt="Лицензия" />
-  </a>
   <a href="http://www.tehgam.com/">
-    <img src="https://img.shields.io/badge/TEHGAM-Форум-lightgrey.svg?style=flat"
+    <img src="https://img.shields.io/badge/TEHGAM-%D0%A4%D0%BE%D1%80%D1%83%D0%BC-orange.svg"
          alt="Форум" />
   </a>
   </p>
