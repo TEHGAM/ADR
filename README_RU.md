@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/%D0%92%D0%B5%D1%80%D1%81%D0%B8%D1%8F-4.4.3-blue.svg"
          alt="Версия" />
   </a>
-  <a href="https://github.com/TEHGAM/ADR/raw/master/Annex_Done_Right.Altis.pbo">
+  <a href="https://github.com/TEHGAM/ADR/blob/master/co47_ADR_Blue_Shark.Altis.pbo">
     <img src="https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-2.30%20%D0%9C%D0%91-green.svg"
          alt="Скачать" />
   </a>
@@ -19,9 +19,7 @@
     <img src="https://img.shields.io/github/issues-raw/TEHGAM/ADR.svg?label=%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8&style=flat"
          alt="Задачи" />
   </a>
-  <a href=""><img src="https://img.shields.io/badge/%D0%AF%D0%B7%D1%8B%D0%BA-RU-red.svg" 
-         alt="Язык_ru" />
-  </a>
+    <img src="https://img.shields.io/badge/%D0%AF%D0%B7%D1%8B%D0%BA-RU-red.svg" 
 </p>
 <p>
   Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии <a href="https://bitbucket.org/ahoyworld/aw-i-a-2">Invade &amp; Annex</a>. Вы можете помочь нам в этом оставляя свои отзывы в <a href="http://www.tehgam.com/showthread.php?t=695">частном разделе</a> проекта на форуме TEHGAM, а также <a href="https://github.com/TEHGAM/ADR/issues">определяя задачи</a> по его дальнейшему улучшению.
