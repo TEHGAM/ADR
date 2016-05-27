@@ -83,7 +83,7 @@
 </ul>
 <hr />
 <p align="center">
-  <a href="ts3server://ts.tehgam.com">
+  <a href="http://www.teamspeak.com/">
     <img src="https://img.shields.io/badge/Team%20Speak-ts.tehgam.com-green.svg"
          alt="Вики" />
   </a>
