@@ -1,4 +1,4 @@
-private ["_veh", "_vehName", "_vehVarname", "_completeText", "_reward", "_smRewards", "_smRewardsArray"];
+private ["_veh", "_vehName", "_vehVarname", "_completeText", "_reward"];
 
 _smRewards =
 [
@@ -22,14 +22,49 @@ _smRewards =
 ];
 
 
-_smRewards = _smRewardsArray;
+_smRewards1 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards1 - [_smRewards1];
+_smRewards2 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards2];
+_smRewards3 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards3];
+_smRewards4 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards4];
+_smRewards5 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards5];
+_smRewards6 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards6];
+_smRewards7 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards7];
+_smRewards8 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards8];
+_smRewards9 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards9];
+_smRewards10 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards10];
+_smRewards11 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards11];
+_smRewards12 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards12];
+_smRewards13 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards13];
+_smRewards14 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards14];
+_smRewards15 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards15];
+_smRewards16 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards16];
+_smRewards17 = _smRewards call BIS_fnc_selectRandom;
+_smRewards = _smRewards - [_smRewards17];
 
-while { count _smRewards > 0 } do {
+_smRewardsArray = [_smRewards1, _smRewards2, _smRewards3, _smRewards4, _smRewards5, _smRewards6, _smRewards7, _smRewards8, _smRewards9, _smRewards10, _smRewards11, _smRewards12, _smRewards13, _smRewards14, _smRewards15, _smRewards16, _smRewards17];
+_smRewardsArrayAll = _smRewardsArray;
+while { count _smRewardsArray > 0} do {
 
 smMarkerList =
 ["smReward1", "smReward2", "smReward3", "smReward4", "smReward5", "smReward6", "smReward7", "smReward8", "smReward9", "smReward10", "smReward11", "smReward12", "smReward13", "smReward14", "smReward15", "smReward16", "smReward17", "smReward18", "smReward19", "smReward20", "smReward21", "smReward22", "smReward23", "smReward24", "smReward25", "smReward26", "smReward27"];
 
-_veh = _smRewards call BIS_fnc_selectRandom;
+_veh = _smRewardsArray call BIS_fnc_selectRandom;
 
 _vehName = _veh select 0;
 _vehVarname = _veh select 1;
@@ -64,9 +99,7 @@ if (_reward isKindOf "O_APC_Wheeled_02_rcws_F") then {
 	_reward addMagazine ("7Rnd_Rocket_04_HE_F");
 };
 
-//
-
-_smRewards = _smRewards - [_veh];
+_smRewardsArray = _smRewardsArray - [_veh];
 
 // Setting reward vehicle timmer.
 _lockTime = 600;
@@ -83,5 +116,5 @@ _lockTime = 600;
 
 
 } else {
-	smRewardsArray = _smRewards;
+	_smRewardsArrayAll = _smRewardsArray;
 };
