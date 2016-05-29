@@ -1,6 +1,6 @@
-private ["_veh", "_vehName", "_vehVarname", "_completeText", "_reward", "_GAU", "_mortar", "_GMG", "_HEL"];
+private ["_veh", "_vehName", "_vehVarname", "_completeText", "_reward", "_smRewards", "_smRewardsArray"];
 
-smRewards =
+_smRewards =
 [
 	["То-199 «Неофрон» (штурмовик)", "O_Plane_CAS_02_F"],
 	["А-164 «Вайпаут» (штурмовик)", "B_Plane_CAS_01_F"],
@@ -18,14 +18,18 @@ smRewards =
 	["Страйдер с пулеметом", "I_MRAP_03_hmg_F"],
 	["Ифрит с пулеметом", "O_MRAP_02_hmg_F"],
 	["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"],
-	["FV-720 «Мора»", "I_APC_tracked_03_cannon_F"],
 	["MSE-3 «Марид» с НУРС", "O_APC_Wheeled_02_rcws_F"]
 ];
+
+
+_smRewards = _smRewardsArray;
+
+while { count _smRewards > 0 } do {
 
 smMarkerList =
 ["smReward1", "smReward2", "smReward3", "smReward4", "smReward5", "smReward6", "smReward7", "smReward8", "smReward9", "smReward10", "smReward11", "smReward12", "smReward13", "smReward14", "smReward15", "smReward16", "smReward17", "smReward18", "smReward19", "smReward20", "smReward21", "smReward22", "smReward23", "smReward24", "smReward25", "smReward26", "smReward27"];
 
-_veh = smRewards call BIS_fnc_selectRandom;
+_veh = _smRewards call BIS_fnc_selectRandom;
 
 _vehName = _veh select 0;
 _vehVarname = _veh select 1;
@@ -60,6 +64,10 @@ if (_reward isKindOf "O_APC_Wheeled_02_rcws_F") then {
 	_reward addMagazine ("7Rnd_Rocket_04_HE_F");
 };
 
+//
+
+_smRewards = _smRewards - [_veh];
+
 // Setting reward vehicle timmer.
 _lockTime = 600;
 
@@ -71,4 +79,9 @@ _lockTime = 600;
 	_reward lock 3;
 	sleep _lockTime;
 	_reward lock 0;
+};
+
+
+} else {
+	smRewardsArray = _smRewards;
 };
