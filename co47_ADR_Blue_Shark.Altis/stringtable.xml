@@ -10,6 +10,16 @@
 			<Russian>Магазины перепакованы. Было %1, стало %2.</Russian>
 		</Key>
 	</Package>
+	<Package name="Earplugs">
+		<Key ID="STR_ADR_InsertEarplugs">
+			<Original>Insert earplugs</Original>
+			<Russian>Вставить беруши</Russian>
+		</Key>
+		<Key ID="STR_ADR_RemoveEarplugs">
+			<Original>Remove the earplugs</Original>
+			<Russian>Вытащить беруши</Russian>
+		</Key>
+	</Package>
 </Project>
 <Project name="Virtual Ammobox System">
 	<Package name="Main">
