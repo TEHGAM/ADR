@@ -1,7 +1,11 @@
 private ["_veh", "_vehName", "_vehVarname", "_completeText", "_reward"];
 
 if (isNil "smRewards") then {
-	smRewardsAll =
+    smRewards = [];
+};
+
+if ((count smRewards) == 0) then {
+	smRewards =
 	[
 		["То-199 «Неофрон» (штурмовик)", "O_Plane_CAS_02_F"],
 		["А-164 «Вайпаут» (штурмовик)", "B_Plane_CAS_01_F"],
@@ -21,12 +25,8 @@ if (isNil "smRewards") then {
 		["WY-55 Хелкат c 35мм пушкой", "I_Heli_light_03_F"],
 		["MSE-3 «Марид» с НУРС", "O_APC_Wheeled_02_rcws_F"]
 	];
-	 smRewards = smRewardsAll;
 };
-
-if ((count smRewards) == 0) then {smRewards = smRewardsAll};
 if ((count smRewards) > 0) then {
-
 	smMarkerList =
 	["smReward1", "smReward2", "smReward3", "smReward4", "smReward5", "smReward6", "smReward7", "smReward8", "smReward9", "smReward10", "smReward11", "smReward12", "smReward13", "smReward14", "smReward15", "smReward16", "smReward17", "smReward18", "smReward19", "smReward20", "smReward21", "smReward22", "smReward23", "smReward24", "smReward25", "smReward26", "smReward27"];
 
