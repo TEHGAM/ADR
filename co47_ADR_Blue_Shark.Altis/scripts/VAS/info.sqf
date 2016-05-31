@@ -26,7 +26,7 @@ _ctrl lnbAddRow ["","Zafir 7.62 mm",           "         .","    .","     o","  
 _ctrl lnbAddRow ["","Navid 9.3 mm",            "         .","    .","     o","     .","         .","    .","   .","   .","       .","  ."];
 _ctrl lnbAddRow ["","SPMG .338",               "         .","    .","     o","     .","         .","    .","   .","   .","       .","  ."];
 _ctrl lnbAddRow ["","PCML",                    "         .","    .","     .","     o","         .","    .","   .","   .","       .","  ."];
-_ctrl lnbAddRow ["","RPG-42 Alamut",           "         .","    .","     .","     o","         .","    .","   .","   .","       .","  ."];
+_ctrl lnbAddRow ["","RPG-42 Alamut",           "         o","    o","     o","     o","         o","    o","   o","   o","       o","  ."];
 _ctrl lnbAddRow ["","Titan MPRL Launcher",     "         .","    .","     .","     o","         .","    .","   .","   .","       .","  ."];
 _ctrl lnbAddRow ["","Titan MPRL Compact",      "         .","    .","     .","     o","         .","    .","   .","   .","       .","  ."];
 _ctrl lnbAddRow ["","Rahim 7.62 mm",           "         .","    .","     .","     .","         o","    .","   .","   .","       .","  ."];
