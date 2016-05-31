@@ -24,7 +24,6 @@ if (isNil "smRewards") then {
 	 smRewards = smRewardsAll;
 };
 
-player sideChat format ["%1", (count smRewards) ];
 if ((count smRewards) == 0) then {smRewards = smRewardsAll};
 if ((count smRewards) > 0) then {
 
