@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=25;
+		nextID=27;
 	};
 	class Camera
 	{
 		pos[]={15079.719,45.221626,17070.779};
-		dir[]={-0.71768212,-0.68221062,0.14044996};
-		up[]={-0.66959482,0.73107982,0.13103887};
-		aside[]={0.19207303,3.2658136e-007,0.98147506};
+		dir[]={-0.69150478,-0.35565025,-0.62892067};
+		up[]={-0.26322627,0.93456072,-0.23940369};
+		aside[]={-0.67290056,7.0926035e-007,0.73986};
 	};
 };
 binarizationWanted=0;
@@ -339,6 +339,33 @@ class ScenarioData
 {
 	author="Noart";
 };
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
 class Mission
 {
 	class Intel
@@ -347,8 +374,7 @@ class Mission
 		overviewText="Version 4.4.4";
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0.30000001;
-		startFog=0.046545725;
+		startWeather=0.35168105;
 		startWind=0.099999994;
 		startWindDir=135;
 		startGust=0.099999994;
@@ -363,8 +389,8 @@ class Mission
 		windForced=1;
 		year=2035;
 		month=6;
-		day=15;
-		minute=-6;
+		day=1;
+		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
@@ -24352,6 +24378,7 @@ class Mission
 			};
 			id=944;
 			type="Land_BagBunker_Small_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25910,6 +25937,7 @@ class Mission
 			};
 			id=1039;
 			type="RoadCone_L_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25968,6 +25996,7 @@ class Mission
 			};
 			id=1040;
 			type="RoadCone_L_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -30176,6 +30205,7 @@ class Mission
 			};
 			id=1193;
 			type="RoadCone_L_F";
+			atlOffset=3.8146973e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -30215,6 +30245,7 @@ class Mission
 			};
 			id=1194;
 			type="RoadCone_L_F";
+			atlOffset=-1.1444092e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -30382,6 +30413,7 @@ class Mission
 			};
 			id=1202;
 			type="Land_LampDecor_F";
+			atlOffset=5.7220459e-006;
 		};
 		class Item785
 		{

@@ -944,6 +944,19 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"Blue Shark v4.4.4 (01.06.2016)",
+"
+<br />- <font color='#CDDC39'>[Добавлено]</font> Добавлены беруши в технике.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> На приоритетных заданиях патрулирующая техника была без экипажа.
+<br />- <font color='#FFEB3B'>[Исправлено]</font> Модули после сброса удаляются через 15 мин.
+<br />- <font color='#2196F3'>[Изменено]</font> Наградная техника теперь не будет повторяться.
+<br />- <font color='#2196F3'>[Изменено]</font> Небольшая перестановка на базе.
+<br />- <font color='#2196F3'>[Изменено]</font> Аламут теперь могут брать все.
+"
+]];
+
 //Авторы
 player createDiaryRecord ["credits",
 [
