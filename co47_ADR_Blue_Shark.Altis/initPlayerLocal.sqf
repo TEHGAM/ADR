@@ -41,6 +41,7 @@ _null = [] execVM "scripts\misc\diary.sqf";										// diary tabs
 _null = [] execVM "scripts\icons.sqf";											// blufor map tracker
 _null = [] execVM "scripts\VAclient.sqf";										// Virtual Arsenal
 _null = [] execVM "scripts\admin_uid.sqf";
+_null = [] execVM "scripts\heliRearRamp.sqf";									// Block rear ramp actions for non-pilots
 
 //-------------------- PVEHs
 
