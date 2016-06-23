@@ -1,9 +1,8 @@
 /*
-Author: Quiksilver
-Last modified: 23/10/2014 ArmA 1.32 by Quiksilver
 Description:
 
 	Restricts certain weapon systems to different roles
+	Ограничение оружия для разных специализаций
 _________________________________________________*/
 
 _uid = getPlayerUID player;
@@ -37,7 +36,7 @@ _uavOperator = ["B_soldier_UAV_F"];
 _uavRestricted = ["B_UavTerminal","O_UavTerminal","I_UavTerminal"];
 //===== AT / MISSILE LAUNCHERS (excl RPG)
 _missileSoldiers = ["B_soldier_AT_F"];
-_missileSpecialised = ["launch_RPG32_F","launch_NLAW_F","launch_B_Titan_F","launch_O_Titan_F","launch_I_Titan_F","launch_B_Titan_short_F","launch_O_Titan_short_F","launch_I_Titan_short_F"];
+_missileSpecialised = ["launch_NLAW_F","launch_B_Titan_F","launch_O_Titan_F","launch_I_Titan_F","launch_B_Titan_short_F","launch_O_Titan_short_F","launch_I_Titan_short_F"];
 //===== SNIPER RIFLES
 _snipers = ["B_sniper_F"];
 _sniperSpecialised = ["srifle_GM6_F","srifle_GM6_camo_F","srifle_LRR_F","srifle_LRR_camo_F"];

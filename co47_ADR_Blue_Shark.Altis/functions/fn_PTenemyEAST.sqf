@@ -18,7 +18,7 @@ ___________________________________________*/
 
 #define INF_TEAMS "OIA_InfTeam","OIA_InfTeam_AT","OIA_InfTeam_AA","OI_reconPatrol","OIA_GuardTeam"
 #define VEH_TYPES "O_MBT_02_cannon_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_MRAP_02_gmg_F","O_MRAP_02_hmg_F","O_APC_Tracked_02_AA_F"
-private ["_x", "_pos", "_flatPos", "_randomPos", "_enemiesArray", "_infteamPatrol", "_SMvehPatrol", "_SMveh", "_SMaaPatrol", "_SMaa", "_smSniperTeam"];
+private ["_x", "_pos", "_flatPos", "_randomPos", "_enemiesArray", "_infteamPatrol", "_SMvehPatrol", "_SMveh1", "SMveh2", "_data", "_SMaaPatrol", "_SMaa", "_smSniperTeam"];
 _enemiesArray = [grpNull];
 _x = 0;
 
@@ -53,9 +53,9 @@ for "_x" from 0 to 1 do {
 //---------- VEHICLE RANDOM
 
 _randomPos = [[[getPos priorityObj1, 300], []], ["water", "out"]] call BIS_fnc_randomPos;
-_SMveh1 = [VEH_TYPES] call BIS_fnc_selectRandom createVehicle _randomPos;
-waitUntil {sleep 0.5; !isNull _SMveh1};
-[_SMveh1, _SMvehPatrol] call BIS_fnc_spawnCrew;
+_data = [_randomPos, (random 360), ( [VEH_TYPES] call BIS_fnc_selectRandom), EAST] call bis_fnc_spawnvehicle;
+_SMveh1 = _data select 0;
+_SMvehPatrol = _data select 2;
 
 _SMveh1 lock 3;
 [_SMvehPatrol, getPos priorityObj1, 75] call BIS_fnc_taskPatrol;
@@ -66,9 +66,9 @@ _enemiesArray = _enemiesArray + [_SMveh1];
 //---------- VEHICLE RANDOM	
 
 _randomPos = [[[getPos priorityObj1, 300], []], ["water", "out"]] call BIS_fnc_randomPos;
-_SMveh2 = [VEH_TYPES] call BIS_fnc_selectRandom createVehicle _randomPos;
-waitUntil {sleep 0.5; !isNull _SMveh2};
-[_SMveh2, _SMvehPatrol] call BIS_fnc_spawnCrew;
+_data = [_randomPos, (random 360), ( [VEH_TYPES] call BIS_fnc_selectRandom), EAST] call bis_fnc_spawnvehicle;
+_SMveh2 = _data select 0;
+_SMvehPatrol = _data select 2;
 
 _SMveh2 lock 3;
 [_SMvehPatrol, getPos priorityObj1, 150] call BIS_fnc_taskPatrol;
@@ -81,9 +81,9 @@ _enemiesArray = _enemiesArray + [_SMvehPatrol];
 //---------- VEHICLE AA
 
 _randomPos = [[[getPos priorityObj1, 300], []], ["water", "out"]] call BIS_fnc_randomPos;
-_SMaa = "O_APC_Tracked_02_AA_F" createVehicle _randomPos;
-waitUntil {sleep 0.5; !isNull _SMaa};
-[_SMaa, _SMaaPatrol] call BIS_fnc_spawnCrew;
+_data = [_randomPos, (random 360), ( [VEH_TYPES] call BIS_fnc_selectRandom), EAST] call bis_fnc_spawnvehicle;
+_SMaa = _data select 0;
+_SMaaPatrol = _data select 2;
 
 _SMaa lock 3;
 [_SMaaPatrol, getPos priorityObj1, 150] call BIS_fnc_taskPatrol;
