@@ -38,6 +38,7 @@ if ((count enemyCasArray) < _jetLimit) then {
 	_jetActual allowCrewInImmobile TRUE;
 	_jetActual flyInHeight 1000;
 	_jetActual lock 2;
+	removeBackpackGlobal _jetPilot;
 	_jetPilot assignAsDriver _jetActual;
 	_jetPilot moveInDriver _jetActual;
 	
