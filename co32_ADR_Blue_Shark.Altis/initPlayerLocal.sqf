@@ -25,7 +25,7 @@ playerTKed = {
 	
     if (amountOfTKs == (TKLimit -1)) exitWith {
         player enableSimulation false;
-		titleText ["<t align='center'><t size='1.6' font='PuristaBold'>Simulation has been disabled as a result of excessive teamkilling. </t><br /> <t size='1.2' font='PuristaBold'>This is a final warning.  Respawn to re-enable simulation and make this message disappear.</t><br /><br /><t size='0.9' font='PuristaBold'>If you continue to teamkill AhoyWorld cannot be held responsible for the consequences.</t></t>", "BLACK", 2, true, true];
+		titleText ["<t align='center'><t size='1.6' font='PuristaBold'>Моделирование было отключено в результате чрезмерного тимкилла </t><br /> <t size='1.2' font='PuristaBold'>Это последнее предупреждение. Возродитесь, чтобы моделирование включилось и это сообщение исчезнет.</t><br /><br /><t size='0.9' font='PuristaBold'>Если вы продолжите убивать союзников, администрация TEHGAM примет меры по отношению к вам!</t></t>", "BLACK", 2, true, true];
 		[]spawn{ 
 			waitUntil{!alive player};
 			titleFadeOut 0;
@@ -34,11 +34,11 @@ playerTKed = {
 		};
 	};
     if (amountOfTKs >= TKLimit) exitWith {
-		_arrayMessage = format ["User input of %1 got disabled.  UID: %2", name player, getPlayerUID player];
+		_arrayMessage = format ["Управление отключено для игрока %1.  UID: %2", name player, getPlayerUID player];
 		TKArray pushBack _arrayMessage;
 		publicVariable "TKArray";
-		[player, "Automated server message: All my user input has been disabled."] remoteExecCall ["sideChat", 0, false];
-		titleText ["<t align='center'><t size='1.8' font='PuristaBold'>You have exceeded the server limit for teamkills. <br /> All user input has been disabled.</t><br /> <t size='1.2' font='PuristaBold'>Your unique ID has been logged along with with your name.</t><br/><br /><t size='1.0' font='PuristaBold'>This message will not go away and your input will not be re-enabled. You will have to shut down ArmA. <br/>The easiest way is to press alt + f4.</t><br/><br/><t size='0.8' font='PuristaBold'>We, AhoyWorld, reserve the right to ban you for these teamkills.  this may happen without any further notice</t></t>", "BLACK", 2, true, true];
+		[player, "Автоматическое сообщение сервера: управление отключено."] remoteExecCall ["sideChat", 0, false];
+		titleText ["<t align='center'><t size='1.8' font='PuristaBold'>Вы превисили лимит убийств союзников. <br /> Управление отключено.</t><br /> <t size='1.2' font='PuristaBold'>Ваш ник и GUID были добавлены в логи сервера.</t><br/><br /><t size='1.0' font='PuristaBold'>Это сообщение не исчезнет и управление не появится до тех пор, пока вы не выключите ARMA3. <br/>Самый простой способ выйти - нажать ALT+F4. </t><br/><br/><t size='0.8' font='PuristaBold'>Мы, администрация TEHGAM, вправе забанить вас за TeamKill, это может произойти без дополнительного уведомелния. </t></t>", "BLACK", 2, true, true];
 		disableUserInput true;
 	};
 	
@@ -99,8 +99,8 @@ if (_count > 0) then {
 	_email = _infoSquad select 2;
 
 	// replace line below with your Squad xml's email
-	if (_email == "staff@ahoyworld.net") then {
-		_GlobalHint = format["<t align='center' size='2.2' color='#FF0000'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To get involved in the Ahoy World community, register an account at www.AhoyWorld.net and get stuck in!</t><br/>",
+	if (_email == "admin@tehgam.com") then {
+		_GlobalHint = format["<t align='center' size='2.2' color='#FF0000'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>присоединился к серверу. Чтобы принимать активное участие в жизни TEHGAM, зарегистрируйтесь на форуме www.tehgam.com.</t><br/>",
 		_squad,_name];
 		[_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
 	};
@@ -149,12 +149,12 @@ player addEventHandler ["FiredMan", {
 	
     if ( (_weapon == "CMFlareLauncher") || ((typeOf _unit == "B_soldier_UAV_F") && (vehicle _unit != _unit)) ) exitWith {};
 	if (player getVariable "isZeus") exitWith {
-        hint "You are standing in base and shooting.  Be vary carefull when doing this and don't absue it!";
+        hint "Вы используете оружие на базе. Будьте очень осторожны и не злоупотребляйте!";
     };
 	
     deleteVehicle _projectile;
 	_unitName = name _unit;
-    hintC format ["%1, don't goof at base.  Hold your horses soldier, don't throw, fire or place anything inside the base.", _unitName];
+    hintC format ["%1, не стреляйте на базе!  Придержите лошадей, перестаньте стрелять, чтобы не повредить что-либо на базе.", _unitName];
 }];
 
 /*Arsenal*/
@@ -163,16 +163,16 @@ gearRestriction = true;
 execVM "Scripts\arsenal\arsenal.sqf";
 { 
 	_x execVM "scripts\arsenal\va_west.sqf"; 
-	_x addAction ["<t color='#006bb3'>Save gear</t>",{player setVariable ["derp_savedGear", (getUnitLoadout player)]; systemChat "gear saved";}];
+	_x addAction ["<t color='#006bb3'>Сохранить вооружение.</t>",{player setVariable ["derp_savedGear", (getUnitLoadout player)]; systemChat "Вооружение сохранено";}];
 } forEach arsenalArray;
 
 // ---------------- eventhandlers to check for gear restrictions
 waitUntil {arsenalDefined};
 /*For after when people pick something up from the ground*/
-player addEventHandler ["InventoryClosed", {[]execVM "scripts\arsenal\cleanInventory.sqf";}]; 
-player addEventHandler ["Take", {[]execVM "scripts\arsenal\cleanInventory.sqf";}]; 
+player addEventHandler ["Инвентарь закрыт", {[]execVM "scripts\arsenal\cleanInventory.sqf";}]; 
+player addEventHandler ["Взять", {[]execVM "scripts\arsenal\cleanInventory.sqf";}]; 
 /*eventhandler that triggers after closing the arsenal*/
-inGameUISetEventHandler ["Action", "
+inGameUISetEventHandler ["Действие", "
 	if ( toLower (_this select 4) find 'arsenal' > -1 ) then{
 		_player = _this select 0;
 		[_player]spawn {

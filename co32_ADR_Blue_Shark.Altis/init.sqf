@@ -18,7 +18,7 @@ jetspawnpos = 0;
 //TK message
 sendTKhintC = { 
 	params["_killed"];
-	hintC format ["%1, you just teamkilled %2, which is not allowed. You should apologize to %2.", name player, _killed];
+	hintC format ["%1, вы прикончили игрока %2, что является нарушением правл сервера. Вы должны извиниться перед %2.", name player, _killed];
 };
 TKArray = [];
 
