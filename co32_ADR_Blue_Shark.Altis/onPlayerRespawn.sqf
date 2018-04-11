@@ -33,7 +33,7 @@ if (typeOf player == "B_pilot_F" || typeOf player == "B_helipilot_F") then {
 		UH80TurretAction = player addAction ["Turret Control",AW_fnc_uh80TurretControl,[],-95,false,false,'','[] call AW_fnc_conditionUH80TurretControl'];
 	};
 	//===== despawn damaged helis in base
-	player addAction ["<t color='#99ffc6'>Despawn damaged heli</t>",{
+	player addAction ["<t color='#99ffc6'>Исчезает поврежденный вертолет</t>",{
 			_accepted = false;
 			{
 			_NearBaseLoc = (getPos player) distance (getMarkerPos _x);
@@ -44,9 +44,9 @@ if (typeOf player == "B_pilot_F" || typeOf player == "B_helipilot_F") then {
 				_vehicle = vehicle player;
 				moveOut player;
 				deleteVehicle _vehicle;
-				[parseText format ["<br /><br /><t align='center' font='PuristaBold' ><t size='1.2'>Heli successfully despawned.</t></t>"], true, nil, 4, 0.5, 0.3] spawn BIS_fnc_textTiles;
+				[parseText format ["<br /><br /><t align='center' font='PuristaBold' ><t size='1.2'>Вертолет успешно удален.</t></t>"], true, nil, 4, 0.5, 0.3] spawn BIS_fnc_textTiles;
 			} else {
-				[parseText format ["<br /><t align='center' font='PuristaBold' ><t size='1.2'>This action is not allowed outside of base.</t><t size='1.0'><br /> Heli not despawned</t></t>"], true, nil, 6, 0.5, 0.3] spawn BIS_fnc_textTiles;
+				[parseText format ["<br /><t align='center' font='PuristaBold' ><t size='1.2'>Эти действия запрещены вне базы.</t><t size='1.0'><br /> Вертолет не удален</t></t>"], true, nil, 6, 0.5, 0.3] spawn BIS_fnc_textTiles;
 			};	
 		},[],-100,false,true,"","
 		(player == driver (vehicle player)) && 
@@ -62,7 +62,7 @@ if (typeOf player == "B_pilot_F" || typeOf player == "B_helipilot_F") then {
 		",4];	
 		
 		
-	ghosthawkDoorAction = player addAction ["Open/close doors", {
+	ghosthawkDoorAction = player addAction ["Открыть/закрыть двери", {
 		_heli = vehicle (_this select 1);
 		if (_heli doorPhase 'door_R' == 0) then {
 			_heli animateDoor ['door_R', 1]; 
@@ -76,13 +76,13 @@ if (typeOf player == "B_pilot_F" || typeOf player == "B_helipilot_F") then {
 };
 
 //=============Sling weapon
-slingWeaponAction = player addAction ["<t color='#ffec9f'>Sling Weapon</t>", "scripts\misc\slingWeapon.sqf", "", -98, false, true, "", "vehicle player==player && slinWeaponActionEnabled"];
+slingWeaponAction = player addAction ["<t color='#ffec9f'>Убрать оружие за спину</t>", "scripts\misc\slingWeapon.sqf", "", -98, false, true, "", "vehicle player==player && slinWeaponActionEnabled"];
 
 //======================= Add players to Zeus
 {_x addCuratorEditableObjects [[player], true];} foreach allCurators;
 
 //======================clear vehicle inventory
-player addAction ["<t color='#ff0000'>Clear vehicle inventory</t>",{[] call AW_fnc_clearVehicleInventory},[],-100,false,true,"","(player == driver vehicle player) && !((vehicle player) == player)"];
+player addAction ["<t color='#ff0000'>Очистить инвентарь техники</t>",{[] call AW_fnc_clearVehicleInventory},[],-100,false,true,"","(player == driver vehicle player) && !((vehicle player) == player)"];
 
 //======================= Assign zeus
 [] spawn {

@@ -1,49 +1,49 @@
-//------------------------- On Load
+//------------------------- Загрузка
 
-author = AhoyWorld and Community + Baconmop;					// Visible when loading mission
-onLoadName = "Invade & Annex 3.3.7";						// Visible when loading mission
-OnLoadMission = "Invade and Annex 3.3.7. If you want to get involved with AhoyWorld or development of Invade and Annex go to AhoyWorld.net or join ts.ahoyworld.net";
-loadScreen = "Media\LoadingScreen\splash.jpeg";				// Visible when loading mission
-overviewPicture = "Media\LoadingScreen\splash.jpeg";			// Visible when selecting mission
+author = AhoyWorld + Baconmop и TEHGAM ;					// Отображается при загрузке миссии
+onLoadName = "TEHGAM 2 AW Blue Shark Версия 0.0.1";						// Отображается при загрузке миссии
+OnLoadMission = "TEHGAM 2 AW Blue Shark Версия 0.0.1. Если вы хотите принять участие в развитии миссии, заходите на наш форум www.TEHGAM.com или в наш teamspeak: TS.TEHGAM.COM";
+loadScreen = "Media\LoadingScreen\splash.jpeg";				// Отображается при загрузке миссии
+overviewPicture = "Media\LoadingScreen\splash.jpeg";			// Отображается во время выбора миссии
 
-onLoadIntro = "";										// Displays a message while the intro is loading.
-onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
-onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
+onLoadIntro = "";										// Отображает сообщение во время вступления
+onLoadIntroTime = 0;									// Время и дата отображаются во время вступления. 1 видно, 0 скрыто.
+onLoadMissionTime = 0;									// Время и дата отображаются во время вступления. 1 видно, 0 скрыто.
 
 class Header
 	{
 		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
-		minPlayers = 1;									// Min # of players the MISSION supports
-		maxPlayers = 60;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
+		minPlayers = 1;									// Минимальное # количество игроков
+		maxPlayers = 60;								// Максимальное количество игроков. Не количество слотов. Делать больше, чем количество слотов.
 	};
 
 //------------------------- Admin
 
-enableDebugConsole = 1;									// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.
-allowFunctionsLog = 0; 									// Log functions to .rpt. disabled with 0
+enableDebugConsole = 1;									// 0 = отсутствует. 1 = для админов, 2 = для всех. 0 рекомендуется в мультиплеере MP.
+allowFunctionsLog = 0; 									// Логирование функций в .rpt
 onPauseScript = "scripts\onPause.sqf";
 
 //------------------------- Misc
 
 disableChannels[] = {{0,false,true},{1,false,true},{6,true,true}};									// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global.
-disabledAI = 1;											// No AI in playable units
-aiKills = 0; 											// disable scorelist for AI players
+disabledAI = 1;											// Отсутсвует AI в игровых единицах
+aiKills = 0; 											// Отсутствует таблица очков для AI 
 enableItemsDropping = 0; 								// disabled with 0
-joinUnassigned = 1;										// 0 = players forced into role on join
-showUAVFeed = 1;										// Enables/Disables the UAV Feed. Zeus-related.
+joinUnassigned = 1;										// 0 = игроки вынуждены выбрать роль
+showUAVFeed = 1;										// Включает/выключает поддержку UAV. Связано с зевсом.
 
 
-//-------------------------Respawn
+//-------------------------Респаун
 class CfgRespawnTemplates {
     class derp_revive {
-        // Function or script executed upon death. Parameters passed into it are the same as are passed into onPlayerKilled.sqf file
+        // Функция или сценарий, которые выполняются после смерти игрока. Все параметры передаются в onPlayerKilled.sqf
         onPlayerKilled = "derp_revive_fnc_onPlayerKilled";
-        // Function or script executed upon respawn. Parameters passed into it are the same as are passed into onPlayerRespawn.sqf file
+        // Функция или сценарий, которые выполняются после респауна игрока, передаются в файл onPlayerRespawn.sqf 
         onPlayerRespawn = "derp_revive_fnc_onPlayerRespawn";
-        // Default respawn delay (can be overwitten by description.ext entry of the same name)
+        // Задержка респауна. Может быть перезаписана в description.ext с той же переменной
         respawnDelay = 10;
-        // 1 to respawn player when he joins the game. Available only for INSTANT and BASE respawn types
-        // Can be overridden by description.ext attribute of the same name
+        // 1 для респауна игрока, когда он подключается к игре. Доступно только для мгновенных и базовых типов респауна
+        // Может быть перезаписано в description.ext
         respawnOnStart = -1;
     };
 };
@@ -52,28 +52,28 @@ respawn = 3;
 respawnDelay = 10;
 respawnOnStart = 1;
 respawnTemplates[] = {"MenuPosition", __EVAL(call compile preprocessFileLineNumbers "functions\revive\fn_ace3Check.sqf")};
-// Remove the eval if you desire to use an other vanilla revive system, it's used to detect the ACE3 revive system and enable or not derp_revive
+// Удалите значение, если хотите использовать другую или ванильную систему ревайва. Это используется для определения ACE3 системы ревайва
 
 derp_revive_bleedOutTimer = 300;
 derp_revive_maxSafeDamage = 0.95;
-derp_revive_downedDamageTreshold = 3; // Downed state can only be entered between 1 and this treshold, over it you die
-derp_revive_everyoneCanRevive = 0; // 0 = medics only, 1 = everyone
-derp_revive_reviveItem = 0; // 0 = first aid kit, 1 = medikit
-derp_revive_removeFAKOnUse = 1; // 0 = don't remove on use, 1 = remove on use
+derp_revive_downedDamageTreshold = 3; // Максимальный урон, при котором люди умирают
+derp_revive_everyoneCanRevive = 0; // 0 = медики только, 1 = каждый
+derp_revive_reviveItem = 0; // 0 = Медицинский пакет, 1 = медицинская сумка
+derp_revive_removeFAKOnUse = 1; // 0 = не извлекается при использовании, 1 = извлекается при использовании
 
-//------------------------- Garbage collector
+//------------------------- Сбор мусора
 
-wreckLimit = 3;											// Limit before removal is triggered
-wreckRemovalMinTime = 120;								// Min time before removal
-wreckRemovalMaxTime = 360;								// Max time before removal
-corpseLimit = 5;										// Limit before removal is triggered
-corpseRemovalMinTime = 60;								// Min time before removal
-corpseRemovalMaxTime = 120;								// Max time before removal
+wreckLimit = 3;											// Предел перед срабатыванием
+wreckRemovalMinTime = 120;								// Минимальное время перед срабатыванием
+wreckRemovalMaxTime = 360;								// Максимальное время перед срабатыванием
+corpseLimit = 5;										// Предел перед срабатыванием
+corpseRemovalMinTime = 60;								// Минимальное время перед удалением
+corpseRemovalMaxTime = 120;								// Максимальное время перед удалением
 
 //------------------------- Includes
 
-#include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
-#include "functions\CHVD\dialog.hpp"					// CHVD View Distance script
+#include "scripts\vehicle\crew\common.hpp"  			// HUD в технике
+#include "functions\CHVD\dialog.hpp"					// CHVD скрипт изменения дистанции
 
 class Main_Aos
 	{
@@ -132,7 +132,7 @@ class CfgSounds {
     };
 };
 	
-//------------------------- Parameters
+//------------------------- Параметры
 
 class Params
 	{
@@ -140,64 +140,64 @@ class Params
 
 		class title1
 		{
-			title = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Misc Settings ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+			title = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Настройки ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
 			values[] = {0};
 			texts[] = {""};
 			default = 0;
 		};
 
 		class MainEnemyFaction {
-			title = "Main Enemy Faction (Not Working Yet)";
+			title = "Основные функции противника (Пока не работают)";
 			values[] = {1,2,3,4,5,6,7};
 			texts[] = {"CSAT","CSAT Tropic","AAF","ParaMillitary","Bandits","FIA Independent","FIA Opfor"};
 			default = 1;
 		};
 
 		class SecondaryEnemyFaction {
-			title = "Secondary Enemy Faction (Not Working Yet)";
+			title = "Второступенные функции противника (Пока не работают)";
 			values[] = {1,2,3,4,5,6,7};
 			texts[] = {"CSAT","CSAT Tropic","AAF","ParaMillitary","Bandits","FIA Independent","FIA Opfor"};
 			default = 3;
 		};
 
 		class VehicleRespawnDistance {
-			title = "Distance from players that vehicles won't respawn";
+			title = "Расстояние от игроков, при котором техника не будет возраждаться";
 			values[] = {10,50,100,200,300,400,500,1000,2000,5000,10000};
-			texts[] = {"10m","50m","100m","200m","300m","400m","500m","1km","2km","5km","10km"};
+			texts[] = {"10м","50м","100м","200м","300м","400м","500м","1км","2км","5км","10км"};
 			default = 500;
 		};
 		class ArtilleryTargetTickTimeMin {
-			title = "MINIMUM Time between Priority Target actions";
+			title = "Минимальное время между приоритетными целями";
 			values[] = {30,60,120,180,240,300,600,900};
-			texts[] = {"30 seconds","1 minute","2 minutes","3 minutes","4 minutes","5 minutes","10 minutes","15 minutes"};
-			default = 600; // 120 default
+			texts[] = {"30 секунд","1 минуты","2 минуты","3 минуты","4 минуты","5 минут","10 минут","15 минут"};
+			default = 600; // 120 по умолчанию
 		};
 
 		class ArtilleryTargetTickTimeMax {
-			title = "MAXIMUM Time between Priority Target actions";
+			title = "Максимальное время между приоритетными целями";
 			values[] = {30,60,120,180,240,300,600,900};
-			texts[] = {"30 seconds","1 minute","2 minutes","3 minutes","4 minutes","5 minutes","10 minutes","15 minutes"};
-			default = 900; // 300 default
+			texts[] = {"30 секунд","1 минуты","2 минуты","3 минуты","4 минуты","5 минут","10 минут","15 минут"};
+			default = 900; // 300 по умолчанию
 		};
 
 		class ArsenalFilter {
-			title = "Filter mode of the arsenal";
-			texts[] = {"Arsenal disabled", "Arsenal enabled but filtered", "Arsenal enabled"};
+			title = "Фильтр арсенала";
+			texts[] = {"Арсенал отсутствует", "Арсенал включен, но фильтруется", "Арсенал включен"};
 			values[] = {0, 1, 2};
 			default = 1;
 		};
 
 		class Fatigue {
-			title = "Enable Fatigue";
-			texts[] = {"Yes","No"};
+			title = "Включить усталость";
+			texts[] = {"Да","Нет"};
 			values[] = {0, 1};
 			default = 0;
 		};
 		
 		class UH80TurretControl {
-			title = "UH-80 Pilot Turret Control";
+			title = "UH-80 турель контроль";
 			values[] = {0,1};
-			texts[] = {"DISABLED","ENABLED"};
+			texts[] = {"Выключеное","Включено"};
 			default = 1;
 		};
 
@@ -210,56 +210,56 @@ class Params
 		};
 
 		class EnemyLeftThreshhold {
-			title = "Enemy Left Threshold";
+			title = "Левый порог врага";
 			values[] = {1,2,3,4,5,6,7,8,9,10};
 			texts[] = {"1","2","3","4","5","6","7","8","9","10"};
 			default = 9;
 		};
 
 		class AOSize {
-			title = "Main AO Diameter";
+			title = "Основной диаметр";
 			values[] = {200,300,400,500,600,700,800,900,1000};
-			texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1,000m"};
+			texts[] = {"200м","300м","400м","500м","600м","700м","800м","900м","1,000м"};
 			default = 800;
 		};
 
 		class AntiAirAmount {
-			title = "Amount of AA vehicles on the main AO";
+			title = "Количество автомобилей на основной точке";
 			values[] = {1, 2, 3, 4, 5, 6};
 			texts[] = {"1", "2", "3", "4", "5", "6"};
 			default = 3;
 		};
 
 		class MRAPAmount {
-			title = "Amount of MRAPs on the main AO";
+			title = "Количество MRAPs на основной точке";
 			values[] = {1, 2, 3, 4, 5, 6};
 			texts[] = {"1", "2", "3", "4", "5", "6"};
 			default = 4;
 		};
 
 		class RandomVehcsAmount {
-			title = "Amount of random vehicles on the main AO";
+			title = "Количество случайных машин на основной точке";
 			values[] = {1, 2, 3, 4, 5, 6};
 			texts[] = {"1", "2", "3", "4", "5", "6"};
 			default = 3;
 		};
 
 		class InfantryGroupsAmount {
-			title = "Amount of infantry groups on the main AO";
+			title = "Количество пехотных групп на основной точке";
 			values[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 			texts[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 			default = 10;
 		};
 
 		class AAGroupsAmount {
-			title = "Amount of AA groups on the main AO";
+			title = "Количество пехотных групп на основной точке";
 			values[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 			texts[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 			default = 2;
 		};
 
 		class ATGroupsAmount {
-			title = "Amount of AT groups on the main AO";
+			title = "Количество пехотных групп на основной точке";
 			values[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 			texts[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 			default = 4;
@@ -267,7 +267,7 @@ class Params
 
 		class title3
 		{
-			title = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ AI Skill ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+			title = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Скилл ботов ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
 			values[] = {0};
 			texts[] = {""};
 			default = 0;
