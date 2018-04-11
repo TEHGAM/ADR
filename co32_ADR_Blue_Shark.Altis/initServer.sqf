@@ -7,7 +7,7 @@ Edited by:
     LostBullet
     McKillen
 
-Description:	Things that may run on the server.
+Описание:	Запускается на сервере.
 */
 execVM "Local\localInit.sqf";	//defines map specific stuff on server
 
@@ -68,11 +68,11 @@ initiateZeusByUID = {
 	
 	if ( _zeusModuleNumber == -1 ) exitWith
 	{	[parseText format ["<t align='center' font='PuristaBold' ><t size='1.6'>%1</t><br /> 
-<t size='1.2'>Welcome %2</t><br /><t size='0.8' font='PuristaMedium'>Ensure you are familiar with our server rules:<br /> www.ahoyworld.net/index/rules</t>", "INVADE AND ANNEX", name _player], true, nil, 12, 0.3, 0.3] remoteExec ["BIS_fnc_textTiles", _player]; };
+<t size='1.2'>Добро пожаловать, %2</t><br /><t size='0.8' font='PuristaMedium'>Убедитесь, что вы ознакомены с правилами нашего сервера<br /> www.tehgam.com/faq.php</t>", "INVADE AND ANNEX", name _player], true, nil, 12, 0.3, 0.3] remoteExec ["BIS_fnc_textTiles", _player]; };
 	
 	if ( (zeusModeratorUIDs find _uid) > -1 ) exitWith
 	{	[parseText format ["<br /><t align='center' font='PuristaBold' ><t size='1.6'>%1</t><br /> 
-<t size='1.2'>Welcome %2</t>", "AWE MODERATOR: ZEUS NOT ASSIGNED", name _player], true, nil, 12, 0.3, 0.3] remoteExec ["BIS_fnc_textTiles", _player]; };
+<t size='1.2'>Добро пожаловать, %2</t>", "AWE MODERATOR: ZEUS NOT ASSIGNED", name _player], true, nil, 12, 0.3, 0.3] remoteExec ["BIS_fnc_textTiles", _player]; };
 	
 	_zeusModule = zeusModules select _zeusModuleNumber;
 	unassignCurator _zeusModule;
@@ -83,7 +83,7 @@ initiateZeusByUID = {
 
 	if ( (zeusSpartanUIDs find _uid) > -1 ) then
 	{	_player setVariable ["isZeus", true, true];
-		diag_log format ['Zeus (spartan) assigned on %1', name _player];
+		diag_log format ['Zeus (spartan) назначен на %1', name _player];
 		[parseText format ["<br /><t align='center' font='PuristaBold' ><t size='1.6'>%1</t><br /> 
 <t size='1.2'>Welcome %2</t>", "ZEUS (SPARTAN) ASSIGNED", name _player], true, nil, 12, 0.3, 0.3] remoteExec ["BIS_fnc_textTiles", _player];
 	};
@@ -91,7 +91,7 @@ initiateZeusByUID = {
 	if ( (zeusAdminUIDs find _uid) > -1 ) then
 	{	_player setVariable ["isAdmin", true, true];
 		_player setVariable ["isZeus", true, true];
-		diag_log format ['Zeus (admin) assigned on %1', name _player];
+		diag_log format ['Zeus (admin) назначен на %1', name _player];
 		[parseText format ["<br /><t align='center' font='PuristaBold' ><t size='1.6'>%1</t><br /> 
 <t size='1.2'>Welcome %2</t>", "ZEUS (PUBLIC MOD) ASSIGNED", name _player], true, nil, 12, 0.3, 0.3] remoteExec ["BIS_fnc_textTiles", _player];
 	};
